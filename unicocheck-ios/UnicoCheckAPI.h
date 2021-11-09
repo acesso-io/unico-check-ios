@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AcessoBio/AcessoBio.h>
+#import <FaceTecSDK/FaceTecSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

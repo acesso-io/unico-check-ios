@@ -8,53 +8,45 @@
 		<data>
 		i8okqbulYeqhtR9AUOJkTGYDYH4=
 		</data>
-		<key>Frameworks/libswiftCore.dylib</key>
+		<key>FaceTecSDK.framework/FaceTecSDK</key>
 		<data>
-		rrAp64iPhUL40XQR7JlGMDIZaMA=
+		0pCN2qPsoz+PJ5gQNJ/OeBOjrOM=
 		</data>
-		<key>Frameworks/libswiftCoreFoundation.dylib</key>
+		<key>FaceTecSDK.framework/Headers/FaceTecPublicApi.h</key>
 		<data>
-		P4IT9OqWCWZ8FyecMxQHhM6h4G8=
+		vBRFBg+2w/Dll2P2JJzAPs5oEMg=
 		</data>
-		<key>Frameworks/libswiftCoreGraphics.dylib</key>
+		<key>FaceTecSDK.framework/Headers/FaceTecPublicStringKeys.h</key>
 		<data>
-		JoDjsNQXE3z2hogOouALtjw8m/g=
+		lw813Trk/b5mlzeW/D23fIMnQm4=
 		</data>
-		<key>Frameworks/libswiftCoreImage.dylib</key>
+		<key>FaceTecSDK.framework/Headers/FaceTecSDK.h</key>
 		<data>
-		dccNAYDUBxOzns3c+W4XRSmf1Ps=
+		JeIjaPESffWvy5ie4QT25+9H8Mw=
 		</data>
-		<key>Frameworks/libswiftDarwin.dylib</key>
+		<key>FaceTecSDK.framework/Info.plist</key>
 		<data>
-		XJGVexKAsC220QzBQHwL6VS/whc=
+		bz2Z1T8OMPxIaO/kdhck+CSMmEk=
 		</data>
-		<key>Frameworks/libswiftDispatch.dylib</key>
+		<key>FaceTecSDK.framework/Modules/module.modulemap</key>
 		<data>
-		xYRhwsR1eeXatGDr8WNyVj93krw=
+		xwgaN526wfkR2RdN58BEpPjamvw=
 		</data>
-		<key>Frameworks/libswiftFoundation.dylib</key>
+		<key>FaceTecSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		WclOTQyDfPDOGEjZboBz+yfxGVQ=
+		vj+Ilt7StmJOQw48Pa+iR3n98wE=
 		</data>
-		<key>Frameworks/libswiftMetal.dylib</key>
+		<key>Frameworks/FaceTecSDK.framework/FaceTecSDK</key>
 		<data>
-		q6qpoqLxtRrru4zloX0b0xHIJVw=
+		A7WHn9MuBarGa19CkMrt15SXThk=
 		</data>
-		<key>Frameworks/libswiftObjectiveC.dylib</key>
+		<key>Frameworks/FaceTecSDK.framework/Info.plist</key>
 		<data>
-		W4v+YlroD8+v27M4zKa/3r9eqdA=
+		bz2Z1T8OMPxIaO/kdhck+CSMmEk=
 		</data>
-		<key>Frameworks/libswiftQuartzCore.dylib</key>
+		<key>Frameworks/FaceTecSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		OzOL7prTxnOJwhTRps72jdhagI4=
-		</data>
-		<key>Frameworks/libswiftUIKit.dylib</key>
-		<data>
-		G10/WJel9vPNJjANFC1WEM1Jno0=
-		</data>
-		<key>Frameworks/libswiftos.dylib</key>
-		<data>
-		oMpvzHAVfevcqm0jDkhUpqLzhXg=
+		rxELYLH5s+pJAV/Xczdf1+gDUBI=
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
@@ -250,88 +242,74 @@
 			bsC9tYwz/0FOhaQqIfn0EnveIewLCX81TcvGeKZez/0=
 			</data>
 		</dict>
-		<key>Frameworks/libswiftCore.dylib</key>
+		<key>FaceTecSDK.framework/FaceTecSDK</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SVCZK2UG9ihtWggcfIn/i94g//jyC4cI73gURFdHavA=
+			m/FFvKkDSkB3ShzQoh0KHUBhj1t2avQthct5Bk6qnT0=
 			</data>
 		</dict>
-		<key>Frameworks/libswiftCoreFoundation.dylib</key>
+		<key>FaceTecSDK.framework/Headers/FaceTecPublicApi.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/wz85l+DKAaQ7/BS+77vK5X998iA4Lwz+DGJ95g4kZw=
+			UH0LgjjyQCAOeUFiCYdJPZAMooILaZoCAf4xiwA5THg=
 			</data>
 		</dict>
-		<key>Frameworks/libswiftCoreGraphics.dylib</key>
+		<key>FaceTecSDK.framework/Headers/FaceTecPublicStringKeys.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6UmJ5TyRJe3XQ2ANvUh7wapWfH50HDaC5DE8brYBB5U=
+			oCAcMmAycqDI5EKWgQZKwMYKgHqV/NmGT1e/SbsIgtg=
 			</data>
 		</dict>
-		<key>Frameworks/libswiftCoreImage.dylib</key>
+		<key>FaceTecSDK.framework/Headers/FaceTecSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yd4z45rFP5ibtGizpvCVNJ3AoMhTSP9AnIyUKk/JVGc=
+			Ibte2KAl35oMhi6DQucqH33FcJTzAontEXiKeIE3Tas=
 			</data>
 		</dict>
-		<key>Frameworks/libswiftDarwin.dylib</key>
+		<key>FaceTecSDK.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fy3X7nPk7IgG+lCSWKHuMHgGz6Yi56UOKe6XajzinhU=
+			oywvhHR36PTcH48ZcBBNzNHCW8YLozeM6o7Sz06+Fj8=
 			</data>
 		</dict>
-		<key>Frameworks/libswiftDispatch.dylib</key>
+		<key>FaceTecSDK.framework/Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZSH1H7EN5E4TGGB63N2+7rR7N+rDR1LBmkhABOf9RVQ=
+			JxJawy+/T09E4oAW53Fff7cwlYBkifTof4ml/4bJ3rM=
 			</data>
 		</dict>
-		<key>Frameworks/libswiftFoundation.dylib</key>
+		<key>FaceTecSDK.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6SyHvvl3dAOzLH6bFEeF41TPcUHS3iYOdFK7I0FEU6M=
+			+1p27R++YbTDFkGsrqj1qFma52NCjwn7zdyJUqb0uxw=
 			</data>
 		</dict>
-		<key>Frameworks/libswiftMetal.dylib</key>
+		<key>Frameworks/FaceTecSDK.framework/FaceTecSDK</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y51e3klbWCwDOKopGL7Z5cieD4LriiLn9IJFA0FvLTs=
+			v4QulosdOVcTcnL233GlO6qz9Y5/nxVpVA79RSEky7k=
 			</data>
 		</dict>
-		<key>Frameworks/libswiftObjectiveC.dylib</key>
+		<key>Frameworks/FaceTecSDK.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zLWBGbdbTQk6chVChX0c8CFwhq8ogd9K00QEU5AufEY=
+			oywvhHR36PTcH48ZcBBNzNHCW8YLozeM6o7Sz06+Fj8=
 			</data>
 		</dict>
-		<key>Frameworks/libswiftQuartzCore.dylib</key>
+		<key>Frameworks/FaceTecSDK.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zB0hL5hCB758QPCoQtMOfmCnOq42iXWoTwQdcBU2G1U=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftUIKit.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			sio8OcXJb8oJVNHzTWsEzXEpJrNWpQmF06EEIQKl26k=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftos.dylib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KnKo8oZ57w7czhNeCWrd3UlEmiHIpnQ5qjzRz88lPuE=
+			4uMOBA4cb/JVX7A+5pqV3/rraP5XEncBPVCfieVzmEU=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio-Swift.h</key>
