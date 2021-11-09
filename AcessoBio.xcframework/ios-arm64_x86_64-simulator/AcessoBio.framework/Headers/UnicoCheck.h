@@ -12,6 +12,10 @@
 #import <Sentry/Sentry.h>
 #endif
 
+#if __has_include(<FaceTecSDK/FaceTecSDK.h>)
+#import <FaceTecSDK/FaceTecSDK.h>
+#endif
+
 #import "ErrorBio.h"
 #import "iAcessoBioBuilder.h"
 #import "AcessoBioManagerDelegate.h"
@@ -28,7 +32,7 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 };
 
 @interface UnicoCheck : NSObject {
-        
+    
     UIViewController *viewController;
     
     CameraFaceView *cView;
@@ -45,8 +49,12 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     double defaultTimeoutSession;
     double defaultTimeoutToFaceInference;
     double minimumTimeoutToFaceInference;
-
+    
     BOOL hasImplementationError;
+    
+#if __has_include(<FaceTecSDK/FaceTecSDK.h>)
+    id<FaceTecSessionResult> _Nonnull latestSessionResult;
+#endif
     
 }
 
