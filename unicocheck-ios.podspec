@@ -52,9 +52,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "Matheus D." => "matheusdomingoslondrina@gmail.com", "Beatriz Monteiro" => "beatriz.monteiro@unico.io" }
-  # Or just: spec.author    = "Matheus D."
-  # spec.authors            = { "Matheus D." => "matheus_cancao@hotmail.com" }
+  spec.authors             = { "Matheus D." => "matheusdomingoslondrina@gmail.com", "Beatriz Monteiro" => "beatriz.monteiro@unico.io" }
   spec.social_media_url   = "https://ajuda.unico.io/hc/pt-br"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
