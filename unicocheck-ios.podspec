@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "unicocheck-ios"
-  spec.version      = "0.1.3"
+  spec.version      = "0.1.4"
   spec.summary      = "A short description of unicocheck-ios."
 
   # This description is used to generate tags and improve search results.
@@ -116,7 +116,7 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  spec.ios.vendored_frameworks = "AcessoBio.xcframework"
+  spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FaceTecSDK.xcframework"
 
   # spec.framework  = "SomeFramework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
