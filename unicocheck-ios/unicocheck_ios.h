@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UnicoCheckAPI.h"
 
 //! Project version number for unicocheck_ios.
 FOUNDATION_EXPORT double unicocheck_iosVersionNumber;

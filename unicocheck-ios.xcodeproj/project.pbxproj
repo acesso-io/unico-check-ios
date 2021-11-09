@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		E632D1ED273A0512006F4B03 /* AcessoBio.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E632D1EC273A0512006F4B03 /* AcessoBio.xcframework */; };
 		E632D1EF273A9164006F4B03 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E632D1EE273A9164006F4B03 /* FaceTecSDK.xcframework */; };
-		E638E454272C682D00FEF2C5 /* UnicoCheckAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E638E452272C682D00FEF2C5 /* UnicoCheckAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E638E455272C682D00FEF2C5 /* UnicoCheckAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E638E453272C682D00FEF2C5 /* UnicoCheckAPI.m */; };
 		E655B57E27106C4E001505C4 /* unicocheck_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E655B57527106C4E001505C4 /* unicocheck_ios.framework */; };
 		E655B58327106C4E001505C4 /* unicocheck_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E655B58227106C4E001505C4 /* unicocheck_iosTests.m */; };
 		E655B58427106C4E001505C4 /* unicocheck_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = E655B57827106C4E001505C4 /* unicocheck_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,8 +39,6 @@
 /* Begin PBXFileReference section */
 		E632D1EC273A0512006F4B03 /* AcessoBio.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AcessoBio.xcframework; sourceTree = "<group>"; };
 		E632D1EE273A9164006F4B03 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FaceTecSDK.xcframework; sourceTree = "<group>"; };
-		E638E452272C682D00FEF2C5 /* UnicoCheckAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnicoCheckAPI.h; sourceTree = "<group>"; };
-		E638E453272C682D00FEF2C5 /* UnicoCheckAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnicoCheckAPI.m; sourceTree = "<group>"; };
 		E655B57527106C4E001505C4 /* unicocheck_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = unicocheck_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E655B57827106C4E001505C4 /* unicocheck_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = unicocheck_ios.h; sourceTree = "<group>"; };
 		E655B57D27106C4E001505C4 /* unicocheck-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "unicocheck-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				E655B57827106C4E001505C4 /* unicocheck_ios.h */,
-				E638E452272C682D00FEF2C5 /* UnicoCheckAPI.h */,
-				E638E453272C682D00FEF2C5 /* UnicoCheckAPI.m */,
 			);
 			path = "unicocheck-ios";
 			sourceTree = "<group>";
@@ -124,7 +118,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E655B58427106C4E001505C4 /* unicocheck_ios.h in Headers */,
-				E638E454272C682D00FEF2C5 /* UnicoCheckAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +219,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E638E455272C682D00FEF2C5 /* UnicoCheckAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
