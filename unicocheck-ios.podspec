@@ -17,17 +17,17 @@ Pod::Spec.new do |spec|
 
   spec.name         = "unicocheck-ios"
   spec.version      = "0.1.6"
-  spec.summary      = "A short description of unicocheck-ios."
+  spec.summary      = "Esta biblioteca visa implementar as soluções unico | check sob a plataforma iOS."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description = 'A short description'
+  spec.description = 'O objetivo da SDK unico-check-ios é proporcionar a melhor experiência de captura de imagens. Auxiliando também na implementação do desenvolvedor/cliente unico.'
 
 
-  spec.homepage     = "http://EXAMPLE/unicocheck-ios"
+  spec.homepage     = "https://www3.acesso.io/sdkbio"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -52,10 +52,10 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "Matheus D." => "matheus_cancao@hotmail.com" }
+  spec.author             = { "Matheus D." => "matheusdomingoslondrina@gmail.com", "Beatriz Monteiro" => "beatriz.monteiro@unico.io" }
   # Or just: spec.author    = "Matheus D."
   # spec.authors            = { "Matheus D." => "matheus_cancao@hotmail.com" }
-  # spec.social_media_url   = "https://twitter.com/Matheus D."
+  spec.social_media_url   = "https://ajuda.unico.io/hc/pt-br"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -64,7 +64,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-   spec.platform     = :ios, "12.1"
+   spec.platform     = :ios, "11.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -90,7 +90,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  =  "unicocheck-ios/**/*.{h,m,swift}"
+  spec.source_files  =  "unicocheck-ios/**/*.{h,m,swift}", "unicocheck-ios/**/*.{mlmodel}"
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
