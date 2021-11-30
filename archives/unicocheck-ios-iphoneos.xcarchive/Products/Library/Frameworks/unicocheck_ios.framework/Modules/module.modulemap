@@ -1,6 +1,0 @@
-framework module unicocheck_ios {
-  umbrella header "unicocheck_ios.h"
-
-  export *
-  module * { export * }
-}

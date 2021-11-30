@@ -8,46 +8,6 @@
 		<data>
 		i8okqbulYeqhtR9AUOJkTGYDYH4=
 		</data>
-		<key>FaceTecSDK.framework/FaceTecSDK</key>
-		<data>
-		0pCN2qPsoz+PJ5gQNJ/OeBOjrOM=
-		</data>
-		<key>FaceTecSDK.framework/Headers/FaceTecPublicApi.h</key>
-		<data>
-		vBRFBg+2w/Dll2P2JJzAPs5oEMg=
-		</data>
-		<key>FaceTecSDK.framework/Headers/FaceTecPublicStringKeys.h</key>
-		<data>
-		lw813Trk/b5mlzeW/D23fIMnQm4=
-		</data>
-		<key>FaceTecSDK.framework/Headers/FaceTecSDK.h</key>
-		<data>
-		JeIjaPESffWvy5ie4QT25+9H8Mw=
-		</data>
-		<key>FaceTecSDK.framework/Info.plist</key>
-		<data>
-		bz2Z1T8OMPxIaO/kdhck+CSMmEk=
-		</data>
-		<key>FaceTecSDK.framework/Modules/module.modulemap</key>
-		<data>
-		xwgaN526wfkR2RdN58BEpPjamvw=
-		</data>
-		<key>FaceTecSDK.framework/_CodeSignature/CodeResources</key>
-		<data>
-		vj+Ilt7StmJOQw48Pa+iR3n98wE=
-		</data>
-		<key>Frameworks/FaceTecSDK.framework/FaceTecSDK</key>
-		<data>
-		A7WHn9MuBarGa19CkMrt15SXThk=
-		</data>
-		<key>Frameworks/FaceTecSDK.framework/Info.plist</key>
-		<data>
-		bz2Z1T8OMPxIaO/kdhck+CSMmEk=
-		</data>
-		<key>Frameworks/FaceTecSDK.framework/_CodeSignature/CodeResources</key>
-		<data>
-		rxELYLH5s+pJAV/Xczdf1+gDUBI=
-		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
 		PyQ57I9oJ4Fi+4X6IL2KuMfQzoA=
@@ -142,7 +102,7 @@
 		</data>
 		<key>Headers/UnicoCheck.h</key>
 		<data>
-		aysBmnlvHI/L3avlN4Ga+aDHHFE=
+		CSTSOIV96kBd0Pi5H+iLJ7m1NsE=
 		</data>
 		<key>Headers/iAcessoBioBuilder.h</key>
 		<data>
@@ -150,7 +110,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		GFClAmnLFzrYe4XNUiCJaJk9+FQ=
+		uWScX38UPAWS1ipEle7JFh55xwU=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -240,76 +200,6 @@
 			<key>hash2</key>
 			<data>
 			bsC9tYwz/0FOhaQqIfn0EnveIewLCX81TcvGeKZez/0=
-			</data>
-		</dict>
-		<key>FaceTecSDK.framework/FaceTecSDK</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			m/FFvKkDSkB3ShzQoh0KHUBhj1t2avQthct5Bk6qnT0=
-			</data>
-		</dict>
-		<key>FaceTecSDK.framework/Headers/FaceTecPublicApi.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			UH0LgjjyQCAOeUFiCYdJPZAMooILaZoCAf4xiwA5THg=
-			</data>
-		</dict>
-		<key>FaceTecSDK.framework/Headers/FaceTecPublicStringKeys.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			oCAcMmAycqDI5EKWgQZKwMYKgHqV/NmGT1e/SbsIgtg=
-			</data>
-		</dict>
-		<key>FaceTecSDK.framework/Headers/FaceTecSDK.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Ibte2KAl35oMhi6DQucqH33FcJTzAontEXiKeIE3Tas=
-			</data>
-		</dict>
-		<key>FaceTecSDK.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			oywvhHR36PTcH48ZcBBNzNHCW8YLozeM6o7Sz06+Fj8=
-			</data>
-		</dict>
-		<key>FaceTecSDK.framework/Modules/module.modulemap</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			JxJawy+/T09E4oAW53Fff7cwlYBkifTof4ml/4bJ3rM=
-			</data>
-		</dict>
-		<key>FaceTecSDK.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			+1p27R++YbTDFkGsrqj1qFma52NCjwn7zdyJUqb0uxw=
-			</data>
-		</dict>
-		<key>Frameworks/FaceTecSDK.framework/FaceTecSDK</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			v4QulosdOVcTcnL233GlO6qz9Y5/nxVpVA79RSEky7k=
-			</data>
-		</dict>
-		<key>Frameworks/FaceTecSDK.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			oywvhHR36PTcH48ZcBBNzNHCW8YLozeM6o7Sz06+Fj8=
-			</data>
-		</dict>
-		<key>Frameworks/FaceTecSDK.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4uMOBA4cb/JVX7A+5pqV3/rraP5XEncBPVCfieVzmEU=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio-Swift.h</key>
@@ -477,7 +367,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KiPp6qKcHWMdqnjjXsbkhbscUkQGWALz74/KkWjWT5g=
+			P8JIotKRtlkvtBFKftYLCPY+E3/lWjGX24M1+HUpm+Y=
 			</data>
 		</dict>
 		<key>Headers/iAcessoBioBuilder.h</key>
