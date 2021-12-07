@@ -12,7 +12,7 @@
 @protocol DocumentCameraDelegate
 
 - (void)onCameraReadyDocument: (id <AcessoBioCameraOpenerDelegate>)cameraOpener;
-- (void)onCameraFailedDocument:(NSString*)message;
+- (void)onCameraFailedDocument:(ErrorPrepare *)message;
 
 
 @end

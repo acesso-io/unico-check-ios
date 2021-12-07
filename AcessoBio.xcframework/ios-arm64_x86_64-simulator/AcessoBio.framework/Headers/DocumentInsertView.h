@@ -31,13 +31,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (assign, nonatomic) OperationType operationType;
 
-@property (strong, nonatomic) UIColor *colorSilhoutte;
-@property (strong, nonatomic) UIColor *colorBackground;
-@property (strong, nonatomic) UIColor *colorBackgroundBoxStatus;
-@property (strong, nonatomic) UIColor *colorTextBoxStatus;
-@property (nonatomic, strong) UIColor *colorBottomDocumentBackground;
-@property (nonatomic, strong) UIColor *colorBottomDocumentText;
-
 @end
 
 NS_ASSUME_NONNULL_END

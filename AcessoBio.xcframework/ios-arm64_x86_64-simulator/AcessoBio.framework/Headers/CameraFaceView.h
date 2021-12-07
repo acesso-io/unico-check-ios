@@ -11,6 +11,7 @@
 @import AVFoundation;
 @import CoreImage;
 #import "UIImageUtils.h"
+#import "UnicoCheckThemes.h"
 
 #import "CameraMain.h"
 
@@ -33,10 +34,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-
 @interface CameraFaceView : CameraMain <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureMetadataOutputObjectsDelegate> {
-    
     
     BOOL isSelfie;
     UIView *rectangle;
@@ -77,7 +75,6 @@ NS_ASSUME_NONNULL_BEGIN
     UIViewWithHole *vHole;
     
     UIImageView *ivAcessoBio;
-    
     
     CGRect frameCurrent;
 
@@ -138,15 +135,12 @@ NS_ASSUME_NONNULL_BEGIN
     
     UIImageView *ivBackgroundGreen;
     
-    
-    
     double scoreFacedetect;
     
     UIView *vFlash;
     UIActivityIndicatorView *spinFlash;
     
     int  userBlinks;
-    
     
     int resultFaceDetectBehavior; // 1 = Face Match / 2 = Both substandard / 3 = Not match
     int resultFaceDetect; // // 1 = Face Match / 2 = Both substandard / 3 = Not match
@@ -205,8 +199,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 
-@property (strong, nonatomic) UnicoCheck *delegate;
-
+@property (strong, nonatomic) UnicoCheck *core;
 
 #pragma mark - Methods
 
@@ -257,7 +250,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong,nonatomic) CMMotionManager *motionManager;
 
-
 @property (assign, nonatomic) BOOL isEnableAutoCapture;
 @property (assign, nonatomic) BOOL isEnableSmartCapture;
 
@@ -265,14 +257,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *cpfToFacesCompare;
 
 @property(nonatomic, strong) AcessoBioManager *acessiBioManager;
-
-@property (strong, nonatomic) UIColor *colorSilhoutteNeutral;
-@property (strong, nonatomic) UIColor *colorSilhoutteSuccess;
-@property (strong, nonatomic) UIColor *colorSilhoutteError;
-@property (strong, nonatomic) UIColor *colorBackground;
-@property (strong, nonatomic) UIColor *colorBackgroundBoxStatus;
-@property (strong, nonatomic) UIColor *colorTextBoxStatus;
-
 
 @property (readwrite) double secondsTimeoutToInferenceFace;
 @property (readwrite) double secondsTimeoutSession;

@@ -101,6 +101,7 @@ Pod::Spec.new do |spec|
   #  You can preserve files from being cleaned, please don't preserve
   #  non-essential files like tests, examples and documentation.
   #
+  spec.resources = "unicocheck-ios/*.lproj"
 
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
@@ -114,11 +115,11 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  spec.ios.vendored_frameworks = "AcessoBio.xcframework"
+  spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FaceTecSDK.xcframework", "CryptoSwift.xcframework"
 
   spec.dependency  'Sentry' 
   spec.dependency  'JOSESwift'
-  spec.dependency  'CryptoSwift'
+
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"

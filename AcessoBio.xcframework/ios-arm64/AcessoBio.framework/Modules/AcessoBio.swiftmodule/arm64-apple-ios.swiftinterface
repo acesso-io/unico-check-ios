@@ -2,10 +2,228 @@
 // swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AcessoBio
 @_exported import AcessoBio
+import CryptoSwift
+import FaceTecSDK
 import Foundation
 import Swift
+import SystemConfiguration
+import UIKit
 import _Concurrency
-@objc public class InitialSwiftFile : ObjectiveC.NSObject {
-  @objc public init(str: Swift.String)
+@_hasMissingDesignatedInitializers @objc public class UnicoHttpRequest : ObjectiveC.NSObject {
+  @objc public func get(router: AcessoBio.UnicoHttpURLRouter.Routers, completion: @escaping (Any, AcessoBio.ErrorHttp?) -> Swift.Void)
+  @objc public func get(router: AcessoBio.UnicoHttpURLRouter.Routers, headers: AcessoBio.UnicoHttpHeaders?, completion: @escaping (Any, AcessoBio.ErrorHttp?) -> Swift.Void)
+  @objc public func post(router: AcessoBio.UnicoHttpURLRouter.Routers, headers: AcessoBio.UnicoHttpHeaders?, jsonBody: [Swift.String : Any], completion: @escaping (Any, AcessoBio.ErrorHttp?) -> Swift.Void)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ErrorUnico : ObjectiveC.NSObject {
+  public var code: Swift.Int
+  public var message: Swift.String?
+  public var body: [Swift.String : Swift.String?]?
+  @objc override dynamic public init()
+  @objc public init(code: Swift.Int, message: Swift.String?, body: [Swift.String : Swift.String]?)
+  @objc public func getMessage() -> Foundation.NSString
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class UnicoHttpURLRouter : ObjectiveC.NSObject {
+  @objc public enum Routers : Swift.Int, Swift.RawRepresentable {
+    case token
+    case session
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func getURL(router: AcessoBio.UnicoHttpURLRouter.Routers) -> Foundation.URL
+  @objc deinit
+}
+@objc public class UnicoEnumsInfo : ObjectiveC.NSObject {
+  @objc public init(tag: Swift.String, desc: Swift.String)
+  @objc deinit
+}
+@objc public enum UnicoEnumsIErrors : Swift.Int {
+  case UNICO_UNKNOWN_INTERNAL_ERROR = 73000
+  case ERROR_MINIMUM_API = 73003
+  case NETWORK_ERROR = 73100
+  case JSON_NOT_FOUND = 73200
+  case JSON_INVALID = 73202
+  case AUTHENTICATION_REQUEST_ERROR = 73300
+  case AUTHENTICATION_PARSE_ERROR = 73301
+  case AUTHENTICATION_TOKEN_NOT_FOUND = 73302
+  case FACETEC_NOT_FOUND = 73600
+  case FACETEC_GET_SESSION_FAILED = 73602
+  case FACETEC_PRODUCTION_MODE_NOT_WORKING = 73601
+  case FACETEC_SESSION_STATUS_USER_CANCELLED = 73603
+  case FACETEC_SESSION_STATUS_SESSION_UNSUCCESSFUL = 73604
+  case FACETEC_SESSION_STATUS_CAMERA_PERMISSION_DENIED = 73605
+  case FACETEC_SESSION_STATUS_CONTEXT_SWITCH = 73606
+  case FACETEC_SESSION_STATUS_LANDSCAPE_MODE_NOT_ALLOWED = 73607
+  case FACETEC_SESSION_STATUS_REVERSE_PORTRAIT_NOT_ALLOWED = 73608
+  case FACETEC_SESSION_STATUS_TIMEOUT = 73609
+  case FACETEC_SESSION_STATUS_LOW_MEMORY = 73610
+  case FACETEC_SESSION_STATUS_NON_PRODUCTION_MODE_NETWORKING_REQUIRED = 73611
+  case FACETEC_SESSION_STATUS_GRACE_PERIOD_EXCEDED = 73612
+  case FACETEC_SESSION_STATUS_ENCRYPTION_KEY_INVALID = 73613
+  case FACETEC_SESSION_STATUS_MISSING_GUIDANCE_IMAGES = 73614
+  case FACETEC_SESSION_STATUS_CAMERA_INITIALIZATION_ISSUE = 73615
+  case FACETEC_SESSION_STATUS_LOCKED_OUT = 73616
+  case FACETEC_SESSION_UNKNOWN_INTERNAL_ERROR = 73617
+  case FACETEC_SESSION_USER_CANCELLED_VIA_CLICKABLE_READY_SCREEN_SUBTEXT = 73618
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class UnicoEnumsErrors : ObjectiveC.NSObject {
+  @objc public static func getInfo(unicoEnumError: AcessoBio.UnicoEnumsIErrors) -> AcessoBio.UnicoEnumsInfo
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class UnicoHttpHeaders : ObjectiveC.NSObject {
+  @objc public init(headers: Foundation.NSDictionary)
+  @objc deinit
+}
+@objc public class UnicoFacetecProcessor : ObjectiveC.NSObject, AcessoBio.UnicoFacetecProcessorDelegate, FaceTecSDK.FaceTecFaceScanProcessorDelegate, Foundation.URLSessionTaskDelegate {
+  @objc public init(sdkToken: AcessoBio.SDKTokenResponseDTO)
+  @objc public func getFacetecViewController(sessionToken: Swift.String, delegate: AcessoBio.UnicoFacetecProcessorDelegate) -> UIKit.UIViewController!
+  @objc public func processSessionWhileFaceTecSDKWaits(sessionResult: FaceTecSDK.FaceTecSessionResult, faceScanResultCallback: FaceTecSDK.FaceTecFaceScanResultCallback)
+  @objc public func onFaceTecSDKCompletelyDone()
+  @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
+  @objc public func isSuccess(result: [Swift.String : Any])
+  @objc public func isUnsuccessful(status: FaceTecSDK.FaceTecSessionStatus)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SelfieResult : AcessoBio.CameraResult {
+  @objc override public init(base64: Swift.String, sdkToken: Swift.String)
+  @objc override public init(data: [Swift.String : Any], sdkToken: Swift.String)
+  @objc deinit
+}
+@objc public class CameraResult : ObjectiveC.NSObject {
+  @objc public var base64: Swift.String!
+  @objc public var encrypted: Swift.String!
+  @objc public init(base64: Swift.String, sdkToken: Swift.String)
+  @objc public init(data: [Swift.String : Any], sdkToken: Swift.String)
+  @objc deinit
+}
+@objc public class iOSClientInfo : ObjectiveC.NSObject, Swift.Decodable {
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@objc public class UnicoHttpMethods : ObjectiveC.NSObject {
+  @objc public enum HttpMethodType : Swift.Int, Swift.RawRepresentable {
+    case GET
+    case POST
+    case PUT
+    case PATCH
+    case DELETE
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @objc public init(httpMethod: AcessoBio.UnicoHttpMethods.HttpMethodType, params: Swift.AnyObject)
+  public func getHttpMethod() -> AcessoBio.UnicoHttpMethods.HttpMethodType
+  public func getParams() -> Swift.AnyObject
+  @objc deinit
+}
+@objc public class UnicoSetupData : ObjectiveC.NSObject, Swift.Decodable {
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ErrorHttpResponse : AcessoBio.ErrorUnico {
+  @objc override dynamic public init()
+  @objc override public init(code: Swift.Int, message: Swift.String?, body: [Swift.String : Swift.String]?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ErrorHttp : AcessoBio.ErrorUnico {
+  @objc override dynamic public init()
+  @objc override public init(code: Swift.Int, message: Swift.String?, body: [Swift.String : Swift.String]?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class UnicoHttpSession : ObjectiveC.NSObject {
+  public func getSession() -> Foundation.URLSession
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DocumentResult : AcessoBio.CameraResult {
+  @objc override public init(base64: Swift.String, sdkToken: Swift.String)
+  @objc override public init(data: [Swift.String : Any], sdkToken: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class UnicoNetworkingModule : ObjectiveC.NSObject {
+  @objc public func isConnectedToNetwork() -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class ProjectInfo : ObjectiveC.NSObject, Swift.Decodable {
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class UnicoSetup : ObjectiveC.NSObject {
+  @objc public func setupSDK(jsonName: Swift.String, completion: @escaping (AcessoBio.ErrorUnicoSetup?) -> Swift.Void)
+  @objc public func getSdkTokenObject() -> AcessoBio.SDKTokenResponseDTO?
+  @objc public func getUnicoSetupData() -> AcessoBio.UnicoSetupData?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol UnicoFacetecProtocol {
+  @objc func initFacetec() -> AcessoBio.UnicoFacetecProtocol
+}
+@objc public class ClientInfo : ObjectiveC.NSObject, Swift.Decodable {
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ErrorFacetec : AcessoBio.ErrorBio {
+  @objc override dynamic public init(code: Swift.Int, method: Swift.String, desc: Swift.String)
+  @objc override dynamic public init(code: Swift.Int, desc: Swift.String, info: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class SDKTokenResponseDTO : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var Dk: Swift.String
+  @objc public var Ec: Swift.String
+  @objc public var SdkPk: AcessoBio.SdkPkDTO
+  @objc public var Token: Swift.String
+  required public init(from decoder: Swift.Decoder) throws
+  @objc public func getSdkPk() -> AcessoBio.SdkPkDTO?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class UnicoErrors : ObjectiveC.NSObject {
+  @objc public static func getUnicoError(enumerated: AcessoBio.UnicoEnumsIErrors, info: Swift.String?) -> AcessoBio.ErrorBio
+  @objc public static func getCompleteException(exception: Foundation.NSException) -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol UnicoFacetecProcessorDelegate {
+  @objc func isSuccess(result: [Swift.String : Any])
+  @objc func isUnsuccessful(status: FaceTecSDK.FaceTecSessionStatus)
+}
+@objc public class HostInfo : ObjectiveC.NSObject, Swift.Decodable {
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class Jwt : ObjectiveC.NSObject {
+  @objc public func encode(data: [Swift.String : Any], token: Swift.String!) -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SdkPkDTO : ObjectiveC.NSObject, Swift.Decodable {
+  required public init(from decoder: Swift.Decoder) throws
+  @objc public func getAppId() -> Swift.String?
+  @objc deinit
+}
+@objc public class UnicoFacetec : ObjectiveC.NSObject, AcessoBio.UnicoFacetecProcessorDelegate {
+  @objc public init(unicoSetup: AcessoBio.UnicoSetupData, sdkToken: AcessoBio.SDKTokenResponseDTO)
+  @objc public func initializeFaceTecSDK(completion: @escaping (AcessoBio.ErrorFacetec?) -> Swift.Void)
+  @objc public func openCameraFaceTec(viewController: UIKit.UIViewController, completion: @escaping (AcessoBio.SelfieResult?, AcessoBio.ErrorBio?) -> Swift.Void)
+  @objc public func isSuccess(result: [Swift.String : Any])
+  @objc public func isUnsuccessful(status: FaceTecSDK.FaceTecSessionStatus)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class ErrorUnicoSetup : AcessoBio.ErrorBio {
+  @objc override dynamic public init(code: Swift.Int, method: Swift.String, desc: Swift.String)
+  @objc override dynamic public init(code: Swift.Int, desc: Swift.String, info: Swift.String)
+  @objc override dynamic public init()
   @objc deinit
 }
