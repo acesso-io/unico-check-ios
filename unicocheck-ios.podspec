@@ -91,8 +91,7 @@ Pod::Spec.new do |spec|
   spec.source_files  =  "unicocheck-ios/**/*.{h,m,swift}", "unicocheck-ios/**/*.{mlmodel}"
   # spec.exclude_files = "Classes/Exclude"
 
-  # spec.public_header_files = "Classes/**/*.h"
-
+  spec.public_header_files = "unicocheck-ios/**/*.h"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AcessoBioManager.h"
+#import "AcessoBio/AcessoBioManagerDelegate.h"
 
 //! Project version number for AcessoBio.
 FOUNDATION_EXPORT double AcessoBioVersionNumber;
