@@ -1,0 +1,57 @@
+name: On Pull Request
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    name: Build Project
+    runs-on: macos-latest
+
+    steps:
+    - name: Chechout Repository
+      uses: actions/checkout@v2
+
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode.app
+
+    - name: Build
+      run: |
+        set -o pipefail
+        xcodebuild build \
+        -scheme unicocheck-ios \
+        -destination 'platform=iOS Simulator,name=iPhone 11' \
+        -derivedDataPath build \
+        | xcpretty
+
+    - name: Archive derived data artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: build
+
+  test:
+      name: Test Project
+      needs: build
+      runs-on: macos-latest
+
+      steps:
+      - name: Chechout Repository
+        uses: actions/checkout@v2
+
+      - name: Download derived data artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: build
+
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode.app
+
+      - name: Test
+        run: |
+          set -o pipefail
+          instruments -s devices
+   
+    
