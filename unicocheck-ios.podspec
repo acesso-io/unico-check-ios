@@ -64,13 +64,6 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios
    spec.platform     = :ios, "11.0"
 
-  #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
-  # spec.osx.deployment_target = "10.7"
-  # spec.watchos.deployment_target = "2.0"
-  # spec.tvos.deployment_target = "9.0"
-
-
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Specify the location from where the source should be retrieved.
@@ -79,20 +72,17 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/acesso-io/unico-check-ios", :tag => "#{spec.version}" }
 
-
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
   #  giving a folder will include any swift, h, m, mm, c & cpp files.
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
-  #
-
+  
   spec.source_files  =  "unicocheck-ios/**/*.{h,m,swift}", "unicocheck-ios/**/*.{mlmodel}"
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
-
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -133,6 +123,5 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
 
 end
