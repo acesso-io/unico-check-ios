@@ -52,6 +52,10 @@ jobs:
       - name: Test
         run: |
           set -o pipefail
-          instruments -s devices
+          xcodebuild build \
+          -scheme unicocheck-ios \
+          -destination 'platform=iOS Simulator,name=iPhone 11' \
+          -derivedDataPath \
+          test
    
     
