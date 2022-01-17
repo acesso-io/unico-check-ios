@@ -49,7 +49,7 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -switch /Applications/Xcode.app
 
-            - name: Test
+      - name: Test
         run: |
           set -o pipefail
           xcodebuild build \
