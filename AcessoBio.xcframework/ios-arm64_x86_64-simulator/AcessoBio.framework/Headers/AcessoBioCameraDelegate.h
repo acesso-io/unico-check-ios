@@ -15,8 +15,8 @@
 
 @protocol AcessoBioCameraDelegate <NSObject>
 
-- (void)prepareSelfieCamera: (id <SelfieCameraDelegate>)delegate;
-- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate;
+- (void)prepareSelfieCamera: (id <SelfieCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName;
+- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName;
 
 @end
 

@@ -17,7 +17,6 @@
 - (id<iAcessoBioBuilder>) setAutoCapture: (BOOL)isEnabled;
 - (id<iAcessoBioBuilder>) setSmartFrame: (BOOL)isEnabled;
 - (id<iAcessoBioBuilder>) setTimeoutSession: (double)timeoutInSeconds;
-- (id<iAcessoBioBuilder>) setTimeoutToFaceInference: (double)timeoutInSeconds;
 - (id<AcessoBioCameraDelegate>) build;
 
 @end

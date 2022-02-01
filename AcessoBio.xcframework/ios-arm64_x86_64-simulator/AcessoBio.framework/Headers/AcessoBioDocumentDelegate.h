@@ -9,7 +9,7 @@
 #ifndef AcessoBioDocumentDelegate_h
 #define AcessoBioDocumentDelegate_h
 #import "ErrorBio.h"
-#import "DocumentResult.h"
+@class DocumentResult;
 
 @protocol AcessoBioDocumentDelegate <NSObject>
 

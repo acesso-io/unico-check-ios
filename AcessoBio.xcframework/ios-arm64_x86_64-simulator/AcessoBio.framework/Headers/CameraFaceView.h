@@ -11,6 +11,7 @@
 @import AVFoundation;
 @import CoreImage;
 #import "UIImageUtils.h"
+#import "UnicoCheckThemes.h"
 
 #import "CameraMain.h"
 
@@ -29,14 +30,11 @@
 #import "FaceAnalyze.h"
 
 @class CameraBio;
-
+@class UnicoLogoImageView;
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-
 @interface CameraFaceView : CameraMain <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureMetadataOutputObjectsDelegate> {
-    
     
     BOOL isSelfie;
     UIView *rectangle;
@@ -78,7 +76,6 @@ NS_ASSUME_NONNULL_BEGIN
     
     UIImageView *ivAcessoBio;
     
-    
     CGRect frameCurrent;
 
     CGRect frameFaceCenter;
@@ -95,7 +92,8 @@ NS_ASSUME_NONNULL_BEGIN
 
     UILabel *lbMessage;
     UIView *vAlert;
-    UIButton *btClose;
+
+    UIView *viewToButtonClose;
     
     BOOL isSmillingUpponEnter;
     
@@ -138,15 +136,12 @@ NS_ASSUME_NONNULL_BEGIN
     
     UIImageView *ivBackgroundGreen;
     
-    
-    
     double scoreFacedetect;
     
     UIView *vFlash;
     UIActivityIndicatorView *spinFlash;
     
     int  userBlinks;
-    
     
     int resultFaceDetectBehavior; // 1 = Face Match / 2 = Both substandard / 3 = Not match
     int resultFaceDetect; // // 1 = Face Match / 2 = Both substandard / 3 = Not match
@@ -201,11 +196,11 @@ NS_ASSUME_NONNULL_BEGIN
     
     SensorsDevice *sensorDevice;
     FaceAnalyze *faceAnalyze;
-
+    
+    UnicoLogoImageView *unicoLogoImageView;
+    
+    BOOL isCameraTypeChanged;
 }
-
-
-@property (strong, nonatomic) UnicoCheck *delegate;
 
 
 #pragma mark - Methods
@@ -257,7 +252,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong,nonatomic) CMMotionManager *motionManager;
 
-
 @property (assign, nonatomic) BOOL isEnableAutoCapture;
 @property (assign, nonatomic) BOOL isEnableSmartCapture;
 
@@ -266,15 +260,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong) AcessoBioManager *acessiBioManager;
 
-@property (strong, nonatomic) UIColor *colorSilhoutteNeutral;
-@property (strong, nonatomic) UIColor *colorSilhoutteSuccess;
-@property (strong, nonatomic) UIColor *colorSilhoutteError;
-@property (strong, nonatomic) UIColor *colorBackground;
-@property (strong, nonatomic) UIColor *colorBackgroundBoxStatus;
-@property (strong, nonatomic) UIColor *colorTextBoxStatus;
-
-
-@property (readwrite) double secondsTimeoutToInferenceFace;
 @property (readwrite) double secondsTimeoutSession;
 
 @end

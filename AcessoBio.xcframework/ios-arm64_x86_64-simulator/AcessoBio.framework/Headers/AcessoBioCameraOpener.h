@@ -9,6 +9,7 @@
 @import Foundation;
 #import "AcessoBioCameraOpenerDelegate.h"
 @class UnicoCheck;
+@class ErrorUnicoSetup;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AcessoBioCameraOpener : NSObject <AcessoBioCameraOpenerDelegate> {
@@ -16,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (id)initWithUnicoCheck:(UnicoCheck *)unicoCheck;
+- (void)setJsonConfigName:(NSString *)name completion:(void(^)(ErrorBio * error))completionHandler;
 
 @end
 

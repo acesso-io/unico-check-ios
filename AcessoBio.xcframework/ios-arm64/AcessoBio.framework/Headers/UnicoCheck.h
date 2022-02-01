@@ -8,12 +8,34 @@
 @import Foundation;
 @import UIKit;
 
+#if __has_include(<Sentry/Sentry.h>)
+#import <Sentry/Sentry.h>
+#endif
+
+#if __has_include(<FaceTecSDK/FaceTecSDK.h>)
+#import <FaceTecSDK/FaceTecSDK.h>
+#endif
+
+#if __has_include(<FaceTecSDK/FaceTecPublicApi.h>)
+#import <FaceTecSDK/FaceTecPublicApi.h>
+#endif
+
 #import "ErrorBio.h"
 #import "iAcessoBioBuilder.h"
 #import "AcessoBioManagerDelegate.h"
 #import "AcessoBioSelfieDelegate.h"
 #import "AcessoBioDocumentDelegate.h"
+#import "UnicoCheckThemes.h"
+#import "UnicoCheckThemesDelegate.h"
 
+#import "UnicoCheckMapCallbacks.h"
+
+@class UnicoSetup;
+@class UnicoConfigDelegate;
+@class UnicoSetupData;
+@class SDKTokenResponseDTO;
+@class UnicoFacetec;
+@class UnicoJsonLoad;
 @class CameraFaceView;
 @class DocumentInsertView;
 
@@ -23,8 +45,8 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     ReactNative
 };
 
-@interface UnicoCheck : NSObject {
-        
+@interface UnicoCheck : NSObject <UnicoCheckThemesDelegate> {
+
     UIViewController *viewController;
     
     CameraFaceView *cView;
@@ -39,14 +61,23 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     UIImage *imageIconPopupError;
     
     double defaultTimeoutSession;
-    double defaultTimeoutToFaceInference;
-    double minimumTimeoutToFaceInference;
-
+    
     BOOL hasImplementationError;
     
+    BOOL facetecHasIncluded;
+#if __has_include(<FaceTecSDK/FaceTecSDK.h>)
+    id<FaceTecSessionResult> _Nonnull latestSessionResult;
+#endif
+    
+    UnicoSetupData * unicoSetupData;
+    SDKTokenResponseDTO * sdkTokenResponse;
+    
+    UnicoFacetec *unicoFacetec;
+    BOOL isFacetecFlow;
+    
+    UnicoCheckMapCallbacks *mapCallbacks;
+
 }
-
-
 #pragma mark - Protocos (interface in Java/Kotlin)
 @property (nonatomic, weak) id <AcessoBioManagerDelegate> acessoBioDelegate;
 @property (nonatomic, weak) id <AcessoBioSelfieDelegate> selfieDelegate;
@@ -62,32 +93,17 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 
 #pragma mark - Custom
 
+@property (nonatomic, strong) UnicoCheckThemes *theme;
+
 - (void)setAutoCapture:(BOOL)isEnabled;
 - (void)setSmartFrame:(BOOL)isEnabled;
 
 @property (readonly) BOOL isAutoCapture;
 @property (readonly) BOOL isSmartCamera;
 
-@property (nonatomic, strong) UIColor *colorSilhoutteNeutral;
-@property (nonatomic, strong) UIColor *colorSilhoutteSuccess;
-@property (nonatomic, strong) UIColor *colorSilhoutteError;
+#pragma mark - Config
 
-@property (nonatomic, strong) UIColor *colorBackground;
-
-@property (nonatomic, strong) UIColor *colorBackgroundBoxStatus;
-@property (nonatomic, strong) UIColor *colorTextBoxStatus;
-
-@property (nonatomic, strong) UIColor *colorBackgroundPopupError;
-@property (nonatomic, strong) UIColor *colorTextPopupError;
-@property (nonatomic, strong) UIColor *colorBackgroundButtonPopupError;
-@property (nonatomic, strong) UIColor *colorTextButtonPopupError;
-
-@property (nonatomic, strong) UIColor *colorBottomDocumentBackground;
-@property (nonatomic, strong) UIColor *colorBottomDocumentText;
-
-@property (nonatomic, strong) UIColor *colorButtonIcon;
-@property (nonatomic, strong) UIColor *colorButtonBackground;
-
+- (void)setupConfigToOpenCamera:(NSString *_Nullable)jsonConfigName completion:(void(^_Nullable)(ErrorBio * error))completionHandler;
 
 #pragma mark - CloseCamera Manually
 
@@ -95,10 +111,8 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 
 #pragma mark - Timeouts
 
-- (void)setTimeoutToFaceInference : (double)seconds;
 @property (readonly) double secondsTimeoutSession;
 - (void)setTimeoutSession: (double)seconds;
-@property (readonly) double secondsTimeoutToFaceInference;
 
 - (void)systemClosedCameraTimeoutSession;
 - (void)systemClosedCameraTimeoutFaceInference;
@@ -113,10 +127,21 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 #pragma mark - Callbacks
 
 #pragma mark Selfie
-- (void)onSuccessSelfie:(SelfieResult *)result;
+- (void)onSuccessSelfie:(NSString *)base64;
 - (void)onErrorSelfie:(ErrorBio *)error;
 #pragma mark Document
-- (void)onSuccessDocument: (DocumentResult *)result;
+- (void)onSuccessDocument: (NSString *)base64;
 - (void)onErrorDocument:(ErrorBio *)error;
+
+#pragma mark - ErrorBio
+
+- (void)onErrorAcessoBioManager:(ErrorBio *)error;
+
+#pragma mark - FaceTec
+#if __has_include(<FaceTecSDK/FaceTecSDK.h>)
+- (void)setLatestSessionResult : (id<FaceTecSessionResult> _Nonnull) sessionResult;
+#endif
+- (void)onComplete;
+
 @end
 

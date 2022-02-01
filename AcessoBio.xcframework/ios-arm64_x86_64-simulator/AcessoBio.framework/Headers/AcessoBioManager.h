@@ -7,11 +7,15 @@
 //
 @import Foundation;
 @import UIKit;
-#import "UnicoCheck.h"
+@class UnicoCheck;
+#import "iAcessoBioBuilder.h"
 #import "AcessoBioThemeDelegate.h"
+#import "UnicoCheckThemes.h"
+#import "AcessoBioCameraImpl.h"
 
 @interface AcessoBioManager : NSObject <iAcessoBioBuilder> {
     UnicoCheck *core;
+    UnicoCheckThemes *unicoTheme;
 }
 
 - (id)initWithViewController:(id)view;

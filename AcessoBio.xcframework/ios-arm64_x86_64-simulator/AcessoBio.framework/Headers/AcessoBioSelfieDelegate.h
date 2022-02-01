@@ -8,7 +8,7 @@
 
 #ifndef AcessoBioSelfieDelegate_h
 #define AcessoBioSelfieDelegate_h
-#import "SelfieResult.h"
+@class SelfieResult;
 #import "ErrorBio.h"
 
 @protocol AcessoBioSelfieDelegate <NSObject>

@@ -24,6 +24,7 @@
 - (id) getColorTextBottomDocument;
 - (id) getColorSilhouetteSuccess;
 - (id) getColorSilhouetteError;
+- (id) getColorSilhouetteNeutral;
 
 @end
 
