@@ -21,7 +21,6 @@ typedef NS_ENUM(NSInteger, OperationType) {
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DocumentInsertView : CameraMain {
-    UIButton *btClose;
     UIView *vFlash;
     UIActivityIndicatorView *spinFlash;
 }
@@ -30,13 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) UnicoCheck *core;
 
 @property (assign, nonatomic) OperationType operationType;
-
-@property (strong, nonatomic) UIColor *colorSilhoutte;
-@property (strong, nonatomic) UIColor *colorBackground;
-@property (strong, nonatomic) UIColor *colorBackgroundBoxStatus;
-@property (strong, nonatomic) UIColor *colorTextBoxStatus;
-@property (nonatomic, strong) UIColor *colorBottomDocumentBackground;
-@property (nonatomic, strong) UIColor *colorBottomDocumentText;
 
 @end
 

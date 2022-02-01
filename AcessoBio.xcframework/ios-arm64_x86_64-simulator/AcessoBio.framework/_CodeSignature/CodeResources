@@ -6,23 +6,27 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		i8okqbulYeqhtR9AUOJkTGYDYH4=
+		i45y0/VS0LD9MaciiGIG92MTlQ4=
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		PyQ57I9oJ4Fi+4X6IL2KuMfQzoA=
+		iL/YU2E/gM/J3pQqscy/vYK7QrM=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
-		k1YfUPHmoeK0q2h7DFRHbkeGAtk=
+		5kn+IKTfnutAJaSFEsDKj+AAWk4=
 		</data>
 		<key>Headers/AcessoBioCameraDelegate.h</key>
 		<data>
-		vuNPdPpm2Sy7lml/AoT8tRQdF5s=
+		HcmGqkXDbappa/PhgI5JGr/yflM=
+		</data>
+		<key>Headers/AcessoBioCameraImpl.h</key>
+		<data>
+		g/dxOimOpqPMff2KbBjP1kKoGF4=
 		</data>
 		<key>Headers/AcessoBioCameraOpener.h</key>
 		<data>
-		K2xIOzc5jsDLxxs59WG7ud1aSQI=
+		0WgpD4A9nfMHOs0v/74LTUtvzIY=
 		</data>
 		<key>Headers/AcessoBioCameraOpenerDelegate.h</key>
 		<data>
@@ -30,11 +34,11 @@
 		</data>
 		<key>Headers/AcessoBioDocumentDelegate.h</key>
 		<data>
-		qlJf70DdyUCpCz7KjzRvTsejwes=
+		tivdenpqJWZYmOE1Dorl6ZwpK3Y=
 		</data>
 		<key>Headers/AcessoBioManager.h</key>
 		<data>
-		2hzj5emVkZQEvcMEwL9is0T14xo=
+		Tbeep5BAWnHBvBokYE3s81/LD+Y=
 		</data>
 		<key>Headers/AcessoBioManagerDelegate.h</key>
 		<data>
@@ -42,31 +46,27 @@
 		</data>
 		<key>Headers/AcessoBioSelfieDelegate.h</key>
 		<data>
-		ui+lH86U9XbK4VXWQFJE+tRNz0g=
+		k6q5RqPFiYd5mowK8ofvgFe0F5E=
 		</data>
 		<key>Headers/AcessoBioThemeDelegate.h</key>
 		<data>
-		Pyqxs8SMqJ5Ge/3HgERwOFwE/Y4=
+		qV4luxpFhEmfA1enuTGjdw4zDI8=
 		</data>
 		<key>Headers/CameraFaceView.h</key>
 		<data>
-		HknTG/gBOGKrZbXuBC1Y1tbZsEg=
+		UyisHDJ13g6/9si0IKqQAIMq3HY=
 		</data>
 		<key>Headers/CameraMain.h</key>
 		<data>
-		w2iJDwMK5SEgcIuOsX5/yWK7LvA=
+		/XJjbuoigMl89CRCrTxSpMjY/y8=
 		</data>
 		<key>Headers/DocumentCameraDelegate.h</key>
 		<data>
-		+GtZTywNOn/7iasIt2lbD26nTOA=
+		rXdUCdjo3Y0NKf+KvKkrQfL541w=
 		</data>
 		<key>Headers/DocumentInsertView.h</key>
 		<data>
-		1vrxLoeoAB4s111IfABdYeCHPSM=
-		</data>
-		<key>Headers/DocumentResult.h</key>
-		<data>
-		duUFBFgnkjF0hTUNLUaA4O1QxVY=
+		PRgj5RP+j8weI6vqgBemb+1zr4c=
 		</data>
 		<key>Headers/DocumentType.h</key>
 		<data>
@@ -74,7 +74,11 @@
 		</data>
 		<key>Headers/ErrorBio.h</key>
 		<data>
-		3nQXotfSK2V7ojkghcXK2hkcJ2s=
+		lk/17BMJ/gJISzizgWvuHDr4ZkY=
+		</data>
+		<key>Headers/ErrorPrepare.h</key>
+		<data>
+		hSf21iuozEJFnBmefBmQgBYqQUM=
 		</data>
 		<key>Headers/FixedValues.h</key>
 		<data>
@@ -82,11 +86,7 @@
 		</data>
 		<key>Headers/SelfieCameraDelegate.h</key>
 		<data>
-		jNO/FX3r/EYuuMcrLPVM4yfBDr8=
-		</data>
-		<key>Headers/SelfieResult.h</key>
-		<data>
-		A5W1w0ckiy5J/bnBLopYVHF78No=
+		modEEFGNS/O2aa6E0Kl2curqXSg=
 		</data>
 		<key>Headers/UIColorExtensions.h</key>
 		<data>
@@ -102,71 +102,92 @@
 		</data>
 		<key>Headers/UnicoCheck.h</key>
 		<data>
-		47Gt5gv9VVZB4N9kQv5l47xKn1I=
+		pX41ian/nUiA6dkns1nAAbG6/ps=
+		</data>
+		<key>Headers/UnicoCheckMapCallbacks.h</key>
+		<data>
+		9505aexYmIg1ouBkvLi76oRGvlo=
+		</data>
+		<key>Headers/UnicoCheckThemes.h</key>
+		<data>
+		aA975hsW7T8IN3GjirXevt0RhdY=
+		</data>
+		<key>Headers/UnicoCheckThemesDelegate.h</key>
+		<data>
+		q0onNQ7npB+Pucb7+NtD0ylQ+dg=
 		</data>
 		<key>Headers/iAcessoBioBuilder.h</key>
 		<data>
-		lBlJPBAJseJNiGjKMgQLpFrP9ho=
+		HbPcrNqEptDLwIKVVy8cbfCva2Q=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		uWScX38UPAWS1ipEle7JFh55xwU=
+		47J0pYS871ulbe7dN4jHtEbuHHg=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		8f3TpT1Q++bgFiMgcifZCkS1sbM=
+		un8CKXIgmbQmRWvGSVTu/HssUEg=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		WcV5lRVYzZh/iBqdZzoNJUqjcaM=
+		/uLR2LDpZSSB3+oEjz3+MmqEonQ=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		o9b3wCZsUTnXpf94IqKlepsBud8=
+		kRdU+g/xeuCU9TXSAmrIYj3rJ9U=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		8f3TpT1Q++bgFiMgcifZCkS1sbM=
+		un8CKXIgmbQmRWvGSVTu/HssUEg=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		WcV5lRVYzZh/iBqdZzoNJUqjcaM=
+		/uLR2LDpZSSB3+oEjz3+MmqEonQ=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		o9b3wCZsUTnXpf94IqKlepsBud8=
+		kRdU+g/xeuCU9TXSAmrIYj3rJ9U=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		4WONTD4PY61lnxJO29NtlazO4KU=
+		i1pHx2vxjFJKISna5BEfyBcha4A=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		pS6+FnW3WtrhdBNICClUyQ9/Kao=
+		6JtrC4GdAdeWEcwlsZh1j529S50=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		10T6uz6PSTZ7m5Kgnt5O/YtDxbo=
+		FAExeqUQJ+X0pr8m4u2Z2b6H4ew=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		4WONTD4PY61lnxJO29NtlazO4KU=
+		i1pHx2vxjFJKISna5BEfyBcha4A=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		pS6+FnW3WtrhdBNICClUyQ9/Kao=
+		6JtrC4GdAdeWEcwlsZh1j529S50=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		10T6uz6PSTZ7m5Kgnt5O/YtDxbo=
+		FAExeqUQJ+X0pr8m4u2Z2b6H4ew=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		ONnXdxLv4Twc2c0hwEKzYsst8GU=
 		</data>
+		<key>en.lproj/FaceTec.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rQb5gIMGDLeSNvUcb6KmqL+ruK0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>frame_cnh.png</key>
 		<data>
-		rkEMPajKJ3M29wHpyA21i5LOoWU=
+		+MWsaH7N3D+VyYL2eoocNsdy3n0=
 		</data>
 		<key>frame_cpf.png</key>
 		<data>
@@ -174,23 +195,39 @@
 		</data>
 		<key>frame_rg_frente.png</key>
 		<data>
-		Ic0j0GKNwe1kL1R4CaQVFeK23ew=
+		AZ4OKqp8yRliw1VLgmYpIttySIg=
 		</data>
 		<key>frame_rg_verso.png</key>
 		<data>
-		7zr56H9pXoNT/WALlRVeyBzBewA=
+		4vIvfsGxMRhwyGwN+p2wzyK5Hag=
 		</data>
 		<key>ic_close.png</key>
 		<data>
-		992z6z8k8YGyhkj5q7nezrUHXr8=
+		KW584WzcGSpFc2Hb2mOVTt9TJBM=
+		</data>
+		<key>ic_footer_logo.png</key>
+		<data>
+		hXdHDhYdgINa5iQ0ln5uiEMlPi4=
 		</data>
 		<key>ic_popup_face_error.png</key>
 		<data>
-		TAveETpy6hiB73B6/zLGdTQdbYs=
+		sfZM7ScekUV5aJOvrjSOjBBgfLc=
+		</data>
+		<key>ic_silhoutte_logo.png</key>
+		<data>
+		nrH0b+7m87NK7MQD4bfuMlUsJ2Y=
 		</data>
 		<key>ic_takepicture.png</key>
 		<data>
-		KqiHWjVysTU9/r6ZryPNqyKzOds=
+		DJ0RvIKtYZEfhhG9pEI54uLKEgQ=
+		</data>
+		<key>invalid-unicocheck-services.json</key>
+		<data>
+		luS6li2HFf9AfkePLQ1Nyi0CRCA=
+		</data>
+		<key>test-unicocheck-services.json</key>
+		<data>
+		bJDsOqqcZfMiakNNFrylSiRWW+0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -199,35 +236,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bsC9tYwz/0FOhaQqIfn0EnveIewLCX81TcvGeKZez/0=
+			HLTK9OubTg+bXjmSneEDhEBMTkX7itC/+S2vKy0TIOE=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sTHPdEYofJGoTrKS82yqlcAyYjNpqmtdh/wq0exNlPs=
+			VMPUOqFqgmiFZVZ1bOAVBxSZc/UQv9LpYE0YT2CrdN8=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kmbfd6x6N6i2dQD1BNRYPmnybAZ+lKYgsh6BFC4rAmc=
+			H6IUxTAFPZhSozsdt/8i8rMEPf2tEE04ipujV9E7d5A=
 			</data>
 		</dict>
 		<key>Headers/AcessoBioCameraDelegate.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bC7FVRdc8p1cT+aAAWY883u5Ktv47yxYHd2oSl822Ds=
+			BhQVbwMnQhz3V4VSGAiVwt9/Ca+QEoZcJ98CpYKNm+k=
+			</data>
+		</dict>
+		<key>Headers/AcessoBioCameraImpl.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+2GoyojtGZI/uQSpCnlEcoeOadlQvu1/ntzfcor/vv8=
 			</data>
 		</dict>
 		<key>Headers/AcessoBioCameraOpener.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GZmwXbmIbe5EFy3uiOvlgihDdJk2pHahc3FMdLUAcVU=
+			YjuA1EM8QTd6zyEN0fmO/DOfuc3azTMhHqgBulQVcj8=
 			</data>
 		</dict>
 		<key>Headers/AcessoBioCameraOpenerDelegate.h</key>
@@ -241,14 +285,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YwX6Zx2XLr4t/Ujg6vsyWht1K8rBKno+GTdlh4o171I=
+			HnkdwkJCtPf84AzzZ5gdhYaApYRce/rw9gjpt/si1HQ=
 			</data>
 		</dict>
 		<key>Headers/AcessoBioManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2R+2bNb2tGOi90GDqfpN0kIktk3ckOn/lsq3VXamRpo=
+			es8AkyXxGVJW+iJnkfhG2bc+DND1yXhybmqXDmDOG6k=
 			</data>
 		</dict>
 		<key>Headers/AcessoBioManagerDelegate.h</key>
@@ -262,49 +306,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W6yAsmOIfsg+F7yXQTQebTSLhBbnJwHWdB6L83RJyDw=
+			Qg+JYBqLM6JFJpXkUrdtPrvObzksr1hli08wN4y+/SE=
 			</data>
 		</dict>
 		<key>Headers/AcessoBioThemeDelegate.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XEoGpHgHgj7t7TcFo/y2Txyl6G6ixRxndNO0n7HIxbY=
+			UXz1oEdzu+9yFp/dctRakRZiRw9b1lbkeNmzJ0G3BQA=
 			</data>
 		</dict>
 		<key>Headers/CameraFaceView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I4Ou2MU+FwTfOLtRHF6K8EaMyMmaWU32uv6uXjQ7bb4=
+			GLTGSTAcXYj8+ESjR+7BCqWF4kX0obo2Nv6brZ7Ijt4=
 			</data>
 		</dict>
 		<key>Headers/CameraMain.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h5lZ+fgHlK2XmXPlbjsa1jCC0qZAvKxmp6JNPIwUaZA=
+			nLX4Ir6Hs57YEHYhQxjvWrVKJoODanQwa+qKvYIFfOQ=
 			</data>
 		</dict>
 		<key>Headers/DocumentCameraDelegate.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cDHHdgYq8EkNuSJhnXVySkhYL3Qkp6CI3B/bIr0Jqi4=
+			l3oeNDxT+TCkAVMl+8ylRGOZZNICxfUE37GL+dhimxQ=
 			</data>
 		</dict>
 		<key>Headers/DocumentInsertView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AjXplWiU9c4xJcarpX3QbnFNWxlKwsBDhCGI4CXlNFI=
-			</data>
-		</dict>
-		<key>Headers/DocumentResult.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KQN7zcZj+EKyIudGsvAtrnvZkVyMGk0F+LOexif7EKE=
+			3umuaddNKMO+nQxMa4tJYkXu3Gq/eGg66gpa4wcW8ac=
 			</data>
 		</dict>
 		<key>Headers/DocumentType.h</key>
@@ -318,7 +355,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			E2KKB0A8Fjddil/FKWnlbji6VCCXr7Al7Ap3wC8LHv8=
+			sk1Sw/36KGOzplUQEDMF66euG98rOpR1E27PYloK6CQ=
+			</data>
+		</dict>
+		<key>Headers/ErrorPrepare.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0rY3W9VLmCEj4w6dBnJkx/3/aiTQiJgHnegQ7npgfu8=
 			</data>
 		</dict>
 		<key>Headers/FixedValues.h</key>
@@ -332,14 +376,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oophQmwHWAJ6ZPUHgWsa4+J/vcgZvyWMxDiaqaMrJY8=
-			</data>
-		</dict>
-		<key>Headers/SelfieResult.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			aTWa0onXRf9bcRBwyz9Ohr7JPRqyVfxkcaGt31S1yUQ=
+			HOfnfLxwQIMsKDlZ0Jh9QcK9i8x5CwOSuGHLgq2OCcw=
 			</data>
 		</dict>
 		<key>Headers/UIColorExtensions.h</key>
@@ -367,98 +404,119 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cB37jDBgEkMjKord4ebqooJJd5bJBgbO4Rc/vtr7Pew=
+			2bAP/GtA3Zxepcw2NSc/RkTLgpor7EvOLFmNZoG2p4Y=
+			</data>
+		</dict>
+		<key>Headers/UnicoCheckMapCallbacks.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5cvXxd5oUVAKcVIABZ7tfqwuZrjmy/API5/yUUz6qng=
+			</data>
+		</dict>
+		<key>Headers/UnicoCheckThemes.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			x2g0D7KRtBmOuoOrb+COHOCf/j9IkBBY3OBTdhdixzw=
+			</data>
+		</dict>
+		<key>Headers/UnicoCheckThemesDelegate.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RdIfX6jykJIIx50Oo3wZVpWROw5qCt3UrgXvwf59TqM=
 			</data>
 		</dict>
 		<key>Headers/iAcessoBioBuilder.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PdrouXOTDk2ju6D9NCpbFzE1tsn9W8YGURJaP54/1A0=
+			F087fY6kp4Rpu5Hsaz9AH2MimBPx3gb2l9+8H/1UHdc=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eexEnHV9OunvqkxCMeT/55MPezfC+43WXwrzJVyeQUI=
+			OoHKYCidBodYv3bNE6YZYespuOrHQ0EJrsjftFzpG/A=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kPf96vzQrmn+S8BJCfMYAdrskJx2n4dqLae8caKNPOg=
+			Xtj67eYM7GouSiyOzo6+37aXXwqQqiVQbePYMPZZeWo=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zb9uMH7tMUqac1EdCDqz3XuBpwTjqy3DRDjvJlpJyKQ=
+			/+5KdV/j07jH6PD+l8TaFFerrQQjU4AEZDA0wkojraI=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eexEnHV9OunvqkxCMeT/55MPezfC+43WXwrzJVyeQUI=
+			OoHKYCidBodYv3bNE6YZYespuOrHQ0EJrsjftFzpG/A=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kPf96vzQrmn+S8BJCfMYAdrskJx2n4dqLae8caKNPOg=
+			Xtj67eYM7GouSiyOzo6+37aXXwqQqiVQbePYMPZZeWo=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zb9uMH7tMUqac1EdCDqz3XuBpwTjqy3DRDjvJlpJyKQ=
+			/+5KdV/j07jH6PD+l8TaFFerrQQjU4AEZDA0wkojraI=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lbYi6XSU3tnJWfP+Ua4MunotW0Q9ZSU+ZNzX3pEpqvs=
+			SlKZknOURnPMvKb4+OLoKKrwcIUv6DSr/Vl4fUjh1vw=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YiOxHcwvOCjaU6BclSkbMff1uXfdA/hcYm0HxtcKWXM=
+			zmscF/SQmXKwGRVRtH7R7MNQIQZENjv5GL3/yLyY1pQ=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R+RULfXw4k9Ap8z14kMYjFHgM2ouTBVPHZYbA5G+kfE=
+			pfl+QYMEyNxZvR8s6KOrf96HANzXT+4b4a9pjRJRyDA=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lbYi6XSU3tnJWfP+Ua4MunotW0Q9ZSU+ZNzX3pEpqvs=
+			SlKZknOURnPMvKb4+OLoKKrwcIUv6DSr/Vl4fUjh1vw=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YiOxHcwvOCjaU6BclSkbMff1uXfdA/hcYm0HxtcKWXM=
+			zmscF/SQmXKwGRVRtH7R7MNQIQZENjv5GL3/yLyY1pQ=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R+RULfXw4k9Ap8z14kMYjFHgM2ouTBVPHZYbA5G+kfE=
+			pfl+QYMEyNxZvR8s6KOrf96HANzXT+4b4a9pjRJRyDA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -468,11 +526,20 @@
 			t2xfv+4b9Hd1NiheAX+8xEGjtNW/9/5l+x1HrJgWv6Y=
 			</data>
 		</dict>
+		<key>en.lproj/FaceTec.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			80k6SCTRjwciRg9JzmO4+UVy67v8SVP1MLRAE/gz1qM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>frame_cnh.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JwuzfkWqvPB20OQI97Jt5yCTDs5r6U45USbwDvJZKlQ=
+			OHEtHmz92Sqe5BJfupced75Ne9yjsJQmpohNxtjZI/g=
 			</data>
 		</dict>
 		<key>frame_cpf.png</key>
@@ -486,35 +553,63 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U2KindWzt/5ostF1gsIjjQcYYlv2CxtkxSSHbALPzlk=
+			Bd94acNS0OxwttRIJhgH+10NflVaEWqpGXPNeBHoJyM=
 			</data>
 		</dict>
 		<key>frame_rg_verso.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8JeqHb5vCbhDbIXSanviJop/GVxfAoTk+gMIYcznrPk=
+			09wp1L1rhHnw/zEv73RVg68jHxzRSvrmJr4ZWJVSg38=
 			</data>
 		</dict>
 		<key>ic_close.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Kezo/NL17WHq6rJL8aDoJHI9il/R9jxnCztaa4rolo=
+			4+xp49QNayV5tvolCC3mmfMkE56Zw47pVzep4ABI6hA=
+			</data>
+		</dict>
+		<key>ic_footer_logo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/J0l+m4Wdg8cdTpupk0PzNy89t/Aj19Nv79omr85awU=
 			</data>
 		</dict>
 		<key>ic_popup_face_error.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jg1HrgIXn+BllChlLie1f6x4rAx8GJ/A8uB60s++B9E=
+			pXSkWRJw67QbtPHFwP65d+kv7SEb1QUn3TKyw69oruA=
+			</data>
+		</dict>
+		<key>ic_silhoutte_logo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			S6ak/5QSu2iZQqNOzc5IB8QWlBGMt90m9LuU215Evuk=
 			</data>
 		</dict>
 		<key>ic_takepicture.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fpp4XA5ezyiZ8CjqepTRFO78PlopQfYamhq2XQirX7E=
+			wkWl+O3Eo50fVSjHuBh2SfreO5VeByxwp08+NDAn/jY=
+			</data>
+		</dict>
+		<key>invalid-unicocheck-services.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OrC8Z7b0d3Q16QqWo79noOnAKrudCmbGRfIjzakguZo=
+			</data>
+		</dict>
+		<key>test-unicocheck-services.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5Cn9KjqWtrVTMv8miEBvKi+jMZzO28RuxSOsfkvj+LE=
 			</data>
 		</dict>
 	</dict>

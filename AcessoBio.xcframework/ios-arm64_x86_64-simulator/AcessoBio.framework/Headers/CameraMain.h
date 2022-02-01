@@ -11,7 +11,6 @@
 @import AVFoundation;
 @import CoreImage;
 #import "UnicoCheck.h"
-
 #import "DeviceUtils.h"
 
 #define NAME_APPLICATION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
@@ -38,7 +37,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 @interface CameraMain : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureMetadataOutputObjectsDelegate>
 
 @property (strong, nonatomic)   AVCaptureVideoPreviewLayer *previewLayer;
@@ -57,6 +55,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIColor *colorButtonIcon;
 @property (nonatomic, strong) UIColor *colorButtonBackground;
+
+@property (strong, nonatomic) UnicoCheck *core;
 
 - (AVCaptureDevice *) deviceWithMediaType:(NSString *)mediaType preferringPosition:(AVCaptureDevicePosition)position;
 
@@ -78,6 +78,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readwrite) LanguageOrigin language;
 @property (strong, nonatomic) NSString *versionRelease;
 - (NSString *)getOrigin;
+
+- (void)addCloseButton;
+@property (strong, nonatomic) UIView *viewToButtonClose;
+
 
 @end
 
