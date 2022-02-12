@@ -104,6 +104,9 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
+  spec.xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+  spec.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+
   spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework", "CryptoSwift.xcframework"
 
   spec.dependency  'Sentry' 
@@ -124,7 +127,6 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
-  spec.xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
-  spec.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+
 
 end
