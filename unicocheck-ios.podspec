@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "unicocheck-ios"
-  spec.version      = "2.0.12"
+  spec.version      = "2.0.13"
   spec.summary      = "Esta biblioteca visa implementar as soluções unico | check sob a plataforma iOS."
 
   # This description is used to generate tags and improve search results.
