@@ -70,7 +70,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/acesso-io/unico-check-ios", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/acesso-io/unico-check-ios.git", :tag => "#{spec.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -104,11 +104,13 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework", "CryptoSwift.xcframework"
+
+
+  spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework"
 
   spec.dependency  'Sentry' 
   spec.dependency  'JOSESwift'
-  # spec.dependency  'CryptoSwift'
+  spec.dependency  'CryptoSwift'
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
@@ -123,5 +125,7 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  spec.xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+
 
 end
