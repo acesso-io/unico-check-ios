@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "unicocheck-ios"
-  spec.version      = "2.0.14"
+  spec.version      = "2.0.15"
   spec.summary      = "Esta biblioteca visa implementar as soluções unico | check sob a plataforma iOS."
 
   # This description is used to generate tags and improve search results.
@@ -104,8 +104,8 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  #spec.xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
-  spec.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+  spec.xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+  #spec.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 
   spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework", "CryptoSwift.xcframework"
 
