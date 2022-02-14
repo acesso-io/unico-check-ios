@@ -110,7 +110,6 @@ Pod::Spec.new do |spec|
 
   spec.dependency  'Sentry' 
   spec.dependency  'JOSESwift'
-  #spec.dependency  'CryptoSwift'
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
