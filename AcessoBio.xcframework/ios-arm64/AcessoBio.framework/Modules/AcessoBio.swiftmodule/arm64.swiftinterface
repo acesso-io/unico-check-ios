@@ -5,6 +5,7 @@
 import CryptoSwift
 import FaceTecSDK
 import Foundation
+import JOSESwift
 import Swift
 import SystemConfiguration
 import UIKit
