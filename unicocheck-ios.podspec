@@ -106,10 +106,11 @@ Pod::Spec.new do |spec|
 
 
 
-  spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework", "CryptoSwift.xcframework"
+  spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework"
 
   spec.dependency  'Sentry' 
   spec.dependency  'JOSESwift'
+  spec.dependency  'CryptoSwift'
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
