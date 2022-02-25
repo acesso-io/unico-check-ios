@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   
-  spec.source_files  =  "unicocheck-ios/**/*.{h,m,swift}", "unicocheck-ios/**/*.{mlmodel}"
+  spec.source_files  =  "unicocheck-ios/**/*.{h,m,swift}", "unicocheck-ios/**/*.{mlmodel}", "unicocheck-ios/**/*.{strings}"
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"

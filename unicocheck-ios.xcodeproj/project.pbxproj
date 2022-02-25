@@ -13,6 +13,7 @@
 		E655B58427106C4E001505C4 /* unicocheck_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = E655B57827106C4E001505C4 /* unicocheck_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E68BC4F027BB356B00A1DF3B /* CryptoSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68BC4ED27BB347700A1DF3B /* CryptoSwift.xcframework */; };
 		E68BC4F127BB356B00A1DF3B /* CryptoSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E68BC4ED27BB347700A1DF3B /* CryptoSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E69308F927C9633400CE27E5 /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = E69308FB27C9633400CE27E5 /* FaceTec.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		E655B57D27106C4E001505C4 /* unicocheck-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "unicocheck-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E655B58227106C4E001505C4 /* unicocheck_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unicocheck_iosTests.m; sourceTree = "<group>"; };
 		E68BC4ED27BB347700A1DF3B /* CryptoSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoSwift.xcframework; sourceTree = "<group>"; };
+		E69308FA27C9633400CE27E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FaceTec.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		E655B57727106C4E001505C4 /* unicocheck-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E69308FB27C9633400CE27E5 /* FaceTec.strings */,
 				E655B57827106C4E001505C4 /* unicocheck_ios.h */,
 			);
 			path = "unicocheck-ios";
@@ -205,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69308F927C9633400CE27E5 /* FaceTec.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +246,17 @@
 			targetProxy = E655B57F27106C4E001505C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E69308FB27C9633400CE27E5 /* FaceTec.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E69308FA27C9633400CE27E5 /* en */,
+			);
+			name = FaceTec.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E655B58527106C4E001505C4 /* Debug */ = {
