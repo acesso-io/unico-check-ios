@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "unicocheck-ios"
-  spec.version      = "2.0.6"
+  spec.version      = "2.0.7"
   spec.summary      = "Esta biblioteca visa implementar as soluções unico | check sob a plataforma iOS."
 
   # This description is used to generate tags and improve search results.
@@ -110,7 +110,6 @@ Pod::Spec.new do |spec|
   spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework"
 
   spec.dependency  'Sentry' 
-  spec.dependency  'JOSESwift'
   spec.dependency  'CryptoSwift'
 
   # spec.library   = "iconv"
