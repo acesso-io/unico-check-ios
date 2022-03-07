@@ -2,10 +2,13 @@
 // swift-compiler-version: Apple Swift version 5.5.2 effective-4.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name AcessoBio
 @_exported import AcessoBio
+import CommonCrypto
+import Compression
 import CryptoSwift
 import FaceTecSDK
 import Foundation
-import JOSESwift
+import LocalAuthentication
+import Security
 import Swift
 import SystemConfiguration
 import UIKit
@@ -62,9 +65,114 @@ import _Concurrency
   public func getURL(router: AcessoBio.UnicoHttpURLRouter.Routers) -> Foundation.URL
   @objc deinit
 }
+extension AcessoBio.ECPublicKey : Swift.Encodable {
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension AcessoBio.ECPublicKey : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+extension AcessoBio.ECPrivateKey : Swift.Encodable {
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension AcessoBio.ECPrivateKey : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct JWE {
+  public let header: AcessoBio.JWEHeader
+  public let encryptedKey: Foundation.Data
+  public let initializationVector: Foundation.Data
+  public let ciphertext: Foundation.Data
+  public let authenticationTag: Foundation.Data
+  public var compactSerializedString: Swift.String {
+    get
+  }
+  public var compactSerializedData: Foundation.Data {
+    get
+  }
+  public init<KeyType>(header: AcessoBio.JWEHeader, payload: AcessoBio.Payload, encrypter: AcessoBio.Encrypter<KeyType>) throws
+  public init(compactSerialization: Swift.String) throws
+  public init(compactSerialization: Foundation.Data) throws
+  @available(*, deprecated, message: "Use `decrypt(using decrypter:)` instead")
+  public func decrypt<KeyType>(with key: KeyType) throws -> AcessoBio.Payload
+  public func decrypt(using decrypter: AcessoBio.Decrypter) throws -> AcessoBio.Payload
+}
+extension AcessoBio.JWE : AcessoBio.CompactSerializable {
+  public func serialize(to serializer: inout AcessoBio.CompactSerializer)
+}
+extension AcessoBio.JWE : AcessoBio.CompactDeserializable {
+  public static var componentCount: Swift.Int {
+    get
+  }
+  public init(from deserializer: AcessoBio.CompactDeserializer) throws
+}
 @objc public class UnicoEnumsInfo : ObjectiveC.NSObject {
   @objc public init(tag: Swift.String, desc: Swift.String)
   @objc deinit
+}
+extension Foundation.Data : AcessoBio.ExpressibleAsECPublicKeyComponents {
+  public static func representing(ecPublicKeyComponents components: AcessoBio.ECPublicKeyComponents) throws -> Foundation.Data
+  public func ecPublicKeyComponents() throws -> AcessoBio.ECPublicKeyComponents
+}
+public struct JWSHeader {
+  public init(algorithm: AcessoBio.SignatureAlgorithm)
+  public init(parameters: [Swift.String : Any]) throws
+}
+extension AcessoBio.JWSHeader {
+  public var algorithm: AcessoBio.SignatureAlgorithm? {
+    get
+  }
+}
+extension AcessoBio.JWSHeader : AcessoBio.CommonHeaderParameterSpace {
+  public var jku: Foundation.URL? {
+    get
+    set(newValue)
+  }
+  public var jwk: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var jwkTyped: AcessoBio.JWK? {
+    get
+    set(newValue)
+  }
+  public var kid: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var x5u: Foundation.URL? {
+    get
+    set(newValue)
+  }
+  public var x5c: [Swift.String]? {
+    get
+    set(newValue)
+  }
+  public var x5t: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var x5tS256: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var typ: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var cty: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var crit: [Swift.String]? {
+    get
+    set(newValue)
+  }
+}
+extension AcessoBio.JWKSet : Swift.Encodable {
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension AcessoBio.JWKSet : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
 }
 @objc public enum UnicoEnumsIErrors : Swift.Int {
   case UNICO_UNKNOWN_INTERNAL_ERROR = 73000
@@ -110,9 +218,113 @@ import _Concurrency
   @objc public func getTokenUnico(completion: @escaping (AcessoBio.SDKTokenResponseDTO?, AcessoBio.ErrorBio?) -> Swift.Void)
   @objc deinit
 }
+extension AcessoBio.SymmetricKey : Swift.Encodable {
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension AcessoBio.SymmetricKey : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
 @objc public class UnicoHttpHeaders : ObjectiveC.NSObject {
   @objc public init(headers: Foundation.NSDictionary)
   @objc deinit
+}
+extension AcessoBio.RSAPublicKey : Swift.Encodable {
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension AcessoBio.RSAPublicKey : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+extension AcessoBio.RSAPrivateKey : Swift.Encodable {
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension AcessoBio.RSAPrivateKey : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum JWKParameter : Swift.String, Swift.CodingKey {
+  case keyType
+  case keyUse
+  case keyOperations
+  case algorithm
+  case keyIdentifier
+  case X509URL
+  case X509CertificateChain
+  case X509CertificateSHA1Thumbprint
+  case X509CertificateSHA256Thumbprint
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public enum RSAParameter : Swift.String, Swift.CodingKey {
+  case modulus
+  case exponent
+  case privateExponent
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public enum SymmetricKeyParameter : Swift.String, Swift.CodingKey {
+  case key
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+public enum ECParameter : Swift.String, Swift.CodingKey {
+  case curve
+  case x
+  case y
+  case privateKey
+  public init?(rawValue: Swift.String)
+  public init?(stringValue: Swift.String)
+  public init?(intValue: Swift.Int)
+  public typealias RawValue = Swift.String
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+  public var stringValue: Swift.String {
+    get
+  }
+}
+extension AcessoBio.JWK {
+  public subscript(parameter: Swift.String) -> Swift.String? {
+    get
+  }
+}
+extension AcessoBio.JWK {
+  public func jsonString() -> Swift.String?
+  public func jsonData() -> Foundation.Data?
 }
 @objc public class UnicoFacetecProcessor : ObjectiveC.NSObject, AcessoBio.UnicoFacetecProcessorDelegate, FaceTecSDK.FaceTecFaceScanProcessorDelegate, Foundation.URLSessionTaskDelegate {
   @objc public init(sdkToken: AcessoBio.SDKTokenResponseDTO)
@@ -124,13 +336,148 @@ import _Concurrency
   @objc public func isUnsuccessful(status: FaceTecSDK.FaceTecSessionStatus)
   @objc deinit
 }
+public enum ECCurveType : Swift.String, Swift.Codable {
+  case P256
+  case P384
+  case P521
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ECCompression : Swift.UInt8 {
+  case CompressedYEven
+  case CompressedYOdd
+  case Uncompressed
+  case HybridYEven
+  case HybridYOdd
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
 @objc public protocol UnicoSetupServicesProtocol {
   @objc func getTokenUnico(completion: @escaping (AcessoBio.SDKTokenResponseDTO?, AcessoBio.ErrorBio?) -> Swift.Void)
+}
+public enum JOSESwiftError : Swift.Error {
+  case signingFailed(description: Swift.String)
+  case verifyingFailed(description: Swift.String)
+  case signatureInvalid
+  case encryptingFailed(description: Swift.String)
+  case decryptingFailed(description: Swift.String)
+  case wrongDataEncoding(data: Foundation.Data)
+  case invalidCompactSerializationComponentCount(count: Swift.Int)
+  case componentNotValidBase64URL(component: Swift.String)
+  case componentCouldNotBeInitializedFromData(data: Foundation.Data)
+  case couldNotConstructJWK
+  case modulusNotBase64URLUIntEncoded
+  case exponentNotBase64URLUIntEncoded
+  case privateExponentNotBase64URLUIntEncoded
+  case symmetricKeyNotBase64URLEncoded
+  case xNotBase64URLUIntEncoded
+  case yNotBase64URLUIntEncoded
+  case privateKeyNotBase64URLUIntEncoded
+  case invalidCurveType
+  case compressedCurvePointsUnsupported
+  case invalidCurvePointOctetLength
+  case localAuthenticationFailed(errorCode: Swift.Int)
+  case compressionFailed
+  case decompressionFailed
+  case compressionAlgorithmNotSupported
+  case rawDataMustBeGreaterThanZero
+  case compressedDataMustBeGreaterThanZero
+  case thumbprintSerialization
 }
 @_inheritsConvenienceInitializers @objc public class SelfieResult : AcessoBio.CameraResult {
   @objc override public init(base64: Swift.String, sdkToken: Swift.String)
   @objc override public init(data: [Swift.String : Any], sdkToken: Swift.String)
   @objc deinit
+}
+extension Foundation.Data : AcessoBio.ExpressibleAsSymmetricKeyComponents {
+  public static func representing(symmetricKeyComponents components: AcessoBio.SymmetricKeyComponents) throws -> Foundation.Data
+  public func symmetricKeyComponents() throws -> AcessoBio.SymmetricKeyComponents
+}
+public typealias RSAPublicKeyComponents = (modulus: Foundation.Data, exponent: Foundation.Data)
+public typealias RSAPrivateKeyComponents = (modulus: Foundation.Data, exponent: Foundation.Data, privateExponent: Foundation.Data)
+public protocol ExpressibleAsRSAPublicKeyComponents {
+  static func representing(rsaPublicKeyComponents components: AcessoBio.RSAPublicKeyComponents) throws -> Self
+  func rsaPublicKeyComponents() throws -> AcessoBio.RSAPublicKeyComponents
+}
+public protocol ExpressibleAsRSAPrivateKeyComponents {
+  static func representing(rsaPrivateKeyComponents components: AcessoBio.RSAPrivateKeyComponents) throws -> Self
+  func rsaPrivateKeyComponents() throws -> AcessoBio.RSAPrivateKeyComponents
+}
+public struct RSAPublicKey : AcessoBio.JWK {
+  public let keyType: AcessoBio.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let modulus: Swift.String
+  public let exponent: Swift.String
+  public init(modulus: Swift.String, exponent: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(publicKey: AcessoBio.ExpressibleAsRSAPublicKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : AcessoBio.ExpressibleAsRSAPublicKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: AcessoBio.JWKThumbprintAlgorithm = .SHA256) throws -> AcessoBio.RSAPublicKey
+}
+public struct RSAPrivateKey : AcessoBio.JWK {
+  public let keyType: AcessoBio.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let modulus: Swift.String
+  public let exponent: Swift.String
+  public let privateExponent: Swift.String
+  public init(modulus: Swift.String, exponent: Swift.String, privateExponent: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(privateKey: AcessoBio.ExpressibleAsRSAPrivateKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : AcessoBio.ExpressibleAsRSAPrivateKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: AcessoBio.JWKThumbprintAlgorithm = .SHA256) throws -> AcessoBio.RSAPrivateKey
+}
+public typealias RSAKeyPair = AcessoBio.RSAPrivateKey
+extension Security.SecKey : AcessoBio.ExpressibleAsECPublicKeyComponents {
+  public static func representing(ecPublicKeyComponents components: AcessoBio.ECPublicKeyComponents) throws -> Self
+  public func ecPublicKeyComponents() throws -> AcessoBio.ECPublicKeyComponents
+}
+public struct JWKSet {
+  public let keys: [AcessoBio.JWK]
+  public init(keys: [AcessoBio.JWK])
+  public init(data: Foundation.Data) throws
+  public func jsonString() -> Swift.String?
+  public func jsonData() -> Foundation.Data?
+}
+extension AcessoBio.JWKSet : Swift.Collection {
+  public typealias ArrayType = [AcessoBio.JWK]
+  public typealias Element = AcessoBio.JWKSet.ArrayType.Element
+  public typealias Index = AcessoBio.JWKSet.ArrayType.Index
+  public typealias Iterator = AcessoBio.JWKSet.ArrayType.Iterator
+  public var startIndex: AcessoBio.JWKSet.Index {
+    get
+  }
+  public var endIndex: AcessoBio.JWKSet.Index {
+    get
+  }
+  public subscript(index: AcessoBio.JWKSet.Index) -> AcessoBio.JWKSet.Element {
+    get
+  }
+  public func index(after index: AcessoBio.JWKSet.Index) -> AcessoBio.JWKSet.Index
+  public func makeIterator() -> Swift.IndexingIterator<AcessoBio.JWKSet.ArrayType>
+  public typealias Indices = Swift.DefaultIndices<AcessoBio.JWKSet>
+  public typealias SubSequence = Swift.Slice<AcessoBio.JWKSet>
+}
+extension AcessoBio.JWKSet : Swift.ExpressibleByArrayLiteral {
+  public typealias ArrayLiteralElement = AcessoBio.JWKSet.Element
+  public init(arrayLiteral elements: AcessoBio.JWKSet.ArrayLiteralElement...)
+}
+public struct Payload : AcessoBio.DataConvertible {
+  public init(_ payload: Foundation.Data)
+  public func data() -> Foundation.Data
 }
 @objc public class CameraResult : ObjectiveC.NSObject {
   @objc public var base64: Swift.String!
@@ -138,6 +485,10 @@ import _Concurrency
   @objc public init(base64: Swift.String, sdkToken: Swift.String)
   @objc public init(data: [Swift.String : Any], sdkToken: Swift.String)
   @objc deinit
+}
+extension Security.SecKey : AcessoBio.ExpressibleAsECPrivateKeyComponents {
+  public static func representing(ecPrivateKeyComponents components: AcessoBio.ECPrivateKeyComponents) throws -> Self
+  public func ecPrivateKeyComponents() throws -> AcessoBio.ECPrivateKeyComponents
 }
 @objc public class iOSClientInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
@@ -161,6 +512,87 @@ import _Concurrency
   public func getParams() -> Swift.AnyObject
   @objc deinit
 }
+extension Foundation.Data : AcessoBio.ExpressibleAsRSAPublicKeyComponents {
+  public static func representing(rsaPublicKeyComponents components: AcessoBio.RSAPublicKeyComponents) throws -> Foundation.Data
+  public func rsaPublicKeyComponents() throws -> AcessoBio.RSAPublicKeyComponents
+}
+public struct JWEHeader {
+  public init(keyManagementAlgorithm: AcessoBio.KeyManagementAlgorithm, contentEncryptionAlgorithm: AcessoBio.ContentEncryptionAlgorithm)
+  public init(parameters: [Swift.String : Any]) throws
+}
+extension AcessoBio.JWEHeader {
+  public var keyManagementAlgorithm: AcessoBio.KeyManagementAlgorithm? {
+    get
+  }
+  public var contentEncryptionAlgorithm: AcessoBio.ContentEncryptionAlgorithm? {
+    get
+  }
+  public var compressionAlgorithm: AcessoBio.CompressionAlgorithm? {
+    get
+  }
+  public var zip: Swift.String? {
+    get
+    set(newValue)
+  }
+}
+extension AcessoBio.JWEHeader : AcessoBio.CommonHeaderParameterSpace {
+  public var jku: Foundation.URL? {
+    get
+    set(newValue)
+  }
+  public var jwk: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var jwkTyped: AcessoBio.JWK? {
+    get
+    set(newValue)
+  }
+  public var kid: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var x5u: Foundation.URL? {
+    get
+    set(newValue)
+  }
+  public var x5c: [Swift.String]? {
+    get
+    set(newValue)
+  }
+  public var x5t: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var x5tS256: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var typ: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var cty: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var crit: [Swift.String]? {
+    get
+    set(newValue)
+  }
+}
+extension AcessoBio.JWEHeader {
+  @available(*, deprecated, message: "Use `JWEHeader.keyManagementAlgorithm` instead")
+  public var algorithm: AcessoBio.AsymmetricKeyAlgorithm? {
+    get
+  }
+  @available(*, deprecated, message: "Use `JWEHeader.contentEncryptionAlgorithm` instead")
+  public var encryptionAlgorithm: AcessoBio.SymmetricKeyAlgorithm? {
+    get
+  }
+  @available(*, deprecated, message: "Use `init(keyManagementAlgorithm:contentEncryptionAlgorithm` instead")
+  public init(algorithm: AcessoBio.AsymmetricKeyAlgorithm, encryptionAlgorithm: AcessoBio.SymmetricKeyAlgorithm)
+}
 @objc public class UnicoSetupData : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
@@ -170,10 +602,63 @@ import _Concurrency
   @objc override public init(code: Swift.Int, message: Swift.String?, body: [Swift.String : Swift.String]?)
   @objc deinit
 }
+public protocol DataConvertible {
+  init?(_ data: Foundation.Data)
+  func data() -> Foundation.Data
+}
+extension Foundation.Data {
+  public init?(base64URLEncoded base64URLString: Swift.String)
+  public init?(base64URLEncoded base64URLData: Foundation.Data)
+  public func base64URLEncodedString() -> Swift.String
+  public func base64URLEncodedData() -> Foundation.Data
+}
+extension Foundation.Data : AcessoBio.DataConvertible {
+  public init(_ data: Foundation.Data)
+  public func data() -> Foundation.Data
+}
+extension Security.SecKey : AcessoBio.ExpressibleAsRSAPublicKeyComponents {
+  public static func representing(rsaPublicKeyComponents components: AcessoBio.RSAPublicKeyComponents) throws -> Self
+  public func rsaPublicKeyComponents() throws -> AcessoBio.RSAPublicKeyComponents
+}
+public protocol CompactDeserializable {
+  static var componentCount: Swift.Int { get }
+  init(from deserializer: AcessoBio.CompactDeserializer) throws
+}
+public protocol CompactDeserializer {
+  func deserialize<T>(_ type: T.Type, at index: Swift.Int) throws -> T where T : AcessoBio.DataConvertible
+}
+public struct JOSEDeserializer {
+  public init()
+  public func deserialize<T>(_ type: T.Type, fromCompactSerialization compactSerialization: Swift.String) throws -> T where T : AcessoBio.CompactDeserializable
+}
+public enum ComponentCompactSerializedIndex {
+}
+public struct Encrypter<KeyType> {
+  public init?(keyManagementAlgorithm: AcessoBio.KeyManagementAlgorithm, contentEncryptionAlgorithm: AcessoBio.ContentEncryptionAlgorithm, encryptionKey: KeyType)
+}
+extension AcessoBio.Encrypter {
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:encryptionKey:)` instead")
+  public init?(keyEncryptionAlgorithm: AcessoBio.AsymmetricKeyAlgorithm, encryptionKey key: KeyType, contentEncyptionAlgorithm: AcessoBio.SymmetricKeyAlgorithm)
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:encryptionKey:)` instead")
+  public init?(keyEncryptionAlgorithm: AcessoBio.AsymmetricKeyAlgorithm, keyEncryptionKey kek: KeyType, contentEncyptionAlgorithm: AcessoBio.SymmetricKeyAlgorithm)
+}
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct EncryptionContext {
+}
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct SymmetricEncryptionContext {
+}
 @_inheritsConvenienceInitializers @objc public class ErrorHttp : AcessoBio.ErrorUnico {
   @objc override dynamic public init()
   @objc override public init(code: Swift.Int, message: Swift.String?, body: [Swift.String : Swift.String]?)
   @objc deinit
+}
+public enum SecureRandomError : Swift.Error {
+  case failed(status: Darwin.OSStatus)
+  case countMustBeGreaterThanZero
+}
+public struct SecureRandom {
+  public static func generate(count: Swift.Int) throws -> Foundation.Data
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class UnicoHttpSession : ObjectiveC.NSObject {
   public func getSession() -> Foundation.URLSession
@@ -184,10 +669,73 @@ import _Concurrency
   @objc override public init(data: [Swift.String : Any], sdkToken: Swift.String)
   @objc deinit
 }
+extension Foundation.Data : AcessoBio.ExpressibleAsECPrivateKeyComponents {
+  public static func representing(ecPrivateKeyComponents components: AcessoBio.ECPrivateKeyComponents) throws -> Foundation.Data
+  public func ecPrivateKeyComponents() throws -> AcessoBio.ECPrivateKeyComponents
+}
+public typealias SymmetricKeyComponents = (Foundation.Data)
+public protocol ExpressibleAsSymmetricKeyComponents {
+  static func representing(symmetricKeyComponents components: AcessoBio.SymmetricKeyComponents) throws -> Self
+  func symmetricKeyComponents() throws -> AcessoBio.SymmetricKeyComponents
+}
+public struct SymmetricKey : AcessoBio.JWK {
+  public let keyType: AcessoBio.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let key: Swift.String
+  public init(key: Foundation.Data, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(key: AcessoBio.ExpressibleAsSymmetricKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : AcessoBio.ExpressibleAsSymmetricKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: AcessoBio.JWKThumbprintAlgorithm = .SHA256) throws -> AcessoBio.SymmetricKey
+}
 @_inheritsConvenienceInitializers @objc public class UnicoNetworkingModule : ObjectiveC.NSObject {
   @objc public func isConnectedToNetwork() -> Swift.Bool
   @objc override dynamic public init()
   @objc deinit
+}
+public enum JWKKeyType : Swift.String, Swift.Codable {
+  case RSA
+  case OCT
+  case EC
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol JWK : Swift.Decodable, Swift.Encodable {
+  var keyType: AcessoBio.JWKKeyType { get }
+  var parameters: [Swift.String : Swift.String] { get }
+  var requiredParameters: [Swift.String : Swift.String] { get }
+  subscript(parameter: Swift.String) -> Swift.String? { get }
+  init(data: Foundation.Data) throws
+  func jsonString() -> Swift.String?
+  func jsonData() -> Foundation.Data?
+  @available(iOS 11.0, *)
+  func thumbprint(algorithm: AcessoBio.JWKThumbprintAlgorithm) throws -> Swift.String
+  @available(iOS 11.0, *)
+  func withThumbprintAsKeyId(algorithm: AcessoBio.JWKThumbprintAlgorithm) throws -> Self
+}
+extension AcessoBio.JWK {
+  @available(iOS 11.0, *)
+  public func thumbprint(algorithm: AcessoBio.JWKThumbprintAlgorithm = .SHA256) throws -> Swift.String
+}
+public protocol CommonHeaderParameterSpace {
+  var jku: Foundation.URL? { get set }
+  var jwk: Swift.String? { get set }
+  var jwkTyped: AcessoBio.JWK? { get set }
+  var kid: Swift.String? { get set }
+  var x5u: Foundation.URL? { get set }
+  var x5c: [Swift.String]? { get set }
+  var x5t: Swift.String? { get set }
+  var x5tS256: Swift.String? { get set }
+  var typ: Swift.String? { get set }
+  var cty: Swift.String? { get set }
+  var crit: [Swift.String]? { get set }
 }
 @objc public class ProjectInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
@@ -202,10 +750,61 @@ import _Concurrency
 @objc public protocol UnicoFacetecProtocol {
   @objc func initFacetec() -> AcessoBio.UnicoFacetecProtocol
 }
+public typealias ECPublicKeyComponents = (crv: Swift.String, x: Foundation.Data, y: Foundation.Data)
+public typealias ECPrivateKeyComponents = (crv: Swift.String, x: Foundation.Data, y: Foundation.Data, d: Foundation.Data)
+public protocol ExpressibleAsECPublicKeyComponents {
+  static func representing(ecPublicKeyComponents components: AcessoBio.ECPublicKeyComponents) throws -> Self
+  func ecPublicKeyComponents() throws -> AcessoBio.ECPublicKeyComponents
+}
+public protocol ExpressibleAsECPrivateKeyComponents {
+  static func representing(ecPrivateKeyComponents components: AcessoBio.ECPrivateKeyComponents) throws -> Self
+  func ecPrivateKeyComponents() throws -> AcessoBio.ECPrivateKeyComponents
+}
+public struct ECPublicKey : AcessoBio.JWK {
+  public let keyType: AcessoBio.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let crv: AcessoBio.ECCurveType
+  public let x: Swift.String
+  public let y: Swift.String
+  public init(crv: AcessoBio.ECCurveType, x: Swift.String, y: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:])
+  public init(publicKey: AcessoBio.ExpressibleAsECPublicKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : AcessoBio.ExpressibleAsECPublicKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: AcessoBio.JWKThumbprintAlgorithm = .SHA256) throws -> AcessoBio.ECPublicKey
+}
+public struct ECPrivateKey : AcessoBio.JWK {
+  public let keyType: AcessoBio.JWKKeyType
+  public let parameters: [Swift.String : Swift.String]
+  public var requiredParameters: [Swift.String : Swift.String] {
+    get
+  }
+  public let crv: AcessoBio.ECCurveType
+  public let x: Swift.String
+  public let y: Swift.String
+  public let privateKey: Swift.String
+  public init(crv: Swift.String, x: Swift.String, y: Swift.String, privateKey: Swift.String, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(privateKey: AcessoBio.ExpressibleAsECPrivateKeyComponents, additionalParameters parameters: [Swift.String : Swift.String] = [:]) throws
+  public init(data: Foundation.Data) throws
+  public func converted<T>(to type: T.Type) throws -> T where T : AcessoBio.ExpressibleAsECPrivateKeyComponents
+  @available(iOS 11.0, *)
+  public func withThumbprintAsKeyId(algorithm: AcessoBio.JWKThumbprintAlgorithm = .SHA256) throws -> AcessoBio.ECPrivateKey
+}
+public typealias ECKeyPair = AcessoBio.ECPrivateKey
 @objc public protocol UnicoHttpRequestProtocol {
   @objc func get(router: AcessoBio.UnicoHttpURLRouter.Routers, completion: @escaping (Any, AcessoBio.ErrorHttp?) -> Swift.Void)
   @objc func get(router: AcessoBio.UnicoHttpURLRouter.Routers, headers: AcessoBio.UnicoHttpHeaders?, completion: @escaping (Any, AcessoBio.ErrorHttp?) -> Swift.Void)
   @objc func post(router: AcessoBio.UnicoHttpURLRouter.Routers, headers: AcessoBio.UnicoHttpHeaders?, jsonBody: [Swift.String : Any], completion: @escaping (Any, AcessoBio.ErrorHttp?) -> Swift.Void)
+}
+public struct Verifier {
+  public init?<KeyType>(verifyingAlgorithm: AcessoBio.SignatureAlgorithm, key: KeyType)
+}
+extension AcessoBio.Verifier {
+  @available(*, deprecated, message: "Use `init?(verifyingAlgorithm: SignatureAlgorithm, key: KeyType)` instead")
+  public init?<KeyType>(verifyingAlgorithm: AcessoBio.SignatureAlgorithm, publicKey: KeyType)
 }
 @objc public class UnicoJsonLoad : ObjectiveC.NSObject {
   @objc public init(bundle: Foundation.Bundle)
@@ -221,6 +820,16 @@ import _Concurrency
   @objc override dynamic public init(code: Swift.Int, desc: Swift.String, info: Swift.String)
   @objc override dynamic public init()
   @objc deinit
+}
+public protocol CompactSerializable {
+  func serialize(to serializer: inout AcessoBio.CompactSerializer)
+}
+public protocol CompactSerializer {
+  var components: [AcessoBio.DataConvertible] { get }
+  mutating func serialize<T>(_ object: T) where T : AcessoBio.DataConvertible
+}
+public struct JOSESerializer {
+  public func serialize<T>(compact object: T) -> Swift.String where T : AcessoBio.CompactSerializable
 }
 @_inheritsConvenienceInitializers @objc public class UnicoLogoImageView : ObjectiveC.NSObject {
   @objc public enum LogoType : Swift.Int {
@@ -264,6 +873,42 @@ import _Concurrency
   @objc func isSuccess(result: [Swift.String : Any])
   @objc func isUnsuccessful(status: FaceTecSDK.FaceTecSessionStatus)
 }
+public struct Signer<KeyType> {
+  public init?(signingAlgorithm: AcessoBio.SignatureAlgorithm, key: KeyType)
+}
+extension AcessoBio.Signer {
+  @available(*, deprecated, message: "Use `init?(signingAlgorithm: SignatureAlgorithm, key: KeyType)` instead")
+  public init?(signingAlgorithm: AcessoBio.SignatureAlgorithm, privateKey: KeyType)
+}
+public struct JWS {
+  public let header: AcessoBio.JWSHeader
+  public let payload: AcessoBio.Payload
+  public let signature: Foundation.Data
+  public var compactSerializedString: Swift.String {
+    get
+  }
+  public var compactSerializedData: Foundation.Data {
+    get
+  }
+  public init<KeyType>(header: AcessoBio.JWSHeader, payload: AcessoBio.Payload, signer: AcessoBio.Signer<KeyType>) throws
+  public init(compactSerialization: Swift.String) throws
+  public init(compactSerialization: Foundation.Data) throws
+  @available(*, deprecated, message: "Use `isValid(for verifier:)` instead")
+  public func isValid<KeyType>(for publicKey: KeyType) -> Swift.Bool
+  @available(*, deprecated, message: "Use `validate(using verifier:)` instead")
+  public func validate<KeyType>(with publicKey: KeyType) throws -> AcessoBio.JWS
+  public func validate(using verifier: AcessoBio.Verifier) throws -> AcessoBio.JWS
+  public func isValid(for verifier: AcessoBio.Verifier) -> Swift.Bool
+}
+extension AcessoBio.JWS : AcessoBio.CompactSerializable {
+  public func serialize(to serializer: inout AcessoBio.CompactSerializer)
+}
+extension AcessoBio.JWS : AcessoBio.CompactDeserializable {
+  public static var componentCount: Swift.Int {
+    get
+  }
+  public init(from deserializer: AcessoBio.CompactDeserializer) throws
+}
 @objc public class HostInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
@@ -277,6 +922,101 @@ import _Concurrency
   required public init(from decoder: Swift.Decoder) throws
   @objc public func getAppId() -> Swift.String?
   @objc deinit
+}
+public enum SignatureAlgorithm : Swift.String {
+  case HS256
+  case HS384
+  case HS512
+  case RS256
+  case RS384
+  case RS512
+  @available(iOS 11, *)
+  case PS256
+  @available(iOS 11, *)
+  case PS384
+  @available(iOS 11, *)
+  case PS512
+  case ES256
+  case ES384
+  case ES512
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum KeyManagementAlgorithm : Swift.String, Swift.CaseIterable {
+  case RSA1_5
+  case RSAOAEP
+  case RSAOAEP256
+  case A128KW
+  case A192KW
+  case A256KW
+  case direct
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [AcessoBio.KeyManagementAlgorithm]
+  public typealias RawValue = Swift.String
+  public static var allCases: [AcessoBio.KeyManagementAlgorithm] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ContentEncryptionAlgorithm : Swift.String {
+  case A256CBCHS512
+  case A128CBCHS256
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HMACAlgorithm : Swift.String {
+  case SHA512
+  case SHA384
+  case SHA256
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum JWKThumbprintAlgorithm : Swift.String {
+  case SHA256
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum CompressionAlgorithm : Swift.String {
+  case DEFLATE
+  case NONE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@available(*, deprecated, message: "Use `KeyManagementAlgorithm` instead")
+public typealias AsymmetricKeyAlgorithm = AcessoBio.KeyManagementAlgorithm
+@available(*, deprecated, message: "Use `ContentEncryptionAlgorithm` instead")
+public typealias SymmetricKeyAlgorithm = AcessoBio.ContentEncryptionAlgorithm
+public struct Decrypter {
+  public init?<KeyType>(keyManagementAlgorithm: AcessoBio.KeyManagementAlgorithm, contentEncryptionAlgorithm: AcessoBio.ContentEncryptionAlgorithm, decryptionKey: KeyType)
+}
+extension AcessoBio.Decrypter {
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:decryptionKey:)` instead")
+  public init?<KeyType>(keyDecryptionAlgorithm: AcessoBio.AsymmetricKeyAlgorithm, decryptionKey key: KeyType, contentDecryptionAlgorithm: AcessoBio.SymmetricKeyAlgorithm)
+  @available(*, deprecated, message: "Use `init?(keyManagementAlgorithm:contentEncryptionAlgorithm:decryptionKey:)` instead")
+  public init?<KeyType>(keyDecryptionAlgorithm: AcessoBio.AsymmetricKeyAlgorithm, keyDecryptionKey kdk: KeyType, contentDecryptionAlgorithm: AcessoBio.SymmetricKeyAlgorithm)
+}
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct DecryptionContext {
+}
+@available(*, deprecated, message: "This type will be removed with the next major release.")
+public struct SymmetricDecryptionContext {
 }
 @objc public class UnicoFacetec : ObjectiveC.NSObject, AcessoBio.UnicoFacetecProcessorDelegate {
   @objc public init(unicoSetup: AcessoBio.UnicoSetupData, sdkToken: AcessoBio.SDKTokenResponseDTO, theme: AcessoBio.AcessoBioThemeDelegate!)
@@ -292,3 +1032,5 @@ import _Concurrency
   @objc override dynamic public init()
   @objc deinit
 }
+extension AcessoBio.JWSHeader : AcessoBio.DataConvertible {}
+extension AcessoBio.JWEHeader : AcessoBio.DataConvertible {}
