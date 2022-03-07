@@ -11,9 +11,6 @@ let package = Package(
             targets: ["AcessoBio", "FaceTecSDK", "CryptoSwift"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        //.package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMajor(from: "1.4.3"))
-        //.package(url: "https://github.com/airsidemobile/JOSESwift.git", from: "2.3.0")
     ],
     targets: [
         .binaryTarget(name: "AcessoBio", path: "AcessoBio.xcframework"),
