@@ -237,6 +237,14 @@
 		<data>
 		+MWsaH7N3D+VyYL2eoocNsdy3n0=
 		</data>
+		<key>frame_cnh_frente.png</key>
+		<data>
+		c4RDYOdcsBVjqcsy7EynP3NZBFE=
+		</data>
+		<key>frame_cnh_verso.png</key>
+		<data>
+		Nxl2m+eH8aO/QHFpQrkoLloAa3k=
+		</data>
 		<key>frame_cpf.png</key>
 		<data>
 		3QmsCkwVcHrZ/uu4bYhvFHuNnzY=
@@ -672,6 +680,20 @@
 			<key>hash2</key>
 			<data>
 			OHEtHmz92Sqe5BJfupced75Ne9yjsJQmpohNxtjZI/g=
+			</data>
+		</dict>
+		<key>frame_cnh_frente.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NZGqjdWhvSYIzdZCV39BPLbQBNxYC0e/gVflfPJVaEc=
+			</data>
+		</dict>
+		<key>frame_cnh_verso.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			h7gSDpJED/UotR/1gwD6fQafqyNFs0SMyp+6wlIffU8=
 			</data>
 		</dict>
 		<key>frame_cpf.png</key>
