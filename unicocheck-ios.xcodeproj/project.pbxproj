@@ -13,7 +13,7 @@
 		E655B58427106C4E001505C4 /* unicocheck_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = E655B57827106C4E001505C4 /* unicocheck_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E68BC4F027BB356B00A1DF3B /* CryptoSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68BC4ED27BB347700A1DF3B /* CryptoSwift.xcframework */; };
 		E68BC4F127BB356B00A1DF3B /* CryptoSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E68BC4ED27BB347700A1DF3B /* CryptoSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E69308F927C9633400CE27E5 /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = E69308FB27C9633400CE27E5 /* FaceTec.strings */; };
+		E6DD237727DA3FAA00893E81 /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6DD237927DA3FAA00893E81 /* FaceTec.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,8 @@
 		E655B57D27106C4E001505C4 /* unicocheck-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "unicocheck-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E655B58227106C4E001505C4 /* unicocheck_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unicocheck_iosTests.m; sourceTree = "<group>"; };
 		E68BC4ED27BB347700A1DF3B /* CryptoSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoSwift.xcframework; sourceTree = "<group>"; };
-		E69308FA27C9633400CE27E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FaceTec.strings; sourceTree = "<group>"; };
+		E6DD237827DA3FAA00893E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FaceTec.strings; sourceTree = "<group>"; };
+		E6DD237A27DA3FB800893E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/FaceTec.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +94,8 @@
 		E655B57727106C4E001505C4 /* unicocheck-ios */ = {
 			isa = PBXGroup;
 			children = (
-				E69308FB27C9633400CE27E5 /* FaceTec.strings */,
 				E655B57827106C4E001505C4 /* unicocheck_ios.h */,
+				E6DD237927DA3FAA00893E81 /* FaceTec.strings */,
 			);
 			path = "unicocheck-ios";
 			sourceTree = "<group>";
@@ -191,7 +192,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				"pt-BR",
 			);
 			mainGroup = E655B56B27106C4E001505C4;
 			productRefGroup = E655B57627106C4E001505C4 /* Products */;
@@ -209,7 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E69308F927C9633400CE27E5 /* FaceTec.strings in Resources */,
+				E6DD237727DA3FAA00893E81 /* FaceTec.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +250,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E69308FB27C9633400CE27E5 /* FaceTec.strings */ = {
+		E6DD237927DA3FAA00893E81 /* FaceTec.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E69308FA27C9633400CE27E5 /* en */,
+				E6DD237827DA3FAA00893E81 /* en */,
+				E6DD237A27DA3FB800893E81 /* pt-BR */,
 			);
 			name = FaceTec.strings;
 			sourceTree = "<group>";
@@ -264,6 +266,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -326,6 +329,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
