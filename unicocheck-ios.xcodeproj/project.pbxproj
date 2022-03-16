@@ -11,9 +11,8 @@
 		E655B57E27106C4E001505C4 /* unicocheck_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E655B57527106C4E001505C4 /* unicocheck_ios.framework */; };
 		E655B58327106C4E001505C4 /* unicocheck_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E655B58227106C4E001505C4 /* unicocheck_iosTests.m */; };
 		E655B58427106C4E001505C4 /* unicocheck_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = E655B57827106C4E001505C4 /* unicocheck_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E68BC4F027BB356B00A1DF3B /* CryptoSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68BC4ED27BB347700A1DF3B /* CryptoSwift.xcframework */; };
-		E68BC4F127BB356B00A1DF3B /* CryptoSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E68BC4ED27BB347700A1DF3B /* CryptoSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E6DD237727DA3FAA00893E81 /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6DD237927DA3FAA00893E81 /* FaceTec.strings */; };
+		E68E568C27E28166002188B9 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */; };
+		E68E568D27E28166002188B9 /* FaceTecSDK.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +26,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E68BC4F227BB356B00A1DF3B /* Embed Frameworks */ = {
+		E6BDE9212739942800D13E2E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E68BC4F127BB356B00A1DF3B /* CryptoSwift.xcframework in Embed Frameworks */,
+				E68E568D27E28166002188B9 /* FaceTecSDK.xcframework in CopyFiles */,
 			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -46,9 +44,7 @@
 		E655B57827106C4E001505C4 /* unicocheck_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = unicocheck_ios.h; sourceTree = "<group>"; };
 		E655B57D27106C4E001505C4 /* unicocheck-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "unicocheck-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E655B58227106C4E001505C4 /* unicocheck_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unicocheck_iosTests.m; sourceTree = "<group>"; };
-		E68BC4ED27BB347700A1DF3B /* CryptoSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CryptoSwift.xcframework; sourceTree = "<group>"; };
-		E6DD237827DA3FAA00893E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FaceTec.strings; sourceTree = "<group>"; };
-		E6DD237A27DA3FB800893E81 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/FaceTec.strings"; sourceTree = "<group>"; };
+		E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FaceTecSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E68BC4F027BB356B00A1DF3B /* CryptoSwift.xcframework in Frameworks */,
+				E68E568C27E28166002188B9 /* FaceTecSDK.xcframework in Frameworks */,
 				E632D1ED273A0512006F4B03 /* AcessoBio.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				E655B57827106C4E001505C4 /* unicocheck_ios.h */,
-				E6DD237927DA3FAA00893E81 /* FaceTec.strings */,
 			);
 			path = "unicocheck-ios";
 			sourceTree = "<group>";
@@ -111,7 +106,7 @@
 		E655B58D27106C60001505C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E68BC4ED27BB347700A1DF3B /* CryptoSwift.xcframework */,
+				E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */,
 				E632D1EC273A0512006F4B03 /* AcessoBio.xcframework */,
 			);
 			name = Frameworks;
@@ -139,7 +134,7 @@
 				E655B57127106C4E001505C4 /* Sources */,
 				E655B57227106C4E001505C4 /* Frameworks */,
 				E655B57327106C4E001505C4 /* Resources */,
-				E68BC4F227BB356B00A1DF3B /* Embed Frameworks */,
+				E6BDE9212739942800D13E2E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -179,7 +174,6 @@
 				TargetAttributes = {
 					E655B57427106C4E001505C4 = {
 						CreatedOnToolsVersion = 13.0;
-						LastSwiftMigration = 1320;
 					};
 					E655B57C27106C4E001505C4 = {
 						CreatedOnToolsVersion = 13.0;
@@ -192,7 +186,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				"pt-BR",
+				Base,
 			);
 			mainGroup = E655B56B27106C4E001505C4;
 			productRefGroup = E655B57627106C4E001505C4 /* Products */;
@@ -210,7 +204,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6DD237727DA3FAA00893E81 /* FaceTec.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,24 +242,11 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		E6DD237927DA3FAA00893E81 /* FaceTec.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E6DD237827DA3FAA00893E81 /* en */,
-				E6DD237A27DA3FB800893E81 /* pt-BR */,
-			);
-			name = FaceTec.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		E655B58527106C4E001505C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -329,7 +309,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -385,9 +364,7 @@
 		E655B58827106C4E001505C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -401,7 +378,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,8 +391,6 @@
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -423,9 +398,7 @@
 		E655B58927106C4E001505C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -439,7 +412,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +425,6 @@
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
