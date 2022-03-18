@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   
   spec.source_files  =  "unicocheck-ios/**/*.{h,m,swift}", "unicocheck-ios/**/*.{mlmodel}", "unicocheck-ios/*.lproj","unicocheck-ios/**/*.lproj", "unicocheck-ios/**/*.strings"
 
-  spec.resources =  "unicocheck-ios/**/*.strings"
+  #spec.resources =  "unicocheck-ios/**/*.strings"
 
 
   spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework"
