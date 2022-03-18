@@ -9,7 +9,7 @@
 #ifndef UnicoCheckThemesDelegate_h
 #define UnicoCheckThemesDelegate_h
 
-@protocol UnicoCheckThemesDelegate <NSObject>
+@protocol UnicoCheckThemesDelegate
 
 - (void)didReceveidErrorWithCode: (NSInteger)code message: (NSString*)message desc:(NSString*)desc;
 

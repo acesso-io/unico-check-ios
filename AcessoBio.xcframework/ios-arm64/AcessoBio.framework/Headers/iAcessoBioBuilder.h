@@ -11,7 +11,7 @@
 #import "AcessoBioCameraDelegate.h"
 #import "AcessoBioThemeDelegate.h"
 
-@protocol iAcessoBioBuilder <NSObject>
+@protocol iAcessoBioBuilder
 
 - (id<iAcessoBioBuilder>) setTheme: (id<AcessoBioThemeDelegate>)theme;
 - (id<iAcessoBioBuilder>) setAutoCapture: (BOOL)isEnabled;

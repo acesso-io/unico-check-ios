@@ -11,7 +11,7 @@
 @class SelfieResult;
 #import "ErrorBio.h"
 
-@protocol AcessoBioSelfieDelegate <NSObject>
+@protocol AcessoBioSelfieDelegate
 
 - (void)onSuccessSelfie: (SelfieResult *)result;
 - (void)onErrorSelfie:(ErrorBio *)errorBio;

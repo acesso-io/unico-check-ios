@@ -11,7 +11,7 @@
 #import "ErrorBio.h"
 @class DocumentResult;
 
-@protocol AcessoBioDocumentDelegate <NSObject>
+@protocol AcessoBioDocumentDelegate
 
 - (void)onSuccessDocument: (DocumentResult *)result;
 - (void)onErrorDocument:(ErrorBio *)errorBio;

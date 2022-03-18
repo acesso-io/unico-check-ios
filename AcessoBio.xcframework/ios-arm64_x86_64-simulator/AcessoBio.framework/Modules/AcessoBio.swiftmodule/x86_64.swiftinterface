@@ -2557,6 +2557,8 @@ public protocol AEAD {
 }
 @objc public class HostInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
+  public func getHostInfo() -> Swift.String?
+  public func getHostKey() -> Swift.String?
   @objc deinit
 }
 extension Swift.Array {
