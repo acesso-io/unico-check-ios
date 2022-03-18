@@ -46,6 +46,7 @@
 		E655B57D27106C4E001505C4 /* unicocheck-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "unicocheck-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E655B58227106C4E001505C4 /* unicocheck_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unicocheck_iosTests.m; sourceTree = "<group>"; };
 		E663B1A427E5341F006BFCB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FaceTec.strings; sourceTree = "<group>"; };
+		E663B1A627E534BA006BFCB3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/FaceTec.strings"; sourceTree = "<group>"; };
 		E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FaceTecSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +191,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = E655B56B27106C4E001505C4;
 			productRefGroup = E655B57627106C4E001505C4 /* Products */;
@@ -251,6 +253,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E663B1A427E5341F006BFCB3 /* en */,
+				E663B1A627E534BA006BFCB3 /* pt-BR */,
 			);
 			name = FaceTec.strings;
 			sourceTree = SOURCE_ROOT;
@@ -262,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -324,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
