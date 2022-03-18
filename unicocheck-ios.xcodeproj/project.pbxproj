@@ -11,9 +11,9 @@
 		E655B57E27106C4E001505C4 /* unicocheck_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E655B57527106C4E001505C4 /* unicocheck_ios.framework */; };
 		E655B58327106C4E001505C4 /* unicocheck_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E655B58227106C4E001505C4 /* unicocheck_iosTests.m */; };
 		E655B58427106C4E001505C4 /* unicocheck_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = E655B57827106C4E001505C4 /* unicocheck_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E663B1A327E5341F006BFCB3 /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = E663B1A527E5341F006BFCB3 /* FaceTec.strings */; };
 		E68E568C27E28166002188B9 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */; };
 		E68E568D27E28166002188B9 /* FaceTecSDK.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6E83FF227E53A4300923059 /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6E83FF427E53A4300923059 /* FaceTec.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +45,8 @@
 		E655B57827106C4E001505C4 /* unicocheck_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = unicocheck_ios.h; sourceTree = "<group>"; };
 		E655B57D27106C4E001505C4 /* unicocheck-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "unicocheck-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E655B58227106C4E001505C4 /* unicocheck_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unicocheck_iosTests.m; sourceTree = "<group>"; };
-		E663B1A427E5341F006BFCB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FaceTec.strings; sourceTree = "<group>"; };
-		E663B1A627E534BA006BFCB3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/FaceTec.strings"; sourceTree = "<group>"; };
 		E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FaceTecSDK.xcframework; sourceTree = "<group>"; };
+		E6E83FF327E53A4300923059 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FaceTec.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +92,7 @@
 		E655B57727106C4E001505C4 /* unicocheck-ios */ = {
 			isa = PBXGroup;
 			children = (
-				E663B1A527E5341F006BFCB3 /* FaceTec.strings */,
+				E6E83FF427E53A4300923059 /* FaceTec.strings */,
 				E655B57827106C4E001505C4 /* unicocheck_ios.h */,
 			);
 			path = "unicocheck-ios";
@@ -190,8 +189,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
-				"pt-BR",
 			);
 			mainGroup = E655B56B27106C4E001505C4;
 			productRefGroup = E655B57627106C4E001505C4 /* Products */;
@@ -209,7 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E663B1A327E5341F006BFCB3 /* FaceTec.strings in Resources */,
+				E6E83FF227E53A4300923059 /* FaceTec.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,14 +246,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E663B1A527E5341F006BFCB3 /* FaceTec.strings */ = {
+		E6E83FF427E53A4300923059 /* FaceTec.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E663B1A427E5341F006BFCB3 /* en */,
-				E663B1A627E534BA006BFCB3 /* pt-BR */,
+				E6E83FF327E53A4300923059 /* en */,
 			);
 			name = FaceTec.strings;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 

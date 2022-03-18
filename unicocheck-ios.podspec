@@ -26,9 +26,9 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/acesso-io/unico-check-ios", :tag => "#{spec.version}" }
   
-  spec.source_files  =  "unicocheck-ios/**/*.{h,m,swift}", "unicocheck-ios/**/*.{mlmodel}", "unicocheck-ios/*.lproj","unicocheck-ios/**/*.lproj", "unicocheck-ios/**/*.strings"
+  spec.source_files  =  "unicocheck-ios/**/*.{h,m,swift}", "unicocheck-ios/**/*.{mlmodel}", "unicocheck-ios/*.lproj","unicocheck-ios/**/*.lproj"
 
-  #spec.resources =  "unicocheck-ios/**/*.strings"
+  spec.resources =  "unicocheck-ios/**/*.strings"
 
 
   spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework"
