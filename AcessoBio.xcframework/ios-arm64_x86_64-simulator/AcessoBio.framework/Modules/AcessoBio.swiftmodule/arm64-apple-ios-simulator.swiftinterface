@@ -3051,7 +3051,7 @@ extension AcessoBio.AES : AcessoBio.Cipher {
   }
 }
 @objc public class UnicoFacetec : ObjectiveC.NSObject, AcessoBio.UnicoFacetecProcessorDelegate {
-  @objc public init(unicoSetup: AcessoBio.UnicoSetupData, sdkToken: AcessoBio.SDKTokenResponseDTO)
+  @objc public init(unicoSetup: AcessoBio.UnicoSetupData, sdkToken: AcessoBio.SDKTokenResponseDTO, theme: AcessoBio.AcessoBioThemeDelegate!)
   @objc public func initializeFaceTecSDK(completion: @escaping (AcessoBio.ErrorFacetec?) -> Swift.Void)
   @objc public func openCameraFaceTec(viewController: UIKit.UIViewController, completion: @escaping (AcessoBio.SelfieResult?, AcessoBio.ErrorBio?) -> Swift.Void)
   @objc public func isSuccess(result: [Swift.String : Any])

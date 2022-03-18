@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, DocumentEnums) {
     DocumentNone,
     DocumentCNH,
+    DocumentCNHFrente,
+    DocumentCNHVerso,
     DocumentRG,
     DocumentRGFrente,
     DocumentRGVerso,

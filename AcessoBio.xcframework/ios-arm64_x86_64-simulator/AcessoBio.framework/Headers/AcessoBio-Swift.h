@@ -431,7 +431,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio29UnicoFacetecProcessorDelegate_")
 
 SWIFT_CLASS("_TtC9AcessoBio12UnicoFacetec")
 @interface UnicoFacetec : NSObject <UnicoFacetecProcessorDelegate>
-- (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTO * _Nonnull)sdkToken OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTO * _Nonnull)sdkToken theme:(id <AcessoBioThemeDelegate> _Null_unspecified)theme OBJC_DESIGNATED_INITIALIZER;
 - (void)initializeFaceTecSDKWithCompletion:(void (^ _Nonnull)(ErrorFacetec * _Nullable))completion;
 - (void)openCameraFaceTecWithViewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(SelfieResult * _Nullable, ErrorBio * _Nullable))completion;
 - (void)isSuccessWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
@@ -1050,7 +1050,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio29UnicoFacetecProcessorDelegate_")
 
 SWIFT_CLASS("_TtC9AcessoBio12UnicoFacetec")
 @interface UnicoFacetec : NSObject <UnicoFacetecProcessorDelegate>
-- (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTO * _Nonnull)sdkToken OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTO * _Nonnull)sdkToken theme:(id <AcessoBioThemeDelegate> _Null_unspecified)theme OBJC_DESIGNATED_INITIALIZER;
 - (void)initializeFaceTecSDKWithCompletion:(void (^ _Nonnull)(ErrorFacetec * _Nullable))completion;
 - (void)openCameraFaceTecWithViewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(SelfieResult * _Nullable, ErrorBio * _Nullable))completion;
 - (void)isSuccessWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
