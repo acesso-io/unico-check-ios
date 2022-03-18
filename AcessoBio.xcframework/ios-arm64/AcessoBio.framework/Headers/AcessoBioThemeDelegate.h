@@ -9,7 +9,7 @@
 #ifndef AcessoBioThemeDelegate_h
 #define AcessoBioThemeDelegate_h
 
-@protocol AcessoBioThemeDelegate <NSObject>
+@protocol AcessoBioThemeDelegate
 
 - (id) getColorBackground;
 - (id) getColorBoxMessage;

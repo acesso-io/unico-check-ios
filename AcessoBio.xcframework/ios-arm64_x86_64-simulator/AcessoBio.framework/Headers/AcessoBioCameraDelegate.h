@@ -13,7 +13,7 @@
 #import "DocumentCameraDelegate.h"
 #import "AcessoBioCameraOpener.h"
 
-@protocol AcessoBioCameraDelegate <NSObject>
+@protocol AcessoBioCameraDelegate
 
 - (void)prepareSelfieCamera: (id <SelfieCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName;
 - (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName;

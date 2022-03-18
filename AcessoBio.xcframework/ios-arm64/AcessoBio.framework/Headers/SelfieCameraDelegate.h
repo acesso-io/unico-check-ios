@@ -16,7 +16,6 @@
 - (void)onCameraReady: (id <AcessoBioCameraOpenerDelegate>)cameraOpener;
 - (void)onCameraFailed:(ErrorPrepare *)message;
 
-
 @end
 
 #endif /* SelfieCameraDelegate_h */

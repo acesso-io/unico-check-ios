@@ -10,7 +10,7 @@
 #define AcessoBioManagerDelegate_h
 #import "ErrorBio.h"
 
-@protocol AcessoBioManagerDelegate <NSObject>
+@protocol AcessoBioManagerDelegate
 
 - (void)onErrorAcessoBioManager: (ErrorBio *)error;
 - (void)onUserClosedCameraManually;
