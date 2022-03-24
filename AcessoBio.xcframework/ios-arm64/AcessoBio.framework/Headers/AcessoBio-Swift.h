@@ -543,9 +543,11 @@ enum LogoType : NSInteger;
 
 SWIFT_CLASS("_TtC9AcessoBio18UnicoLogoImageView")
 @interface UnicoLogoImageView : NSObject
+- (nonnull instancetype)initWithEnableLogo:(BOOL)enableLogo OBJC_DESIGNATED_INITIALIZER;
 - (UIImageView * _Null_unspecified)addLogoWithLocation:(CGPoint)location type:(enum LogoType)type SWIFT_WARN_UNUSED_RESULT;
 - (void)removeLogo;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 typedef SWIFT_ENUM(NSInteger, LogoType, open) {
