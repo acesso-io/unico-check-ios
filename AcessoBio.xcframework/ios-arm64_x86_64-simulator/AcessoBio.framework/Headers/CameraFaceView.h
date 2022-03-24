@@ -202,7 +202,6 @@ NS_ASSUME_NONNULL_BEGIN
     BOOL isCameraTypeChanged;
 }
 
-
 #pragma mark - Methods
 
 - (void)setIsDebug : (BOOL)debug;
@@ -261,6 +260,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) AcessoBioManager *acessiBioManager;
 
 @property (readwrite) double secondsTimeoutSession;
+
+@property (strong, nonatomic) SDKTokenResponseDTO *sdkToken;
 
 @end
 
