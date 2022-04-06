@@ -39,6 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CameraMain : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureMetadataOutputObjectsDelegate>
 
+@property (assign, nonatomic) UnicoCheckThemes *themesNew;
+
 @property (strong, nonatomic)   AVCaptureVideoPreviewLayer *previewLayer;
 
 @property (nonatomic, strong) UIButton *btTakePic;

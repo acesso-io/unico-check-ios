@@ -18,24 +18,6 @@ import _Concurrency
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class UnicoDefaultTheme : ObjectiveC.NSObject, AcessoBio.AcessoBioThemeDelegate {
-  @objc public func getColorBackground() -> Any!
-  @objc public func getColorBoxMessage() -> Any!
-  @objc public func getColorTextMessage() -> Any!
-  @objc public func getColorBackgroundPopupError() -> Any!
-  @objc public func getColorTextPopupError() -> Any!
-  @objc public func getColorBackgroundButtonPopupError() -> Any!
-  @objc public func getColorTextButtonPopupError() -> Any!
-  @objc public func getColorBackgroundTakePictureButton() -> Any!
-  @objc public func getColorIconTakePictureButton() -> Any!
-  @objc public func getColorBackgroundBottomDocument() -> Any!
-  @objc public func getColorTextBottomDocument() -> Any!
-  @objc public func getColorSilhouetteSuccess() -> Any!
-  @objc public func getColorSilhouetteError() -> Any!
-  @objc public func getColorSilhouetteNeutral() -> Any!
-  @objc override dynamic public init()
-  @objc deinit
-}
 extension AcessoBio.BigUInt {
   public func greatestCommonDivisor(with b: AcessoBio.BigUInt) -> AcessoBio.BigUInt
   public func inverse(_ modulus: AcessoBio.BigUInt) -> AcessoBio.BigUInt?
@@ -962,6 +944,31 @@ public struct JOSEDeserializer {
   public func deserialize<T>(_ type: T.Type, fromCompactSerialization compactSerialization: Swift.String) throws -> T where T : AcessoBio.CompactDeserializable
 }
 public enum ComponentCompactSerializedIndex {
+}
+@objc public class UnicoCheckThemes : ObjectiveC.NSObject, AcessoBio.AcessoBioThemeDelegate {
+  @objc public var defaultTheme: AcessoBio.AcessoBioThemeDelegate!
+  @objc public var acessoBioThemeDelegate: AcessoBio.AcessoBioThemeDelegate!
+  @objc public init(currentTheme: Any, defaultTheme: AcessoBio.AcessoBioThemeDelegate!, completion: @escaping (AcessoBio.AcessoBioThemeDelegate?, Swift.String?) -> Swift.Void)
+  @objc public func getColorBackground() -> Any!
+  @objc public func getColorBoxMessage() -> Any!
+  @objc public func getColorTextMessage() -> Any!
+  @objc public func getColorBackgroundPopupError() -> Any!
+  @objc public func getColorTextPopupError() -> Any!
+  @objc public func getColorBackgroundButtonPopupError() -> Any!
+  @objc public func getColorTextButtonPopupError() -> Any!
+  @objc public func getColorBackgroundTakePictureButton() -> Any!
+  @objc public func getColorIconTakePictureButton() -> Any!
+  @objc public func getColorBackgroundBottomDocument() -> Any!
+  @objc public func getColorTextBottomDocument() -> Any!
+  @objc public func getColorSilhouetteSuccess() -> Any!
+  @objc public func getColorSilhouetteError() -> Any!
+  @objc public func getColorSilhouetteNeutral() -> Any!
+  @objc deinit
+}
+extension AcessoBio.UnicoCheckThemes {
+  @objc dynamic public func normalizeColor(currentColor: Any!, defaultColorTheme: Any!) -> UIKit.UIColor
+  @objc dynamic public func isValidHexStringColor(currentColor: Swift.String) -> Swift.Bool
+  @objc dynamic public func convertHexSringToUIColor(currentColor: Swift.String) -> UIKit.UIColor
 }
 final public class SHA2 {
   @usableFromInline
@@ -2217,6 +2224,24 @@ extension AcessoBio.BigUInt {
 }
 extension AcessoBio.BigInt {
   public func squareRoot() -> AcessoBio.BigInt
+}
+@objc @_inheritsConvenienceInitializers public class UnicoDefaultTheme : ObjectiveC.NSObject, AcessoBio.AcessoBioThemeDelegate {
+  @objc public func getColorBackground() -> Any!
+  @objc public func getColorBoxMessage() -> Any!
+  @objc public func getColorTextMessage() -> Any!
+  @objc public func getColorBackgroundPopupError() -> Any!
+  @objc public func getColorTextPopupError() -> Any!
+  @objc public func getColorBackgroundButtonPopupError() -> Any!
+  @objc public func getColorTextButtonPopupError() -> Any!
+  @objc public func getColorBackgroundTakePictureButton() -> Any!
+  @objc public func getColorIconTakePictureButton() -> Any!
+  @objc public func getColorBackgroundBottomDocument() -> Any!
+  @objc public func getColorTextBottomDocument() -> Any!
+  @objc public func getColorSilhouetteSuccess() -> Any!
+  @objc public func getColorSilhouetteError() -> Any!
+  @objc public func getColorSilhouetteNeutral() -> Any!
+  @objc override dynamic public init()
+  @objc deinit
 }
 extension AcessoBio.BigUInt {
   public static func + (a: AcessoBio.BigUInt, b: AcessoBio.BigUInt) -> AcessoBio.BigUInt
