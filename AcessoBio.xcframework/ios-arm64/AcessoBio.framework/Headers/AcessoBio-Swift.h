@@ -329,6 +329,39 @@ SWIFT_CLASS("_TtC9AcessoBio12SelfieResult")
 
 
 
+
+SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
+@interface UnicoCheckThemes : NSObject <AcessoBioThemeDelegate>
+@property (nonatomic, strong) id <AcessoBioThemeDelegate> _Null_unspecified defaultTheme;
+@property (nonatomic, strong) id <AcessoBioThemeDelegate> _Null_unspecified acessoBioThemeDelegate;
+- (nonnull instancetype)initWithCurrentTheme:(id _Nonnull)currentTheme defaultTheme:(id <AcessoBioThemeDelegate> _Null_unspecified)defaultTheme completion:(void (^ _Nonnull)(id <AcessoBioThemeDelegate> _Nullable, NSString * _Nullable))completion OBJC_DESIGNATED_INITIALIZER;
+- (id _Null_unspecified)getColorBackground SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorBoxMessage SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorTextMessage SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorBackgroundPopupError SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorTextPopupError SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorBackgroundButtonPopupError SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorTextButtonPopupError SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorBackgroundTakePictureButton SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorIconTakePictureButton SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorBackgroundBottomDocument SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorTextBottomDocument SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorSilhouetteSuccess SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorSilhouetteError SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getColorSilhouetteNeutral SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class UIColor;
+
+@interface UnicoCheckThemes (SWIFT_EXTENSION(AcessoBio))
+- (UIColor * _Nonnull)normalizeColorWithCurrentColor:(id _Null_unspecified)currentColor defaultColorTheme:(id _Null_unspecified)defaultColorTheme SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)isValidHexStringColorWithCurrentColor:(NSString * _Nonnull)currentColor SWIFT_WARN_UNUSED_RESULT;
+- (UIColor * _Nonnull)convertHexSringToUIColorWithCurrentColor:(NSString * _Nonnull)currentColor SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
 SWIFT_CLASS("_TtC9AcessoBio17UnicoDefaultTheme")
 @interface UnicoDefaultTheme : NSObject <AcessoBioThemeDelegate>
 - (id _Null_unspecified)getColorBackground SWIFT_WARN_UNUSED_RESULT;

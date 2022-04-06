@@ -8,9 +8,10 @@
 @import Foundation;
 @import UIKit;
 @class UnicoCheck;
+@class UnicoCheckThemes;
+
 #import "iAcessoBioBuilder.h"
 #import "AcessoBioThemeDelegate.h"
-#import "UnicoCheckThemes.h"
 #import "AcessoBioCameraImpl.h"
 
 @interface AcessoBioManager : NSObject <iAcessoBioBuilder> {

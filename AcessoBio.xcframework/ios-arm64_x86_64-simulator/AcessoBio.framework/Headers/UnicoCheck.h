@@ -25,10 +25,9 @@
 #import "AcessoBioManagerDelegate.h"
 #import "AcessoBioSelfieDelegate.h"
 #import "AcessoBioDocumentDelegate.h"
-#import "UnicoCheckThemes.h"
 #import "UnicoCheckThemesDelegate.h"
-
 #import "UnicoCheckMapCallbacks.h"
+#import "AcessoBioThemeDelegate.h"
 
 @class UnicoSetup;
 @class UnicoConfigDelegate;
@@ -38,6 +37,7 @@
 @class UnicoJsonLoad;
 @class CameraFaceView;
 @class DocumentInsertView;
+@class UnicoCheckThemes;
 
 typedef NS_ENUM(NSInteger, LanguageOrigin) {
     Native,
@@ -93,7 +93,7 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 
 #pragma mark - Custom
 
-@property (nonatomic, strong) UnicoCheckThemes *theme;
+@property (nonatomic, weak) id <AcessoBioThemeDelegate> _Nullable theme;
 
 - (void)setAutoCapture:(BOOL)isEnabled;
 - (void)setSmartFrame:(BOOL)isEnabled;
