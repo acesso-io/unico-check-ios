@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "unicocheck-ios"
-  spec.version      = "2.2.1"
+  spec.version      = "2.3.0"
   spec.summary      = "Esta biblioteca visa implementar as soluções unico | check sob a plataforma iOS."
 
   spec.description = 'O objetivo da SDK unico-check-ios é proporcionar a melhor experiência de captura de imagens. Auxiliando também na implementação do desenvolvedor/cliente unico.'
@@ -30,9 +30,6 @@ Pod::Spec.new do |spec|
 
   spec.resources =  "unicocheck-ios/**/*.strings"
 
-
   spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework"
-
-  spec.dependency  'Sentry' 
 
 end
