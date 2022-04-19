@@ -12,11 +12,17 @@
 #import "SelfieCameraDelegate.h"
 #import "DocumentCameraDelegate.h"
 #import "AcessoBioCameraOpener.h"
+@protocol AcessoBioConfigDataSource;
 
 @protocol AcessoBioCameraDelegate
 
 - (void)prepareSelfieCamera: (id <SelfieCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName;
+- (void)prepareSelfieCamera: (id <SelfieCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName bundle:(NSBundle *)bundle;
+- (void)prepareSelfieCamera: (id <SelfieCameraDelegate>)delegate config: (id <AcessoBioConfigDataSource>)config;
+
 - (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName;
+- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName bundle:(NSBundle *)bundle;
+- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate config: (AcessoBioConfigDataSource *)config;
 
 @end
 

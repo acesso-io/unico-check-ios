@@ -215,6 +215,17 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSString;
 
+SWIFT_PROTOCOL("_TtP9AcessoBio25AcessoBioConfigDataSource_")
+@protocol AcessoBioConfigDataSource
+- (NSString * _Nonnull)getProjectNumber SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getProjectId SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getMobileSdkAppId SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getBundleIdentifier SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getHostInfo SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getHostKey SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
 SWIFT_CLASS("_TtC9AcessoBio12CameraResult")
 @interface CameraResult : NSObject
 @property (nonatomic, copy) NSString * _Null_unspecified base64;
@@ -363,6 +374,14 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
 - (UIColor * _Nonnull)convertHexSringToUIColorWithCurrentColor:(NSString * _Nonnull)currentColor SWIFT_WARN_UNUSED_RESULT;
 @end
 
+@class UnicoSetupData;
+
+SWIFT_CLASS("_TtC9AcessoBio28UnicoConfigDataSourceManager")
+@interface UnicoConfigDataSourceManager : NSObject
+- (UnicoSetupData * _Nonnull)manageWithDataSource:(id <AcessoBioConfigDataSource> _Null_unspecified)dataSource SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC9AcessoBio17UnicoDefaultTheme")
 @interface UnicoDefaultTheme : NSObject <AcessoBioThemeDelegate>
@@ -409,6 +428,7 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
 /// JSON
   UnicoEnumsIErrorsJSON_NOT_FOUND = 73200,
   UnicoEnumsIErrorsJSON_INVALID = 73202,
+  UnicoEnumsIErrorsCONFIG_DATASOURCE_INVALID = 73203,
 /// Authentication
   UnicoEnumsIErrorsAUTHENTICATION_REQUEST_ERROR = 73300,
   UnicoEnumsIErrorsAUTHENTICATION_PARSE_ERROR = 73301,
@@ -459,7 +479,6 @@ SWIFT_PROTOCOL("_TtP9AcessoBio29UnicoFacetecProcessorDelegate_")
 - (void)isUnsuccessfulWithStatus:(FaceTecSessionStatus)status;
 @end
 
-@class UnicoSetupData;
 @class UIViewController;
 
 SWIFT_CLASS("_TtC9AcessoBio12UnicoFacetec")
@@ -567,7 +586,7 @@ typedef SWIFT_ENUM(NSInteger, Routers, open) {
 
 SWIFT_CLASS("_TtC9AcessoBio13UnicoJsonLoad")
 @interface UnicoJsonLoad : NSObject
-- (nonnull instancetype)initWithBundle:(NSBundle * _Nonnull)bundle OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithBundle:(NSBundle * _Nullable)bundle OBJC_DESIGNATED_INITIALIZER;
 - (void)loadJsonWithJsonName:(NSString * _Nonnull)jsonName completion:(void (^ _Nonnull)(UnicoSetupData * _Nullable, ErrorBio * _Nullable))completion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -869,6 +888,17 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSString;
 
+SWIFT_PROTOCOL("_TtP9AcessoBio25AcessoBioConfigDataSource_")
+@protocol AcessoBioConfigDataSource
+- (NSString * _Nonnull)getProjectNumber SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getProjectId SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getMobileSdkAppId SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getBundleIdentifier SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getHostInfo SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getHostKey SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
 SWIFT_CLASS("_TtC9AcessoBio12CameraResult")
 @interface CameraResult : NSObject
 @property (nonatomic, copy) NSString * _Null_unspecified base64;
@@ -1017,6 +1047,14 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
 - (UIColor * _Nonnull)convertHexSringToUIColorWithCurrentColor:(NSString * _Nonnull)currentColor SWIFT_WARN_UNUSED_RESULT;
 @end
 
+@class UnicoSetupData;
+
+SWIFT_CLASS("_TtC9AcessoBio28UnicoConfigDataSourceManager")
+@interface UnicoConfigDataSourceManager : NSObject
+- (UnicoSetupData * _Nonnull)manageWithDataSource:(id <AcessoBioConfigDataSource> _Null_unspecified)dataSource SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC9AcessoBio17UnicoDefaultTheme")
 @interface UnicoDefaultTheme : NSObject <AcessoBioThemeDelegate>
@@ -1063,6 +1101,7 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
 /// JSON
   UnicoEnumsIErrorsJSON_NOT_FOUND = 73200,
   UnicoEnumsIErrorsJSON_INVALID = 73202,
+  UnicoEnumsIErrorsCONFIG_DATASOURCE_INVALID = 73203,
 /// Authentication
   UnicoEnumsIErrorsAUTHENTICATION_REQUEST_ERROR = 73300,
   UnicoEnumsIErrorsAUTHENTICATION_PARSE_ERROR = 73301,
@@ -1113,7 +1152,6 @@ SWIFT_PROTOCOL("_TtP9AcessoBio29UnicoFacetecProcessorDelegate_")
 - (void)isUnsuccessfulWithStatus:(FaceTecSessionStatus)status;
 @end
 
-@class UnicoSetupData;
 @class UIViewController;
 
 SWIFT_CLASS("_TtC9AcessoBio12UnicoFacetec")
@@ -1221,7 +1259,7 @@ typedef SWIFT_ENUM(NSInteger, Routers, open) {
 
 SWIFT_CLASS("_TtC9AcessoBio13UnicoJsonLoad")
 @interface UnicoJsonLoad : NSObject
-- (nonnull instancetype)initWithBundle:(NSBundle * _Nonnull)bundle OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithBundle:(NSBundle * _Nullable)bundle OBJC_DESIGNATED_INITIALIZER;
 - (void)loadJsonWithJsonName:(NSString * _Nonnull)jsonName completion:(void (^ _Nonnull)(UnicoSetupData * _Nullable, ErrorBio * _Nullable))completion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
