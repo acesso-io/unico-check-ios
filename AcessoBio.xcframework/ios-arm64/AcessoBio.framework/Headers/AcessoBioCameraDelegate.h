@@ -22,7 +22,7 @@
 
 - (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName;
 - (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName bundle:(NSBundle *)bundle;
-- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate config: (AcessoBioConfigDataSource *)config;
+- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate config: (id <AcessoBioConfigDataSource>)config;
 
 @end
 
