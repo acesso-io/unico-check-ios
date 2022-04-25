@@ -35,6 +35,7 @@
 @class SDKTokenResponseDTO;
 @class UnicoFacetec;
 @class UnicoJsonLoad;
+@class UnicoConfigDataSourceManager;
 @class CameraFaceView;
 @class DocumentInsertView;
 @class UnicoCheckThemes;
@@ -76,7 +77,9 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     BOOL isFacetecFlow;
     
     UnicoCheckMapCallbacks *mapCallbacks;
-
+    
+    void (^completionHandlerSetupConfig)(ErrorBio * error);
+    
 }
 #pragma mark - Protocos (interface in Java/Kotlin)
 @property (nonatomic, weak) id <AcessoBioManagerDelegate> acessoBioDelegate;
@@ -103,7 +106,8 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 
 #pragma mark - Config
 
-- (void)setupConfigToOpenCamera:(NSString *_Nullable)jsonConfigName completion:(void(^_Nullable)(ErrorBio * error))completionHandler;
+- (void)setupConfigToOpenCamera:(NSString *_Nullable)jsonConfigName bundle: (NSBundle *_Nullable)bundle completion:(void(^_Nullable)(ErrorBio * _Nullable error))completionHandler;
+- (void)setupConfigToOpenCamera:(AcessoBioConfigDataSource *_Nullable)configDataSource completion:(void(^_Nullable)(ErrorBio * _Nullable error))completionHandler;
 
 #pragma mark - CloseCamera Manually
 

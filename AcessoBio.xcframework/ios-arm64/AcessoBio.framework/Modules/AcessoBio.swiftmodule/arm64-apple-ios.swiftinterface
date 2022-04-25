@@ -85,6 +85,11 @@ extension AcessoBio.BigInt {
   public static func * (a: AcessoBio.BigInt, b: AcessoBio.BigInt) -> AcessoBio.BigInt
   public static func *= (a: inout AcessoBio.BigInt, b: AcessoBio.BigInt)
 }
+@_inheritsConvenienceInitializers @objc public class UnicoConfigDataSourceManager : ObjectiveC.NSObject {
+  @objc public func manage(dataSource: AcessoBio.AcessoBioConfigDataSource!) -> AcessoBio.UnicoSetupData
+  @objc override dynamic public init()
+  @objc deinit
+}
 final public class Checksum {
   @usableFromInline
   internal static var table32: [Swift.UInt32]
@@ -596,6 +601,7 @@ extension AcessoBio.PKCS5 {
   case NETWORK_ERROR = 73100
   case JSON_NOT_FOUND = 73200
   case JSON_INVALID = 73202
+  case CONFIG_DATASOURCE_INVALID = 73203
   case AUTHENTICATION_REQUEST_ERROR = 73300
   case AUTHENTICATION_PARSE_ERROR = 73301
   case AUTHENTICATION_TOKEN_NOT_FOUND = 73302
@@ -1222,7 +1228,7 @@ public protocol CommonHeaderParameterSpace {
   @objc public init(data: [Swift.String : Any], sdkToken: Swift.String)
   @objc deinit
 }
-@objc public class iOSClientInfo : ObjectiveC.NSObject, Swift.Decodable {
+@_hasMissingDesignatedInitializers @objc public class iOSClientInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
 }
@@ -1330,7 +1336,7 @@ extension AcessoBio.SymmetricKey : Swift.Encodable {
 extension AcessoBio.SymmetricKey : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
-@objc public class UnicoSetupData : ObjectiveC.NSObject, Swift.Decodable {
+@_hasMissingDesignatedInitializers @objc public class UnicoSetupData : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
 }
@@ -1859,7 +1865,7 @@ extension AcessoBio.BigInt {
   public func power(_ exponent: Swift.Int) -> AcessoBio.BigInt
   public func power(_ exponent: AcessoBio.BigInt, modulus: AcessoBio.BigInt) -> AcessoBio.BigInt
 }
-@objc public class ProjectInfo : ObjectiveC.NSObject, Swift.Decodable {
+@_hasMissingDesignatedInitializers @objc public class ProjectInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
 }
@@ -1994,6 +2000,14 @@ extension Swift.UInt8 {
   public func bits() -> [AcessoBio.Bit]
   public func bits() -> Swift.String
 }
+@objc public protocol AcessoBioConfigDataSource {
+  @objc func getProjectNumber() -> Swift.String
+  @objc func getProjectId() -> Swift.String
+  @objc func getMobileSdkAppId() -> Swift.String
+  @objc func getBundleIdentifier() -> Swift.String
+  @objc func getHostInfo() -> Swift.String
+  @objc func getHostKey() -> Swift.String
+}
 extension Swift.FixedWidthInteger {
   @inlinable internal func bytes(totalBytes: Swift.Int = MemoryLayout<Self>.size) -> Swift.Array<Swift.UInt8> {
     arrayOfBytes(value: self.littleEndian, length: totalBytes)
@@ -2102,7 +2116,7 @@ extension Swift.Collection where Self.Element == Swift.UInt8, Self.Index == Swif
 @usableFromInline
 internal func strideCount(from: Swift.Int, to: Swift.Int, by: Swift.Int) -> Swift.Int
 @objc public class UnicoJsonLoad : ObjectiveC.NSObject {
-  @objc public init(bundle: Foundation.Bundle)
+  @objc public init(bundle: Foundation.Bundle?)
   @objc public func loadJson(jsonName: Swift.String, completion: @escaping (AcessoBio.UnicoSetupData?, AcessoBio.ErrorBio?) -> Swift.Void)
   @objc deinit
 }
@@ -2129,7 +2143,7 @@ extension Foundation.Data {
   }
   public func toHexString() -> Swift.String
 }
-@objc public class ClientInfo : ObjectiveC.NSObject, Swift.Decodable {
+@_hasMissingDesignatedInitializers @objc public class ClientInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
 }
@@ -2580,7 +2594,7 @@ public protocol AEAD {
   static var kLen: Swift.Int { get }
   static var ivRange: Swift.Range<Swift.Int> { get }
 }
-@objc public class HostInfo : ObjectiveC.NSObject, Swift.Decodable {
+@_hasMissingDesignatedInitializers @objc public class HostInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   public func getHostInfo() -> Swift.String?
   public func getHostKey() -> Swift.String?
