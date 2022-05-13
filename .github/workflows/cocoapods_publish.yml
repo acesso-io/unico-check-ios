@@ -22,4 +22,4 @@ jobs:
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
-          pod trunk push unicocheck-ios.podspec
+          pod trunk push unicocheck-ios.podspec --allow-warnings
