@@ -78,20 +78,20 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     
     UnicoCheckMapCallbacks *mapCallbacks;
     
-    void (^completionHandlerSetupConfig)(ErrorBio * error);
+    void (^completionHandlerSetupConfig)(ErrorBio * _Nullable error);
     
 }
 #pragma mark - Protocos (interface in Java/Kotlin)
-@property (nonatomic, weak) id <AcessoBioManagerDelegate> acessoBioDelegate;
-@property (nonatomic, weak) id <AcessoBioSelfieDelegate> selfieDelegate;
-@property (nonatomic, weak) id <AcessoBioDocumentDelegate> documentDelegate;
+@property (nonatomic, weak) id <AcessoBioManagerDelegate> _Nullable acessoBioDelegate;
+@property (nonatomic, weak) id <AcessoBioSelfieDelegate> _Nullable selfieDelegate;
+@property (nonatomic, weak) id <AcessoBioDocumentDelegate> _Nullable documentDelegate;
 
 #pragma mark - Instance
-- (id)initWithViewController:(id)view delegates:(id<AcessoBioCameraDelegate>)delegate;
+- (id _Nullable )initWithViewController:(id _Nullable )view delegates:(id<AcessoBioCameraDelegate>_Nullable)delegate;
 
 #pragma mark - Language Origin
 
-- (void)setLanguageOrigin: (LanguageOrigin)origin release: (NSString*)release;
+- (void)setLanguageOrigin: (LanguageOrigin)origin release: (NSString*_Nullable)release;
 @property (readonly) LanguageOrigin language;
 
 #pragma mark - Custom
@@ -124,22 +124,22 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 #pragma mark - Camera
 
 #pragma mark Selfie
-- (void)openCameraSelfie:(id<AcessoBioSelfieDelegate>)delegate;
+- (void)openCameraSelfie:(id<AcessoBioSelfieDelegate>_Nullable)delegate;
 #pragma mark Documents
-- (void)openCameraDocuments : (DocumentEnums) documentType delegate:(id<AcessoBioDocumentDelegate>)delegate;
+- (void)openCameraDocuments : (DocumentEnums) documentType delegate:(id<AcessoBioDocumentDelegate>_Nullable)delegate;
 
 #pragma mark - Callbacks
 
 #pragma mark Selfie
-- (void)onSuccessSelfie:(NSString *)base64;
-- (void)onErrorSelfie:(ErrorBio *)error;
+- (void)onSuccessSelfie:(NSString *_Nullable)base64;
+- (void)onErrorSelfie:(ErrorBio *_Nullable)error;
 #pragma mark Document
-- (void)onSuccessDocument: (NSString *)base64;
-- (void)onErrorDocument:(ErrorBio *)error;
+- (void)onSuccessDocument: (NSString *_Nonnull)base64;
+- (void)onErrorDocument:(ErrorBio *_Nullable)error;
 
 #pragma mark - ErrorBio
 
-- (void)onErrorAcessoBioManager:(ErrorBio *)error;
+- (void)onErrorAcessoBioManager:(ErrorBio *_Nonnull)error;
 
 #pragma mark - FaceTec
 #if __has_include(<FaceTecSDK/FaceTecSDK.h>)

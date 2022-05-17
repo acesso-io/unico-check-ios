@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AcessoBio
 @_exported import AcessoBio
 import CommonCrypto
@@ -14,7 +14,7 @@ import SystemConfiguration
 import UIKit
 import _Concurrency
 @_inheritsConvenienceInitializers @objc public class UnicoDefaults : ObjectiveC.NSObject {
-  @objc public static var defaultFaceInferenceTimeout: Swift.Double
+  @objc public static let defaultFaceInferenceTimeout: Swift.Double
   @objc override dynamic public init()
   @objc deinit
 }
@@ -92,11 +92,11 @@ extension AcessoBio.BigInt {
 }
 final public class Checksum {
   @usableFromInline
-  internal static var table32: [Swift.UInt32]
+  internal static let table32: [Swift.UInt32]
   @usableFromInline
-  internal static var table32c: [Swift.UInt32]
+  internal static let table32c: [Swift.UInt32]
   @usableFromInline
-  internal static var table16: [Swift.UInt16]
+  internal static let table16: [Swift.UInt16]
   @usableFromInline
   internal init()
   @inlinable final internal func crc32(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32 {
@@ -187,8 +187,8 @@ extension Swift.UInt32 {
   }
 }
 extension AcessoBio.Rabbit {
-  public convenience init(key: Swift.String) throws
-  public convenience init(key: Swift.String, iv: Swift.String) throws
+  convenience public init(key: Swift.String) throws
+  convenience public init(key: Swift.String, iv: Swift.String) throws
 }
 public struct JWS {
   public let header: AcessoBio.JWSHeader
@@ -563,8 +563,7 @@ extension AcessoBio.PKCS5 {
       }
     }
     public enum Variant {
-      case md5
-      case sha1
+      case md5, sha1
       @usableFromInline
       internal var size: Swift.Int {
         get
@@ -913,8 +912,8 @@ final public class RSA {
   final public let d: AcessoBio.BigUInt?
   final public let keySize: Swift.Int
   public init(n: AcessoBio.BigUInt, e: AcessoBio.BigUInt, d: AcessoBio.BigUInt? = nil)
-  public convenience init(n: Swift.Array<Swift.UInt8>, e: Swift.Array<Swift.UInt8>, d: Swift.Array<Swift.UInt8>? = nil)
-  public convenience init(keySize: Swift.Int)
+  convenience public init(n: Swift.Array<Swift.UInt8>, e: Swift.Array<Swift.UInt8>, d: Swift.Array<Swift.UInt8>? = nil)
+  convenience public init(keySize: Swift.Int)
   @objc deinit
 }
 extension AcessoBio.RSA : AcessoBio.Cipher {
@@ -994,10 +993,7 @@ final public class SHA2 {
   @usableFromInline
   final internal var accumulatedHash64: [Swift.UInt64]
   @frozen public enum Variant : Swift.RawRepresentable {
-    case sha224
-    case sha256
-    case sha384
-    case sha512
+    case sha224, sha256, sha384, sha512
     public var digestLength: Swift.Int {
       get
     }
@@ -1150,7 +1146,7 @@ extension AcessoBio.Signer {
   public init?(signingAlgorithm: AcessoBio.SignatureAlgorithm, privateKey: KeyType)
 }
 @_hasMissingDesignatedInitializers final public class AEADChaCha20Poly1305 : AcessoBio.AEAD {
-  public static var kLen: Swift.Int
+  public static let kLen: Swift.Int
   public static var ivRange: Swift.Range<Swift.Int>
   public static func encrypt(_ plainText: Swift.Array<Swift.UInt8>, key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>, authenticationHeader: Swift.Array<Swift.UInt8>) throws -> (cipherText: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>)
   public static func decrypt(_ cipherText: Swift.Array<Swift.UInt8>, key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>, authenticationHeader: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>) throws -> (plainText: Swift.Array<Swift.UInt8>, success: Swift.Bool)
@@ -1194,12 +1190,7 @@ public protocol PaddingProtocol {
   func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
 }
 public enum Padding : AcessoBio.PaddingProtocol {
-  case noPadding
-  case zeroPadding
-  case pkcs7
-  case pkcs5
-  case iso78164
-  case iso10126
+  case noPadding, zeroPadding, pkcs7, pkcs5, iso78164, iso10126
   public func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
   public func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
   public static func == (a: AcessoBio.Padding, b: AcessoBio.Padding) -> Swift.Bool
@@ -1243,11 +1234,11 @@ final public class Scrypt {
 }
 final public class SHA1 {
   @usableFromInline
-  internal static var digestLength: Swift.Int
+  internal static let digestLength: Swift.Int
   @usableFromInline
-  internal static var blockSize: Swift.Int
+  internal static let blockSize: Swift.Int
   @usableFromInline
-  internal static var hashInitialValue: Swift.ContiguousArray<Swift.UInt32>
+  internal static let hashInitialValue: Swift.ContiguousArray<Swift.UInt32>
   @usableFromInline
   final internal var accumulated: [Swift.UInt8]
   @usableFromInline
@@ -1385,7 +1376,7 @@ final public class ChaCha20 {
       get
     }
   }
-  public static var blockSize: Swift.Int
+  public static let blockSize: Swift.Int
   final public let keySize: Swift.Int
   public init(key: Swift.Array<Swift.UInt8>, iv nonce: Swift.Array<Swift.UInt8>) throws
   @objc deinit
@@ -1429,14 +1420,7 @@ final public class SHA3 {
   @usableFromInline
   final internal var accumulatedHash: Swift.Array<Swift.UInt64>
   public enum Variant {
-    case sha224
-    case sha256
-    case sha384
-    case sha512
-    case keccak224
-    case keccak256
-    case keccak384
-    case keccak512
+    case sha224, sha256, sha384, sha512, keccak224, keccak256, keccak384, keccak512
     public var outputLength: Swift.Int {
       get
     }
@@ -1642,13 +1626,13 @@ final public class Rabbit {
       get
     }
   }
-  public static var ivSize: Swift.Int
-  public static var keySize: Swift.Int
-  public static var blockSize: Swift.Int
+  public static let ivSize: Swift.Int
+  public static let keySize: Swift.Int
+  public static let blockSize: Swift.Int
   final public var keySize: Swift.Int {
     get
   }
-  public convenience init(key: Swift.Array<Swift.UInt8>) throws
+  convenience public init(key: Swift.Array<Swift.UInt8>) throws
   public init(key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>?) throws
   @objc deinit
 }
@@ -1684,7 +1668,7 @@ final public class Poly1305 : AcessoBio.Authenticator {
       get
     }
   }
-  public static var blockSize: Swift.Int
+  public static let blockSize: Swift.Int
   public init(key: Swift.Array<Swift.UInt8>)
   final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
   @objc deinit
@@ -1728,47 +1712,47 @@ extension AcessoBio.JWSHeader {
 extension AcessoBio.JWSHeader : AcessoBio.CommonHeaderParameterSpace {
   public var jku: Foundation.URL? {
     get
-    set(newValue)
+    set
   }
   public var jwk: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var jwkTyped: AcessoBio.JWK? {
     get
-    set(newValue)
+    set
   }
   public var kid: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var x5u: Foundation.URL? {
     get
-    set(newValue)
+    set
   }
   public var x5c: [Swift.String]? {
     get
-    set(newValue)
+    set
   }
   public var x5t: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var x5tS256: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var typ: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var cty: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var crit: [Swift.String]? {
     get
-    set(newValue)
+    set
   }
 }
 public struct Verifier {
@@ -1779,7 +1763,7 @@ extension AcessoBio.Verifier {
   public init?<KeyType>(verifyingAlgorithm: AcessoBio.SignatureAlgorithm, publicKey: KeyType)
 }
 extension AcessoBio.Blowfish {
-  public convenience init(key: Swift.String, iv: Swift.String, padding: AcessoBio.Padding = .pkcs7) throws
+  convenience public init(key: Swift.String, iv: Swift.String, padding: AcessoBio.Padding = .pkcs7) throws
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class UnicoHttpSession : ObjectiveC.NSObject {
   public func getSession() -> Foundation.URLSession
@@ -1887,7 +1871,7 @@ extension AcessoBio.JWK {
 extension AcessoBio.BigUInt {
   public subscript(bitAt index: Swift.Int) -> Swift.Bool {
     get
-    set(newValue)
+    set
   }
 }
 extension AcessoBio.BigUInt {
@@ -1982,7 +1966,7 @@ final public class OCB : AcessoBio.BlockMode {
   final public let customBlockSize: Swift.Int?
   final public var authenticationTag: Swift.Array<Swift.UInt8>?
   public init(nonce N: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: AcessoBio.OCB.Mode = .detached)
-  @inlinable public convenience init(nonce N: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: AcessoBio.OCB.Mode = .detached) {
+  @inlinable convenience public init(nonce N: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: AcessoBio.OCB.Mode = .detached) {
     self.init(nonce: N, additionalAuthenticatedData: additionalAuthenticatedData, tagLength: authenticationTag.count, mode: mode)
     self.authenticationTag = authenticationTag
   }
@@ -1990,7 +1974,7 @@ final public class OCB : AcessoBio.BlockMode {
   @objc deinit
 }
 extension AcessoBio.ChaCha20 {
-  public convenience init(key: Swift.String, iv: Swift.String) throws
+  convenience public init(key: Swift.String, iv: Swift.String) throws
 }
 public protocol _UInt8Type {
 }
@@ -2165,13 +2149,13 @@ public struct BlockModeOption : Swift.OptionSet {
   public let rawValue: Swift.Int
   public init(rawValue: Swift.Int)
   @usableFromInline
-  internal static var none: AcessoBio.BlockModeOption
+  internal static let none: AcessoBio.BlockModeOption
   @usableFromInline
-  internal static var initializationVectorRequired: AcessoBio.BlockModeOption
+  internal static let initializationVectorRequired: AcessoBio.BlockModeOption
   @usableFromInline
-  internal static var paddingRequired: AcessoBio.BlockModeOption
+  internal static let paddingRequired: AcessoBio.BlockModeOption
   @usableFromInline
-  internal static var useEncryptToDecrypt: AcessoBio.BlockModeOption
+  internal static let useEncryptToDecrypt: AcessoBio.BlockModeOption
   public typealias ArrayLiteralElement = AcessoBio.BlockModeOption
   public typealias Element = AcessoBio.BlockModeOption
   public typealias RawValue = Swift.Int
@@ -2220,11 +2204,7 @@ final public class HMACUnico : AcessoBio.Authenticator {
     case sha2(AcessoBio.SHA2.Variant)
     case sha3(AcessoBio.SHA3.Variant)
     @available(*, deprecated, message: "Use sha2(variant) instead.")
-    case sha256
-    @available(*, deprecated, message: "Use sha2(variant) instead.")
-    case sha384
-    @available(*, deprecated, message: "Use sha2(variant) instead.")
-    case sha512
+    case sha256, sha384, sha512
   }
   public init(key: Swift.Array<Swift.UInt8>, variant: AcessoBio.HMACUnico.Variant = .md5)
   final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
@@ -2278,10 +2258,10 @@ extension Swift.BinaryFloatingPoint where Self.RawExponent : Swift.FixedWidthInt
   public init(_ value: AcessoBio.BigUInt)
 }
 extension AcessoBio.HMACUnico {
-  public convenience init(key: Swift.String, variant: AcessoBio.HMACUnico.Variant = .md5) throws
+  convenience public init(key: Swift.String, variant: AcessoBio.HMACUnico.Variant = .md5) throws
 }
 extension AcessoBio.AES {
-  public convenience init(key: Swift.String, iv: Swift.String, padding: AcessoBio.Padding = .pkcs7) throws
+  convenience public init(key: Swift.String, iv: Swift.String, padding: AcessoBio.Padding = .pkcs7) throws
 }
 @objc public class SDKTokenResponseDTO : ObjectiveC.NSObject, Swift.Decodable {
   @objc public var Dk: Swift.String
@@ -2313,53 +2293,53 @@ extension AcessoBio.JWEHeader {
   }
   public var zip: Swift.String? {
     get
-    set(newValue)
+    set
   }
 }
 extension AcessoBio.JWEHeader : AcessoBio.CommonHeaderParameterSpace {
   public var jku: Foundation.URL? {
     get
-    set(newValue)
+    set
   }
   public var jwk: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var jwkTyped: AcessoBio.JWK? {
     get
-    set(newValue)
+    set
   }
   public var kid: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var x5u: Foundation.URL? {
     get
-    set(newValue)
+    set
   }
   public var x5c: [Swift.String]? {
     get
-    set(newValue)
+    set
   }
   public var x5t: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var x5tS256: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var typ: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var cty: Swift.String? {
     get
-    set(newValue)
+    set
   }
   public var crit: [Swift.String]? {
     get
-    set(newValue)
+    set
   }
 }
 extension AcessoBio.JWEHeader {
@@ -2386,7 +2366,7 @@ final public class Blowfish {
       get
     }
   }
-  public static var blockSize: Swift.Int
+  public static let blockSize: Swift.Int
   final public let keySize: Swift.Int
   public init(key: Swift.Array<Swift.UInt8>, blockMode: AcessoBio.BlockMode = CBC(iv: Array<UInt8>(repeating: 0, count: Blowfish.blockSize)), padding: AcessoBio.Padding) throws
   @objc deinit
@@ -2567,7 +2547,7 @@ final public class GCM : AcessoBio.BlockMode {
   final public let customBlockSize: Swift.Int?
   final public var authenticationTag: Swift.Array<Swift.UInt8>?
   public init(iv: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: AcessoBio.GCM.Mode = .detached)
-  public convenience init(iv: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: AcessoBio.GCM.Mode = .detached)
+  convenience public init(iv: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: AcessoBio.GCM.Mode = .detached)
   final public func worker(blockSize: Swift.Int, cipherOperation: @escaping AcessoBio.CipherOperationOnBlock, encryptionOperation: @escaping AcessoBio.CipherOperationOnBlock) throws -> AcessoBio.CipherModeWorker
   @objc deinit
 }
@@ -2890,9 +2870,7 @@ final public class AES {
     }
   }
   public enum Variant : Swift.Int {
-    case aes128
-    case aes192
-    case aes256
+    case aes128, aes192, aes256
     public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
@@ -2905,7 +2883,7 @@ final public class AES {
   final internal let variantNb: Swift.Int
   @usableFromInline
   final internal let variantNk: Swift.Int
-  public static var blockSize: Swift.Int
+  public static let blockSize: Swift.Int
   final public let keySize: Swift.Int
   final public let variant: AcessoBio.AES.Variant
   @usableFromInline
@@ -2915,37 +2893,37 @@ final public class AES {
   @usableFromInline
   final internal var expandedKey: Swift.Array<Swift.Array<Swift.UInt32>> {
     get
-    set(value)
+    set
   }
   @usableFromInline
   final internal var expandedKeyInv: Swift.Array<Swift.Array<Swift.UInt32>> {
     get
-    set(value)
+    set
   }
   @usableFromInline
-  internal static var T0: [Swift.UInt32]
+  internal static let T0: [Swift.UInt32]
   @usableFromInline
-  internal static var T0_INV: [Swift.UInt32]
+  internal static let T0_INV: [Swift.UInt32]
   @usableFromInline
-  internal static var T1: [Swift.UInt32]
+  internal static let T1: [Swift.UInt32]
   @usableFromInline
-  internal static var T1_INV: [Swift.UInt32]
+  internal static let T1_INV: [Swift.UInt32]
   @usableFromInline
-  internal static var T2: [Swift.UInt32]
+  internal static let T2: [Swift.UInt32]
   @usableFromInline
-  internal static var T2_INV: [Swift.UInt32]
+  internal static let T2_INV: [Swift.UInt32]
   @usableFromInline
-  internal static var T3: [Swift.UInt32]
+  internal static let T3: [Swift.UInt32]
   @usableFromInline
-  internal static var T3_INV: [Swift.UInt32]
+  internal static let T3_INV: [Swift.UInt32]
   @usableFromInline
-  internal static var U1: [Swift.UInt32]
+  internal static let U1: [Swift.UInt32]
   @usableFromInline
-  internal static var U2: [Swift.UInt32]
+  internal static let U2: [Swift.UInt32]
   @usableFromInline
-  internal static var U3: [Swift.UInt32]
+  internal static let U3: [Swift.UInt32]
   @usableFromInline
-  internal static var U4: [Swift.UInt32]
+  internal static let U4: [Swift.UInt32]
   public init(key: Swift.Array<Swift.UInt8>, blockMode: AcessoBio.BlockMode, padding: AcessoBio.Padding = .pkcs7) throws
   @inlinable final internal func encrypt(block: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>? {
     if self.blockMode.options.contains(.paddingRequired) && block.count != AES.blockSize {
@@ -3136,7 +3114,120 @@ public struct Digest {
   public static func sha2(_ bytes: Swift.Array<Swift.UInt8>, variant: AcessoBio.SHA2.Variant) -> Swift.Array<Swift.UInt8>
   public static func sha3(_ bytes: Swift.Array<Swift.UInt8>, variant: AcessoBio.SHA3.Variant) -> Swift.Array<Swift.UInt8>
 }
+extension AcessoBio.CBC.Error : Swift.Equatable {}
+extension AcessoBio.CBC.Error : Swift.Hashable {}
+extension AcessoBio.UnicoHttpURLRouter.Routers : Swift.Equatable {}
+extension AcessoBio.UnicoHttpURLRouter.Routers : Swift.Hashable {}
+extension AcessoBio.SignatureAlgorithm : Swift.Equatable {}
+extension AcessoBio.SignatureAlgorithm : Swift.Hashable {}
+extension AcessoBio.SignatureAlgorithm : Swift.RawRepresentable {}
+extension AcessoBio.KeyManagementAlgorithm : Swift.Equatable {}
+extension AcessoBio.KeyManagementAlgorithm : Swift.Hashable {}
+extension AcessoBio.KeyManagementAlgorithm : Swift.RawRepresentable {}
+extension AcessoBio.PKCS5.PBKDF2.Error : Swift.Equatable {}
+extension AcessoBio.PKCS5.PBKDF2.Error : Swift.Hashable {}
+extension AcessoBio.ECCurveType : Swift.Equatable {}
+extension AcessoBio.ECCurveType : Swift.Hashable {}
+extension AcessoBio.ECCurveType : Swift.RawRepresentable {}
+extension AcessoBio.ECCompression : Swift.Equatable {}
+extension AcessoBio.ECCompression : Swift.Hashable {}
+extension AcessoBio.ECCompression : Swift.RawRepresentable {}
+extension AcessoBio.JWKKeyType : Swift.Equatable {}
+extension AcessoBio.JWKKeyType : Swift.Hashable {}
+extension AcessoBio.JWKKeyType : Swift.RawRepresentable {}
+extension AcessoBio.OFB.Error : Swift.Equatable {}
+extension AcessoBio.OFB.Error : Swift.Hashable {}
+extension AcessoBio.ContentEncryptionAlgorithm : Swift.Equatable {}
+extension AcessoBio.ContentEncryptionAlgorithm : Swift.Hashable {}
+extension AcessoBio.ContentEncryptionAlgorithm : Swift.RawRepresentable {}
+extension AcessoBio.HMACAlgorithm : Swift.Equatable {}
+extension AcessoBio.HMACAlgorithm : Swift.Hashable {}
+extension AcessoBio.HMACAlgorithm : Swift.RawRepresentable {}
+extension AcessoBio.JWKThumbprintAlgorithm : Swift.Equatable {}
+extension AcessoBio.JWKThumbprintAlgorithm : Swift.Hashable {}
+extension AcessoBio.JWKThumbprintAlgorithm : Swift.RawRepresentable {}
+extension AcessoBio.CompressionAlgorithm : Swift.Equatable {}
+extension AcessoBio.CompressionAlgorithm : Swift.Hashable {}
+extension AcessoBio.CompressionAlgorithm : Swift.RawRepresentable {}
+extension AcessoBio.PKCS5.PBKDF1.Error : Swift.Equatable {}
+extension AcessoBio.PKCS5.PBKDF1.Error : Swift.Hashable {}
+extension AcessoBio.PKCS5.PBKDF1.Variant : Swift.Equatable {}
+extension AcessoBio.PKCS5.PBKDF1.Variant : Swift.Hashable {}
+extension AcessoBio.UnicoEnumsIErrors : Swift.Equatable {}
+extension AcessoBio.UnicoEnumsIErrors : Swift.Hashable {}
+extension AcessoBio.UnicoEnumsIErrors : Swift.RawRepresentable {}
+extension AcessoBio.JWKParameter : Swift.Equatable {}
+extension AcessoBio.JWKParameter : Swift.Hashable {}
+extension AcessoBio.JWKParameter : Swift.RawRepresentable {}
+extension AcessoBio.RSAParameter : Swift.Equatable {}
+extension AcessoBio.RSAParameter : Swift.Hashable {}
+extension AcessoBio.RSAParameter : Swift.RawRepresentable {}
+extension AcessoBio.SymmetricKeyParameter : Swift.Equatable {}
+extension AcessoBio.SymmetricKeyParameter : Swift.Hashable {}
+extension AcessoBio.SymmetricKeyParameter : Swift.RawRepresentable {}
+extension AcessoBio.ECParameter : Swift.Equatable {}
+extension AcessoBio.ECParameter : Swift.Hashable {}
+extension AcessoBio.ECParameter : Swift.RawRepresentable {}
+extension AcessoBio.RSA.Error : Swift.Equatable {}
+extension AcessoBio.RSA.Error : Swift.Hashable {}
+extension AcessoBio.SHA2.Variant : Swift.Equatable {}
+extension AcessoBio.SHA2.Variant : Swift.Hashable {}
+extension AcessoBio.SHA2.Variant : Swift.Sendable {}
+extension AcessoBio.BigInt.Sign : Swift.Equatable {}
+extension AcessoBio.BigInt.Sign : Swift.Hashable {}
+extension AcessoBio.CipherError : Swift.Equatable {}
+extension AcessoBio.CipherError : Swift.Hashable {}
+extension AcessoBio.Padding : Swift.Equatable {}
+extension AcessoBio.Padding : Swift.Hashable {}
+extension AcessoBio.UnicoHttpMethods.HttpMethodType : Swift.Equatable {}
+extension AcessoBio.UnicoHttpMethods.HttpMethodType : Swift.Hashable {}
+extension AcessoBio.ChaCha20.Error : Swift.Equatable {}
+extension AcessoBio.ChaCha20.Error : Swift.Hashable {}
+extension AcessoBio.SHA3.Variant : Swift.Equatable {}
+extension AcessoBio.SHA3.Variant : Swift.Hashable {}
+extension AcessoBio.Bit : Swift.Equatable {}
+extension AcessoBio.Bit : Swift.Hashable {}
+extension AcessoBio.Bit : Swift.RawRepresentable {}
+extension AcessoBio.PCBC.Error : Swift.Equatable {}
+extension AcessoBio.PCBC.Error : Swift.Hashable {}
 extension AcessoBio.CCM : AcessoBio.BlockMode {}
+extension AcessoBio.CCM.Error : Swift.Equatable {}
+extension AcessoBio.CCM.Error : Swift.Hashable {}
+extension AcessoBio.Rabbit.Error : Swift.Equatable {}
+extension AcessoBio.Rabbit.Error : Swift.Hashable {}
+extension AcessoBio.Poly1305.Error : Swift.Equatable {}
+extension AcessoBio.Poly1305.Error : Swift.Hashable {}
+extension AcessoBio.HKDF.Error : Swift.Equatable {}
+extension AcessoBio.HKDF.Error : Swift.Hashable {}
+extension AcessoBio.CMAC.Error : Swift.Equatable {}
+extension AcessoBio.CMAC.Error : Swift.Hashable {}
 extension AcessoBio.JWSHeader : AcessoBio.DataConvertible {}
+extension AcessoBio.OCB.Mode : Swift.Equatable {}
+extension AcessoBio.OCB.Mode : Swift.Hashable {}
+extension AcessoBio.OCB.Error : Swift.Equatable {}
+extension AcessoBio.OCB.Error : Swift.Hashable {}
 extension AcessoBio.CTR : AcessoBio.BlockMode {}
+extension AcessoBio.CTR.Error : Swift.Equatable {}
+extension AcessoBio.CTR.Error : Swift.Hashable {}
+extension AcessoBio.UnicoLogoImageView.LogoType : Swift.Equatable {}
+extension AcessoBio.UnicoLogoImageView.LogoType : Swift.Hashable {}
+extension AcessoBio.UnicoLogoImageView.LogoType : Swift.RawRepresentable {}
+extension AcessoBio.HMACUnico.Error : Swift.Equatable {}
+extension AcessoBio.HMACUnico.Error : Swift.Hashable {}
 extension AcessoBio.JWEHeader : AcessoBio.DataConvertible {}
+extension AcessoBio.Blowfish.Error : Swift.Equatable {}
+extension AcessoBio.Blowfish.Error : Swift.Hashable {}
+extension AcessoBio.GCM.Mode : Swift.Equatable {}
+extension AcessoBio.GCM.Mode : Swift.Hashable {}
+extension AcessoBio.GCM.Error : Swift.Equatable {}
+extension AcessoBio.GCM.Error : Swift.Hashable {}
+extension AcessoBio.CFB.Error : Swift.Equatable {}
+extension AcessoBio.CFB.Error : Swift.Hashable {}
+extension AcessoBio.CFB.SegmentSize : Swift.Equatable {}
+extension AcessoBio.CFB.SegmentSize : Swift.Hashable {}
+extension AcessoBio.CFB.SegmentSize : Swift.RawRepresentable {}
+extension AcessoBio.AES.Error : Swift.Equatable {}
+extension AcessoBio.AES.Error : Swift.Hashable {}
+extension AcessoBio.AES.Variant : Swift.Equatable {}
+extension AcessoBio.AES.Variant : Swift.Hashable {}
+extension AcessoBio.AES.Variant : Swift.RawRepresentable {}
