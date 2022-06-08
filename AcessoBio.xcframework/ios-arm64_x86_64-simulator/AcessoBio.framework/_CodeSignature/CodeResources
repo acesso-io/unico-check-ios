@@ -130,7 +130,7 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		x2qomt9LrRv3iLwD4KiHAMFqt04=
+		4UIuiJVmqRkXbmdhm3RonBSMVjY=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		dBUQDMWHMBQInM99CmaIrPRfFUQ=
+		tVMlXGr9uxkp6WwkXdize2tRW0o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -426,7 +426,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1AQzjFv54TNWyQQhWUV9Zjrt6HadSaam+OI9MDfb7FE=
+			w6uD//G2sA2A/W6UZKyPo0okVPceyDl8PQFUrNGNxt4=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -447,7 +447,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8B/GW9pxk5DqA4OsuyUI7aEct2OSYvpusXDHQV3OqWY=
+			gUZEYudGoiO/Cd1IqlZEYOPuqHiTiQSUOp1yuB8qvps=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
