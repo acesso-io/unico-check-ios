@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 @property (assign, nonatomic)NSInteger type; 
+@property (strong, nonatomic) UnicoCheck *core;
 
 @property (assign, nonatomic) OperationType operationType;
 
