@@ -241,6 +241,26 @@ SWIFT_CLASS("_TtC9AcessoBio10ClientInfo")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@protocol UserDeviceNotificationsDelegate;
+
+SWIFT_CLASS("_TtC9AcessoBio44DefaultRegisterUserDeviceNotificationsWorker")
+@interface DefaultRegisterUserDeviceNotificationsWorker : NSObject
+- (nonnull instancetype)initWithDelegate:(id <UserDeviceNotificationsDelegate> _Nonnull)delegate OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_PROTOCOL("_TtP9AcessoBio37RegisterUserDeviceNotificationsWorker_")
+@protocol RegisterUserDeviceNotificationsWorker
+- (void)registerUserEnterInBackgroundModeNotification;
+@end
+
+
+@interface DefaultRegisterUserDeviceNotificationsWorker (SWIFT_EXTENSION(AcessoBio)) <RegisterUserDeviceNotificationsWorker>
+- (void)registerUserEnterInBackgroundModeNotification;
+@end
+
 
 SWIFT_CLASS("_TtC9AcessoBio14DocumentResult")
 @interface DocumentResult : CameraResult
@@ -308,6 +328,7 @@ SWIFT_CLASS("_TtC9AcessoBio11ProjectInfo")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 @class SdkPkDTO;
 
@@ -451,6 +472,7 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsFACETEC_SESSION_STATUS_LOCKED_OUT = 73717,
   UnicoEnumsIErrorsFACETEC_SESSION_UNKNOWN_INTERNAL_ERROR = 73718,
   UnicoEnumsIErrorsFACETEC_SESSION_USER_CANCELLED_VIA_CLICKABLE_READY_SCREEN_SUBTEXT = 73719,
+  UnicoEnumsIErrorsAPPLICATION_DID_ENTER_BACKGROUND = 73725,
 };
 
 
@@ -655,6 +677,12 @@ SWIFT_CLASS("_TtC9AcessoBio14UnicoTelemetry")
 + (void)setNewInfoWithKey:(NSString * _Null_unspecified)key value:(id _Nonnull)value;
 + (void)clear;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_PROTOCOL("_TtP9AcessoBio31UserDeviceNotificationsDelegate_")
+@protocol UserDeviceNotificationsDelegate
+- (void)userEnterInBackground;
 @end
 
 
