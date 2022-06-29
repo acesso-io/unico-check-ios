@@ -13,6 +13,10 @@ import Swift
 import SystemConfiguration
 import UIKit
 import _Concurrency
+@objc public protocol UnicoFacetecProcessorDelegate {
+  @objc func isSuccess(result: [Swift.String : Any])
+  @objc func isUnsuccessful(status: FaceTecSDK.FaceTecSessionStatus)
+}
 @_inheritsConvenienceInitializers @objc public class UnicoDefaults : ObjectiveC.NSObject {
   @objc public static var defaultFaceInferenceTimeout: Swift.Double
   @objc override dynamic public init()
@@ -624,6 +628,7 @@ extension AcessoBio.PKCS5 {
   case FACETEC_SESSION_STATUS_LOCKED_OUT = 73717
   case FACETEC_SESSION_UNKNOWN_INTERNAL_ERROR = 73718
   case FACETEC_SESSION_USER_CANCELLED_VIA_CLICKABLE_READY_SCREEN_SUBTEXT = 73719
+  case APPLICATION_DID_ENTER_BACKGROUND = 73725
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -832,6 +837,20 @@ extension AcessoBio.Updatable {
   @inlinable public mutating func finish(output: (Swift.Array<Swift.UInt8>) -> Swift.Void) throws {
     try self.finish(withBytes: [], output: output)
   }
+}
+@objc public protocol UserDeviceNotificationsDelegate {
+  @objc func userEnterInBackground()
+}
+@objc public protocol RegisterUserDeviceNotificationsWorker {
+  @objc func registerUserEnterInBackgroundModeNotification()
+}
+@objc final public class DefaultRegisterUserDeviceNotificationsWorker : ObjectiveC.NSObject {
+  final public var delegate: AcessoBio.UserDeviceNotificationsDelegate?
+  @objc public init(delegate: AcessoBio.UserDeviceNotificationsDelegate)
+  @objc deinit
+}
+extension AcessoBio.DefaultRegisterUserDeviceNotificationsWorker : AcessoBio.RegisterUserDeviceNotificationsWorker {
+  @objc final public func registerUserEnterInBackgroundModeNotification()
 }
 extension Security.SecKey : AcessoBio.ExpressibleAsECPrivateKeyComponents {
   public static func representing(ecPrivateKeyComponents components: AcessoBio.ECPrivateKeyComponents) throws -> Self
@@ -2570,10 +2589,6 @@ final public class GCM : AcessoBio.BlockMode {
   public convenience init(iv: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: AcessoBio.GCM.Mode = .detached)
   final public func worker(blockSize: Swift.Int, cipherOperation: @escaping AcessoBio.CipherOperationOnBlock, encryptionOperation: @escaping AcessoBio.CipherOperationOnBlock) throws -> AcessoBio.CipherModeWorker
   @objc deinit
-}
-@objc public protocol UnicoFacetecProcessorDelegate {
-  @objc func isSuccess(result: [Swift.String : Any])
-  @objc func isUnsuccessful(status: FaceTecSDK.FaceTecSessionStatus)
 }
 extension AcessoBio.BigUInt {
   public mutating func subtractReportingOverflow(_ b: AcessoBio.BigUInt, shiftedBy shift: Swift.Int = 0) -> Swift.Bool
