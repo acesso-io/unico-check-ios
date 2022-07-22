@@ -228,8 +228,7 @@ SWIFT_CLASS("_TtC9AcessoBio12CameraResult")
 @interface CameraResult : NSObject
 @property (nonatomic, copy) NSString * _Null_unspecified base64;
 @property (nonatomic, copy) NSString * _Null_unspecified encrypted;
-- (nonnull instancetype)initWithBase64:(NSString * _Nonnull)base64 sdkToken:(NSString * _Nonnull)sdkToken OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithData:(NSDictionary<NSString *, id> * _Nonnull)data sdkToken:(NSString * _Nonnull)sdkToken OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithBase64:(NSString * _Null_unspecified)base64 encrypted:(NSString * _Null_unspecified)encrypted OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -241,31 +240,27 @@ SWIFT_CLASS("_TtC9AcessoBio10ClientInfo")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@protocol UserDeviceNotificationsDelegate;
 
-SWIFT_CLASS("_TtC9AcessoBio44DefaultRegisterUserDeviceNotificationsWorker")
-@interface DefaultRegisterUserDeviceNotificationsWorker : NSObject
-- (nonnull instancetype)initWithDelegate:(id <UserDeviceNotificationsDelegate> _Nonnull)delegate OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
+@interface DefaultGetCameraResultUseCase : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-SWIFT_PROTOCOL("_TtP9AcessoBio37RegisterUserDeviceNotificationsWorker_")
-@protocol RegisterUserDeviceNotificationsWorker
-- (void)registerUserEnterInBackgroundModeNotification;
+SWIFT_PROTOCOL("_TtP9AcessoBio22GetCameraResultUseCase_")
+@protocol GetCameraResultUseCase
+- (CameraResult * _Nonnull)executeWithDataToSend:(NSDictionary<NSString *, id> * _Nonnull)dataToSend token:(NSString * _Nonnull)token SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
-@interface DefaultRegisterUserDeviceNotificationsWorker (SWIFT_EXTENSION(AcessoBio)) <RegisterUserDeviceNotificationsWorker>
-- (void)registerUserEnterInBackgroundModeNotification;
+@interface DefaultGetCameraResultUseCase (SWIFT_EXTENSION(AcessoBio)) <GetCameraResultUseCase>
+- (CameraResult * _Nonnull)executeWithDataToSend:(NSDictionary<NSString *, id> * _Nonnull)dataToSend token:(NSString * _Nonnull)token SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
 SWIFT_CLASS("_TtC9AcessoBio14DocumentResult")
 @interface DocumentResult : CameraResult
-- (nonnull instancetype)initWithBase64:(NSString * _Nonnull)base64 sdkToken:(NSString * _Nonnull)sdkToken OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithData:(NSDictionary<NSString *, id> * _Nonnull)data sdkToken:(NSString * _Nonnull)sdkToken OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithBase64:(NSString * _Null_unspecified)base64 encrypted:(NSString * _Null_unspecified)encrypted OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class NSNumber;
@@ -309,6 +304,7 @@ SWIFT_CLASS("_TtC9AcessoBio15ErrorUnicoSetup")
 @end
 
 
+
 SWIFT_CLASS("_TtC9AcessoBio8HostInfo")
 @interface HostInfo : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -316,11 +312,12 @@ SWIFT_CLASS("_TtC9AcessoBio8HostInfo")
 @end
 
 
-SWIFT_CLASS("_TtC9AcessoBio3Jwt")
-@interface Jwt : NSObject
-- (NSString * _Nullable)encodeWithData:(NSDictionary<NSString *, id> * _Nonnull)data token:(NSString * _Null_unspecified)token SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC9AcessoBio3JWT")
+@interface JWT : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 SWIFT_CLASS("_TtC9AcessoBio11ProjectInfo")
@@ -328,7 +325,6 @@ SWIFT_CLASS("_TtC9AcessoBio11ProjectInfo")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 @class SdkPkDTO;
 
@@ -355,8 +351,7 @@ SWIFT_CLASS("_TtC9AcessoBio8SdkPkDTO")
 
 SWIFT_CLASS("_TtC9AcessoBio12SelfieResult")
 @interface SelfieResult : CameraResult
-- (nonnull instancetype)initWithBase64:(NSString * _Nonnull)base64 sdkToken:(NSString * _Nonnull)sdkToken OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithData:(NSDictionary<NSString *, id> * _Nonnull)data sdkToken:(NSString * _Nonnull)sdkToken OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithBase64:(NSString * _Null_unspecified)base64 encrypted:(NSString * _Null_unspecified)encrypted OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -472,7 +467,6 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsFACETEC_SESSION_STATUS_LOCKED_OUT = 73717,
   UnicoEnumsIErrorsFACETEC_SESSION_UNKNOWN_INTERNAL_ERROR = 73718,
   UnicoEnumsIErrorsFACETEC_SESSION_USER_CANCELLED_VIA_CLICKABLE_READY_SCREEN_SUBTEXT = 73719,
-  UnicoEnumsIErrorsAPPLICATION_DID_ENTER_BACKGROUND = 73725,
 };
 
 
@@ -495,8 +489,8 @@ SWIFT_CLASS("_TtC9AcessoBio11UnicoErrors")
 
 SWIFT_PROTOCOL("_TtP9AcessoBio29UnicoFacetecProcessorDelegate_")
 @protocol UnicoFacetecProcessorDelegate
-- (void)isSuccessWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
-- (void)isUnsuccessfulWithStatus:(FaceTecSessionStatus)status;
+- (void)successFacetecProcessorWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
+- (void)unsuccessfulFacetecProcessorWithStatus:(FaceTecSessionStatus)status;
 @end
 
 @class UIViewController;
@@ -506,8 +500,8 @@ SWIFT_CLASS("_TtC9AcessoBio12UnicoFacetec")
 - (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTO * _Nonnull)sdkToken theme:(id <AcessoBioThemeDelegate> _Null_unspecified)theme OBJC_DESIGNATED_INITIALIZER;
 - (void)initializeFaceTecSDKWithCompletion:(void (^ _Nonnull)(ErrorFacetec * _Nullable))completion;
 - (void)openCameraFaceTecWithViewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(SelfieResult * _Nullable, ErrorBio * _Nullable))completion;
-- (void)isSuccessWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
-- (void)isUnsuccessfulWithStatus:(FaceTecSessionStatus)status;
+- (void)successFacetecProcessorWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
+- (void)unsuccessfulFacetecProcessorWithStatus:(FaceTecSessionStatus)status;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -524,8 +518,8 @@ SWIFT_CLASS("_TtC9AcessoBio21UnicoFacetecProcessor")
 - (void)processSessionWhileFaceTecSDKWaits:(id <FaceTecSessionResult> _Nonnull)sessionResult faceScanResultCallback:(id <FaceTecFaceScanResultCallback> _Nonnull)faceScanResultCallback;
 - (void)onFaceTecSDKCompletelyDone;
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
-- (void)isSuccessWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
-- (void)isUnsuccessfulWithStatus:(FaceTecSessionStatus)status;
+- (void)successFacetecProcessorWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
+- (void)unsuccessfulFacetecProcessorWithStatus:(FaceTecSessionStatus)status;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -677,12 +671,6 @@ SWIFT_CLASS("_TtC9AcessoBio14UnicoTelemetry")
 + (void)setNewInfoWithKey:(NSString * _Null_unspecified)key value:(id _Nonnull)value;
 + (void)clear;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_PROTOCOL("_TtP9AcessoBio31UserDeviceNotificationsDelegate_")
-@protocol UserDeviceNotificationsDelegate
-- (void)userEnterInBackground;
 @end
 
 
