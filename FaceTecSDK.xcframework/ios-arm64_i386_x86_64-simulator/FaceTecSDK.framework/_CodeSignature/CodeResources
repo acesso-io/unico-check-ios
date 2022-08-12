@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/FaceTecPublicApi.h</key>
 		<data>
-		vBRFBg+2w/Dll2P2JJzAPs5oEMg=
+		nZ0Tn5fr1hDtet7w36ZdVrq3PY0=
 		</data>
 		<key>Headers/FaceTecPublicStringKeys.h</key>
 		<data>
-		lw813Trk/b5mlzeW/D23fIMnQm4=
+		O5ONFgbM9svTR+ea+fJ16nErlXA=
 		</data>
 		<key>Headers/FaceTecSDK.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bz2Z1T8OMPxIaO/kdhck+CSMmEk=
+		QtGwhG3o4ilc++reayh3wpxrkMo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -31,22 +31,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vBRFBg+2w/Dll2P2JJzAPs5oEMg=
+			nZ0Tn5fr1hDtet7w36ZdVrq3PY0=
 			</data>
 			<key>hash2</key>
 			<data>
-			UH0LgjjyQCAOeUFiCYdJPZAMooILaZoCAf4xiwA5THg=
+			qNy8dpUWFi3v1SiD8Fqaz/iLIywhqpycnhBVikesqEQ=
 			</data>
 		</dict>
 		<key>Headers/FaceTecPublicStringKeys.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lw813Trk/b5mlzeW/D23fIMnQm4=
+			O5ONFgbM9svTR+ea+fJ16nErlXA=
 			</data>
 			<key>hash2</key>
 			<data>
-			oCAcMmAycqDI5EKWgQZKwMYKgHqV/NmGT1e/SbsIgtg=
+			qfI9sAPynwk2Mt5uWNkh71vO3HwrMurPUW0is8TczYE=
 			</data>
 		</dict>
 		<key>Headers/FaceTecSDK.h</key>
