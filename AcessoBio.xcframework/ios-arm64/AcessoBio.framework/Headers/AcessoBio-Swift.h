@@ -437,6 +437,8 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsUNICO_UNKNOWN_INTERNAL_ERROR = 73000,
 /// Build
   UnicoEnumsIErrorsERROR_MINIMUM_API = 73003,
+/// Simulator
+  UnicoEnumsIErrorsERROR_SIMULATOR = 73006,
 /// Network
   UnicoEnumsIErrorsNETWORK_ERROR = 73100,
 /// JSON

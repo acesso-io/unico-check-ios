@@ -602,6 +602,7 @@ extension AcessoBio.PKCS5 {
 @objc public enum UnicoEnumsIErrors : Swift.Int {
   case UNICO_UNKNOWN_INTERNAL_ERROR = 73000
   case ERROR_MINIMUM_API = 73003
+  case ERROR_SIMULATOR = 73006
   case NETWORK_ERROR = 73100
   case JSON_NOT_FOUND = 73200
   case JSON_INVALID = 73202
