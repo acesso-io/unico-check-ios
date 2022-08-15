@@ -32,7 +32,7 @@ jobs:
          
   create-tag:
     runs-on: macos-latest
-    needs: [verify-changed-files, generate-xcframework]
+    needs: [verify-changed-files]
     steps:
       - uses: actions/checkout@v2
       - run: echo ${{needs.verify-changed-files.outputs.output1}}
@@ -44,7 +44,7 @@ jobs:
 
   cocoapods-publish:
     runs-on: macos-latest
-    needs: [verify-changed-files]
+    needs: [verify-changed-files, create-tag]
     steps:
       - uses: actions/checkout@v2
       - run: echo ${{needs.verify-changed-files.outputs.output1}}
