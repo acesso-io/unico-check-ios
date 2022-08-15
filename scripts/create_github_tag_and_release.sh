@@ -1,9 +1,13 @@
 #!/bin/bash
 
-# get SDK Version from swift file
-SDK_VERSION=$(grep -o '".*"' unicocheck-ios.podspec | sed 's/"//g')
-# create and push GIT tag 
-git tag $SDK_VERSION
-git push origin $SDK_VERSION
-gh release create $SDK_VERSION --generate-notes
+# get podspec version
+CONTENT=`cat unicocheck-ios.podspec`  
+[[ "$CONTENT" =~ spec\.version\ *=\ *\"([^\"]*)\" ]]
+# to print version
+#echo ${BASH_REMATCH[1]} 
+
+#create and push GIT tag 
+git tag ${BASH_REMATCH[1]} 
+git push origin ${BASH_REMATCH[1]} 
+gh release create ${BASH_REMATCH[1]}  --generate-notes
 
