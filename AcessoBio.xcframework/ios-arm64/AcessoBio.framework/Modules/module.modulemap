@@ -6,6 +6,6 @@ framework module AcessoBio {
 }
 
 module AcessoBio.Swift {
-    header "AcessoBio-Swift.h"
-    requires objc
+  header "AcessoBio-Swift.h"
+  requires objc
 }

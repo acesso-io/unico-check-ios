@@ -1,0 +1,6 @@
+framework module unicosdk_core {
+    umbrella header "unicosdk_core.h"
+
+    export *
+    module * { export * }
+}

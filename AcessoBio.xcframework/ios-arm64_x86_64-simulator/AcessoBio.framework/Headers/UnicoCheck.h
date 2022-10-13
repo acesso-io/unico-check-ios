@@ -29,6 +29,9 @@
 #import "UnicoCheckMapCallbacks.h"
 #import "AcessoBioThemeDelegate.h"
 
+#import <CoreLocation/CoreLocation.h>
+
+
 @class UnicoSetup;
 @class UnicoConfigDelegate;
 @class UnicoSetupData;
@@ -36,9 +39,12 @@
 @class UnicoFacetec;
 @class UnicoJsonLoad;
 @class UnicoConfigDataSourceManager;
-@class CameraFaceView;
+@class UnicoFaceCameraViewController;
+@class UnicoDocumentCameraViewController;
 @class DocumentInsertView;
 @class UnicoCheckThemes;
+@protocol SensorsWorker;
+@class GeolocationDTO;
 
 typedef NS_ENUM(NSInteger, LanguageOrigin) {
     Native,
@@ -46,12 +52,16 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     ReactNative
 };
 
-@interface UnicoCheck : NSObject <UnicoCheckThemesDelegate> {
-
+@interface UnicoCheck : NSObject <UnicoCheckThemesDelegate, CLLocationManagerDelegate> {
+    
+    id<SensorsWorker> _Nonnull sensorsWorker;
+    
+    CLLocationManager *locationManager;
+    
     UIViewController *viewController;
     
-    CameraFaceView *cView;
-    DocumentInsertView *dView;
+    UnicoFaceCameraViewController *faceCameraViewController;
+    UnicoDocumentCameraViewController *documentCameraViewController;
     
     NSString *versionRelease;
     
@@ -66,6 +76,7 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     BOOL hasImplementationError;
     
     BOOL facetecHasIncluded;
+    
 #if __has_include(<FaceTecSDK/FaceTecSDK.h>)
     id<FaceTecSessionResult> _Nonnull latestSessionResult;
 #endif
@@ -80,17 +91,22 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     
     void (^completionHandlerSetupConfig)(ErrorBio * _Nullable error);
     
+    NSDate *dateCaptureBegin;
+    NSDate *dateCaptureEnd;
+    
+    GeolocationDTO *geolocation;
 }
-#pragma mark - Protocos (interface in Java/Kotlin)
+#pragma mark - Protocols
 @property (nonatomic, weak) id <AcessoBioManagerDelegate> _Nullable acessoBioDelegate;
 @property (nonatomic, weak) id <AcessoBioSelfieDelegate> _Nullable selfieDelegate;
 @property (nonatomic, weak) id <AcessoBioDocumentDelegate> _Nullable documentDelegate;
 
-#pragma mark - Instance
-- (id _Nullable )initWithViewController:(id _Nullable )view delegates:(id<AcessoBioCameraDelegate>_Nullable)delegate;
+#pragma mark - Constructor
+- (id _Nullable )initWithViewController:(id _Nullable )view
+                delegates:(id<AcessoBioManagerDelegate>_Nullable)delegate
+                sensorsWorker:(id<SensorsWorker>_Nullable)sensorsWorker;
 
 #pragma mark - Language Origin
-
 - (void)setLanguageOrigin: (LanguageOrigin)origin release: (NSString*_Nullable)release;
 @property (readonly) LanguageOrigin language;
 
@@ -140,12 +156,6 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 #pragma mark - ErrorBio
 
 - (void)onErrorAcessoBioManager:(ErrorBio *_Nonnull)error;
-
-#pragma mark - FaceTec
-#if __has_include(<FaceTecSDK/FaceTecSDK.h>)
-- (void)setLatestSessionResult : (id<FaceTecSessionResult> _Nonnull) sessionResult;
-#endif
-- (void)onComplete;
 
 @end
 

@@ -9,6 +9,8 @@
 #ifndef AcessoBioSelfieDelegate_h
 #define AcessoBioSelfieDelegate_h
 @class SelfieResult;
+@class CaptureResult;
+
 #import "ErrorBio.h"
 
 @protocol AcessoBioSelfieDelegate
