@@ -276,6 +276,7 @@ SWIFT_CLASS("_TtC9AcessoBio13CaptureResult")
 @end
 
 
+
 SWIFT_CLASS("_TtC9AcessoBio10ClientInfo")
 @interface ClientInfo : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;

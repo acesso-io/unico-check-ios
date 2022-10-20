@@ -17,6 +17,71 @@ import SystemConfiguration
 import UIKit
 import _Concurrency
 import unicosdk_core
+@objc final public class FreeToken : ObjectiveC.NSObject, AcessoBio.KeychainStorable, Swift.Codable, Foundation.NSItemProviderReading, Foundation.NSItemProviderWriting {
+  public static var store: AcessoBio.KeychainStore<AcessoBio.FreeToken>
+  final public let account: Swift.String
+  public enum Kind : Swift.Int, Swift.Codable {
+    case hotp
+    case totp
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @_hasMissingDesignatedInitializers open class Code {
+    open var value: Swift.String {
+      get
+    }
+    open var from: Foundation.Date {
+      get
+    }
+    open var to: Foundation.Date {
+      get
+    }
+    @objc deinit
+  }
+  final public var kind: AcessoBio.FreeToken.Kind {
+    get
+  }
+  final public var locked: Swift.Bool {
+    get
+    set(value)
+  }
+  final public var codes: [AcessoBio.FreeToken.Code] {
+    get
+  }
+  @objc final public var issuer: Swift.String! {
+    @objc get
+    @objc set(value)
+  }
+  @objc final public var label: Swift.String! {
+    @objc get
+    @objc set(value)
+  }
+  @objc final public var image: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  public init?(otp: AcessoBio.OTP, urlc: Foundation.URLComponents, load: Swift.Bool = false)
+  @objc public static var writableTypeIdentifiersForItemProvider: [Swift.String] {
+    @objc get
+  }
+  @objc final public func loadData(withTypeIdentifier typeIdentifier: Swift.String, forItemProviderCompletionHandler completionHandler: @escaping (Foundation.Data?, Swift.Error?) -> Swift.Void) -> Foundation.Progress?
+  @objc public static var readableTypeIdentifiersForItemProvider: [Swift.String] {
+    @objc get
+  }
+  @objc public static func object(withItemProviderData data: Foundation.Data, typeIdentifier: Swift.String) throws -> AcessoBio.FreeToken
+  @objc required public init?(coder aDecoder: Foundation.NSCoder)
+  @objc final public func encode(with aCoder: Foundation.NSCoder)
+  @objc deinit
+  final public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc public protocol UnicoFacetecProcessorDelegate {
+  @objc func successFacetecProcessor(result: [Swift.String : Any])
+  @objc func unsuccessfulFacetecProcessor(status: FaceTecSDK.FaceTecSessionStatus)
+}
 public protocol LibInfoWoker {
   func commitLibInfo()
 }
@@ -3019,10 +3084,6 @@ final public class GCM : AcessoBio.BlockMode {
   final public func worker(blockSize: Swift.Int, cipherOperation: @escaping AcessoBio.CipherOperationOnBlock, encryptionOperation: @escaping AcessoBio.CipherOperationOnBlock) throws -> AcessoBio.CipherModeWorker
   @objc deinit
 }
-@objc public protocol UnicoFacetecProcessorDelegate {
-  @objc func successFacetecProcessor(result: [Swift.String : Any])
-  @objc func unsuccessfulFacetecProcessor(status: FaceTecSDK.FaceTecSessionStatus)
-}
 extension AcessoBio.BigUInt {
   public mutating func subtractReportingOverflow(_ b: AcessoBio.BigUInt, shiftedBy shift: Swift.Int = 0) -> Swift.Bool
   public func subtractingReportingOverflow(_ other: AcessoBio.BigUInt, shiftedBy shift: Swift.Int) -> (partialValue: AcessoBio.BigUInt, overflow: Swift.Bool)
@@ -3275,67 +3336,6 @@ public class RawDataResponseDecoder : AcessoBio.ResponseDecoder {
   public init()
   public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
   @objc deinit
-}
-@objc final public class FreeToken : ObjectiveC.NSObject, AcessoBio.KeychainStorable, Swift.Codable, Foundation.NSItemProviderReading, Foundation.NSItemProviderWriting {
-  public static var store: AcessoBio.KeychainStore<AcessoBio.FreeToken>
-  final public let account: Swift.String
-  public enum Kind : Swift.Int, Swift.Codable {
-    case hotp
-    case totp
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-  @_hasMissingDesignatedInitializers open class Code {
-    open var value: Swift.String {
-      get
-    }
-    open var from: Foundation.Date {
-      get
-    }
-    open var to: Foundation.Date {
-      get
-    }
-    @objc deinit
-  }
-  final public var kind: AcessoBio.FreeToken.Kind {
-    get
-  }
-  final public var locked: Swift.Bool {
-    get
-    set(value)
-  }
-  final public var codes: [AcessoBio.FreeToken.Code] {
-    get
-  }
-  @objc final public var issuer: Swift.String! {
-    @objc get
-    @objc set(value)
-  }
-  @objc final public var label: Swift.String! {
-    @objc get
-    @objc set(value)
-  }
-  @objc final public var image: Swift.String? {
-    @objc get
-    @objc set(value)
-  }
-  public init?(otp: AcessoBio.OTP, urlc: Foundation.URLComponents, load: Swift.Bool = false)
-  @objc public static var writableTypeIdentifiersForItemProvider: [Swift.String] {
-    @objc get
-  }
-  @objc final public func loadData(withTypeIdentifier typeIdentifier: Swift.String, forItemProviderCompletionHandler completionHandler: @escaping (Foundation.Data?, Swift.Error?) -> Swift.Void) -> Foundation.Progress?
-  @objc public static var readableTypeIdentifiersForItemProvider: [Swift.String] {
-    @objc get
-  }
-  @objc public static func object(withItemProviderData data: Foundation.Data, typeIdentifier: Swift.String) throws -> AcessoBio.FreeToken
-  @objc required public init?(coder aDecoder: Foundation.NSCoder)
-  @objc final public func encode(with aCoder: Foundation.NSCoder)
-  @objc deinit
-  final public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
 }
 @usableFromInline
 final internal class StreamDecryptor : AcessoBio.Cryptor, AcessoBio.Updatable {
