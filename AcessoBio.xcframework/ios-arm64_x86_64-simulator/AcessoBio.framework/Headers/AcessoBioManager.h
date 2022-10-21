@@ -9,6 +9,7 @@
 @import UIKit;
 @class UnicoCheck;
 @class UnicoCheckThemes;
+@protocol Factories;
 
 #import "iAcessoBioBuilder.h"
 #import "AcessoBioThemeDelegate.h"

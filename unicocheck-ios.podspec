@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "unicocheck-ios"
 
-  spec.version      = "2.3.7"
+  spec.version      = "2.3.9"
 
   spec.summary      = "Esta biblioteca visa implementar as soluções unico | check sob a plataforma iOS."
 
@@ -32,6 +32,6 @@ Pod::Spec.new do |spec|
 
   spec.resources =  "unicocheck-ios/**/*.strings"
 
-  spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework"
+  spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework", "unicosdk_core.xcframework"
 
 end

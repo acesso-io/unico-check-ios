@@ -1,21 +1,123 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AcessoBio
 @_exported import AcessoBio
 import CommonCrypto
 import Compression
+import CoreMotion
 import Darwin
 import FaceTecSDK
 import Foundation
 import LocalAuthentication
+import MobileCoreServices
+import Network
 import Security
 import Swift
 import SystemConfiguration
 import UIKit
 import _Concurrency
-@_inheritsConvenienceInitializers @objc public class UnicoDefaults : ObjectiveC.NSObject {
+import unicosdk_core
+@objc final public class FreeToken : ObjectiveC.NSObject, AcessoBio.KeychainStorable, Swift.Codable, Foundation.NSItemProviderReading, Foundation.NSItemProviderWriting {
+  public static var store: AcessoBio.KeychainStore<AcessoBio.FreeToken>
+  final public let account: Swift.String
+  public enum Kind : Swift.Int, Swift.Codable {
+    case hotp
+    case totp
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @_hasMissingDesignatedInitializers open class Code {
+    open var value: Swift.String {
+      get
+    }
+    open var from: Foundation.Date {
+      get
+    }
+    open var to: Foundation.Date {
+      get
+    }
+    @objc deinit
+  }
+  final public var kind: AcessoBio.FreeToken.Kind {
+    get
+  }
+  final public var locked: Swift.Bool {
+    get
+    set(value)
+  }
+  final public var codes: [AcessoBio.FreeToken.Code] {
+    get
+  }
+  @objc final public var issuer: Swift.String! {
+    @objc get
+    @objc set(value)
+  }
+  @objc final public var label: Swift.String! {
+    @objc get
+    @objc set(value)
+  }
+  @objc final public var image: Swift.String? {
+    @objc get
+    @objc set(value)
+  }
+  public init?(otp: AcessoBio.OTP, urlc: Foundation.URLComponents, load: Swift.Bool = false)
+  @objc public static var writableTypeIdentifiersForItemProvider: [Swift.String] {
+    @objc get
+  }
+  @objc final public func loadData(withTypeIdentifier typeIdentifier: Swift.String, forItemProviderCompletionHandler completionHandler: @escaping (Foundation.Data?, Swift.Error?) -> Swift.Void) -> Foundation.Progress?
+  @objc public static var readableTypeIdentifiersForItemProvider: [Swift.String] {
+    @objc get
+  }
+  @objc public static func object(withItemProviderData data: Foundation.Data, typeIdentifier: Swift.String) throws -> AcessoBio.FreeToken
+  @objc required public init?(coder aDecoder: Foundation.NSCoder)
+  @objc final public func encode(with aCoder: Foundation.NSCoder)
+  @objc deinit
+  final public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc public protocol UnicoFacetecProcessorDelegate {
+  @objc func successFacetecProcessor(result: [Swift.String : Any])
+  @objc func unsuccessfulFacetecProcessor(status: FaceTecSDK.FaceTecSessionStatus)
+}
+public protocol LibInfoWoker {
+  func commitLibInfo()
+}
+@_hasMissingDesignatedInitializers final public class DefaultLibInfoWoker {
+  @objc deinit
+}
+extension AcessoBio.DefaultLibInfoWoker : AcessoBio.LibInfoWoker {
+  final public func commitLibInfo()
+}
+@objc @_inheritsConvenienceInitializers public class UnicoDefaults : ObjectiveC.NSObject {
   @objc public static var defaultFaceInferenceTimeout: Swift.Double
   @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum CreateProviderError : Swift.Int, Swift.Error {
+  case undefined
+  case kmmError
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol CreateProviderUseCase {
+  @objc func execute() -> Swift.Bool
+}
+@objc final public class OTP : ObjectiveC.NSObject, AcessoBio.KeychainStorable {
+  public static var store: AcessoBio.KeychainStore<AcessoBio.OTP>
+  final public let account: Swift.String
+  public init?(urlc: Foundation.URLComponents)
+  @objc required public init?(coder aDecoder: Foundation.NSCoder)
+  @objc final public func encode(with aCoder: Foundation.NSCoder)
+  final public func code(_ counter: Swift.Int64) -> Swift.String
   @objc deinit
 }
 extension AcessoBio.BigUInt {
@@ -155,7 +257,7 @@ public struct CBC : AcessoBio.BlockMode {
   public init(iv: Swift.Array<Swift.UInt8>)
   public func worker(blockSize: Swift.Int, cipherOperation: @escaping AcessoBio.CipherOperationOnBlock, encryptionOperation: @escaping AcessoBio.CipherOperationOnBlock) throws -> AcessoBio.CipherModeWorker
 }
-@_hasMissingDesignatedInitializers @objc public class UnicoHttpURLRouter : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers public class UnicoHttpURLRouter : ObjectiveC.NSObject {
   @objc public enum Routers : Swift.Int, Swift.RawRepresentable {
     case token
     case session
@@ -190,6 +292,14 @@ extension AcessoBio.Rabbit {
   public convenience init(key: Swift.String) throws
   public convenience init(key: Swift.String, iv: Swift.String) throws
 }
+@objc public protocol UnicoFaceCameraPresenterInput {
+}
+@objc @_inheritsConvenienceInitializers final public class UnicoFaceCameraPresenter : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresenterInput {
+}
 public struct JWS {
   public let header: AcessoBio.JWSHeader
   public let payload: AcessoBio.Payload
@@ -218,10 +328,6 @@ extension AcessoBio.JWS : AcessoBio.CompactDeserializable {
     get
   }
   public init(from deserializer: AcessoBio.CompactDeserializer) throws
-}
-public protocol UseCase {
-  associatedtype P
-  func execute(param: Self.P) -> Any
 }
 extension AcessoBio.BigUInt {
   public func isStrongProbablePrime(_ base: AcessoBio.BigUInt) -> Swift.Bool
@@ -287,6 +393,9 @@ extension AcessoBio.PKCS5 {
     public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, iterations: Swift.Int = 4096, keyLength: Swift.Int? = nil, variant: AcessoBio.HMACUnico.Variant = .sha2(.sha256)) throws
     public func calculate() throws -> Swift.Array<Swift.UInt8>
   }
+}
+@objc public protocol CaptureBehaviorWorker {
+  @objc func startCapture()
 }
 public struct Payload : AcessoBio.DataConvertible {
   public init(_ payload: Foundation.Data)
@@ -415,7 +524,7 @@ public enum ECCompression : Swift.UInt8 {
   }
 }
 @objc public class UnicoEnumsInfo : ObjectiveC.NSObject {
-  @objc public init(tag: Swift.String, desc: Swift.String)
+  public init(tag: Swift.String, desc: Swift.String)
   @objc deinit
 }
 extension Foundation.Data : AcessoBio.ExpressibleAsECPublicKeyComponents {
@@ -600,7 +709,8 @@ extension AcessoBio.PKCS5 {
   }
 }
 @objc public enum UnicoEnumsIErrors : Swift.Int {
-  case UNICO_UNKNOWN_INTERNAL_ERROR = 73000
+  case UNKNOWN_INTERNAL_ERROR = 73000
+  case TAKE_PICTURE_ERROR = 73001
   case ERROR_MINIMUM_API = 73003
   case ERROR_SIMULATOR = 73006
   case NETWORK_ERROR = 73100
@@ -635,8 +745,8 @@ extension AcessoBio.PKCS5 {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc public class UnicoEnumsErrors : ObjectiveC.NSObject {
-  @objc public static func getInfo(unicoEnumError: AcessoBio.UnicoEnumsIErrors) -> AcessoBio.UnicoEnumsInfo
+@objc @_inheritsConvenienceInitializers public class UnicoEnumsErrors : ObjectiveC.NSObject {
+  public static func getInfo(unicoEnumError: AcessoBio.UnicoEnumsIErrors) -> AcessoBio.UnicoEnumsInfo
   @objc override dynamic public init()
   @objc deinit
 }
@@ -749,6 +859,10 @@ public enum ECParameter : Swift.String, Swift.CodingKey {
     get
   }
 }
+@objc public protocol UnicoFaceCameraViewControllerOutput {
+  @objc func startCapture()
+  @objc func stopCapture()
+}
 extension AcessoBio.JWKSet : Swift.Encodable {
   public func encode(to encoder: Swift.Encoder) throws
 }
@@ -771,6 +885,17 @@ extension AcessoBio.ECPrivateKey : Swift.Decodable {
   @objc public init(headers: Foundation.NSDictionary)
   @objc deinit
 }
+public protocol NetworkConfigurable {
+  var baseURL: Foundation.URL { get }
+  var headers: [Swift.String : Swift.String] { get }
+  var queryParameters: [Swift.String : Swift.String] { get }
+}
+public struct ApiDataNetworkConfig : AcessoBio.NetworkConfigurable {
+  public let baseURL: Foundation.URL
+  public let headers: [Swift.String : Swift.String]
+  public let queryParameters: [Swift.String : Swift.String]
+  public init(baseURL: Foundation.URL, headers: [Swift.String : Swift.String] = [:], queryParameters: [Swift.String : Swift.String] = [:])
+}
 public struct Decrypter {
   public init?<KeyType>(keyManagementAlgorithm: AcessoBio.KeyManagementAlgorithm, contentEncryptionAlgorithm: AcessoBio.ContentEncryptionAlgorithm, decryptionKey: KeyType)
 }
@@ -787,8 +912,8 @@ public struct DecryptionContext {
 public struct SymmetricDecryptionContext {
 }
 @objc public class UnicoFacetecProcessor : ObjectiveC.NSObject, AcessoBio.UnicoFacetecProcessorDelegate, FaceTecSDK.FaceTecFaceScanProcessorDelegate, Foundation.URLSessionTaskDelegate {
-  @objc public init(sdkToken: AcessoBio.SDKTokenResponseDTO)
-  @objc public func getFacetecViewController(sessionToken: Swift.String, delegate: AcessoBio.UnicoFacetecProcessorDelegate) -> UIKit.UIViewController!
+  public init(sdkToken: AcessoBio.SDKTokenResponseDTO)
+  public func getFacetecViewController(sessionToken: Swift.String, delegate: AcessoBio.UnicoFacetecProcessorDelegate) -> UIKit.UIViewController!
   @objc public func processSessionWhileFaceTecSDKWaits(sessionResult: FaceTecSDK.FaceTecSessionResult, faceScanResultCallback: FaceTecSDK.FaceTecFaceScanResultCallback)
   @objc public func onFaceTecSDKCompletelyDone()
   @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
@@ -889,6 +1014,32 @@ extension AcessoBio.BigInt : Swift.CustomPlaygroundDisplayConvertible {
     get
   }
 }
+@objc public protocol GyroscopeSensorDevice : AcessoBio.SensorsDevice {
+  @objc override func startUpdate()
+  @objc override func stopUpdate()
+  @objc func clearAllValues()
+  @objc func clearPitchValues()
+  @objc func clearRollValues()
+  @objc func clearYawValues()
+  @objc func getPitchValues() -> [AcessoBio.SensorValuesDTO]
+  @objc func getRollValues() -> [AcessoBio.SensorValuesDTO]
+  @objc func getYawValues() -> [AcessoBio.SensorValuesDTO]
+}
+@objc final public class DefaultGyroscopeSensorDevice : ObjectiveC.NSObject {
+  @objc public init(motionManager: CoreMotion.CMMotionManager = CMMotionManager())
+  @objc deinit
+}
+extension AcessoBio.DefaultGyroscopeSensorDevice : AcessoBio.GyroscopeSensorDevice {
+  @objc final public func startUpdate()
+  @objc final public func stopUpdate()
+  @objc final public func clearAllValues()
+  @objc final public func clearPitchValues()
+  @objc final public func clearRollValues()
+  @objc final public func clearYawValues()
+  @objc final public func getPitchValues() -> [AcessoBio.SensorValuesDTO]
+  @objc final public func getRollValues() -> [AcessoBio.SensorValuesDTO]
+  @objc final public func getYawValues() -> [AcessoBio.SensorValuesDTO]
+}
 extension AcessoBio.BigUInt {
   prefix public static func ~ (a: AcessoBio.BigUInt) -> AcessoBio.BigUInt
   public static func |= (a: inout AcessoBio.BigUInt, b: AcessoBio.BigUInt)
@@ -963,10 +1114,6 @@ public enum ComponentCompactSerializedIndex {
   @objc public func getColorBackground() -> Any!
   @objc public func getColorBoxMessage() -> Any!
   @objc public func getColorTextMessage() -> Any!
-  @objc public func getColorBackgroundPopupError() -> Any!
-  @objc public func getColorTextPopupError() -> Any!
-  @objc public func getColorBackgroundButtonPopupError() -> Any!
-  @objc public func getColorTextButtonPopupError() -> Any!
   @objc public func getColorBackgroundTakePictureButton() -> Any!
   @objc public func getColorIconTakePictureButton() -> Any!
   @objc public func getColorBackgroundBottomDocument() -> Any!
@@ -1161,6 +1308,11 @@ extension AcessoBio.Signer {
   public static func decrypt(_ cipherText: Swift.Array<Swift.UInt8>, key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>, authenticationHeader: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>) throws -> (plainText: Swift.Array<Swift.UInt8>, success: Swift.Bool)
   @objc deinit
 }
+@objc public protocol SensorsWorker {
+  @objc func startGyroscope()
+  @objc @discardableResult
+  func stopGyroscope() -> AcessoBio.DeviceBehaviorsDTO
+}
 public protocol Cryptors : AnyObject {
   func makeEncryptor() throws -> AcessoBio.Cryptor & AcessoBio.Updatable
   func makeDecryptor() throws -> AcessoBio.Cryptor & AcessoBio.Updatable
@@ -1168,6 +1320,61 @@ public protocol Cryptors : AnyObject {
 }
 extension AcessoBio.Cryptors {
   public static func randomIV(_ count: Swift.Int) -> Swift.Array<Swift.UInt8>
+}
+public enum HTTPMethodType : Swift.String {
+  case get
+  case head
+  case post
+  case put
+  case patch
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum BodyEncoding {
+  case jsonSerializationData
+  case stringEncodingAscii
+  public static func == (a: AcessoBio.BodyEncoding, b: AcessoBio.BodyEncoding) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Endpoint<R> : AcessoBio.ResponseRequestable {
+  public typealias Response = R
+  final public let path: Swift.String
+  final public let isFullPath: Swift.Bool
+  final public let method: AcessoBio.HTTPMethodType
+  final public let headerParameters: [Swift.String : Swift.String]
+  final public let queryParametersEncodable: Swift.Encodable?
+  final public let queryParameters: [Swift.String : Any]
+  final public let bodyParametersEncodable: Swift.Encodable?
+  final public let bodyParameters: [Swift.String : Any]
+  final public let bodyEncoding: AcessoBio.BodyEncoding
+  final public let responseDecoder: AcessoBio.ResponseDecoder
+  @objc deinit
+}
+public protocol Requestable {
+  var path: Swift.String { get }
+  var isFullPath: Swift.Bool { get }
+  var method: AcessoBio.HTTPMethodType { get }
+  var headerParameters: [Swift.String : Swift.String] { get }
+  var queryParametersEncodable: Swift.Encodable? { get }
+  var queryParameters: [Swift.String : Any] { get }
+  var bodyParametersEncodable: Swift.Encodable? { get }
+  var bodyParameters: [Swift.String : Any] { get }
+  var bodyEncoding: AcessoBio.BodyEncoding { get }
+  func urlRequest(with networkConfig: AcessoBio.NetworkConfigurable) throws -> Foundation.URLRequest
+}
+public protocol ResponseRequestable : AcessoBio.Requestable {
+  associatedtype Response
+  var responseDecoder: AcessoBio.ResponseDecoder { get }
+}
+extension AcessoBio.Requestable {
+  public func urlRequest(with config: AcessoBio.NetworkConfigurable) throws -> Foundation.URLRequest
 }
 public enum CipherError : Swift.Error {
   case encrypt
@@ -1188,6 +1395,50 @@ public protocol Cipher : AnyObject {
 extension AcessoBio.Cipher {
   public func encrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
   public func decrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+public func base32Encode(_ data: Foundation.Data) -> Swift.String
+public func base32HexEncode(_ data: Foundation.Data) -> Swift.String
+public func base32DecodeToData(_ string: Swift.String) -> Foundation.Data?
+public func base32HexDecodeToData(_ string: Swift.String) -> Foundation.Data?
+public func base32Encode(_ array: [Swift.UInt8]) -> Swift.String
+public func base32HexEncode(_ array: [Swift.UInt8]) -> Swift.String
+public func base32Decode(_ string: Swift.String) -> [Swift.UInt8]?
+public func base32HexDecode(_ string: Swift.String) -> [Swift.UInt8]?
+extension Swift.String {
+  public var base32DecodedData: Foundation.Data? {
+    get
+  }
+  public var base32EncodedString: Swift.String {
+    get
+  }
+  public func base32DecodedString(_ encoding: Swift.String.Encoding = .utf8) -> Swift.String?
+  public var base32HexDecodedData: Foundation.Data? {
+    get
+  }
+  public var base32HexEncodedString: Swift.String {
+    get
+  }
+  public func base32HexDecodedString(_ encoding: Swift.String.Encoding = .utf8) -> Swift.String?
+}
+extension Foundation.Data {
+  public var base32EncodedString: Swift.String {
+    get
+  }
+  public var base32EncodedData: Foundation.Data {
+    get
+  }
+  public var base32DecodedData: Foundation.Data? {
+    get
+  }
+  public var base32HexEncodedString: Swift.String {
+    get
+  }
+  public var base32HexEncodedData: Foundation.Data {
+    get
+  }
+  public var base32HexDecodedData: Foundation.Data? {
+    get
+  }
 }
 public protocol PaddingProtocol {
   func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
@@ -1221,18 +1472,12 @@ public protocol CommonHeaderParameterSpace {
   var cty: Swift.String? { get set }
   var crit: [Swift.String]? { get set }
 }
-@objc public class CameraResult : ObjectiveC.NSObject {
-  @objc public var base64: Swift.String!
-  @objc public var encrypted: Swift.String!
-  @objc public init(base64: Swift.String!, encrypted: Swift.String!)
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers @objc public class iOSClientInfo : ObjectiveC.NSObject, Swift.Decodable {
+@objc @_hasMissingDesignatedInitializers public class iOSClientInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
 }
 @objc public protocol GetCameraResultUseCase {
-  @objc func execute(dataToSend: [Swift.String : Any], token: Swift.String) -> AcessoBio.CameraResult
+  @objc func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, token: Swift.String) -> AcessoBio.CaptureResult
 }
 extension Foundation.Data : AcessoBio.ExpressibleAsRSAPublicKeyComponents {
   public static func representing(rsaPublicKeyComponents components: AcessoBio.RSAPublicKeyComponents) throws -> Foundation.Data
@@ -1242,6 +1487,9 @@ final public class Scrypt {
   public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, dkLen: Swift.Int, N: Swift.Int, r: Swift.Int, p: Swift.Int) throws
   final public func calculate() throws -> [Swift.UInt8]
   @objc deinit
+}
+@objc public protocol SensorsWorkerFactory {
+  @objc func make() -> AcessoBio.SensorsWorker
 }
 final public class SHA1 {
   @usableFromInline
@@ -1314,6 +1562,9 @@ extension AcessoBio.SHA1 : AcessoBio.Updatable {
     return result
   }
 }
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public static var modelName: Swift.String
+}
 @objc public class UnicoHttpMethods : ObjectiveC.NSObject {
   @objc public enum HttpMethodType : Swift.Int, Swift.RawRepresentable {
     case GET
@@ -1332,13 +1583,13 @@ extension AcessoBio.SHA1 : AcessoBio.Updatable {
   public func getParams() -> Swift.AnyObject
   @objc deinit
 }
-extension AcessoBio.SymmetricKey : Swift.Encodable {
+extension AcessoBio.SymmetricKeyJOSE : Swift.Encodable {
   public func encode(to encoder: Swift.Encoder) throws
 }
-extension AcessoBio.SymmetricKey : Swift.Decodable {
+extension AcessoBio.SymmetricKeyJOSE : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
-@_hasMissingDesignatedInitializers @objc public class UnicoSetupData : ObjectiveC.NSObject, Swift.Decodable {
+@objc @_hasMissingDesignatedInitializers public class UnicoSetupData : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
 }
@@ -1352,7 +1603,27 @@ extension AcessoBio.SymmetricKey : Swift.Decodable {
   @objc deinit
 }
 extension AcessoBio.DefaultGetCameraResultUseCase : AcessoBio.GetCameraResultUseCase {
-  @objc final public func execute(dataToSend: [Swift.String : Any], token: Swift.String) -> AcessoBio.CameraResult
+  @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, token: Swift.String) -> AcessoBio.CaptureResult
+}
+public protocol KeychainStorable : Foundation.NSCoding {
+  static var store: AcessoBio.KeychainStore<Self> { get }
+  var account: Swift.String { get }
+}
+open class KeychainStore<T> where T : AcessoBio.KeychainStorable {
+  open var lockingSupported: Swift.Bool {
+    get
+  }
+  public init()
+  @discardableResult
+  open func add(_ storable: T, locked: Swift.Bool = false) -> Swift.Bool
+  @discardableResult
+  open func save(_ storable: T) -> Swift.Bool
+  open func load(_ account: Swift.String) -> T?
+  @discardableResult
+  open func erase(_ storable: T) -> Swift.Bool
+  @discardableResult
+  open func erase(_ account: Swift.String) -> Swift.Bool
+  @objc deinit
 }
 extension Foundation.Data : AcessoBio.ExpressibleAsSymmetricKeyComponents {
   public static func representing(symmetricKeyComponents components: AcessoBio.SymmetricKeyComponents) throws -> Foundation.Data
@@ -1374,6 +1645,10 @@ extension AcessoBio.BigInt {
   public static func >> <Other>(lhs: AcessoBio.BigInt, rhs: Other) -> AcessoBio.BigInt where Other : Swift.BinaryInteger
   public static func >>= <Other>(lhs: inout AcessoBio.BigInt, rhs: Other) where Other : Swift.BinaryInteger
 }
+@objc public protocol SensorsDevice {
+  @objc func startUpdate()
+  @objc func stopUpdate()
+}
 extension AcessoBio.BigUInt {
   public init(_ buffer: Swift.UnsafeRawBufferPointer)
   public init(_ data: Foundation.Data)
@@ -1383,6 +1658,29 @@ extension AcessoBio.BigInt {
   public init(_ buffer: Swift.UnsafeRawBufferPointer)
   public init(_ data: Foundation.Data)
   public func serialize() -> Foundation.Data
+}
+@objc public protocol DataLoggerOutput {
+  @objc func start()
+  @objc func commitBuild()
+  @objc func commitPrepareCamera()
+  @objc func commitOpenCamera(openCamera: AcessoBio.OpenCameraDTO)
+  @objc func commitTakePicture(userInteraction: AcessoBio.UserInteractionDTO)
+  @objc func commitCallback(callback: AcessoBio.CallbackDTO)
+  @objc func commitSuccessCallback(successCallback: AcessoBio.SuccessCallbackDTO)
+  @objc func commitErrorCallback(errorCallback: AcessoBio.ErrorCallbackDTO)
+  @objc func getLogs() -> [Swift.String : Any]
+  @objc func getJsonLogs() -> Swift.String!
+  @objc func send(saveAttempt: Swift.Bool) -> Swift.String
+}
+@objc @_hasMissingDesignatedInitializers public class DataLogger : ObjectiveC.NSObject {
+  @objc public class func shared() -> AcessoBio.DataLogger
+  @objc public func commitBuild()
+  @objc public func commitOpenCamera(_ openCamera: AcessoBio.OpenCameraDTO)
+  @objc public func commitSuccessCallback(successCallback: AcessoBio.SuccessCallbackDTO)
+  @objc public func commitErrorCallback(errorCallback: AcessoBio.ErrorCallbackDTO)
+  @objc public func commitCallback(_ callback: AcessoBio.CallbackDTO)
+  @objc public func send(_ saveAttempt: Swift.Bool) -> Swift.String
+  @objc deinit
 }
 final public class ChaCha20 {
   public enum Error : Swift.Error {
@@ -1619,6 +1917,35 @@ extension AcessoBio.BigUInt {
   }
   public func signum() -> AcessoBio.BigUInt
 }
+@objc @_inheritsConvenienceInitializers open class TokenStore : ObjectiveC.NSObject {
+  open var count: Swift.Int {
+    get
+  }
+  @objc override dynamic public init()
+  @discardableResult
+  open func add(_ urlc: Foundation.URLComponents) -> AcessoBio.FreeToken?
+  @discardableResult
+  open func erase(index: Swift.Int) -> Swift.Bool
+  @discardableResult
+  open func erase(token: AcessoBio.FreeToken) -> Swift.Bool
+  open func load(_ index: Swift.Int) -> AcessoBio.FreeToken?
+  @discardableResult
+  open func move(_ from: Swift.Int, to: Swift.Int) -> Swift.Bool
+  @objc deinit
+}
+public protocol CallbackWorker {
+  func setCallbackName(callback: AcessoBio.CallbackDTO)
+  func setErrorSdk(error: AcessoBio.ErrorCallbackDTO)
+  func commit()
+}
+@_hasMissingDesignatedInitializers final public class DefaultCallbackWorker {
+  @objc deinit
+}
+extension AcessoBio.DefaultCallbackWorker : AcessoBio.CallbackWorker {
+  final public func setCallbackName(callback: AcessoBio.CallbackDTO)
+  final public func setErrorSdk(error: AcessoBio.ErrorCallbackDTO)
+  final public func commit()
+}
 @_inheritsConvenienceInitializers @objc public class ErrorHttp : AcessoBio.ErrorUnico {
   @objc override dynamic public init()
   @objc override public init(code: Swift.Int, message: Swift.String?, body: [Swift.String : Swift.String]?)
@@ -1641,6 +1968,68 @@ public struct CCM {
   public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
   public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
   public func worker(blockSize: Swift.Int, cipherOperation: @escaping AcessoBio.CipherOperationOnBlock, encryptionOperation: @escaping AcessoBio.CipherOperationOnBlock) throws -> AcessoBio.CipherModeWorker
+}
+@objc public class UserInteractionDTO : ObjectiveC.NSObject {
+  public init(timestamp: Swift.String? = nil, camera: Swift.String? = nil, cameraVendor: Swift.String? = nil, type: Swift.String? = nil, screenBrightness: Swift.Double? = nil, lightingSensor: Swift.Double? = nil, silhouette: AcessoBio.SilhouetteDTO? = nil, video: AcessoBio.VideoDTO? = nil, imageResolution: Swift.String? = nil, isCameraTypeChanged: Swift.Bool? = nil, inferenceTime: Swift.Int32? = nil, openCameraTime: Swift.Int32? = nil, captureUserTime: Swift.Int32? = nil, connections: AcessoBio.ConnectionsDTO? = nil, behaviors: AcessoBio.BehaviorsDTO? = nil, timers: AcessoBio.TimersDTO? = nil)
+  @objc deinit
+}
+@objc public class VideoDTO : ObjectiveC.NSObject {
+  @objc public init(width: Foundation.NSNumber? = nil, height: Foundation.NSNumber? = nil, aspectRatio: Foundation.NSNumber? = nil)
+  public func toDomain() -> unicosdk_core.Video
+  @objc deinit
+}
+@objc public class SilhouetteDTO : ObjectiveC.NSObject {
+  @objc public init(width: Foundation.NSNumber, height: Foundation.NSNumber)
+  @objc deinit
+}
+@objc public class ConnectionsDTO : ObjectiveC.NSObject {
+  @objc public init(type: Swift.String, rtt: Swift.String, effectiveType: Swift.String, downlink: Swift.String, ipAddress: Swift.String, ipPort: Swift.String)
+  @objc deinit
+}
+@objc public class TimersDTO : ObjectiveC.NSObject {
+  @objc public init(captureUserTime: Foundation.NSNumber, inferenceTime: Foundation.NSNumber, openCameraTime: Foundation.NSNumber)
+  @objc deinit
+}
+@objc public class BehaviorsDTO : ObjectiveC.NSObject {
+  @objc public init(face: AcessoBio.FaceBehaviorsDTO? = nil, device: AcessoBio.DeviceBehaviorsDTO? = nil)
+  @objc deinit
+}
+@objc public class FaceBehaviorsDTO : ObjectiveC.NSObject {
+  @objc public init(blinks: Foundation.NSNumber? = nil, pitch: [AcessoBio.SensorValuesDTO]? = nil, roll: [AcessoBio.SensorValuesDTO]? = nil, yaw: [AcessoBio.SensorValuesDTO]? = nil)
+  public func toDomain() -> unicosdk_core.FaceBehavior
+  @objc deinit
+}
+@objc public class DeviceBehaviorsDTO : ObjectiveC.NSObject {
+  public init(accelerometers: AcessoBio.AccelerometerDeviceBehaviorDTO? = nil, pitch: [AcessoBio.SensorValuesDTO]? = nil, roll: [AcessoBio.SensorValuesDTO]? = nil, yaw: [AcessoBio.SensorValuesDTO]? = nil)
+  public func toDomain() -> unicosdk_core.DeviceBehavior
+  @objc deinit
+}
+@objc public class AccelerometerDeviceBehaviorDTO : ObjectiveC.NSObject {
+  @objc public init(x: [AcessoBio.SensorValuesDTO], y: [AcessoBio.SensorValuesDTO], z: [AcessoBio.SensorValuesDTO])
+  public func toDomain() -> unicosdk_core.AccelerometerDeviceBehavior
+  @objc deinit
+}
+@objc public class SensorValuesDTO : ObjectiveC.NSObject {
+  @objc public init(value: Swift.Double)
+  public init(timestamp: Swift.Int64, value: Swift.Double)
+  @objc deinit
+}
+@objc public protocol ProviderFactory {
+  @objc func create() -> AcessoBio.CreateProviderUseCase
+}
+@objc @_hasMissingDesignatedInitializers final public class DefaultProviderFactory : ObjectiveC.NSObject {
+  @objc public enum Source : Swift.Int {
+    case memory
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc deinit
+}
+extension AcessoBio.DefaultProviderFactory : AcessoBio.ProviderFactory {
+  @objc final public func create() -> AcessoBio.CreateProviderUseCase
 }
 final public class Rabbit {
   public enum Error : Swift.Error {
@@ -1671,6 +2060,59 @@ public enum SecureRandomError : Swift.Error {
 }
 public struct SecureRandom {
   public static func generate(count: Swift.Int) throws -> Foundation.Data
+}
+public enum NetworkError : Swift.Error {
+  case error(statusCode: Swift.Int, data: Foundation.Data?)
+  case notConnected
+  case cancelled
+  case generic(Swift.Error)
+  case urlGeneration
+}
+public protocol NetworkCancellable {
+  func cancel()
+}
+extension Foundation.URLSessionTask : AcessoBio.NetworkCancellable {
+}
+public protocol NetworkService {
+  typealias CompletionHandler = (Swift.Result<Foundation.Data?, AcessoBio.NetworkError>) -> Swift.Void
+  func request(endpoint: AcessoBio.Requestable, completion: @escaping Self.CompletionHandler) -> AcessoBio.NetworkCancellable?
+}
+public protocol NetworkSessionManager {
+  typealias CompletionHandler = (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void
+  func request(_ request: Foundation.URLRequest, completion: @escaping Self.CompletionHandler) -> AcessoBio.NetworkCancellable
+}
+public protocol NetworkErrorLogger {
+  func log(request: Foundation.URLRequest)
+  func log(responseData data: Foundation.Data?, response: Foundation.URLResponse?)
+  func log(error: Swift.Error)
+}
+final public class DefaultNetworkService {
+  public init(config: AcessoBio.NetworkConfigurable, sessionManager: AcessoBio.NetworkSessionManager = DefaultNetworkSessionManager(), logger: AcessoBio.NetworkErrorLogger = DefaultNetworkErrorLogger())
+  @objc deinit
+}
+extension AcessoBio.DefaultNetworkService : AcessoBio.NetworkService {
+  final public func request(endpoint: AcessoBio.Requestable, completion: @escaping AcessoBio.DefaultNetworkService.CompletionHandler) -> AcessoBio.NetworkCancellable?
+}
+public class DefaultNetworkSessionManager : AcessoBio.NetworkSessionManager {
+  public init()
+  public func request(_ request: Foundation.URLRequest, completion: @escaping AcessoBio.DefaultNetworkSessionManager.CompletionHandler) -> AcessoBio.NetworkCancellable
+  @objc deinit
+}
+final public class DefaultNetworkErrorLogger : AcessoBio.NetworkErrorLogger {
+  public init()
+  final public func log(request: Foundation.URLRequest)
+  final public func log(responseData data: Foundation.Data?, response: Foundation.URLResponse?)
+  final public func log(error: Swift.Error)
+  @objc deinit
+}
+extension AcessoBio.NetworkError {
+  public var isNotFoundError: Swift.Bool {
+    get
+  }
+  public func hasStatusCode(_ codeError: Swift.Int) -> Swift.Bool
+}
+public protocol Cancellable {
+  func cancel()
 }
 extension AcessoBio.RSAPublicKey : Swift.Encodable {
   public func encode(to encoder: Swift.Encoder) throws
@@ -1840,8 +2282,20 @@ public protocol DataConvertible {
   init?(_ data: Foundation.Data)
   func data() -> Foundation.Data
 }
-@_inheritsConvenienceInitializers @objc public class UnicoNetworkingModule : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers public class UnicoNetworkingModule : ObjectiveC.NSObject {
   @objc public func isConnectedToNetwork() -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol Factories {
+  @objc func createProviderFactory(source: AcessoBio.DefaultProviderFactory.Source) -> AcessoBio.CreateProviderUseCase
+  @objc func makeLoggerFactory() -> AcessoBio.LoggerFactory
+  @objc func makeSensorsWorkerFactory() -> AcessoBio.SensorsWorkerFactory
+}
+@objc @_inheritsConvenienceInitializers public class FactoriesContainer : ObjectiveC.NSObject, AcessoBio.Factories {
+  @objc public func createProviderFactory(source: AcessoBio.DefaultProviderFactory.Source) -> AcessoBio.CreateProviderUseCase
+  @objc public func makeLoggerFactory() -> AcessoBio.LoggerFactory
+  @objc public func makeSensorsWorkerFactory() -> AcessoBio.SensorsWorkerFactory
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1869,11 +2323,11 @@ extension AcessoBio.BigInt {
   public func power(_ exponent: Swift.Int) -> AcessoBio.BigInt
   public func power(_ exponent: AcessoBio.BigInt, modulus: AcessoBio.BigInt) -> AcessoBio.BigInt
 }
-@_inheritsConvenienceInitializers @objc public class DocumentResult : AcessoBio.CameraResult {
+@_inheritsConvenienceInitializers @objc public class DocumentResult : AcessoBio.CaptureResult {
   @objc override public init(base64: Swift.String!, encrypted: Swift.String!)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @objc public class ProjectInfo : ObjectiveC.NSObject, Swift.Decodable {
+@objc @_hasMissingDesignatedInitializers public class ProjectInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
 }
@@ -2024,6 +2478,26 @@ extension Swift.FixedWidthInteger {
     // return withUnsafeBytes(of: &value, Array.init).reversed()
   }
 }
+@objc public class CallbackDTO : ObjectiveC.NSObject {
+  @objc public init(callback: Swift.String? = nil, attempts: AcessoBio.AttemptsDTO? = nil, totalTime: Foundation.NSNumber? = nil, geolocation: AcessoBio.GeolocationDTO? = nil, deviceBehavior: AcessoBio.DeviceBehaviorsDTO? = nil)
+  @objc deinit
+}
+@objc public class AttemptsDTO : ObjectiveC.NSObject {
+  public init(uuid: Swift.String? = nil)
+  @objc deinit
+}
+@objc public class SuccessCallbackDTO : AcessoBio.CallbackDTO {
+  @objc public init(callback: Swift.String? = nil, attempts: AcessoBio.AttemptsDTO? = nil, totalTime: Foundation.NSNumber? = nil, jwtWeight: Foundation.NSNumber? = nil)
+  @objc deinit
+}
+@objc public class ErrorCallbackDTO : AcessoBio.CallbackDTO {
+  @objc public init(code: Foundation.NSNumber? = nil, title: Swift.String? = nil, message: Swift.String? = nil)
+  @objc deinit
+}
+@objc public class GeolocationDTO : ObjectiveC.NSObject {
+  @objc public init(lat: Foundation.NSNumber?, lng: Foundation.NSNumber?, alt: Foundation.NSNumber?, precision: Foundation.NSNumber?, city: Swift.String?, uf: Swift.String?, country: Swift.String?, postalCode: Swift.String?, address: Swift.String?, gpsFlag: Swift.String?, mode: Swift.String?)
+  @objc deinit
+}
 extension AcessoBio.BigUInt {
   public init?<T>(exactly source: T) where T : Swift.BinaryInteger
   public init<T>(_ source: T) where T : Swift.BinaryInteger
@@ -2151,7 +2625,7 @@ extension Foundation.Data {
   }
   public func toHexString() -> Swift.String
 }
-@_hasMissingDesignatedInitializers @objc public class ClientInfo : ObjectiveC.NSObject, Swift.Decodable {
+@objc @_hasMissingDesignatedInitializers public class ClientInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
 }
@@ -2162,6 +2636,10 @@ extension AcessoBio.BigUInt {
   public static func randomInteger(withExactWidth width: Swift.Int) -> AcessoBio.BigUInt
   public static func randomInteger<RNG>(lessThan limit: AcessoBio.BigUInt, using generator: inout RNG) -> AcessoBio.BigUInt where RNG : Swift.RandomNumberGenerator
   public static func randomInteger(lessThan limit: AcessoBio.BigUInt) -> AcessoBio.BigUInt
+}
+@objc public class OpenCameraDTO : ObjectiveC.NSObject {
+  @objc public init(captureType: Swift.String? = nil)
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class ErrorFacetec : AcessoBio.ErrorBio {
   @objc override dynamic public init(code: Swift.Int, method: Swift.String, desc: Swift.String)
@@ -2241,7 +2719,7 @@ final public class HMACUnico : AcessoBio.Authenticator {
 public protocol Authenticator {
   func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
 }
-@_inheritsConvenienceInitializers @objc public class SelfieResult : AcessoBio.CameraResult {
+@_inheritsConvenienceInitializers @objc public class SelfieResult : AcessoBio.CaptureResult {
   @objc override public init(base64: Swift.String!, encrypted: Swift.String!)
   @objc deinit
 }
@@ -2255,10 +2733,6 @@ extension AcessoBio.BigInt {
   @objc public func getColorBackground() -> Any!
   @objc public func getColorBoxMessage() -> Any!
   @objc public func getColorTextMessage() -> Any!
-  @objc public func getColorBackgroundPopupError() -> Any!
-  @objc public func getColorTextPopupError() -> Any!
-  @objc public func getColorBackgroundButtonPopupError() -> Any!
-  @objc public func getColorTextButtonPopupError() -> Any!
   @objc public func getColorBackgroundTakePictureButton() -> Any!
   @objc public func getColorIconTakePictureButton() -> Any!
   @objc public func getColorBackgroundBottomDocument() -> Any!
@@ -2308,6 +2782,18 @@ extension AcessoBio.AES {
 extension Swift.Array where Element == Swift.UInt8 {
   public func toBase64() -> Swift.String
   public init(base64: Swift.String)
+}
+@objc public protocol UnicoFaceCameraInteractorInput {
+  @objc func startCapture()
+  @objc func stopCaptureAndSendData(screenBrightness: CoreGraphics.CGFloat, isCameraTypeChanged: Foundation.NSNumber, imageResolution: Swift.String, faceBehavior: AcessoBio.FaceBehaviorsDTO, video: AcessoBio.VideoDTO, timers: AcessoBio.TimersDTO)
+}
+@objc final public class UnicoFaceCameraInteractor : ObjectiveC.NSObject {
+  @objc public init(presenter: AcessoBio.UnicoFaceCameraPresenterInput)
+  @objc deinit
+}
+extension AcessoBio.UnicoFaceCameraInteractor : AcessoBio.UnicoFaceCameraInteractorInput {
+  @objc final public func startCapture()
+  @objc final public func stopCaptureAndSendData(screenBrightness: CoreGraphics.CGFloat, isCameraTypeChanged: Foundation.NSNumber, imageResolution: Swift.String, faceBehavior: AcessoBio.FaceBehaviorsDTO, video: AcessoBio.VideoDTO, timers: AcessoBio.TimersDTO)
 }
 public struct JWEHeader {
   public init(keyManagementAlgorithm: AcessoBio.KeyManagementAlgorithm, contentEncryptionAlgorithm: AcessoBio.ContentEncryptionAlgorithm)
@@ -2407,13 +2893,13 @@ extension AcessoBio.Blowfish : AcessoBio.Cipher {
   final public func encrypt<C>(_ bytes: C) throws -> Swift.Array<Swift.UInt8> where C : Swift.Collection, C.Element == Swift.UInt8, C.Index == Swift.Int
   final public func decrypt<C>(_ bytes: C) throws -> Swift.Array<Swift.UInt8> where C : Swift.Collection, C.Element == Swift.UInt8, C.Index == Swift.Int
 }
-@_inheritsConvenienceInitializers @objc public class UnicoErrors : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers public class UnicoErrors : ObjectiveC.NSObject {
   @objc public static func getUnicoError(enumerated: AcessoBio.UnicoEnumsIErrors, info: Swift.String?) -> AcessoBio.ErrorBio
   @objc public static func getCompleteException(exception: Foundation.NSException) -> Swift.String
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class UnicoTelemetry : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers public class UnicoTelemetry : ObjectiveC.NSObject {
   @objc public static func getInfo() -> Foundation.NSDictionary!
   @objc public static func setNewInfo(key: Swift.String!, value: Any)
   @objc public static func clear()
@@ -2424,12 +2910,27 @@ extension Swift.String {
   public func decryptBase64ToString(cipher: AcessoBio.Cipher) throws -> Swift.String
   public func decryptBase64(cipher: AcessoBio.Cipher) throws -> Swift.Array<Swift.UInt8>
 }
+@objc public class CaptureResult : ObjectiveC.NSObject {
+  @objc public var base64: Swift.String!
+  @objc public var encrypted: Swift.String!
+  @objc public init(base64: Swift.String!, encrypted: Swift.String!)
+  @objc deinit
+}
+@objc public protocol LoggerFactory {
+  @objc func make() -> AcessoBio.DataLoggerOutput
+}
+@_hasMissingDesignatedInitializers final public class DefaultLoggerFactory {
+  @objc deinit
+}
+extension AcessoBio.DefaultLoggerFactory : AcessoBio.LoggerFactory {
+  @objc final public func make() -> AcessoBio.DataLoggerOutput
+}
 public typealias SymmetricKeyComponents = (Foundation.Data)
 public protocol ExpressibleAsSymmetricKeyComponents {
   static func representing(symmetricKeyComponents components: AcessoBio.SymmetricKeyComponents) throws -> Self
   func symmetricKeyComponents() throws -> AcessoBio.SymmetricKeyComponents
 }
-public struct SymmetricKey : AcessoBio.JWK {
+public struct SymmetricKeyJOSE : AcessoBio.JWK {
   public let keyType: AcessoBio.JWKKeyType
   public let parameters: [Swift.String : Swift.String]
   public var requiredParameters: [Swift.String : Swift.String] {
@@ -2441,7 +2942,7 @@ public struct SymmetricKey : AcessoBio.JWK {
   public init(data: Foundation.Data) throws
   public func converted<T>(to type: T.Type) throws -> T where T : AcessoBio.ExpressibleAsSymmetricKeyComponents
   @available(iOS 11.0, *)
-  public func withThumbprintAsKeyId(algorithm: AcessoBio.JWKThumbprintAlgorithm = .SHA256) throws -> AcessoBio.SymmetricKey
+  public func withThumbprintAsKeyId(algorithm: AcessoBio.JWKThumbprintAlgorithm = .SHA256) throws -> AcessoBio.SymmetricKeyJOSE
 }
 extension AcessoBio.BigUInt {
   public func quotientAndRemainder(dividingBy y: AcessoBio.BigUInt) -> (quotient: AcessoBio.BigUInt, remainder: AcessoBio.BigUInt)
@@ -2583,10 +3084,6 @@ final public class GCM : AcessoBio.BlockMode {
   final public func worker(blockSize: Swift.Int, cipherOperation: @escaping AcessoBio.CipherOperationOnBlock, encryptionOperation: @escaping AcessoBio.CipherOperationOnBlock) throws -> AcessoBio.CipherModeWorker
   @objc deinit
 }
-@objc public protocol UnicoFacetecProcessorDelegate {
-  @objc func successFacetecProcessor(result: [Swift.String : Any])
-  @objc func unsuccessfulFacetecProcessor(status: FaceTecSDK.FaceTecSessionStatus)
-}
 extension AcessoBio.BigUInt {
   public mutating func subtractReportingOverflow(_ b: AcessoBio.BigUInt, shiftedBy shift: Swift.Int = 0) -> Swift.Bool
   public func subtractingReportingOverflow(_ other: AcessoBio.BigUInt, shiftedBy shift: Swift.Int) -> (partialValue: AcessoBio.BigUInt, overflow: Swift.Bool)
@@ -2606,7 +3103,7 @@ public protocol AEAD {
   static var kLen: Swift.Int { get }
   static var ivRange: Swift.Range<Swift.Int> { get }
 }
-@_hasMissingDesignatedInitializers @objc public class HostInfo : ObjectiveC.NSObject, Swift.Decodable {
+@objc @_hasMissingDesignatedInitializers public class HostInfo : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   public func getHostInfo() -> Swift.String?
   public func getHostKey() -> Swift.String?
@@ -2717,10 +3214,10 @@ public struct ECPrivateKey : AcessoBio.JWK {
   public func withThumbprintAsKeyId(algorithm: AcessoBio.JWKThumbprintAlgorithm = .SHA256) throws -> AcessoBio.ECPrivateKey
 }
 public typealias ECKeyPair = AcessoBio.ECPrivateKey
-@_hasMissingDesignatedInitializers @objc public class JWT : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers public class JWT : ObjectiveC.NSObject {
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SdkPkDTO : ObjectiveC.NSObject, Swift.Decodable {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SdkPkDTO : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc public func getAppId() -> Swift.String?
   @objc deinit
@@ -2788,6 +3285,56 @@ public class BlockDecryptor : AcessoBio.Cryptor, AcessoBio.Updatable {
     return plaintext
   }
   public func seek(to position: Swift.Int) throws
+  @objc deinit
+}
+public enum DataTransferError : Swift.Error {
+  case noResponse
+  case parsing(Swift.Error)
+  case networkFailure(AcessoBio.NetworkError)
+  case resolvedNetworkFailure(Swift.Error)
+}
+public protocol DataTransferService {
+  typealias CompletionHandler<T> = (Swift.Result<T, AcessoBio.DataTransferError>) -> Swift.Void
+  @discardableResult
+  func request<T, E>(with endpoint: E, completion: @escaping Self.CompletionHandler<T>) -> AcessoBio.NetworkCancellable? where T : Swift.Decodable, T == E.Response, E : AcessoBio.ResponseRequestable
+  @discardableResult
+  func request<E>(with endpoint: E, completion: @escaping Self.CompletionHandler<Swift.Void>) -> AcessoBio.NetworkCancellable? where E : AcessoBio.ResponseRequestable, E.Response == Swift.Void
+}
+public protocol DataTransferErrorResolver {
+  func resolve(error: AcessoBio.NetworkError) -> Swift.Error
+}
+public protocol ResponseDecoder {
+  func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
+}
+public protocol DataTransferErrorLogger {
+  func log(error: Swift.Error)
+}
+final public class DefaultDataTransferService {
+  public init(with networkService: AcessoBio.NetworkService, errorResolver: AcessoBio.DataTransferErrorResolver = DefaultDataTransferErrorResolver(), errorLogger: AcessoBio.DataTransferErrorLogger = DefaultDataTransferErrorLogger())
+  @objc deinit
+}
+extension AcessoBio.DefaultDataTransferService : AcessoBio.DataTransferService {
+  final public func request<T, E>(with endpoint: E, completion: @escaping AcessoBio.DefaultDataTransferService.CompletionHandler<T>) -> AcessoBio.NetworkCancellable? where T : Swift.Decodable, T == E.Response, E : AcessoBio.ResponseRequestable
+  final public func request<E>(with endpoint: E, completion: @escaping AcessoBio.DefaultDataTransferService.CompletionHandler<Swift.Void>) -> AcessoBio.NetworkCancellable? where E : AcessoBio.ResponseRequestable, E.Response == Swift.Void
+}
+final public class DefaultDataTransferErrorLogger : AcessoBio.DataTransferErrorLogger {
+  public init()
+  final public func log(error: Swift.Error)
+  @objc deinit
+}
+public class DefaultDataTransferErrorResolver : AcessoBio.DataTransferErrorResolver {
+  public init()
+  public func resolve(error: AcessoBio.NetworkError) -> Swift.Error
+  @objc deinit
+}
+public class JSONResponseDecoder : AcessoBio.ResponseDecoder {
+  public init()
+  public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
+  @objc deinit
+}
+public class RawDataResponseDecoder : AcessoBio.ResponseDecoder {
+  public init()
+  public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
   @objc deinit
 }
 @usableFromInline
@@ -3104,7 +3651,7 @@ extension AcessoBio.AES : AcessoBio.Cipher {
 @objc public class UnicoFacetec : ObjectiveC.NSObject, AcessoBio.UnicoFacetecProcessorDelegate {
   @objc public init(unicoSetup: AcessoBio.UnicoSetupData, sdkToken: AcessoBio.SDKTokenResponseDTO, theme: AcessoBio.AcessoBioThemeDelegate!)
   @objc public func initializeFaceTecSDK(completion: @escaping (AcessoBio.ErrorFacetec?) -> Swift.Void)
-  @objc public func openCameraFaceTec(viewController: UIKit.UIViewController, completion: @escaping (AcessoBio.SelfieResult?, AcessoBio.ErrorBio?) -> Swift.Void)
+  @objc public func openCameraFaceTec(viewController: UIKit.UIViewController, completion: @escaping ([Swift.String : Any]?, AcessoBio.ErrorBio?) -> Swift.Void)
   @objc public func successFacetecProcessor(result: [Swift.String : Any])
   @objc public func unsuccessfulFacetecProcessor(status: FaceTecSDK.FaceTecSessionStatus)
   @objc deinit
