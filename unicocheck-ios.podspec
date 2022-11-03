@@ -18,7 +18,6 @@ Pod::Spec.new do |spec|
 
   spec.homepage     = "https://www3.acesso.io/sdkbio"
 
-
   spec.license      = "MIT"
 
   spec.authors             = { "Matheus D." => "matheusdomingoslondrina@gmail.com", "Beatriz Monteiro" => "beatriz.monteiro@unico.io" }
