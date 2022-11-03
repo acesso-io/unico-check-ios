@@ -270,6 +270,7 @@ public struct CBC : AcessoBio.BlockMode {
   public func getURL(router: AcessoBio.UnicoHttpURLRouter.Routers) -> Foundation.URL
   @objc deinit
 }
+public func printIfDebug(_ message: Any)
 extension Swift.UInt32 {
   @_specialize(exported: false, kind: full, where T == Swift.ArraySlice<Swift.UInt8>)
   @inlinable internal init<T>(bytes: T, fromIndex index: T.Index) where T : Swift.Collection, T.Element == Swift.UInt8, T.Index == Swift.Int {
@@ -2638,7 +2639,7 @@ extension AcessoBio.BigUInt {
   public static func randomInteger(lessThan limit: AcessoBio.BigUInt) -> AcessoBio.BigUInt
 }
 @objc public class OpenCameraDTO : ObjectiveC.NSObject {
-  @objc public init(captureType: Swift.String? = nil)
+  @objc public init(captureType: Swift.String? = nil, cameraType: Swift.String? = nil)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class ErrorFacetec : AcessoBio.ErrorBio {

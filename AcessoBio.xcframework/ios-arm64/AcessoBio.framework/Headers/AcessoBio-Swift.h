@@ -575,7 +575,7 @@ SWIFT_CLASS("_TtC9AcessoBio3OTP")
 
 SWIFT_CLASS("_TtC9AcessoBio13OpenCameraDTO")
 @interface OpenCameraDTO : NSObject
-- (nonnull instancetype)initWithCaptureType:(NSString * _Nullable)captureType OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCaptureType:(NSString * _Nullable)captureType cameraType:(NSString * _Nullable)cameraType OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

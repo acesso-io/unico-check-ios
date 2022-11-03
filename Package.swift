@@ -9,12 +9,17 @@ let package = Package(
     products: [
         .library(
             name: "unicocheck-ios-spm",
-            targets: ["AcessoBio", "FaceTecSDK"]),
+            targets: [
+                "AcessoBio",
+                "FaceTecSDK",
+                "unicosdk_core"
+                ]),
     ],
     dependencies: [
     ],
     targets: [
         .binaryTarget(name: "AcessoBio", path: "AcessoBio.xcframework"),
-        .binaryTarget(name: "FaceTecSDK", path: "FaceTecSDK.xcframework")
+        .binaryTarget(name: "FaceTecSDK", path: "FaceTecSDK.xcframework"),
+        .binaryTarget(name: "unicosdk_core", path: "unicosdk_core.xcframework")
     ]
 )
