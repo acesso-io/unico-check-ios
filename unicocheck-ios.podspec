@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
 
   spec.license      = "MIT"
 
-  spec.authors             = { "Matheus D." => "matheusdomingoslondrina@gmail.com", "Beatriz Monteiro" => "beatriz.monteiro@unico.io" }
+  spec.authors             = { "Matheus D." => "matheusdomingoslondrina@gmail.com", "Bruno Corrêa" => "bruno.correa@unico.io" }
   spec.social_media_url   = "https://ajuda.unico.io/hc/pt-br"
 
    spec.platform     = :ios, "11.0"
