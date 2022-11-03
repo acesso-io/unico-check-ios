@@ -31,6 +31,6 @@ Pod::Spec.new do |spec|
 
   spec.resources =  "unicocheck-ios/**/*.strings"
 
-  spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework", "unicosdk_core.xcframework"
+  spec.ios.vendored_frameworks = "AcessoBio.xcframework", "FacetecSDK.xcframework", "UnicoSdkLogger.xcframework"
 
 end

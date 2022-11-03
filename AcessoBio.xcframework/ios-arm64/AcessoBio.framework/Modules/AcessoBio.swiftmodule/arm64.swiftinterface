@@ -15,8 +15,8 @@ import Security
 import Swift
 import SystemConfiguration
 import UIKit
+import UnicoSdkLogger
 import _Concurrency
-import unicosdk_core
 @objc final public class FreeToken : ObjectiveC.NSObject, AcessoBio.KeychainStorable, Swift.Codable, Foundation.NSItemProviderReading, Foundation.NSItemProviderWriting {
   public static var store: AcessoBio.KeychainStore<AcessoBio.FreeToken>
   final public let account: Swift.String
@@ -1976,7 +1976,7 @@ public struct CCM {
 }
 @objc public class VideoDTO : ObjectiveC.NSObject {
   @objc public init(width: Foundation.NSNumber? = nil, height: Foundation.NSNumber? = nil, aspectRatio: Foundation.NSNumber? = nil)
-  public func toDomain() -> unicosdk_core.Video
+  public func toDomain() -> UnicoSdkLogger.Video
   @objc deinit
 }
 @objc public class SilhouetteDTO : ObjectiveC.NSObject {
@@ -1997,17 +1997,17 @@ public struct CCM {
 }
 @objc public class FaceBehaviorsDTO : ObjectiveC.NSObject {
   @objc public init(blinks: Foundation.NSNumber? = nil, pitch: [AcessoBio.SensorValuesDTO]? = nil, roll: [AcessoBio.SensorValuesDTO]? = nil, yaw: [AcessoBio.SensorValuesDTO]? = nil)
-  public func toDomain() -> unicosdk_core.FaceBehavior
+  public func toDomain() -> UnicoSdkLogger.FaceBehavior
   @objc deinit
 }
 @objc public class DeviceBehaviorsDTO : ObjectiveC.NSObject {
   public init(accelerometers: AcessoBio.AccelerometerDeviceBehaviorDTO? = nil, pitch: [AcessoBio.SensorValuesDTO]? = nil, roll: [AcessoBio.SensorValuesDTO]? = nil, yaw: [AcessoBio.SensorValuesDTO]? = nil)
-  public func toDomain() -> unicosdk_core.DeviceBehavior
+  public func toDomain() -> UnicoSdkLogger.DeviceBehavior
   @objc deinit
 }
 @objc public class AccelerometerDeviceBehaviorDTO : ObjectiveC.NSObject {
   @objc public init(x: [AcessoBio.SensorValuesDTO], y: [AcessoBio.SensorValuesDTO], z: [AcessoBio.SensorValuesDTO])
-  public func toDomain() -> unicosdk_core.AccelerometerDeviceBehavior
+  public func toDomain() -> UnicoSdkLogger.AccelerometerDeviceBehavior
   @objc deinit
 }
 @objc public class SensorValuesDTO : ObjectiveC.NSObject {
