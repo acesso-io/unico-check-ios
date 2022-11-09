@@ -251,6 +251,7 @@ SWIFT_CLASS("_TtC9AcessoBio12BehaviorsDTO")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
 @class NSNumber;
 @class GeolocationDTO;
 
@@ -1306,6 +1307,7 @@ SWIFT_CLASS("_TtC9AcessoBio12BehaviorsDTO")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 @class NSNumber;
 @class GeolocationDTO;
