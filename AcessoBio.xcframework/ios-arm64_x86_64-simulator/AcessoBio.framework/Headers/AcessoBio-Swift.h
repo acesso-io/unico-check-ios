@@ -191,7 +191,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreGraphics;
-@import FaceTecSDK;
 @import Foundation;
 @import ObjectiveC;
 #endif
@@ -843,42 +842,16 @@ SWIFT_PROTOCOL("_TtP9AcessoBio35UnicoFaceCameraViewControllerOutput_")
 - (void)stopCapture;
 @end
 
-
-SWIFT_PROTOCOL("_TtP9AcessoBio29UnicoFacetecProcessorDelegate_")
-@protocol UnicoFacetecProcessorDelegate
-- (void)successFacetecProcessorWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
-- (void)unsuccessfulFacetecProcessorWithStatus:(FaceTecSessionStatus)status;
-@end
-
 @class UIViewController;
 
 SWIFT_CLASS("_TtC9AcessoBio12UnicoFacetec")
-@interface UnicoFacetec : NSObject <UnicoFacetecProcessorDelegate>
+@interface UnicoFacetec : NSObject
 - (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTO * _Nonnull)sdkToken theme:(id <AcessoBioThemeDelegate> _Null_unspecified)theme OBJC_DESIGNATED_INITIALIZER;
 - (void)initializeFaceTecSDKWithCompletion:(void (^ _Nonnull)(ErrorFacetec * _Nullable))completion;
 - (void)openCameraFaceTecWithViewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable, ErrorBio * _Nullable))completion;
-- (void)successFacetecProcessorWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
-- (void)unsuccessfulFacetecProcessorWithStatus:(FaceTecSessionStatus)status;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-@protocol FaceTecSessionResult;
-@protocol FaceTecFaceScanResultCallback;
-@class NSURLSession;
-@class NSURLSessionTask;
-
-SWIFT_CLASS("_TtC9AcessoBio21UnicoFacetecProcessor")
-@interface UnicoFacetecProcessor : NSObject <UnicoFacetecProcessorDelegate, FaceTecFaceScanProcessorDelegate, NSURLSessionTaskDelegate>
-- (void)processSessionWhileFaceTecSDKWaits:(id <FaceTecSessionResult> _Nonnull)sessionResult faceScanResultCallback:(id <FaceTecFaceScanResultCallback> _Nonnull)faceScanResultCallback;
-- (void)onFaceTecSDKCompletelyDone;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
-- (void)successFacetecProcessorWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
-- (void)unsuccessfulFacetecProcessorWithStatus:(FaceTecSessionStatus)status;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 
 
 SWIFT_PROTOCOL("_TtP9AcessoBio20UnicoFacetecProtocol_")
@@ -1248,7 +1221,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreGraphics;
-@import FaceTecSDK;
 @import Foundation;
 @import ObjectiveC;
 #endif
@@ -1900,42 +1872,16 @@ SWIFT_PROTOCOL("_TtP9AcessoBio35UnicoFaceCameraViewControllerOutput_")
 - (void)stopCapture;
 @end
 
-
-SWIFT_PROTOCOL("_TtP9AcessoBio29UnicoFacetecProcessorDelegate_")
-@protocol UnicoFacetecProcessorDelegate
-- (void)successFacetecProcessorWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
-- (void)unsuccessfulFacetecProcessorWithStatus:(FaceTecSessionStatus)status;
-@end
-
 @class UIViewController;
 
 SWIFT_CLASS("_TtC9AcessoBio12UnicoFacetec")
-@interface UnicoFacetec : NSObject <UnicoFacetecProcessorDelegate>
+@interface UnicoFacetec : NSObject
 - (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTO * _Nonnull)sdkToken theme:(id <AcessoBioThemeDelegate> _Null_unspecified)theme OBJC_DESIGNATED_INITIALIZER;
 - (void)initializeFaceTecSDKWithCompletion:(void (^ _Nonnull)(ErrorFacetec * _Nullable))completion;
 - (void)openCameraFaceTecWithViewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable, ErrorBio * _Nullable))completion;
-- (void)successFacetecProcessorWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
-- (void)unsuccessfulFacetecProcessorWithStatus:(FaceTecSessionStatus)status;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-@protocol FaceTecSessionResult;
-@protocol FaceTecFaceScanResultCallback;
-@class NSURLSession;
-@class NSURLSessionTask;
-
-SWIFT_CLASS("_TtC9AcessoBio21UnicoFacetecProcessor")
-@interface UnicoFacetecProcessor : NSObject <UnicoFacetecProcessorDelegate, FaceTecFaceScanProcessorDelegate, NSURLSessionTaskDelegate>
-- (void)processSessionWhileFaceTecSDKWaits:(id <FaceTecSessionResult> _Nonnull)sessionResult faceScanResultCallback:(id <FaceTecFaceScanResultCallback> _Nonnull)faceScanResultCallback;
-- (void)onFaceTecSDKCompletelyDone;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
-- (void)successFacetecProcessorWithResult:(NSDictionary<NSString *, id> * _Nonnull)result;
-- (void)unsuccessfulFacetecProcessorWithStatus:(FaceTecSessionStatus)status;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 
 
 SWIFT_PROTOCOL("_TtP9AcessoBio20UnicoFacetecProtocol_")

@@ -78,10 +78,6 @@ import _Concurrency
   final public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-@objc public protocol UnicoFacetecProcessorDelegate {
-  @objc func successFacetecProcessor(result: [Swift.String : Any])
-  @objc func unsuccessfulFacetecProcessor(status: FaceTecSDK.FaceTecSessionStatus)
-}
 public protocol LibInfoWoker {
   func commitLibInfo()
 }
@@ -911,16 +907,6 @@ public struct DecryptionContext {
 }
 @available(*, deprecated, message: "This type will be removed with the next major release.")
 public struct SymmetricDecryptionContext {
-}
-@objc public class UnicoFacetecProcessor : ObjectiveC.NSObject, AcessoBio.UnicoFacetecProcessorDelegate, FaceTecSDK.FaceTecFaceScanProcessorDelegate, Foundation.URLSessionTaskDelegate {
-  public init(sdkToken: AcessoBio.SDKTokenResponseDTO)
-  public func getFacetecViewController(sessionToken: Swift.String, delegate: AcessoBio.UnicoFacetecProcessorDelegate) -> UIKit.UIViewController!
-  @objc public func processSessionWhileFaceTecSDKWaits(sessionResult: FaceTecSDK.FaceTecSessionResult, faceScanResultCallback: FaceTecSDK.FaceTecFaceScanResultCallback)
-  @objc public func onFaceTecSDKCompletelyDone()
-  @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
-  @objc public func successFacetecProcessor(result: [Swift.String : Any])
-  @objc public func unsuccessfulFacetecProcessor(status: FaceTecSDK.FaceTecSessionStatus)
-  @objc deinit
 }
 public protocol Updatable {
   mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8>
@@ -3649,12 +3635,12 @@ extension AcessoBio.AES : AcessoBio.Cipher {
     return out
   }
 }
-@objc public class UnicoFacetec : ObjectiveC.NSObject, AcessoBio.UnicoFacetecProcessorDelegate {
+@objc public class UnicoFacetec : ObjectiveC.NSObject {
   @objc public init(unicoSetup: AcessoBio.UnicoSetupData, sdkToken: AcessoBio.SDKTokenResponseDTO, theme: AcessoBio.AcessoBioThemeDelegate!)
   @objc public func initializeFaceTecSDK(completion: @escaping (AcessoBio.ErrorFacetec?) -> Swift.Void)
   @objc public func openCameraFaceTec(viewController: UIKit.UIViewController, completion: @escaping ([Swift.String : Any]?, AcessoBio.ErrorBio?) -> Swift.Void)
-  @objc public func successFacetecProcessor(result: [Swift.String : Any])
-  @objc public func unsuccessfulFacetecProcessor(status: FaceTecSDK.FaceTecSessionStatus)
+  public func successFacetecProcessor(result: [Swift.String : Any])
+  public func unsuccessfulFacetecProcessor(status: FaceTecSDK.FaceTecSessionStatus)
   @objc deinit
 }
 extension AcessoBio.AES : AcessoBio.Cryptors {
