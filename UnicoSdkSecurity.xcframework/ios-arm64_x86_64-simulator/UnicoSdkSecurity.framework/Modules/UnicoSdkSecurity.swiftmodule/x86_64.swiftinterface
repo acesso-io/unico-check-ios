@@ -1,0 +1,47 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkSecurity
+import UnicoSdkSecurity.DeviceInfo_Private
+import Foundation
+import UnicoSdkSecurity.HSE_Private
+import Swift
+@_exported import UnicoSdkSecurity
+import _Concurrency
+public protocol DeviceInfoConvertible {
+  func jailbreakDetected() throws -> Swift.Bool
+  func simulatorDetected() throws -> Swift.Bool
+  func debuggerDetected() throws -> Swift.Bool
+}
+final public class DeviceInfo : UnicoSdkSecurity.DeviceInfoConvertible {
+  public init()
+  final public func jailbreakDetected() throws -> Swift.Bool
+  final public func simulatorDetected() throws -> Swift.Bool
+  final public func debuggerDetected() throws -> Swift.Bool
+  @objc deinit
+}
+public protocol HSEInfoConvertible {
+  func getDeviceId() -> Swift.String
+}
+final public class HSEInfo : UnicoSdkSecurity.HSEInfoConvertible {
+  public init()
+  final public func getDeviceId() -> Swift.String
+  @objc deinit
+}
+public enum UnicoSecurityErrors : Swift.Int {
+  case licenseNotFound
+  case sdkNotInitialized
+  case bundleDifferentFromGeneratedLicense
+  case jailbreakCompromissedInSimulator
+  case optionalUnwrapFailed
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.Error {
+}
+extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.Equatable {}
+extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.Hashable {}
+extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.RawRepresentable {}

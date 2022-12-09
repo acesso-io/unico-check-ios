@@ -12,14 +12,15 @@ let package = Package(
             targets: [
                 "AcessoBio",
                 "FaceTecSDK",
-                "UnicoSdkLogger"
-                ]),
-    ],
-    dependencies: [
+                "UnicoSdkLogger",
+                "UnicoSdkSecurity"
+            ]
+        ),
     ],
     targets: [
         .binaryTarget(name: "AcessoBio", path: "AcessoBio.xcframework"),
         .binaryTarget(name: "FaceTecSDK", path: "FaceTecSDK.xcframework"),
-        .binaryTarget(name: "UnicoSdkLogger", path: "UnicoSdkLogger.xcframework")
+        .binaryTarget(name: "UnicoSdkLogger", path: "UnicoSdkLogger.xcframework"),
+        .binaryTarget(name: "UnicoSdkSecurity", path: "UnicoSdkSecurity.xcframework")
     ]
 )
