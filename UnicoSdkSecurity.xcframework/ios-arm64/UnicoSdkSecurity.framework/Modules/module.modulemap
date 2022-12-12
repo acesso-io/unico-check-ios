@@ -1,0 +1,23 @@
+framework module UnicoSdkSecurity {
+  umbrella header "UnicoSdkSecurity.h"
+
+  export *
+  module * { export * }
+  
+  explicit module DeviceInfo_Private {
+      header "DeviceInfo.h"
+      link "DeviceInfo"
+      export *
+  }
+
+  explicit module HSE_Private {
+      header "HSE.h"
+      link "HSE"
+      export *
+  }
+}
+
+module UnicoSdkSecurity.Swift {
+    header "UnicoSdkSecurity-Swift.h"
+    requires objc
+}
