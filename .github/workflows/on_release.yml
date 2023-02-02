@@ -7,7 +7,7 @@ on:
 
 jobs:
   verify-changed-files:
-    runs-on: macos-latest
+    runs-on: macos-11
 
     outputs:
       output1: ${{ steps.changed-files.outputs.modified_files }}
