@@ -225,12 +225,13 @@ SWIFT_CLASS("_TtC9AcessoBio30AccelerometerDeviceBehaviorDTO")
 
 SWIFT_PROTOCOL("_TtP9AcessoBio25AcessoBioConfigDataSource_")
 @protocol AcessoBioConfigDataSource
+- (NSString * _Nonnull)getBundleIdentifier SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getHostKey SWIFT_WARN_UNUSED_RESULT;
+@optional
 - (NSString * _Nonnull)getProjectNumber SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getProjectId SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getMobileSdkAppId SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getBundleIdentifier SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getHostInfo SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getHostKey SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -651,7 +652,7 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
 
 SWIFT_CLASS("_TtC9AcessoBio28UnicoConfigDataSourceManager")
 @interface UnicoConfigDataSourceManager : NSObject
-- (UnicoSetupData * _Nonnull)manageWithDataSource:(id <AcessoBioConfigDataSource> _Null_unspecified)dataSource SWIFT_WARN_UNUSED_RESULT;
+- (UnicoSetupData * _Nonnull)manageWithDataSource:(id <AcessoBioConfigDataSource> _Nonnull)dataSource SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -883,6 +884,7 @@ SWIFT_CLASS("_TtC9AcessoBio14UnicoSetupData")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 SWIFT_PROTOCOL("_TtP9AcessoBio26UnicoSetupServicesProtocol_")
@@ -1156,12 +1158,13 @@ SWIFT_CLASS("_TtC9AcessoBio30AccelerometerDeviceBehaviorDTO")
 
 SWIFT_PROTOCOL("_TtP9AcessoBio25AcessoBioConfigDataSource_")
 @protocol AcessoBioConfigDataSource
+- (NSString * _Nonnull)getBundleIdentifier SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)getHostKey SWIFT_WARN_UNUSED_RESULT;
+@optional
 - (NSString * _Nonnull)getProjectNumber SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getProjectId SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getMobileSdkAppId SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getBundleIdentifier SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getHostInfo SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getHostKey SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1582,7 +1585,7 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
 
 SWIFT_CLASS("_TtC9AcessoBio28UnicoConfigDataSourceManager")
 @interface UnicoConfigDataSourceManager : NSObject
-- (UnicoSetupData * _Nonnull)manageWithDataSource:(id <AcessoBioConfigDataSource> _Null_unspecified)dataSource SWIFT_WARN_UNUSED_RESULT;
+- (UnicoSetupData * _Nonnull)manageWithDataSource:(id <AcessoBioConfigDataSource> _Nonnull)dataSource SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1814,6 +1817,7 @@ SWIFT_CLASS("_TtC9AcessoBio14UnicoSetupData")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 SWIFT_PROTOCOL("_TtP9AcessoBio26UnicoSetupServicesProtocol_")

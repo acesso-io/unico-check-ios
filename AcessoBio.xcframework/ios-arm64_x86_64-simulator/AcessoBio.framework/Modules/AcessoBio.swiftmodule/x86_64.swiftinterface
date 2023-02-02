@@ -133,8 +133,8 @@ extension AcessoBio.DefaultLibInfoWoker : AcessoBio.LibInfoWoker {
   @objc public func getMessage() -> Foundation.NSString
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class UnicoConfigDataSourceManager : ObjectiveC.NSObject {
-  @objc public func manage(dataSource: AcessoBio.AcessoBioConfigDataSource!) -> AcessoBio.UnicoSetupData
+@objc @_inheritsConvenienceInitializers public class UnicoConfigDataSourceManager : ObjectiveC.NSObject {
+  @objc public func manage(dataSource: AcessoBio.AcessoBioConfigDataSource) -> AcessoBio.UnicoSetupData
   @objc override dynamic public init()
   @objc deinit
 }
@@ -388,9 +388,11 @@ extension Foundation.Data {
 extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public static var modelName: Swift.String
 }
-@objc @_hasMissingDesignatedInitializers public class UnicoSetupData : ObjectiveC.NSObject, Swift.Decodable {
-  required public init(from decoder: Swift.Decoder) throws
+@objc @_hasMissingDesignatedInitializers final public class UnicoSetupData : ObjectiveC.NSObject {
   @objc deinit
+}
+extension AcessoBio.UnicoSetupData : Swift.Decodable {
+  public convenience init(from decoder: Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc final public class DefaultGetCameraResultUseCase : ObjectiveC.NSObject {
   @objc override dynamic public init()
@@ -623,12 +625,12 @@ public protocol Cancellable {
   @objc deinit
 }
 @objc public protocol AcessoBioConfigDataSource {
-  @objc func getProjectNumber() -> Swift.String
-  @objc func getProjectId() -> Swift.String
-  @objc func getMobileSdkAppId() -> Swift.String
   @objc func getBundleIdentifier() -> Swift.String
-  @objc func getHostInfo() -> Swift.String
   @objc func getHostKey() -> Swift.String
+  @objc optional func getProjectNumber() -> Swift.String
+  @objc optional func getProjectId() -> Swift.String
+  @objc optional func getMobileSdkAppId() -> Swift.String
+  @objc optional func getHostInfo() -> Swift.String
 }
 @objc public class CallbackDTO : ObjectiveC.NSObject {
   @objc public init(callback: Swift.String? = nil, attempts: AcessoBio.AttemptsDTO? = nil, totalTime: Foundation.NSNumber? = nil, geolocation: AcessoBio.GeolocationDTO? = nil, deviceBehavior: AcessoBio.DeviceBehaviorsDTO? = nil)
