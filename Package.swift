@@ -16,6 +16,12 @@ let package = Package(
                 "UnicoSdkSecurity"
             ]
         ),
+        .library(
+            name: "unicosecurity-ios-spm",
+            targets: [
+                "UnicoSdkSecurity"
+            ]
+        ),
     ],
     targets: [
         .binaryTarget(name: "AcessoBio", path: "AcessoBio.xcframework"),
