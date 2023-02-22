@@ -59,6 +59,8 @@ NS_ASSUME_NONNULL_BEGIN
     NSTimer * timerCountDown;
     NSInteger countDown;
     BOOL isCountDown;
+
+    CGFloat initialBrightness;
         
 #pragma mark - GLOBAL Liveness
     //Step Liveness - Discrimina o passo atual do liveness
