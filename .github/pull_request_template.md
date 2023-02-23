@@ -3,3 +3,4 @@
 [ ] Production environment build
 [ ] Spec.version updated
 [ ] E2E tests
+[ ] Sdkbio docs updated
