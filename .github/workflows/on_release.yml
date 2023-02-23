@@ -48,16 +48,16 @@ jobs:
       - uses: actions/checkout@v2
       - run: echo ${{needs.verify-changed-files.outputs.output1}}
 
-      - name: Is there a change in the unicocheck-ios.podspec? Publish to CocoaPods
-        if: contains(needs.verify-changed-files.outputs.output1, 'unicocheck-ios.podspec')
-        env:
-          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-        run: |
-          pod trunk push unicocheck-ios.podspec --allow-warnings
-
       - name: Is there a change in the unicosecurity-ios.podspec? Publish to CocoaPods
         if: contains(needs.verify-changed-files.outputs.output1, 'unicosecurity-ios.podspec')
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
           pod trunk push unicosecurity-ios.podspec --allow-warnings
+
+      - name: Is there a change in the unicocheck-ios.podspec? Publish to CocoaPods
+        if: contains(needs.verify-changed-files.outputs.output1, 'unicocheck-ios.podspec')
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+        run: |
+          pod trunk push unicocheck-ios.podspec --allow-warnings
