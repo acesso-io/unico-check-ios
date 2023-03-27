@@ -52,6 +52,11 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     ReactNative
 };
 
+typedef NS_ENUM(NSInteger, CameraType) {
+    Selfie,
+    Document
+};
+
 @interface UnicoCheck : NSObject <UnicoCheckThemesDelegate, CLLocationManagerDelegate> {
     
     id<SensorsWorker> _Nonnull sensorsWorker;
@@ -86,7 +91,9 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     
     UnicoFacetec *unicoFacetec;
     BOOL isFacetecFlow;
-    
+    CameraType cameraType;
+    DocumentEnums documentType;
+
     UnicoCheckMapCallbacks *mapCallbacks;
     
     void (^completionHandlerSetupConfig)(ErrorBio * _Nullable error);
