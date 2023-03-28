@@ -5,28 +5,9 @@ import UnicoSdkSecurity.DeviceInfo_Private
 import Foundation
 import UnicoSdkSecurity.HSE_Private
 import Swift
+import UnicoSdkBase
 @_exported import UnicoSdkSecurity
 import _Concurrency
-public protocol DeviceInfoConvertible {
-  func jailbreakDetected() throws -> Swift.Bool
-  func simulatorDetected() throws -> Swift.Bool
-  func debuggerDetected() throws -> Swift.Bool
-}
-final public class DeviceInfo : UnicoSdkSecurity.DeviceInfoConvertible {
-  public init()
-  final public func jailbreakDetected() throws -> Swift.Bool
-  final public func simulatorDetected() throws -> Swift.Bool
-  final public func debuggerDetected() throws -> Swift.Bool
-  @objc deinit
-}
-public protocol HSEInfoConvertible {
-  func getDeviceId() -> Swift.String
-}
-final public class HSEInfo : UnicoSdkSecurity.HSEInfoConvertible {
-  public init()
-  final public func getDeviceId() -> Swift.String
-  @objc deinit
-}
 public enum UnicoSecurityErrors : Swift.Int {
   case licenseNotFound
   case sdkNotInitialized
@@ -42,6 +23,30 @@ public enum UnicoSecurityErrors : Swift.Int {
 }
 extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.Error {
 }
+public enum DeviceIdError : Swift.Error {
+  case authenticationFailed
+  case networkFailed
+  case securityResultFailed
+  public static func == (a: UnicoSdkSecurity.DeviceIdError, b: UnicoSdkSecurity.DeviceIdError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class UnicoSecuritySDK {
+  convenience public init(sdkKey: Swift.String?)
+  final public func getSecurityResult() throws -> UnicoSdkSecurity.SecurityResult
+  final public func getDeviceId(completionHandler: @escaping (Swift.Result<Swift.String, UnicoSdkSecurity.DeviceIdError>) -> Swift.Void)
+  @objc deinit
+}
+public protocol SecurityResult {
+  var jailBreak: Swift.Bool? { get }
+  var simulator: Swift.Bool? { get }
+  var debugger: Swift.Bool? { get }
+  var deviceID: Swift.String? { get }
+}
 extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.Equatable {}
 extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.Hashable {}
 extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.RawRepresentable {}
+extension UnicoSdkSecurity.DeviceIdError : Swift.Equatable {}
+extension UnicoSdkSecurity.DeviceIdError : Swift.Hashable {}

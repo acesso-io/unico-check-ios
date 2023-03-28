@@ -12,6 +12,7 @@ let package = Package(
             targets: [
                 "AcessoBio",
                 "FaceTecSDK",
+                "UnicoSdkBase",
                 "UnicoSdkLogger",
                 "UnicoSdkSecurity"
             ]
@@ -19,6 +20,7 @@ let package = Package(
         .library(
             name: "unicosecurity-ios-spm",
             targets: [
+                "UnicoSdkBase",
                 "UnicoSdkSecurity"
             ]
         ),
@@ -26,6 +28,7 @@ let package = Package(
     targets: [
         .binaryTarget(name: "AcessoBio", path: "AcessoBio.xcframework"),
         .binaryTarget(name: "FaceTecSDK", path: "FaceTecSDK.xcframework"),
+        .binaryTarget(name: "UnicoSdkBase", path: "UnicoSdkBase.xcframework"),
         .binaryTarget(name: "UnicoSdkLogger", path: "UnicoSdkLogger.xcframework"),
         .binaryTarget(name: "UnicoSdkSecurity", path: "UnicoSdkSecurity.xcframework")
     ]
