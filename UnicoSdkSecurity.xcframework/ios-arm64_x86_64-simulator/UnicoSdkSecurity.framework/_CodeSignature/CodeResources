@@ -6,11 +6,15 @@
 	<dict>
 		<key>Headers/UnicoSdkSecurity-Swift.h</key>
 		<data>
-		0/8SWx6tof698US2NAi22rWI88I=
+		sQRD5YNmDXZB8XMdk5/1i+plWXY=
+		</data>
+		<key>Headers/UnicoSdkSecurity.h</key>
+		<data>
+		qybjEHJMuE3t8pZ9MED0ieG70tE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		kp8X8Agrx1OI+b20q7kNbftILQQ=
+		tMIhkhWjvLtlBQddeLv2l/dRbn8=
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -18,11 +22,11 @@
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/XmZF44/pn/+HHsMsYXP+DF/AdU=
+		rDZ3PuARGHyU3iQhpFSP6hrEAGo=
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kW00LajPkRg4/ePuDJJovgpCvxc=
+		TjBmIdJZnU9HHODs4X0IT0QMtn0=
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -30,11 +34,11 @@
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		/XmZF44/pn/+HHsMsYXP+DF/AdU=
+		rDZ3PuARGHyU3iQhpFSP6hrEAGo=
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		kW00LajPkRg4/ePuDJJovgpCvxc=
+		TjBmIdJZnU9HHODs4X0IT0QMtn0=
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,11 +46,11 @@
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		axSavxa+swFqVXeVl5v60XfSC9E=
+		cxepmm1YDNXVSwIsZsTNsCeEVVM=
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jK3iqP7fORNF9WF84tZnxzp5hJg=
+		I167vCcq1uF5TN4MdnDfCn/qjUw=
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -54,11 +58,11 @@
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		axSavxa+swFqVXeVl5v60XfSC9E=
+		cxepmm1YDNXVSwIsZsTNsCeEVVM=
 		</data>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		jK3iqP7fORNF9WF84tZnxzp5hJg=
+		I167vCcq1uF5TN4MdnDfCn/qjUw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -72,10 +76,6 @@
 		<data>
 		qp0jxHnuxhwtoAPmGiCbDjWZM9A=
 		</data>
-		<key>PrivateHeaders/UnicoSdkSecurity.h</key>
-		<data>
-		xaDD2MM4vhmtUi8djdtfK4Jcosg=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -83,7 +83,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WCnOTqt1cc8JLRYdRz0Mjg2iXy7ClxMO6Afg9b3Wzr4=
+			YO7DZ6zjDvnWHrrvkcyS6PosqC0IJwmjKdz7km9kA5U=
+			</data>
+		</dict>
+		<key>Headers/UnicoSdkSecurity.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RjfGpQZCvPWfWhFx0zunjOMDCgt6K1hiCUQ2cHHunWc=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -97,14 +104,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6z5P+pl39xhVh+iTfT9hFyLAtGKLQHtvI9pREdz4xCg=
+			6dyItH7CavbwGApk4o6CCO4HdT0M44HJWLI9vHPBczQ=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Msh5HPKJWzJ4OZ8Y5vf9kd7u0KgBeEunx1D5HZ/V2D4=
+			VKb6s0oyEOUvNQh6Lg6sL2GPB/dNUgDyGK+JCEtG+Ks=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/arm64.swiftdoc</key>
@@ -118,14 +125,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6z5P+pl39xhVh+iTfT9hFyLAtGKLQHtvI9pREdz4xCg=
+			6dyItH7CavbwGApk4o6CCO4HdT0M44HJWLI9vHPBczQ=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Msh5HPKJWzJ4OZ8Y5vf9kd7u0KgBeEunx1D5HZ/V2D4=
+			VKb6s0oyEOUvNQh6Lg6sL2GPB/dNUgDyGK+JCEtG+Ks=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -139,14 +146,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EdBTK3FjpD25t8oFizEhLTfO7mQvBRJgdx2A0FiKiVY=
+			WofSLbwcdXDKBGkgLVAUWS7do3xmS3hIwGGig0elaTg=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iZ+l91LS9iRhFxar7TfAtH/Xl/q2v8tKpvoPK0HS4OI=
+			diiZ85/wgBp2ZZuAFcnZ8iIp2GxYN75M/qLKt/iQFbo=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/x86_64.swiftdoc</key>
@@ -160,14 +167,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EdBTK3FjpD25t8oFizEhLTfO7mQvBRJgdx2A0FiKiVY=
+			WofSLbwcdXDKBGkgLVAUWS7do3xmS3hIwGGig0elaTg=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkSecurity.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iZ+l91LS9iRhFxar7TfAtH/Xl/q2v8tKpvoPK0HS4OI=
+			diiZ85/wgBp2ZZuAFcnZ8iIp2GxYN75M/qLKt/iQFbo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -189,13 +196,6 @@
 			<key>hash2</key>
 			<data>
 			x48Ab8TwWT6mOB4/JYrv4jMRIpgzx6KQCcPuuHhUHsU=
-			</data>
-		</dict>
-		<key>PrivateHeaders/UnicoSdkSecurity.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			t7D3FQRwSw1G6yjTzk/EVaNDeabRWRqDiCbZMUcaMAY=
 			</data>
 		</dict>
 	</dict>

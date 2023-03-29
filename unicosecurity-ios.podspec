@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "unicosecurity-ios"
-  spec.version      = "2.3.12"
+  spec.version      = "2.3.13"
   spec.summary      = "Esta biblioteca visa implementar as soluções de segurança unico | check sob a plataforma iOS."
   spec.homepage     = "https://developers.unico.io/"
   spec.license      = "MIT"
@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
 
   spec.social_media_url         = "https://ajuda.unico.io/hc/pt-br"
   spec.ios.vendored_frameworks  = [
+    "UnicoSdkBase.xcframework",
     "UnicoSdkSecurity.xcframework"
   ]
 
