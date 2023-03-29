@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "unicocheck-ios"
-  spec.version      = "2.3.13"
+  spec.version      = "2.3.14"
   spec.summary      = "Esta biblioteca visa implementar as soluções unico | check sob a plataforma iOS."
   spec.description  = "O objetivo da SDK unico-check-ios é proporcionar a melhor experiência de captura de imagens. Auxiliando também na implementação do desenvolvedor/cliente unico."
   spec.homepage     = "https://developers.unico.io/"
