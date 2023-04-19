@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/UnicoSdkBase-Swift.h</key>
 		<data>
-		D0/QNQKBMJVqXaiDMOS5R2EC18o=
+		GTaqO2GVyfVb4B1upD99/clb5i8=
 		</data>
 		<key>Headers/UnicoSdkBase.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bioBx0Yc+H8kj/IxNqbY3dGrx5M=
+		gwqJkjZA//NQjC5PdHJkxTX0KG0=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		zeWFHX7wVYxUw81zk7lzO17QVyg=
+		bYflOzvV3BEyg+Qc0RAkwHepzIE=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		afQp8QMho7rZ844vGP04pJ2yjwE=
+		HSR38SHeTl+qW/qZMz3DT5g91Gg=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		zeWFHX7wVYxUw81zk7lzO17QVyg=
+		bYflOzvV3BEyg+Qc0RAkwHepzIE=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		afQp8QMho7rZ844vGP04pJ2yjwE=
+		HSR38SHeTl+qW/qZMz3DT5g91Gg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vtiEio80/hPeUgZDPxXZwMNtHLD2Q9HhJU1cxgkGRzA=
+			vbPVJfTdl0tErbIxgoZjUJhIFtB5ulEcHlDpwvTluAE=
 			</data>
 		</dict>
 		<key>Headers/UnicoSdkBase.h</key>
@@ -72,14 +72,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5at3+Qb0dJTCXkezO5WPpcFB2ck9hrIMVXA+rm0f1a0=
+			hNqpyj1zsNjgl8KjGhvGxW+1Fls2eSuwX9JN21N9QOY=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kuyj9E5CZR+GIBpzdJp0jL8xIkuau9Ui4Xxv8lmIkyU=
+			B5tO68wTmltGjEr46eRxrZW8EIe+/X7JnpQGK6jwyIo=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64.swiftdoc</key>
@@ -93,14 +93,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5at3+Qb0dJTCXkezO5WPpcFB2ck9hrIMVXA+rm0f1a0=
+			hNqpyj1zsNjgl8KjGhvGxW+1Fls2eSuwX9JN21N9QOY=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kuyj9E5CZR+GIBpzdJp0jL8xIkuau9Ui4Xxv8lmIkyU=
+			B5tO68wTmltGjEr46eRxrZW8EIe+/X7JnpQGK6jwyIo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

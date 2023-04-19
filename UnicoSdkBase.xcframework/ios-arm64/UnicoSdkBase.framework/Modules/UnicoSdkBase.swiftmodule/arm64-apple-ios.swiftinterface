@@ -1,15 +1,38 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkBase
+import CoreLocation.CLLocation
 import CommonCrypto
+import CoreLocation
+import CoreLocation/*.CLAuthorizationStatus*/
+import CoreLocation/*.CLLocation*/
+import CoreLocation/*.CLLocationManager*/
+import CoreLocation/*.CLLocationManagerDelegate*/
 import Foundation
 import MobileCoreServices
 import Security
 import Swift
+import UIKit
 @_exported import UnicoSdkBase
 import _Concurrency
 public protocol Totp {
   func getTotp(secret: Swift.String) throws -> Swift.String
+}
+public enum GeoLocationError : Swift.Error, Swift.Equatable {
+  case usageDescriptionPlistNotAvailable
+  case locationFailed(locationError: Swift.Error)
+  public static func == (lhsError: UnicoSdkBase.GeoLocationError, rhsError: UnicoSdkBase.GeoLocationError) -> Swift.Bool
+}
+public protocol DeviceInfo {
+  var id: Swift.String { get }
+  var model: Swift.String { get }
+  var vendor: Swift.String { get }
+  var os: Swift.String { get }
+  var api: Swift.String { get }
+  var systemPatch: Swift.String { get }
+  var kernelVersion: Swift.String { get }
+  var usbPlugged: Swift.Bool { get }
+  func isEqual(to other: UnicoSdkBase.DeviceInfo) -> Swift.Bool
 }
 public protocol Token {
   var token: Swift.String { get }
@@ -70,6 +93,9 @@ public protocol Cancellable {
 }
 public protocol GetTotpRepository {
   func getTotp(secret: Swift.String) throws -> Swift.String
+}
+public protocol GeoIP {
+  var ip: Swift.String { get }
 }
 public protocol GetTotpDataSource {
   func getTotp(secret: Swift.String, algorithm: Swift.String, digit: Swift.Int) -> Swift.String?
@@ -163,6 +189,9 @@ public struct ApiDataNetworkConfig : UnicoSdkBase.NetworkConfigurable {
   public let queryParameters: [Swift.String : Swift.String]
   public init(baseURL: Foundation.URL, headers: [Swift.String : Swift.String] = [:], queryParameters: [Swift.String : Swift.String] = [:])
 }
+public protocol GetGeoIP {
+  func getGeoIP(completion: @escaping (Swift.Result<UnicoSdkBase.GeoIP, Swift.Error>) -> Swift.Void)
+}
 public class API {
   public var defaultService: UnicoSdkBase.DataTransferService {
     get
@@ -176,6 +205,10 @@ public class API {
     get
     set
   }
+  public var havenService: UnicoSdkBase.DataTransferService {
+    get
+    set
+  }
   public init()
   @objc deinit
 }
@@ -186,6 +219,19 @@ final public class DefaultGetTotpRepository {
 }
 extension UnicoSdkBase.DefaultGetTotpRepository : UnicoSdkBase.GetTotpRepository {
   final public func getTotp(secret: Swift.String) throws -> Swift.String
+}
+public protocol GetDeviceInfo {
+  func device() -> UnicoSdkBase.DeviceInfo
+}
+public protocol GeoLocation {
+  func start(handler: @escaping (Swift.Result<[CoreLocation.CLLocation], UnicoSdkBase.GeoLocationError>) -> Swift.Void)
+  func stop()
+}
+@_hasMissingDesignatedInitializers public class DefaultGeoLocationFactory {
+  @objc deinit
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public static func modelName() -> Swift.String
 }
 public enum HTTPMethodType : Swift.String {
   case get
@@ -246,7 +292,10 @@ extension UnicoSdkBase.Requestable {
 @_hasMissingDesignatedInitializers public class Base {
   final public let totp: UnicoSdkBase.Totp
   final public let getToken: UnicoSdkBase.GetToken
-  convenience public init(dataTransferService: UnicoSdkBase.DataTransferService = API().defaultService)
+  final public let getGeoIP: UnicoSdkBase.GetGeoIP
+  final public let geoLocation: UnicoSdkBase.GeoLocation
+  final public let getDeviceInfo: UnicoSdkBase.GetDeviceInfo
+  convenience public init(dataTransferService: UnicoSdkBase.DataTransferService = API().defaultService, locationManager: CoreLocation.CLLocationManager = CLLocationManager(), device: UIKit.UIDevice = UIDevice.current)
   @objc deinit
 }
 public protocol GetToken {
