@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkSecurity
+import CoreLocation/*.CLLocation*/
 import UnicoSdkSecurity.DeviceInfo_Private
 import Foundation
 import UnicoSdkSecurity.HSE_Private
@@ -8,6 +9,12 @@ import Swift
 import UnicoSdkBase
 @_exported import UnicoSdkSecurity
 import _Concurrency
+public protocol DeviceInfo {
+  var deviceId: Swift.String { get }
+  var deviceModel: Swift.String { get }
+  var ip: Swift.String? { get }
+  var geolocation: CoreLocation.CLLocation? { get }
+}
 public enum UnicoSecurityErrors : Swift.Int {
   case licenseNotFound
   case sdkNotInitialized
@@ -23,11 +30,11 @@ public enum UnicoSecurityErrors : Swift.Int {
 }
 extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.Error {
 }
-public enum DeviceIdError : Swift.Error {
+public enum DeviceInfoError : Swift.Error {
   case authenticationFailed
   case networkFailed
   case securityResultFailed
-  public static func == (a: UnicoSdkSecurity.DeviceIdError, b: UnicoSdkSecurity.DeviceIdError) -> Swift.Bool
+  public static func == (a: UnicoSdkSecurity.DeviceInfoError, b: UnicoSdkSecurity.DeviceInfoError) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
@@ -36,7 +43,7 @@ public enum DeviceIdError : Swift.Error {
 @_hasMissingDesignatedInitializers final public class UnicoSecuritySDK {
   convenience public init(sdkKey: Swift.String?)
   final public func getSecurityResult() throws -> UnicoSdkSecurity.SecurityResult
-  final public func getDeviceId(completionHandler: @escaping (Swift.Result<Swift.String, UnicoSdkSecurity.DeviceIdError>) -> Swift.Void)
+  final public func getDeviceInfo(completionHandler: @escaping (Swift.Result<UnicoSdkSecurity.DeviceInfo, UnicoSdkSecurity.DeviceInfoError>) -> Swift.Void)
   @objc deinit
 }
 public protocol SecurityResult {
@@ -48,5 +55,5 @@ public protocol SecurityResult {
 extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.Equatable {}
 extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.Hashable {}
 extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.RawRepresentable {}
-extension UnicoSdkSecurity.DeviceIdError : Swift.Equatable {}
-extension UnicoSdkSecurity.DeviceIdError : Swift.Hashable {}
+extension UnicoSdkSecurity.DeviceInfoError : Swift.Equatable {}
+extension UnicoSdkSecurity.DeviceInfoError : Swift.Hashable {}
