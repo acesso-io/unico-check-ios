@@ -300,6 +300,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio21CreateProviderUseCase_")
 @class OpenCameraDTO;
 @class SuccessCallbackDTO;
 @class ErrorCallbackDTO;
+@class UnicoSetupData;
 
 SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 @interface DataLogger : NSObject
@@ -315,7 +316,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 ///
 /// returns:
 /// The generated event <code>id</code>.
-- (NSString * _Nonnull)send:(BOOL)saveAttempt SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -334,7 +335,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio16DataLoggerOutput_")
 - (void)commitErrorCallbackWithErrorCallback:(ErrorCallbackDTO * _Nonnull)errorCallback;
 - (NSDictionary<NSString *, id> * _Nonnull)getLogs SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Null_unspecified)getJsonLogs SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)sendWithSaveAttempt:(BOOL)saveAttempt SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nonnull)sendWithSaveAttempt:(BOOL)saveAttempt hostKey:(NSString * _Nonnull)hostKey SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -427,6 +428,7 @@ SWIFT_CLASS("_TtC9AcessoBio14DocumentResult")
 @end
 
 
+
 SWIFT_CLASS("_TtC9AcessoBio16ErrorCallbackDTO")
 @interface ErrorCallbackDTO : CallbackDTO
 - (nonnull instancetype)initWithCode:(NSNumber * _Nullable)code title:(NSString * _Nullable)title message:(NSString * _Nullable)message OBJC_DESIGNATED_INITIALIZER;
@@ -467,42 +469,26 @@ SWIFT_CLASS("_TtC9AcessoBio16FaceBehaviorsDTO")
 
 @protocol LoggerFactory;
 @protocol SensorsWorkerFactory;
+@protocol UnicoSetupFactory;
 
 SWIFT_PROTOCOL("_TtP9AcessoBio9Factories_")
 @protocol Factories
 - (id <CreateProviderUseCase> _Nonnull)createProviderFactoryWithSource:(enum Source)source SWIFT_WARN_UNUSED_RESULT;
 - (id <LoggerFactory> _Nonnull)makeLoggerFactory SWIFT_WARN_UNUSED_RESULT;
 - (id <SensorsWorkerFactory> _Nonnull)makeSensorsWorkerFactory SWIFT_WARN_UNUSED_RESULT;
+- (id <UnicoSetupFactory> _Nonnull)createUnicoSetupFactory SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
 SWIFT_CLASS("_TtC9AcessoBio18FactoriesContainer")
 @interface FactoriesContainer : NSObject <Factories>
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
++ (FactoriesContainer * _Nonnull)sharedContainer SWIFT_WARN_UNUSED_RESULT;
 - (id <CreateProviderUseCase> _Nonnull)createProviderFactoryWithSource:(enum Source)source SWIFT_WARN_UNUSED_RESULT;
 - (id <LoggerFactory> _Nonnull)makeLoggerFactory SWIFT_WARN_UNUSED_RESULT;
 - (id <SensorsWorkerFactory> _Nonnull)makeSensorsWorkerFactory SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSData;
-@class NSProgress;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC9AcessoBio9FreeToken")
-@interface FreeToken : NSObject <NSCoding, NSItemProviderReading, NSItemProviderWriting>
-@property (nonatomic, copy) NSString * _Null_unspecified issuer;
-@property (nonatomic, copy) NSString * _Null_unspecified label;
-@property (nonatomic, copy) NSString * _Nullable image;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSArray<NSString *> * _Nonnull writableTypeIdentifiersForItemProvider;)
-+ (NSArray<NSString *> * _Nonnull)writableTypeIdentifiersForItemProvider SWIFT_WARN_UNUSED_RESULT;
-- (NSProgress * _Nullable)loadDataWithTypeIdentifier:(NSString * _Nonnull)typeIdentifier forItemProviderCompletionHandler:(void (^ _Nonnull)(NSData * _Nullable, NSError * _Nullable))completionHandler SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSArray<NSString *> * _Nonnull readableTypeIdentifiersForItemProvider;)
-+ (NSArray<NSString *> * _Nonnull)readableTypeIdentifiersForItemProvider SWIFT_WARN_UNUSED_RESULT;
-+ (FreeToken * _Nullable)objectWithItemProviderData:(NSData * _Nonnull)data typeIdentifier:(NSString * _Nonnull)typeIdentifier error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (id <UnicoSetupFactory> _Nonnull)createUnicoSetupFactory SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -521,15 +507,6 @@ SWIFT_PROTOCOL("_TtP9AcessoBio13LoggerFactory_")
 @end
 
 
-SWIFT_CLASS("_TtC9AcessoBio3OTP")
-@interface OTP : NSObject <NSCoding>
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
 SWIFT_CLASS("_TtC9AcessoBio13OpenCameraDTO")
 @interface OpenCameraDTO : NSObject
 - (nonnull instancetype)initWithCaptureType:(NSString * _Nullable)captureType cameraType:(NSString * _Nullable)cameraType OBJC_DESIGNATED_INITIALIZER;
@@ -540,10 +517,11 @@ SWIFT_CLASS("_TtC9AcessoBio13OpenCameraDTO")
 
 @class SdkPkDTO;
 
-SWIFT_CLASS("_TtC9AcessoBio19SDKTokenResponseDTO")
-@interface SDKTokenResponseDTO : NSObject
-@property (nonatomic, copy) NSString * _Nonnull Token;
-@property (nonatomic) BOOL EnableLogo;
+SWIFT_CLASS("_TtC9AcessoBio26SDKTokenResponseDTOAdapter")
+@interface SDKTokenResponseDTOAdapter : NSObject
+@property (nonatomic, readonly) BOOL geolocationEnabled;
+@property (nonatomic, readonly, copy) NSString * _Nonnull Token;
+@property (nonatomic, readonly) BOOL EnableLogo;
 - (SdkPkDTO * _Nullable)getSdkPk SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -609,12 +587,6 @@ SWIFT_CLASS("_TtC9AcessoBio9TimersDTO")
 @end
 
 
-SWIFT_CLASS("_TtC9AcessoBio10TokenStore")
-@interface TokenStore : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 
 
 
@@ -647,7 +619,6 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
 - (UIColor * _Nonnull)convertHexSringToUIColorWithCurrentColor:(NSString * _Nonnull)currentColor SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class UnicoSetupData;
 
 SWIFT_CLASS("_TtC9AcessoBio28UnicoConfigDataSourceManager")
 @interface UnicoConfigDataSourceManager : NSObject
@@ -784,7 +755,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio35UnicoFaceCameraViewControllerOutput_")
 
 SWIFT_CLASS("_TtC9AcessoBio12UnicoFacetec")
 @interface UnicoFacetec : NSObject
-- (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTO * _Nonnull)sdkToken theme:(id <AcessoBioThemeDelegate> _Null_unspecified)theme OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTOAdapter * _Nonnull)sdkToken theme:(id <AcessoBioThemeDelegate> _Null_unspecified)theme OBJC_DESIGNATED_INITIALIZER;
 - (void)initializeFaceTecSDKWithCompletion:(void (^ _Nonnull)(ErrorFacetec * _Nullable))completion;
 - (void)openCameraFaceTecWithViewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable, ErrorBio * _Nullable))completion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -798,39 +769,6 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoHttpHeaders")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-enum Routers : NSInteger;
-
-SWIFT_PROTOCOL("_TtP9AcessoBio24UnicoHttpRequestProtocol_")
-@protocol UnicoHttpRequestProtocol
-- (void)getWithRouter:(enum Routers)router completion:(void (^ _Nonnull)(id _Nonnull, ErrorHttp * _Nullable))completion;
-- (void)getWithRouter:(enum Routers)router headers:(UnicoHttpHeaders * _Nullable)headers completion:(void (^ _Nonnull)(id _Nonnull, ErrorHttp * _Nullable))completion;
-- (void)postWithRouter:(enum Routers)router headers:(UnicoHttpHeaders * _Nullable)headers jsonBody:(NSDictionary<NSString *, id> * _Nonnull)jsonBody completion:(void (^ _Nonnull)(id _Nonnull, ErrorHttp * _Nullable))completion;
-@end
-
-
-SWIFT_CLASS("_TtC9AcessoBio16UnicoHttpRequest")
-@interface UnicoHttpRequest : NSObject <UnicoHttpRequestProtocol>
-- (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup OBJC_DESIGNATED_INITIALIZER;
-- (void)getWithRouter:(enum Routers)router completion:(void (^ _Nonnull)(id _Nonnull, ErrorHttp * _Nullable))completion;
-- (void)getWithRouter:(enum Routers)router headers:(UnicoHttpHeaders * _Nullable)headers completion:(void (^ _Nonnull)(id _Nonnull, ErrorHttp * _Nullable))completion;
-- (void)postWithRouter:(enum Routers)router headers:(UnicoHttpHeaders * _Nullable)headers jsonBody:(NSDictionary<NSString *, id> * _Nonnull)jsonBody completion:(void (^ _Nonnull)(id _Nonnull, ErrorHttp * _Nullable))completion;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-
-SWIFT_CLASS("_TtC9AcessoBio18UnicoHttpURLRouter")
-@interface UnicoHttpURLRouter : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-typedef SWIFT_ENUM(NSInteger, Routers, open) {
-  RoutersToken = 0,
-  RoutersSession = 1,
-};
 
 @class NSBundle;
 
@@ -866,13 +804,18 @@ SWIFT_CLASS("_TtC9AcessoBio21UnicoNetworkingModule")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@protocol UnicoSetupServicesProtocol;
+
+SWIFT_PROTOCOL("_TtP9AcessoBio18UnicoSetupProtocol_")
+@protocol UnicoSetupProtocol
+- (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
+- (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
+@end
+
 
 SWIFT_CLASS("_TtC9AcessoBio10UnicoSetup")
-@interface UnicoSetup : NSObject
-- (nonnull instancetype)initWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData unicoSetupServices:(id <UnicoSetupServicesProtocol> _Nonnull)unicoSetupServices OBJC_DESIGNATED_INITIALIZER;
-- (void)setupSDKWithCompletion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
-- (SDKTokenResponseDTO * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
+@interface UnicoSetup : NSObject <UnicoSetupProtocol>
+- (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
+- (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -886,20 +829,19 @@ SWIFT_CLASS("_TtC9AcessoBio14UnicoSetupData")
 
 
 
-SWIFT_PROTOCOL("_TtP9AcessoBio26UnicoSetupServicesProtocol_")
-@protocol UnicoSetupServicesProtocol
-- (void)getTokenUnicoWithCompletion:(void (^ _Nonnull)(SDKTokenResponseDTO * _Nullable, ErrorBio * _Nullable))completion;
+
+SWIFT_PROTOCOL("_TtP9AcessoBio17UnicoSetupFactory_")
+@protocol UnicoSetupFactory
+- (id <UnicoSetupProtocol> _Nonnull)make SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 
 SWIFT_CLASS("_TtC9AcessoBio18UnicoSetupServices")
-@interface UnicoSetupServices : NSObject <UnicoSetupServicesProtocol>
-- (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup request:(id <UnicoHttpRequestProtocol> _Nonnull)request OBJC_DESIGNATED_INITIALIZER;
-- (void)getTokenUnicoWithCompletion:(void (^ _Nonnull)(SDKTokenResponseDTO * _Nullable, ErrorBio * _Nullable))completion;
+@interface UnicoSetupServices : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 SWIFT_CLASS("_TtC9AcessoBio14UnicoTelemetry")
