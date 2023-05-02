@@ -35,7 +35,7 @@
 @class UnicoSetup;
 @class UnicoConfigDelegate;
 @class UnicoSetupData;
-@class SDKTokenResponseDTO;
+@class SDKTokenResponseDTOAdapter;
 @class UnicoFacetec;
 @class UnicoJsonLoad;
 @class UnicoConfigDataSourceManager;
@@ -44,6 +44,7 @@
 @class DocumentInsertView;
 @class UnicoCheckThemes;
 @protocol SensorsWorker;
+@protocol UnicoSetupProtocol;
 @class GeolocationDTO;
 
 typedef NS_ENUM(NSInteger, LanguageOrigin) {
@@ -85,9 +86,9 @@ typedef NS_ENUM(NSInteger, CameraType) {
 #if __has_include(<FaceTecSDK/FaceTecSDK.h>)
     id<FaceTecSessionResult> _Nonnull latestSessionResult;
 #endif
-    
-    UnicoSetupData * unicoSetupData;
-    SDKTokenResponseDTO * sdkTokenResponse;
+
+    id<UnicoSetupProtocol> unicoSetup;
+    SDKTokenResponseDTOAdapter *sdkTokenResponse;
     
     UnicoFacetec *unicoFacetec;
     BOOL isFacetecFlow;
@@ -102,6 +103,7 @@ typedef NS_ENUM(NSInteger, CameraType) {
     NSDate *dateCaptureEnd;
     
     GeolocationDTO *geolocation;
+    UnicoSetupData *setupData;
 }
 #pragma mark - Protocols
 @property (nonatomic, weak) id <AcessoBioManagerDelegate> _Nullable acessoBioDelegate;
@@ -110,8 +112,9 @@ typedef NS_ENUM(NSInteger, CameraType) {
 
 #pragma mark - Constructor
 - (id _Nullable )initWithViewController:(id _Nullable )view
-                delegates:(id<AcessoBioManagerDelegate>_Nullable)delegate
-                sensorsWorker:(id<SensorsWorker>_Nullable)sensorsWorker;
+                              delegates:(id<AcessoBioManagerDelegate>_Nullable)delegate
+                          sensorsWorker:(id<SensorsWorker>_Nullable)sensorsWorker
+                             unicoSetup:(id<UnicoSetupProtocol> _Nullable)unicoSetup;
 
 #pragma mark - Language Origin
 - (void)setLanguageOrigin: (LanguageOrigin)origin release: (NSString*_Nullable)release;

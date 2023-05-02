@@ -37,6 +37,14 @@ public protocol DeviceInfo {
 public protocol Token {
   var token: Swift.String { get }
   var sendLogIsEnable: Swift.Bool { get }
+  var geolocationsLogsIsEnabled: Swift.Bool? { get }
+  var validateAt: Foundation.Date { get }
+  var isValid: Swift.Bool { get }
+}
+extension UnicoSdkBase.Token {
+  public var isValid: Swift.Bool {
+    get
+  }
 }
 public enum NetworkError : Swift.Error {
   case error(statusCode: Swift.Int, data: Foundation.Data?)
@@ -154,7 +162,7 @@ public class DefaultDataTransferErrorResolver : UnicoSdkBase.DataTransferErrorRe
   @objc deinit
 }
 public class JSONResponseDecoder : UnicoSdkBase.ResponseDecoder {
-  public init()
+  public init(dateDecodingStrategy: Foundation.JSONDecoder.DateDecodingStrategy = .deferredToDate)
   public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
   @objc deinit
 }
@@ -164,7 +172,7 @@ public class RawDataResponseDecoder : UnicoSdkBase.ResponseDecoder {
   @objc deinit
 }
 public struct GetTokenRequestHeadersDTO {
-  public init(projectVersion: Swift.String, projectName: Swift.String, platform: Swift.String = "IOS", dependencies: UnicoSdkBase.Dependencies)
+  public init(projectVersion: Swift.String, projectName: Swift.String, platform: Swift.String = "IOS", dependencies: UnicoSdkBase.Dependencies, apiKey: Swift.String? = nil)
 }
 public struct Dependencies : Swift.Codable {
   public init(dependencies: [UnicoSdkBase.Dependencies.Dependency])
