@@ -759,7 +759,7 @@ SWIFT_CLASS("_TtC9AcessoBio12UnicoFacetec")
 @interface UnicoFacetec : NSObject
 - (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTOAdapter * _Nonnull)sdkToken theme:(id <AcessoBioThemeDelegate> _Null_unspecified)theme OBJC_DESIGNATED_INITIALIZER;
 - (void)initializeFaceTecSDKWithCompletion:(void (^ _Nonnull)(ErrorFacetec * _Nullable))completion;
-- (void)openCameraFaceTecWithViewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable, ErrorBio * _Nullable))completion;
+- (void)openCameraFaceTecWithViewController:(UIViewController * _Nonnull)viewController timeout:(double)timeout completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable, ErrorBio * _Nullable))completion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1635,7 +1635,7 @@ SWIFT_CLASS("_TtC9AcessoBio12UnicoFacetec")
 @interface UnicoFacetec : NSObject
 - (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTOAdapter * _Nonnull)sdkToken theme:(id <AcessoBioThemeDelegate> _Null_unspecified)theme OBJC_DESIGNATED_INITIALIZER;
 - (void)initializeFaceTecSDKWithCompletion:(void (^ _Nonnull)(ErrorFacetec * _Nullable))completion;
-- (void)openCameraFaceTecWithViewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable, ErrorBio * _Nullable))completion;
+- (void)openCameraFaceTecWithViewController:(UIViewController * _Nonnull)viewController timeout:(double)timeout completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable, ErrorBio * _Nullable))completion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
