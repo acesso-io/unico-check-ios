@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		qTwk/zUf/McrxnscZIse7Sxmdgo=
+		3Z2dg2v7ofMNH9xv1pzW+wdvXnU=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Headers/UnicoDocumentCameraViewController.h</key>
 		<data>
-		p6diAAzOOyovFmSXP7TmF5EI7K8=
+		GtoXOofPMcMNiJqhBZyLgeOsO3s=
 		</data>
 		<key>Headers/UnicoFaceCameraViewController.h</key>
 		<data>
@@ -126,11 +126,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		jLv632oAhLW2RVGQqvriIcRPxZ8=
+		SaDbs0P/0Jh3DlilkiPCaBVhRoc=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EEHo78h8L0zq/Tq+RVD0+gGMQvo=
+		TWeFUGdQvg33gXUbhRnz2QDnRfA=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		jLv632oAhLW2RVGQqvriIcRPxZ8=
+		SaDbs0P/0Jh3DlilkiPCaBVhRoc=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		EEHo78h8L0zq/Tq+RVD0+gGMQvo=
+		TWeFUGdQvg33gXUbhRnz2QDnRfA=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -150,11 +150,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		qDMeUAr1/TdXvZJrbCDBY4cMWco=
+		mnMJxsJLqWXZIgr8I/yijxtR1MQ=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		CRLav20U+P3UQPZFceZkt5kfU5M=
+		brbF/tj9zcjbolbJZuDclCZ10Cs=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -162,11 +162,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		qDMeUAr1/TdXvZJrbCDBY4cMWco=
+		mnMJxsJLqWXZIgr8I/yijxtR1MQ=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		CRLav20U+P3UQPZFceZkt5kfU5M=
+		brbF/tj9zcjbolbJZuDclCZ10Cs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -247,7 +247,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XfhhJtb77D084jlVJhihwhd6/3L6asPhsnOehS/RM5w=
+			pFgpqLsGkQLciT7I76nwHiQX6FI2dV+nNaqr0Tx6Mrs=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
@@ -415,7 +415,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7BSfMpgkb8r3BrPsbtj8ay99Xe1yzvygv4toOqFvlmc=
+			giECVWYoM4qTEGOq8F2XkVepSh4i6AtMBPBJEkg3m9A=
 			</data>
 		</dict>
 		<key>Headers/UnicoFaceCameraViewController.h</key>
@@ -443,14 +443,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RbD3++aNh+/c4kQrbW3qDC0zJvMKuE4NiDM+DpmunoU=
+			9+g1RfEQMh6UOu2/+SfeOFEgbbMqMeeKUeZXfr7/xcE=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fvSWpSWyb/PwHpS/+GWGsXFP5VIeCeX1lFMTw+2xJqQ=
+			YgSbYmUmgwh2yc3T/iR7MxmhW7Kv6qEm8a/0xRFEHI4=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftdoc</key>
@@ -464,14 +464,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RbD3++aNh+/c4kQrbW3qDC0zJvMKuE4NiDM+DpmunoU=
+			9+g1RfEQMh6UOu2/+SfeOFEgbbMqMeeKUeZXfr7/xcE=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fvSWpSWyb/PwHpS/+GWGsXFP5VIeCeX1lFMTw+2xJqQ=
+			YgSbYmUmgwh2yc3T/iR7MxmhW7Kv6qEm8a/0xRFEHI4=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -485,14 +485,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pB2YYdN1I//izlLZnTXh3tHrrpg3Jfkc1hKluSlNcY0=
+			Xw1VH6XKcwZm3I5BbjK8ZePzerxUU1Iceg9PhY0teeA=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UMe5w8+SrMBVBP1hEVBr8ZFIpwc9XYCLeR27NuEwv2A=
+			EuuUk4sQ/EtP6RORZrDt3B/OczO4xVZjHjVRDGOmNYk=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftdoc</key>
@@ -506,14 +506,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pB2YYdN1I//izlLZnTXh3tHrrpg3Jfkc1hKluSlNcY0=
+			Xw1VH6XKcwZm3I5BbjK8ZePzerxUU1Iceg9PhY0teeA=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UMe5w8+SrMBVBP1hEVBr8ZFIpwc9XYCLeR27NuEwv2A=
+			EuuUk4sQ/EtP6RORZrDt3B/OczO4xVZjHjVRDGOmNYk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

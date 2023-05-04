@@ -696,9 +696,9 @@ public class RawDataResponseDecoder : AcessoBio.ResponseDecoder {
 }
 @objc public class UnicoFacetec : ObjectiveC.NSObject {
   @objc public init(unicoSetup: AcessoBio.UnicoSetupData, sdkToken: AcessoBio.SDKTokenResponseDTOAdapter, theme: AcessoBio.AcessoBioThemeDelegate!)
+  @objc deinit
   @objc public func initializeFaceTecSDK(completion: @escaping (AcessoBio.ErrorFacetec?) -> Swift.Void)
-  @objc public func openCameraFaceTec(viewController: UIKit.UIViewController, completion: @escaping ([Swift.String : Any]?, AcessoBio.ErrorBio?) -> Swift.Void)
+  @objc public func openCameraFaceTec(viewController: UIKit.UIViewController, timeout: Swift.Double, completion: @escaping ([Swift.String : Any]?, AcessoBio.ErrorBio?) -> Swift.Void)
   public func successFacetecProcessor(result: [Swift.String : Any])
   public func unsuccessfulFacetecProcessor(status: FaceTecSDK.FaceTecSessionStatus)
-  @objc deinit
 }

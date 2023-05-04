@@ -23,8 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UnicoDocumentCameraViewController : UnicoCameraViewController {
     UIView *vFlash;
     UIActivityIndicatorView *spinFlash;
+    
+    NSTimer *timerToTimeoutSession;
 }
 
+@property (readwrite) double secondsTimeoutSession;
 @property (assign, nonatomic)NSInteger type; 
 
 @property (assign, nonatomic) OperationType operationType;
