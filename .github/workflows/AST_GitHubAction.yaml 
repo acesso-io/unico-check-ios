@@ -1,0 +1,40 @@
+name: Checkmarx AST scan
+on: 
+  [push, pull_request]
+jobs:  
+  pull_request_with_block:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.2.0
+      - name: Type scan
+        id: pull_request_scan
+        run : echo "Run on" ${{ github.event_name }}
+      - name: Checkmarx One - Check vulnerabilities with block
+        uses: acesso-io/devsec-ast-github-action@main
+        with:
+          project_name: ${{ github.repository }}
+          cx_tenant: ${{ secrets.CHECKMARX_TENANT_NAME }}
+          base_uri: https://ast.checkmarx.net
+          cx_client_id: ${{ secrets.CHECKMARX_CLIENT_ID }}
+          cx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}
+          additional_params: ${{ secrets.CHECKMARX_SCAN_PARAMETER_ON_PR }} 
+  push_scan:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.2.0
+      - name: Type scan
+        id: pull_scan
+        run : echo "Run on" ${{ github.event_name }}
+      - name: Checkmarx One - Check vulnerabilities without block
+        uses: acesso-io/devsec-ast-github-action@main
+        with:
+          project_name: ${{ github.repository }}
+          cx_tenant: ${{ secrets.CHECKMARX_TENANT_NAME }}
+          base_uri: https://ast.checkmarx.net
+          cx_client_id: ${{ secrets.CHECKMARX_CLIENT_ID }}
+          cx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}
+          additional_params: ${{ secrets.CHECKMARX_SCAN_PARAMETER_ON_PUSH }}
