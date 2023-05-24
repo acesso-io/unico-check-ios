@@ -16,6 +16,8 @@
 		E68E568C27E28166002188B9 /* FaceTecSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */; };
 		E68E568D27E28166002188B9 /* FaceTecSDK.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6E83FF227E53A4300923059 /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6E83FF427E53A4300923059 /* FaceTec.strings */; };
+		F865BF232A1EAAD900C2FC3F /* UnicoSdkBase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F865BF222A1EAAD900C2FC3F /* UnicoSdkBase.xcframework */; };
+		F865BF252A1EAAE000C2FC3F /* UnicoSdkSecurity.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F865BF242A1EAAE000C2FC3F /* UnicoSdkSecurity.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		E655B58227106C4E001505C4 /* unicocheck_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unicocheck_iosTests.m; sourceTree = "<group>"; };
 		E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FaceTecSDK.xcframework; sourceTree = "<group>"; };
 		E6E83FF327E53A4300923059 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FaceTec.strings; sourceTree = "<group>"; };
+		F865BF222A1EAAD900C2FC3F /* UnicoSdkBase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = UnicoSdkBase.xcframework; sourceTree = "<group>"; };
+		F865BF242A1EAAE000C2FC3F /* UnicoSdkSecurity.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = UnicoSdkSecurity.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			files = (
 				E609EDD12914612B0076DFB5 /* UnicoSdkLogger.xcframework in Frameworks */,
 				E68E568C27E28166002188B9 /* FaceTecSDK.xcframework in Frameworks */,
+				F865BF252A1EAAE000C2FC3F /* UnicoSdkSecurity.xcframework in Frameworks */,
+				F865BF232A1EAAD900C2FC3F /* UnicoSdkBase.xcframework in Frameworks */,
 				E632D1ED273A0512006F4B03 /* AcessoBio.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,9 +120,11 @@
 		E655B58D27106C60001505C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E632D1EC273A0512006F4B03 /* AcessoBio.xcframework */,
+				F865BF242A1EAAE000C2FC3F /* UnicoSdkSecurity.xcframework */,
+				F865BF222A1EAAD900C2FC3F /* UnicoSdkBase.xcframework */,
 				E609EDD02914612B0076DFB5 /* UnicoSdkLogger.xcframework */,
 				E68E568B27E28166002188B9 /* FaceTecSDK.xcframework */,
-				E632D1EC273A0512006F4B03 /* AcessoBio.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
