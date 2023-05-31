@@ -26,12 +26,12 @@
 "FaceTec_feedback_center_face" = "Centralize seu rosto";
 "FaceTec_feedback_face_not_found" = "Enquadre o seu rosto";
 "FaceTec_feedback_face_not_looking_straight_ahead" = "Olhe para frente";
-"FaceTec_feedback_face_not_upright" = "Mantenha a cabeça reta";
-"FaceTec_feedback_hold_steady" = "Mantenha a posição";
-"FaceTec_feedback_move_phone_away" = "Agora, afaste seu rosto";
-"FaceTec_feedback_move_phone_closer" = "Agora, aproxime seu rosto";
-"FaceTec_feedback_move_phone_to_eye_level" = "Telefone ao nível dos olhos";
-"FaceTec_feedback_use_even_lighting" = "Ilumine seu rosto uniformemente";
+"FaceTec_feedback_face_not_upright" = "Não se mexa";
+"FaceTec_feedback_hold_steady" = "Não se mexa";
+"FaceTec_feedback_move_phone_away" = "Afaste seu rosto da câmera";
+"FaceTec_feedback_move_phone_closer" = "Aproxime seu rosto da câmera";
+"FaceTec_feedback_move_phone_to_eye_level" = "Olhe para a câmera";
+"FaceTec_feedback_use_even_lighting" = "Procure um local iluminado";
 
 "FaceTec_idscan_type_selection_header" = "Tipo do documento";
 "FaceTec_idscan_capture_tap_to_focus_message" = "Toque na tela para focalizar";

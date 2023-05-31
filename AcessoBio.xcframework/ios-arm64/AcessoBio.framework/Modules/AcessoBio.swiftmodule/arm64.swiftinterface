@@ -15,6 +15,7 @@ import Swift
 import SystemConfiguration
 import UIKit
 import UnicoSdkBase
+import UnicoSdkBase/*.NetworkCancellable*/
 import UnicoSdkLogger
 import UnicoSdkSecurity
 import _Concurrency
@@ -126,17 +127,6 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   @objc public init(headers: Foundation.NSDictionary)
   @objc deinit
 }
-public protocol NetworkConfigurable {
-  var baseURL: Foundation.URL { get }
-  var headers: [Swift.String : Swift.String] { get }
-  var queryParameters: [Swift.String : Swift.String] { get }
-}
-public struct ApiDataNetworkConfig : AcessoBio.NetworkConfigurable {
-  public let baseURL: Foundation.URL
-  public let headers: [Swift.String : Swift.String]
-  public let queryParameters: [Swift.String : Swift.String]
-  public init(baseURL: Foundation.URL, headers: [Swift.String : Swift.String] = [:], queryParameters: [Swift.String : Swift.String] = [:])
-}
 @objc public protocol GyroscopeSensorDevice : AcessoBio.SensorsDevice {
   @objc override func startUpdate()
   @objc override func stopUpdate()
@@ -196,61 +186,6 @@ extension AcessoBio.UnicoCheckThemes {
   @objc @discardableResult
   func stopGyroscope() -> AcessoBio.DeviceBehaviorsDTO
 }
-public enum HTTPMethodType : Swift.String {
-  case get
-  case head
-  case post
-  case put
-  case patch
-  case delete
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum BodyEncoding {
-  case jsonSerializationData
-  case stringEncodingAscii
-  public static func == (a: AcessoBio.BodyEncoding, b: AcessoBio.BodyEncoding) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-@_hasMissingDesignatedInitializers public class Endpoint<R> : AcessoBio.ResponseRequestable {
-  public typealias Response = R
-  final public let path: Swift.String
-  final public let isFullPath: Swift.Bool
-  final public let method: AcessoBio.HTTPMethodType
-  final public let headerParameters: [Swift.String : Swift.String]
-  final public let queryParametersEncodable: Swift.Encodable?
-  final public let queryParameters: [Swift.String : Any]
-  final public let bodyParametersEncodable: Swift.Encodable?
-  final public let bodyParameters: [Swift.String : Any]
-  final public let bodyEncoding: AcessoBio.BodyEncoding
-  final public let responseDecoder: AcessoBio.ResponseDecoder
-  @objc deinit
-}
-public protocol Requestable {
-  var path: Swift.String { get }
-  var isFullPath: Swift.Bool { get }
-  var method: AcessoBio.HTTPMethodType { get }
-  var headerParameters: [Swift.String : Swift.String] { get }
-  var queryParametersEncodable: Swift.Encodable? { get }
-  var queryParameters: [Swift.String : Any] { get }
-  var bodyParametersEncodable: Swift.Encodable? { get }
-  var bodyParameters: [Swift.String : Any] { get }
-  var bodyEncoding: AcessoBio.BodyEncoding { get }
-  func urlRequest(with networkConfig: AcessoBio.NetworkConfigurable) throws -> Foundation.URLRequest
-}
-public protocol ResponseRequestable : AcessoBio.Requestable {
-  associatedtype Response
-  var responseDecoder: AcessoBio.ResponseDecoder { get }
-}
-extension AcessoBio.Requestable {
-  public func urlRequest(with config: AcessoBio.NetworkConfigurable) throws -> Foundation.URLRequest
-}
 public func base32Encode(_ data: Foundation.Data) -> Swift.String
 public func base32HexEncode(_ data: Foundation.Data) -> Swift.String
 public func base32DecodeToData(_ string: Swift.String) -> Foundation.Data?
@@ -307,12 +242,10 @@ extension UIKit.UIDevice {
 extension AcessoBio.UnicoSetupData : Swift.Decodable {
   public convenience init(from decoder: Swift.Decoder) throws
 }
-@_inheritsConvenienceInitializers @objc final public class DefaultGetCameraResultUseCase : ObjectiveC.NSObject {
-  @objc override dynamic public init()
+@objc final public class DefaultGetCameraResultUseCase : ObjectiveC.NSObject {
+  @objc public init(key: Swift.String, keyBody: Swift.String, expires: Swift.Double, sessionToken: Swift.String?, isIntegrationCaptureFlow: Swift.Bool)
+  @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, utcTimeNow: Swift.Double, uuid: Swift.String) -> AcessoBio.CaptureResult
   @objc deinit
-}
-extension AcessoBio.DefaultGetCameraResultUseCase {
-  @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, token: Swift.String) -> AcessoBio.CaptureResult
 }
 @objc public protocol SensorsDevice {
   @objc func startUpdate()
@@ -424,67 +357,29 @@ extension AcessoBio.DefaultCallbackWorker : AcessoBio.CallbackWorker {
 extension AcessoBio.DefaultProviderFactory : AcessoBio.ProviderFactory {
   @objc final public func create() -> AcessoBio.CreateProviderUseCase
 }
-public enum NetworkError : Swift.Error {
-  case error(statusCode: Swift.Int, data: Foundation.Data?)
-  case notConnected
-  case cancelled
-  case generic(Swift.Error)
-  case urlGeneration
-}
-public protocol NetworkCancellable {
-  func cancel()
-}
-extension Foundation.URLSessionTask : AcessoBio.NetworkCancellable {
-}
-public protocol NetworkService {
-  typealias CompletionHandler = (Swift.Result<Foundation.Data?, AcessoBio.NetworkError>) -> Swift.Void
-  func request(endpoint: AcessoBio.Requestable, completion: @escaping Self.CompletionHandler) -> AcessoBio.NetworkCancellable?
-}
-public protocol NetworkSessionManager {
-  typealias CompletionHandler = (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void
-  func request(_ request: Foundation.URLRequest, completion: @escaping Self.CompletionHandler) -> AcessoBio.NetworkCancellable
-}
-public protocol NetworkErrorLogger {
-  func log(request: Foundation.URLRequest)
-  func log(responseData data: Foundation.Data?, response: Foundation.URLResponse?)
-  func log(error: Swift.Error)
-}
-final public class DefaultNetworkService {
-  public init(config: AcessoBio.NetworkConfigurable, sessionManager: AcessoBio.NetworkSessionManager = DefaultNetworkSessionManager(), logger: AcessoBio.NetworkErrorLogger = DefaultNetworkErrorLogger())
-  @objc deinit
-}
-extension AcessoBio.DefaultNetworkService : AcessoBio.NetworkService {
-  final public func request(endpoint: AcessoBio.Requestable, completion: @escaping AcessoBio.DefaultNetworkService.CompletionHandler) -> AcessoBio.NetworkCancellable?
-}
-public class DefaultNetworkSessionManager : AcessoBio.NetworkSessionManager {
-  public init()
-  public func request(_ request: Foundation.URLRequest, completion: @escaping AcessoBio.DefaultNetworkSessionManager.CompletionHandler) -> AcessoBio.NetworkCancellable
-  @objc deinit
-}
-final public class DefaultNetworkErrorLogger : AcessoBio.NetworkErrorLogger {
-  public init()
-  final public func log(request: Foundation.URLRequest)
-  final public func log(responseData data: Foundation.Data?, response: Foundation.URLResponse?)
-  final public func log(error: Swift.Error)
-  @objc deinit
-}
-extension AcessoBio.NetworkError {
-  public var isNotFoundError: Swift.Bool {
-    get
-  }
-  public func hasStatusCode(_ codeError: Swift.Int) -> Swift.Bool
-}
 public protocol Cancellable {
   func cancel()
 }
 @objc @_hasMissingDesignatedInitializers public class SDKTokenResponseDTOAdapter : ObjectiveC.NSObject {
+  @objc public var facetecSessionToken: Swift.String? {
+    @objc get
+  }
   @objc public var geolocationEnabled: Swift.Bool {
     @objc get
   }
-  @objc public var Token: Swift.String {
+  @objc public var key: Swift.String {
+    @objc get
+  }
+  @objc public var keyBody: Swift.String {
     @objc get
   }
   @objc public var EnableLogo: Swift.Bool {
+    @objc get
+  }
+  @objc public var expires: Swift.Double {
+    @objc get
+  }
+  @objc public var isIntegrationCaptureFlow: Swift.Bool {
     @objc get
   }
   @objc public func getSdkPk() -> AcessoBio.SdkPkDTO?
@@ -642,56 +537,6 @@ extension AcessoBio.DefaultLoggerFactory : AcessoBio.LoggerFactory {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SdkPkDTO : ObjectiveC.NSObject, Swift.Decodable {
   required public init(from decoder: Swift.Decoder) throws
   @objc public func getAppId() -> Swift.String?
-  @objc deinit
-}
-public enum DataTransferError : Swift.Error {
-  case noResponse
-  case parsing(Swift.Error)
-  case networkFailure(AcessoBio.NetworkError)
-  case resolvedNetworkFailure(Swift.Error)
-}
-public protocol DataTransferService {
-  typealias CompletionHandler<T> = (Swift.Result<T, AcessoBio.DataTransferError>) -> Swift.Void
-  @discardableResult
-  func request<T, E>(with endpoint: E, completion: @escaping Self.CompletionHandler<T>) -> AcessoBio.NetworkCancellable? where T : Swift.Decodable, T == E.Response, E : AcessoBio.ResponseRequestable
-  @discardableResult
-  func request<E>(with endpoint: E, completion: @escaping Self.CompletionHandler<Swift.Void>) -> AcessoBio.NetworkCancellable? where E : AcessoBio.ResponseRequestable, E.Response == Swift.Void
-}
-public protocol DataTransferErrorResolver {
-  func resolve(error: AcessoBio.NetworkError) -> Swift.Error
-}
-public protocol ResponseDecoder {
-  func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
-}
-public protocol DataTransferErrorLogger {
-  func log(error: Swift.Error)
-}
-final public class DefaultDataTransferService {
-  public init(with networkService: AcessoBio.NetworkService, errorResolver: AcessoBio.DataTransferErrorResolver = DefaultDataTransferErrorResolver(), errorLogger: AcessoBio.DataTransferErrorLogger = DefaultDataTransferErrorLogger())
-  @objc deinit
-}
-extension AcessoBio.DefaultDataTransferService : AcessoBio.DataTransferService {
-  final public func request<T, E>(with endpoint: E, completion: @escaping AcessoBio.DefaultDataTransferService.CompletionHandler<T>) -> AcessoBio.NetworkCancellable? where T : Swift.Decodable, T == E.Response, E : AcessoBio.ResponseRequestable
-  final public func request<E>(with endpoint: E, completion: @escaping AcessoBio.DefaultDataTransferService.CompletionHandler<Swift.Void>) -> AcessoBio.NetworkCancellable? where E : AcessoBio.ResponseRequestable, E.Response == Swift.Void
-}
-final public class DefaultDataTransferErrorLogger : AcessoBio.DataTransferErrorLogger {
-  public init()
-  final public func log(error: Swift.Error)
-  @objc deinit
-}
-public class DefaultDataTransferErrorResolver : AcessoBio.DataTransferErrorResolver {
-  public init()
-  public func resolve(error: AcessoBio.NetworkError) -> Swift.Error
-  @objc deinit
-}
-public class JSONResponseDecoder : AcessoBio.ResponseDecoder {
-  public init()
-  public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
-  @objc deinit
-}
-public class RawDataResponseDecoder : AcessoBio.ResponseDecoder {
-  public init()
-  public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
   @objc deinit
 }
 @objc public class UnicoFacetec : ObjectiveC.NSObject {
