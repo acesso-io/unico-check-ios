@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		3Z2dg2v7ofMNH9xv1pzW+wdvXnU=
+		BOfGNap7xqZbcbUiWKw9wXpSJow=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
@@ -126,11 +126,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		SaDbs0P/0Jh3DlilkiPCaBVhRoc=
+		Hs/5al/WxfCMFzJmIE4o0QsAEZM=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		TWeFUGdQvg33gXUbhRnz2QDnRfA=
+		dxPjImtdSokWap6AGw4F5PlTiWw=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		SaDbs0P/0Jh3DlilkiPCaBVhRoc=
+		Hs/5al/WxfCMFzJmIE4o0QsAEZM=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		TWeFUGdQvg33gXUbhRnz2QDnRfA=
+		dxPjImtdSokWap6AGw4F5PlTiWw=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -150,11 +150,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mnMJxsJLqWXZIgr8I/yijxtR1MQ=
+		tChRrODMlhyFcT8/sbAmELH8KYw=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		brbF/tj9zcjbolbJZuDclCZ10Cs=
+		6l5udCpvqYB5dYBTFlmvgs3jjEY=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -162,11 +162,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		mnMJxsJLqWXZIgr8I/yijxtR1MQ=
+		tChRrODMlhyFcT8/sbAmELH8KYw=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		brbF/tj9zcjbolbJZuDclCZ10Cs=
+		6l5udCpvqYB5dYBTFlmvgs3jjEY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -176,7 +176,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rQb5gIMGDLeSNvUcb6KmqL+ruK0=
+			DTvKJux/C+tizewvIjwe/IOhxr4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -247,7 +247,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pFgpqLsGkQLciT7I76nwHiQX6FI2dV+nNaqr0Tx6Mrs=
+			9TBWznq1zKCufMxra36vVXHe6Ne1xmmVgts7Dmbq/EU=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
@@ -443,14 +443,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9+g1RfEQMh6UOu2/+SfeOFEgbbMqMeeKUeZXfr7/xcE=
+			tTjJh/iJanZw0pP+jebcxZBCEd+R7b5hx1tWvJ4ozlY=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YgSbYmUmgwh2yc3T/iR7MxmhW7Kv6qEm8a/0xRFEHI4=
+			ASiNk3lOlRQ81tnl3x+KK9ryGuNCsZ6xIK0XR85nxg0=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftdoc</key>
@@ -464,14 +464,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9+g1RfEQMh6UOu2/+SfeOFEgbbMqMeeKUeZXfr7/xcE=
+			tTjJh/iJanZw0pP+jebcxZBCEd+R7b5hx1tWvJ4ozlY=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YgSbYmUmgwh2yc3T/iR7MxmhW7Kv6qEm8a/0xRFEHI4=
+			ASiNk3lOlRQ81tnl3x+KK9ryGuNCsZ6xIK0XR85nxg0=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -485,14 +485,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xw1VH6XKcwZm3I5BbjK8ZePzerxUU1Iceg9PhY0teeA=
+			GNWAen2cubKijNmUH4bRxf/DlxbJN8pIaf/k8/VvxwU=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EuuUk4sQ/EtP6RORZrDt3B/OczO4xVZjHjVRDGOmNYk=
+			Vn9zx/gKAYHBMWGjulQBsBj2Z9Ev9lqwHyhAfo3993k=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftdoc</key>
@@ -506,14 +506,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xw1VH6XKcwZm3I5BbjK8ZePzerxUU1Iceg9PhY0teeA=
+			GNWAen2cubKijNmUH4bRxf/DlxbJN8pIaf/k8/VvxwU=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EuuUk4sQ/EtP6RORZrDt3B/OczO4xVZjHjVRDGOmNYk=
+			Vn9zx/gKAYHBMWGjulQBsBj2Z9Ev9lqwHyhAfo3993k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -527,7 +527,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			80k6SCTRjwciRg9JzmO4+UVy67v8SVP1MLRAE/gz1qM=
+			NA53lrjFFbUuKRjl5ecqM5G8l0ude2dAy03ciaHsus4=
 			</data>
 			<key>optional</key>
 			<true/>

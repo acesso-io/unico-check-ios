@@ -341,12 +341,10 @@ SWIFT_PROTOCOL("_TtP9AcessoBio16DataLoggerOutput_")
 
 SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 @interface DefaultGetCameraResultUseCase : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface DefaultGetCameraResultUseCase (SWIFT_EXTENSION(AcessoBio))
-- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId token:(NSString * _Nonnull)token SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires sessionToken:(NSString * _Nullable)sessionToken isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
+- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class CMMotionManager;
@@ -519,9 +517,13 @@ SWIFT_CLASS("_TtC9AcessoBio13OpenCameraDTO")
 
 SWIFT_CLASS("_TtC9AcessoBio26SDKTokenResponseDTOAdapter")
 @interface SDKTokenResponseDTOAdapter : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nullable facetecSessionToken;
 @property (nonatomic, readonly) BOOL geolocationEnabled;
-@property (nonatomic, readonly, copy) NSString * _Nonnull Token;
+@property (nonatomic, readonly, copy) NSString * _Nonnull key;
+@property (nonatomic, readonly, copy) NSString * _Nonnull keyBody;
 @property (nonatomic, readonly) BOOL EnableLogo;
+@property (nonatomic, readonly) double expires;
+@property (nonatomic, readonly) BOOL isIntegrationCaptureFlow;
 - (SdkPkDTO * _Nullable)getSdkPk SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -585,7 +587,6 @@ SWIFT_CLASS("_TtC9AcessoBio9TimersDTO")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 
