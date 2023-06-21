@@ -54,7 +54,7 @@
 "FaceTec_presession_conditions_too_bright" = "Iluminado demais";
 "FaceTec_presession_brighten_your_environment" = "Ilumine seu ambiente";
 
-"FaceTec_result_facescan_upload_message" = "Estamos verificando \nse está tudo certo, \naguarde.";
+"FaceTec_result_facescan_upload_message" = "";
 "FaceTec_result_success_message" = "Sucesso!";
 "FaceTec_result_idscan_upload_message" = "Estamos verificando \nse está tudo certo, \naguarde.";
 "FaceTec_result_nfc_upload_message" = "Estamos verificando \nse está tudo certo, \naguarde.";
