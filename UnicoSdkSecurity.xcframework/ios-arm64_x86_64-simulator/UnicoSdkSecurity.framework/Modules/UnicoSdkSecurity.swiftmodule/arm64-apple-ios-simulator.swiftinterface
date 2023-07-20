@@ -7,6 +7,8 @@ import Foundation
 import UnicoSdkSecurity.HSE_Private
 import Swift
 import UnicoSdkBase
+import UnicoSdkBase/*.API*/
+import UnicoSdkBase/*.DataTransferService*/
 @_exported import UnicoSdkSecurity
 import _Concurrency
 public protocol DeviceInfo {
@@ -41,16 +43,21 @@ public enum DeviceInfoError : Swift.Error {
   }
 }
 @_hasMissingDesignatedInitializers final public class UnicoSecuritySDK {
-  convenience public init(sdkKey: Swift.String?)
+  convenience public init(sdkKey: Swift.String, originBundleId: Swift.String? = nil, env: UnicoSdkSecurity.Env = .production)
   final public func getSecurityResult() throws -> UnicoSdkSecurity.SecurityResult
+  final public func getDeviceId(completionHandler: @escaping (Swift.Result<Swift.String, UnicoSdkSecurity.DeviceInfoError>) -> Swift.Void)
   final public func getDeviceInfo(completionHandler: @escaping (Swift.Result<UnicoSdkSecurity.DeviceInfo, UnicoSdkSecurity.DeviceInfoError>) -> Swift.Void)
   @objc deinit
+}
+public enum Env {
+  case custom(service: UnicoSdkBase.DataTransferService, totpSecret: Swift.String)
+  case production
 }
 public protocol SecurityResult {
   var jailBreak: Swift.Bool? { get }
   var simulator: Swift.Bool? { get }
   var debugger: Swift.Bool? { get }
-  var deviceID: Swift.String? { get }
+  var deviceInfo: Swift.String? { get }
 }
 extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.Equatable {}
 extension UnicoSdkSecurity.UnicoSecurityErrors : Swift.Hashable {}
