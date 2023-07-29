@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "unicosecurity-ios"
-  spec.version      = "2.3.21"
+  spec.version      = "2.3.22"
   spec.summary      = "Esta biblioteca visa implementar as soluções de segurança unico | check sob a plataforma iOS."
   spec.homepage     = "https://developers.unico.io/"
   spec.license      = "MIT"

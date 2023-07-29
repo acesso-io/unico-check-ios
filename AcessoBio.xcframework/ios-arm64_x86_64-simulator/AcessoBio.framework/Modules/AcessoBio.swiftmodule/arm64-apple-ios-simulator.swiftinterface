@@ -6,14 +6,15 @@
 import CommonCrypto
 import Compression
 import CoreMotion
+import CoreTelephony
 import Darwin
 import FaceTecSDK
 import Foundation
 import LocalAuthentication
-import Network
 import Security
 import Swift
 import SystemConfiguration
+import UIKit.UIDevice
 import UIKit
 import UnicoSdkBase
 import UnicoSdkBase/*.NetworkCancellable*/
@@ -233,9 +234,6 @@ extension Foundation.Data {
 }
 @objc public protocol SensorsWorkerFactory {
   @objc func make() -> AcessoBio.SensorsWorker
-}
-extension UIKit.UIDevice {
-  @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
 }
 @objc @_hasMissingDesignatedInitializers final public class UnicoSetupData : ObjectiveC.NSObject {
   @objc deinit
