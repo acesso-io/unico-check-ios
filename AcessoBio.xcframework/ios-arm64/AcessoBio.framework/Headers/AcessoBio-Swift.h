@@ -295,6 +295,7 @@ SWIFT_CLASS("_TtC9AcessoBio12BehaviorsDTO")
 @end
 
 
+
 @class NSNumber;
 @class GeolocationDTO;
 

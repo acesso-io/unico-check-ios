@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		1L/PqyEPnO4beIDNwEOWs5fz/aA=
+		uXm4tj7kgsyBIRXHferqFXkW4As=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
@@ -122,11 +122,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		175chQwKqrgSF2UohFrSy6YwGq8=
+		y4IIRsoGDfhkqSEX2rTS5swXbyc=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		dSp6gajMZ2DthDAW3e3qfsYkbvo=
+		IRX5CLonR2c4f1GH6J/t+pygtFA=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -134,19 +134,19 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		dSp6gajMZ2DthDAW3e3qfsYkbvo=
+		IRX5CLonR2c4f1GH6J/t+pygtFA=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+hU/mVW2Qn3WKZuvPbJGveDDrAc=
+		5cFRrnd1EON4EJC6nwuIznFsiZQ=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		175chQwKqrgSF2UohFrSy6YwGq8=
+		y4IIRsoGDfhkqSEX2rTS5swXbyc=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		CMZWNwlzVFEFxx+krcDZTZITFNw=
+		WWr6iBAvP2eYFEiW6JEuS2iC8NA=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -154,11 +154,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		CMZWNwlzVFEFxx+krcDZTZITFNw=
+		WWr6iBAvP2eYFEiW6JEuS2iC8NA=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vJ1qaMRowPdCTZdtCc2x1325M6w=
+		0jjxBBo7C3lgJHGalffh7orufMA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -239,7 +239,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fN/yXIcfwxVW/lW0I4Q1UnpU70VFpFOjl/WONvTBQvQ=
+			DiNWzFquLXVZWVtpQRUo7jxdZVRZVAVZavvCMKHw9o8=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
@@ -428,14 +428,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			90gne0ohE3bVrgc4FqIw6noJ/bd3gXqmweNETPFVyPw=
+			rb/wmDy9zP4D44TUBlLuRfXmPPKmGfMRQkhdeUrJBO8=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W5uTizo+BIhIzA3K+HXEjKf0Rk1qYCrUGvKxPdy1fD8=
+			neEfZxgC+d/m7z6RKlXMStLItwlXh51uEJSP2pr1IJI=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -449,28 +449,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W5uTizo+BIhIzA3K+HXEjKf0Rk1qYCrUGvKxPdy1fD8=
+			neEfZxgC+d/m7z6RKlXMStLItwlXh51uEJSP2pr1IJI=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xYGrVQzGSW+mjbBVlF1GFyL0ABv3lsRso2atg0iRoMk=
+			+PnonsElAPFKLOF7MsThQLVwtBWnnEfGp41zu2Nf4Hk=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			90gne0ohE3bVrgc4FqIw6noJ/bd3gXqmweNETPFVyPw=
+			rb/wmDy9zP4D44TUBlLuRfXmPPKmGfMRQkhdeUrJBO8=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j4EOHen7s9E39NqEoW68spKGsbfullAhGypRBC3tafQ=
+			2OGO/UmpTnXsUjb05i/Uqj1e0E3woxyBYWi3ATqcLq8=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -484,14 +484,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j4EOHen7s9E39NqEoW68spKGsbfullAhGypRBC3tafQ=
+			2OGO/UmpTnXsUjb05i/Uqj1e0E3woxyBYWi3ATqcLq8=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W38DaFvewvcyxJ9jSn4cvayhqA3MVQyeISu0QjdIa+k=
+			jimT1+/4GZ15h/2UZsgGJp9IKI5on0e8SBxLgFQXI/g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

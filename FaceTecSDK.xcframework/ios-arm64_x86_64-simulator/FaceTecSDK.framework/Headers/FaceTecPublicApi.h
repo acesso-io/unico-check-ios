@@ -307,6 +307,19 @@ __attribute__((visibility("default")))
 
 @property (nonatomic) NSDictionary* _Nullable featureFlagsMap;
 
+- (void) setGuidanceCustomization:(FaceTecGuidanceCustomization * _Nullable)guidanceCustomization;
+- (void) setOvalCustomization:(FaceTecOvalCustomization * _Nullable)ovalCustomization;
+- (void) setFeedbackCustomization:(FaceTecFeedbackCustomization * _Nullable)feedbackCustomization;
+- (void) setFrameCustomization:(FaceTecFrameCustomization * _Nullable)zoomFrameCustomization;
+- (void) setCancelButtonCustomization:(FaceTecCancelButtonCustomization * _Nullable)cancelButtonCustomization;
+- (void) setVocalGuidanceCustomization:(FaceTecVocalGuidanceCustomization * _Nullable)vocalGuidanceCustomization;
+- (void) setResultScreenCustomization:(FaceTecResultScreenCustomization * _Nullable)resultScreenCustomization;
+- (void) setOverlayCustomization:(FaceTecOverlayCustomization * _Nullable)overlayCustomization;
+- (void) setIdScanCustomization:(FaceTecIDScanCustomization * _Nullable)iDScanCustomization;
+- (void) setOCRConfirmationCustomization:(FaceTecOCRConfirmationCustomization * _Nullable)ocrConfirmationCustomization;
+- (void) setSessionTimerCustomization:(FaceTecSessionTimerCustomization * _Nullable)sessionTimerCustomization;
+- (void) setInitialLoadingAnimationCustomization:(FaceTecInitialLoadingAnimationCustomization * _Nullable)initialLoadingAnimationCustomization;
+
 - (nonnull instancetype)init;
 - (nonnull instancetype)initWithFeatureFlagsMap:(NSDictionary* _Nullable)featureFlagsMap  NS_SWIFT_NAME(init(featureFlagsMap:));
 + (nonnull instancetype)new;
