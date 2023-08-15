@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AcessoBio
 // swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
 @_exported import AcessoBio
 import CommonCrypto
 import Compression
@@ -18,6 +19,7 @@ import UIKit.UIDevice
 import UIKit
 import UnicoSdkBase
 import UnicoSdkBase/*.NetworkCancellable*/
+import UnicoSdkLiveness
 import UnicoSdkLogger
 import UnicoSdkSecurity
 import _Concurrency
@@ -50,7 +52,7 @@ extension AcessoBio.DefaultLibInfoWoker : AcessoBio.LibInfoWoker {
 @objc public protocol CreateProviderUseCase {
   @objc func execute() -> Swift.Bool
 }
-@_inheritsConvenienceInitializers @objc public class ErrorUnico : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc public class ErrorUnico : ObjectiveC.NSObject, Swift.Error {
   public var code: Swift.Int
   public var message: Swift.String?
   public var body: [Swift.String : Swift.String?]?
@@ -88,25 +90,9 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   case AUTHENTICATION_REQUEST_ERROR = 73300
   case AUTHENTICATION_PARSE_ERROR = 73301
   case AUTHENTICATION_TOKEN_NOT_FOUND = 73302
-  case FACETEC_NOT_FOUND = 73701
-  case FACETEC_PRODUCTION_MODE_NOT_WORKING = 73702
   case FACETEC_GET_SESSION_FAILED = 73703
-  case FACETEC_SESSION_STATUS_USER_CANCELLED = 73704
-  case FACETEC_SESSION_STATUS_SESSION_UNSUCCESSFUL = 73705
-  case FACETEC_SESSION_STATUS_CAMERA_PERMISSION_DENIED = 73706
-  case FACETEC_SESSION_STATUS_CONTEXT_SWITCH = 73707
-  case FACETEC_SESSION_STATUS_LANDSCAPE_MODE_NOT_ALLOWED = 73708
-  case FACETEC_SESSION_STATUS_REVERSE_PORTRAIT_NOT_ALLOWED = 73709
-  case FACETEC_SESSION_STATUS_TIMEOUT = 73710
-  case FACETEC_SESSION_STATUS_LOW_MEMORY = 73711
-  case FACETEC_SESSION_STATUS_NON_PRODUCTION_MODE_NETWORKING_REQUIRED = 73712
-  case FACETEC_SESSION_STATUS_GRACE_PERIOD_EXCEDED = 73713
-  case FACETEC_SESSION_STATUS_ENCRYPTION_KEY_INVALID = 73714
-  case FACETEC_SESSION_STATUS_MISSING_GUIDANCE_IMAGES = 73715
-  case FACETEC_SESSION_STATUS_CAMERA_INITIALIZATION_ISSUE = 73716
-  case FACETEC_SESSION_STATUS_LOCKED_OUT = 73717
-  case FACETEC_SESSION_UNKNOWN_INTERNAL_ERROR = 73718
-  case FACETEC_SESSION_USER_CANCELLED_VIA_CLICKABLE_READY_SCREEN_SUBTEXT = 73719
+  case SESSION_STATUS_USER_CANCELLED = 73704
+  case SESSION_STATUS_TIMEOUT = 73710
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -129,31 +115,12 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   @objc public init(headers: Foundation.NSDictionary)
   @objc deinit
 }
-@objc public protocol GyroscopeSensorDevice : AcessoBio.SensorsDevice {
-  @objc func startUpdate()
-  @objc func stopUpdate()
-  @objc func clearAllValues()
-  @objc func clearPitchValues()
-  @objc func clearRollValues()
-  @objc func clearYawValues()
-  @objc func getPitchValues() -> [AcessoBio.SensorValuesDTO]
-  @objc func getRollValues() -> [AcessoBio.SensorValuesDTO]
-  @objc func getYawValues() -> [AcessoBio.SensorValuesDTO]
-}
-@objc final public class DefaultGyroscopeSensorDevice : ObjectiveC.NSObject {
-  @objc public init(motionManager: CoreMotion.CMMotionManager = CMMotionManager())
+@_hasMissingDesignatedInitializers final public class DefaultMotionSensorsDevice {
   @objc deinit
 }
-extension AcessoBio.DefaultGyroscopeSensorDevice : AcessoBio.GyroscopeSensorDevice {
+extension AcessoBio.DefaultMotionSensorsDevice {
   @objc final public func startUpdate()
   @objc final public func stopUpdate()
-  @objc final public func clearAllValues()
-  @objc final public func clearPitchValues()
-  @objc final public func clearRollValues()
-  @objc final public func clearYawValues()
-  @objc final public func getPitchValues() -> [AcessoBio.SensorValuesDTO]
-  @objc final public func getRollValues() -> [AcessoBio.SensorValuesDTO]
-  @objc final public func getYawValues() -> [AcessoBio.SensorValuesDTO]
 }
 public protocol UnicoSetupServicesProtocol {
   typealias Response = Swift.Result<AcessoBio.SDKTokenResponseDTOAdapter, AcessoBio.ErrorBio>
@@ -183,10 +150,28 @@ extension AcessoBio.UnicoCheckThemes {
   @objc dynamic public func isValidHexStringColor(currentColor: Swift.String) -> Swift.Bool
   @objc dynamic public func convertHexSringToUIColor(currentColor: Swift.String) -> UIKit.UIColor
 }
+@objc @_hasMissingDesignatedInitializers public class UnicoCheckLivenessAdapter : ObjectiveC.NSObject {
+  public typealias PrepareCompletionSuccess = () -> Swift.Void
+  public typealias PrepareCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
+  public typealias OpenCompletionSuccess = ([Swift.String : Any]) -> Swift.Void
+  public typealias OpenCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
+  @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKTokenResponseDTOAdapter, bioThemeDelegate: AcessoBio.AcessoBioThemeDelegate?)
+  @objc public func prepareCamera(success: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionFailure)
+  @objc public func openCamera(unicoSetup: AcessoBio.UnicoSetupData, timeoutInterval: Swift.Double, success: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionFailure)
+  @objc deinit
+}
+extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate {
+  public func onCameraReady(unicoLivenessOpenCamera: UnicoSdkLiveness.UnicoLivenessOpenCamera)
+  public func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
+}
+extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDelegate {
+  public func onSuccess(livenessResult: UnicoSdkLiveness.LivenessResult)
+  public func onError(livenessError: UnicoSdkLiveness.LivenessError)
+}
 @objc public protocol SensorsWorker {
-  @objc func startGyroscope()
+  @objc func startMotion()
   @objc @discardableResult
-  func stopGyroscope() -> AcessoBio.DeviceBehaviorsDTO
+  func stopMotion() -> AcessoBio.DeviceBehaviorsDTO
 }
 public func base32Encode(_ data: Foundation.Data) -> Swift.String
 public func base32HexEncode(_ data: Foundation.Data) -> Swift.String
@@ -372,7 +357,7 @@ public protocol Cancellable {
   @objc public var keyBody: Swift.String {
     @objc get
   }
-  @objc public var EnableLogo: Swift.Bool {
+  @objc public var enableLogo: Swift.Bool {
     @objc get
   }
   @objc public var expires: Swift.Double {
@@ -381,7 +366,9 @@ public protocol Cancellable {
   @objc public var isIntegrationCaptureFlow: Swift.Bool {
     @objc get
   }
-  @objc public func getSdkPk() -> AcessoBio.SdkPkDTO?
+  @objc public var isLiveness: Swift.Bool {
+    @objc get
+  }
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class UnicoNetworkingModule : ObjectiveC.NSObject {
@@ -452,12 +439,6 @@ public protocol Cancellable {
 }
 @objc public class OpenCameraDTO : ObjectiveC.NSObject {
   @objc public init(captureType: Swift.String? = nil, cameraType: Swift.String? = nil)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class ErrorFacetec : AcessoBio.ErrorBio {
-  @objc override dynamic public init(code: Swift.Int, method: Swift.String, desc: Swift.String)
-  @objc override dynamic public init(code: Swift.Int, desc: Swift.String, info: Swift.String)
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc public class UnicoLogoImageView : ObjectiveC.NSObject {
@@ -533,18 +514,22 @@ extension AcessoBio.UnicoFaceCameraInteractor : AcessoBio.UnicoFaceCameraInterac
 extension AcessoBio.DefaultLoggerFactory : AcessoBio.LoggerFactory {
   @objc final public func make() -> AcessoBio.DataLoggerOutput
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SdkPkDTO : ObjectiveC.NSObject, Swift.Decodable {
-  required public init(from decoder: Swift.Decoder) throws
-  @objc public func getAppId() -> Swift.String?
-  @objc deinit
+@objc public protocol UnicoCameraMetadataOutputDelegate : AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  @objc var rolls: [AcessoBio.SensorValuesDTO]? { get }
+  @objc var yaws: [AcessoBio.SensorValuesDTO]? { get }
+  @objc var pitches: [AcessoBio.SensorValuesDTO]? { get }
+  @objc var yaw: Foundation.NSNumber? { get }
+  @objc var endDate: Foundation.Date? { get }
 }
-@objc public class UnicoFacetec : ObjectiveC.NSObject {
-  @objc public init(unicoSetup: AcessoBio.UnicoSetupData, sdkToken: AcessoBio.SDKTokenResponseDTOAdapter, theme: AcessoBio.AcessoBioThemeDelegate!)
+@_inheritsConvenienceInitializers @objc final public class UnicoCameraMetadataOutput : ObjectiveC.NSObject, AcessoBio.UnicoCameraMetadataOutputDelegate {
+  @objc final public var rolls: [AcessoBio.SensorValuesDTO]?
+  @objc final public var yaws: [AcessoBio.SensorValuesDTO]?
+  @objc final public var pitches: [AcessoBio.SensorValuesDTO]?
+  @objc final public var yaw: Foundation.NSNumber?
+  @objc final public var endDate: Foundation.Date?
+  @objc final public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+  @objc override dynamic public init()
   @objc deinit
-  @objc public func initializeFaceTecSDK(completion: @escaping (AcessoBio.ErrorFacetec?) -> Swift.Void)
-  @objc public func openCameraFaceTec(viewController: UIKit.UIViewController, timeout: Swift.Double, completion: @escaping ([Swift.String : Any]?, AcessoBio.ErrorBio?) -> Swift.Void)
-  public func successFacetecProcessor(result: [Swift.String : Any])
-  public func unsuccessfulFacetecProcessor(status: FaceTecSDK.FaceTecSessionStatus)
 }
 extension AcessoBio.CreateProviderError : Swift.Equatable {}
 extension AcessoBio.CreateProviderError : Swift.Hashable {}
@@ -552,6 +537,7 @@ extension AcessoBio.CreateProviderError : Swift.RawRepresentable {}
 extension AcessoBio.UnicoEnumsIErrors : Swift.Equatable {}
 extension AcessoBio.UnicoEnumsIErrors : Swift.Hashable {}
 extension AcessoBio.UnicoEnumsIErrors : Swift.RawRepresentable {}
+extension AcessoBio.DefaultMotionSensorsDevice : AcessoBio.SensorsDevice {}
 extension AcessoBio.DefaultProviderFactory.Source : Swift.Equatable {}
 extension AcessoBio.DefaultProviderFactory.Source : Swift.Hashable {}
 extension AcessoBio.DefaultProviderFactory.Source : Swift.RawRepresentable {}

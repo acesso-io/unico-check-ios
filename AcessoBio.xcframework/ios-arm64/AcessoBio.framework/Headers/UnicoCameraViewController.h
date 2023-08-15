@@ -7,11 +7,12 @@
 //
 
 @import UIKit;
-
 @import AVFoundation;
 @import CoreImage;
 #import "UnicoCheck.h"
 #import "DeviceUtils.h"
+@class UnicoCameraMetadataOutput;
+@protocol UnicoCameraMetadataOutputDelegate;
 
 #define NAME_APPLICATION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 
@@ -37,56 +38,57 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UnicoCameraViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureMetadataOutputObjectsDelegate>
+@interface UnicoCameraViewController: UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate>
 
-@property (assign, nonatomic) UnicoCheckThemes *themesNew;
+@property (nonatomic, strong)id<UnicoCameraMetadataOutputDelegate> _Nullable metadataOutputDelegate;
 
-@property (strong, nonatomic)   AVCaptureVideoPreviewLayer *previewLayer;
+@property (assign, nonatomic)UnicoCheckThemes *themesNew;
 
-@property (nonatomic, strong) UIButton *btTakePic;
+@property (strong, nonatomic)AVCaptureVideoPreviewLayer *previewLayer;
 
-@property (nonatomic) AVCaptureDevicePosition defaultCamera;
-@property (nonatomic) AVCaptureSession *session;
-@property (nonatomic) AVCaptureDeviceInput *videoDeviceInput;
-@property (nonatomic) AVCaptureStillImageOutput *stillImageOutput;
-@property (nonatomic) AVCaptureVideoDataOutput *dataOutput;
-@property (nonatomic) AVCaptureMetadataOutput *metadataOutput;
-@property (nonatomic) dispatch_queue_t sessionQueue;
-@property (nonatomic) NSLock *renderLock;
-@property (nonatomic) CIImage *latestFrame;
+@property (nonatomic, strong)UIButton *btTakePic;
 
-@property (nonatomic, strong) UIColor *colorButtonIcon;
-@property (nonatomic, strong) UIColor *colorButtonBackground;
+@property (nonatomic)AVCaptureDevicePosition defaultCamera;
+@property (nonatomic)AVCaptureSession *session;
+@property (nonatomic)AVCaptureDeviceInput *videoDeviceInput;
+@property (nonatomic)AVCaptureStillImageOutput *stillImageOutput;
+@property (nonatomic)AVCaptureVideoDataOutput *dataOutput;
+@property (nonatomic)AVCaptureMetadataOutput *metadataOutput;
+@property (nonatomic)dispatch_queue_t sessionQueue;
+@property (nonatomic)NSLock *renderLock;
+@property (nonatomic)CIImage *latestFrame;
 
-@property (strong, nonatomic) UnicoCheck *core;
+@property (nonatomic, strong)UIColor *colorButtonIcon;
+@property (nonatomic, strong)UIColor *colorButtonBackground;
 
-- (AVCaptureDevice *) deviceWithMediaType:(NSString *)mediaType preferringPosition:(AVCaptureDevicePosition)position;
+@property (strong, nonatomic)UnicoCheck *core;
 
-- (AVCaptureVideoOrientation) getCurrentOrientation;
+- (AVCaptureDevice *)deviceWithMediaType:(NSString *)mediaType preferringPosition:(AVCaptureDevicePosition)position;
 
-- (void) updateOrientation:(AVCaptureVideoOrientation)orientation;
+- (AVCaptureVideoOrientation)getCurrentOrientation;
 
-- (AVCaptureDevice *) cameraWithPosition:(AVCaptureDevicePosition) position;
+- (void)updateOrientation:(AVCaptureVideoOrientation)orientation;
 
-- (UIImage *)converCIImageToUIImage : (CIImage *)cIImage;
+- (AVCaptureDevice * _Nullable)cameraWithPosition:(AVCaptureDevicePosition)position;
 
-- (void) setupCamera:(BOOL) isSelfie;
+- (UIImage *)converCIImageToUIImage:(CIImage *)cIImage;
 
-- (void) startCamera;
-- (void) stopCamera;
+- (void)setupCamera:(BOOL)isSelfie;
+
+- (void)startCamera;
+- (void)stopCamera;
 
 - (UIColor *)getColorPrimary;
 
-@property (readwrite) LanguageOrigin language;
-@property (strong, nonatomic) NSString *versionRelease;
-- (NSString *)getOrigin;
+@property (readwrite)LanguageOrigin language;
+@property (strong, nonatomic)NSString *versionRelease;
 
 - (void)addCloseButton;
-@property (strong, nonatomic) UIView *viewToButtonClose;
+@property (strong, nonatomic)UIView *viewToButtonClose;
 
-@property (strong, nonatomic) NSDate *dateCaptureBegin;
-@property (strong, nonatomic) NSDate *dateCaptureTake;
-@property (strong, nonatomic) NSDate *dateCaptureOpenCamera;
+@property (strong, nonatomic)NSDate *dateCaptureBegin;
+@property (strong, nonatomic)NSDate *dateCaptureTake;
+@property (strong, nonatomic)NSDate *dateCaptureOpenCamera;
 
 @end
 

@@ -1,0 +1,62 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkLiveness
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import FaceTecSDK
+import Foundation
+import Swift
+import UIKit
+@_exported import UnicoSdkLiveness
+import _Concurrency
+import _StringProcessing
+public struct PrepareData : Swift.Equatable {
+  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool)
+  public static func == (a: UnicoSdkLiveness.PrepareData, b: UnicoSdkLiveness.PrepareData) -> Swift.Bool
+}
+extension UnicoSdkLiveness.PrepareData {
+  public enum Engine : Swift.Equatable {
+    case facetec(UnicoSdkLiveness.PrepareData.FacetecData)
+    public static func == (a: UnicoSdkLiveness.PrepareData.Engine, b: UnicoSdkLiveness.PrepareData.Engine) -> Swift.Bool
+  }
+}
+extension UnicoSdkLiveness.PrepareData {
+  public struct FacetecData : Swift.Equatable {
+    public init(dk: Swift.String, ec: Swift.String, appId: Swift.String, expiryDate: Swift.String, key: Swift.String)
+    public static func == (a: UnicoSdkLiveness.PrepareData.FacetecData, b: UnicoSdkLiveness.PrepareData.FacetecData) -> Swift.Bool
+  }
+}
+public struct Theme : Swift.Equatable {
+  public init(backgroundColor: UIKit.UIColor, boxMessageColor: UIKit.UIColor, textMessageColor: UIKit.UIColor, backgroundTakePictureButtonColor: UIKit.UIColor, iconTakePictureButtonColor: UIKit.UIColor, backgroundBottomDocumentColor: UIKit.UIColor, textBottomDocumentColor: UIKit.UIColor, silhouetteSuccessColor: UIKit.UIColor, silhouetteErrorColor: UIKit.UIColor, silhouetteNeutralColor: UIKit.UIColor)
+  public static func == (a: UnicoSdkLiveness.Theme, b: UnicoSdkLiveness.Theme) -> Swift.Bool
+}
+public protocol UnicoLivenessDelegate : AnyObject {
+  func onSuccess(livenessResult: UnicoSdkLiveness.LivenessResult)
+  func onError(livenessError: UnicoSdkLiveness.LivenessError)
+}
+public struct LivenessError : Swift.Error, Swift.Equatable {
+  public let code: Swift.Int
+  public let message: Swift.String
+  public init(code: Swift.Int, message: Swift.String)
+  public static func == (a: UnicoSdkLiveness.LivenessError, b: UnicoSdkLiveness.LivenessError) -> Swift.Bool
+}
+public protocol LivenessResult {
+  var serialize: [Swift.String : Any] { get }
+}
+public protocol UnicoLivenessPrepareCameraDelegate : AnyObject {
+  func onCameraReady(unicoLivenessOpenCamera: UnicoSdkLiveness.UnicoLivenessOpenCamera)
+  func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
+}
+public struct OpenData {
+  public init(sessionToken: Swift.String, timeoutInterval: Swift.Double)
+}
+public protocol UnicoLivenessRepresentable {
+  func prepareCamera(data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+}
+@_hasMissingDesignatedInitializers final public class UnicoLiveness : UnicoSdkLiveness.UnicoLivenessRepresentable {
+  public init(viewController: UIKit.UIViewController)
+  final public func prepareCamera(data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  @objc deinit
+}
+public protocol UnicoLivenessOpenCamera {
+  func openCamera(data: UnicoSdkLiveness.OpenData, unicoLivenessDelegate: UnicoSdkLiveness.UnicoLivenessDelegate)
+}

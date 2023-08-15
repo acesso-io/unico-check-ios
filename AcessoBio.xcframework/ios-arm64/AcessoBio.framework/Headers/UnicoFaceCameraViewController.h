@@ -1,11 +1,3 @@
-//
-//  CameraFaceView.h
-//  CaptureAcesso
-//
-//  Created by Matheus Domingos on 10/05/20.
-//  Copyright © 2020 Matheus  domingos. All rights reserved.
-//
-
 @import UIKit;
 
 @import AVFoundation;
@@ -18,9 +10,7 @@
 
 @import CoreML;
 @import Vision;
-//#import "CenterModelCrop.h"
 
-// gyroscope
 @import CoreMotion;
 
 #import "AcessoBioManager.h"
@@ -34,7 +24,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UnicoFaceCameraViewController : UnicoCameraViewController <AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureMetadataOutputObjectsDelegate> {
+@interface UnicoFaceCameraViewController: UnicoCameraViewController <AVCaptureVideoDataOutputSampleBufferDelegate> {
     
     BOOL isSelfie;
     UIView *rectangle;
@@ -143,7 +133,7 @@ NS_ASSUME_NONNULL_BEGIN
     UIView *vFlash;
     UIActivityIndicatorView *spinFlash;
     
-    int  userBlinks;
+    int userBlinks;
     
     int resultFaceDetectBehavior; // 1 = Face Match / 2 = Both substandard / 3 = Not match
     int resultFaceDetect; // // 1 = Face Match / 2 = Both substandard / 3 = Not match
@@ -168,9 +158,6 @@ NS_ASSUME_NONNULL_BEGIN
     
     BOOL isTakingPhoto;
     
-    // sensors
-    double yawFace;
-    
     // Variables about popup reset
     BOOL isPopUpShow;
     
@@ -193,14 +180,9 @@ NS_ASSUME_NONNULL_BEGIN
     
     BOOL isCameraTypeChanged;
     
-    NSMutableArray<SensorValuesDTO *> * rollFaces;
-    NSMutableArray<SensorValuesDTO *> * yawFaces;
-    
     float captureImageWidth;
     float captureImageHeight;
     float captureImageAspectRatio;
-    
-    NSDate *dateCaptureInferenceTime;
     
     dispatch_queue_t sessionQueue;
     
@@ -209,65 +191,62 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Properties
 
-@property (nonatomic, strong) id <UnicoFaceCameraInteractorInput> _Nullable interactor;
+@property (nonatomic, strong)id<UnicoFaceCameraInteractorInput> _Nullable interactor;
 
 // * Configurable
-@property (assign, nonatomic) BOOL debug;
+@property (assign, nonatomic)BOOL debug;
 
-// Class Swift to IA process
-//@property (strong, nonatomic) FaceIA *faceIA;
+@property (nonatomic)UIImageView *face;
+@property (nonatomic)UIImageView *frame;
 
-@property (nonatomic) UIImageView *face;
-@property (nonatomic) UIImageView *frame;
+@property (strong, nonatomic)NSString *proccessId;
 
-@property (strong, nonatomic) NSString *proccessId;
+@property (strong, nonatomic)CameraBio *cam;
 
-@property (strong, nonatomic) CameraBio *cam;
-
-@property (strong, nonatomic) UILabel *lbIInstructions;
+@property (strong, nonatomic)UILabel *lbIInstructions;
 
 #pragma mark liveness
 
-@property (strong, nonatomic) NSString *base64AwayWithoutSmilling;
+@property (strong, nonatomic)NSString *base64AwayWithoutSmilling;
 
-@property (strong, nonatomic) NSString *captureBase64;
-@property (strong, nonatomic) NSString *base64Away;
-@property (strong, nonatomic) NSString *base64Closer;
+@property (strong, nonatomic)NSString *captureBase64;
+@property (strong, nonatomic)NSString *base64Away;
+@property (strong, nonatomic)NSString *base64Closer;
 
-@property (strong, nonatomic) UIImage *imgCenter;
-@property (strong, nonatomic) UIImage *imgAway;
-@property (strong, nonatomic) UIImage *imgCloser;
-@property (strong, nonatomic) UIImage *imgAwayWithoutSmile;
+@property (strong, nonatomic)UIImage *imgCenter;
+@property (strong, nonatomic)UIImage *imgAway;
+@property (strong, nonatomic)UIImage *imgCloser;
+@property (strong, nonatomic)UIImage *imgAwayWithoutSmile;
 
-@property (assign, nonatomic) BOOL isFaceLiveness;
+@property (assign, nonatomic)BOOL isFaceLiveness;
 
-@property (assign, nonatomic) BOOL isLivenessSmilling;
-@property (assign, nonatomic) BOOL isFinishiWithoutTheSmile;
-@property (assign, nonatomic) BOOL isLivenessBlinking;
+@property (assign, nonatomic)BOOL isLivenessSmilling;
+@property (assign, nonatomic)BOOL isFinishiWithoutTheSmile;
+@property (assign, nonatomic)BOOL isLivenessBlinking;
 
-@property (strong, nonatomic) NSDictionary *dictUserLiveness;
+@property (strong, nonatomic)NSDictionary *dictUserLiveness;
 
-@property (assign, nonatomic) BOOL isCommingFromResult;
+@property (assign, nonatomic)BOOL isCommingFromResult;
 
 #pragma mark sensors
 
-@property (strong,nonatomic) CMMotionManager *motionManager;
+@property (strong,nonatomic)CMMotionManager *motionManager;
 
-@property (assign, nonatomic) BOOL isEnableAutoCapture;
-@property (assign, nonatomic) BOOL isEnableSmartCapture;
+@property (assign, nonatomic)BOOL isEnableAutoCapture;
+@property (assign, nonatomic)BOOL isEnableSmartCapture;
 
-@property (assign, nonatomic) BOOL isFacesCompareOneToOne;
-@property (strong, nonatomic) NSString *cpfToFacesCompare;
+@property (assign, nonatomic)BOOL isFacesCompareOneToOne;
+@property (strong, nonatomic)NSString *cpfToFacesCompare;
 
-@property(nonatomic, strong) AcessoBioManager *acessiBioManager;
+@property(nonatomic, strong)AcessoBioManager *acessiBioManager;
 
-@property (readwrite) double secondsTimeoutSession;
+@property (readwrite)double secondsTimeoutSession;
 
-@property (strong, nonatomic) SDKTokenResponseDTOAdapter *sdkToken;
+@property (strong, nonatomic)SDKTokenResponseDTOAdapter *sdkToken;
 
 #pragma mark - Behaviors
 
-- (void)setIsDebug : (BOOL)debug;
+- (void)setIsDebug :(BOOL)debug;
 
 @end
 
