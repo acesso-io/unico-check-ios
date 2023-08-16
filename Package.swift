@@ -13,6 +13,7 @@ let package = Package(
                 "AcessoBio",
                 "FaceTecSDK",
                 "UnicoSdkBase",
+                "UnicoSdkLiveness",
                 "UnicoSdkLogger",
                 "UnicoSdkSecurity"
             ]
@@ -29,6 +30,7 @@ let package = Package(
         .binaryTarget(name: "AcessoBio", path: "AcessoBio.xcframework"),
         .binaryTarget(name: "FaceTecSDK", path: "FaceTecSDK.xcframework"),
         .binaryTarget(name: "UnicoSdkBase", path: "UnicoSdkBase.xcframework"),
+        .binaryTarget(name: "UnicoSdkLiveness", path: "UnicoSdkLiveness.xcframework"),
         .binaryTarget(name: "UnicoSdkLogger", path: "UnicoSdkLogger.xcframework"),
         .binaryTarget(name: "UnicoSdkSecurity", path: "UnicoSdkSecurity.xcframework")
     ]

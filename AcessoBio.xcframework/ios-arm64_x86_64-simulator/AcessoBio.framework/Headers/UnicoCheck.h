@@ -12,21 +12,12 @@
 #import <Sentry/Sentry.h>
 #endif
 
-#if __has_include(<FaceTecSDK/FaceTecSDK.h>)
-#import <FaceTecSDK/FaceTecSDK.h>
-#endif
-
-#if __has_include(<FaceTecSDK/FaceTecPublicApi.h>)
-#import <FaceTecSDK/FaceTecPublicApi.h>
-#endif
-
 #import "ErrorBio.h"
 #import "iAcessoBioBuilder.h"
 #import "AcessoBioManagerDelegate.h"
 #import "AcessoBioSelfieDelegate.h"
 #import "AcessoBioDocumentDelegate.h"
 #import "UnicoCheckThemesDelegate.h"
-#import "UnicoCheckMapCallbacks.h"
 #import "AcessoBioThemeDelegate.h"
 
 #import <CoreLocation/CoreLocation.h>
@@ -35,7 +26,6 @@
 @class UnicoConfigDelegate;
 @class UnicoSetupData;
 @class SDKTokenResponseDTOAdapter;
-@class UnicoFacetec;
 @class UnicoJsonLoad;
 @class UnicoConfigDataSourceManager;
 @class UnicoFaceCameraViewController;
@@ -45,6 +35,7 @@
 @protocol SensorsWorker;
 @protocol UnicoSetupProtocol;
 @class GeolocationDTO;
+@class UnicoCheckLivenessAdapter;
 
 typedef NS_ENUM(NSInteger, LanguageOrigin) {
     Native,
@@ -81,21 +72,11 @@ typedef NS_ENUM(NSInteger, CameraType) {
 
     BOOL hasImplementationError;
 
-    BOOL facetecHasIncluded;
-
-#if __has_include(<FaceTecSDK/FaceTecSDK.h>)
-    id<FaceTecSessionResult>_Nonnull latestSessionResult;
-#endif
-
     id<UnicoSetupProtocol> unicoSetup;
     SDKTokenResponseDTOAdapter *sdkTokenResponse;
 
-    UnicoFacetec *unicoFacetec;
-    BOOL isFacetecFlow;
     CameraType cameraType;
     DocumentEnums documentType;
-
-    UnicoCheckMapCallbacks *mapCallbacks;
 
     void(^completionHandlerSetupConfig)(ErrorBio *_Nullable error);
 
@@ -104,6 +85,7 @@ typedef NS_ENUM(NSInteger, CameraType) {
 
     GeolocationDTO *geolocation;
     UnicoSetupData *setupData;
+    UnicoCheckLivenessAdapter *liveness;
 }
 
 #pragma mark - Protocols

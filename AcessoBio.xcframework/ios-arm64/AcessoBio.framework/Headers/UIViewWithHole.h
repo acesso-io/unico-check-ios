@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIViewWithHole : UIView {
+@interface UIViewWithHole: UIView {
     CGRect rectTransparent;
     UIColor *backgroundColor;
     CGFloat cornerRadius;
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 
-@property (strong, nonatomic)  CAShapeLayer *shapeLayer;
+@property (strong, nonatomic)CAShapeLayer *shapeLayer;
 
 - (void)startAnimationSuccess;
 - (void)startAnimationError;

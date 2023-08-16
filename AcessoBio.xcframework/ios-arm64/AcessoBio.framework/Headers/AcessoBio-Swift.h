@@ -230,6 +230,7 @@ using UInt = size_t;
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AVFoundation;
 @import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
@@ -293,6 +294,7 @@ SWIFT_CLASS("_TtC9AcessoBio12BehaviorsDTO")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
@@ -393,49 +395,6 @@ SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class CMMotionManager;
-
-SWIFT_CLASS("_TtC9AcessoBio28DefaultGyroscopeSensorDevice")
-@interface DefaultGyroscopeSensorDevice : NSObject
-- (nonnull instancetype)initWithMotionManager:(CMMotionManager * _Nonnull)motionManager OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_PROTOCOL("_TtP9AcessoBio13SensorsDevice_")
-@protocol SensorsDevice
-- (void)startUpdate;
-- (void)stopUpdate;
-@end
-
-
-SWIFT_PROTOCOL("_TtP9AcessoBio21GyroscopeSensorDevice_")
-@protocol GyroscopeSensorDevice <SensorsDevice>
-- (void)startUpdate;
-- (void)stopUpdate;
-- (void)clearAllValues;
-- (void)clearPitchValues;
-- (void)clearRollValues;
-- (void)clearYawValues;
-- (NSArray<SensorValuesDTO *> * _Nonnull)getPitchValues SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<SensorValuesDTO *> * _Nonnull)getRollValues SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<SensorValuesDTO *> * _Nonnull)getYawValues SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-@interface DefaultGyroscopeSensorDevice (SWIFT_EXTENSION(AcessoBio)) <GyroscopeSensorDevice>
-- (void)startUpdate;
-- (void)stopUpdate;
-- (void)clearAllValues;
-- (void)clearPitchValues;
-- (void)clearRollValues;
-- (void)clearYawValues;
-- (NSArray<SensorValuesDTO *> * _Nonnull)getPitchValues SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<SensorValuesDTO *> * _Nonnull)getRollValues SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<SensorValuesDTO *> * _Nonnull)getYawValues SWIFT_WARN_UNUSED_RESULT;
-@end
-
 
 SWIFT_CLASS("_TtC9AcessoBio22DefaultProviderFactory")
 @interface DefaultProviderFactory : NSObject
@@ -477,14 +436,6 @@ SWIFT_CLASS("_TtC9AcessoBio16ErrorCallbackDTO")
 @interface ErrorCallbackDTO : CallbackDTO
 - (nonnull instancetype)initWithCode:(NSNumber * _Nullable)code title:(NSString * _Nullable)title message:(NSString * _Nullable)message OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithCallback:(NSString * _Nullable)callback attempts:(AttemptsDTO * _Nullable)attempts totalTime:(NSNumber * _Nullable)totalTime geolocation:(GeolocationDTO * _Nullable)geolocation deviceBehavior:(DeviceBehaviorsDTO * _Nullable)deviceBehavior SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC9AcessoBio12ErrorFacetec")
-@interface ErrorFacetec : ErrorBio
-- (nonnull instancetype)initCode:(NSInteger)code method:(NSString * _Nonnull)method desc:(NSString * _Nonnull)desc OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initCode:(NSInteger)code desc:(NSString * _Nonnull)desc info:(NSString * _Nonnull)info OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -544,7 +495,6 @@ SWIFT_CLASS("_TtC9AcessoBio14GeolocationDTO")
 @end
 
 
-
 SWIFT_PROTOCOL("_TtP9AcessoBio13LoggerFactory_")
 @protocol LoggerFactory
 - (id <DataLoggerOutput> _Nonnull)make SWIFT_WARN_UNUSED_RESULT;
@@ -559,7 +509,6 @@ SWIFT_CLASS("_TtC9AcessoBio13OpenCameraDTO")
 @end
 
 
-@class SdkPkDTO;
 
 SWIFT_CLASS("_TtC9AcessoBio26SDKTokenResponseDTOAdapter")
 @interface SDKTokenResponseDTOAdapter : NSObject
@@ -567,20 +516,12 @@ SWIFT_CLASS("_TtC9AcessoBio26SDKTokenResponseDTOAdapter")
 @property (nonatomic, readonly) BOOL geolocationEnabled;
 @property (nonatomic, readonly, copy) NSString * _Nonnull key;
 @property (nonatomic, readonly, copy) NSString * _Nonnull keyBody;
-@property (nonatomic, readonly) BOOL EnableLogo;
+@property (nonatomic, readonly) BOOL enableLogo;
 @property (nonatomic, readonly) double expires;
 @property (nonatomic, readonly) BOOL isIntegrationCaptureFlow;
-- (SdkPkDTO * _Nullable)getSdkPk SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, readonly) BOOL isLiveness;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC9AcessoBio8SdkPkDTO")
-@interface SdkPkDTO : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (NSString * _Nullable)getAppId SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -598,11 +539,17 @@ SWIFT_CLASS("_TtC9AcessoBio15SensorValuesDTO")
 @end
 
 
+SWIFT_PROTOCOL("_TtP9AcessoBio13SensorsDevice_")
+@protocol SensorsDevice
+- (void)startUpdate;
+- (void)stopUpdate;
+@end
+
 
 SWIFT_PROTOCOL("_TtP9AcessoBio13SensorsWorker_")
 @protocol SensorsWorker
-- (void)startGyroscope;
-- (DeviceBehaviorsDTO * _Nonnull)stopGyroscope;
+- (void)startMotion;
+- (DeviceBehaviorsDTO * _Nonnull)stopMotion;
 @end
 
 
@@ -635,6 +582,48 @@ SWIFT_CLASS("_TtC9AcessoBio9TimersDTO")
 @end
 
 
+
+
+
+@class NSDate;
+
+SWIFT_PROTOCOL("_TtP9AcessoBio33UnicoCameraMetadataOutputDelegate_")
+@protocol UnicoCameraMetadataOutputDelegate <AVCaptureMetadataOutputObjectsDelegate>
+@property (nonatomic, readonly, copy) NSArray<SensorValuesDTO *> * _Nullable rolls;
+@property (nonatomic, readonly, copy) NSArray<SensorValuesDTO *> * _Nullable yaws;
+@property (nonatomic, readonly, copy) NSArray<SensorValuesDTO *> * _Nullable pitches;
+@property (nonatomic, readonly, strong) NSNumber * _Nullable yaw;
+@property (nonatomic, readonly, copy) NSDate * _Nullable endDate;
+@end
+
+@class AVCaptureMetadataOutput;
+@class AVMetadataObject;
+@class AVCaptureConnection;
+
+SWIFT_CLASS("_TtC9AcessoBio25UnicoCameraMetadataOutput")
+@interface UnicoCameraMetadataOutput : NSObject <UnicoCameraMetadataOutputDelegate>
+@property (nonatomic, copy) NSArray<SensorValuesDTO *> * _Nullable rolls;
+@property (nonatomic, copy) NSArray<SensorValuesDTO *> * _Nullable yaws;
+@property (nonatomic, copy) NSArray<SensorValuesDTO *> * _Nullable pitches;
+@property (nonatomic, strong) NSNumber * _Nullable yaw;
+@property (nonatomic, copy) NSDate * _Nullable endDate;
+- (void)captureOutput:(AVCaptureMetadataOutput * _Nonnull)output didOutputMetadataObjects:(NSArray<AVMetadataObject *> * _Nonnull)metadataObjects fromConnection:(AVCaptureConnection * _Nonnull)connection;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@class UIViewController;
+@protocol AcessoBioThemeDelegate;
+@class ErrorBio;
+
+SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
+@interface UnicoCheckLivenessAdapter : NSObject
+- (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKTokenResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate;
+- (void)prepareCameraWithSuccess:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
+- (void)openCameraWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup timeoutInterval:(double)timeoutInterval success:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 
 
@@ -721,25 +710,9 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsAUTHENTICATION_PARSE_ERROR = 73301,
   UnicoEnumsIErrorsAUTHENTICATION_TOKEN_NOT_FOUND = 73302,
 /// Camera Response
-  UnicoEnumsIErrorsFACETEC_NOT_FOUND = 73701,
-  UnicoEnumsIErrorsFACETEC_PRODUCTION_MODE_NOT_WORKING = 73702,
   UnicoEnumsIErrorsFACETEC_GET_SESSION_FAILED = 73703,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_USER_CANCELLED = 73704,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_SESSION_UNSUCCESSFUL = 73705,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_CAMERA_PERMISSION_DENIED = 73706,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_CONTEXT_SWITCH = 73707,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_LANDSCAPE_MODE_NOT_ALLOWED = 73708,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_REVERSE_PORTRAIT_NOT_ALLOWED = 73709,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_TIMEOUT = 73710,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_LOW_MEMORY = 73711,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_NON_PRODUCTION_MODE_NETWORKING_REQUIRED = 73712,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_GRACE_PERIOD_EXCEDED = 73713,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_ENCRYPTION_KEY_INVALID = 73714,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_MISSING_GUIDANCE_IMAGES = 73715,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_CAMERA_INITIALIZATION_ISSUE = 73716,
-  UnicoEnumsIErrorsFACETEC_SESSION_STATUS_LOCKED_OUT = 73717,
-  UnicoEnumsIErrorsFACETEC_SESSION_UNKNOWN_INTERNAL_ERROR = 73718,
-  UnicoEnumsIErrorsFACETEC_SESSION_USER_CANCELLED_VIA_CLICKABLE_READY_SCREEN_SUBTEXT = 73719,
+  UnicoEnumsIErrorsSESSION_STATUS_USER_CANCELLED = 73704,
+  UnicoEnumsIErrorsSESSION_STATUS_TIMEOUT = 73710,
 };
 
 @class NSException;
@@ -796,17 +769,6 @@ SWIFT_PROTOCOL("_TtP9AcessoBio35UnicoFaceCameraViewControllerOutput_")
 @protocol UnicoFaceCameraViewControllerOutput
 - (void)startCapture;
 - (void)stopCapture;
-@end
-
-@class UIViewController;
-
-SWIFT_CLASS("_TtC9AcessoBio12UnicoFacetec")
-@interface UnicoFacetec : NSObject
-- (nonnull instancetype)initWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup sdkToken:(SDKTokenResponseDTOAdapter * _Nonnull)sdkToken theme:(id <AcessoBioThemeDelegate> _Null_unspecified)theme OBJC_DESIGNATED_INITIALIZER;
-- (void)initializeFaceTecSDKWithCompletion:(void (^ _Nonnull)(ErrorFacetec * _Nullable))completion;
-- (void)openCameraFaceTecWithViewController:(UIViewController * _Nonnull)viewController timeout:(double)timeout completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable, ErrorBio * _Nullable))completion;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
