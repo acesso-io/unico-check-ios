@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		iE5rFSAa+5MXKRjaIWqDzuaVIec=
+		e2qi7fOBgktpu+UqgT3AZkJsEms=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		2bLqs/Oo1Uy6xrX7Sc0pg/HHJa8=
+		9UfCoO/dlm+I09ePmuwlRFY6ZNE=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,19 +34,19 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		2bLqs/Oo1Uy6xrX7Sc0pg/HHJa8=
+		9UfCoO/dlm+I09ePmuwlRFY6ZNE=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		n1APFqVuyBKx6lcO91cS5Zv2pi8=
+		YCpZEkqu3hUwcImXwOQwrxpw758=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		iE5rFSAa+5MXKRjaIWqDzuaVIec=
+		e2qi7fOBgktpu+UqgT3AZkJsEms=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		h0L9Cz7gwmXeYxUhck8DV2OjSrE=
+		zKwEWpc8v3ENUK2rBqz9sRmV2gY=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,15 +54,19 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		h0L9Cz7gwmXeYxUhck8DV2OjSrE=
+		zKwEWpc8v3ENUK2rBqz9sRmV2gY=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		F+cOm0Owwihp7jyCAVkBYg3LTIY=
+		7oU+L3tjpafyGxN3M4HtoBbfOGo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		mRlQ8TExT6oRDu3nGXtLg2BXp04=
+		</data>
+		<key>forensics.license</key>
+		<data>
+		ZqYhdKogSoLBdnLODAvTRnW5FMc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -92,14 +96,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			evFgo7IyneTThWFe48MRyrb84k7UxagsFuvI83XvZYA=
+			fsnxftNq90PiT7DCmEDeUuy3lUp1o+0rTc24gXTjnpg=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h/24L+Cbnofb9teMocUgvNWwvapeAOmzXFfoZGz1A/M=
+			yyyCOgUMioyx2Q9kOKbjihJ5hp2i0iIk1yk/STnvpF4=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -113,28 +117,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			h/24L+Cbnofb9teMocUgvNWwvapeAOmzXFfoZGz1A/M=
+			yyyCOgUMioyx2Q9kOKbjihJ5hp2i0iIk1yk/STnvpF4=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2XpfnX+Jv9Cv6lssumPFzEvByzHcdulidagyKpYfddc=
+			+9p6YL7j7yrHPPr7a2Q9Ynpuw17EYQy+lM+oFZrQ+EI=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			evFgo7IyneTThWFe48MRyrb84k7UxagsFuvI83XvZYA=
+			fsnxftNq90PiT7DCmEDeUuy3lUp1o+0rTc24gXTjnpg=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Sx8IC1/pzXL+Me05xeTRS0Uvdcuq8KHv2ejr09urrM=
+			H8L1x316V/9rsIovDCHbuLFvORKf7JW0/nGCNCQVA9Q=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -148,14 +152,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Sx8IC1/pzXL+Me05xeTRS0Uvdcuq8KHv2ejr09urrM=
+			H8L1x316V/9rsIovDCHbuLFvORKf7JW0/nGCNCQVA9Q=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iy9E1FM8kh5IZ+l653GD3muKvHGeKy9Md1zVEkwTZKI=
+			TVYFzWkmH4WJcP41yXrGgWavYLsDgUe9yX58z7p4N5Y=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -163,6 +167,13 @@
 			<key>hash2</key>
 			<data>
 			+DsCAsCNDJFNfdDIensgdyUW/Muga2DVjK6R8A9O8GE=
+			</data>
+		</dict>
+		<key>forensics.license</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0N+0W9PKK+O+9uv1auaR2DMcpLEAThyrmuHwKUT1+eY=
 			</data>
 		</dict>
 	</dict>
