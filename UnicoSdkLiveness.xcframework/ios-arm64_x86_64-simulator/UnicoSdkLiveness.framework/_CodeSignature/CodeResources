@@ -64,6 +64,10 @@
 		<data>
 		mRlQ8TExT6oRDu3nGXtLg2BXp04=
 		</data>
+		<key>forensics.license</key>
+		<data>
+		ZqYhdKogSoLBdnLODAvTRnW5FMc=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -163,6 +167,13 @@
 			<key>hash2</key>
 			<data>
 			+DsCAsCNDJFNfdDIensgdyUW/Muga2DVjK6R8A9O8GE=
+			</data>
+		</dict>
+		<key>forensics.license</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0N+0W9PKK+O+9uv1auaR2DMcpLEAThyrmuHwKUT1+eY=
 			</data>
 		</dict>
 	</dict>
