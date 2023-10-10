@@ -1,0 +1,11 @@
+framework module UnicoSdkPlugins {
+  umbrella header "UnicoSdkPlugins.h"
+
+  export *
+  module * { export * }
+}
+
+module UnicoSdkPlugins.Swift {
+  header "UnicoSdkPlugins-Swift.h"
+  requires objc
+}

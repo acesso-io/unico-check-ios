@@ -230,6 +230,7 @@ using UInt = size_t;
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import ObjectiveC;
 #endif
 
 #endif
@@ -250,6 +251,26 @@ using UInt = size_t;
 #endif
 
 #if defined(__OBJC__)
+
+@class NSString;
+
+SWIFT_CLASS("_TtC16UnicoSdkLiveness13CaptureResult")
+@interface CaptureResult : NSObject
+@property (nonatomic, copy) NSString * _Null_unspecified base64;
+@property (nonatomic, copy) NSString * _Null_unspecified encrypted;
+- (nonnull instancetype)initWithBase64:(NSString * _Null_unspecified)base64 encrypted:(NSString * _Null_unspecified)encrypted OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC16UnicoSdkLiveness21SessionTransactionDTO")
+@interface SessionTransactionDTO : NSObject
+- (nonnull instancetype)initWithTransactionId:(NSString * _Nonnull)transactionId isLive:(BOOL)isLive order:(NSInteger)order OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 #endif
 #if defined(__cplusplus)

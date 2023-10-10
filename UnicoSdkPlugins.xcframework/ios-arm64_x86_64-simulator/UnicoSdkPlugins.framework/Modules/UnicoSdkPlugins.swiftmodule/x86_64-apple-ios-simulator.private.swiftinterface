@@ -1,0 +1,324 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkPlugins
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CommonCrypto
+import Compression
+import Darwin
+import Foundation
+import LocalAuthentication
+import Security
+import Swift
+@_exported import UnicoSdkPlugins
+import _Concurrency
+import _StringProcessing
+public struct CBC : UnicoSdkPlugins.BlockMode {
+  public let options: UnicoSdkPlugins.BlockModeOption
+  public let customBlockSize: Swift.Int?
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock, encryptionOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock) throws -> UnicoSdkPlugins.CipherModeWorker
+}
+public protocol Cryptors : AnyObject {
+  func makeEncryptor() throws -> UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
+  func makeDecryptor() throws -> UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
+}
+public enum SignatureAlgorithm : Swift.String {
+  case HS256
+  case HS384
+  case HS512
+  case RS256
+  case RS384
+  case RS512
+  @available(iOS 11, *)
+  case PS256
+  @available(iOS 11, *)
+  case PS384
+  @available(iOS 11, *)
+  case PS512
+  case ES256
+  case ES384
+  case ES512
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class BlockDecryptor : UnicoSdkPlugins.Cryptor, UnicoSdkPlugins.Updatable {
+  final public let blockSize: Swift.Int
+  final public let padding: UnicoSdkPlugins.Padding
+  public var worker: UnicoSdkPlugins.CipherModeWorker
+  public var accumulated: [Swift.UInt8]
+  public init(blockSize: Swift.Int, padding: UnicoSdkPlugins.Padding, _ worker: UnicoSdkPlugins.CipherModeWorker) throws
+  public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public func seek(to position: Swift.Int) throws
+  @objc deinit
+}
+public protocol CipherModeWorker {
+  var cipherOperation: UnicoSdkPlugins.CipherOperationOnBlock { get }
+  var additionalBufferSize: Swift.Int { get }
+  mutating func encrypt(block plaintext: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  mutating func decrypt(block ciphertext: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+}
+public protocol BlockModeWorker : UnicoSdkPlugins.CipherModeWorker {
+  var blockSize: Swift.Int { get }
+}
+public protocol CounterModeWorker : UnicoSdkPlugins.CipherModeWorker {
+  associatedtype Counter
+  var counter: Self.Counter { get set }
+}
+public protocol SeekableModeWorker : UnicoSdkPlugins.CipherModeWorker {
+  mutating func seek(to position: Swift.Int) throws
+}
+public protocol StreamModeWorker : UnicoSdkPlugins.CipherModeWorker {
+}
+public protocol FinalizingEncryptModeWorker : UnicoSdkPlugins.CipherModeWorker {
+  mutating func finalize(encrypt ciphertext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+}
+public protocol FinalizingDecryptModeWorker : UnicoSdkPlugins.CipherModeWorker {
+  @discardableResult
+  mutating func willDecryptLast(bytes ciphertext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+  mutating func didDecryptLast(bytes plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+  mutating func finalize(decrypt plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+}
+public struct BlockModeOption : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let none: UnicoSdkPlugins.BlockModeOption
+  public static let initializationVectorRequired: UnicoSdkPlugins.BlockModeOption
+  public static let paddingRequired: UnicoSdkPlugins.BlockModeOption
+  public static let useEncryptToDecrypt: UnicoSdkPlugins.BlockModeOption
+  public typealias ArrayLiteralElement = UnicoSdkPlugins.BlockModeOption
+  public typealias Element = UnicoSdkPlugins.BlockModeOption
+  public typealias RawValue = Swift.Int
+}
+extension UnicoSdkPlugins.AES : UnicoSdkPlugins.Cryptors {
+  final public func makeEncryptor() throws -> UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
+  final public func makeDecryptor() throws -> UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
+}
+public struct BatchedCollectionIndex<Base> where Base : Swift.Collection {
+}
+extension UnicoSdkPlugins.BatchedCollectionIndex : Swift.Comparable {
+  public static func == <Base>(lhs: UnicoSdkPlugins.BatchedCollectionIndex<Base>, rhs: UnicoSdkPlugins.BatchedCollectionIndex<Base>) -> Swift.Bool where Base : Swift.Collection
+  public static func < <Base>(lhs: UnicoSdkPlugins.BatchedCollectionIndex<Base>, rhs: UnicoSdkPlugins.BatchedCollectionIndex<Base>) -> Swift.Bool where Base : Swift.Collection
+}
+public protocol BatchedCollectionType : Swift.Collection {
+  associatedtype Base : Swift.Collection
+}
+public struct BatchedCollection<Base> : Swift.Collection where Base : Swift.Collection {
+  public typealias Index = UnicoSdkPlugins.BatchedCollectionIndex<Base>
+  public var startIndex: UnicoSdkPlugins.BatchedCollection<Base>.Index {
+    get
+  }
+  public var endIndex: UnicoSdkPlugins.BatchedCollection<Base>.Index {
+    get
+  }
+  public func index(after idx: UnicoSdkPlugins.BatchedCollection<Base>.Index) -> UnicoSdkPlugins.BatchedCollection<Base>.Index
+  public subscript(idx: UnicoSdkPlugins.BatchedCollection<Base>.Index) -> Base.SubSequence {
+    get
+  }
+  public typealias Element = Base.SubSequence
+  public typealias Indices = Swift.DefaultIndices<UnicoSdkPlugins.BatchedCollection<Base>>
+  public typealias Iterator = Swift.IndexingIterator<UnicoSdkPlugins.BatchedCollection<Base>>
+  public typealias SubSequence = Swift.Slice<UnicoSdkPlugins.BatchedCollection<Base>>
+}
+extension Swift.Collection {
+  public func batched(by size: Swift.Int) -> UnicoSdkPlugins.BatchedCollection<Self>
+}
+public struct Payload {
+  public init(_ payload: Foundation.Data)
+}
+public struct JWS {
+  public var compactSerializedString: Swift.String {
+    get
+  }
+  public init<KeyType>(header: UnicoSdkPlugins.JWSHeader, payload: UnicoSdkPlugins.Payload, signer: UnicoSdkPlugins.Signer<KeyType>) throws
+}
+public protocol SignerProtocol {
+  var algorithm: UnicoSdkPlugins.SignatureAlgorithm { get }
+  func sign(_ signingInput: Foundation.Data) throws -> Foundation.Data
+}
+public struct Signer<KeyType> {
+  public init?(signingAlgorithm: UnicoSdkPlugins.SignatureAlgorithm, key: KeyType)
+}
+public func base32Encode(_ data: Foundation.Data) -> Swift.String
+public func base32HexEncode(_ data: Foundation.Data) -> Swift.String
+public func base32DecodeToData(_ string: Swift.String) -> Foundation.Data?
+public func base32HexDecodeToData(_ string: Swift.String) -> Foundation.Data?
+public func base32Encode(_ array: [Swift.UInt8]) -> Swift.String
+public func base32HexEncode(_ array: [Swift.UInt8]) -> Swift.String
+public func base32Decode(_ string: Swift.String) -> [Swift.UInt8]?
+public func base32HexDecode(_ string: Swift.String) -> [Swift.UInt8]?
+extension Swift.String {
+  public var base32DecodedData: Foundation.Data? {
+    get
+  }
+  public var base32EncodedString: Swift.String {
+    get
+  }
+  public func base32DecodedString(_ encoding: Swift.String.Encoding = .utf8) -> Swift.String?
+  public var base32HexDecodedData: Foundation.Data? {
+    get
+  }
+  public var base32HexEncodedString: Swift.String {
+    get
+  }
+  public func base32HexDecodedString(_ encoding: Swift.String.Encoding = .utf8) -> Swift.String?
+}
+extension Foundation.Data {
+  public var base32EncodedString: Swift.String {
+    get
+  }
+  public var base32EncodedData: Foundation.Data {
+    get
+  }
+  public var base32DecodedData: Foundation.Data? {
+    get
+  }
+  public var base32HexEncodedString: Swift.String {
+    get
+  }
+  public var base32HexEncodedData: Foundation.Data {
+    get
+  }
+  public var base32HexDecodedData: Foundation.Data? {
+    get
+  }
+}
+public protocol PaddingProtocol {
+  func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+}
+public enum Padding : UnicoSdkPlugins.PaddingProtocol {
+  case noPadding, zeroPadding, pkcs7, pkcs5, iso78164
+  public func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  public func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+  public static func == (a: UnicoSdkPlugins.Padding, b: UnicoSdkPlugins.Padding) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct JWSHeader {
+  public init(algorithm: UnicoSdkPlugins.SignatureAlgorithm)
+}
+final public class AES {
+  public enum Variant : Swift.Int {
+    case aes128, aes192, aes256
+    public var Nk: Swift.Int {
+      get
+    }
+    public var Nb: Swift.Int {
+      get
+    }
+    public var Nr: Swift.Int {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  final public let variant: UnicoSdkPlugins.AES.Variant
+  final public let key: UnicoSdkPlugins.Key
+  final public let blockMode: UnicoSdkPlugins.BlockMode
+  final public let padding: UnicoSdkPlugins.Padding
+  @usableFromInline
+  internal static let T0: [Swift.UInt32]
+  @usableFromInline
+  internal static let T0_INV: [Swift.UInt32]
+  @usableFromInline
+  internal static let T1: [Swift.UInt32]
+  @usableFromInline
+  internal static let T1_INV: [Swift.UInt32]
+  @usableFromInline
+  internal static let T2: [Swift.UInt32]
+  @usableFromInline
+  internal static let T2_INV: [Swift.UInt32]
+  @usableFromInline
+  internal static let T3: [Swift.UInt32]
+  @usableFromInline
+  internal static let T3_INV: [Swift.UInt32]
+  @usableFromInline
+  internal static let U1: [Swift.UInt32]
+  @usableFromInline
+  internal static let U2: [Swift.UInt32]
+  @usableFromInline
+  internal static let U3: [Swift.UInt32]
+  @usableFromInline
+  internal static let U4: [Swift.UInt32]
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: UnicoSdkPlugins.BlockMode, padding: UnicoSdkPlugins.Padding = .pkcs7) throws
+  @objc deinit
+}
+extension UnicoSdkPlugins.AES {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+public typealias CipherOperationOnBlock = (_ block: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>?
+public protocol BlockMode {
+  var options: UnicoSdkPlugins.BlockModeOption { get }
+  @inlinable func worker(blockSize: Swift.Int, cipherOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock, encryptionOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock) throws -> UnicoSdkPlugins.CipherModeWorker
+  var customBlockSize: Swift.Int? { get }
+}
+public typealias StreamMode = UnicoSdkPlugins.BlockMode
+public typealias Key = UnicoSdkPlugins.SecureBytes
+final public class SecureBytes {
+  final public let count: Swift.Int
+  public init(bytes: Swift.Array<Swift.UInt8>)
+  @objc deinit
+}
+extension UnicoSdkPlugins.SecureBytes : Swift.Collection {
+  public typealias Index = Swift.Int
+  final public var endIndex: Swift.Int {
+    get
+  }
+  final public var startIndex: Swift.Int {
+    get
+  }
+  final public subscript(position: UnicoSdkPlugins.SecureBytes.Index) -> Swift.UInt8 {
+    get
+  }
+  final public subscript(bounds: Swift.Range<UnicoSdkPlugins.SecureBytes.Index>) -> Swift.ArraySlice<Swift.UInt8> {
+    get
+  }
+  final public func formIndex(after i: inout Swift.Int)
+  final public func index(after i: Swift.Int) -> Swift.Int
+  public typealias Element = Swift.UInt8
+  public typealias Indices = Swift.DefaultIndices<UnicoSdkPlugins.SecureBytes>
+  public typealias Iterator = Swift.IndexingIterator<UnicoSdkPlugins.SecureBytes>
+  public typealias SubSequence = Swift.ArraySlice<Swift.UInt8>
+}
+extension UnicoSdkPlugins.SecureBytes : Swift.ExpressibleByArrayLiteral {
+  convenience public init(arrayLiteral elements: Swift.UInt8...)
+  public typealias ArrayLiteralElement = Swift.UInt8
+}
+public protocol Cryptor {
+  mutating func seek(to: Swift.Int) throws
+}
+public protocol Updatable {
+  mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8>
+  mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+}
+extension UnicoSdkPlugins.Updatable {
+  public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public mutating func update(withBytes bytes: Swift.Array<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public mutating func update(withBytes bytes: Swift.Array<Swift.UInt8>, isLast: Swift.Bool = false, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(withBytes bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish(withBytes bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish() throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(withBytes bytes: Swift.Array<Swift.UInt8>, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(output: (Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+}
+extension UnicoSdkPlugins.SignatureAlgorithm : Swift.Equatable {}
+extension UnicoSdkPlugins.SignatureAlgorithm : Swift.Hashable {}
+extension UnicoSdkPlugins.SignatureAlgorithm : Swift.RawRepresentable {}
+extension UnicoSdkPlugins.Padding : Swift.Equatable {}
+extension UnicoSdkPlugins.Padding : Swift.Hashable {}
+extension UnicoSdkPlugins.AES.Variant : Swift.Equatable {}
+extension UnicoSdkPlugins.AES.Variant : Swift.Hashable {}
+extension UnicoSdkPlugins.AES.Variant : Swift.RawRepresentable {}

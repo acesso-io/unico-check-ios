@@ -4,15 +4,10 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 @_exported import AcessoBio
-import CommonCrypto
-import Compression
 import CoreMotion
 import CoreTelephony
-import Darwin
 import FaceTecSDK
 import Foundation
-import LocalAuthentication
-import Security
 import Swift
 import SystemConfiguration
 import UIKit.UIDevice
@@ -21,6 +16,7 @@ import UnicoSdkBase
 import UnicoSdkBase/*.NetworkCancellable*/
 import UnicoSdkLiveness
 import UnicoSdkLogger
+import UnicoSdkPlugins
 import UnicoSdkSecurity
 import _Concurrency
 import _StringProcessing
@@ -93,6 +89,7 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   case FACETEC_GET_SESSION_FAILED = 73703
   case SESSION_STATUS_USER_CANCELLED = 73704
   case SESSION_STATUS_TIMEOUT = 73710
+  case ENCRYPTION_ERROR = 73800
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -105,6 +102,9 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
 }
 @objc @_hasMissingDesignatedInitializers public class UnicoSetupServices : ObjectiveC.NSObject, AcessoBio.UnicoSetupServicesProtocol {
   public func getTokenUnico(unicoSetupData: AcessoBio.UnicoSetupData, completion: @escaping AcessoBio.UnicoSetupServices.Completion)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class DefaultSessionIdWorker {
   @objc deinit
 }
 @objc public protocol UnicoFaceCameraViewControllerOutput {
@@ -158,6 +158,7 @@ extension AcessoBio.UnicoCheckThemes {
   @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKTokenResponseDTOAdapter, bioThemeDelegate: AcessoBio.AcessoBioThemeDelegate?)
   @objc public func prepareCamera(success: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionFailure)
   @objc public func openCamera(unicoSetup: AcessoBio.UnicoSetupData, timeoutInterval: Swift.Double, success: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionFailure)
+  @objc public func getLivenessKeybody() -> Swift.String
   @objc deinit
 }
 extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate {
@@ -168,54 +169,14 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDe
   public func onSuccess(livenessResult: UnicoSdkLiveness.LivenessResult)
   public func onError(livenessError: UnicoSdkLiveness.LivenessError)
 }
+public class SDKPredictResponseDTO : Swift.Decodable {
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
 @objc public protocol SensorsWorker {
   @objc func startMotion()
   @objc @discardableResult
   func stopMotion() -> AcessoBio.DeviceBehaviorsDTO
-}
-public func base32Encode(_ data: Foundation.Data) -> Swift.String
-public func base32HexEncode(_ data: Foundation.Data) -> Swift.String
-public func base32DecodeToData(_ string: Swift.String) -> Foundation.Data?
-public func base32HexDecodeToData(_ string: Swift.String) -> Foundation.Data?
-public func base32Encode(_ array: [Swift.UInt8]) -> Swift.String
-public func base32HexEncode(_ array: [Swift.UInt8]) -> Swift.String
-public func base32Decode(_ string: Swift.String) -> [Swift.UInt8]?
-public func base32HexDecode(_ string: Swift.String) -> [Swift.UInt8]?
-extension Swift.String {
-  public var base32DecodedData: Foundation.Data? {
-    get
-  }
-  public var base32EncodedString: Swift.String {
-    get
-  }
-  public func base32DecodedString(_ encoding: Swift.String.Encoding = .utf8) -> Swift.String?
-  public var base32HexDecodedData: Foundation.Data? {
-    get
-  }
-  public var base32HexEncodedString: Swift.String {
-    get
-  }
-  public func base32HexDecodedString(_ encoding: Swift.String.Encoding = .utf8) -> Swift.String?
-}
-extension Foundation.Data {
-  public var base32EncodedString: Swift.String {
-    get
-  }
-  public var base32EncodedData: Foundation.Data {
-    get
-  }
-  public var base32DecodedData: Foundation.Data? {
-    get
-  }
-  public var base32HexEncodedString: Swift.String {
-    get
-  }
-  public var base32HexEncodedData: Foundation.Data {
-    get
-  }
-  public var base32HexDecodedData: Foundation.Data? {
-    get
-  }
 }
 @objc public protocol SensorsWorkerFactory {
   @objc func make() -> AcessoBio.SensorsWorker
@@ -244,9 +205,9 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
   @objc func commitCallback(callback: AcessoBio.CallbackDTO)
   @objc func commitSuccessCallback(successCallback: AcessoBio.SuccessCallbackDTO)
   @objc func commitErrorCallback(errorCallback: AcessoBio.ErrorCallbackDTO)
-  @objc func getLogs() -> [Swift.String : Any]
+  @objc func commitSessionTransactionsIds(_ sessionTransactions: [[Swift.String : Any]])
   @objc func getJsonLogs() -> Swift.String!
-  @objc func send(saveAttempt: Swift.Bool, hostKey: Swift.String) -> Swift.String
+  @objc func send(saveAttempt: Swift.Bool, hostKey: Swift.String, handler: ((Swift.String?, AcessoBio.ErrorBio?) -> Swift.Void)?)
 }
 @objc @_hasMissingDesignatedInitializers public class DataLogger : ObjectiveC.NSObject {
   @objc public class func shared() -> AcessoBio.DataLogger
@@ -255,7 +216,8 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
   @objc public func commitSuccessCallback(successCallback: AcessoBio.SuccessCallbackDTO)
   @objc public func commitErrorCallback(errorCallback: AcessoBio.ErrorCallbackDTO)
   @objc public func commitCallback(_ callback: AcessoBio.CallbackDTO)
-  @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData) -> Swift.String
+  @objc public func commitSessionTransactionsIds(_ sessionTransactions: [[Swift.String : Any]])
+  @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData, handler: ((Swift.String?, AcessoBio.ErrorBio?) -> Swift.Void)?)
   @objc deinit
 }
 public protocol CallbackWorker {
@@ -366,6 +328,9 @@ public protocol Cancellable {
   @objc public var isIntegrationCaptureFlow: Swift.Bool {
     @objc get
   }
+  @objc public var maxAttempts: Swift.Int {
+    @objc get
+  }
   @objc public var isLiveness: Swift.Bool {
     @objc get
   }
@@ -439,6 +404,9 @@ public protocol Cancellable {
 }
 @objc public class OpenCameraDTO : ObjectiveC.NSObject {
   @objc public init(captureType: Swift.String? = nil, cameraType: Swift.String? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class DefaultSessionTransactionsWorker {
   @objc deinit
 }
 @objc public class UnicoLogoImageView : ObjectiveC.NSObject {

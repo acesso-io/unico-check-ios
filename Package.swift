@@ -15,7 +15,8 @@ let package = Package(
                 "UnicoSdkBase",
                 "UnicoSdkLiveness",
                 "UnicoSdkLogger",
-                "UnicoSdkSecurity"
+                "UnicoSdkSecurity",
+                "UnicoSdkPlugins"
             ]
         ),
         .library(
@@ -32,6 +33,7 @@ let package = Package(
         .binaryTarget(name: "UnicoSdkBase", path: "UnicoSdkBase.xcframework"),
         .binaryTarget(name: "UnicoSdkLiveness", path: "UnicoSdkLiveness.xcframework"),
         .binaryTarget(name: "UnicoSdkLogger", path: "UnicoSdkLogger.xcframework"),
-        .binaryTarget(name: "UnicoSdkSecurity", path: "UnicoSdkSecurity.xcframework")
+        .binaryTarget(name: "UnicoSdkSecurity", path: "UnicoSdkSecurity.xcframework"),
+        .binaryTarget(name: "UnicoSdkPlugins", path: "UnicoSdkPlugins.xcframework")
     ]
 )

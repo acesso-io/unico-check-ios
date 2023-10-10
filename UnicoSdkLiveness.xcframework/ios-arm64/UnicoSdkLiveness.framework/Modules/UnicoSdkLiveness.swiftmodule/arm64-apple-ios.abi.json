@@ -16,6 +16,434 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CaptureResult",
+        "printedName": "CaptureResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "base64",
+            "printedName": "base64",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@UnicoSdkLiveness@objc(cs)CaptureResult(py)base64",
+            "mangledName": "$s16UnicoSdkLiveness13CaptureResultC6base64SSSgvp",
+            "moduleName": "UnicoSdkLiveness",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@UnicoSdkLiveness@objc(cs)CaptureResult(im)base64",
+                "mangledName": "$s16UnicoSdkLiveness13CaptureResultC6base64SSSgvg",
+                "moduleName": "UnicoSdkLiveness",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@UnicoSdkLiveness@objc(cs)CaptureResult(im)setBase64:",
+                "mangledName": "$s16UnicoSdkLiveness13CaptureResultC6base64SSSgvs",
+                "moduleName": "UnicoSdkLiveness",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness13CaptureResultC6base64SSSgvM",
+                "mangledName": "$s16UnicoSdkLiveness13CaptureResultC6base64SSSgvM",
+                "moduleName": "UnicoSdkLiveness",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "encrypted",
+            "printedName": "encrypted",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@UnicoSdkLiveness@objc(cs)CaptureResult(py)encrypted",
+            "mangledName": "$s16UnicoSdkLiveness13CaptureResultC9encryptedSSSgvp",
+            "moduleName": "UnicoSdkLiveness",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@UnicoSdkLiveness@objc(cs)CaptureResult(im)encrypted",
+                "mangledName": "$s16UnicoSdkLiveness13CaptureResultC9encryptedSSSgvg",
+                "moduleName": "UnicoSdkLiveness",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@UnicoSdkLiveness@objc(cs)CaptureResult(im)setEncrypted:",
+                "mangledName": "$s16UnicoSdkLiveness13CaptureResultC9encryptedSSSgvs",
+                "moduleName": "UnicoSdkLiveness",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness13CaptureResultC9encryptedSSSgvM",
+                "mangledName": "$s16UnicoSdkLiveness13CaptureResultC9encryptedSSSgvM",
+                "moduleName": "UnicoSdkLiveness",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(base64:encrypted:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CaptureResult",
+                "printedName": "UnicoSdkLiveness.CaptureResult",
+                "usr": "c:@M@UnicoSdkLiveness@objc(cs)CaptureResult"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@UnicoSdkLiveness@objc(cs)CaptureResult(im)initWithBase64:encrypted:",
+            "mangledName": "$s16UnicoSdkLiveness13CaptureResultC6base649encryptedACSSSg_AFtcfc",
+            "moduleName": "UnicoSdkLiveness",
+            "objc_name": "initWithBase64:encrypted:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CaptureResult",
+                "printedName": "UnicoSdkLiveness.CaptureResult",
+                "usr": "c:@M@UnicoSdkLiveness@objc(cs)CaptureResult"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@UnicoSdkLiveness@objc(cs)CaptureResult(im)init",
+            "mangledName": "$s16UnicoSdkLiveness13CaptureResultCACycfc",
+            "moduleName": "UnicoSdkLiveness",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@UnicoSdkLiveness@objc(cs)CaptureResult",
+        "mangledName": "$s16UnicoSdkLiveness13CaptureResultC",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -572,6 +1000,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -735,8 +1173,62 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
@@ -835,6 +1327,53 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -849,6 +1388,16 @@
         "printedName": "FaceTecSDK",
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -1132,11 +1681,408 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "session",
+            "printedName": "session",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16UnicoSdkLiveness0C6ResultP7sessionSDySSypGSgvp",
+            "mangledName": "$s16UnicoSdkLiveness0C6ResultP7sessionSDySSypGSgvp",
+            "moduleName": "UnicoSdkLiveness",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C6ResultP7sessionSDySSypGSgvg",
+                "mangledName": "$s16UnicoSdkLiveness0C6ResultP7sessionSDySSypGSgvg",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessResult>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessResult>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Protocol",
         "usr": "s:16UnicoSdkLiveness0C6ResultP",
         "mangledName": "$s16UnicoSdkLiveness0C6ResultP",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SessionTransactionDTO",
+        "printedName": "SessionTransactionDTO",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(transactionId:isLive:order:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SessionTransactionDTO",
+                "printedName": "UnicoSdkLiveness.SessionTransactionDTO",
+                "usr": "c:@M@UnicoSdkLiveness@objc(cs)SessionTransactionDTO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@UnicoSdkLiveness@objc(cs)SessionTransactionDTO(im)initWithTransactionId:isLive:order:",
+            "mangledName": "$s16UnicoSdkLiveness21SessionTransactionDTOC13transactionId6isLive5orderACSS_SbSitcfc",
+            "moduleName": "UnicoSdkLiveness",
+            "objc_name": "initWithTransactionId:isLive:order:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SessionTransactionDTO",
+                "printedName": "UnicoSdkLiveness.SessionTransactionDTO",
+                "usr": "c:@M@UnicoSdkLiveness@objc(cs)SessionTransactionDTO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@UnicoSdkLiveness@objc(cs)SessionTransactionDTO(im)init",
+            "mangledName": "$s16UnicoSdkLiveness21SessionTransactionDTOCACycfc",
+            "moduleName": "UnicoSdkLiveness",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@UnicoSdkLiveness@objc(cs)SessionTransactionDTO",
+        "mangledName": "$s16UnicoSdkLiveness21SessionTransactionDTOC",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Env",
+        "printedName": "Env",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "custom",
+            "printedName": "custom",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkLiveness.Env.Type) -> (UnicoSdkBase.DataTransferService, Swift.String) -> UnicoSdkLiveness.Env",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UnicoSdkBase.DataTransferService, Swift.String) -> UnicoSdkLiveness.Env",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Env",
+                        "printedName": "UnicoSdkLiveness.Env",
+                        "usr": "s:16UnicoSdkLiveness3EnvO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(service: UnicoSdkBase.DataTransferService, totpSecret: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DataTransferService",
+                            "printedName": "UnicoSdkBase.DataTransferService",
+                            "usr": "s:12UnicoSdkBase19DataTransferServiceP"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkLiveness.Env.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Env",
+                        "printedName": "UnicoSdkLiveness.Env",
+                        "usr": "s:16UnicoSdkLiveness3EnvO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16UnicoSdkLiveness3EnvO6customyAC0aB4Base19DataTransferService_p_SStcACmF",
+            "mangledName": "$s16UnicoSdkLiveness3EnvO6customyAC0aB4Base19DataTransferService_p_SStcACmF",
+            "moduleName": "UnicoSdkLiveness"
+          },
+          {
+            "kind": "Var",
+            "name": "production",
+            "printedName": "production",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkLiveness.Env.Type) -> UnicoSdkLiveness.Env",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Env",
+                    "printedName": "UnicoSdkLiveness.Env",
+                    "usr": "s:16UnicoSdkLiveness3EnvO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkLiveness.Env.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Env",
+                        "printedName": "UnicoSdkLiveness.Env",
+                        "usr": "s:16UnicoSdkLiveness3EnvO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16UnicoSdkLiveness3EnvO10productionyA2CmF",
+            "mangledName": "$s16UnicoSdkLiveness3EnvO10productionyA2CmF",
+            "moduleName": "UnicoSdkLiveness"
+          },
+          {
+            "kind": "Var",
+            "name": "development",
+            "printedName": "development",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkLiveness.Env.Type) -> UnicoSdkLiveness.Env",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Env",
+                    "printedName": "UnicoSdkLiveness.Env",
+                    "usr": "s:16UnicoSdkLiveness3EnvO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkLiveness.Env.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Env",
+                        "printedName": "UnicoSdkLiveness.Env",
+                        "usr": "s:16UnicoSdkLiveness3EnvO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16UnicoSdkLiveness3EnvO11developmentyA2CmF",
+            "mangledName": "$s16UnicoSdkLiveness3EnvO11developmentyA2CmF",
+            "moduleName": "UnicoSdkLiveness"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16UnicoSdkLiveness3EnvO",
+        "mangledName": "$s16UnicoSdkLiveness3EnvO",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
           "AccessControl"
@@ -1234,19 +2180,19 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "OpenData",
-        "printedName": "OpenData",
+        "name": "OpenLivenessDTO",
+        "printedName": "OpenLivenessDTO",
         "children": [
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(sessionToken:timeoutInterval:)",
+            "printedName": "init(sdkKey:sessionToken:keyBody:isIntegrationCaptureFlow:maxAttempts:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "OpenData",
-                "printedName": "UnicoSdkLiveness.OpenData",
-                "usr": "s:16UnicoSdkLiveness8OpenDataV"
+                "name": "OpenLivenessDTO",
+                "printedName": "UnicoSdkLiveness.OpenLivenessDTO",
+                "usr": "s:16UnicoSdkLiveness04OpenC3DTOV"
               },
               {
                 "kind": "TypeNominal",
@@ -1264,14 +2210,48 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:16UnicoSdkLiveness8OpenDataV12sessionToken15timeoutIntervalACSSSg_Sdtcfc",
-            "mangledName": "$s16UnicoSdkLiveness8OpenDataV12sessionToken15timeoutIntervalACSSSg_Sdtcfc",
+            "usr": "s:16UnicoSdkLiveness04OpenC3DTOV6sdkKey12sessionToken7keyBody24isIntegrationCaptureFlow11maxAttemptsACSSSg_A2ISbSitcfc",
+            "mangledName": "$s16UnicoSdkLiveness04OpenC3DTOV6sdkKey12sessionToken7keyBody24isIntegrationCaptureFlow11maxAttemptsACSSSg_A2ISbSitcfc",
             "moduleName": "UnicoSdkLiveness",
             "declAttributes": [
               "AccessControl"
@@ -1280,8 +2260,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:16UnicoSdkLiveness8OpenDataV",
-        "mangledName": "$s16UnicoSdkLiveness8OpenDataV",
+        "usr": "s:16UnicoSdkLiveness04OpenC3DTOV",
+        "mangledName": "$s16UnicoSdkLiveness04OpenC3DTOV",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
           "AccessControl"
@@ -1303,6 +2283,33 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -1327,6 +2334,36 @@
         "printedName": "FaceTecSDK",
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -1380,12 +2417,18 @@
           {
             "kind": "Function",
             "name": "prepareCamera",
-            "printedName": "prepareCamera(data:prepareDelegate:)",
+            "printedName": "prepareCamera(env:data:prepareDelegate:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Env",
+                "printedName": "UnicoSdkLiveness.Env",
+                "usr": "s:16UnicoSdkLiveness3EnvO"
               },
               {
                 "kind": "TypeNominal",
@@ -1401,8 +2444,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:16UnicoSdkLiveness0aC13RepresentableP13prepareCamera4data0E8DelegateyAA11PrepareDataV_AA0acifH0_ptF",
-            "mangledName": "$s16UnicoSdkLiveness0aC13RepresentableP13prepareCamera4data0E8DelegateyAA11PrepareDataV_AA0acifH0_ptF",
+            "usr": "s:16UnicoSdkLiveness0aC13RepresentableP13prepareCamera3env4data0E8DelegateyAA3EnvO_AA11PrepareDataVAA0ackfI0_ptF",
+            "mangledName": "$s16UnicoSdkLiveness0aC13RepresentableP13prepareCamera3env4data0E8DelegateyAA3EnvO_AA11PrepareDataVAA0ackfI0_ptF",
             "moduleName": "UnicoSdkLiveness",
             "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.UnicoLivenessRepresentable>",
             "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.UnicoLivenessRepresentable>",
@@ -1454,12 +2497,18 @@
           {
             "kind": "Function",
             "name": "prepareCamera",
-            "printedName": "prepareCamera(data:prepareDelegate:)",
+            "printedName": "prepareCamera(env:data:prepareDelegate:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Env",
+                "printedName": "UnicoSdkLiveness.Env",
+                "usr": "s:16UnicoSdkLiveness3EnvO"
               },
               {
                 "kind": "TypeNominal",
@@ -1475,8 +2524,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:16UnicoSdkLiveness0aC0C13prepareCamera4data0D8DelegateyAA11PrepareDataV_AA0acheG0_ptF",
-            "mangledName": "$s16UnicoSdkLiveness0aC0C13prepareCamera4data0D8DelegateyAA11PrepareDataV_AA0acheG0_ptF",
+            "usr": "s:16UnicoSdkLiveness0aC0C13prepareCamera3env4data0D8DelegateyAA3EnvO_AA11PrepareDataVAA0acjeH0_ptF",
+            "mangledName": "$s16UnicoSdkLiveness0aC0C13prepareCamera3env4data0D8DelegateyAA3EnvO_AA11PrepareDataVAA0acjeH0_ptF",
             "moduleName": "UnicoSdkLiveness",
             "declAttributes": [
               "Final",
@@ -1531,9 +2580,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "OpenData",
-                "printedName": "UnicoSdkLiveness.OpenData",
-                "usr": "s:16UnicoSdkLiveness8OpenDataV"
+                "name": "OpenLivenessDTO",
+                "printedName": "UnicoSdkLiveness.OpenLivenessDTO",
+                "usr": "s:16UnicoSdkLiveness04OpenC3DTOV"
               },
               {
                 "kind": "TypeNominal",
@@ -1543,8 +2592,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:16UnicoSdkLiveness0aC10OpenCameraP04openE04data05unicoC8DelegateyAA0D4DataV_AA0acI0_ptF",
-            "mangledName": "$s16UnicoSdkLiveness0aC10OpenCameraP04openE04data05unicoC8DelegateyAA0D4DataV_AA0acI0_ptF",
+            "usr": "s:16UnicoSdkLiveness0aC10OpenCameraP04openE04data05unicoC8DelegateyAA0dC3DTOV_AA0acI0_ptF",
+            "mangledName": "$s16UnicoSdkLiveness0aC10OpenCameraP04openE04data05unicoC8DelegateyAA0dC3DTOV_AA0acI0_ptF",
             "moduleName": "UnicoSdkLiveness",
             "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.UnicoLivenessOpenCamera>",
             "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.UnicoLivenessOpenCamera>",
@@ -1563,6 +2612,43 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -1570,6 +2656,23 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkPlugins",
+        "printedName": "UnicoSdkPlugins",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
       },
       {
         "kind": "Import",
@@ -1586,144 +2689,88 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Dtos\/CaptureResult.swift",
+      "kind": "StringLiteral",
+      "offset": 132,
+      "length": 13,
+      "value": "\"UnicoSdkLiveness.CaptureResult\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Domain\/Defaults\/DefaultGetLivenessPredictUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 170,
+      "length": 32,
+      "value": "\"UnicoSdkLiveness.DefaultGetLivenessPredictUseCase\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
+      "kind": "Array",
+      "offset": 801,
+      "length": 2,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
       "kind": "StringLiteral",
-      "offset": 460,
+      "offset": 855,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1128,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 565,
       "length": 15,
       "value": "\"UnicoSdkLiveness.FacetecProvider\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 706,
-      "length": 5,
-      "value": "73701"
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/ConfigUnico.swift",
+      "kind": "StringLiteral",
+      "offset": 222,
+      "length": 12,
+      "value": "\"ios-native\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 752,
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/ConfigUnico.swift",
+      "kind": "StringLiteral",
+      "offset": 265,
       "length": 5,
-      "value": "73702"
+      "value": "\"IOS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 792,
-      "length": 5,
-      "value": "73703"
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/ConfigUnico.swift",
+      "kind": "StringLiteral",
+      "offset": 308,
+      "length": 22,
+      "value": "\"com.acesso.AcessoBio\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 839,
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/ConfigUnico.swift",
+      "kind": "BooleanLiteral",
+      "offset": 365,
       "length": 5,
-      "value": "73704"
+      "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 894,
-      "length": 5,
-      "value": "73705"
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/AppConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 172,
+      "length": 18,
+      "value": "\"HE4TSOJZGA2DKNRU\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 951,
-      "length": 5,
-      "value": "73706"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 999,
-      "length": 5,
-      "value": "73707"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1057,
-      "length": 5,
-      "value": "73708"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1117,
-      "length": 5,
-      "value": "73709"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1159,
-      "length": 5,
-      "value": "73710"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1203,
-      "length": 5,
-      "value": "73711"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1273,
-      "length": 5,
-      "value": "73712"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1326,
-      "length": 5,
-      "value": "73713"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1381,
-      "length": 5,
-      "value": "73714"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1437,
-      "length": 5,
-      "value": "73715"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1497,
-      "length": 5,
-      "value": "73716"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1541,
-      "length": 5,
-      "value": "73717"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1589,
-      "length": 5,
-      "value": "73718"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1660,
-      "length": 5,
-      "value": "73719"
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/AppConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 216,
+      "length": 18,
+      "value": "\"WJYHMMARJKIQPZX7\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
@@ -1990,6 +3037,167 @@
       "offset": 1660,
       "length": 5,
       "value": "73719"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 706,
+      "length": 5,
+      "value": "73701"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 752,
+      "length": 5,
+      "value": "73702"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 792,
+      "length": 5,
+      "value": "73703"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 839,
+      "length": 5,
+      "value": "73704"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 894,
+      "length": 5,
+      "value": "73705"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 951,
+      "length": 5,
+      "value": "73706"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 999,
+      "length": 5,
+      "value": "73707"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1057,
+      "length": 5,
+      "value": "73708"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1117,
+      "length": 5,
+      "value": "73709"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1159,
+      "length": 5,
+      "value": "73710"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1203,
+      "length": 5,
+      "value": "73711"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1273,
+      "length": 5,
+      "value": "73712"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1326,
+      "length": 5,
+      "value": "73713"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1381,
+      "length": 5,
+      "value": "73714"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1437,
+      "length": 5,
+      "value": "73715"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1497,
+      "length": 5,
+      "value": "73716"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1541,
+      "length": 5,
+      "value": "73717"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1589,
+      "length": 5,
+      "value": "73718"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1660,
+      "length": 5,
+      "value": "73719"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/SessionTransactionDTO.swift",
+      "kind": "StringLiteral",
+      "offset": 19,
+      "length": 21,
+      "value": "\"UnicoSdkLiveness.SessionTransactionDTO\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 327,
+      "length": 29,
+      "value": "\"UnicoSdkLiveness.DefaultGetCameraResultUseCase\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/DataSources\/DefaultGetLivenessPredictDataSource.swift",
+      "kind": "IntegerLiteral",
+      "offset": 431,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/DataSources\/DefaultGetLivenessPredictDataSource.swift",
+      "kind": "FloatLiteral",
+      "offset": 473,
+      "length": 3,
+      "value": "1.0"
     }
   ]
 }
