@@ -6,9 +6,19 @@ import FaceTecSDK
 import Foundation
 import Swift
 import UIKit
+import UnicoSdkBase
+import UnicoSdkBase/*.API*/
+import UnicoSdkBase/*.DataTransferService*/
 @_exported import UnicoSdkLiveness
+import UnicoSdkPlugins
 import _Concurrency
 import _StringProcessing
+@objc public class CaptureResult : ObjectiveC.NSObject {
+  @objc public var base64: Swift.String!
+  @objc public var encrypted: Swift.String!
+  @objc public init(base64: Swift.String!, encrypted: Swift.String!)
+  @objc deinit
+}
 public struct PrepareData : Swift.Equatable {
   public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool)
   public static func == (a: UnicoSdkLiveness.PrepareData, b: UnicoSdkLiveness.PrepareData) -> Swift.Bool
@@ -50,22 +60,32 @@ public struct LivenessError : Swift.Error, Swift.Equatable {
 }
 public protocol LivenessResult {
   var serialize: [Swift.String : Any] { get }
+  var session: [Swift.String : Any]? { get }
+}
+@objc final public class SessionTransactionDTO : ObjectiveC.NSObject {
+  @objc public init(transactionId: Swift.String, isLive: Swift.Bool, order: Swift.Int)
+  @objc deinit
+}
+public enum Env {
+  case custom(service: UnicoSdkBase.DataTransferService, totpSecret: Swift.String)
+  case production
+  case development
 }
 public protocol UnicoLivenessPrepareCameraDelegate : AnyObject {
   func onCameraReady(unicoLivenessOpenCamera: UnicoSdkLiveness.UnicoLivenessOpenCamera)
   func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
 }
-public struct OpenData {
-  public init(sessionToken: Swift.String?, timeoutInterval: Swift.Double)
+public struct OpenLivenessDTO {
+  public init(sdkKey: Swift.String?, sessionToken: Swift.String?, keyBody: Swift.String?, isIntegrationCaptureFlow: Swift.Bool, maxAttempts: Swift.Int)
 }
 public protocol UnicoLivenessRepresentable {
-  func prepareCamera(data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
 }
 @_hasMissingDesignatedInitializers final public class UnicoLiveness : UnicoSdkLiveness.UnicoLivenessRepresentable {
   public init(viewController: UIKit.UIViewController)
-  final public func prepareCamera(data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  final public func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
   @objc deinit
 }
 public protocol UnicoLivenessOpenCamera {
-  func openCamera(data: UnicoSdkLiveness.OpenData, unicoLivenessDelegate: UnicoSdkLiveness.UnicoLivenessDelegate)
+  func openCamera(data: UnicoSdkLiveness.OpenLivenessDTO, unicoLivenessDelegate: UnicoSdkLiveness.UnicoLivenessDelegate)
 }

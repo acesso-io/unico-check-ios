@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class USLDefaultLogger, USLSensorValue, USLAccelerometerDeviceBehavior, USLAppSec, USLAttempts, USLFaceBehavior, USLDeviceBehavior, USLBehaviors, USLCameraTypes, USLCameraTypesDocument, USLCameraTypesDocumentDriversLicense, USLCameraTypesDocumentDriversLicenseBack, USLCameraTypesDocumentDriversLicenseFront, USLCameraTypesDocumentDriversLicenseFull, USLCameraTypesDocumentID, USLCameraTypesDocumentIDBack, USLCameraTypesDocumentIDFront, USLCameraTypesDocumentNewID, USLCameraTypesDocumentNewIDBack, USLCameraTypesDocumentNewIDFront, USLCameraTypesDocumentOther, USLCameraTypesDocumentRegistration, USLCameraTypesSelfie, USLCameraTypesSelfieDefault, USLCameraTypesSelfieLiveness, USLCameraTypesSelfieSmart, USLSilhouette, USLImage, USLJwtInfo, USLVideo, USLTimers, USLConnections, USLCapture, USLOSTypes, USLDeviceInfo, USLErrorSDK, USLExtra, USLGeolocation, USLInfoValue, USLIInfo, USLKotlinEnumCompanion, USLKotlinEnum<E>, USLKotlinArray<T>, USLOriginTypes, USLOther, USLPlatformTypes, USLSize, USLEitherError, USLEitherSuccess<T>, USLKotlinNothing, USLDependencyInjection, USLDateKMM, USLEither<__covariant T>, USLEitherEmpty, USLKotlinThrowable, USLExceptionParam;
+@class USLDefaultLogger, USLSensorValue, USLAccelerometerDeviceBehavior, USLAppSec, USLAttempts, USLFaceBehavior, USLDeviceBehavior, USLBehaviors, USLCameraTypes, USLCameraTypesDocument, USLCameraTypesDocumentDriversLicense, USLCameraTypesDocumentDriversLicenseBack, USLCameraTypesDocumentDriversLicenseFront, USLCameraTypesDocumentDriversLicenseFull, USLCameraTypesDocumentID, USLCameraTypesDocumentIDBack, USLCameraTypesDocumentIDFront, USLCameraTypesDocumentNewID, USLCameraTypesDocumentNewIDBack, USLCameraTypesDocumentNewIDFront, USLCameraTypesDocumentOther, USLCameraTypesDocumentRegistration, USLCameraTypesSelfie, USLCameraTypesSelfieDefault, USLCameraTypesSelfieLiveness, USLCameraTypesSelfieSmart, USLSilhouette, USLImage, USLJwtInfo, USLVideo, USLTimers, USLConnections, USLProvider, USLLiveness, USLCapture, USLOSTypes, USLDeviceInfo, USLErrorSDK, USLExtra, USLGeolocation, USLInfoValue, USLIInfo, USLKotlinEnumCompanion, USLKotlinEnum<E>, USLKotlinArray<T>, USLOriginTypes, USLOther, USLPlatformTypes, USLSessionTransactionsId, USLSize, USLEitherError, USLEitherSuccess<T>, USLKotlinNothing, USLDependencyInjection, USLDateKMM, USLEither<__covariant T>, USLEitherEmpty, USLKotlinThrowable, USLExceptionParam;
 
-@protocol USLBaseCameraTypes, USLKotlinComparable, USLUseCase, USLAddProviderUseCase, USLLogProviderRepository, USLLogProvider, USLGetLogUseCase, USLMapToJsonUseCase, USLSetLogAppSecUseCase, USLSetLogAttemptsUseCase, USLSetLogCallbackUseCase, USLSetLogCameraTypeUseCase, USLSetLogCameraUseCase, USLSetLogCaptureUseCase, USLSetLogDeviceInfoUseCase, USLSetLogDomainUseCase, USLSetLogErrorSdkUseCase, USLSetExtraDataUseCase, USLSetLogGeolocationUseCase, USLSetLogIInfoUseCase, USLSetLogOriginUseCase, USLSetLogOthersUseCase, USLSetLogPlataformUseCase, USLSetLogStatusUseCase, USLSetLogVersionUseCase, USLSetUuidUseCase, USLKotlinKClass, USLInjector, USLKotlinIterator, USLKotlinKDeclarationContainer, USLKotlinKAnnotatedElement, USLKotlinKClassifier;
+@protocol USLBaseCameraTypes, USLKotlinComparable, USLUseCase, USLAddProviderUseCase, USLLogProviderRepository, USLLogProvider, USLGetLogUseCase, USLMapToJsonUseCase, USLSetLogAppSecUseCase, USLSetLogAttemptsUseCase, USLSetLogCallbackUseCase, USLSetLogCameraTypeUseCase, USLSetLogCameraUseCase, USLSetLogCaptureUseCase, USLSetLogDeviceInfoUseCase, USLSetLogDomainUseCase, USLSetLogErrorSdkUseCase, USLSetExtraDataUseCase, USLSetLogGeolocationUseCase, USLSetLogIInfoUseCase, USLSetLogOriginUseCase, USLSetLogOthersUseCase, USLSetLogPlataformUseCase, USLSetLogSessionIdUseCase, USLSetLogSessionTransactionsIdsUseCase, USLSetLogStatusUseCase, USLSetLogVersionUseCase, USLSetUuidUseCase, USLKotlinKClass, USLInjector, USLKotlinIterator, USLKotlinKDeclarationContainer, USLKotlinKAnnotatedElement, USLKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -385,8 +385,8 @@ __attribute__((swift_name("CameraTypes.SelfieSmart")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Capture")))
 @interface USLCapture : USLBase
-- (instancetype)initWithTimestamp:(NSString * _Nullable)timestamp camera:(NSString * _Nullable)camera cameraVendor:(NSString * _Nullable)cameraVendor type:(NSString * _Nullable)type screenBrightness:(USLDouble * _Nullable)screenBrightness lightingSensor:(USLDouble * _Nullable)lightingSensor silhouette:(USLSilhouette * _Nullable)silhouette image:(USLImage * _Nullable)image jwt:(USLJwtInfo * _Nullable)jwt video:(USLVideo * _Nullable)video isCameraTypeChanged:(USLBoolean * _Nullable)isCameraTypeChanged timers:(USLTimers * _Nullable)timers connections:(USLConnections * _Nullable)connections behaviors:(USLBehaviors * _Nullable)behaviors __attribute__((swift_name("init(timestamp:camera:cameraVendor:type:screenBrightness:lightingSensor:silhouette:image:jwt:video:isCameraTypeChanged:timers:connections:behaviors:)"))) __attribute__((objc_designated_initializer));
-- (USLCapture *)doCopyTimestamp:(NSString * _Nullable)timestamp camera:(NSString * _Nullable)camera cameraVendor:(NSString * _Nullable)cameraVendor type:(NSString * _Nullable)type screenBrightness:(USLDouble * _Nullable)screenBrightness lightingSensor:(USLDouble * _Nullable)lightingSensor silhouette:(USLSilhouette * _Nullable)silhouette image:(USLImage * _Nullable)image jwt:(USLJwtInfo * _Nullable)jwt video:(USLVideo * _Nullable)video isCameraTypeChanged:(USLBoolean * _Nullable)isCameraTypeChanged timers:(USLTimers * _Nullable)timers connections:(USLConnections * _Nullable)connections behaviors:(USLBehaviors * _Nullable)behaviors __attribute__((swift_name("doCopy(timestamp:camera:cameraVendor:type:screenBrightness:lightingSensor:silhouette:image:jwt:video:isCameraTypeChanged:timers:connections:behaviors:)")));
+- (instancetype)initWithTimestamp:(NSString * _Nullable)timestamp camera:(NSString * _Nullable)camera cameraVendor:(NSString * _Nullable)cameraVendor type:(NSString * _Nullable)type screenBrightness:(USLDouble * _Nullable)screenBrightness lightingSensor:(USLDouble * _Nullable)lightingSensor silhouette:(USLSilhouette * _Nullable)silhouette image:(USLImage * _Nullable)image jwt:(USLJwtInfo * _Nullable)jwt video:(USLVideo * _Nullable)video isCameraTypeChanged:(USLBoolean * _Nullable)isCameraTypeChanged timers:(USLTimers * _Nullable)timers connections:(USLConnections * _Nullable)connections behaviors:(USLBehaviors * _Nullable)behaviors provider:(NSArray<USLProvider *> * _Nullable)provider liveness:(USLLiveness * _Nullable)liveness __attribute__((swift_name("init(timestamp:camera:cameraVendor:type:screenBrightness:lightingSensor:silhouette:image:jwt:video:isCameraTypeChanged:timers:connections:behaviors:provider:liveness:)"))) __attribute__((objc_designated_initializer));
+- (USLCapture *)doCopyTimestamp:(NSString * _Nullable)timestamp camera:(NSString * _Nullable)camera cameraVendor:(NSString * _Nullable)cameraVendor type:(NSString * _Nullable)type screenBrightness:(USLDouble * _Nullable)screenBrightness lightingSensor:(USLDouble * _Nullable)lightingSensor silhouette:(USLSilhouette * _Nullable)silhouette image:(USLImage * _Nullable)image jwt:(USLJwtInfo * _Nullable)jwt video:(USLVideo * _Nullable)video isCameraTypeChanged:(USLBoolean * _Nullable)isCameraTypeChanged timers:(USLTimers * _Nullable)timers connections:(USLConnections * _Nullable)connections behaviors:(USLBehaviors * _Nullable)behaviors provider:(NSArray<USLProvider *> * _Nullable)provider liveness:(USLLiveness * _Nullable)liveness __attribute__((swift_name("doCopy(timestamp:camera:cameraVendor:type:screenBrightness:lightingSensor:silhouette:image:jwt:video:isCameraTypeChanged:timers:connections:behaviors:provider:liveness:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSDictionary<NSString *, id> *)toMap __attribute__((swift_name("toMap()")));
@@ -399,6 +399,8 @@ __attribute__((swift_name("Capture")))
 @property (readonly) USLBoolean * _Nullable isCameraTypeChanged __attribute__((swift_name("isCameraTypeChanged")));
 @property (readonly) USLJwtInfo * _Nullable jwt __attribute__((swift_name("jwt")));
 @property (readonly) USLDouble * _Nullable lightingSensor __attribute__((swift_name("lightingSensor")));
+@property (readonly) USLLiveness * _Nullable liveness __attribute__((swift_name("liveness")));
+@property (readonly) NSArray<USLProvider *> * _Nullable provider __attribute__((swift_name("provider")));
 @property (readonly) USLDouble * _Nullable screenBrightness __attribute__((swift_name("screenBrightness")));
 @property (readonly) USLSilhouette * _Nullable silhouette __attribute__((swift_name("silhouette")));
 @property (readonly) USLTimers * _Nullable timers __attribute__((swift_name("timers")));
@@ -574,6 +576,21 @@ __attribute__((swift_name("JwtInfo")))
 @property (readonly) USLLong * _Nullable weight __attribute__((swift_name("weight")));
 @end
 
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Liveness")))
+@interface USLLiveness : USLBase
+- (instancetype)initWithProvider:(USLProvider * _Nullable)provider maxAttempts:(USLInt * _Nullable)maxAttempts attempts:(USLInt * _Nullable)attempts isLive:(USLBoolean * _Nullable)isLive __attribute__((swift_name("init(provider:maxAttempts:attempts:isLive:)"))) __attribute__((objc_designated_initializer));
+- (USLLiveness *)doCopyProvider:(USLProvider * _Nullable)provider maxAttempts:(USLInt * _Nullable)maxAttempts attempts:(USLInt * _Nullable)attempts isLive:(USLBoolean * _Nullable)isLive __attribute__((swift_name("doCopy(provider:maxAttempts:attempts:isLive:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSDictionary<NSString *, id> *)toMap __attribute__((swift_name("toMap()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) USLInt * _Nullable attempts __attribute__((swift_name("attempts")));
+@property (readonly) USLBoolean * _Nullable isLive __attribute__((swift_name("isLive")));
+@property (readonly) USLInt * _Nullable maxAttempts __attribute__((swift_name("maxAttempts")));
+@property (readonly) USLProvider * _Nullable provider __attribute__((swift_name("provider")));
+@end
+
 __attribute__((swift_name("LogProvider")))
 @protocol USLLogProvider
 @required
@@ -654,6 +671,20 @@ __attribute__((swift_name("PlatformTypes")))
 @end
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Provider")))
+@interface USLProvider : USLBase
+- (instancetype)initWithName:(NSString *)name version:(NSString *)version type:(NSString *)type __attribute__((swift_name("init(name:version:type:)"))) __attribute__((objc_designated_initializer));
+- (USLProvider *)doCopyName:(NSString *)name version:(NSString *)version type:(NSString *)type __attribute__((swift_name("doCopy(name:version:type:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSDictionary<NSString *, id> *)toMap __attribute__((swift_name("toMap()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *name __attribute__((swift_name("name")));
+@property (readonly) NSString *type __attribute__((swift_name("type")));
+@property (readonly) NSString *version __attribute__((swift_name("version")));
+@end
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("SensorValue")))
 @interface USLSensorValue : USLBase
 - (instancetype)initWithValue:(USLDouble * _Nullable)value timestamp:(USLLong * _Nullable)timestamp __attribute__((swift_name("init(value:timestamp:)"))) __attribute__((objc_designated_initializer));
@@ -664,6 +695,20 @@ __attribute__((swift_name("SensorValue")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) USLLong * _Nullable timestamp __attribute__((swift_name("timestamp")));
 @property (readonly) USLDouble * _Nullable value __attribute__((swift_name("value")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SessionTransactionsId")))
+@interface USLSessionTransactionsId : USLBase
+- (instancetype)initWithTransactionId:(NSString *)transactionId isLive:(BOOL)isLive order:(int32_t)order __attribute__((swift_name("init(transactionId:isLive:order:)"))) __attribute__((objc_designated_initializer));
+- (USLSessionTransactionsId *)doCopyTransactionId:(NSString *)transactionId isLive:(BOOL)isLive order:(int32_t)order __attribute__((swift_name("doCopy(transactionId:isLive:order:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSDictionary<NSString *, id> *)toMap __attribute__((swift_name("toMap()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) BOOL isLive __attribute__((swift_name("isLive")));
+@property (readonly) int32_t order __attribute__((swift_name("order")));
+@property (readonly) NSString *transactionId __attribute__((swift_name("transactionId")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -819,6 +864,16 @@ __attribute__((swift_name("SetLogPlataformUseCase")))
 @required
 @end
 
+__attribute__((swift_name("SetLogSessionIdUseCase")))
+@protocol USLSetLogSessionIdUseCase <USLUseCase>
+@required
+@end
+
+__attribute__((swift_name("SetLogSessionTransactionsIdsUseCase")))
+@protocol USLSetLogSessionTransactionsIdsUseCase <USLUseCase>
+@required
+@end
+
 __attribute__((swift_name("SetLogStatusUseCase")))
 @protocol USLSetLogStatusUseCase <USLUseCase>
 @required
@@ -845,7 +900,7 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("DefaultGetLogUseCase")))
 @interface USLDefaultGetLogUseCase : USLBase <USLGetLogUseCase>
 - (instancetype)initWithRepository:(id<USLLogProviderRepository>)repository __attribute__((swift_name("init(repository:)"))) __attribute__((objc_designated_initializer));
-- (NSArray<NSDictionary<NSString *, id> *> *)executeParam:(USLKotlinNothing * _Nullable)param __attribute__((swift_name("execute(param:)")));
+- (NSArray<NSDictionary<NSString *, id> *> *)executeParam:(NSString * _Nullable)param __attribute__((swift_name("execute(param:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -959,6 +1014,20 @@ __attribute__((swift_name("DefaultSetLogPlataformUseCase")))
 @interface USLDefaultSetLogPlataformUseCase : USLBase <USLSetLogPlataformUseCase>
 - (instancetype)initWithRepository:(id<USLLogProviderRepository>)repository __attribute__((swift_name("init(repository:)"))) __attribute__((objc_designated_initializer));
 - (USLBoolean * _Nullable)executeParam:(USLPlatformTypes * _Nullable)param __attribute__((swift_name("execute(param:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DefaultSetLogSessionIdUseCase")))
+@interface USLDefaultSetLogSessionIdUseCase : USLBase <USLSetLogSessionIdUseCase>
+- (instancetype)initWithRepository:(id<USLLogProviderRepository>)repository __attribute__((swift_name("init(repository:)"))) __attribute__((objc_designated_initializer));
+- (USLBoolean * _Nullable)executeParam:(NSString * _Nullable)param __attribute__((swift_name("execute(param:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DefaultSetLogSessionTransactionsIdsUseCase")))
+@interface USLDefaultSetLogSessionTransactionsIdsUseCase : USLBase <USLSetLogSessionTransactionsIdsUseCase>
+- (instancetype)initWithRepository:(id<USLLogProviderRepository>)repository __attribute__((swift_name("init(repository:)"))) __attribute__((objc_designated_initializer));
+- (USLBoolean * _Nullable)executeParam:(NSArray<USLSessionTransactionsId *> * _Nullable)param __attribute__((swift_name("execute(param:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))

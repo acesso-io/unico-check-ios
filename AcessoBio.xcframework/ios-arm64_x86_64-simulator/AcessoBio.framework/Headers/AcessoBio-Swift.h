@@ -349,6 +349,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio21CreateProviderUseCase_")
 @class SuccessCallbackDTO;
 @class ErrorCallbackDTO;
 @class UnicoSetupData;
+@class ErrorBio;
 
 SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 @interface DataLogger : NSObject
@@ -358,13 +359,15 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 - (void)commitSuccessCallbackWithSuccessCallback:(SuccessCallbackDTO * _Nonnull)successCallback;
 - (void)commitErrorCallbackWithErrorCallback:(ErrorCallbackDTO * _Nonnull)errorCallback;
 - (void)commitCallback:(CallbackDTO * _Nonnull)callback;
+- (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
 /// Send storage data signaling whether or not it is an <code>attempt</code>.
 /// \param saveAttempt Indicates whether should or not store a capture attempt .
 ///
+/// \param setupData Application initial setup
 ///
-/// returns:
-/// The generated event <code>id</code>.
-- (NSString * _Nonnull)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData SWIFT_WARN_UNUSED_RESULT;
+/// \param completion Block to listen for request result
+///
+- (void)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData handler:(void (^ _Nullable)(NSString * _Nullable, ErrorBio * _Nullable))handler;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -381,9 +384,9 @@ SWIFT_PROTOCOL("_TtP9AcessoBio16DataLoggerOutput_")
 - (void)commitCallbackWithCallback:(CallbackDTO * _Nonnull)callback;
 - (void)commitSuccessCallbackWithSuccessCallback:(SuccessCallbackDTO * _Nonnull)successCallback;
 - (void)commitErrorCallbackWithErrorCallback:(ErrorCallbackDTO * _Nonnull)errorCallback;
-- (NSDictionary<NSString *, id> * _Nonnull)getLogs SWIFT_WARN_UNUSED_RESULT;
+- (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
 - (NSString * _Null_unspecified)getJsonLogs SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)sendWithSaveAttempt:(BOOL)saveAttempt hostKey:(NSString * _Nonnull)hostKey SWIFT_WARN_UNUSED_RESULT;
+- (void)sendWithSaveAttempt:(BOOL)saveAttempt hostKey:(NSString * _Nonnull)hostKey handler:(void (^ _Nullable)(NSString * _Nullable, ErrorBio * _Nullable))handler;
 @end
 
 
@@ -519,6 +522,7 @@ SWIFT_CLASS("_TtC9AcessoBio26SDKTokenResponseDTOAdapter")
 @property (nonatomic, readonly) BOOL enableLogo;
 @property (nonatomic, readonly) double expires;
 @property (nonatomic, readonly) BOOL isIntegrationCaptureFlow;
+@property (nonatomic, readonly) NSInteger maxAttempts;
 @property (nonatomic, readonly) BOOL isLiveness;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -614,13 +618,13 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCameraMetadataOutput")
 
 @class UIViewController;
 @protocol AcessoBioThemeDelegate;
-@class ErrorBio;
 
 SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
 @interface UnicoCheckLivenessAdapter : NSObject
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKTokenResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate;
 - (void)prepareCameraWithSuccess:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (void)openCameraWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup timeoutInterval:(double)timeoutInterval success:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
+- (NSString * _Nonnull)getLivenessKeybody SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -713,6 +717,8 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsFACETEC_GET_SESSION_FAILED = 73703,
   UnicoEnumsIErrorsSESSION_STATUS_USER_CANCELLED = 73704,
   UnicoEnumsIErrorsSESSION_STATUS_TIMEOUT = 73710,
+/// Encryption
+  UnicoEnumsIErrorsENCRYPTION_ERROR = 73800,
 };
 
 @class NSException;
@@ -1235,6 +1241,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio21CreateProviderUseCase_")
 @class SuccessCallbackDTO;
 @class ErrorCallbackDTO;
 @class UnicoSetupData;
+@class ErrorBio;
 
 SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 @interface DataLogger : NSObject
@@ -1244,13 +1251,15 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 - (void)commitSuccessCallbackWithSuccessCallback:(SuccessCallbackDTO * _Nonnull)successCallback;
 - (void)commitErrorCallbackWithErrorCallback:(ErrorCallbackDTO * _Nonnull)errorCallback;
 - (void)commitCallback:(CallbackDTO * _Nonnull)callback;
+- (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
 /// Send storage data signaling whether or not it is an <code>attempt</code>.
 /// \param saveAttempt Indicates whether should or not store a capture attempt .
 ///
+/// \param setupData Application initial setup
 ///
-/// returns:
-/// The generated event <code>id</code>.
-- (NSString * _Nonnull)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData SWIFT_WARN_UNUSED_RESULT;
+/// \param completion Block to listen for request result
+///
+- (void)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData handler:(void (^ _Nullable)(NSString * _Nullable, ErrorBio * _Nullable))handler;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1267,9 +1276,9 @@ SWIFT_PROTOCOL("_TtP9AcessoBio16DataLoggerOutput_")
 - (void)commitCallbackWithCallback:(CallbackDTO * _Nonnull)callback;
 - (void)commitSuccessCallbackWithSuccessCallback:(SuccessCallbackDTO * _Nonnull)successCallback;
 - (void)commitErrorCallbackWithErrorCallback:(ErrorCallbackDTO * _Nonnull)errorCallback;
-- (NSDictionary<NSString *, id> * _Nonnull)getLogs SWIFT_WARN_UNUSED_RESULT;
+- (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
 - (NSString * _Null_unspecified)getJsonLogs SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)sendWithSaveAttempt:(BOOL)saveAttempt hostKey:(NSString * _Nonnull)hostKey SWIFT_WARN_UNUSED_RESULT;
+- (void)sendWithSaveAttempt:(BOOL)saveAttempt hostKey:(NSString * _Nonnull)hostKey handler:(void (^ _Nullable)(NSString * _Nullable, ErrorBio * _Nullable))handler;
 @end
 
 
@@ -1405,6 +1414,7 @@ SWIFT_CLASS("_TtC9AcessoBio26SDKTokenResponseDTOAdapter")
 @property (nonatomic, readonly) BOOL enableLogo;
 @property (nonatomic, readonly) double expires;
 @property (nonatomic, readonly) BOOL isIntegrationCaptureFlow;
+@property (nonatomic, readonly) NSInteger maxAttempts;
 @property (nonatomic, readonly) BOOL isLiveness;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1500,13 +1510,13 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCameraMetadataOutput")
 
 @class UIViewController;
 @protocol AcessoBioThemeDelegate;
-@class ErrorBio;
 
 SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
 @interface UnicoCheckLivenessAdapter : NSObject
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKTokenResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate;
 - (void)prepareCameraWithSuccess:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (void)openCameraWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup timeoutInterval:(double)timeoutInterval success:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
+- (NSString * _Nonnull)getLivenessKeybody SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1599,6 +1609,8 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsFACETEC_GET_SESSION_FAILED = 73703,
   UnicoEnumsIErrorsSESSION_STATUS_USER_CANCELLED = 73704,
   UnicoEnumsIErrorsSESSION_STATUS_TIMEOUT = 73710,
+/// Encryption
+  UnicoEnumsIErrorsENCRYPTION_ERROR = 73800,
 };
 
 @class NSException;
