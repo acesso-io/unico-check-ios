@@ -85,7 +85,7 @@ typedef NS_ENUM(NSInteger, CameraType) {
 
     GeolocationDTO *geolocation;
     UnicoSetupData *setupData;
-    UnicoCheckLivenessAdapter *liveness;
+    UnicoCheckLivenessAdapter *_Nullable liveness;
 }
 
 #pragma mark - Protocols

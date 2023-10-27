@@ -348,6 +348,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio21CreateProviderUseCase_")
 @class OpenCameraDTO;
 @class SuccessCallbackDTO;
 @class ErrorCallbackDTO;
+@class LivenessDTO;
 @class UnicoSetupData;
 @class ErrorBio;
 
@@ -355,11 +356,13 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 @interface DataLogger : NSObject
 + (DataLogger * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)commitBuild;
+- (void)commitPrepareCamera;
 - (void)commitOpenCamera:(OpenCameraDTO * _Nonnull)openCamera;
 - (void)commitSuccessCallbackWithSuccessCallback:(SuccessCallbackDTO * _Nonnull)successCallback;
 - (void)commitErrorCallbackWithErrorCallback:(ErrorCallbackDTO * _Nonnull)errorCallback;
 - (void)commitCallback:(CallbackDTO * _Nonnull)callback;
 - (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
+- (void)commitLiveness:(LivenessDTO * _Nullable)liveness;
 /// Send storage data signaling whether or not it is an <code>attempt</code>.
 /// \param saveAttempt Indicates whether should or not store a capture attempt .
 ///
@@ -385,6 +388,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio16DataLoggerOutput_")
 - (void)commitSuccessCallbackWithSuccessCallback:(SuccessCallbackDTO * _Nonnull)successCallback;
 - (void)commitErrorCallbackWithErrorCallback:(ErrorCallbackDTO * _Nonnull)errorCallback;
 - (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
+- (void)commitLiveness:(LivenessDTO * _Nullable)liveness;
 - (NSString * _Null_unspecified)getJsonLogs SWIFT_WARN_UNUSED_RESULT;
 - (void)sendWithSaveAttempt:(BOOL)saveAttempt hostKey:(NSString * _Nonnull)hostKey handler:(void (^ _Nullable)(NSString * _Nullable, ErrorBio * _Nullable))handler;
 @end
@@ -426,6 +430,7 @@ SWIFT_CLASS("_TtC9AcessoBio18DeviceBehaviorsDTO")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 SWIFT_CLASS("_TtC9AcessoBio14DocumentResult")
@@ -497,6 +502,15 @@ SWIFT_CLASS("_TtC9AcessoBio14GeolocationDTO")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class ProviderDTO;
+
+SWIFT_CLASS("_TtC9AcessoBio11LivenessDTO")
+@interface LivenessDTO : NSObject
+- (nonnull instancetype)initWithProvider:(ProviderDTO * _Nullable)provider maxAttempts:(NSNumber * _Nullable)maxAttempts attemps:(NSNumber * _Nullable)attemps isLive:(BOOL)isLive OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_PROTOCOL("_TtP9AcessoBio13LoggerFactory_")
 @protocol LoggerFactory
@@ -507,6 +521,14 @@ SWIFT_PROTOCOL("_TtP9AcessoBio13LoggerFactory_")
 SWIFT_CLASS("_TtC9AcessoBio13OpenCameraDTO")
 @interface OpenCameraDTO : NSObject
 - (nonnull instancetype)initWithCaptureType:(NSString * _Nullable)captureType cameraType:(NSString * _Nullable)cameraType OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
+@interface ProviderDTO : NSObject
+- (nonnull instancetype)initWithName:(NSString * _Nonnull)name type:(NSString * _Nonnull)type version:(NSString * _Nullable)version OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -625,6 +647,7 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
 - (void)prepareCameraWithSuccess:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (void)openCameraWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup timeoutInterval:(double)timeoutInterval success:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (NSString * _Nonnull)getLivenessKeybody SWIFT_WARN_UNUSED_RESULT;
+- (LivenessDTO * _Nullable)getLivenessLogger SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

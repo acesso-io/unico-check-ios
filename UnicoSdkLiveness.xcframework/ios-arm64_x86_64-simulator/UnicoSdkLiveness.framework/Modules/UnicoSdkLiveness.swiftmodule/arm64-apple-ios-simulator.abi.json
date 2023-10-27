@@ -1303,6 +1303,41 @@
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onLoggerListener",
+            "printedName": "onLoggerListener(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UnicoSdkLiveness.LivenessLogger?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LivenessLogger",
+                    "printedName": "UnicoSdkLiveness.LivenessLogger",
+                    "usr": "s:16UnicoSdkLiveness0C6LoggerP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16UnicoSdkLiveness0aC8DelegateP16onLoggerListeneryyAA0cF0_pSgF",
+            "mangledName": "$s16UnicoSdkLiveness0aC8DelegateP16onLoggerListeneryyAA0cF0_pSgF",
+            "moduleName": "UnicoSdkLiveness",
+            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.UnicoLivenessDelegate>",
+            "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.UnicoLivenessDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -2675,6 +2710,579 @@
         "moduleName": "UnicoSdkLiveness"
       },
       {
+        "kind": "TypeDecl",
+        "name": "LivenessLoggerProvider",
+        "printedName": "LivenessLoggerProvider",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16UnicoSdkLiveness0C14LoggerProviderP4nameSSvp",
+            "mangledName": "$s16UnicoSdkLiveness0C14LoggerProviderP4nameSSvp",
+            "moduleName": "UnicoSdkLiveness",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C14LoggerProviderP4nameSSvg",
+                "mangledName": "$s16UnicoSdkLiveness0C14LoggerProviderP4nameSSvg",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLoggerProvider>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLoggerProvider>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "type",
+            "printedName": "type",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16UnicoSdkLiveness0C14LoggerProviderP4typeSSvp",
+            "mangledName": "$s16UnicoSdkLiveness0C14LoggerProviderP4typeSSvp",
+            "moduleName": "UnicoSdkLiveness",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C14LoggerProviderP4typeSSvg",
+                "mangledName": "$s16UnicoSdkLiveness0C14LoggerProviderP4typeSSvg",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLoggerProvider>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLoggerProvider>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16UnicoSdkLiveness0C14LoggerProviderP7versionSSSgvp",
+            "mangledName": "$s16UnicoSdkLiveness0C14LoggerProviderP7versionSSSgvp",
+            "moduleName": "UnicoSdkLiveness",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C14LoggerProviderP7versionSSSgvg",
+                "mangledName": "$s16UnicoSdkLiveness0C14LoggerProviderP7versionSSSgvg",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLoggerProvider>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLoggerProvider>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16UnicoSdkLiveness0C14LoggerProviderP",
+        "mangledName": "$s16UnicoSdkLiveness0C14LoggerProviderP",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LivenessLogger",
+        "printedName": "LivenessLogger",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "provider",
+            "printedName": "provider",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UnicoSdkLiveness.LivenessLoggerProvider?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LivenessLoggerProvider",
+                    "printedName": "UnicoSdkLiveness.LivenessLoggerProvider",
+                    "usr": "s:16UnicoSdkLiveness0C14LoggerProviderP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16UnicoSdkLiveness0C6LoggerP8providerAA0cD8Provider_pSgvp",
+            "mangledName": "$s16UnicoSdkLiveness0C6LoggerP8providerAA0cD8Provider_pSgvp",
+            "moduleName": "UnicoSdkLiveness",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UnicoSdkLiveness.LivenessLoggerProvider?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LivenessLoggerProvider",
+                        "printedName": "UnicoSdkLiveness.LivenessLoggerProvider",
+                        "usr": "s:16UnicoSdkLiveness0C14LoggerProviderP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C6LoggerP8providerAA0cD8Provider_pSgvg",
+                "mangledName": "$s16UnicoSdkLiveness0C6LoggerP8providerAA0cD8Provider_pSgvg",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLogger>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLogger>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "attempts",
+            "printedName": "attempts",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16UnicoSdkLiveness0C6LoggerP8attemptsSiSgvp",
+            "mangledName": "$s16UnicoSdkLiveness0C6LoggerP8attemptsSiSgvp",
+            "moduleName": "UnicoSdkLiveness",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C6LoggerP8attemptsSiSgvg",
+                "mangledName": "$s16UnicoSdkLiveness0C6LoggerP8attemptsSiSgvg",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLogger>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLogger>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C6LoggerP8attemptsSiSgvs",
+                "mangledName": "$s16UnicoSdkLiveness0C6LoggerP8attemptsSiSgvs",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLogger>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLogger>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C6LoggerP8attemptsSiSgvM",
+                "mangledName": "$s16UnicoSdkLiveness0C6LoggerP8attemptsSiSgvM",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLogger>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLogger>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxAttempts",
+            "printedName": "maxAttempts",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16UnicoSdkLiveness0C6LoggerP11maxAttemptsSiSgvp",
+            "mangledName": "$s16UnicoSdkLiveness0C6LoggerP11maxAttemptsSiSgvp",
+            "moduleName": "UnicoSdkLiveness",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C6LoggerP11maxAttemptsSiSgvg",
+                "mangledName": "$s16UnicoSdkLiveness0C6LoggerP11maxAttemptsSiSgvg",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLogger>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLogger>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C6LoggerP11maxAttemptsSiSgvs",
+                "mangledName": "$s16UnicoSdkLiveness0C6LoggerP11maxAttemptsSiSgvs",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLogger>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLogger>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C6LoggerP11maxAttemptsSiSgvM",
+                "mangledName": "$s16UnicoSdkLiveness0C6LoggerP11maxAttemptsSiSgvM",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLogger>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLogger>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isLive",
+            "printedName": "isLive",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16UnicoSdkLiveness0C6LoggerP6isLiveSbSgvp",
+            "mangledName": "$s16UnicoSdkLiveness0C6LoggerP6isLiveSbSgvp",
+            "moduleName": "UnicoSdkLiveness",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C6LoggerP6isLiveSbSgvg",
+                "mangledName": "$s16UnicoSdkLiveness0C6LoggerP6isLiveSbSgvg",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLogger>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLogger>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C6LoggerP6isLiveSbSgvs",
+                "mangledName": "$s16UnicoSdkLiveness0C6LoggerP6isLiveSbSgvs",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLogger>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLogger>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkLiveness0C6LoggerP6isLiveSbSgvM",
+                "mangledName": "$s16UnicoSdkLiveness0C6LoggerP6isLiveSbSgvM",
+                "moduleName": "UnicoSdkLiveness",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.LivenessLogger>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.LivenessLogger>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16UnicoSdkLiveness0C6LoggerP",
+        "mangledName": "$s16UnicoSdkLiveness0C6LoggerP",
+        "moduleName": "UnicoSdkLiveness",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -2705,21 +3313,21 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
       "kind": "Array",
-      "offset": 801,
+      "offset": 800,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
       "kind": "StringLiteral",
-      "offset": 855,
+      "offset": 854,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
       "kind": "IntegerLiteral",
-      "offset": 1128,
+      "offset": 1184,
       "length": 1,
       "value": "1"
     },

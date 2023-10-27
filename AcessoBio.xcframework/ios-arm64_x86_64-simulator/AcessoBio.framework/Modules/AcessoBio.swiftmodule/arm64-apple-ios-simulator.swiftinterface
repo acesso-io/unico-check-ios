@@ -6,6 +6,7 @@ import AVFoundation
 @_exported import AcessoBio
 import CoreMotion
 import CoreTelephony
+import DeviceProfiling
 import FaceTecSDK
 import Foundation
 import Swift
@@ -159,6 +160,7 @@ extension AcessoBio.UnicoCheckThemes {
   @objc public func prepareCamera(success: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionFailure)
   @objc public func openCamera(unicoSetup: AcessoBio.UnicoSetupData, timeoutInterval: Swift.Double, success: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionFailure)
   @objc public func getLivenessKeybody() -> Swift.String
+  @objc public func getLivenessLogger() -> AcessoBio.LivenessDTO?
   @objc deinit
 }
 extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate {
@@ -168,6 +170,7 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessPr
 extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDelegate {
   public func onSuccess(livenessResult: UnicoSdkLiveness.LivenessResult)
   public func onError(livenessError: UnicoSdkLiveness.LivenessError)
+  public func onLoggerListener(_ liveness: UnicoSdkLiveness.LivenessLogger?)
 }
 public class SDKPredictResponseDTO : Swift.Decodable {
   @objc deinit
@@ -206,17 +209,20 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
   @objc func commitSuccessCallback(successCallback: AcessoBio.SuccessCallbackDTO)
   @objc func commitErrorCallback(errorCallback: AcessoBio.ErrorCallbackDTO)
   @objc func commitSessionTransactionsIds(_ sessionTransactions: [[Swift.String : Any]])
+  @objc func commitLiveness(_ liveness: AcessoBio.LivenessDTO?)
   @objc func getJsonLogs() -> Swift.String!
   @objc func send(saveAttempt: Swift.Bool, hostKey: Swift.String, handler: ((Swift.String?, AcessoBio.ErrorBio?) -> Swift.Void)?)
 }
 @objc @_hasMissingDesignatedInitializers public class DataLogger : ObjectiveC.NSObject {
   @objc public class func shared() -> AcessoBio.DataLogger
   @objc public func commitBuild()
+  @objc public func commitPrepareCamera()
   @objc public func commitOpenCamera(_ openCamera: AcessoBio.OpenCameraDTO)
   @objc public func commitSuccessCallback(successCallback: AcessoBio.SuccessCallbackDTO)
   @objc public func commitErrorCallback(errorCallback: AcessoBio.ErrorCallbackDTO)
   @objc public func commitCallback(_ callback: AcessoBio.CallbackDTO)
   @objc public func commitSessionTransactionsIds(_ sessionTransactions: [[Swift.String : Any]])
+  @objc public func commitLiveness(_ liveness: AcessoBio.LivenessDTO?)
   @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData, handler: ((Swift.String?, AcessoBio.ErrorBio?) -> Swift.Void)?)
   @objc deinit
 }
@@ -284,6 +290,14 @@ extension AcessoBio.DefaultCallbackWorker : AcessoBio.CallbackWorker {
 @objc public class SensorValuesDTO : ObjectiveC.NSObject {
   @objc public init(value: Swift.Double)
   public init(timestamp: Swift.Int64, value: Swift.Double)
+  @objc deinit
+}
+@objc public class LivenessDTO : ObjectiveC.NSObject {
+  @objc public init(provider: AcessoBio.ProviderDTO?, maxAttempts: Foundation.NSNumber?, attemps: Foundation.NSNumber?, isLive: Swift.Bool)
+  @objc deinit
+}
+@objc public class ProviderDTO : ObjectiveC.NSObject {
+  @objc public init(name: Swift.String, type: Swift.String, version: Swift.String?)
   @objc deinit
 }
 @objc public protocol ProviderFactory {
