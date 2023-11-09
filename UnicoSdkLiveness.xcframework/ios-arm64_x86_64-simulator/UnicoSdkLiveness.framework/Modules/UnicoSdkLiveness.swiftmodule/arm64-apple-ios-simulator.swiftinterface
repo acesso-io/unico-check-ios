@@ -51,6 +51,7 @@ public struct Theme : Swift.Equatable {
 public protocol UnicoLivenessDelegate : AnyObject {
   func onSuccess(livenessResult: UnicoSdkLiveness.LivenessResult)
   func onError(livenessError: UnicoSdkLiveness.LivenessError)
+  func onLoggerListener(_ liveness: UnicoSdkLiveness.LivenessLogger?)
 }
 public struct LivenessError : Swift.Error, Swift.Equatable {
   public let code: Swift.Int
@@ -88,4 +89,15 @@ public protocol UnicoLivenessRepresentable {
 }
 public protocol UnicoLivenessOpenCamera {
   func openCamera(data: UnicoSdkLiveness.OpenLivenessDTO, unicoLivenessDelegate: UnicoSdkLiveness.UnicoLivenessDelegate)
+}
+public protocol LivenessLoggerProvider {
+  var name: Swift.String { get }
+  var type: Swift.String { get }
+  var version: Swift.String? { get }
+}
+public protocol LivenessLogger {
+  var provider: UnicoSdkLiveness.LivenessLoggerProvider? { get }
+  var attempts: Swift.Int? { get set }
+  var maxAttempts: Swift.Int? { get set }
+  var isLive: Swift.Bool? { get set }
 }
