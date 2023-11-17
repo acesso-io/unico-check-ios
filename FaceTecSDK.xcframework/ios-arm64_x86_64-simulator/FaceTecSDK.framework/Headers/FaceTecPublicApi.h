@@ -124,7 +124,7 @@ typedef NS_ENUM(NSInteger, FaceTecCameraPermissionStatus) {
 - (UIView * _Nullable)onCreateNewResultScreenActivityIndicatorView NS_SWIFT_NAME(onCreateNewResultScreenActivityIndicatorView());
 /**
  Configure a custom UIView to display on the Result Screen for success scenarios.
- This method will be called every time either FaceTecFaceScanResultCallback.succeed() or FaceTecIDScanResultCallback.succeed() is called while the Result Screen is displayed after completing the and/or ID Scan process.
+ This method will be called every time either FaceTecFaceScanResultCallback.onFaceScanResultProceedToNextStep() or FaceTecIDScanResultCallback.onIDScanResultProceedToNextStep() is called while the Result Screen is displayed after completing the and/or ID Scan process.
  Sizing of the UIView's contents should be calculated relative to the UIView's bounds. Animations should be setup to start in the UIView's didMoveToSuperview method.
  Note: The result animation is displayed for 2 seconds, so custom animation timing should be configured accordingly.
  If this returns a UIView instance, the UIView supplied will be used instead of the default success animation or any success image configured with FaceTecResultScreenCustomization.resultAnimationSuccessBackgroundImage.
@@ -1294,6 +1294,11 @@ __attribute__((visibility("default")))
  * Default is a CGRect at origin 0,0 with a size of 0 by 0.
  */
 @property (nonatomic) CGRect customLocation;
+/**
+ * Control whether to disable and hide the cancel button on the Camera Permissions Screen.
+ * Default is true (hidden).
+ */
+@property (nonatomic) BOOL hideForCameraPermissions;
 
 - (nonnull instancetype) init;
 @end
@@ -1881,6 +1886,10 @@ typedef NS_ENUM(NSInteger, FaceTecIDScanStatus) {
      */
     FaceTecIDScanStatusSkipped,
     /**
+     ID Scan cancelled because the user was in a locked out state.
+     */
+    FaceTecIDScanStatusLockedOut,
+    /**
      The camera access is prevented because either the user has explicitly denied permission or the user's device is configured to not allow access by a device policy.
      For more information on restricted by policy case, please see the the Apple Developer documentation on AVAuthorizationStatus.restricted.
      */
@@ -1889,8 +1898,8 @@ typedef NS_ENUM(NSInteger, FaceTecIDScanStatus) {
 
 /**
  Describes the next step to go into during the Photo ID Match process.
- By default, when FaceTecFaceScanResultCallback.onFaceScanResultSucceed() is called, the User is taken to the ID Document Type Selection Screen.
- Passing different values of FaceTecIDScanNextStep as a parameter for FaceTecFaceScanResultCallback.succeed() allows you to control whether to take the User to the ID Document Type Selection Screen or to  skip the ID Scan process altogether.
+ By default, when FaceTecFaceScanResultCallback.onFaceScanResultProceedToNextStep() is called, the User is taken to the ID Document Type Selection Screen.
+ Passing different values of FaceTecIDScanNextStep as a parameter for FaceTecFaceScanResultCallback.onFaceScanResultProceedToNextStep() allows you to control whether to take the User to the ID Document Type Selection Screen or to  skip the ID Scan process altogether.
  You may want to skip the ID Scan process altogether if you have custom server-side logic that in some cases deems the Photo ID Match flow as not necessary.
 */
 typedef NS_ENUM(NSInteger, FaceTecIDScanNextStep) {
