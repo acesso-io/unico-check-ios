@@ -195,27 +195,12 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
 }
 @objc final public class DefaultGetCameraResultUseCase : ObjectiveC.NSObject {
   @objc public init(key: Swift.String, keyBody: Swift.String, expires: Swift.Double, sessionToken: Swift.String?, isIntegrationCaptureFlow: Swift.Bool)
-  @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, utcTimeNow: Swift.Double, uuid: Swift.String) -> AcessoBio.CaptureResult
+  @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, sessionId: Swift.String?, utcTimeNow: Swift.Double, uuid: Swift.String) -> AcessoBio.CaptureResult
   @objc deinit
 }
 @objc public protocol SensorsDevice {
   @objc func startUpdate()
   @objc func stopUpdate()
-}
-@objc public protocol DataLoggerOutput {
-  @objc func start()
-  @objc func commitBuild()
-  @objc func commitPrepareCamera()
-  @objc func commitOpenCamera(openCamera: AcessoBio.OpenCameraDTO)
-  @objc func commitTakePicture(userInteraction: AcessoBio.UserInteractionDTO)
-  @objc func commitCallback(callback: AcessoBio.CallbackDTO)
-  @objc func commitSuccessCallback(successCallback: AcessoBio.SuccessCallbackDTO)
-  @objc func commitErrorCallback(errorCallback: AcessoBio.ErrorCallbackDTO)
-  @objc func commitSessionTransactionsIds(_ sessionTransactions: [[Swift.String : Any]])
-  @objc func commitLiveness(_ liveness: AcessoBio.LivenessDTO?)
-  @objc func commitProvider(_ provider: AcessoBio.ProviderDTO)
-  @objc func getJsonLogs() -> Swift.String!
-  @objc func send(saveAttempt: Swift.Bool, hostKey: Swift.String, handler: ((Swift.String?, AcessoBio.ErrorBio?) -> Swift.Void)?)
 }
 @objc @_hasMissingDesignatedInitializers public class DataLogger : ObjectiveC.NSObject {
   @objc public class func shared() -> AcessoBio.DataLogger
@@ -228,7 +213,7 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
   @objc public func commitSessionTransactionsIds(_ sessionTransactions: [[Swift.String : Any]])
   @objc public func commitLiveness(_ liveness: AcessoBio.LivenessDTO?)
   @objc public func commitProvider(_ provider: AcessoBio.ProviderDTO)
-  @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData, handler: ((Swift.String?, AcessoBio.ErrorBio?) -> Swift.Void)?)
+  @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData, success: ((Swift.String, Swift.String?) -> Swift.Void)?, failure: ((AcessoBio.ErrorBio) -> Swift.Void)?)
   @objc deinit
 }
 public protocol CallbackWorker {
@@ -362,14 +347,12 @@ public protocol Cancellable {
 }
 @objc public protocol Factories {
   @objc func createProviderFactory(source: AcessoBio.DefaultProviderFactory.Source) -> AcessoBio.CreateProviderUseCase
-  @objc func makeLoggerFactory() -> AcessoBio.LoggerFactory
   @objc func makeSensorsWorkerFactory() -> AcessoBio.SensorsWorkerFactory
   @objc func createUnicoSetupFactory() -> AcessoBio.UnicoSetupFactory
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FactoriesContainer : ObjectiveC.NSObject, AcessoBio.Factories {
   @objc public class func sharedContainer() -> AcessoBio.FactoriesContainer
   @objc public func createProviderFactory(source: AcessoBio.DefaultProviderFactory.Source) -> AcessoBio.CreateProviderUseCase
-  @objc public func makeLoggerFactory() -> AcessoBio.LoggerFactory
   @objc public func makeSensorsWorkerFactory() -> AcessoBio.SensorsWorkerFactory
   @objc public func createUnicoSetupFactory() -> AcessoBio.UnicoSetupFactory
   @objc deinit
@@ -492,14 +475,8 @@ extension AcessoBio.UnicoFaceCameraInteractor : AcessoBio.UnicoFaceCameraInterac
   @objc public init(base64: Swift.String!, encrypted: Swift.String!)
   @objc deinit
 }
-@objc public protocol LoggerFactory {
-  @objc func make() -> AcessoBio.DataLoggerOutput
-}
 @_hasMissingDesignatedInitializers final public class DefaultLoggerFactory {
   @objc deinit
-}
-extension AcessoBio.DefaultLoggerFactory : AcessoBio.LoggerFactory {
-  @objc final public func make() -> AcessoBio.DataLoggerOutput
 }
 @objc public protocol UnicoCameraMetadataOutputDelegate : AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
   @objc var rolls: [AcessoBio.SensorValuesDTO]? { get }

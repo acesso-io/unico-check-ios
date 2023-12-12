@@ -4933,6 +4933,13 @@
       },
       {
         "kind": "Import",
+        "name": "UnicoSdkPlugins",
+        "printedName": "UnicoSdkPlugins",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -5367,7 +5374,7 @@
           {
             "kind": "Function",
             "name": "execute",
-            "printedName": "execute(_:eventId:utcTimeNow:uuid:)",
+            "printedName": "execute(_:eventId:sessionId:utcTimeNow:uuid:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5402,6 +5409,20 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "Double",
                 "printedName": "Swift.Double",
                 "usr": "s:Sd"
@@ -5414,10 +5435,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(cs)DefaultGetCameraResultUseCase(im)execute:eventId:utcTimeNow:uuid:",
-            "mangledName": "$s9AcessoBio29DefaultGetCameraResultUseCaseC7execute_7eventId10utcTimeNow4uuidAA07CaptureF0CSDySSypG_SSSdSStF",
+            "usr": "c:@M@AcessoBio@objc(cs)DefaultGetCameraResultUseCase(im)execute:eventId:sessionId:utcTimeNow:uuid:",
+            "mangledName": "$s9AcessoBio29DefaultGetCameraResultUseCaseC7execute_7eventId07sessionK010utcTimeNow4uuidAA07CaptureF0CSDySSypG_S2SSgSdSStF",
             "moduleName": "AcessoBio",
-            "objc_name": "execute:eventId:utcTimeNow:uuid:",
+            "objc_name": "execute:eventId:sessionId:utcTimeNow:uuid:",
             "declAttributes": [
               "Final",
               "ObjC",
@@ -5628,488 +5649,6 @@
         "printedName": "UnicoSdkLogger",
         "declKind": "Import",
         "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "DataLoggerOutput",
-        "printedName": "DataLoggerOutput",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "start",
-            "printedName": "start()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)start",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP5startyyF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "commitBuild",
-            "printedName": "commitBuild()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)commitBuild",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP11commitBuildyyF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "commitPrepareCamera",
-            "printedName": "commitPrepareCamera()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)commitPrepareCamera",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP19commitPrepareCamerayyF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "commitOpenCamera",
-            "printedName": "commitOpenCamera(openCamera:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "OpenCameraDTO",
-                "printedName": "AcessoBio.OpenCameraDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)OpenCameraDTO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)commitOpenCameraWithOpenCamera:",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP16commitOpenCamera04openH0yAA0gH3DTOC_tF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "commitTakePicture",
-            "printedName": "commitTakePicture(userInteraction:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UserInteractionDTO",
-                "printedName": "AcessoBio.UserInteractionDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)UserInteractionDTO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)commitTakePictureWithUserInteraction:",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP17commitTakePicture15userInteractionyAA04UserJ3DTOC_tF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "commitCallback",
-            "printedName": "commitCallback(callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CallbackDTO",
-                "printedName": "AcessoBio.CallbackDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)CallbackDTO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)commitCallbackWithCallback:",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP14commitCallback8callbackyAA0G3DTOC_tF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "commitSuccessCallback",
-            "printedName": "commitSuccessCallback(successCallback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "SuccessCallbackDTO",
-                "printedName": "AcessoBio.SuccessCallbackDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)SuccessCallbackDTO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)commitSuccessCallbackWithSuccessCallback:",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP21commitSuccessCallback07successH0yAA0gH3DTOC_tF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "commitErrorCallback",
-            "printedName": "commitErrorCallback(errorCallback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ErrorCallbackDTO",
-                "printedName": "AcessoBio.ErrorCallbackDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)ErrorCallbackDTO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)commitErrorCallbackWithErrorCallback:",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP19commitErrorCallback05errorH0yAA0gH3DTOC_tF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "commitSessionTransactionsIds",
-            "printedName": "commitSessionTransactionsIds(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[[Swift.String : Any]]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)commitSessionTransactionsIds:",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP28commitSessionTransactionsIdsyySaySDySSypGGF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "commitLiveness",
-            "printedName": "commitLiveness(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AcessoBio.LivenessDTO?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LivenessDTO",
-                    "printedName": "AcessoBio.LivenessDTO",
-                    "usr": "c:@M@AcessoBio@objc(cs)LivenessDTO"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)commitLiveness:",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP14commitLivenessyyAA0G3DTOCSgF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "commitProvider",
-            "printedName": "commitProvider(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ProviderDTO",
-                "printedName": "AcessoBio.ProviderDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)commitProvider:",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP14commitProvideryyAA0G3DTOCF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getJsonLogs",
-            "printedName": "getJsonLogs()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)getJsonLogs",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP11getJsonLogsSSSgyF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "send",
-            "printedName": "send(saveAttempt:hostKey:handler:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Swift.String?, AcessoBio.ErrorBio?) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.String?, AcessoBio.ErrorBio?) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Swift.String?, AcessoBio.ErrorBio?)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "Swift.String?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "String",
-                                "printedName": "Swift.String",
-                                "usr": "s:SS"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "AcessoBio.ErrorBio?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "ErrorBio",
-                                "printedName": "AcessoBio.ErrorBio",
-                                "usr": "c:objc(cs)ErrorBio"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput(im)sendWithSaveAttempt:hostKey:handler:",
-            "mangledName": "$s9AcessoBio16DataLoggerOutputP4send11saveAttempt7hostKey7handlerySb_SSySSSg_So05ErrorB0CSgtcSgtF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.DataLoggerOutput>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.DataLoggerOutput>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput",
-        "mangledName": "$s9AcessoBio16DataLoggerOutputP",
-        "moduleName": "AcessoBio",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ]
       },
       {
         "kind": "TypeDecl",
@@ -6405,7 +5944,7 @@
           {
             "kind": "Function",
             "name": "send",
-            "printedName": "send(_:setupData:handler:)",
+            "printedName": "send(_:setupData:success:failure:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6427,12 +5966,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((Swift.String?, AcessoBio.ErrorBio?) -> ())?",
+                "printedName": "((Swift.String, Swift.String?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.String?, AcessoBio.ErrorBio?) -> ()",
+                    "printedName": "(Swift.String, Swift.String?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -6442,8 +5981,14 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(Swift.String?, AcessoBio.ErrorBio?)",
+                        "printedName": "(Swift.String, Swift.String?)",
                         "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
                           {
                             "kind": "TypeNominal",
                             "name": "Optional",
@@ -6457,22 +6002,34 @@
                               }
                             ],
                             "usr": "s:Sq"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "AcessoBio.ErrorBio?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "ErrorBio",
-                                "printedName": "AcessoBio.ErrorBio",
-                                "usr": "c:objc(cs)ErrorBio"
-                              }
-                            ],
-                            "usr": "s:Sq"
                           }
                         ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((AcessoBio.ErrorBio) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AcessoBio.ErrorBio) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ErrorBio",
+                        "printedName": "AcessoBio.ErrorBio",
+                        "usr": "c:objc(cs)ErrorBio"
                       }
                     ]
                   }
@@ -6481,8 +6038,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(cs)DataLogger(im)send:setupData:handler:",
-            "mangledName": "$s9AcessoBio10DataLoggerC4send_05setupC07handlerySb_AA010UnicoSetupC0CySSSg_So05ErrorB0CSgtcSgtF",
+            "usr": "c:@M@AcessoBio@objc(cs)DataLogger(im)send:setupData:success:failure:",
+            "mangledName": "$s9AcessoBio10DataLoggerC4send_05setupC07success7failureySb_AA010UnicoSetupC0CySS_SSSgtcSgySo05ErrorB0CcSgtF",
             "moduleName": "AcessoBio",
             "declAttributes": [
               "AccessControl",
@@ -10512,31 +10069,6 @@
           },
           {
             "kind": "Function",
-            "name": "makeLoggerFactory",
-            "printedName": "makeLoggerFactory()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "LoggerFactory",
-                "printedName": "AcessoBio.LoggerFactory",
-                "usr": "c:@M@AcessoBio@objc(pl)LoggerFactory"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)Factories(im)makeLoggerFactory",
-            "mangledName": "$s9AcessoBio9FactoriesP17makeLoggerFactoryAA0eF0_pyF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.Factories>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.Factories>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "makeSensorsWorkerFactory",
             "printedName": "makeSensorsWorkerFactory()",
             "children": [
@@ -10648,29 +10180,6 @@
             "mangledName": "$s9AcessoBio18FactoriesContainerC21createProviderFactory6sourceAA06CreateF7UseCase_pAA07DefaultfG0C6SourceO_tF",
             "moduleName": "AcessoBio",
             "objc_name": "createProviderFactoryWithSource:",
-            "declAttributes": [
-              "ObjC",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "makeLoggerFactory",
-            "printedName": "makeLoggerFactory()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "LoggerFactory",
-                "printedName": "AcessoBio.LoggerFactory",
-                "usr": "c:@M@AcessoBio@objc(pl)LoggerFactory"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(cs)FactoriesContainer(im)makeLoggerFactory",
-            "mangledName": "$s9AcessoBio18FactoriesContainerC17makeLoggerFactoryAA0fG0_pyF",
-            "moduleName": "AcessoBio",
-            "objc_name": "makeLoggerFactory",
             "declAttributes": [
               "ObjC",
               "AccessControl"
@@ -12666,16 +12175,6 @@
         "printedName": "UnicoSdkBase",
         "declKind": "Import",
         "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -15306,77 +14805,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "LoggerFactory",
-        "printedName": "LoggerFactory",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "make",
-            "printedName": "make()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DataLoggerOutput",
-                "printedName": "AcessoBio.DataLoggerOutput",
-                "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)LoggerFactory(im)make",
-            "mangledName": "$s9AcessoBio13LoggerFactoryP4makeAA04DataC6Output_pyF",
-            "moduleName": "AcessoBio",
-            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.LoggerFactory>",
-            "sugared_genericSig": "<Self where Self : AcessoBio.LoggerFactory>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "c:@M@AcessoBio@objc(pl)LoggerFactory",
-        "mangledName": "$s9AcessoBio13LoggerFactoryP",
-        "moduleName": "AcessoBio",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "DefaultLoggerFactory",
         "printedName": "DefaultLoggerFactory",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "make",
-            "printedName": "make()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DataLoggerOutput",
-                "printedName": "AcessoBio.DataLoggerOutput",
-                "usr": "c:@M@AcessoBio@objc(pl)DataLoggerOutput"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:9AcessoBio20DefaultLoggerFactoryC4makeAA04DataD6Output_pyF",
-            "mangledName": "$s9AcessoBio20DefaultLoggerFactoryC4makeAA04DataD6Output_pyF",
-            "moduleName": "AcessoBio",
-            "objc_name": "make",
-            "declAttributes": [
-              "Final",
-              "ObjC",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
         "declKind": "Class",
         "usr": "s:9AcessoBio20DefaultLoggerFactoryC",
         "mangledName": "$s9AcessoBio20DefaultLoggerFactoryC",
@@ -15385,16 +14815,7 @@
           "AccessControl",
           "Final"
         ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "LoggerFactory",
-            "printedName": "LoggerFactory",
-            "usr": "c:@M@AcessoBio@objc(pl)LoggerFactory",
-            "mangledName": "$s9AcessoBio13LoggerFactoryP"
-          }
-        ]
+        "hasMissingDesignatedInitializers": true
       },
       {
         "kind": "Import",
@@ -17757,6 +17178,20 @@
       "value": "[63, 61, 248, 197, 137, 7, 80, 157, 120, 38, 16, 195, 179, 29, 67, 115]"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/AppConfiguration.swift",
+      "kind": "Array",
+      "offset": 2114,
+      "length": 132,
+      "value": "[57, 53, 56, 55, 56, 50, 50, 48, 55, 57, 48, 97, 52, 55, 50, 56, 56, 101, 53, 55, 55, 51, 53, 52, 52, 48, 100, 100, 49, 56, 55, 101]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/AppConfiguration.swift",
+      "kind": "Array",
+      "offset": 2305,
+      "length": 66,
+      "value": "[53, 48, 100, 51, 51, 56, 56, 49, 57, 101, 50, 56, 52, 54, 48, 50]"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/Commoms\/extensions\/UIDeviceExtensions.swift",
       "kind": "StringLiteral",
       "offset": 96,
@@ -17878,7 +17313,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Plugins\/DataLogger.swift",
       "kind": "StringLiteral",
-      "offset": 951,
+      "offset": 1001,
       "length": 10,
       "value": "\"AcessoBio.DataLogger\""
     },
@@ -18242,9 +17677,9 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkVersionConfig.swift",
       "kind": "StringLiteral",
-      "offset": 212,
+      "offset": 213,
       "length": 7,
-      "value": "\"2.4.2\""
+      "value": "\"2.5.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
@@ -18403,7 +17838,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/LoggerFactory.swift",
       "kind": "Dictionary",
-      "offset": 467,
+      "offset": 454,
       "length": 3,
       "value": "[]"
     },

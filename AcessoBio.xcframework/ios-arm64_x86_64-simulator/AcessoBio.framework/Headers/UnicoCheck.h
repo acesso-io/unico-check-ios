@@ -55,6 +55,7 @@ typedef NS_ENUM(NSInteger, CameraType) {
     CLLocationManager *locationManager;
 
     UIViewController *viewController;
+    UIViewController *presentedViewController;
 
     UnicoFaceCameraViewController *faceCameraViewController;
     UnicoDocumentCameraViewController *documentCameraViewController;

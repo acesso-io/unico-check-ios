@@ -372,35 +372,16 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 ///
 /// \param completion Block to listen for request result
 ///
-- (void)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData handler:(void (^ _Nullable)(NSString * _Nullable, ErrorBio * _Nullable))handler;
+- (void)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData success:(void (^ _Nullable)(NSString * _Nonnull, NSString * _Nullable))success failure:(void (^ _Nullable)(ErrorBio * _Nonnull))failure;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class UserInteractionDTO;
-
-SWIFT_PROTOCOL("_TtP9AcessoBio16DataLoggerOutput_")
-@protocol DataLoggerOutput
-- (void)start;
-- (void)commitBuild;
-- (void)commitPrepareCamera;
-- (void)commitOpenCameraWithOpenCamera:(OpenCameraDTO * _Nonnull)openCamera;
-- (void)commitTakePictureWithUserInteraction:(UserInteractionDTO * _Nonnull)userInteraction;
-- (void)commitCallbackWithCallback:(CallbackDTO * _Nonnull)callback;
-- (void)commitSuccessCallbackWithSuccessCallback:(SuccessCallbackDTO * _Nonnull)successCallback;
-- (void)commitErrorCallbackWithErrorCallback:(ErrorCallbackDTO * _Nonnull)errorCallback;
-- (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
-- (void)commitLiveness:(LivenessDTO * _Nullable)liveness;
-- (void)commitProvider:(ProviderDTO * _Nonnull)provider;
-- (NSString * _Null_unspecified)getJsonLogs SWIFT_WARN_UNUSED_RESULT;
-- (void)sendWithSaveAttempt:(BOOL)saveAttempt hostKey:(NSString * _Nonnull)hostKey handler:(void (^ _Nullable)(NSString * _Nullable, ErrorBio * _Nullable))handler;
 @end
 
 
 SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 @interface DefaultGetCameraResultUseCase : NSObject
 - (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires sessionToken:(NSString * _Nullable)sessionToken isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
-- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
+- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -473,14 +454,12 @@ SWIFT_CLASS("_TtC9AcessoBio16FaceBehaviorsDTO")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@protocol LoggerFactory;
 @protocol SensorsWorkerFactory;
 @protocol UnicoSetupFactory;
 
 SWIFT_PROTOCOL("_TtP9AcessoBio9Factories_")
 @protocol Factories
 - (id <CreateProviderUseCase> _Nonnull)createProviderFactoryWithSource:(enum Source)source SWIFT_WARN_UNUSED_RESULT;
-- (id <LoggerFactory> _Nonnull)makeLoggerFactory SWIFT_WARN_UNUSED_RESULT;
 - (id <SensorsWorkerFactory> _Nonnull)makeSensorsWorkerFactory SWIFT_WARN_UNUSED_RESULT;
 - (id <UnicoSetupFactory> _Nonnull)createUnicoSetupFactory SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -492,7 +471,6 @@ SWIFT_CLASS("_TtC9AcessoBio18FactoriesContainer")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 + (FactoriesContainer * _Nonnull)sharedContainer SWIFT_WARN_UNUSED_RESULT;
 - (id <CreateProviderUseCase> _Nonnull)createProviderFactoryWithSource:(enum Source)source SWIFT_WARN_UNUSED_RESULT;
-- (id <LoggerFactory> _Nonnull)makeLoggerFactory SWIFT_WARN_UNUSED_RESULT;
 - (id <SensorsWorkerFactory> _Nonnull)makeSensorsWorkerFactory SWIFT_WARN_UNUSED_RESULT;
 - (id <UnicoSetupFactory> _Nonnull)createUnicoSetupFactory SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -511,12 +489,6 @@ SWIFT_CLASS("_TtC9AcessoBio11LivenessDTO")
 - (nonnull instancetype)initWithProvider:(ProviderDTO * _Nullable)provider maxAttempts:(NSNumber * _Nullable)maxAttempts attemps:(NSNumber * _Nullable)attemps isLive:(NSNumber * _Nullable)isLive OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_PROTOCOL("_TtP9AcessoBio13LoggerFactory_")
-@protocol LoggerFactory
-- (id <DataLoggerOutput> _Nonnull)make SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1290,35 +1262,16 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 ///
 /// \param completion Block to listen for request result
 ///
-- (void)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData handler:(void (^ _Nullable)(NSString * _Nullable, ErrorBio * _Nullable))handler;
+- (void)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData success:(void (^ _Nullable)(NSString * _Nonnull, NSString * _Nullable))success failure:(void (^ _Nullable)(ErrorBio * _Nonnull))failure;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class UserInteractionDTO;
-
-SWIFT_PROTOCOL("_TtP9AcessoBio16DataLoggerOutput_")
-@protocol DataLoggerOutput
-- (void)start;
-- (void)commitBuild;
-- (void)commitPrepareCamera;
-- (void)commitOpenCameraWithOpenCamera:(OpenCameraDTO * _Nonnull)openCamera;
-- (void)commitTakePictureWithUserInteraction:(UserInteractionDTO * _Nonnull)userInteraction;
-- (void)commitCallbackWithCallback:(CallbackDTO * _Nonnull)callback;
-- (void)commitSuccessCallbackWithSuccessCallback:(SuccessCallbackDTO * _Nonnull)successCallback;
-- (void)commitErrorCallbackWithErrorCallback:(ErrorCallbackDTO * _Nonnull)errorCallback;
-- (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
-- (void)commitLiveness:(LivenessDTO * _Nullable)liveness;
-- (void)commitProvider:(ProviderDTO * _Nonnull)provider;
-- (NSString * _Null_unspecified)getJsonLogs SWIFT_WARN_UNUSED_RESULT;
-- (void)sendWithSaveAttempt:(BOOL)saveAttempt hostKey:(NSString * _Nonnull)hostKey handler:(void (^ _Nullable)(NSString * _Nullable, ErrorBio * _Nullable))handler;
 @end
 
 
 SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 @interface DefaultGetCameraResultUseCase : NSObject
 - (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires sessionToken:(NSString * _Nullable)sessionToken isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
-- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
+- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1391,14 +1344,12 @@ SWIFT_CLASS("_TtC9AcessoBio16FaceBehaviorsDTO")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@protocol LoggerFactory;
 @protocol SensorsWorkerFactory;
 @protocol UnicoSetupFactory;
 
 SWIFT_PROTOCOL("_TtP9AcessoBio9Factories_")
 @protocol Factories
 - (id <CreateProviderUseCase> _Nonnull)createProviderFactoryWithSource:(enum Source)source SWIFT_WARN_UNUSED_RESULT;
-- (id <LoggerFactory> _Nonnull)makeLoggerFactory SWIFT_WARN_UNUSED_RESULT;
 - (id <SensorsWorkerFactory> _Nonnull)makeSensorsWorkerFactory SWIFT_WARN_UNUSED_RESULT;
 - (id <UnicoSetupFactory> _Nonnull)createUnicoSetupFactory SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -1410,7 +1361,6 @@ SWIFT_CLASS("_TtC9AcessoBio18FactoriesContainer")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 + (FactoriesContainer * _Nonnull)sharedContainer SWIFT_WARN_UNUSED_RESULT;
 - (id <CreateProviderUseCase> _Nonnull)createProviderFactoryWithSource:(enum Source)source SWIFT_WARN_UNUSED_RESULT;
-- (id <LoggerFactory> _Nonnull)makeLoggerFactory SWIFT_WARN_UNUSED_RESULT;
 - (id <SensorsWorkerFactory> _Nonnull)makeSensorsWorkerFactory SWIFT_WARN_UNUSED_RESULT;
 - (id <UnicoSetupFactory> _Nonnull)createUnicoSetupFactory SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -1429,12 +1379,6 @@ SWIFT_CLASS("_TtC9AcessoBio11LivenessDTO")
 - (nonnull instancetype)initWithProvider:(ProviderDTO * _Nullable)provider maxAttempts:(NSNumber * _Nullable)maxAttempts attemps:(NSNumber * _Nullable)attemps isLive:(NSNumber * _Nullable)isLive OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_PROTOCOL("_TtP9AcessoBio13LoggerFactory_")
-@protocol LoggerFactory
-- (id <DataLoggerOutput> _Nonnull)make SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
