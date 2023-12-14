@@ -160,7 +160,7 @@ extension AcessoBio.UnicoCheckThemes {
   public typealias PrepareCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
   public typealias OpenCompletionSuccess = ([Swift.String : Any]) -> Swift.Void
   public typealias OpenCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
-  @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKTokenResponseDTOAdapter, bioThemeDelegate: AcessoBio.AcessoBioThemeDelegate?)
+  @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKTokenResponseDTOAdapter, bioThemeDelegate: AcessoBio.AcessoBioThemeDelegate?, isHomolog: Swift.Bool)
   @objc public func prepareCamera(success: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionFailure)
   @objc public func openCamera(unicoSetup: AcessoBio.UnicoSetupData, timeoutInterval: Swift.Double, success: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionFailure)
   @objc public func getLivenessKeybody() -> Swift.String
@@ -228,9 +228,6 @@ extension AcessoBio.DefaultCallbackWorker : AcessoBio.CallbackWorker {
   final public func setCallbackName(callback: AcessoBio.CallbackDTO)
   final public func setErrorSdk(error: AcessoBio.ErrorCallbackDTO)
   final public func commit()
-}
-@objc public protocol UnicoSetupFactory {
-  @objc func make() -> AcessoBio.UnicoSetupProtocol
 }
 @_inheritsConvenienceInitializers @objc public class ErrorHttp : AcessoBio.ErrorUnico {
   @objc override dynamic public init()
@@ -348,13 +345,11 @@ public protocol Cancellable {
 @objc public protocol Factories {
   @objc func createProviderFactory(source: AcessoBio.DefaultProviderFactory.Source) -> AcessoBio.CreateProviderUseCase
   @objc func makeSensorsWorkerFactory() -> AcessoBio.SensorsWorkerFactory
-  @objc func createUnicoSetupFactory() -> AcessoBio.UnicoSetupFactory
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FactoriesContainer : ObjectiveC.NSObject, AcessoBio.Factories {
   @objc public class func sharedContainer() -> AcessoBio.FactoriesContainer
   @objc public func createProviderFactory(source: AcessoBio.DefaultProviderFactory.Source) -> AcessoBio.CreateProviderUseCase
   @objc public func makeSensorsWorkerFactory() -> AcessoBio.SensorsWorkerFactory
-  @objc public func createUnicoSetupFactory() -> AcessoBio.UnicoSetupFactory
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class DocumentResult : AcessoBio.CaptureResult {
@@ -364,11 +359,13 @@ public protocol Cancellable {
 @objc public protocol UnicoSetupProtocol {
   @objc func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
   @objc func getSdkTokenObject() -> AcessoBio.SDKTokenResponseDTOAdapter?
+  @objc var isHomolog: Swift.Bool { get }
 }
-@objc public class UnicoSetup : ObjectiveC.NSObject, AcessoBio.UnicoSetupProtocol {
-  public init(unicoSetupServices: AcessoBio.UnicoSetupServicesProtocol)
+@objc @_inheritsConvenienceInitializers public class UnicoSetup : ObjectiveC.NSObject, AcessoBio.UnicoSetupProtocol {
+  @objc public var isHomolog: Swift.Bool
   @objc public func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
   @objc public func getSdkTokenObject() -> AcessoBio.SDKTokenResponseDTOAdapter?
+  @objc override dynamic public init()
   @objc deinit
 }
 @objc public protocol AcessoBioConfigDataSource {
