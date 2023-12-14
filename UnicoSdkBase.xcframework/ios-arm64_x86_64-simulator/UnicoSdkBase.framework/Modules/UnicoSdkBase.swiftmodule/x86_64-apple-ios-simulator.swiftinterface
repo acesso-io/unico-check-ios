@@ -210,6 +210,10 @@ public class API {
     get
     set
   }
+  public var uatService: UnicoSdkBase.DataTransferService {
+    get
+    set
+  }
   public var prodService: UnicoSdkBase.DataTransferService {
     get
     set

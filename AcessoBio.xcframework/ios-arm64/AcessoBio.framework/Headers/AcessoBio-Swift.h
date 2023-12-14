@@ -455,13 +455,11 @@ SWIFT_CLASS("_TtC9AcessoBio16FaceBehaviorsDTO")
 @end
 
 @protocol SensorsWorkerFactory;
-@protocol UnicoSetupFactory;
 
 SWIFT_PROTOCOL("_TtP9AcessoBio9Factories_")
 @protocol Factories
 - (id <CreateProviderUseCase> _Nonnull)createProviderFactoryWithSource:(enum Source)source SWIFT_WARN_UNUSED_RESULT;
 - (id <SensorsWorkerFactory> _Nonnull)makeSensorsWorkerFactory SWIFT_WARN_UNUSED_RESULT;
-- (id <UnicoSetupFactory> _Nonnull)createUnicoSetupFactory SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -472,7 +470,6 @@ SWIFT_CLASS("_TtC9AcessoBio18FactoriesContainer")
 + (FactoriesContainer * _Nonnull)sharedContainer SWIFT_WARN_UNUSED_RESULT;
 - (id <CreateProviderUseCase> _Nonnull)createProviderFactoryWithSource:(enum Source)source SWIFT_WARN_UNUSED_RESULT;
 - (id <SensorsWorkerFactory> _Nonnull)makeSensorsWorkerFactory SWIFT_WARN_UNUSED_RESULT;
-- (id <UnicoSetupFactory> _Nonnull)createUnicoSetupFactory SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -617,7 +614,7 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCameraMetadataOutput")
 
 SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
 @interface UnicoCheckLivenessAdapter : NSObject
-- (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKTokenResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate;
+- (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKTokenResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate isHomolog:(BOOL)isHomolog;
 - (void)prepareCameraWithSuccess:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (void)openCameraWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup timeoutInterval:(double)timeoutInterval success:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (NSString * _Nonnull)getLivenessKeybody SWIFT_WARN_UNUSED_RESULT;
@@ -822,16 +819,18 @@ SWIFT_PROTOCOL("_TtP9AcessoBio18UnicoSetupProtocol_")
 @protocol UnicoSetupProtocol
 - (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
 - (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, readonly) BOOL isHomolog;
 @end
 
 
 SWIFT_CLASS("_TtC9AcessoBio10UnicoSetup")
 @interface UnicoSetup : NSObject <UnicoSetupProtocol>
+@property (nonatomic) BOOL isHomolog;
 - (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
 - (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 SWIFT_CLASS("_TtC9AcessoBio14UnicoSetupData")
@@ -841,12 +840,6 @@ SWIFT_CLASS("_TtC9AcessoBio14UnicoSetupData")
 @end
 
 
-
-
-SWIFT_PROTOCOL("_TtP9AcessoBio17UnicoSetupFactory_")
-@protocol UnicoSetupFactory
-- (id <UnicoSetupProtocol> _Nonnull)make SWIFT_WARN_UNUSED_RESULT;
-@end
 
 
 

@@ -99,8 +99,7 @@ typedef NS_ENUM(NSInteger, CameraType) {
 
 - (id _Nullable)initWithViewController:(id _Nullable)view
                              delegates:(id<AcessoBioManagerDelegate>_Nullable)delegate
-                         sensorsWorker:(id<SensorsWorker>_Nullable)sensorsWorker
-                            unicoSetup:(id<UnicoSetupProtocol>_Nullable)unicoSetup;
+                         sensorsWorker:(id<SensorsWorker>_Nullable)sensorsWorker;
 
 #pragma mark - Language Origin
 

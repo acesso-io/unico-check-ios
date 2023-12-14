@@ -1931,163 +1931,156 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/DefaultAppSecDataSource.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/DefaultAppSecDataSource.swift",
       "kind": "IntegerLiteral",
       "offset": 395,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/DefaultAppSecDataSource.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/DefaultAppSecDataSource.swift",
       "kind": "FloatLiteral",
       "offset": 437,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 185,
       "length": 3,
       "value": "202"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 218,
       "length": 3,
       "value": "204"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 269,
       "length": 3,
       "value": "205"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 317,
       "length": 3,
       "value": "503"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 330,
       "length": 20,
       "value": "504"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 360,
       "length": 7,
       "value": "505"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 185,
       "length": 3,
       "value": "202"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 218,
       "length": 3,
       "value": "204"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 269,
       "length": 3,
       "value": "205"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 317,
       "length": 3,
       "value": "503"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 330,
       "length": 20,
       "value": "504"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 360,
       "length": 7,
       "value": "505"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 185,
       "length": 3,
       "value": "202"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 218,
       "length": 3,
       "value": "204"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 269,
       "length": 3,
       "value": "205"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 317,
       "length": 3,
       "value": "503"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 330,
       "length": 20,
       "value": "504"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 360,
       "length": 7,
       "value": "505"
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultAppSecUseCase.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultAppSecUseCase.swift",
       "kind": "StringLiteral",
       "offset": 155,
       "length": 20,
       "value": "\"UnicoSdkSecurity.DefaultAppSecUseCase\""
     },
     {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/AppConfiguration.swift",
+      "filePath": "\/Users\/lilian.dias\/Repos\/unico-sdk-security-ios\/UnicoSdkSecurity\/AppConfiguration.swift",
       "kind": "StringLiteral",
       "offset": 51,
-      "length": 18,
-      "value": "\"HE4TSOJZGA2DKNRU\""
-    },
-    {
-      "filePath": "\/Users\/bruno.correa\/projects\/ios\/unico-sdk-security-ios\/UnicoSdkSecurity\/AppConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 95,
       "length": 18,
       "value": "\"WJYHMMARJKIQPZX7\""
     }
