@@ -804,13 +804,99 @@
           },
           {
             "kind": "TypeDecl",
+            "name": "DorothyLicense",
+            "printedName": "DorothyLicense",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(licensePayloadB64:masterLicenseSignature:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DorothyLicense",
+                    "printedName": "UnicoSdkLiveness.PrepareData.DorothyLicense",
+                    "usr": "s:16UnicoSdkLiveness11PrepareDataV14DorothyLicenseV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:16UnicoSdkLiveness11PrepareDataV14DorothyLicenseV17licensePayloadB6406masterG9SignatureAESS_SStcfc",
+                "mangledName": "$s16UnicoSdkLiveness11PrepareDataV14DorothyLicenseV17licensePayloadB6406masterG9SignatureAESS_SStcfc",
+                "moduleName": "UnicoSdkLiveness",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DorothyLicense",
+                    "printedName": "UnicoSdkLiveness.PrepareData.DorothyLicense",
+                    "usr": "s:16UnicoSdkLiveness11PrepareDataV14DorothyLicenseV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DorothyLicense",
+                    "printedName": "UnicoSdkLiveness.PrepareData.DorothyLicense",
+                    "usr": "s:16UnicoSdkLiveness11PrepareDataV14DorothyLicenseV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16UnicoSdkLiveness11PrepareDataV14DorothyLicenseV2eeoiySbAE_AEtFZ",
+                "mangledName": "$s16UnicoSdkLiveness11PrepareDataV14DorothyLicenseV2eeoiySbAE_AEtFZ",
+                "moduleName": "UnicoSdkLiveness",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:16UnicoSdkLiveness11PrepareDataV14DorothyLicenseV",
+            "mangledName": "$s16UnicoSdkLiveness11PrepareDataV14DorothyLicenseV",
+            "moduleName": "UnicoSdkLiveness",
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
             "name": "DorothyData",
             "printedName": "DorothyData",
             "children": [
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(metaTags:)",
+                "printedName": "init(metaTags:license:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -831,11 +917,17 @@
                       }
                     ],
                     "usr": "s:Sa"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DorothyLicense",
+                    "printedName": "UnicoSdkLiveness.PrepareData.DorothyLicense",
+                    "usr": "s:16UnicoSdkLiveness11PrepareDataV14DorothyLicenseV"
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE0V8metaTagsAESayAC0fE7MetaTagVG_tcfc",
-                "mangledName": "$s16UnicoSdkLiveness11PrepareDataV07DorothyE0V8metaTagsAESayAC0fE7MetaTagVG_tcfc",
+                "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE0V8metaTags7licenseAESayAC0fE7MetaTagVG_AC0F7LicenseVtcfc",
+                "mangledName": "$s16UnicoSdkLiveness11PrepareDataV07DorothyE0V8metaTags7licenseAESayAC0fE7MetaTagVG_AC0F7LicenseVtcfc",
                 "moduleName": "UnicoSdkLiveness",
                 "declAttributes": [
                   "AccessControl"
