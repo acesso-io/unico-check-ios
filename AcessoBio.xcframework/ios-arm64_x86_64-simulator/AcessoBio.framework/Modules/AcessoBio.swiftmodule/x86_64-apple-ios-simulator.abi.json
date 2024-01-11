@@ -2646,20 +2646,13 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
         "declKind": "Import",
         "moduleName": "AcessoBio",
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UnicoSdkBase",
-        "printedName": "UnicoSdkBase",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
       },
       {
         "kind": "TypeDecl",
@@ -16702,11 +16695,18 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/rijndael\/DefaultUnicoDecrypt.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1686,
-      "length": 5,
-      "value": "false"
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+BackendSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 493,
+      "length": 15,
+      "value": "\"session_token\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+BackendSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 493,
+      "length": 15,
+      "value": "\"session_token\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/errors\/UnicoEnumsInfo.swift",
@@ -16928,7 +16928,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/UnicoSetupServices.swift",
       "kind": "StringLiteral",
-      "offset": 218,
+      "offset": 200,
       "length": 18,
       "value": "\"AcessoBio.UnicoSetupServices\""
     },
@@ -17183,13 +17183,6 @@
       "offset": 1845,
       "length": 18,
       "value": "\"b6627900972a49cc\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/rijndael\/DefaultUnicoEncrypt.swift",
-      "kind": "BooleanLiteral",
-      "offset": 788,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/Commoms\/extensions\/UIDeviceExtensions.swift",
@@ -17577,9 +17570,93 @@
       "value": "\"AcessoBio.SessionTokenFacetecDTO\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 102,
+      "length": 4,
+      "value": "\"Dk\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 113,
+      "length": 4,
+      "value": "\"Ec\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 127,
+      "length": 7,
+      "value": "\"SdkPk\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 144,
+      "length": 7,
+      "value": "\"Token\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 166,
+      "length": 12,
+      "value": "\"EnableLogo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 194,
+      "length": 13,
+      "value": "\"MaxAttempts\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 102,
+      "length": 4,
+      "value": "\"Dk\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 113,
+      "length": 4,
+      "value": "\"Ec\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 127,
+      "length": 7,
+      "value": "\"SdkPk\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 144,
+      "length": 7,
+      "value": "\"Token\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 166,
+      "length": 12,
+      "value": "\"EnableLogo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+Integration.swift",
+      "kind": "StringLiteral",
+      "offset": 194,
+      "length": 13,
+      "value": "\"MaxAttempts\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/UnicoSetup.swift",
       "kind": "BooleanLiteral",
-      "offset": 1485,
+      "offset": 1273,
       "length": 5,
       "value": "false"
     },
@@ -17698,147 +17775,49 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkVersionConfig.swift",
       "kind": "StringLiteral",
-      "offset": 213,
+      "offset": 212,
       "length": 7,
-      "value": "\"2.6.0\""
+      "value": "\"2.6.1\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1475,
-      "length": 4,
-      "value": "\"Dk\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 1486,
-      "length": 4,
-      "value": "\"Ec\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 1500,
-      "length": 7,
-      "value": "\"SdkPk\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 1517,
-      "length": 7,
-      "value": "\"Token\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 1539,
-      "length": 12,
-      "value": "\"EnableLogo\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 1567,
-      "length": 13,
-      "value": "\"MaxAttempts\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 1475,
-      "length": 4,
-      "value": "\"Dk\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 1486,
-      "length": 4,
-      "value": "\"Ec\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 1500,
-      "length": 7,
-      "value": "\"SdkPk\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 1517,
-      "length": 7,
-      "value": "\"Token\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 1539,
-      "length": 12,
-      "value": "\"EnableLogo\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 1567,
-      "length": 13,
-      "value": "\"MaxAttempts\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 2184,
-      "length": 15,
-      "value": "\"session_token\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 2184,
-      "length": 15,
-      "value": "\"session_token\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 7700,
+      "offset": 1612,
       "length": 9,
       "value": "\"FACETEC\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 7725,
+      "offset": 1637,
       "length": 5,
       "value": "\"EVA\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 7750,
+      "offset": 1662,
       "length": 9,
       "value": "\"DOROTHY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 7700,
+      "offset": 1612,
       "length": 9,
       "value": "\"FACETEC\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 7725,
+      "offset": 1637,
       "length": 5,
       "value": "\"EVA\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SDKTokenResponseDTO.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 7750,
+      "offset": 1662,
       "length": 9,
       "value": "\"DOROTHY\""
     },

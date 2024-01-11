@@ -35,8 +35,12 @@ extension UnicoSdkLiveness.PrepareData {
     public init(dk: Swift.String, ec: Swift.String, appId: Swift.String, expiryDate: Swift.String, key: Swift.String)
     public static func == (a: UnicoSdkLiveness.PrepareData.FacetecData, b: UnicoSdkLiveness.PrepareData.FacetecData) -> Swift.Bool
   }
+  public struct DorothyLicense : Swift.Equatable {
+    public init(licensePayloadB64: Swift.String, masterLicenseSignature: Swift.String)
+    public static func == (a: UnicoSdkLiveness.PrepareData.DorothyLicense, b: UnicoSdkLiveness.PrepareData.DorothyLicense) -> Swift.Bool
+  }
   public struct DorothyData : Swift.Equatable {
-    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag])
+    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyData, b: UnicoSdkLiveness.PrepareData.DorothyData) -> Swift.Bool
   }
   public struct DorothyDataMetaTag : Swift.Equatable {
