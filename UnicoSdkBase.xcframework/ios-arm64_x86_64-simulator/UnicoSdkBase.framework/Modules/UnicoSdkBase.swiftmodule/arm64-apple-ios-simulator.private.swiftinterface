@@ -1,0 +1,326 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkBase
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreLocation.CLLocation
+import CommonCrypto
+import CoreLocation
+import CoreLocation/*.CLAuthorizationStatus*/
+import CoreLocation/*.CLLocation*/
+import CoreLocation/*.CLLocationManager*/
+import CoreLocation/*.CLLocationManagerDelegate*/
+import Foundation
+import MobileCoreServices
+import Security
+import Swift
+import UIKit
+@_exported import UnicoSdkBase
+import _Concurrency
+import _StringProcessing
+public protocol Totp {
+  func getTotp(secret: Swift.String) throws -> Swift.String
+}
+public enum GeoLocationError : Swift.Error, Swift.Equatable {
+  case usageDescriptionPlistNotAvailable
+  case locationFailed(locationError: Swift.Error)
+  public static func == (lhsError: UnicoSdkBase.GeoLocationError, rhsError: UnicoSdkBase.GeoLocationError) -> Swift.Bool
+}
+public protocol DeviceInfo {
+  var id: Swift.String { get }
+  var model: Swift.String { get }
+  var vendor: Swift.String { get }
+  var os: Swift.String { get }
+  var api: Swift.String { get }
+  var systemPatch: Swift.String { get }
+  var kernelVersion: Swift.String { get }
+  var usbPlugged: Swift.Bool { get }
+  func isEqual(to other: UnicoSdkBase.DeviceInfo) -> Swift.Bool
+}
+public protocol Token {
+  var token: Swift.String { get }
+  var sendLogIsEnable: Swift.Bool { get }
+  var geolocationsLogsIsEnabled: Swift.Bool? { get }
+  var isMigrated: Swift.Bool? { get }
+  var validateAt: Foundation.Date { get }
+  var isValid: Swift.Bool { get }
+}
+extension UnicoSdkBase.Token {
+  public var isValid: Swift.Bool {
+    get
+  }
+}
+public enum NetworkError : Swift.Error {
+  case error(statusCode: Swift.Int, data: Foundation.Data?)
+  case notConnected
+  case cancelled
+  case generic(Swift.Error)
+  case urlGeneration
+}
+public protocol NetworkCancellable {
+  func cancel()
+}
+extension Foundation.URLSessionTask : UnicoSdkBase.NetworkCancellable {
+}
+public protocol NetworkService {
+  typealias CompletionHandler = (Swift.Result<Foundation.Data?, UnicoSdkBase.NetworkError>) -> Swift.Void
+  func request(endpoint: UnicoSdkBase.Requestable, completion: @escaping Self.CompletionHandler) -> UnicoSdkBase.NetworkCancellable?
+}
+public protocol NetworkSessionManager {
+  typealias CompletionHandler = (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void
+  func request(_ request: Foundation.URLRequest, completion: @escaping Self.CompletionHandler) -> UnicoSdkBase.NetworkCancellable
+}
+public protocol NetworkErrorLogger {
+  func log(request: Foundation.URLRequest)
+  func log(responseData data: Foundation.Data?, response: Foundation.URLResponse?)
+  func log(error: Swift.Error)
+}
+final public class DefaultNetworkService {
+  public init(config: UnicoSdkBase.NetworkConfigurable, sessionManager: UnicoSdkBase.NetworkSessionManager = DefaultNetworkSessionManager(), logger: UnicoSdkBase.NetworkErrorLogger = DefaultNetworkErrorLogger())
+  @objc deinit
+}
+extension UnicoSdkBase.DefaultNetworkService : UnicoSdkBase.NetworkService {
+  final public func request(endpoint: UnicoSdkBase.Requestable, completion: @escaping UnicoSdkBase.DefaultNetworkService.CompletionHandler) -> UnicoSdkBase.NetworkCancellable?
+}
+public class DefaultNetworkSessionManager : UnicoSdkBase.NetworkSessionManager {
+  public init()
+  public func request(_ request: Foundation.URLRequest, completion: @escaping UnicoSdkBase.DefaultNetworkSessionManager.CompletionHandler) -> UnicoSdkBase.NetworkCancellable
+  @objc deinit
+}
+final public class DefaultNetworkErrorLogger : UnicoSdkBase.NetworkErrorLogger {
+  public init()
+  final public func log(request: Foundation.URLRequest)
+  final public func log(responseData data: Foundation.Data?, response: Foundation.URLResponse?)
+  final public func log(error: Swift.Error)
+  @objc deinit
+}
+extension UnicoSdkBase.NetworkError {
+  public var isNotFoundError: Swift.Bool {
+    get
+  }
+  public func hasStatusCode(_ codeError: Swift.Int) -> Swift.Bool
+}
+public protocol Cancellable {
+  func cancel()
+}
+public protocol GetTotpRepository {
+  func getTotp(secret: Swift.String) throws -> Swift.String
+}
+public protocol GeoIP {
+  var ip: Swift.String { get }
+}
+public protocol GetTotpDataSource {
+  func getTotp(secret: Swift.String, algorithm: Swift.String, digit: Swift.Int) -> Swift.String?
+}
+public enum TotpDomainError : Swift.Error, Swift.Equatable {
+  case secretError(Swift.String)
+  case totpError(Swift.String)
+  case unknowError
+  public static func == (a: UnicoSdkBase.TotpDomainError, b: UnicoSdkBase.TotpDomainError) -> Swift.Bool
+}
+final public class DefaultGetTotpUseCase {
+  public init(repository: UnicoSdkBase.GetTotpRepository)
+  @objc deinit
+}
+extension UnicoSdkBase.DefaultGetTotpUseCase : UnicoSdkBase.GetTotpUseCase {
+  final public func execute(secret: Swift.String) throws -> Swift.Result<Swift.String, UnicoSdkBase.TotpDomainError>
+}
+public enum DataTransferError : Swift.Error {
+  case noResponse
+  case parsing(Swift.Error)
+  case networkFailure(UnicoSdkBase.NetworkError)
+  case resolvedNetworkFailure(Swift.Error)
+}
+public protocol DataTransferService {
+  typealias CompletionHandler<T> = (Swift.Result<T, UnicoSdkBase.DataTransferError>) -> Swift.Void
+  @discardableResult
+  func request<T, E>(with endpoint: E, completion: @escaping Self.CompletionHandler<T>) -> UnicoSdkBase.NetworkCancellable? where T : Swift.Decodable, T == E.Response, E : UnicoSdkBase.ResponseRequestable
+  @discardableResult
+  func request<E>(with endpoint: E, completion: @escaping Self.CompletionHandler<Swift.Void>) -> UnicoSdkBase.NetworkCancellable? where E : UnicoSdkBase.ResponseRequestable, E.Response == ()
+}
+public protocol DataTransferErrorResolver {
+  func resolve(error: UnicoSdkBase.NetworkError) -> Swift.Error
+}
+public protocol ResponseDecoder {
+  func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
+}
+public protocol DataTransferErrorLogger {
+  func log(error: Swift.Error)
+}
+final public class DefaultDataTransferService {
+  public init(with networkService: UnicoSdkBase.NetworkService, errorResolver: UnicoSdkBase.DataTransferErrorResolver = DefaultDataTransferErrorResolver(), errorLogger: UnicoSdkBase.DataTransferErrorLogger = DefaultDataTransferErrorLogger())
+  @objc deinit
+}
+extension UnicoSdkBase.DefaultDataTransferService : UnicoSdkBase.DataTransferService {
+  final public func request<T, E>(with endpoint: E, completion: @escaping UnicoSdkBase.DefaultDataTransferService.CompletionHandler<T>) -> UnicoSdkBase.NetworkCancellable? where T : Swift.Decodable, T == E.Response, E : UnicoSdkBase.ResponseRequestable
+  final public func request<E>(with endpoint: E, completion: @escaping UnicoSdkBase.DefaultDataTransferService.CompletionHandler<Swift.Void>) -> UnicoSdkBase.NetworkCancellable? where E : UnicoSdkBase.ResponseRequestable, E.Response == ()
+}
+final public class DefaultDataTransferErrorLogger : UnicoSdkBase.DataTransferErrorLogger {
+  public init()
+  final public func log(error: Swift.Error)
+  @objc deinit
+}
+public class DefaultDataTransferErrorResolver : UnicoSdkBase.DataTransferErrorResolver {
+  public init()
+  public func resolve(error: UnicoSdkBase.NetworkError) -> Swift.Error
+  @objc deinit
+}
+public class JSONResponseDecoder : UnicoSdkBase.ResponseDecoder {
+  public init(dateDecodingStrategy: Foundation.JSONDecoder.DateDecodingStrategy = .deferredToDate)
+  public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
+  @objc deinit
+}
+public class RawDataResponseDecoder : UnicoSdkBase.ResponseDecoder {
+  public init()
+  public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
+  @objc deinit
+}
+public struct GetTokenRequestHeadersDTO {
+  public init(projectVersion: Swift.String, projectName: Swift.String, platform: Swift.String = "IOS", dependencies: UnicoSdkBase.Dependencies, apiKey: Swift.String? = nil)
+}
+public struct Dependencies : Swift.Codable {
+  public init(dependencies: [UnicoSdkBase.Dependencies.Dependency])
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension UnicoSdkBase.Dependencies {
+  public struct Dependency : Swift.Codable {
+    public init(name: Swift.String, version: Swift.String)
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+}
+public protocol NetworkConfigurable {
+  var baseURL: Foundation.URL { get }
+  var headers: [Swift.String : Swift.String] { get }
+  var queryParameters: [Swift.String : Swift.String] { get }
+}
+public struct ApiDataNetworkConfig : UnicoSdkBase.NetworkConfigurable {
+  public let baseURL: Foundation.URL
+  public let headers: [Swift.String : Swift.String]
+  public let queryParameters: [Swift.String : Swift.String]
+  public init(baseURL: Foundation.URL, headers: [Swift.String : Swift.String] = [:], queryParameters: [Swift.String : Swift.String] = [:])
+}
+public protocol GetGeoIP {
+  func getGeoIP(completion: @escaping (Swift.Result<UnicoSdkBase.GeoIP, Swift.Error>) -> Swift.Void)
+}
+public class API {
+  public var defaultService: UnicoSdkBase.DataTransferService {
+    get
+    set
+  }
+  public var devService: UnicoSdkBase.DataTransferService {
+    get
+    set
+  }
+  public var uatService: UnicoSdkBase.DataTransferService {
+    get
+    set
+  }
+  public var prodService: UnicoSdkBase.DataTransferService {
+    get
+    set
+  }
+  public var havenService: UnicoSdkBase.DataTransferService {
+    get
+    set
+  }
+  public init()
+  @objc deinit
+}
+public func printIfDebug(_ message: Any)
+final public class DefaultGetTotpRepository {
+  public init(dataSource: UnicoSdkBase.GetTotpDataSource)
+  @objc deinit
+}
+extension UnicoSdkBase.DefaultGetTotpRepository : UnicoSdkBase.GetTotpRepository {
+  final public func getTotp(secret: Swift.String) throws -> Swift.String
+}
+public protocol GetDeviceInfo {
+  func device() -> UnicoSdkBase.DeviceInfo
+}
+public protocol GeoLocation {
+  func start(handler: @escaping (Swift.Result<[CoreLocation.CLLocation], UnicoSdkBase.GeoLocationError>) -> Swift.Void)
+  func stop()
+}
+@_hasMissingDesignatedInitializers public class DefaultGeoLocationFactory {
+  @objc deinit
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public static func modelName() -> Swift.String
+}
+public enum HTTPMethodType : Swift.String {
+  case get
+  case head
+  case post
+  case put
+  case patch
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum BodyEncoding {
+  case jsonSerializationData
+  case stringEncodingAscii
+  public static func == (a: UnicoSdkBase.BodyEncoding, b: UnicoSdkBase.BodyEncoding) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class Endpoint<R> : UnicoSdkBase.ResponseRequestable {
+  public typealias Response = R
+  final public let path: Swift.String
+  final public let isFullPath: Swift.Bool
+  final public let method: UnicoSdkBase.HTTPMethodType
+  final public let headerParameters: [Swift.String : Swift.String]
+  final public let queryParametersEncodable: Swift.Encodable?
+  final public let queryParameters: [Swift.String : Any]
+  final public let bodyParametersEncodable: Swift.Encodable?
+  final public let bodyParameters: [Swift.String : Any]
+  final public let bodyEncoding: UnicoSdkBase.BodyEncoding
+  final public let responseDecoder: UnicoSdkBase.ResponseDecoder
+  public init(path: Swift.String, isFullPath: Swift.Bool = false, method: UnicoSdkBase.HTTPMethodType, headerParameters: [Swift.String : Swift.String] = [:], queryParametersEncodable: Swift.Encodable? = nil, queryParameters: [Swift.String : Any] = [:], bodyParametersEncodable: Swift.Encodable? = nil, bodyParameters: [Swift.String : Any] = [:], bodyEncoding: UnicoSdkBase.BodyEncoding = .jsonSerializationData, responseDecoder: UnicoSdkBase.ResponseDecoder = JSONResponseDecoder())
+  @objc deinit
+}
+public protocol Requestable {
+  var path: Swift.String { get }
+  var isFullPath: Swift.Bool { get }
+  var method: UnicoSdkBase.HTTPMethodType { get }
+  var headerParameters: [Swift.String : Swift.String] { get }
+  var queryParametersEncodable: Swift.Encodable? { get }
+  var queryParameters: [Swift.String : Any] { get }
+  var bodyParametersEncodable: Swift.Encodable? { get }
+  var bodyParameters: [Swift.String : Any] { get }
+  var bodyEncoding: UnicoSdkBase.BodyEncoding { get }
+  func urlRequest(with networkConfig: UnicoSdkBase.NetworkConfigurable) throws -> Foundation.URLRequest
+}
+public protocol ResponseRequestable : UnicoSdkBase.Requestable {
+  associatedtype Response
+  var responseDecoder: UnicoSdkBase.ResponseDecoder { get }
+}
+extension UnicoSdkBase.Requestable {
+  public func urlRequest(with config: UnicoSdkBase.NetworkConfigurable) throws -> Foundation.URLRequest
+}
+@_hasMissingDesignatedInitializers public class Base {
+  final public let totp: UnicoSdkBase.Totp
+  final public let getToken: UnicoSdkBase.GetToken
+  final public let getGeoIP: UnicoSdkBase.GetGeoIP
+  final public let geoLocation: UnicoSdkBase.GeoLocation
+  final public let getDeviceInfo: UnicoSdkBase.GetDeviceInfo
+  convenience public init(dataTransferService: UnicoSdkBase.DataTransferService = API().defaultService, locationManager: CoreLocation.CLLocationManager = CLLocationManager(), device: UIKit.UIDevice = UIDevice.current)
+  @objc deinit
+}
+public protocol GetToken {
+  func getToken(secret: Swift.String, headers: UnicoSdkBase.GetTokenRequestHeadersDTO, completion: @escaping (Swift.Result<UnicoSdkBase.Token, Swift.Error>) -> Swift.Void)
+}
+public protocol GetTotpUseCase {
+  func execute(secret: Swift.String) throws -> Swift.Result<Swift.String, UnicoSdkBase.TotpDomainError>
+}
+extension UnicoSdkBase.HTTPMethodType : Swift.Equatable {}
+extension UnicoSdkBase.HTTPMethodType : Swift.Hashable {}
+extension UnicoSdkBase.HTTPMethodType : Swift.RawRepresentable {}
+extension UnicoSdkBase.BodyEncoding : Swift.Equatable {}
+extension UnicoSdkBase.BodyEncoding : Swift.Hashable {}

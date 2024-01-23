@@ -2,14 +2,12 @@
 // swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkSecurity
 // swift-module-flags-ignorable: -enable-bare-slash-regex
-import CoreLocation/*.CLLocation*/
+import CoreLocation
 import UnicoSdkSecurity.DeviceInfo_Private
 import Foundation
 import UnicoSdkSecurity.HSE_Private
 import Swift
 import UnicoSdkBase
-import UnicoSdkBase/*.API*/
-import UnicoSdkBase/*.DataTransferService*/
 @_exported import UnicoSdkSecurity
 import _Concurrency
 import _StringProcessing
