@@ -17775,9 +17775,9 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkVersionConfig.swift",
       "kind": "StringLiteral",
-      "offset": 212,
+      "offset": 214,
       "length": 7,
-      "value": "\"2.6.1\""
+      "value": "\"2.6.2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",

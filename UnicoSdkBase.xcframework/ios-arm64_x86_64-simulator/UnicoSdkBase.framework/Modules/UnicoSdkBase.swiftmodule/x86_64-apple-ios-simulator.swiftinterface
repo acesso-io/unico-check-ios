@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkBase
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import CoreLocation.CLLocation
 import CommonCrypto
 import CoreLocation
@@ -15,6 +16,7 @@ import Swift
 import UIKit
 @_exported import UnicoSdkBase
 import _Concurrency
+import _StringProcessing
 public protocol Totp {
   func getTotp(secret: Swift.String) throws -> Swift.String
 }
@@ -133,7 +135,7 @@ public protocol DataTransferService {
   @discardableResult
   func request<T, E>(with endpoint: E, completion: @escaping Self.CompletionHandler<T>) -> UnicoSdkBase.NetworkCancellable? where T : Swift.Decodable, T == E.Response, E : UnicoSdkBase.ResponseRequestable
   @discardableResult
-  func request<E>(with endpoint: E, completion: @escaping Self.CompletionHandler<Swift.Void>) -> UnicoSdkBase.NetworkCancellable? where E : UnicoSdkBase.ResponseRequestable, E.Response == Swift.Void
+  func request<E>(with endpoint: E, completion: @escaping Self.CompletionHandler<Swift.Void>) -> UnicoSdkBase.NetworkCancellable? where E : UnicoSdkBase.ResponseRequestable, E.Response == ()
 }
 public protocol DataTransferErrorResolver {
   func resolve(error: UnicoSdkBase.NetworkError) -> Swift.Error
@@ -150,7 +152,7 @@ final public class DefaultDataTransferService {
 }
 extension UnicoSdkBase.DefaultDataTransferService : UnicoSdkBase.DataTransferService {
   final public func request<T, E>(with endpoint: E, completion: @escaping UnicoSdkBase.DefaultDataTransferService.CompletionHandler<T>) -> UnicoSdkBase.NetworkCancellable? where T : Swift.Decodable, T == E.Response, E : UnicoSdkBase.ResponseRequestable
-  final public func request<E>(with endpoint: E, completion: @escaping UnicoSdkBase.DefaultDataTransferService.CompletionHandler<Swift.Void>) -> UnicoSdkBase.NetworkCancellable? where E : UnicoSdkBase.ResponseRequestable, E.Response == Swift.Void
+  final public func request<E>(with endpoint: E, completion: @escaping UnicoSdkBase.DefaultDataTransferService.CompletionHandler<Swift.Void>) -> UnicoSdkBase.NetworkCancellable? where E : UnicoSdkBase.ResponseRequestable, E.Response == ()
 }
 final public class DefaultDataTransferErrorLogger : UnicoSdkBase.DataTransferErrorLogger {
   public init()

@@ -6,6 +6,6 @@ framework module UnicoSdkBase {
 }
 
 module UnicoSdkBase.Swift {
-    header "UnicoSdkBase-Swift.h"
-    requires objc
+  header "UnicoSdkBase-Swift.h"
+  requires objc
 }
