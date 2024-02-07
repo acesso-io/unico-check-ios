@@ -1527,16 +1527,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "LivenessError",
         "printedName": "LivenessError",
@@ -2077,12 +2067,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UnicoSdkLiveness.Env.Type) -> (UnicoSdkBase.DataTransferService, Swift.String) -> UnicoSdkLiveness.Env",
+                "printedName": "(UnicoSdkLiveness.Env.Type) -> (UnicoSdkBase.DataTransferService, Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(UnicoSdkBase.DataTransferService, Swift.String) -> UnicoSdkLiveness.Env",
+                    "printedName": "(UnicoSdkBase.DataTransferService, Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -2093,13 +2083,19 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(service: UnicoSdkBase.DataTransferService, totpSecret: Swift.String)",
+                        "printedName": "(service: UnicoSdkBase.DataTransferService, endpointKey: Swift.String, endpointIv: Swift.String)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "DataTransferService",
                             "printedName": "UnicoSdkBase.DataTransferService",
                             "usr": "s:12UnicoSdkBase19DataTransferServiceP"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
                           },
                           {
                             "kind": "TypeNominal",
@@ -2128,45 +2124,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:16UnicoSdkLiveness3EnvO6customyAC0aB4Base19DataTransferService_p_SStcACmF",
-            "mangledName": "$s16UnicoSdkLiveness3EnvO6customyAC0aB4Base19DataTransferService_p_SStcACmF",
-            "moduleName": "UnicoSdkLiveness"
-          },
-          {
-            "kind": "Var",
-            "name": "production",
-            "printedName": "production",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UnicoSdkLiveness.Env.Type) -> UnicoSdkLiveness.Env",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Env",
-                    "printedName": "UnicoSdkLiveness.Env",
-                    "usr": "s:16UnicoSdkLiveness3EnvO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "UnicoSdkLiveness.Env.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Env",
-                        "printedName": "UnicoSdkLiveness.Env",
-                        "usr": "s:16UnicoSdkLiveness3EnvO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:16UnicoSdkLiveness3EnvO10productionyA2CmF",
-            "mangledName": "$s16UnicoSdkLiveness3EnvO10productionyA2CmF",
+            "usr": "s:16UnicoSdkLiveness3EnvO6customyAC0aB4Base19DataTransferService_p_S2StcACmF",
+            "mangledName": "$s16UnicoSdkLiveness3EnvO6customyAC0aB4Base19DataTransferService_p_S2StcACmF",
             "moduleName": "UnicoSdkLiveness"
           },
           {
@@ -2177,13 +2136,39 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UnicoSdkLiveness.Env.Type) -> UnicoSdkLiveness.Env",
+                "printedName": "(UnicoSdkLiveness.Env.Type) -> (Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
                 "children": [
                   {
-                    "kind": "TypeNominal",
-                    "name": "Env",
-                    "printedName": "UnicoSdkLiveness.Env",
-                    "usr": "s:16UnicoSdkLiveness3EnvO"
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Env",
+                        "printedName": "UnicoSdkLiveness.Env",
+                        "usr": "s:16UnicoSdkLiveness3EnvO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(endpointKey: Swift.String, endpointIv: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     "kind": "TypeNominal",
@@ -2202,8 +2187,71 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:16UnicoSdkLiveness3EnvO11developmentyA2CmF",
-            "mangledName": "$s16UnicoSdkLiveness3EnvO11developmentyA2CmF",
+            "usr": "s:16UnicoSdkLiveness3EnvO11developmentyACSS_SStcACmF",
+            "mangledName": "$s16UnicoSdkLiveness3EnvO11developmentyACSS_SStcACmF",
+            "moduleName": "UnicoSdkLiveness"
+          },
+          {
+            "kind": "Var",
+            "name": "production",
+            "printedName": "production",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkLiveness.Env.Type) -> (Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Env",
+                        "printedName": "UnicoSdkLiveness.Env",
+                        "usr": "s:16UnicoSdkLiveness3EnvO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(endpointKey: Swift.String, endpointIv: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkLiveness.Env.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Env",
+                        "printedName": "UnicoSdkLiveness.Env",
+                        "usr": "s:16UnicoSdkLiveness3EnvO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16UnicoSdkLiveness3EnvO10productionyACSS_SStcACmF",
+            "mangledName": "$s16UnicoSdkLiveness3EnvO10productionyACSS_SStcACmF",
             "moduleName": "UnicoSdkLiveness"
           }
         ],
@@ -3459,20 +3507,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/AppConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 172,
-      "length": 18,
-      "value": "\"HE4TSOJZGA2DKNRU\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/AppConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 216,
-      "length": 18,
-      "value": "\"WJYHMMARJKIQPZX7\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
       "kind": "IntegerLiteral",
       "offset": 706,
@@ -3877,6 +3911,13 @@
       "offset": 19,
       "length": 21,
       "value": "\"UnicoSdkLiveness.SessionTransactionDTO\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/customization\/UnicoFacetecCustomization.swift",
+      "kind": "StringLiteral",
+      "offset": 4495,
+      "length": 26,
+      "value": "\"unico_custom_footer_logo\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",

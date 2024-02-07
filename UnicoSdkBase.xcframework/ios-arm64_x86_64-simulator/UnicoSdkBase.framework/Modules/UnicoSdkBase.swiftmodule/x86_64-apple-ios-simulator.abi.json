@@ -15,59 +15,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "Totp",
-        "printedName": "Totp",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "getTotp",
-            "printedName": "getTotp(secret:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12UnicoSdkBase4TotpP03getD06secretS2S_tKF",
-            "mangledName": "$s12UnicoSdkBase4TotpP03getD06secretS2S_tKF",
-            "moduleName": "UnicoSdkBase",
-            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.Totp>",
-            "sugared_genericSig": "<Self where Self : UnicoSdkBase.Totp>",
-            "protocolReq": true,
-            "throwing": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:12UnicoSdkBase4TotpP",
-        "mangledName": "$s12UnicoSdkBase4TotpP",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -271,16 +218,6 @@
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -2238,59 +2175,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "GetTotpRepository",
-        "printedName": "GetTotpRepository",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "getTotp",
-            "printedName": "getTotp(secret:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12UnicoSdkBase17GetTotpRepositoryP03getE06secretS2S_tKF",
-            "mangledName": "$s12UnicoSdkBase17GetTotpRepositoryP03getE06secretS2S_tKF",
-            "moduleName": "UnicoSdkBase",
-            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.GetTotpRepository>",
-            "sugared_genericSig": "<Self where Self : UnicoSdkBase.GetTotpRepository>",
-            "protocolReq": true,
-            "throwing": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:12UnicoSdkBase17GetTotpRepositoryP",
-        "mangledName": "$s12UnicoSdkBase17GetTotpRepositoryP",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -2377,394 +2261,11 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "GetTotpDataSource",
-        "printedName": "GetTotpDataSource",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "getTotp",
-            "printedName": "getTotp(secret:algorithm:digit:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12UnicoSdkBase17GetTotpDataSourceP03getE06secret9algorithm5digitSSSgSS_SSSitF",
-            "mangledName": "$s12UnicoSdkBase17GetTotpDataSourceP03getE06secret9algorithm5digitSSSgSS_SSSitF",
-            "moduleName": "UnicoSdkBase",
-            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.GetTotpDataSource>",
-            "sugared_genericSig": "<Self where Self : UnicoSdkBase.GetTotpDataSource>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:12UnicoSdkBase17GetTotpDataSourceP",
-        "mangledName": "$s12UnicoSdkBase17GetTotpDataSourceP",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "TotpDomainError",
-        "printedName": "TotpDomainError",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "secretError",
-            "printedName": "secretError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UnicoSdkBase.TotpDomainError.Type) -> (Swift.String) -> UnicoSdkBase.TotpDomainError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.String) -> UnicoSdkBase.TotpDomainError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TotpDomainError",
-                        "printedName": "UnicoSdkBase.TotpDomainError",
-                        "usr": "s:12UnicoSdkBase15TotpDomainErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "UnicoSdkBase.TotpDomainError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TotpDomainError",
-                        "printedName": "UnicoSdkBase.TotpDomainError",
-                        "usr": "s:12UnicoSdkBase15TotpDomainErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:12UnicoSdkBase15TotpDomainErrorO06secretF0yACSScACmF",
-            "mangledName": "$s12UnicoSdkBase15TotpDomainErrorO06secretF0yACSScACmF",
-            "moduleName": "UnicoSdkBase"
-          },
-          {
-            "kind": "Var",
-            "name": "totpError",
-            "printedName": "totpError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UnicoSdkBase.TotpDomainError.Type) -> (Swift.String) -> UnicoSdkBase.TotpDomainError",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.String) -> UnicoSdkBase.TotpDomainError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TotpDomainError",
-                        "printedName": "UnicoSdkBase.TotpDomainError",
-                        "usr": "s:12UnicoSdkBase15TotpDomainErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "UnicoSdkBase.TotpDomainError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TotpDomainError",
-                        "printedName": "UnicoSdkBase.TotpDomainError",
-                        "usr": "s:12UnicoSdkBase15TotpDomainErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:12UnicoSdkBase15TotpDomainErrorO04totpF0yACSScACmF",
-            "mangledName": "$s12UnicoSdkBase15TotpDomainErrorO04totpF0yACSScACmF",
-            "moduleName": "UnicoSdkBase"
-          },
-          {
-            "kind": "Var",
-            "name": "unknowError",
-            "printedName": "unknowError",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UnicoSdkBase.TotpDomainError.Type) -> UnicoSdkBase.TotpDomainError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TotpDomainError",
-                    "printedName": "UnicoSdkBase.TotpDomainError",
-                    "usr": "s:12UnicoSdkBase15TotpDomainErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "UnicoSdkBase.TotpDomainError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "TotpDomainError",
-                        "printedName": "UnicoSdkBase.TotpDomainError",
-                        "usr": "s:12UnicoSdkBase15TotpDomainErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:12UnicoSdkBase15TotpDomainErrorO06unknowF0yA2CmF",
-            "mangledName": "$s12UnicoSdkBase15TotpDomainErrorO06unknowF0yA2CmF",
-            "moduleName": "UnicoSdkBase"
-          },
-          {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TotpDomainError",
-                "printedName": "UnicoSdkBase.TotpDomainError",
-                "usr": "s:12UnicoSdkBase15TotpDomainErrorO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "TotpDomainError",
-                "printedName": "UnicoSdkBase.TotpDomainError",
-                "usr": "s:12UnicoSdkBase15TotpDomainErrorO"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12UnicoSdkBase15TotpDomainErrorO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s12UnicoSdkBase15TotpDomainErrorO2eeoiySbAC_ACtFZ",
-            "moduleName": "UnicoSdkBase",
-            "static": true,
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Enum",
-        "usr": "s:12UnicoSdkBase15TotpDomainErrorO",
-        "mangledName": "$s12UnicoSdkBase15TotpDomainErrorO",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Error",
-            "printedName": "Error",
-            "usr": "s:s5ErrorP",
-            "mangledName": "$ss5ErrorP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "DefaultGetTotpUseCase",
-        "printedName": "DefaultGetTotpUseCase",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(repository:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DefaultGetTotpUseCase",
-                "printedName": "UnicoSdkBase.DefaultGetTotpUseCase",
-                "usr": "s:12UnicoSdkBase21DefaultGetTotpUseCaseC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "GetTotpRepository",
-                "printedName": "UnicoSdkBase.GetTotpRepository",
-                "usr": "s:12UnicoSdkBase17GetTotpRepositoryP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12UnicoSdkBase21DefaultGetTotpUseCaseC10repositoryAcA0eF10Repository_p_tcfc",
-            "mangledName": "$s12UnicoSdkBase21DefaultGetTotpUseCaseC10repositoryAcA0eF10Repository_p_tcfc",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "execute",
-            "printedName": "execute(secret:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Result",
-                "printedName": "Swift.Result<Swift.String, UnicoSdkBase.TotpDomainError>",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TotpDomainError",
-                    "printedName": "UnicoSdkBase.TotpDomainError",
-                    "usr": "s:12UnicoSdkBase15TotpDomainErrorO"
-                  }
-                ],
-                "usr": "s:s6ResultO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12UnicoSdkBase21DefaultGetTotpUseCaseC7execute6secrets6ResultOySSAA0F11DomainErrorOGSS_tKF",
-            "mangledName": "$s12UnicoSdkBase21DefaultGetTotpUseCaseC7execute6secrets6ResultOySSAA0F11DomainErrorOGSS_tKF",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:12UnicoSdkBase21DefaultGetTotpUseCaseC",
-        "mangledName": "$s12UnicoSdkBase21DefaultGetTotpUseCaseC",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "Final",
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "GetTotpUseCase",
-            "printedName": "GetTotpUseCase",
-            "usr": "s:12UnicoSdkBase14GetTotpUseCaseP",
-            "mangledName": "$s12UnicoSdkBase14GetTotpUseCaseP"
-          }
-        ]
       },
       {
         "kind": "Import",
@@ -3827,6 +3328,99 @@
         "moduleName": "UnicoSdkBase"
       },
       {
+        "kind": "TypeDecl",
+        "name": "CryptedResponseDTO",
+        "printedName": "CryptedResponseDTO",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CryptedResponseDTO",
+                "printedName": "UnicoSdkBase.CryptedResponseDTO<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:12UnicoSdkBase18CryptedResponseDTOV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UnicoSdkBase18CryptedResponseDTOV4fromACyxGs7Decoder_p_tKcfc",
+            "mangledName": "$s12UnicoSdkBase18CryptedResponseDTOV4fromACyxGs7Decoder_p_tKcfc",
+            "moduleName": "UnicoSdkBase",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "decrypt",
+            "printedName": "decrypt(using:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnicoDecrypt",
+                "printedName": "UnicoSdkBase.UnicoDecrypt",
+                "usr": "s:12UnicoSdkBase0A7DecryptP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase18CryptedResponseDTOV7decrypt5usingxAA0A7Decrypt_p_tKF",
+            "mangledName": "$s12UnicoSdkBase18CryptedResponseDTOV7decrypt5usingxAA0A7Decrypt_p_tKF",
+            "moduleName": "UnicoSdkBase",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12UnicoSdkBase18CryptedResponseDTOV",
+        "mangledName": "$s12UnicoSdkBase18CryptedResponseDTOV",
+        "moduleName": "UnicoSdkBase",
+        "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable>",
+        "sugared_genericSig": "<T where T : Swift.Decodable>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -3838,30 +3432,10 @@
       },
       {
         "kind": "Import",
-        "name": "CommonCrypto",
-        "printedName": "CommonCrypto",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "TypeDecl",
@@ -4190,23 +3764,6 @@
         "kind": "Import",
         "name": "CoreLocation",
         "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Security",
-        "printedName": "Security",
         "declKind": "Import",
         "moduleName": "UnicoSdkBase"
       },
@@ -5259,6 +4816,64 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "UnicoDecrypt",
+        "printedName": "UnicoDecrypt",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "decrypt",
+            "printedName": "decrypt(encoded:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase0A7DecryptP7decrypt7encodedSSSgAF_tF",
+            "mangledName": "$s12UnicoSdkBase0A7DecryptP7decrypt7encodedSSSgAF_tF",
+            "moduleName": "UnicoSdkBase",
+            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.UnicoDecrypt>",
+            "sugared_genericSig": "<Self where Self : UnicoSdkBase.UnicoDecrypt>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12UnicoSdkBase0A7DecryptP",
+        "mangledName": "$s12UnicoSdkBase0A7DecryptP",
+        "moduleName": "UnicoSdkBase",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
         "kind": "Function",
         "name": "printIfDebug",
         "printedName": "printIfDebug(_:)",
@@ -5343,97 +4958,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "DefaultGetTotpRepository",
-        "printedName": "DefaultGetTotpRepository",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(dataSource:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DefaultGetTotpRepository",
-                "printedName": "UnicoSdkBase.DefaultGetTotpRepository",
-                "usr": "s:12UnicoSdkBase24DefaultGetTotpRepositoryC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "GetTotpDataSource",
-                "printedName": "UnicoSdkBase.GetTotpDataSource",
-                "usr": "s:12UnicoSdkBase17GetTotpDataSourceP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12UnicoSdkBase24DefaultGetTotpRepositoryC10dataSourceAcA0ef4DataI0_p_tcfc",
-            "mangledName": "$s12UnicoSdkBase24DefaultGetTotpRepositoryC10dataSourceAcA0ef4DataI0_p_tcfc",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "getTotp",
-            "printedName": "getTotp(secret:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12UnicoSdkBase24DefaultGetTotpRepositoryC03getF06secretS2S_tKF",
-            "mangledName": "$s12UnicoSdkBase24DefaultGetTotpRepositoryC03getF06secretS2S_tKF",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:12UnicoSdkBase24DefaultGetTotpRepositoryC",
-        "mangledName": "$s12UnicoSdkBase24DefaultGetTotpRepositoryC",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "Final",
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "GetTotpRepository",
-            "printedName": "GetTotpRepository",
-            "usr": "s:12UnicoSdkBase17GetTotpRepositoryP",
-            "mangledName": "$s12UnicoSdkBase17GetTotpRepositoryP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -5477,16 +5001,6 @@
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
           "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -5624,23 +5138,6 @@
       },
       {
         "kind": "Import",
-        "name": "MobileCoreServices",
-        "printedName": "MobileCoreServices",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "CoreLocation",
         "printedName": "CoreLocation",
         "declKind": "Import",
@@ -5668,33 +5165,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Security",
-        "printedName": "Security",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
       },
       {
         "kind": "Import",
@@ -7757,54 +7227,6 @@
         "children": [
           {
             "kind": "Var",
-            "name": "totp",
-            "printedName": "totp",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Totp",
-                "printedName": "UnicoSdkBase.Totp",
-                "usr": "s:12UnicoSdkBase4TotpP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UnicoSdkBase0C0C4totpAA4Totp_pvp",
-            "mangledName": "$s12UnicoSdkBase0C0C4totpAA4Totp_pvp",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Totp",
-                    "printedName": "UnicoSdkBase.Totp",
-                    "usr": "s:12UnicoSdkBase4TotpP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase0C0C4totpAA4Totp_pvg",
-                "mangledName": "$s12UnicoSdkBase0C0C4totpAA4Totp_pvg",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "getToken",
             "printedName": "getToken",
             "children": [
@@ -7998,7 +7420,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(dataTransferService:locationManager:device:)",
+            "printedName": "init(dataTransferService:locationManager:device:keyData:ivData:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8026,11 +7448,23 @@
                 "printedName": "UIKit.UIDevice",
                 "hasDefaultArg": true,
                 "usr": "c:objc(cs)UIDevice"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UnicoSdkBase0C0C19dataTransferService15locationManager6deviceAcA04DataeF0_p_So010CLLocationH0CSo8UIDeviceCtcfc",
-            "mangledName": "$s12UnicoSdkBase0C0C19dataTransferService15locationManager6deviceAcA04DataeF0_p_So010CLLocationH0CSo8UIDeviceCtcfc",
+            "usr": "s:12UnicoSdkBase0C0C19dataTransferService15locationManager6device7keyData02ivK0AcA0keF0_p_So010CLLocationH0CSo8UIDeviceCS2Stcfc",
+            "mangledName": "$s12UnicoSdkBase0C0C19dataTransferService15locationManager6device7keyData02ivK0AcA0keF0_p_So010CLLocationH0CSo8UIDeviceCS2Stcfc",
             "moduleName": "UnicoSdkBase",
             "declAttributes": [
               "Convenience",
@@ -8076,18 +7510,12 @@
           {
             "kind": "Function",
             "name": "getToken",
-            "printedName": "getToken(secret:headers:completion:)",
+            "printedName": "getToken(headers:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -8129,8 +7557,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UnicoSdkBase8GetTokenP03getE06secret7headers10completionySS_AA0dE17RequestHeadersDTOVys6ResultOyAA0E0_ps5Error_pGctF",
-            "mangledName": "$s12UnicoSdkBase8GetTokenP03getE06secret7headers10completionySS_AA0dE17RequestHeadersDTOVys6ResultOyAA0E0_ps5Error_pGctF",
+            "usr": "s:12UnicoSdkBase8GetTokenP03getE07headers10completionyAA0dE17RequestHeadersDTOV_ys6ResultOyAA0E0_ps5Error_pGctF",
+            "mangledName": "$s12UnicoSdkBase8GetTokenP03getE07headers10completionyAA0dE17RequestHeadersDTOV_ys6ResultOyAA0E0_ps5Error_pGctF",
             "moduleName": "UnicoSdkBase",
             "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.GetToken>",
             "sugared_genericSig": "<Self where Self : UnicoSdkBase.GetToken>",
@@ -8169,18 +7597,8 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "UnicoSdkPlugins",
+        "printedName": "UnicoSdkPlugins",
         "declKind": "Import",
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
@@ -8189,33 +7607,222 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "GetTotpUseCase",
-        "printedName": "GetTotpUseCase",
+        "name": "DefaultUnicoDecrypt",
+        "printedName": "DefaultUnicoDecrypt",
         "children": [
           {
-            "kind": "Function",
-            "name": "execute",
-            "printedName": "execute(secret:)",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(keyData:ivData:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Result",
-                "printedName": "Swift.Result<Swift.String, UnicoSdkBase.TotpDomainError>",
+                "name": "DefaultUnicoDecrypt",
+                "printedName": "UnicoSdkBase.DefaultUnicoDecrypt",
+                "usr": "s:12UnicoSdkBase07DefaultA7DecryptC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.UInt8]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.UInt8]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UnicoSdkBase07DefaultA7DecryptC7keyData02ivG0ACSays5UInt8VG_AHtcfc",
+            "mangledName": "$s12UnicoSdkBase07DefaultA7DecryptC7keyData02ivG0ACSays5UInt8VG_AHtcfc",
+            "moduleName": "UnicoSdkBase",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "decrypt",
+            "printedName": "decrypt(encoded:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "String",
                     "printedName": "Swift.String",
                     "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TotpDomainError",
-                    "printedName": "UnicoSdkBase.TotpDomainError",
-                    "usr": "s:12UnicoSdkBase15TotpDomainErrorO"
                   }
                 ],
-                "usr": "s:s6ResultO"
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase07DefaultA7DecryptC7decrypt7encodedSSSgAF_tF",
+            "mangledName": "$s12UnicoSdkBase07DefaultA7DecryptC7decrypt7encodedSSSgAF_tF",
+            "moduleName": "UnicoSdkBase",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeHostDecrypt",
+            "printedName": "makeHostDecrypt(keyData:ivData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnicoDecrypt",
+                "printedName": "UnicoSdkBase.UnicoDecrypt",
+                "usr": "s:12UnicoSdkBase0A7DecryptP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.UInt8]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.UInt8]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase07DefaultA7DecryptC08makeHostE07keyData02ivI0AA0aE0_pSays5UInt8VG_AJtFZ",
+            "mangledName": "$s12UnicoSdkBase07DefaultA7DecryptC08makeHostE07keyData02ivI0AA0aE0_pSays5UInt8VG_AJtFZ",
+            "moduleName": "UnicoSdkBase",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "makeTokenDecrypt",
+            "printedName": "makeTokenDecrypt(keyData:ivData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnicoDecrypt",
+                "printedName": "UnicoSdkBase.UnicoDecrypt",
+                "usr": "s:12UnicoSdkBase0A7DecryptP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.UInt8]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.UInt8]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase07DefaultA7DecryptC09makeTokenE07keyData02ivI0AA0aE0_pSays5UInt8VG_AJtFZ",
+            "mangledName": "$s12UnicoSdkBase07DefaultA7DecryptC09makeTokenE07keyData02ivI0AA0aE0_pSays5UInt8VG_AJtFZ",
+            "moduleName": "UnicoSdkBase",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "make",
+            "printedName": "make(keyData:ivData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnicoDecrypt",
+                "printedName": "UnicoSdkBase.UnicoDecrypt",
+                "usr": "s:12UnicoSdkBase0A7DecryptP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -8225,23 +7832,34 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UnicoSdkBase14GetTotpUseCaseP7execute6secrets6ResultOySSAA0E11DomainErrorOGSS_tKF",
-            "mangledName": "$s12UnicoSdkBase14GetTotpUseCaseP7execute6secrets6ResultOySSAA0E11DomainErrorOGSS_tKF",
+            "usr": "s:12UnicoSdkBase07DefaultA7DecryptC4make7keyData02ivH0AA0aE0_pSS_SStFZ",
+            "mangledName": "$s12UnicoSdkBase07DefaultA7DecryptC4make7keyData02ivH0AA0aE0_pSS_SStFZ",
             "moduleName": "UnicoSdkBase",
-            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.GetTotpUseCase>",
-            "sugared_genericSig": "<Self where Self : UnicoSdkBase.GetTotpUseCase>",
-            "protocolReq": true,
-            "throwing": true,
-            "reqNewWitnessTableEntry": true,
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Protocol",
-        "usr": "s:12UnicoSdkBase14GetTotpUseCaseP",
-        "mangledName": "$s12UnicoSdkBase14GetTotpUseCaseP",
+        "declKind": "Class",
+        "usr": "s:12UnicoSdkBase07DefaultA7DecryptC",
+        "mangledName": "$s12UnicoSdkBase07DefaultA7DecryptC",
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "Final"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UnicoDecrypt",
+            "printedName": "UnicoDecrypt",
+            "usr": "s:12UnicoSdkBase0A7DecryptP",
+            "mangledName": "$s12UnicoSdkBase0A7DecryptP"
+          }
         ]
       },
       {
@@ -8558,20 +8176,6 @@
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeTOTP.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1030,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeTOTP.swift",
-      "kind": "StringLiteral",
-      "offset": 739,
-      "length": 3,
-      "value": "\"UnicoSdkBase.OTP\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Repositories\/Utils\/RepositoryTask.swift",
       "kind": "BooleanLiteral",
       "offset": 286,
@@ -8579,18 +8183,11 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/DataMapping\/GetTotpRequestDTO+Mapping.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/GetTokenRequestHeadersDTO.swift",
       "kind": "StringLiteral",
-      "offset": 501,
+      "offset": 382,
       "length": 5,
       "value": "\"IOS\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/TokenStore.swift",
-      "kind": "StringLiteral",
-      "offset": 872,
-      "length": 38,
-      "value": "\"09E969FC-53C3-4BE2-B653-4802949A26A7\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkConfig.swift",
@@ -8612,111 +8209,6 @@
       "offset": 322,
       "length": 28,
       "value": "\"UnicoSdkBase.DefaultGeoLocationRepository\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Repositories\/DefaultGetTotpRepository.swift",
-      "kind": "StringLiteral",
-      "offset": 263,
-      "length": 6,
-      "value": "\"SHA1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Repositories\/DefaultGetTotpRepository.swift",
-      "kind": "IntegerLiteral",
-      "offset": 292,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "IntegerLiteral",
-      "offset": 967,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "IntegerLiteral",
-      "offset": 989,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "IntegerLiteral",
-      "offset": 967,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "IntegerLiteral",
-      "offset": 989,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "IntegerLiteral",
-      "offset": 967,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "IntegerLiteral",
-      "offset": 989,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "StringLiteral",
-      "offset": 1711,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "StringLiteral",
-      "offset": 1754,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1833,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1871,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1944,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3566,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/FreeToken.swift",
-      "kind": "StringLiteral",
-      "offset": 746,
-      "length": 9,
-      "value": "\"UnicoSdkBase.FreeToken\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
@@ -9522,20 +9014,6 @@
       "offset": 9081,
       "length": 2,
       "value": "31"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/KeychainStorable.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1289,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Totp\/KeychainStorable.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2512,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
