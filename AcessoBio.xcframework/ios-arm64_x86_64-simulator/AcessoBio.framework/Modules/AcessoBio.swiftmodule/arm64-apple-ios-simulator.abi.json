@@ -1707,23 +1707,6 @@
       },
       {
         "kind": "Import",
-        "name": "UnicoSdkPlugins",
-        "printedName": "UnicoSdkPlugins",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UnicoSdkLogger",
         "printedName": "UnicoSdkLogger",
         "declKind": "Import",
@@ -5150,6 +5133,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
         "kind": "TypeDecl",
         "name": "UnicoSetupData",
         "printedName": "UnicoSetupData",
@@ -5303,6 +5293,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
       },
       {
         "kind": "TypeDecl",
@@ -16933,6 +16930,34 @@
       "value": "\"AcessoBio.UnicoSetupServices\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/AppKeys.swift",
+      "kind": "Array",
+      "offset": 65,
+      "length": 250,
+      "value": "[0xA2, 0x08, 0xF3, 0xB9, 0xC2, 0x51, 0x92, 0xD1, 0x24, 0x0F, 0x8B, 0xA7, 0x61, 0xFF, 0x5D, 0xAB, 0x37, 0xB8, 0x22, 0x9A, 0x1B, 0x79, 0xD4, 0x08, 0x23, 0x8A, 0xE6, 0xEF, 0x30, 0xDD, 0x1A, 0x68]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/AppKeys.swift",
+      "kind": "Array",
+      "offset": 372,
+      "length": 130,
+      "value": "[0x95, 0xA3, 0x2D, 0x7A, 0x43, 0x29, 0xC8, 0xF0, 0x07, 0x65, 0xCF, 0x03, 0x49, 0xD6, 0xB2, 0x0F]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/AppKeys.swift",
+      "kind": "Array",
+      "offset": 561,
+      "length": 216,
+      "value": "[184, 127, 54, 168, 107, 98, 135, 198, 237, 164, 217, 254, 173, 56, 218, 163, 169, 29, 52, 203, 135, 211, 78, 30, 217, 47, 89, 125, 48, 156, 23, 60]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/AppKeys.swift",
+      "kind": "Array",
+      "offset": 835,
+      "length": 108,
+      "value": "[63, 61, 248, 197, 137, 7, 80, 157, 120, 38, 16, 195, 179, 29, 67, 115]"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/UnicoHttpHeaders.swift",
       "kind": "StringLiteral",
       "offset": 191,
@@ -17152,35 +17177,28 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/SessionConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 1218,
+      "offset": 1320,
       "length": 36,
       "value": "[(\"Content-Type\", \"application\/json\")]"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/SessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 1477,
-      "length": 18,
-      "value": "\"WJYHMMARJKIQPZX7\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/SessionConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 1574,
+      "offset": 1577,
       "length": 45,
       "value": "\"sdkKey_308104f6-1cc0-42cc-b02c-4c974c777498\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/SessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 1716,
+      "offset": 1719,
       "length": 34,
       "value": "\"8c289a4e27f541f386aa328252fcb1ed\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/SessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 1845,
+      "offset": 1848,
       "length": 18,
       "value": "\"b6627900972a49cc\""
     },
@@ -17250,56 +17268,56 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 133,
+      "offset": 153,
       "length": 14,
       "value": "\"AcessoBio.UnicoSetupData\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 720,
+      "offset": 919,
       "length": 11,
       "value": "\"host_info\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 720,
+      "offset": 919,
       "length": 11,
       "value": "\"host_info\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 805,
+      "offset": 1004,
       "length": 11,
       "value": "\"host_info\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 840,
+      "offset": 1039,
       "length": 10,
       "value": "\"host_key\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 805,
+      "offset": 1004,
       "length": 11,
       "value": "\"host_info\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 840,
+      "offset": 1039,
       "length": 10,
       "value": "\"host_key\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Domain\/UseCases\/Defaults\/DefaultGetCameraResultUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 221,
+      "offset": 241,
       "length": 29,
       "value": "\"AcessoBio.DefaultGetCameraResultUseCase\""
     },
@@ -17656,7 +17674,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/UnicoSetup.swift",
       "kind": "BooleanLiteral",
-      "offset": 1273,
+      "offset": 1197,
       "length": 5,
       "value": "false"
     },
@@ -17745,79 +17763,51 @@
       "value": "\"attempts\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/AppKeys.swift",
-      "kind": "Array",
-      "offset": 65,
-      "length": 250,
-      "value": "[0xA2, 0x08, 0xF3, 0xB9, 0xC2, 0x51, 0x92, 0xD1, 0x24, 0x0F, 0x8B, 0xA7, 0x61, 0xFF, 0x5D, 0xAB, 0x37, 0xB8, 0x22, 0x9A, 0x1B, 0x79, 0xD4, 0x08, 0x23, 0x8A, 0xE6, 0xEF, 0x30, 0xDD, 0x1A, 0x68]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/AppKeys.swift",
-      "kind": "Array",
-      "offset": 371,
-      "length": 130,
-      "value": "[0x95, 0xA3, 0x2D, 0x7A, 0x43, 0x29, 0xC8, 0xF0, 0x07, 0x65, 0xCF, 0x03, 0x49, 0xD6, 0xB2, 0x0F]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/AppKeys.swift",
-      "kind": "Array",
-      "offset": 560,
-      "length": 216,
-      "value": "[184, 127, 54, 168, 107, 98, 135, 198, 237, 164, 217, 254, 173, 56, 218, 163, 169, 29, 52, 203, 135, 211, 78, 30, 217, 47, 89, 125, 48, 156, 23, 60]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/AppKeys.swift",
-      "kind": "Array",
-      "offset": 833,
-      "length": 108,
-      "value": "[63, 61, 248, 197, 137, 7, 80, 157, 120, 38, 16, 195, 179, 29, 67, 115]"
-    },
-    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkVersionConfig.swift",
       "kind": "StringLiteral",
-      "offset": 214,
+      "offset": 213,
       "length": 7,
-      "value": "\"2.6.2\""
+      "value": "\"2.7.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1612,
+      "offset": 1642,
       "length": 9,
       "value": "\"FACETEC\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1637,
+      "offset": 1667,
       "length": 5,
       "value": "\"EVA\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1662,
+      "offset": 1692,
       "length": 9,
       "value": "\"DOROTHY\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1612,
+      "offset": 1642,
       "length": 9,
       "value": "\"FACETEC\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1637,
+      "offset": 1667,
       "length": 5,
       "value": "\"EVA\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1662,
+      "offset": 1692,
       "length": 9,
       "value": "\"DOROTHY\""
     },
@@ -17860,6 +17850,20 @@
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/SdkPkDTO.swift",
       "kind": "StringLiteral",
       "offset": 203,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/BaseObject.swift",
+      "kind": "StringLiteral",
+      "offset": 410,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/BaseObject.swift",
+      "kind": "StringLiteral",
+      "offset": 422,
       "length": 2,
       "value": "\"\""
     },

@@ -1512,12 +1512,12 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UnicoSdkSecurity.Env.Type) -> (UnicoSdkBase.DataTransferService, Swift.String) -> UnicoSdkSecurity.Env",
+                "printedName": "(UnicoSdkSecurity.Env.Type) -> (UnicoSdkBase.DataTransferService) -> UnicoSdkSecurity.Env",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(UnicoSdkBase.DataTransferService, Swift.String) -> UnicoSdkSecurity.Env",
+                    "printedName": "(UnicoSdkBase.DataTransferService) -> UnicoSdkSecurity.Env",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -1528,19 +1528,13 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(service: UnicoSdkBase.DataTransferService, totpSecret: Swift.String)",
+                        "printedName": "(service: UnicoSdkBase.DataTransferService)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "DataTransferService",
                             "printedName": "UnicoSdkBase.DataTransferService",
                             "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
                           }
                         ]
                       }
@@ -1563,8 +1557,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:16UnicoSdkSecurity3EnvO6customyAC0aB4Base19DataTransferService_p_SStcACmF",
-            "mangledName": "$s16UnicoSdkSecurity3EnvO6customyAC0aB4Base19DataTransferService_p_SStcACmF",
+            "usr": "s:16UnicoSdkSecurity3EnvO6customyAC0aB4Base19DataTransferService_p_tcACmF",
+            "mangledName": "$s16UnicoSdkSecurity3EnvO6customyAC0aB4Base19DataTransferService_p_tcACmF",
             "moduleName": "UnicoSdkSecurity"
           },
           {
@@ -2071,18 +2065,32 @@
       "value": "\"UnicoSdkSecurity.DefaultAppSecUseCase\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppConfiguration.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 51,
-      "length": 18,
-      "value": "\"HE4TSOJZGA2DKNRU\""
+      "offset": 55,
+      "length": 34,
+      "value": "\"95878220790a47288e57735440dd187e\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppConfiguration.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SessionConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 95,
+      "offset": 114,
       "length": 18,
-      "value": "\"WJYHMMARJKIQPZX7\""
+      "value": "\"50d338819e284602\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SessionConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 158,
+      "length": 34,
+      "value": "\"8c289a4e27f541f386aa328252fcb1ed\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SessionConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 217,
+      "length": 18,
+      "value": "\"b6627900972a49cc\""
     }
   ]
 }

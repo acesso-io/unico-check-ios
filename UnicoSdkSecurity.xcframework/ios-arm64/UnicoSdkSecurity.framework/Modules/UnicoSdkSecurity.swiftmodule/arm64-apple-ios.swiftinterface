@@ -50,7 +50,7 @@ public enum DeviceInfoError : Swift.Error {
   @objc deinit
 }
 public enum Env {
-  case custom(service: UnicoSdkBase.DataTransferService, totpSecret: Swift.String)
+  case custom(service: UnicoSdkBase.DataTransferService)
   case production
 }
 public protocol SecurityResult {

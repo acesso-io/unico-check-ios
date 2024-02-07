@@ -72,9 +72,9 @@ public protocol LivenessResult {
   @objc deinit
 }
 public enum Env {
-  case custom(service: UnicoSdkBase.DataTransferService, totpSecret: Swift.String)
-  case production
-  case development
+  case custom(service: UnicoSdkBase.DataTransferService, endpointKey: Swift.String, endpointIv: Swift.String)
+  case development(endpointKey: Swift.String, endpointIv: Swift.String)
+  case production(endpointKey: Swift.String, endpointIv: Swift.String)
 }
 public protocol UnicoLivenessPrepareCameraDelegate : AnyObject {
   func onCameraReady(unicoLivenessOpenCamera: UnicoSdkLiveness.UnicoLivenessOpenCamera)
