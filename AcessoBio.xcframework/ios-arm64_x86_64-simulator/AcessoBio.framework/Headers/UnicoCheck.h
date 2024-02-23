@@ -113,6 +113,7 @@ typedef NS_ENUM(NSInteger, CameraType) {
 - (void)setSmartFrame:(BOOL)isEnabled;
 @property (readonly) BOOL isAutoCapture;
 @property (readonly) BOOL isSmartCamera;
+@property (nonatomic, assign) LocaleTypes localeTypes;
 
 #pragma mark - Config
 

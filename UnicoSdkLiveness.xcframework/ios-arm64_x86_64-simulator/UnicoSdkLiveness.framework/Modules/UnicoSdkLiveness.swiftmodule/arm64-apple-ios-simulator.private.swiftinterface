@@ -20,7 +20,7 @@ import _StringProcessing
   @objc deinit
 }
 public struct PrepareData : Swift.Equatable {
-  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool)
+  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?)
   public static func == (a: UnicoSdkLiveness.PrepareData, b: UnicoSdkLiveness.PrepareData) -> Swift.Bool
 }
 extension UnicoSdkLiveness.PrepareData {
@@ -49,7 +49,7 @@ extension UnicoSdkLiveness.PrepareData {
   }
 }
 public struct Theme : Swift.Equatable {
-  public init(backgroundColor: UIKit.UIColor, boxMessageColor: UIKit.UIColor, textMessageColor: UIKit.UIColor, backgroundTakePictureButtonColor: UIKit.UIColor, iconTakePictureButtonColor: UIKit.UIColor, backgroundBottomDocumentColor: UIKit.UIColor, textBottomDocumentColor: UIKit.UIColor, silhouetteSuccessColor: UIKit.UIColor, silhouetteErrorColor: UIKit.UIColor, silhouetteNeutralColor: UIKit.UIColor)
+  public init(backgroundColor: UIKit.UIColor, boxMessageColor: UIKit.UIColor, textMessageColor: UIKit.UIColor, backgroundTakePictureButtonColor: UIKit.UIColor, iconTakePictureButtonColor: UIKit.UIColor, backgroundBottomDocumentColor: UIKit.UIColor, textBottomDocumentColor: UIKit.UIColor, silhouetteSuccessColor: UIKit.UIColor, silhouetteErrorColor: UIKit.UIColor, silhouetteNeutralColor: UIKit.UIColor, progressBarColor: UIKit.UIColor, cancelButtonIconColor: UIKit.UIColor)
   public static func == (a: UnicoSdkLiveness.Theme, b: UnicoSdkLiveness.Theme) -> Swift.Bool
 }
 public protocol UnicoLivenessDelegate : AnyObject {

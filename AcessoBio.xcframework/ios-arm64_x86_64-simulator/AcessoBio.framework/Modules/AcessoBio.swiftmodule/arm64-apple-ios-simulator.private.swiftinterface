@@ -106,7 +106,7 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers public class UnicoSetupServices : ObjectiveC.NSObject, AcessoBio.UnicoSetupServicesProtocol {
-  public func getTokenUnico(unicoSetupData: AcessoBio.UnicoSetupData, completion: @escaping AcessoBio.UnicoSetupServices.Completion)
+  public func getTokenUnico(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, completion: @escaping AcessoBio.UnicoSetupServices.Completion)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class DefaultSessionIdWorker {
@@ -130,7 +130,7 @@ extension AcessoBio.DefaultMotionSensorsDevice {
 public protocol UnicoSetupServicesProtocol {
   typealias Response = Swift.Result<AcessoBio.SDKTokenResponseDTOAdapter, AcessoBio.ErrorBio>
   typealias Completion = (Self.Response) -> Swift.Void
-  func getTokenUnico(unicoSetupData: AcessoBio.UnicoSetupData, completion: @escaping Self.Completion)
+  func getTokenUnico(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, completion: @escaping Self.Completion)
 }
 extension AcessoBio.ErrorBio : Swift.Error {
 }
@@ -148,6 +148,8 @@ extension AcessoBio.ErrorBio : Swift.Error {
   @objc public func getColorSilhouetteSuccess() -> Any!
   @objc public func getColorSilhouetteError() -> Any!
   @objc public func getColorSilhouetteNeutral() -> Any!
+  @objc public func getProgressBarColor() -> Any!
+  @objc public func getCancelButtonIconColor() -> Any!
   @objc deinit
 }
 extension AcessoBio.UnicoCheckThemes {
@@ -357,13 +359,13 @@ public protocol Cancellable {
   @objc deinit
 }
 @objc public protocol UnicoSetupProtocol {
-  @objc func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
+  @objc func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
   @objc func getSdkTokenObject() -> AcessoBio.SDKTokenResponseDTOAdapter?
   @objc var isHomolog: Swift.Bool { get }
 }
 @objc @_inheritsConvenienceInitializers public class UnicoSetup : ObjectiveC.NSObject, AcessoBio.UnicoSetupProtocol {
   @objc public var isHomolog: Swift.Bool
-  @objc public func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
+  @objc public func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
   @objc public func getSdkTokenObject() -> AcessoBio.SDKTokenResponseDTOAdapter?
   @objc override dynamic public init()
   @objc deinit
@@ -438,6 +440,8 @@ public protocol Cancellable {
   @objc public func getColorSilhouetteSuccess() -> Any!
   @objc public func getColorSilhouetteError() -> Any!
   @objc public func getColorSilhouetteNeutral() -> Any!
+  @objc public func getProgressBarColor() -> Any!
+  @objc public func getCancelButtonIconColor() -> Any!
   @objc override dynamic public init()
   @objc deinit
 }

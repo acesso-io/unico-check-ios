@@ -640,6 +640,8 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
 - (id _Null_unspecified)getColorSilhouetteSuccess SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteError SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteNeutral SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getProgressBarColor SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getCancelButtonIconColor SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -672,6 +674,8 @@ SWIFT_CLASS("_TtC9AcessoBio17UnicoDefaultTheme")
 - (id _Null_unspecified)getColorSilhouetteSuccess SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteError SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteNeutral SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getProgressBarColor SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getCancelButtonIconColor SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -817,7 +821,7 @@ SWIFT_CLASS("_TtC9AcessoBio21UnicoNetworkingModule")
 
 SWIFT_PROTOCOL("_TtP9AcessoBio18UnicoSetupProtocol_")
 @protocol UnicoSetupProtocol
-- (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
+- (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData localeTypes:(LocaleTypes)localeTypes completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
 - (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL isHomolog;
 @end
@@ -826,7 +830,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio18UnicoSetupProtocol_")
 SWIFT_CLASS("_TtC9AcessoBio10UnicoSetup")
 @interface UnicoSetup : NSObject <UnicoSetupProtocol>
 @property (nonatomic) BOOL isHomolog;
-- (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
+- (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData localeTypes:(LocaleTypes)localeTypes completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
 - (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1523,6 +1527,8 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
 - (id _Null_unspecified)getColorSilhouetteSuccess SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteError SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteNeutral SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getProgressBarColor SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getCancelButtonIconColor SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1555,6 +1561,8 @@ SWIFT_CLASS("_TtC9AcessoBio17UnicoDefaultTheme")
 - (id _Null_unspecified)getColorSilhouetteSuccess SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteError SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteNeutral SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getProgressBarColor SWIFT_WARN_UNUSED_RESULT;
+- (id _Null_unspecified)getCancelButtonIconColor SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1700,7 +1708,7 @@ SWIFT_CLASS("_TtC9AcessoBio21UnicoNetworkingModule")
 
 SWIFT_PROTOCOL("_TtP9AcessoBio18UnicoSetupProtocol_")
 @protocol UnicoSetupProtocol
-- (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
+- (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData localeTypes:(LocaleTypes)localeTypes completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
 - (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL isHomolog;
 @end
@@ -1709,7 +1717,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio18UnicoSetupProtocol_")
 SWIFT_CLASS("_TtC9AcessoBio10UnicoSetup")
 @interface UnicoSetup : NSObject <UnicoSetupProtocol>
 @property (nonatomic) BOOL isHomolog;
-- (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
+- (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData localeTypes:(LocaleTypes)localeTypes completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
 - (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -7,10 +7,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, DeviceProfilingEnviromentType) {
+    DeviceProfilingEnviromentTypeProd,
+    DeviceProfilingEnviromentTypeUAT
+};
+
+
 @interface DeviceProfiling : NSObject
 
 ///A String version of SDK
 @property (class, nonatomic, assign, readonly) NSString* version;
+
+#pragma mark New Instances
+- (instancetype) initWithEnviroment: (DeviceProfilingEnviromentType) env;
 
 #pragma mark Sync calls
 ///Initiate SDK.

@@ -22,6 +22,11 @@
 - (id) getColorSilhouetteError;
 - (id) getColorSilhouetteNeutral;
 
+@optional
+
+- (id) getProgressBarColor;
+- (id) getCancelButtonIconColor;
+
 @end
 
 #endif /* iAcessoBioTheme_h */
