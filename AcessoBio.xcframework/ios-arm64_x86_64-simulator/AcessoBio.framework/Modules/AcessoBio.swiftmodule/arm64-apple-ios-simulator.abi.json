@@ -2645,7 +2645,7 @@
           {
             "kind": "Function",
             "name": "getTokenUnico",
-            "printedName": "getTokenUnico(unicoSetupData:completion:)",
+            "printedName": "getTokenUnico(unicoSetupData:localeTypes:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2657,6 +2657,12 @@
                 "name": "UnicoSetupData",
                 "printedName": "AcessoBio.UnicoSetupData",
                 "usr": "c:@M@AcessoBio@objc(cs)UnicoSetupData"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocaleTypes",
+                "printedName": "AcessoBio.LocaleTypes",
+                "usr": "c:@E@LocaleTypes"
               },
               {
                 "kind": "TypeFunc",
@@ -2692,8 +2698,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:9AcessoBio18UnicoSetupServicesC08getTokenC005unicoD4Data10completionyAA0cdI0C_ys6ResultOyAA26SDKTokenResponseDTOAdapterCSo05ErrorB0CGctF",
-            "mangledName": "$s9AcessoBio18UnicoSetupServicesC08getTokenC005unicoD4Data10completionyAA0cdI0C_ys6ResultOyAA26SDKTokenResponseDTOAdapterCSo05ErrorB0CGctF",
+            "usr": "s:9AcessoBio18UnicoSetupServicesC08getTokenC005unicoD4Data11localeTypes10completionyAA0cdI0C_So06LocaleK0Vys6ResultOyAA26SDKTokenResponseDTOAdapterCSo05ErrorB0CGctF",
+            "mangledName": "$s9AcessoBio18UnicoSetupServicesC08getTokenC005unicoD4Data11localeTypes10completionyAA0cdI0C_So06LocaleK0Vys6ResultOyAA26SDKTokenResponseDTOAdapterCSo05ErrorB0CGctF",
             "moduleName": "AcessoBio",
             "declAttributes": [
               "AccessControl"
@@ -3168,7 +3174,7 @@
           {
             "kind": "Function",
             "name": "getTokenUnico",
-            "printedName": "getTokenUnico(unicoSetupData:completion:)",
+            "printedName": "getTokenUnico(unicoSetupData:localeTypes:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3180,6 +3186,12 @@
                 "name": "UnicoSetupData",
                 "printedName": "AcessoBio.UnicoSetupData",
                 "usr": "c:@M@AcessoBio@objc(cs)UnicoSetupData"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocaleTypes",
+                "printedName": "AcessoBio.LocaleTypes",
+                "usr": "c:@E@LocaleTypes"
               },
               {
                 "kind": "TypeFunc",
@@ -3215,8 +3227,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:9AcessoBio26UnicoSetupServicesProtocolP08getTokenC005unicoD4Data10completionyAA0cdJ0C_ys6ResultOyAA26SDKTokenResponseDTOAdapterCSo05ErrorB0CGctF",
-            "mangledName": "$s9AcessoBio26UnicoSetupServicesProtocolP08getTokenC005unicoD4Data10completionyAA0cdJ0C_ys6ResultOyAA26SDKTokenResponseDTOAdapterCSo05ErrorB0CGctF",
+            "usr": "s:9AcessoBio26UnicoSetupServicesProtocolP08getTokenC005unicoD4Data11localeTypes10completionyAA0cdJ0C_So06LocaleL0Vys6ResultOyAA26SDKTokenResponseDTOAdapterCSo05ErrorB0CGctF",
+            "mangledName": "$s9AcessoBio26UnicoSetupServicesProtocolP08getTokenC005unicoD4Data11localeTypes10completionyAA0cdJ0C_So06LocaleL0Vys6ResultOyAA26SDKTokenResponseDTOAdapterCSo05ErrorB0CGctF",
             "moduleName": "AcessoBio",
             "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.UnicoSetupServicesProtocol>",
             "sugared_genericSig": "<Self where Self : AcessoBio.UnicoSetupServicesProtocol>",
@@ -3872,6 +3884,66 @@
             "mangledName": "$s9AcessoBio16UnicoCheckThemesC25getColorSilhouetteNeutralypSgyF",
             "moduleName": "AcessoBio",
             "objc_name": "getColorSilhouetteNeutral",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getProgressBarColor",
+            "printedName": "getProgressBarColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AcessoBio@objc(cs)UnicoCheckThemes(im)getProgressBarColor",
+            "mangledName": "$s9AcessoBio16UnicoCheckThemesC19getProgressBarColorypSgyF",
+            "moduleName": "AcessoBio",
+            "objc_name": "getProgressBarColor",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCancelButtonIconColor",
+            "printedName": "getCancelButtonIconColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AcessoBio@objc(cs)UnicoCheckThemes(im)getCancelButtonIconColor",
+            "mangledName": "$s9AcessoBio16UnicoCheckThemesC24getCancelButtonIconColorypSgyF",
+            "moduleName": "AcessoBio",
+            "objc_name": "getCancelButtonIconColor",
             "declAttributes": [
               "ObjC",
               "AccessControl"
@@ -5272,6 +5344,16 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -10356,7 +10438,7 @@
           {
             "kind": "Function",
             "name": "setupSDK",
-            "printedName": "setupSDK(unicoSetupData:completion:)",
+            "printedName": "setupSDK(unicoSetupData:localeTypes:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -10368,6 +10450,12 @@
                 "name": "UnicoSetupData",
                 "printedName": "AcessoBio.UnicoSetupData",
                 "usr": "c:@M@AcessoBio@objc(cs)UnicoSetupData"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocaleTypes",
+                "printedName": "AcessoBio.LocaleTypes",
+                "usr": "c:@E@LocaleTypes"
               },
               {
                 "kind": "TypeFunc",
@@ -10397,13 +10485,13 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)UnicoSetupProtocol(im)setupSDKWithUnicoSetupData:completion:",
-            "mangledName": "$s9AcessoBio18UnicoSetupProtocolP8setupSDK05unicoD4Data10completionyAA0cdI0C_ySo05ErrorB0CSgctF",
+            "usr": "c:@M@AcessoBio@objc(pl)UnicoSetupProtocol(im)setupSDKWithUnicoSetupData:localeTypes:completion:",
+            "mangledName": "$s9AcessoBio18UnicoSetupProtocolP8setupSDK05unicoD4Data11localeTypes10completionyAA0cdI0C_So06LocaleK0VySo05ErrorB0CSgctF",
             "moduleName": "AcessoBio",
             "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.UnicoSetupProtocol>",
             "sugared_genericSig": "<Self where Self : AcessoBio.UnicoSetupProtocol>",
             "protocolReq": true,
-            "objc_name": "setupSDKWithUnicoSetupData:completion:",
+            "objc_name": "setupSDKWithUnicoSetupData:localeTypes:completion:",
             "declAttributes": [
               "ObjC"
             ],
@@ -10607,7 +10695,7 @@
           {
             "kind": "Function",
             "name": "setupSDK",
-            "printedName": "setupSDK(unicoSetupData:completion:)",
+            "printedName": "setupSDK(unicoSetupData:localeTypes:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -10619,6 +10707,12 @@
                 "name": "UnicoSetupData",
                 "printedName": "AcessoBio.UnicoSetupData",
                 "usr": "c:@M@AcessoBio@objc(cs)UnicoSetupData"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LocaleTypes",
+                "printedName": "AcessoBio.LocaleTypes",
+                "usr": "c:@E@LocaleTypes"
               },
               {
                 "kind": "TypeFunc",
@@ -10648,10 +10742,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(cs)UnicoSetup(im)setupSDKWithUnicoSetupData:completion:",
-            "mangledName": "$s9AcessoBio10UnicoSetupC8setupSDK05unicoD4Data10completionyAA0cdH0C_ySo05ErrorB0CSgctF",
+            "usr": "c:@M@AcessoBio@objc(cs)UnicoSetup(im)setupSDKWithUnicoSetupData:localeTypes:completion:",
+            "mangledName": "$s9AcessoBio10UnicoSetupC8setupSDK05unicoD4Data11localeTypes10completionyAA0cdH0C_So06LocaleJ0VySo05ErrorB0CSgctF",
             "moduleName": "AcessoBio",
-            "objc_name": "setupSDKWithUnicoSetupData:completion:",
+            "objc_name": "setupSDKWithUnicoSetupData:localeTypes:completion:",
             "declAttributes": [
               "ObjC",
               "AccessControl"
@@ -13031,6 +13125,13 @@
       },
       {
         "kind": "Import",
+        "name": "UnicoSdkLiveness",
+        "printedName": "UnicoSdkLiveness",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -13507,6 +13608,66 @@
             "mangledName": "$s9AcessoBio17UnicoDefaultThemeC25getColorSilhouetteNeutralypSgyF",
             "moduleName": "AcessoBio",
             "objc_name": "getColorSilhouetteNeutral",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getProgressBarColor",
+            "printedName": "getProgressBarColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AcessoBio@objc(cs)UnicoDefaultTheme(im)getProgressBarColor",
+            "mangledName": "$s9AcessoBio17UnicoDefaultThemeC19getProgressBarColorypSgyF",
+            "moduleName": "AcessoBio",
+            "objc_name": "getProgressBarColor",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCancelButtonIconColor",
+            "printedName": "getCancelButtonIconColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AcessoBio@objc(cs)UnicoDefaultTheme(im)getCancelButtonIconColor",
+            "mangledName": "$s9AcessoBio17UnicoDefaultThemeC24getCancelButtonIconColorypSgyF",
+            "moduleName": "AcessoBio",
+            "objc_name": "getCancelButtonIconColor",
             "declAttributes": [
               "ObjC",
               "AccessControl"
@@ -16694,14 +16855,14 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+BackendSDK.swift",
       "kind": "StringLiteral",
-      "offset": 493,
+      "offset": 501,
       "length": 15,
       "value": "\"session_token\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+BackendSDK.swift",
       "kind": "StringLiteral",
-      "offset": 493,
+      "offset": 501,
       "length": 15,
       "value": "\"session_token\""
     },
@@ -17016,7 +17177,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/themes\/UnicoCheckThemes.swift",
       "kind": "BooleanLiteral",
-      "offset": 1032,
+      "offset": 1123,
       "length": 4,
       "value": "true"
     },
@@ -17674,7 +17835,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/UnicoSetup.swift",
       "kind": "BooleanLiteral",
-      "offset": 1197,
+      "offset": 1271,
       "length": 5,
       "value": "false"
     },
@@ -17765,49 +17926,49 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkVersionConfig.swift",
       "kind": "StringLiteral",
-      "offset": 213,
+      "offset": 214,
       "length": 7,
-      "value": "\"2.7.0\""
+      "value": "\"2.8.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1642,
+      "offset": 1676,
       "length": 9,
       "value": "\"FACETEC\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1667,
+      "offset": 1701,
       "length": 5,
       "value": "\"EVA\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1692,
+      "offset": 1726,
       "length": 9,
       "value": "\"DOROTHY\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1642,
+      "offset": 1676,
       "length": 9,
       "value": "\"FACETEC\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1667,
+      "offset": 1701,
       "length": 5,
       "value": "\"EVA\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
       "kind": "StringLiteral",
-      "offset": 1692,
+      "offset": 1726,
       "length": 9,
       "value": "\"DOROTHY\""
     },
@@ -17828,7 +17989,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/LoggerFactory.swift",
       "kind": "Dictionary",
-      "offset": 452,
+      "offset": 459,
       "length": 3,
       "value": "[]"
     },
