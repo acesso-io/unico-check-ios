@@ -18,12 +18,13 @@ Pod::Spec.new do |spec|
   spec.ios.vendored_frameworks  = [
     "AcessoBio.xcframework",
     "DeviceProfiling.xcframework",
-    "FacetecSDK.xcframework",
     "UnicoSdkBase.xcframework",
     "UnicoSdkLiveness.xcframework",
     "UnicoSdkLogger.xcframework",
     "UnicoSdkPlugins.xcframework",
     "UnicoSdkSecurity.xcframework"
   ]
+
+  spec.dependency 'FaceCaptcha', '5.1.4'
 
 end
