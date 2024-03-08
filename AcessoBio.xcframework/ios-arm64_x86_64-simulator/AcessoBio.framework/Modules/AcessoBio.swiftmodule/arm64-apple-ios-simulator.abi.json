@@ -17928,7 +17928,7 @@
       "kind": "StringLiteral",
       "offset": 214,
       "length": 7,
-      "value": "\"2.8.0\""
+      "value": "\"2.9.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",

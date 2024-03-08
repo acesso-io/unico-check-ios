@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		bTboGIYwPDZ7CQ0hIYNOgiima1Y=
+		UDZ5SlN0bqq+ocSGcXEeBdJOQT8=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Hw0YwjOAq73XwcDvS+9nYb03KOc=
+		z/AhZhMxw2KQf8xJhedMwiCnytM=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		bTboGIYwPDZ7CQ0hIYNOgiima1Y=
+		UDZ5SlN0bqq+ocSGcXEeBdJOQT8=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,11 +58,212 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		NL6ayy51DFEdqCHUFH+k/o+o+8M=
+		JB2VdaZJsJ1YzgM8xAZHDz/gngo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		mRlQ8TExT6oRDu3nGXtLg2BXp04=
+		</data>
+		<key>USDKResources.bundle/Assets.car</key>
+		<data>
+		ohf/oUddAp0hvFyIhWnuHqCal3s=
+		</data>
+		<key>USDKResources.bundle/Base.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ipd/Wt+SSy4cHW7G3BgU1Z/mcB0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/Info.plist</key>
+		<data>
+		8KGnUpCpmW3AEuSiseFFMpy8rOM=
+		</data>
+		<key>USDKResources.bundle/OZJournalList.momd/JournalCoreData.mom</key>
+		<data>
+		WfmJ7t8tVQPFQUyNJlysAmJNyd4=
+		</data>
+		<key>USDKResources.bundle/OZJournalList.momd/VersionInfo.plist</key>
+		<data>
+		ABluvLlGVHodY+7GGzQwuUcn+bU=
+		</data>
+		<key>USDKResources.bundle/_CodeSignature/CodeDirectory</key>
+		<data>
+		TeXThSUuwnxjdGG8cZ6jhUfEf1U=
+		</data>
+		<key>USDKResources.bundle/_CodeSignature/CodeRequirements</key>
+		<data>
+		PxB2g+c9UGE3TyhULoAq9VLQ6EA=
+		</data>
+		<key>USDKResources.bundle/_CodeSignature/CodeRequirements-1</key>
+		<data>
+		ud3G7pXGvG5P19JuQ+PEFmh8Tz8=
+		</data>
+		<key>USDKResources.bundle/_CodeSignature/CodeResources</key>
+		<data>
+		46kjeYfEB5M7gJSORKCj80VSTkA=
+		</data>
+		<key>USDKResources.bundle/_CodeSignature/CodeSignature</key>
+		<data>
+		v13YxwVSi11TChex/vYXWe+6QPQ=
+		</data>
+		<key>USDKResources.bundle/accessories.json</key>
+		<data>
+		uBcMjpqrb8VwnsN3GUGtpE1WwOE=
+		</data>
+		<key>USDKResources.bundle/arrow-down.json</key>
+		<data>
+		OaS6T0Sk62IkYlnPRCgeeE1NX3w=
+		</data>
+		<key>USDKResources.bundle/arrow-left.json</key>
+		<data>
+		hATPbzjo+Mg44vKStYWcIb713Qw=
+		</data>
+		<key>USDKResources.bundle/arrow-right.json</key>
+		<data>
+		KdDu+wHBqcyvni13csE4hCyHd+Q=
+		</data>
+		<key>USDKResources.bundle/arrow-up.json</key>
+		<data>
+		bsetDMWoDvxOEic8N11Eu04fHKo=
+		</data>
+		<key>USDKResources.bundle/close-eye.json</key>
+		<data>
+		jHTL+iqHvdVi3lEfDCKvhPbNYaM=
+		</data>
+		<key>USDKResources.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			X8lU5QmYjgqMVj/7R3VMURWp/4c=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eyzX/fwnQT4yNyiBWDI95Rm7BWE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/fade-down.json</key>
+		<data>
+		zTePCC949M2KHypubEjrEqrl9HE=
+		</data>
+		<key>USDKResources.bundle/fade-left.json</key>
+		<data>
+		Rb/OjeExpnPC2i2/qNdTu7T15a4=
+		</data>
+		<key>USDKResources.bundle/fade-right.json</key>
+		<data>
+		eTpiYxOBeqvVytpDviZcCA7drzw=
+		</data>
+		<key>USDKResources.bundle/fade-up.json</key>
+		<data>
+		zrHTM9w4xKjVLkJtReeRFcHWK6g=
+		</data>
+		<key>USDKResources.bundle/from-smile.json</key>
+		<data>
+		U/gPYK7hnMUWbnmhhSoK+lPzNm8=
+		</data>
+		<key>USDKResources.bundle/hy.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pCmRH+Sq5KMve2/uPGQo/bgm9bw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/kk.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ePTJf6IX7pUEYItGzfrOixXxsdI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/ky.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IK5nFWoKrInMs1netOfjKpqu4U4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/light-off.json</key>
+		<data>
+		UuT0GUV6vUdCoE+0HFpoQszqF7Q=
+		</data>
+		<key>USDKResources.bundle/light-on.json</key>
+		<data>
+		q54PEVGEo6mvtRt+NAWGM+rMxug=
+		</data>
+		<key>USDKResources.bundle/open-eye-wide.json</key>
+		<data>
+		/vBv7n7rxr4vgSsDNdYB49lb/cg=
+		</data>
+		<key>USDKResources.bundle/open-eye.json</key>
+		<data>
+		a6zP/t66RgtLX++dN8Y9j5lqqgU=
+		</data>
+		<key>USDKResources.bundle/podium_0112.tflite.enc</key>
+		<data>
+		5bZMc+hGPCikNtxNgUgyNo/zsw0=
+		</data>
+		<key>USDKResources.bundle/podium_0112.tflite.json</key>
+		<data>
+		lZpPSah4DS8Kgqy5fxJJ8XvMy6A=
+		</data>
+		<key>USDKResources.bundle/podium_rules.zip</key>
+		<data>
+		ci0A+zOB0xRTI4BowVKJlwnyYCE=
+		</data>
+		<key>USDKResources.bundle/pt-BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YcuEauBpaFrbRBhUz9M5ClAPjKs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/ru.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			z4Hzh6XRvjpz/TtvBoGwpW3VH+4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/to-smile.json</key>
+		<data>
+		lOPsBw4igZcuoVJ741AKwjwGJpY=
+		</data>
+		<key>USDKResources.bundle/tr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PBd9P6gParjSy4hs64Ysr7uId9s=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/zoom-in.json</key>
+		<data>
+		70nR2l1QorCGtn7zjSam3Y1XOQI=
+		</data>
+		<key>USDKResources.bundle/zoom-out.json</key>
+		<data>
+		agmD2hht3bazOZRYzHXnD0rRtIM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -92,7 +293,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4YyjirO2cHbNnHOZ3knlfnL2895nyDJYPyj1t++A3FM=
+			ADyfsgFRpXA7jcexmtGdukQifgmvgcuxNeGpv0w+RF4=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -120,14 +321,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KevXUOLyihZLEe5CyjHkrA8+9Ql0zwSogIFlHgzsvG8=
+			KrAp8ZXoZx1OMAy6N1UW08puWNNS1tTI/bwPw0bEvE4=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4YyjirO2cHbNnHOZ3knlfnL2895nyDJYPyj1t++A3FM=
+			ADyfsgFRpXA7jcexmtGdukQifgmvgcuxNeGpv0w+RF4=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -155,7 +356,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cu2+/my9WYiYWcFbheoLvUTjJL0Ru1nH3w6TmIEYDxQ=
+			qfz88eAqkL6BCriGjCvKt5Srg7E/SiPrNpbGjnGwHmA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -163,6 +364,297 @@
 			<key>hash2</key>
 			<data>
 			+DsCAsCNDJFNfdDIensgdyUW/Muga2DVjK6R8A9O8GE=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VnY1j/NZqnT0pDp2OEyBgpEvYEBXhGTy+2vKOwQ5qs0=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/Base.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QduLMlSgCxv0A0SJa9CTgku7k56XU6jP1eFYaUtmvyM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pg6X8ZD8XgeFGiTFDmSi0HyCQglHb7xMS2F6sOh0OL4=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/OZJournalList.momd/JournalCoreData.mom</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eC4LDTI48EdEGOzBJRmZGBwJAxrgedo8gNAlgLADLkM=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/OZJournalList.momd/VersionInfo.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qSUSdEwCkxrdUJi1zJWV7MJ+aDUgDZh6dydtsU9SWjA=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/_CodeSignature/CodeDirectory</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cjPH73hPC7h+s3LLZOZ/9i/isiqriZbscUakp/mch1U=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/_CodeSignature/CodeRequirements</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FxkEN6npUnsmRQfNuDqTwb7J2QBdi6pgAi1EXEvQ3x8=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/_CodeSignature/CodeRequirements-1</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PfTLw9AmPJhbkeY2MHXUNCzkOxEcB6TrTPt7VZfQK94=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			L5gBOI78F6SOvKTjtk1hOw1E3eD+BqLFD6geis4jqeQ=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/_CodeSignature/CodeSignature</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			S7qdooHSRaurkeJxvrb27EHiuuC++WdtFBMILe7nrXE=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/accessories.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Agulv525EYe/UucHL+1SH3oPou191fGZZZ2n2HveXPk=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/arrow-down.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			x9URdyTFIcIZ1Zb+2lsCtF3iPNUIyVtr3rgFxwIxEY4=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/arrow-left.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BRQKFFDJiJtAVfvgDQY3hLAGNbZy9kXy93RiW8NjaZs=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/arrow-right.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hYW9CBA5uwwq50Bfw5ZnZdly30yQOibIFe28x2rJZ8U=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/arrow-up.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sacUR8CIt+YM5G17RKCQaAJJAZsd0prJ8MWF6XSXrIw=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/close-eye.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			loNcFm5eKDEInOw47pMXW56ujb+Ikdq8E3DKBD1W9n4=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			We1nJmr/+bTWyA5UNOLlMIboiI2ofdTG9UO8MFxZIak=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			p3dzFpEYH5xvtQAjhDxG19I0+zRevmfX2F2WtheMNtk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/fade-down.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			weagpbWWRa8KimCUBGd3KkWsVeAJiG8hulM158FTfG0=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/fade-left.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			g43JJvWhWXRp/r0m4bp0ciezZ9ZfxevBEROf74pRTzs=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/fade-right.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4jY+wKojwCfI6NSyrGnpWboXKfVSmMhiFg/7G695DvI=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/fade-up.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Qs2yvGa7gIzT8kmjLV8fkWVA0apW9u8sXoEcT8ubC/s=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/from-smile.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0UbH01KfF/m1ZigIp4qBSkW2mWxWPNUi7P6+RDEU7cE=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/hy.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tNJh3c3d66JqvsR4TsPi3jA1ooNRZybRrbiBWcnxGoU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/kk.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/McqrIkgIrWT8U4ZdKy/3+VGibCCVLmWXmGU4uxg9V0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/ky.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sHasdGf7i5iHzWfGF/Vt/b9j59eZMLDgsgNGMUmff8o=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/light-off.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kNlydRVtL0ORO22cR1N/giGdNczZASc2EFRr6yCUjhY=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/light-on.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wwWMDKzpWGqbdKI659u2LPnmihXR7VPwKY5VnL9ioxw=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/open-eye-wide.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XOgn36B/sXOsZNlkX5CpY1STIFjBROTmBufIPte2H7A=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/open-eye.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jz5WYmFZo2dPINgDFsT1EQ1aGbdqaYyOtGbpNybvHMI=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/podium_0112.tflite.enc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			koL/TGAcgbTEAqsVLOadma+lodkklYJFulmrwMh5JRc=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/podium_0112.tflite.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			e4eDa1nvaKgi84EVdk8qQk45lGgxw5Y4B3975WMrgBg=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/podium_rules.zip</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2Owx1F3wNVddH1/EoLDiZtMsPzjp6Zlh5bROU+dPV2M=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/pt-BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zYragv82d9tZyF1EKGnqa5sbLRPyQZQSdjNos+Zjfdk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/ru.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KVuG1xd1yA7Tyu7S50IyS4ESOZfFB39iyzfyTbsHB+k=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/to-smile.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IK1ubfs9UFbVft+0QxZZNsJCIeBB9VOoIyJrbPsp3Pc=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/tr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0dvAapT4A7S5IBcWfzURYaqwRrP2LcoEujtcXl1aTTo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>USDKResources.bundle/zoom-in.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Xp6t/xouCLN3h1WE5tBNtcZ6cCdFg5S+ZfXlaGwP/Xo=
+			</data>
+		</dict>
+		<key>USDKResources.bundle/zoom-out.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2dceOscPXeAESvIR1xwCBaemwlnHWh3iwzNM3uPggk0=
 			</data>
 		</dict>
 	</dict>
