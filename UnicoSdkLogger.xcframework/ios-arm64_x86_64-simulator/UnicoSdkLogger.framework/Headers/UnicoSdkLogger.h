@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class USLDefaultLogger, USLSensorValue, USLAccelerometerDeviceBehavior, USLAppSec, USLAttempts, USLFaceBehavior, USLDeviceBehavior, USLBehaviors, USLCameraTypes, USLCameraTypesDocument, USLCameraTypesDocumentDriversLicense, USLCameraTypesDocumentDriversLicenseBack, USLCameraTypesDocumentDriversLicenseFront, USLCameraTypesDocumentDriversLicenseFull, USLCameraTypesDocumentID, USLCameraTypesDocumentIDBack, USLCameraTypesDocumentIDFront, USLCameraTypesDocumentNewID, USLCameraTypesDocumentNewIDBack, USLCameraTypesDocumentNewIDFront, USLCameraTypesDocumentOther, USLCameraTypesDocumentRegistration, USLCameraTypesSelfie, USLCameraTypesSelfieDefault, USLCameraTypesSelfieLiveness, USLCameraTypesSelfieSmart, USLSilhouette, USLImage, USLJwtInfo, USLVideo, USLTimers, USLConnections, USLProvider, USLLiveness, USLCapture, USLOSTypes, USLDeviceInfo, USLErrorSDK, USLExtra, USLGeolocation, USLInfoValue, USLIInfo, USLKotlinEnumCompanion, USLKotlinEnum<E>, USLKotlinArray<T>, USLOriginTypes, USLOther, USLPlatformTypes, USLSessionTransactionsId, USLSize, USLEitherError, USLEitherSuccess<T>, USLKotlinNothing, USLDependencyInjection, USLDateKMM, USLEither<__covariant T>, USLEitherEmpty, USLKotlinThrowable, USLExceptionParam;
+@class USLEither<__covariant T>, USLEitherEmpty, USLKotlinNothing, USLKotlinThrowable, USLEitherError, USLEitherSuccess<T>, USLExceptionParam, USLDependencyInjection, USLDateKMM, USLDefaultLogger, USLSensorValue, USLAccelerometerDeviceBehavior, USLAppSec, USLAttempts, USLFaceBehavior, USLDeviceBehavior, USLBehaviors, USLCameraTypes, USLCameraTypesDocument, USLCameraTypesDocumentDriversLicense, USLCameraTypesDocumentDriversLicenseBack, USLCameraTypesDocumentDriversLicenseFront, USLCameraTypesDocumentDriversLicenseFull, USLCameraTypesDocumentID, USLCameraTypesDocumentIDBack, USLCameraTypesDocumentIDFront, USLCameraTypesDocumentNewID, USLCameraTypesDocumentNewIDBack, USLCameraTypesDocumentNewIDFront, USLCameraTypesDocumentOther, USLCameraTypesDocumentRegistration, USLCameraTypesSelfie, USLCameraTypesSelfieDefault, USLCameraTypesSelfieLiveness, USLCameraTypesSelfieSmart, USLSilhouette, USLImage, USLJwtInfo, USLVideo, USLTimers, USLConnections, USLProvider, USLLiveness, USLCapture, USLOSTypes, USLDeviceInfo, USLErrorSDK, USLExtra, USLGeolocation, USLInfoValue, USLIInfo, USLKotlinEnumCompanion, USLKotlinEnum<E>, USLKotlinArray<T>, USLOriginTypes, USLOther, USLPlatformTypes, USLSessionTransactionsId, USLSize;
 
-@protocol USLBaseCameraTypes, USLKotlinComparable, USLUseCase, USLAddProviderUseCase, USLLogProviderRepository, USLLogProvider, USLGetLogUseCase, USLMapToJsonUseCase, USLSetLogAppSecUseCase, USLSetLogAttemptsUseCase, USLSetLogCallbackUseCase, USLSetLogCameraTypeUseCase, USLSetLogCameraUseCase, USLSetLogCaptureUseCase, USLSetLogDeviceInfoUseCase, USLSetLogDomainUseCase, USLSetLogErrorSdkUseCase, USLSetExtraDataUseCase, USLSetLogGeolocationUseCase, USLSetLogIInfoUseCase, USLSetLogOriginUseCase, USLSetLogOthersUseCase, USLSetLogPlataformUseCase, USLSetLogSessionIdUseCase, USLSetLogSessionTransactionsIdsUseCase, USLSetLogStatusUseCase, USLSetLogVersionUseCase, USLSetUuidUseCase, USLKotlinKClass, USLInjector, USLKotlinIterator, USLKotlinKDeclarationContainer, USLKotlinKAnnotatedElement, USLKotlinKClassifier;
+@protocol USLUseCase, USLKotlinKClass, USLInjector, USLLogProvider, USLLogProviderRepository, USLBaseCameraTypes, USLKotlinComparable, USLAddProviderUseCase, USLGetLogUseCase, USLMapToJsonUseCase, USLSetLogAppSecUseCase, USLSetLogAttemptsUseCase, USLSetLogCallbackUseCase, USLSetLogCameraTypeUseCase, USLSetLogCameraUseCase, USLSetLogCaptureUseCase, USLSetLogDeviceInfoUseCase, USLSetLogDomainUseCase, USLSetLogErrorSdkUseCase, USLSetExtraDataUseCase, USLSetLogGeolocationUseCase, USLSetLogIInfoUseCase, USLSetLogOriginUseCase, USLSetLogOthersUseCase, USLSetLogPlataformUseCase, USLSetLogSessionIdUseCase, USLSetLogSessionTransactionsIdsUseCase, USLSetLogStatusUseCase, USLSetLogVersionUseCase, USLSetUuidUseCase, USLKotlinKDeclarationContainer, USLKotlinKAnnotatedElement, USLKotlinKClassifier, USLKotlinIterator;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -144,6 +144,101 @@ __attribute__((swift_name("KotlinBoolean")))
 + (instancetype)numberWithBool:(BOOL)value;
 @end
 
+__attribute__((swift_name("Either")))
+@interface USLEither<__covariant T> : USLBase
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("EitherEmpty")))
+@interface USLEitherEmpty : USLEither<USLKotlinNothing *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)empty __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) USLEitherEmpty *shared __attribute__((swift_name("shared")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("EitherError")))
+@interface USLEitherError : USLEither<USLKotlinNothing *>
+- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(USLKotlinThrowable *)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
+- (USLEitherError *)doCopyMessage:(NSString * _Nullable)message cause:(USLKotlinThrowable *)cause __attribute__((swift_name("doCopy(message:cause:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) USLKotlinThrowable *cause __attribute__((swift_name("cause")));
+@property (readonly) NSString * _Nullable message __attribute__((swift_name("message")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("EitherSuccess")))
+@interface USLEitherSuccess<T> : USLEither<T>
+- (instancetype)initWithValue:(T _Nullable)value __attribute__((swift_name("init(value:)"))) __attribute__((objc_designated_initializer));
+- (USLEitherSuccess<T> *)doCopyValue:(T _Nullable)value __attribute__((swift_name("doCopy(value:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) T _Nullable value __attribute__((swift_name("value")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ExceptionParam")))
+@interface USLExceptionParam : USLBase
+- (instancetype)initWithMessage:(NSString *)message throwable:(USLKotlinThrowable *)throwable __attribute__((swift_name("init(message:throwable:)"))) __attribute__((objc_designated_initializer));
+- (USLExceptionParam *)doCopyMessage:(NSString *)message throwable:(USLKotlinThrowable *)throwable __attribute__((swift_name("doCopy(message:throwable:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *message __attribute__((swift_name("message")));
+@property (readonly) USLKotlinThrowable *throwable __attribute__((swift_name("throwable")));
+@end
+
+__attribute__((swift_name("UseCase")))
+@protocol USLUseCase
+@required
+- (id _Nullable)executeParam:(id _Nullable)param __attribute__((swift_name("execute(param:)")));
+- (void)onEmpty __attribute__((swift_name("onEmpty()")));
+- (void)onErrorError:(USLEitherError *)error __attribute__((swift_name("onError(error:)")));
+- (void)onSuccessValue:(USLEitherSuccess<id> *)value __attribute__((swift_name("onSuccess(value:)")));
+@end
+
+__attribute__((swift_name("UseCaseDecorator")))
+@interface USLUseCaseDecorator<P, R> : USLBase <USLUseCase>
+- (instancetype)initWithUseCase:(id<USLUseCase>)useCase __attribute__((swift_name("init(useCase:)"))) __attribute__((objc_designated_initializer));
+- (R _Nullable)executeParam:(P _Nullable)param __attribute__((swift_name("execute(param:)")));
+- (void)onEmpty __attribute__((swift_name("onEmpty()")));
+- (void)onErrorError:(USLEitherError *)error __attribute__((swift_name("onError(error:)")));
+- (void)onSuccessValue:(USLEitherSuccess<R> *)value __attribute__((swift_name("onSuccess(value:)")));
+- (void)processParam:(P _Nullable)param __attribute__((swift_name("process(param:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DependencyInjection")))
+@interface USLDependencyInjection : USLBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)dependencyInjection __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) USLDependencyInjection *shared __attribute__((swift_name("shared")));
+- (void)factoryKclass:(id<USLKotlinKClass>)kclass classCallback:(id (^)(void))classCallback __attribute__((swift_name("factory(kclass:classCallback:)")));
+- (id _Nullable)getKclass:(id<USLKotlinKClass>)kclass __attribute__((swift_name("get(kclass:)")));
+- (void)loadInjectors:(NSArray<id<USLInjector>> *)injectors __attribute__((swift_name("load(injectors:)")));
+@end
+
+__attribute__((swift_name("Injector")))
+@protocol USLInjector
+@required
+- (void)inject __attribute__((swift_name("inject()")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DateKMM")))
+@interface USLDateKMM : USLBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)dateKMM __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) USLDateKMM *shared __attribute__((swift_name("shared")));
+- (int64_t)getTimestamp __attribute__((swift_name("getTimestamp()")));
+@end
+
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("DefaultLogger")))
 @interface USLDefaultLogger : USLBase
@@ -158,6 +253,23 @@ __attribute__((swift_name("Logger")))
 @protocol USLLogger
 @required
 - (void)build __attribute__((swift_name("build()")));
+@end
+
+__attribute__((swift_name("LogProviderRepository")))
+@protocol USLLogProviderRepository
+@required
+- (NSArray<id<USLLogProvider>> *)getAll __attribute__((swift_name("getAll()")));
+- (id<USLLogProvider>)insertProvider:(id<USLLogProvider>)provider __attribute__((swift_name("insert(provider:)")));
+- (BOOL)removeId:(NSString *)id __attribute__((swift_name("remove(id:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DefaultLogProviderRepository")))
+@interface USLDefaultLogProviderRepository : USLBase <USLLogProviderRepository>
+- (instancetype)initWithProviders:(USLMutableDictionary<NSString *, id<USLLogProvider>> *)providers __attribute__((swift_name("init(providers:)"))) __attribute__((objc_designated_initializer));
+- (NSArray<id<USLLogProvider>> *)getAll __attribute__((swift_name("getAll()")));
+- (id<USLLogProvider>)insertProvider:(id<USLLogProvider>)provider __attribute__((swift_name("insert(provider:)")));
+- (BOOL)removeId:(NSString *)id __attribute__((swift_name("remove(id:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -765,15 +877,6 @@ __attribute__((swift_name("Video")))
 @property (readonly) USLInt * _Nullable w __attribute__((swift_name("w")));
 @end
 
-__attribute__((swift_name("UseCase")))
-@protocol USLUseCase
-@required
-- (id _Nullable)executeParam:(id _Nullable)param __attribute__((swift_name("execute(param:)")));
-- (void)onEmpty __attribute__((swift_name("onEmpty()")));
-- (void)onErrorError:(USLEitherError *)error __attribute__((swift_name("onError(error:)")));
-- (void)onSuccessValue:(USLEitherSuccess<id> *)value __attribute__((swift_name("onSuccess(value:)")));
-@end
-
 __attribute__((swift_name("AddProviderUseCase")))
 @protocol USLAddProviderUseCase <USLUseCase>
 @required
@@ -1051,109 +1154,6 @@ __attribute__((swift_name("DefaultSetUuidUseCase")))
 - (USLBoolean *)executeParam:(USLKotlinNothing * _Nullable)param __attribute__((swift_name("execute(param:)")));
 @end
 
-__attribute__((swift_name("LogProviderRepository")))
-@protocol USLLogProviderRepository
-@required
-- (NSArray<id<USLLogProvider>> *)getAll __attribute__((swift_name("getAll()")));
-- (id<USLLogProvider>)insertProvider:(id<USLLogProvider>)provider __attribute__((swift_name("insert(provider:)")));
-- (BOOL)removeId:(NSString *)id __attribute__((swift_name("remove(id:)")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("DefaultLogProviderRepository")))
-@interface USLDefaultLogProviderRepository : USLBase <USLLogProviderRepository>
-- (instancetype)initWithProviders:(USLMutableDictionary<NSString *, id<USLLogProvider>> *)providers __attribute__((swift_name("init(providers:)"))) __attribute__((objc_designated_initializer));
-- (NSArray<id<USLLogProvider>> *)getAll __attribute__((swift_name("getAll()")));
-- (id<USLLogProvider>)insertProvider:(id<USLLogProvider>)provider __attribute__((swift_name("insert(provider:)")));
-- (BOOL)removeId:(NSString *)id __attribute__((swift_name("remove(id:)")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("DependencyInjection")))
-@interface USLDependencyInjection : USLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)dependencyInjection __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) USLDependencyInjection *shared __attribute__((swift_name("shared")));
-- (void)factoryKclass:(id<USLKotlinKClass>)kclass classCallback:(id (^)(void))classCallback __attribute__((swift_name("factory(kclass:classCallback:)")));
-- (id _Nullable)getKclass:(id<USLKotlinKClass>)kclass __attribute__((swift_name("get(kclass:)")));
-- (void)loadInjectors:(NSArray<id<USLInjector>> *)injectors __attribute__((swift_name("load(injectors:)")));
-@end
-
-__attribute__((swift_name("Injector")))
-@protocol USLInjector
-@required
-- (void)inject __attribute__((swift_name("inject()")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("DateKMM")))
-@interface USLDateKMM : USLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)dateKMM __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) USLDateKMM *shared __attribute__((swift_name("shared")));
-- (int64_t)getTimestamp __attribute__((swift_name("getTimestamp()")));
-@end
-
-__attribute__((swift_name("UseCaseDecorator")))
-@interface USLUseCaseDecorator<P, R> : USLBase <USLUseCase>
-- (instancetype)initWithUseCase:(id<USLUseCase>)useCase __attribute__((swift_name("init(useCase:)"))) __attribute__((objc_designated_initializer));
-- (R _Nullable)executeParam:(P _Nullable)param __attribute__((swift_name("execute(param:)")));
-- (void)onEmpty __attribute__((swift_name("onEmpty()")));
-- (void)onErrorError:(USLEitherError *)error __attribute__((swift_name("onError(error:)")));
-- (void)onSuccessValue:(USLEitherSuccess<R> *)value __attribute__((swift_name("onSuccess(value:)")));
-- (void)processParam:(P _Nullable)param __attribute__((swift_name("process(param:)")));
-@end
-
-__attribute__((swift_name("Either")))
-@interface USLEither<__covariant T> : USLBase
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("EitherEmpty")))
-@interface USLEitherEmpty : USLEither<USLKotlinNothing *>
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)empty __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) USLEitherEmpty *shared __attribute__((swift_name("shared")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("EitherError")))
-@interface USLEitherError : USLEither<USLKotlinNothing *>
-- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(USLKotlinThrowable *)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
-- (USLEitherError *)doCopyMessage:(NSString * _Nullable)message cause:(USLKotlinThrowable *)cause __attribute__((swift_name("doCopy(message:cause:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) USLKotlinThrowable *cause __attribute__((swift_name("cause")));
-@property (readonly) NSString * _Nullable message __attribute__((swift_name("message")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("EitherSuccess")))
-@interface USLEitherSuccess<T> : USLEither<T>
-- (instancetype)initWithValue:(T _Nullable)value __attribute__((swift_name("init(value:)"))) __attribute__((objc_designated_initializer));
-- (USLEitherSuccess<T> *)doCopyValue:(T _Nullable)value __attribute__((swift_name("doCopy(value:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) T _Nullable value __attribute__((swift_name("value")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("ExceptionParam")))
-@interface USLExceptionParam : USLBase
-- (instancetype)initWithMessage:(NSString *)message throwable:(USLKotlinThrowable *)throwable __attribute__((swift_name("init(message:throwable:)"))) __attribute__((objc_designated_initializer));
-- (USLExceptionParam *)doCopyMessage:(NSString *)message throwable:(USLKotlinThrowable *)throwable __attribute__((swift_name("doCopy(message:throwable:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *message __attribute__((swift_name("message")));
-@property (readonly) USLKotlinThrowable *throwable __attribute__((swift_name("throwable")));
-@end
-
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LoadInjectionsKt")))
 @interface USLLoadInjectionsKt : USLBase
@@ -1163,29 +1163,28 @@ __attribute__((swift_name("LoadInjectionsKt")))
 @end
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinEnumCompanion")))
-@interface USLKotlinEnumCompanion : USLBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) USLKotlinEnumCompanion *shared __attribute__((swift_name("shared")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinArray")))
-@interface USLKotlinArray<T> : USLBase
-+ (instancetype)arrayWithSize:(int32_t)size init:(T _Nullable (^)(USLInt *))init __attribute__((swift_name("init(size:init:)")));
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (T _Nullable)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
-- (id<USLKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
-- (void)setIndex:(int32_t)index value:(T _Nullable)value __attribute__((swift_name("set(index:value:)")));
-@property (readonly) int32_t size __attribute__((swift_name("size")));
-@end
-
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinNothing")))
 @interface USLKotlinNothing : USLBase
+@end
+
+__attribute__((swift_name("KotlinThrowable")))
+@interface USLKotlinThrowable : USLBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCause:(USLKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(USLKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
+
+/**
+ * @note annotations
+ *   kotlin.experimental.ExperimentalNativeApi
+*/
+- (USLKotlinArray<NSString *> *)getStackTrace __attribute__((swift_name("getStackTrace()")));
+- (void)printStackTrace __attribute__((swift_name("printStackTrace()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) USLKotlinThrowable * _Nullable cause __attribute__((swift_name("cause")));
+@property (readonly) NSString * _Nullable message __attribute__((swift_name("message")));
+- (NSError *)asError __attribute__((swift_name("asError()")));
 @end
 
 __attribute__((swift_name("KotlinKDeclarationContainer")))
@@ -1221,19 +1220,25 @@ __attribute__((swift_name("KotlinKClass")))
 @property (readonly) NSString * _Nullable simpleName __attribute__((swift_name("simpleName")));
 @end
 
-__attribute__((swift_name("KotlinThrowable")))
-@interface USLKotlinThrowable : USLBase
-- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithCause:(USLKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
-+ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(USLKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
-- (USLKotlinArray<NSString *> *)getStackTrace __attribute__((swift_name("getStackTrace()")));
-- (void)printStackTrace __attribute__((swift_name("printStackTrace()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) USLKotlinThrowable * _Nullable cause __attribute__((swift_name("cause")));
-@property (readonly) NSString * _Nullable message __attribute__((swift_name("message")));
-- (NSError *)asError __attribute__((swift_name("asError()")));
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinEnumCompanion")))
+@interface USLKotlinEnumCompanion : USLBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) USLKotlinEnumCompanion *shared __attribute__((swift_name("shared")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinArray")))
+@interface USLKotlinArray<T> : USLBase
++ (instancetype)arrayWithSize:(int32_t)size init:(T _Nullable (^)(USLInt *))init __attribute__((swift_name("init(size:init:)")));
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (T _Nullable)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
+- (id<USLKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
+- (void)setIndex:(int32_t)index value:(T _Nullable)value __attribute__((swift_name("set(index:value:)")));
+@property (readonly) int32_t size __attribute__((swift_name("size")));
 @end
 
 __attribute__((swift_name("KotlinIterator")))

@@ -1,0 +1,8 @@
+framework module UnicoSdkLogger {
+    umbrella header "UnicoSdkLogger.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}
