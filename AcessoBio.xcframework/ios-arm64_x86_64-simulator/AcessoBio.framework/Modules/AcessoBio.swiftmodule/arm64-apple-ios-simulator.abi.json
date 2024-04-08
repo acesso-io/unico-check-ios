@@ -1764,6 +1764,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UnicoSdkBase",
         "printedName": "UnicoSdkBase",
         "declKind": "Import",
@@ -2825,6 +2835,26 @@
           "AccessControl"
         ],
         "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "iXGCallbackBridge",
+        "printedName": "iXGCallbackBridge",
+        "declKind": "Import",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
       },
       {
         "kind": "Import",
@@ -12504,6 +12534,16 @@
       },
       {
         "kind": "Import",
+        "name": "iXGCallbackBridge",
+        "printedName": "iXGCallbackBridge",
+        "declKind": "Import",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -17485,7 +17525,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Plugins\/DataLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1192,
+      "offset": 1203,
       "length": 10,
       "value": "\"AcessoBio.DataLogger\""
     },
@@ -17835,7 +17875,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/UnicoSetup.swift",
       "kind": "BooleanLiteral",
-      "offset": 1271,
+      "offset": 1167,
       "length": 5,
       "value": "false"
     },
@@ -17927,8 +17967,8 @@
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkVersionConfig.swift",
       "kind": "StringLiteral",
       "offset": 215,
-      "length": 12,
-      "value": "\"2.9.3-beta\""
+      "length": 8,
+      "value": "\"2.10.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
