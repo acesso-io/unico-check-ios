@@ -4209,7 +4209,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(viewController:sdkToken:bioThemeDelegate:isHomolog:)",
+            "printedName": "init(viewController:sdkToken:bioThemeDelegate:isHomolog:hostKey:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4248,13 +4248,19 @@
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@AcessoBio@objc(cs)UnicoCheckLivenessAdapter(im)initWithViewController:sdkToken:bioThemeDelegate:isHomolog:",
-            "mangledName": "$s9AcessoBio25UnicoCheckLivenessAdapterC14viewController8sdkToken16bioThemeDelegate9isHomologACSo06UIViewH0C_AA26SDKTokenResponseDTOAdapterCSo0ablM0_pSgSbtcfc",
+            "usr": "c:@M@AcessoBio@objc(cs)UnicoCheckLivenessAdapter(im)initWithViewController:sdkToken:bioThemeDelegate:isHomolog:hostKey:",
+            "mangledName": "$s9AcessoBio25UnicoCheckLivenessAdapterC14viewController8sdkToken16bioThemeDelegate9isHomolog7hostKeyACSo06UIViewH0C_AA26SDKTokenResponseDTOAdapterCSo0ablM0_pSgSbSStcfc",
             "moduleName": "AcessoBio",
-            "objc_name": "initWithViewController:sdkToken:bioThemeDelegate:isHomolog:",
+            "objc_name": "initWithViewController:sdkToken:bioThemeDelegate:isHomolog:hostKey:",
             "declAttributes": [
               "Convenience",
               "AccessControl",
@@ -5246,6 +5252,37 @@
         "name": "UnicoSetupData",
         "printedName": "UnicoSetupData",
         "children": [
+          {
+            "kind": "Function",
+            "name": "getHostKey",
+            "printedName": "getHostKey()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AcessoBio@objc(cs)UnicoSetupData(im)getHostKey",
+            "mangledName": "$s9AcessoBio14UnicoSetupDataC10getHostKeySSSgyF",
+            "moduleName": "AcessoBio",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
           {
             "kind": "Constructor",
             "name": "init",
@@ -17476,42 +17513,42 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 919,
+      "offset": 936,
       "length": 11,
       "value": "\"host_info\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 919,
+      "offset": 936,
       "length": 11,
       "value": "\"host_info\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 1004,
+      "offset": 1021,
       "length": 11,
       "value": "\"host_info\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 1039,
+      "offset": 1056,
       "length": 10,
       "value": "\"host_key\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 1004,
+      "offset": 1021,
       "length": 11,
       "value": "\"host_info\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/dto\/UnicoSetupData.swift",
       "kind": "StringLiteral",
-      "offset": 1039,
+      "offset": 1056,
       "length": 10,
       "value": "\"host_key\""
     },
@@ -17968,7 +18005,7 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 8,
-      "value": "\"2.10.0\""
+      "value": "\"2.11.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
