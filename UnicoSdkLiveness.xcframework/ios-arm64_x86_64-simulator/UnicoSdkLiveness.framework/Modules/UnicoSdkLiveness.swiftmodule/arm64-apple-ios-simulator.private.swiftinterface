@@ -64,6 +64,7 @@ public struct LivenessError : Swift.Error, Swift.Equatable {
   public static func == (a: UnicoSdkLiveness.LivenessError, b: UnicoSdkLiveness.LivenessError) -> Swift.Bool
 }
 public protocol LivenessResult {
+  var transactionsId: [UnicoSdkLiveness.SessionTransactionDTO]? { get set }
   var serialize: [Swift.String : Any] { get }
   var session: [Swift.String : Any]? { get }
 }
@@ -87,7 +88,7 @@ public protocol UnicoLivenessRepresentable {
   func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
 }
 @_hasMissingDesignatedInitializers final public class UnicoLiveness : UnicoSdkLiveness.UnicoLivenessRepresentable {
-  public init(viewController: UIKit.UIViewController)
+  public init(viewController: UIKit.UIViewController, hostKey: Swift.String)
   final public func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
   @objc deinit
 }
