@@ -2911,6 +2911,27 @@
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deinitialize",
+            "printedName": "deinitialize()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16UnicoSdkLiveness0aC13RepresentableP12deinitializeyyF",
+            "mangledName": "$s16UnicoSdkLiveness0aC13RepresentableP12deinitializeyyF",
+            "moduleName": "UnicoSdkLiveness",
+            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.UnicoLivenessRepresentable>",
+            "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.UnicoLivenessRepresentable>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -2991,6 +3012,27 @@
             "declKind": "Func",
             "usr": "s:16UnicoSdkLiveness0aC0C13prepareCamera3env4data0D8DelegateyAA3EnvO_AA11PrepareDataVAA0acjeH0_ptF",
             "mangledName": "$s16UnicoSdkLiveness0aC0C13prepareCamera3env4data0D8DelegateyAA3EnvO_AA11PrepareDataVAA0acjeH0_ptF",
+            "moduleName": "UnicoSdkLiveness",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deinitialize",
+            "printedName": "deinitialize()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16UnicoSdkLiveness0aC0C12deinitializeyyF",
+            "mangledName": "$s16UnicoSdkLiveness0aC0C12deinitializeyyF",
             "moduleName": "UnicoSdkLiveness",
             "declAttributes": [
               "Final",

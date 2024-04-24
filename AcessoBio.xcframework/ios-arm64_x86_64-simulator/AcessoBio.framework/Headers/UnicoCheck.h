@@ -155,4 +155,8 @@ typedef NS_ENUM(NSInteger, CameraType) {
 
 - (void)onErrorAcessoBioManager:(ErrorBio *_Nonnull)error;
 
+#pragma mark - Liveness deinitialize
+
+- (void)deinitializeLiveness;
+
 @end

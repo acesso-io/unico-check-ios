@@ -21,8 +21,14 @@
 }
 
 - (id)initWithViewController:(id)view;
-- (id)initWithViewController :(id)view delegate:(id)delegate;
+- (id)initWithViewController:(id)view delegate:(id)delegate;
 
+/**
+ Release resources related to <em>liveness for selfie camera</em>.
+ Initialize <em>must</em>  be called again by the application before invoking any SDK operations.
+ This function may be called with caution.
+ */
+- (void)deinitializeLiveness;
 
 @end
 

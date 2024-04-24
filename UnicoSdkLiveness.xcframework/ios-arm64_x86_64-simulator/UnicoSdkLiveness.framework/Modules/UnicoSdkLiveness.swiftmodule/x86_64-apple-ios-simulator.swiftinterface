@@ -86,10 +86,12 @@ public struct OpenLivenessDTO {
 }
 public protocol UnicoLivenessRepresentable {
   func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  func deinitialize()
 }
 @_hasMissingDesignatedInitializers final public class UnicoLiveness : UnicoSdkLiveness.UnicoLivenessRepresentable {
   public init(viewController: UIKit.UIViewController, hostKey: Swift.String)
   final public func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  final public func deinitialize()
   @objc deinit
 }
 public protocol UnicoLivenessOpenCamera {
