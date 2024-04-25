@@ -8058,8 +8058,8 @@
             "moduleName": "UnicoSdkBase",
             "static": true,
             "declAttributes": [
-              "Custom",
-              "Final"
+              "Final",
+              "Custom"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -8141,6 +8141,97 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Device\/NativeDeviceInfo.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1156,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Device\/NativeDeviceInfo.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1186,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/UseCases\/GeoLocationUseCase.swift",
+      "kind": "BooleanLiteral",
+      "offset": 524,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/UseCases\/GeoLocationUseCase.swift",
+      "kind": "BooleanLiteral",
+      "offset": 598,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/UseCases\/GeoLocationUseCase.swift",
+      "kind": "BooleanLiteral",
+      "offset": 691,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/UseCases\/GeoLocationUseCase.swift",
+      "kind": "BooleanLiteral",
+      "offset": 785,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 284,
+      "length": 17,
+      "value": "\"Project-Version\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 340,
+      "length": 14,
+      "value": "\"Project-Name\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 389,
+      "length": 10,
+      "value": "\"Platform\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 431,
+      "length": 14,
+      "value": "\"Dependencies\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 534,
+      "length": 9,
+      "value": "\"Api-key\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 606,
+      "length": 18,
+      "value": "\"sdk\/auth\/get-jwt\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 814,
+      "length": 12,
+      "value": "\"auth\/getIp\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/Entities\/TokenSDK.swift",
       "kind": "IntegerLiteral",
       "offset": 136,
@@ -8162,6 +8253,118 @@
       "value": "300"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "Array",
+      "offset": 4536,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4618,
+      "length": 37,
+      "value": "\"body: \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4654,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4794,
+      "length": 43,
+      "value": "\"body: \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 4836,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "Array",
+      "offset": 5055,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 5104,
+      "length": 47,
+      "value": "\"responseData: \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 5150,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 5227,
+      "length": 10,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 5236,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5368,
+      "length": 3,
+      "value": "404"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5551,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 5683,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/DataTransferService.swift",
+      "kind": "StringLiteral",
+      "offset": 4124,
+      "length": 15,
+      "value": "\"-------------\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/DataTransferService.swift",
+      "kind": "StringLiteral",
+      "offset": 4162,
+      "length": 10,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/DataTransferService.swift",
+      "kind": "StringLiteral",
+      "offset": 4171,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/DataTransferService.swift",
       "kind": "StringLiteral",
       "offset": 4956,
@@ -8174,6 +8377,13 @@
       "offset": 4956,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/DataTransferService.swift",
+      "kind": "StringLiteral",
+      "offset": 5227,
+      "length": 20,
+      "value": "\"Expected Data type\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Repositories\/Utils\/RepositoryTask.swift",
@@ -8183,11 +8393,32 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Repositories\/Utils\/RepositoryTask.swift",
+      "kind": "BooleanLiteral",
+      "offset": 369,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/GetTokenRequestHeadersDTO.swift",
       "kind": "StringLiteral",
       "offset": 382,
       "length": 5,
       "value": "\"IOS\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/GetTokenRequestHeadersDTO.swift",
+      "kind": "StringLiteral",
+      "offset": 978,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Interfaces\/DataSources\/GeoLocationDataSource.swift",
+      "kind": "StringLiteral",
+      "offset": 824,
+      "length": 37,
+      "value": "\"NSLocationWhenInUseUsageDescription\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkConfig.swift",
@@ -8204,11 +8435,32 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/API.swift",
+      "kind": "Dictionary",
+      "offset": 1082,
+      "length": 36,
+      "value": "[(\"Content-Type\", \"application\/json\")]"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Repositories\/DefaultGeoLocationRepository.swift",
       "kind": "StringLiteral",
       "offset": 322,
       "length": 28,
       "value": "\"UnicoSdkBase.DefaultGeoLocationRepository\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2694,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3180,
+      "length": 1,
+      "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
@@ -8223,6 +8475,678 @@
       "offset": 4420,
       "length": 129,
       "value": "[\"0\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\"]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4716,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "StringLiteral",
+      "offset": 4735,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4888,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4894,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4898,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5100,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5120,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5141,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5147,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5167,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5189,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5194,
+      "length": 10,
+      "value": "0b00000111"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5209,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5219,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5225,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5245,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5267,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5272,
+      "length": 10,
+      "value": "0b00111110"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5287,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5307,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5329,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5334,
+      "length": 10,
+      "value": "0b00000001"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5349,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5359,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5365,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5385,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5407,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5412,
+      "length": 10,
+      "value": "0b00001111"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5427,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5437,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5443,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5463,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5485,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5490,
+      "length": 10,
+      "value": "0b01111100"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5505,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5525,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5547,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5552,
+      "length": 10,
+      "value": "0b00000011"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5567,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5577,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5583,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5603,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5625,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5630,
+      "length": 10,
+      "value": "0b00011111"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5662,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5703,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5741,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5912,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5937,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5956,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5980,
+      "length": 10,
+      "value": "0b00000011"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5995,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6008,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6028,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6052,
+      "length": 10,
+      "value": "0b01111100"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6067,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6100,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6125,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6144,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6168,
+      "length": 10,
+      "value": "0b00001111"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6183,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6196,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6229,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6254,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6273,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6297,
+      "length": 10,
+      "value": "0b00000001"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6312,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6325,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6345,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6369,
+      "length": 10,
+      "value": "0b00111110"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6384,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6417,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6442,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6461,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6485,
+      "length": 10,
+      "value": "0b00000111"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6500,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6513,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6533,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6557,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "StringLiteral",
+      "offset": 6635,
+      "length": 3,
+      "value": "\"=\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6676,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6695,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6700,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6711,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6730,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6755,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6793,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6812,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6850,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6869,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6894,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6932,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6951,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7009,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7014,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "StringLiteral",
+      "offset": 7250,
+      "length": 16,
+      "value": "\"internal error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
@@ -9016,6 +9940,615 @@
       "value": "31"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9848,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "Array",
+      "offset": 9867,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "StringLiteral",
+      "offset": 9994,
+      "length": 8,
+      "value": "\"======\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10025,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "StringLiteral",
+      "offset": 10062,
+      "length": 6,
+      "value": "\"====\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10091,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "StringLiteral",
+      "offset": 10128,
+      "length": 5,
+      "value": "\"===\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10156,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "StringLiteral",
+      "offset": 10193,
+      "length": 3,
+      "value": "\"=\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10219,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10257,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10433,
+      "length": 4,
+      "value": "0xff"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10464,
+      "length": 2,
+      "value": "31"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "StringLiteral",
+      "offset": 10780,
+      "length": 42,
+      "value": "\"string contains some invalid characters.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10952,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10987,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11017,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11035,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11056,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11067,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11088,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11099,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11120,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11131,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11152,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "StringLiteral",
+      "offset": 11188,
+      "length": 27,
+      "value": "\"string length is invalid.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11305,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11309,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11573,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11621,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11877,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11920,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11964,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12008,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12052,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12096,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12140,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12184,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12228,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12296,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12310,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12347,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12362,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12376,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12390,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12427,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12442,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12456,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12493,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12508,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12522,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12536,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12573,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12588,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12647,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12678,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12723,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12917,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12959,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13003,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13045,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13087,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13129,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13171,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13215,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13257,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13299,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13343,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13431,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13469,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13484,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13498,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13512,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13551,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13589,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13604,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13618,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13657,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13695,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13710,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13724,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13738,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13777,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13830,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13844,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/UIDeviceExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 367,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/UIDeviceExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 493,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "StringLiteral",
       "offset": 166,
@@ -9128,6 +10661,76 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 2762,
+      "length": 3,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 2800,
+      "length": 3,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 3265,
+      "length": 13,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 3277,
+      "length": 3,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4691,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 4803,
+      "length": 23,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 4813,
+      "length": 1,
+      "value": "\"=\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 4825,
+      "length": 3,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 4860,
+      "length": 3,
+      "value": "\"&\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 4958,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/AppConfiguration.swift",
       "kind": "StringLiteral",
       "offset": 212,
@@ -9154,6 +10757,34 @@
       "offset": 537,
       "length": 25,
       "value": "\"https:\/\/haven.mobi:8090\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/Cryptography\/DefaultUnicoDecrypt.swift",
+      "kind": "StringLiteral",
+      "offset": 1099,
+      "length": 38,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/Cryptography\/DefaultUnicoDecrypt.swift",
+      "kind": "StringLiteral",
+      "offset": 1110,
+      "length": 1,
+      "value": "\" > \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/Cryptography\/DefaultUnicoDecrypt.swift",
+      "kind": "StringLiteral",
+      "offset": 1125,
+      "length": 1,
+      "value": "\" : \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/Cryptography\/DefaultUnicoDecrypt.swift",
+      "kind": "StringLiteral",
+      "offset": 1136,
+      "length": 2,
+      "value": "\"\""
     }
   ]
 }

@@ -1,7 +1,7 @@
 framework module UnicoSdkBase {
   umbrella header "UnicoSdkBase.h"
-
   export *
+
   module * { export * }
 }
 

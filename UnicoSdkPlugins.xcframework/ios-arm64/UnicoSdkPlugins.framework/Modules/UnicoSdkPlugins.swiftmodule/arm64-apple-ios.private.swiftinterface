@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkPlugins
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CommonCrypto
@@ -12,15 +12,16 @@ import Swift
 @_exported import UnicoSdkPlugins
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public struct CBC : UnicoSdkPlugins.BlockMode {
   public let options: UnicoSdkPlugins.BlockModeOption
   public let customBlockSize: Swift.Int?
   public init(iv: Swift.Array<Swift.UInt8>)
-  public func worker(blockSize: Swift.Int, cipherOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock, encryptionOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock) throws -> UnicoSdkPlugins.CipherModeWorker
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock, encryptionOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock) throws -> any UnicoSdkPlugins.CipherModeWorker
 }
 public protocol Cryptors : AnyObject {
-  func makeEncryptor() throws -> UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
-  func makeDecryptor() throws -> UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
+  func makeEncryptor() throws -> any UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
+  func makeDecryptor() throws -> any UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
 }
 public enum SignatureAlgorithm : Swift.String {
   case HS256
@@ -47,9 +48,9 @@ public enum SignatureAlgorithm : Swift.String {
 public class BlockDecryptor : UnicoSdkPlugins.Cryptor, UnicoSdkPlugins.Updatable {
   final public let blockSize: Swift.Int
   final public let padding: UnicoSdkPlugins.Padding
-  public var worker: UnicoSdkPlugins.CipherModeWorker
+  public var worker: any UnicoSdkPlugins.CipherModeWorker
   public var accumulated: [Swift.UInt8]
-  public init(blockSize: Swift.Int, padding: UnicoSdkPlugins.Padding, _ worker: UnicoSdkPlugins.CipherModeWorker) throws
+  public init(blockSize: Swift.Int, padding: UnicoSdkPlugins.Padding, _ worker: any UnicoSdkPlugins.CipherModeWorker) throws
   public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
   public func seek(to position: Swift.Int) throws
   @objc deinit
@@ -93,8 +94,8 @@ public struct BlockModeOption : Swift.OptionSet {
   public typealias RawValue = Swift.Int
 }
 extension UnicoSdkPlugins.AES : UnicoSdkPlugins.Cryptors {
-  final public func makeEncryptor() throws -> UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
-  final public func makeDecryptor() throws -> UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
+  final public func makeEncryptor() throws -> any UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
+  final public func makeDecryptor() throws -> any UnicoSdkPlugins.Cryptor & UnicoSdkPlugins.Updatable
 }
 public struct BatchedCollectionIndex<Base> where Base : Swift.Collection {
 }
@@ -224,7 +225,7 @@ final public class AES {
   final public let keySize: Swift.Int
   final public let variant: UnicoSdkPlugins.AES.Variant
   final public let key: UnicoSdkPlugins.Key
-  final public let blockMode: UnicoSdkPlugins.BlockMode
+  final public let blockMode: any UnicoSdkPlugins.BlockMode
   final public let padding: UnicoSdkPlugins.Padding
   @usableFromInline
   internal static let T0: [Swift.UInt32]
@@ -250,7 +251,7 @@ final public class AES {
   internal static let U3: [Swift.UInt32]
   @usableFromInline
   internal static let U4: [Swift.UInt32]
-  public init(key: Swift.Array<Swift.UInt8>, blockMode: UnicoSdkPlugins.BlockMode, padding: UnicoSdkPlugins.Padding = .pkcs7) throws
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: any UnicoSdkPlugins.BlockMode, padding: UnicoSdkPlugins.Padding = .pkcs7) throws
   @objc deinit
 }
 extension UnicoSdkPlugins.AES {
@@ -260,7 +261,7 @@ extension UnicoSdkPlugins.AES {
 public typealias CipherOperationOnBlock = (_ block: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>?
 public protocol BlockMode {
   var options: UnicoSdkPlugins.BlockModeOption { get }
-  @inlinable func worker(blockSize: Swift.Int, cipherOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock, encryptionOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock) throws -> UnicoSdkPlugins.CipherModeWorker
+  @inlinable func worker(blockSize: Swift.Int, cipherOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock, encryptionOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock) throws -> any UnicoSdkPlugins.CipherModeWorker
   var customBlockSize: Swift.Int? { get }
 }
 public typealias StreamMode = UnicoSdkPlugins.BlockMode

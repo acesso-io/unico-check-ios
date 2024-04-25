@@ -16486,6 +16486,34 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
         "kind": "TypeDecl",
         "name": "ErrorBio",
         "printedName": "ErrorBio",
@@ -18004,8 +18032,8 @@
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkVersionConfig.swift",
       "kind": "StringLiteral",
       "offset": 215,
-      "length": 8,
-      "value": "\"2.11.0\""
+      "length": 13,
+      "value": "\"2.12.0-beta\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
@@ -18132,6 +18160,83 @@
       "offset": 416,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphonesimulator\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 730,
+      "length": 11,
+      "value": "\"frame_cnh\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphonesimulator\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 879,
+      "length": 17,
+      "value": "\"frame_rg_frente\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphonesimulator\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1032,
+      "length": 16,
+      "value": "\"frame_rg_verso\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphonesimulator\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1173,
+      "length": 10,
+      "value": "\"ic_close\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphonesimulator\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1319,
+      "length": 16,
+      "value": "\"ic_footer_logo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphonesimulator\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1480,
+      "length": 21,
+      "value": "\"ic_popup_face_error\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphonesimulator\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1648,
+      "length": 22,
+      "value": "\"ic_popup_light_error\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphonesimulator\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1806,
+      "length": 16,
+      "value": "\"ic_reset_glass\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphonesimulator\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1954,
+      "length": 14,
+      "value": "\"ic_reset_hat\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphonesimulator\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2102,
+      "length": 15,
+      "value": "\"ic_reset_lamp\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphonesimulator\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2253,
+      "length": 16,
+      "value": "\"ic_reset_phone\""
     }
   ]
 }

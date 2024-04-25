@@ -1081,13 +1081,6 @@
       },
       {
         "kind": "Import",
-        "name": "UnicoSdkSecurity.DeviceInfo_Private",
-        "printedName": "UnicoSdkSecurity.DeviceInfo_Private",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkSecurity"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -1135,13 +1128,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UnicoSdkSecurity.HSE_Private",
-        "printedName": "UnicoSdkSecurity.HSE_Private",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkSecurity"
       },
       {
         "kind": "Import",
@@ -1932,6 +1918,111 @@
       "value": "1.0"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/DefaultAppSecDataSource.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1742,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/DefaultAppSecDataSource.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2178,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/DefaultAppSecDataSource.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2452,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/DefaultAppSecDataSource.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2602,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SdkVersionConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 368,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SdkVersionConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 490,
+      "length": 27,
+      "value": "\"unico.io.UnicoSdkSecurity\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SdkVersionConfig.swift",
+      "kind": "Array",
+      "offset": 671,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SdkVersionConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 1029,
+      "length": 28,
+      "value": "\"CFBundleShortVersionString\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1188,
+      "length": 35,
+      "value": "\"WARNING: optionals error recovery\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 2001,
+      "length": 47,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 2017,
+      "length": 1,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 2047,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 2202,
+      "length": 47,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 2218,
+      "length": 1,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 2248,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
       "kind": "IntegerLiteral",
       "offset": 185,
@@ -2056,6 +2147,13 @@
       "offset": 360,
       "length": 7,
       "value": "505"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SecurityResult\/Infra\/Errors\/UnicoSecurityErrors.swift",
+      "kind": "Array",
+      "offset": 793,
+      "length": 56,
+      "value": "[100]"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultAppSecUseCase.swift",
@@ -2091,6 +2189,153 @@
       "offset": 217,
       "length": 18,
       "value": "\"b6627900972a49cc\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SecurityResult\/Infra\/Core\/DefaultDeviceInfoDataSource.swift",
+      "kind": "BooleanLiteral",
+      "offset": 269,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SecurityResult\/Infra\/Core\/DefaultDeviceInfoDataSource.swift",
+      "kind": "StringLiteral",
+      "offset": 355,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SecurityResult\/Infra\/Core\/DefaultDeviceInfoDataSource.swift",
+      "kind": "IntegerLiteral",
+      "offset": 365,
+      "length": 3,
+      "value": "503"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SecurityResult\/Infra\/Core\/DefaultDeviceInfoDataSource.swift",
+      "kind": "BooleanLiteral",
+      "offset": 454,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SecurityResult\/Infra\/Core\/DefaultDeviceInfoDataSource.swift",
+      "kind": "BooleanLiteral",
+      "offset": 524,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SecurityResult\/Infra\/Core\/DefaultHSEDeviceDataSource.swift",
+      "kind": "StringLiteral",
+      "offset": 391,
+      "length": 14,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/SecurityResult\/Infra\/Core\/DefaultHSEDeviceDataSource.swift",
+      "kind": "StringLiteral",
+      "offset": 404,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "Dictionary",
+      "offset": 400,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "Dictionary",
+      "offset": 441,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "StringLiteral",
+      "offset": 508,
+      "length": 7,
+      "value": "\"Token\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "StringLiteral",
+      "offset": 537,
+      "length": 9,
+      "value": "\"Sdk-Key\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "StringLiteral",
+      "offset": 619,
+      "length": 6,
+      "value": "\"root\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "StringLiteral",
+      "offset": 668,
+      "length": 10,
+      "value": "\"emulator\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "StringLiteral",
+      "offset": 721,
+      "length": 10,
+      "value": "\"debugger\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "StringLiteral",
+      "offset": 769,
+      "length": 12,
+      "value": "\"deviceInfo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "StringLiteral",
+      "offset": 830,
+      "length": 10,
+      "value": "\"BundleId\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "StringLiteral",
+      "offset": 949,
+      "length": 25,
+      "value": "\"sdk\/app-sec\/get-app-sec\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "StringLiteral",
+      "offset": 1097,
+      "length": 14,
+      "value": "\"security_sdk\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Infra\/DataSources\/Endpoint+AppSec.swift",
+      "kind": "StringLiteral",
+      "offset": 1143,
+      "length": 9,
+      "value": "\"hseData\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/Entity\/AppSecResult.swift",
+      "kind": "StringLiteral",
+      "offset": 1187,
+      "length": 42,
+      "value": "\"Invalid ranking range \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/Entity\/AppSecResult.swift",
+      "kind": "StringLiteral",
+      "offset": 1228,
+      "length": 1,
+      "value": "\"\""
     }
   ]
 }

@@ -1459,6 +1459,13 @@ enum FaceTecIDScanNextStep: NSInteger;
 - (void)initializeInProductionMode:(NSString * _Nonnull)productionKeyText deviceKeyIdentifier:(NSString * _Nonnull)deviceKeyIdentifier faceScanEncryptionKey:(NSString * _Nonnull)faceScanEncryptionKey completion:(void (^ _Nullable)(BOOL))completion NS_SWIFT_NAME(initializeInProductionMode(productionKeyText:deviceKeyIdentifier:faceScanEncryptionKey:completion:));
 
 /**
+ Release resources related to FaceTec SDK.
+ Initialize <em>must</em>  be called again by the application before invoking any SDK operations.
+ This function may be called repeatedly without harm.
+ */
+- (void)deinitialize;
+
+/**
  Configures the look and feel of FaceTec SDK.
 
  @param customization An instance of FaceTecCustomization
@@ -1498,9 +1505,10 @@ enum FaceTecIDScanNextStep: NSInteger;
 - (BOOL)isLockedOut;
 
 /**
+ * @deprecated - This API method is deprecated and will be removed in an upcoming release of the iOS SDK. Use the non-deprecated deinitialize API method instead.
  Unload resources related to FaceTec SDK.
  */
-- (void)unload;
+- (void)unload DEPRECATED_MSG_ATTRIBUTE("This API method is deprecated and will be removed in an upcoming release of the iOS SDK. Use the non-deprecated deinitialize API method instead.");
 
 /**
  Convenience method to check for camera permissions.
