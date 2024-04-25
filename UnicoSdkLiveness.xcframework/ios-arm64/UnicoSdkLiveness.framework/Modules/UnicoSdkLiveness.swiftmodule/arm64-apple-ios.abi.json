@@ -31,7 +31,7 @@
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
-          "ImplementationOnly"
+          "AccessControl"
         ]
       },
       {
@@ -1125,7 +1125,8 @@
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
-          "ImplementationOnly"
+          "AccessControl",
+          "RawDocComment"
         ]
       },
       {
@@ -1384,7 +1385,7 @@
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
-          "ImplementationOnly"
+          "AccessControl"
         ]
       },
       {
@@ -1593,7 +1594,7 @@
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
-          "ImplementationOnly"
+          "AccessControl"
         ]
       },
       {
@@ -2576,7 +2577,7 @@
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
-          "ImplementationOnly"
+          "AccessControl"
         ]
       },
       {
@@ -2794,7 +2795,7 @@
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
-          "ImplementationOnly"
+          "AccessControl"
         ]
       },
       {
@@ -3729,8 +3730,36 @@
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
-          "ImplementationOnly"
+          "AccessControl"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
       }
     ],
     "json_format_version": 8
@@ -3742,6 +3771,69 @@
       "offset": 87,
       "length": 291,
       "value": "[(\"Unico_retry_subheader_message_without_photo\", \"Não foi possível validar sua captura, por favor tente novamente.\"), (\"Unico_action_try_again\", \"Tente Novamente\"), (\"Unico_result_facescan_upload_message\", \"Estamos verificando \nse está tudo certo, \naguarde.\")]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 332,
+      "length": 20,
+      "value": "\"video_selfie_smile\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 396,
+      "length": 19,
+      "value": "\"video_selfie_eyes\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 458,
+      "length": 19,
+      "value": "\"video_selfie_scan\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 524,
+      "length": 20,
+      "value": "\"video_selfie_blank\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 589,
+      "length": 22,
+      "value": "\"video_selfie_oneshot\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 658,
+      "length": 19,
+      "value": "\"video_selfie_left\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 720,
+      "length": 20,
+      "value": "\"video_selfie_right\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 784,
+      "length": 19,
+      "value": "\"video_selfie_down\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
+      "kind": "StringLiteral",
+      "offset": 846,
+      "length": 19,
+      "value": "\"video_selfie_high\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Dtos\/CaptureResult.swift",
@@ -3787,10 +3879,94 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4228,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4327,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4789,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 4821,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
       "kind": "StringLiteral",
       "offset": 600,
       "length": 15,
       "value": "\"UnicoSdkLiveness.FacetecProvider\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6149,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/FacetecProvider.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8523,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/PrepareData.swift",
+      "kind": "StringLiteral",
+      "offset": 865,
+      "length": 20,
+      "value": "\"appId = \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/PrepareData.swift",
+      "kind": "StringLiteral",
+      "offset": 882,
+      "length": 1,
+      "value": "\"\n\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/PrepareData.swift",
+      "kind": "StringLiteral",
+      "offset": 900,
+      "length": 30,
+      "value": "\"expiryDate = \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/PrepareData.swift",
+      "kind": "StringLiteral",
+      "offset": 927,
+      "length": 1,
+      "value": "\"\n\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/PrepareData.swift",
+      "kind": "StringLiteral",
+      "offset": 945,
+      "length": 14,
+      "value": "\"key = \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/PrepareData.swift",
+      "kind": "StringLiteral",
+      "offset": 958,
+      "length": 1,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/ConfigUnico.swift",
@@ -3821,6 +3997,447 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 358,
+      "length": 13,
+      "value": "\"sdk\/predict\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 448,
+      "length": 7,
+      "value": "\"Token\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 524,
+      "length": 9,
+      "value": "\"capture\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Models\/FaceTecLivenessResult.swift",
+      "kind": "StringLiteral",
+      "offset": 442,
+      "length": 27,
+      "value": "\"lowQualityAuditTrailImage\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Models\/FaceTecLivenessResult.swift",
+      "kind": "StringLiteral",
+      "offset": 510,
+      "length": 7,
+      "value": "\"image\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Models\/FaceTecLivenessResult.swift",
+      "kind": "StringLiteral",
+      "offset": 571,
+      "length": 10,
+      "value": "\"faceScan\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/Models\/DorothyLivenessResult.swift",
+      "kind": "StringLiteral",
+      "offset": 368,
+      "length": 7,
+      "value": "\"image\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/Models\/DorothyLivenessResult.swift",
+      "kind": "StringLiteral",
+      "offset": 466,
+      "length": 19,
+      "value": "\"media\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/Models\/DorothyLivenessResult.swift",
+      "kind": "IntegerLiteral",
+      "offset": 482,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/Models\/DorothyLivenessResult.swift",
+      "kind": "StringLiteral",
+      "offset": 484,
+      "length": 6,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/Models\/DorothyLivenessResult.swift",
+      "kind": "StringLiteral",
+      "offset": 507,
+      "length": 7,
+      "value": "\"media\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/SdkVersionConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 371,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/SdkVersionConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 493,
+      "length": 27,
+      "value": "\"io.unico.UnicoSdkLiveness\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/SdkVersionConfig.swift",
+      "kind": "Array",
+      "offset": 678,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/SdkVersionConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 1044,
+      "length": 28,
+      "value": "\"CFBundleShortVersionString\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 706,
+      "length": 5,
+      "value": "73701"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 752,
+      "length": 5,
+      "value": "73702"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 792,
+      "length": 5,
+      "value": "73703"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 839,
+      "length": 5,
+      "value": "73704"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 894,
+      "length": 5,
+      "value": "73705"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 951,
+      "length": 5,
+      "value": "73706"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 999,
+      "length": 5,
+      "value": "73707"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1057,
+      "length": 5,
+      "value": "73708"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1117,
+      "length": 5,
+      "value": "73709"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1159,
+      "length": 5,
+      "value": "73710"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1203,
+      "length": 5,
+      "value": "73711"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1273,
+      "length": 5,
+      "value": "73712"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1326,
+      "length": 5,
+      "value": "73713"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1381,
+      "length": 5,
+      "value": "73714"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1437,
+      "length": 5,
+      "value": "73715"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1497,
+      "length": 5,
+      "value": "73716"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1541,
+      "length": 5,
+      "value": "73717"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1589,
+      "length": 5,
+      "value": "73718"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1660,
+      "length": 5,
+      "value": "73719"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1727,
+      "length": 5,
+      "value": "73720"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1777,
+      "length": 5,
+      "value": "73721"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1834,
+      "length": 5,
+      "value": "73722"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1876,
+      "length": 5,
+      "value": "73730"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1920,
+      "length": 5,
+      "value": "73731"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 2053,
+      "length": 39,
+      "value": "\"Could not find active liveness import\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 2160,
+      "length": 57,
+      "value": "\"Unable to initialize active liveness in production mode\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 2279,
+      "length": 48,
+      "value": "\"Unable to get active liveness session provider\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 2396,
+      "length": 70,
+      "value": "\"The user pressed the cancel button and did not complete the Session.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 2543,
+      "length": 168,
+      "value": "\"The Session was not performed successfully and a FaceScan was not generated.  In general, other statuses will be sent to the developer for specific unsuccess reasons.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 2790,
+      "length": 301,
+      "value": "\"The camera access is prevented because either the user has explicitly denied permission or the user's device is configured to not allow access by a device policy. For more information on restricted by policy case, please see the the Apple Developer documentation on AVAuthorizationStatus.restricted.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 3161,
+      "length": 135,
+      "value": "\"The Session was cancelled due to the app being terminated, put to sleep, an OS notification, or the app was placed in the background.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 3376,
+      "length": 156,
+      "value": "\"The Session was cancelled because device is in landscape mode. The user experience of devices in these orientations is poor and thus portrait is required.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 3614,
+      "length": 163,
+      "value": "\"The Session was cancelled because device is in reverse portrait mode. The user experience of devices in these orientations is poor and thus portrait is required.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 3841,
+      "length": 143,
+      "value": "\"The Session was cancelled because the user was unable to complete a Session in the default allotted time or the timeout set by the developer.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 4050,
+      "length": 51,
+      "value": "\"The Session was cancelled due to memory pressure.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 4193,
+      "length": 100,
+      "value": "\"The Session was cancelled because your App is not in production and requires a network connection.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 4368,
+      "length": 73,
+      "value": "\"The Session was cancelled because your key needs to be validated again.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 4518,
+      "length": 90,
+      "value": "\"The Session was cancelled because the developer-configured encryption key was not valid.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 4686,
+      "length": 76,
+      "value": "\"The Session was cancelled because not all guidance images were configured.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 4844,
+      "length": 94,
+      "value": "\"The Session was cancelled because FaceTec SDK was unable to start the camera on this device.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 5004,
+      "length": 71,
+      "value": "\"The Session was cancelled because the user was in a locked out state.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 5145,
+      "length": 266,
+      "value": "\"The Session was cancelled because of an unknown and unexpected error.  FaceTec SDK leverages a variety of iOS APIs including camera, storage, security, networking, and more. This return value is a catch-all for errors experienced during normal usage of these APIs.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 5504,
+      "length": 191,
+      "value": "\"The Session cancelled because user pressed the Get Ready screen subtext message. Note: This functionality is not available by default, and must be requested from FaceTec in order to enable.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 5784,
+      "length": 32,
+      "value": "\"The Session was not processed.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 5888,
+      "length": 58,
+      "value": "\"The Session can't be performed: attempts limit exceeded.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 6025,
+      "length": 57,
+      "value": "\"The Session can't be performed: face alignment timeout.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 6146,
+      "length": 101,
+      "value": "\"Unable to initialize an active liveness session because of an unknown and unexpected license error.\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
+      "kind": "StringLiteral",
+      "offset": 6313,
+      "length": 82,
+      "value": "\"Unable to initialize an active liveness session because the license has expired.\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
       "kind": "IntegerLiteral",
       "offset": 706,
@@ -4157,172 +4774,32 @@
       "value": "73731"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 706,
-      "length": 5,
-      "value": "73701"
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessResult.swift",
+      "kind": "StringLiteral",
+      "offset": 543,
+      "length": 15,
+      "value": "\"transactionId\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 752,
-      "length": 5,
-      "value": "73702"
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessResult.swift",
+      "kind": "StringLiteral",
+      "offset": 600,
+      "length": 8,
+      "value": "\"isLive\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 792,
-      "length": 5,
-      "value": "73703"
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessResult.swift",
+      "kind": "StringLiteral",
+      "offset": 643,
+      "length": 7,
+      "value": "\"order\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 839,
-      "length": 5,
-      "value": "73704"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 894,
-      "length": 5,
-      "value": "73705"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 951,
-      "length": 5,
-      "value": "73706"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 999,
-      "length": 5,
-      "value": "73707"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1057,
-      "length": 5,
-      "value": "73708"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1117,
-      "length": 5,
-      "value": "73709"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1159,
-      "length": 5,
-      "value": "73710"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1203,
-      "length": 5,
-      "value": "73711"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1273,
-      "length": 5,
-      "value": "73712"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1326,
-      "length": 5,
-      "value": "73713"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1381,
-      "length": 5,
-      "value": "73714"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1437,
-      "length": 5,
-      "value": "73715"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1497,
-      "length": 5,
-      "value": "73716"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1541,
-      "length": 5,
-      "value": "73717"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1589,
-      "length": 5,
-      "value": "73718"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1660,
-      "length": 5,
-      "value": "73719"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1727,
-      "length": 5,
-      "value": "73720"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1777,
-      "length": 5,
-      "value": "73721"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1834,
-      "length": 5,
-      "value": "73722"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1876,
-      "length": 5,
-      "value": "73730"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessError.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1920,
-      "length": 5,
-      "value": "73731"
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/LivenessResult.swift",
+      "kind": "StringLiteral",
+      "offset": 728,
+      "length": 24,
+      "value": "\"sessionTransactionsIds\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
@@ -4346,11 +4823,95 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
+      "kind": "StringLiteral",
+      "offset": 839,
+      "length": 39,
+      "value": "\"init(coder:) has not been implemented\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
+      "kind": "StringLiteral",
+      "offset": 1247,
+      "length": 38,
+      "value": "\"Unico_result_facescan_upload_message\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1771,
+      "length": 4,
+      "value": "48.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1975,
+      "length": 4,
+      "value": "16.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2144,
+      "length": 4,
+      "value": "24.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2242,
+      "length": 4,
+      "value": "24.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2342,
+      "length": 5,
+      "value": "-24.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2412,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/SessionTransactionDTO.swift",
       "kind": "StringLiteral",
       "offset": 19,
       "length": 21,
       "value": "\"UnicoSdkLiveness.SessionTransactionDTO\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
+      "kind": "StringLiteral",
+      "offset": 330,
+      "length": 10,
+      "value": "\"ic_close\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
+      "kind": "IntegerLiteral",
+      "offset": 989,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
+      "kind": "FloatLiteral",
+      "offset": 1104,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
+      "kind": "FloatLiteral",
+      "offset": 1427,
+      "length": 3,
+      "value": "0.2"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
@@ -4395,6 +4956,139 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "StringLiteral",
+      "offset": 1237,
+      "length": 39,
+      "value": "\"init(coder:) has not been implemented\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1687,
+      "length": 5,
+      "value": "-16.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1838,
+      "length": 4,
+      "value": "48.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2003,
+      "length": 5,
+      "value": "-16.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2083,
+      "length": 4,
+      "value": "48.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2181,
+      "length": 4,
+      "value": "24.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2281,
+      "length": 5,
+      "value": "-24.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2376,
+      "length": 4,
+      "value": "24.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2566,
+      "length": 4,
+      "value": "24.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2675,
+      "length": 5,
+      "value": "-24.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2764,
+      "length": 4,
+      "value": "48.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2834,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "StringLiteral",
+      "offset": 3293,
+      "length": 45,
+      "value": "\"Unico_retry_subheader_message_without_photo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessRetryView.swift",
+      "kind": "StringLiteral",
+      "offset": 3454,
+      "length": 24,
+      "value": "\"Unico_action_try_again\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Extensions\/UIImageExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 394,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Extensions\/UIImageExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 400,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Extensions\/UIImageExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 697,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Extensions\/UIImageExtensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 713,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecDefaultCustomization.swift",
+      "kind": "FloatLiteral",
+      "offset": 2565,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/UITexts\/FacetecUITexts.swift",
       "kind": "Dictionary",
       "offset": 174,
@@ -4402,11 +5096,137 @@
       "value": "[(\"FaceTec_accessibility_cancel_button\", \"Cancelar\"), (\"FaceTec_accessibility_torch_button\", \"Alternar luz\"), (\"FaceTec_action_accept_photo\", \"ACEITAR\"), (\"FaceTec_action_confirm\", \"CONFIRMAR INFORMAÇÃO\"), (\"FaceTec_action_continue\", \"CONTINUE\"), (\"FaceTec_action_im_ready\", \"Estou pronto\"), (\"FaceTec_action_ok\", \"OK\"), (\"FaceTec_action_retake_photo\", \"RECAPTURAR\"), (\"FaceTec_action_skip_nfc\", \"PULAR\"), (\"FaceTec_action_take_photo\", \"TIRAR FOTO\"), (\"FaceTec_action_try_again\", \"Tente Novamente\"), (\"FaceTec_camera_permission_enable_camera\", \"HABILITAR CÂMERA\"), (\"FaceTec_camera_permission_header\", \"Ativar câmera\"), (\"FaceTec_camera_permission_launch_settings\", \"ABRIR CONFIGURAÇÕES\"), (\"FaceTec_camera_permission_message_auth\", \"Sua câmera está desabilitada. Toque abaixo para editar suas configurações.\"), (\"FaceTec_camera_permission_message_enroll\", \"Por favor, clique no botão abaixo para ativar sua câmera.\"), (\"FaceTec_feedback_center_face\", \"Centralize seu rosto\"), (\"FaceTec_feedback_face_not_found\", \"Enquadre o seu rosto\"), (\"FaceTec_feedback_face_not_looking_straight_ahead\", \"Olhe para frente\"), (\"FaceTec_feedback_face_not_upright\", \"Não se mexa\"), (\"FaceTec_feedback_hold_steady\", \"Não se mexa\"), (\"FaceTec_feedback_move_phone_away\", \"Afaste seu rosto da câmera\"), (\"FaceTec_feedback_move_phone_closer\", \"Aproxime seu rosto da câmera\"), (\"FaceTec_feedback_move_phone_to_eye_level\", \"Olhe para a câmera\"), (\"FaceTec_feedback_use_even_lighting\", \"Procure um local iluminado\"), (\"FaceTec_idscan_capture_hold_steady_message\", \"Por favor, segure firme\"), (\"FaceTec_idscan_capture_tap_to_focus_message\", \"Toque na tela para focalizar\"), (\"FaceTec_idscan_type_selection_header\", \"Tipo do documento\"), (\"FaceTec_instructions_header_ready_1\", \"Vamos lá, prepare-se\"), (\"FaceTec_instructions_header_ready_2\", \"para começar.\"), (\"FaceTec_instructions_message_ready_1\", \"Enquadre seu rosto na marcação, pressione\"), (\"FaceTec_instructions_message_ready_2\", \"o botão abaixo e siga as indicações na tela.\"), (\"FaceTec_presession_brighten_your_environment\", \"Ilumine seu ambiente\"), (\"FaceTec_presession_conditions_too_bright\", \"Iluminado demais\"), (\"FaceTec_presession_eyes_straight_ahead\", \"Olhe para a câmera\"), (\"FaceTec_presession_frame_your_face\", \"Enquadre seu rosto no oval\"), (\"FaceTec_presession_hold_steady_1\", \"Fique parado por: 1\"), (\"FaceTec_presession_hold_steady_2\", \"Fique parado por: 2\"), (\"FaceTec_presession_hold_steady_3\", \"Fique parado por: 3\"), (\"FaceTec_presession_neutral_expression\", \"Mantenha a expressão neutra, sem sorrir\"), (\"FaceTec_presession_position_face_straight_in_oval\", \"Olhe para frente\"), (\"FaceTec_presession_remove_dark_glasses\", \"Remova os óculos escuros\"), (\"FaceTec_result_facescan_upload_message\", \"\"), (\"FaceTec_result_idscan_unsuccess_message\", \"Foto do documento nāo corresponde com rosto do usuário\"), (\"FaceTec_result_idscan_upload_message\", \"Estamos verificando \nse está tudo certo, \naguarde.\"), (\"FaceTec_result_nfc_upload_message\", \"Estamos verificando \nse está tudo certo, \naguarde.\"), (\"FaceTec_result_success_message\", \"Sucesso!\"), (\"FaceTec_retry_header\", \"Vamos tentar de novo\"), (\"FaceTec_retry_ideal_image_label\", \"Pose ideal\"), (\"FaceTec_retry_instruction_message_1\", \"Expressão neutra, sem sorrir\"), (\"FaceTec_retry_instruction_message_2\", \"Sem reflexo ou iluminação extrema\"), (\"FaceTec_retry_instruction_message_3\", \"Muito borrado, limpe sua câmera\"), (\"FaceTec_retry_subheader_message\", \"Reveja sua foto e adeque seu ambiente\"), (\"FaceTec_retry_your_image_label\", \"Sua selfie\")]"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/UITexts\/FacetecUITexts.swift",
+      "kind": "StringLiteral",
+      "offset": 4342,
+      "length": 8,
+      "value": "\"Unico_\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/UITexts\/FacetecUITexts.swift",
+      "kind": "StringLiteral",
+      "offset": 4358,
+      "length": 10,
+      "value": "\"FaceTec_\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "StringLiteral",
+      "offset": 1132,
+      "length": 10,
+      "value": "\"ic_close\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2573,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2657,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2911,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2985,
+      "length": 2,
+      "value": "25"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3079,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3162,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3246,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3331,
+      "length": 4,
+      "value": "2000"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3523,
+      "length": 3,
+      "value": "800"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "FloatLiteral",
+      "offset": 3807,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3877,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3941,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4006,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "StringLiteral",
       "offset": 4495,
       "length": 26,
       "value": "\"unico_custom_footer_logo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4635,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
+      "kind": "StringLiteral",
+      "offset": 4707,
+      "length": 16,
+      "value": "\"ic_footer_logo\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
@@ -4458,6 +5278,188 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2166,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3498,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3863,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3955,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 3987,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4084,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5500,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5580,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5706,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5805,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5942,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1163,
+      "length": 7,
+      "value": "\"image\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1506,
+      "length": 11,
+      "value": "\"sessionID\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1591,
+      "length": 7,
+      "value": "\"iInfo\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1601,
+      "length": 8,
+      "value": "\"status\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1654,
+      "length": 8,
+      "value": "\"origin\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1701,
+      "length": 9,
+      "value": "\"version\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1766,
+      "length": 12,
+      "value": "\"uuidLogger\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1816,
+      "length": 10,
+      "value": "\"JWT_TYPE\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1830,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1881,
+      "length": 9,
+      "value": "\"capture\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1920,
+      "length": 9,
+      "value": "\"keyBody\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1952,
+      "length": 5,
+      "value": "\"iss\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1959,
+      "length": 15,
+      "value": "\"unico-sdk-ios\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1988,
+      "length": 5,
+      "value": "\"jti\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 2016,
+      "length": 6,
+      "value": "\"info\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",
       "kind": "StringLiteral",
       "offset": 327,
@@ -4479,11 +5481,109 @@
       "value": "1.0"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/DataSources\/DefaultGetLivenessPredictDataSource.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1237,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/DataSources\/DefaultGetLivenessPredictDataSource.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1682,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/DataSources\/DefaultGetLivenessPredictDataSource.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2430,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/DataSources\/DefaultGetLivenessPredictDataSource.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2589,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Extensions\/StringExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 400,
+      "length": 20,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Extensions\/StringExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 412,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Extensions\/StringExtensions.swift",
+      "kind": "StringLiteral",
+      "offset": 419,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Extensions\/StringExtensions.swift",
+      "kind": "BooleanLiteral",
+      "offset": 470,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Logger\/LivenessLoggerDTO.swift",
+      "kind": "StringLiteral",
+      "offset": 193,
+      "length": 10,
+      "value": "\"liveness\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/DorothyProvider.swift",
       "kind": "Array",
-      "offset": 882,
+      "offset": 925,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/DorothyProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 1366,
+      "length": 9,
+      "value": "\"dorothy\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/DorothyProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 2752,
+      "length": 18,
+      "value": "\"forensis.license\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/UnicoSdkLiveness\/IntermediateBuildFilesPath\/UnicoSdkLiveness.build\/Release-iphoneos\/UnicoSdkLiveness.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 741,
+      "length": 17,
+      "value": "\"ic_alert_circle\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/UnicoSdkLiveness\/IntermediateBuildFilesPath\/UnicoSdkLiveness.build\/Release-iphoneos\/UnicoSdkLiveness.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 883,
+      "length": 10,
+      "value": "\"ic_close\""
+    },
+    {
+      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/UnicoSdkLiveness\/IntermediateBuildFilesPath\/UnicoSdkLiveness.build\/Release-iphoneos\/UnicoSdkLiveness.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1029,
+      "length": 16,
+      "value": "\"ic_footer_logo\""
     }
   ]
 }

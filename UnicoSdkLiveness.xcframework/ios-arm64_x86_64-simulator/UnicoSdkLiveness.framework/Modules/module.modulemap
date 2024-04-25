@@ -1,7 +1,7 @@
 framework module UnicoSdkLiveness {
   umbrella header "UnicoSdkLiveness.h"
-
   export *
+
   module * { export * }
 }
 

@@ -1,10 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkLiveness
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-module-flags-ignorable: -enable-experimental-feature AccessLevelOnImport -enable-bare-slash-regex
+import DeveloperToolsSupport
 import FaceTecSDK
 import Foundation
 import Swift
+import SwiftUI
 import UIKit
 import UnicoSdkBase
 import UnicoSdkBase/*.API*/
@@ -13,6 +15,7 @@ import UnicoSdkBase/*.DataTransferService*/
 import UnicoSdkPlugins
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 @objc public class CaptureResult : ObjectiveC.NSObject {
   @objc public var base64: Swift.String!
   @objc public var encrypted: Swift.String!
@@ -53,9 +56,9 @@ public struct Theme : Swift.Equatable {
   public static func == (a: UnicoSdkLiveness.Theme, b: UnicoSdkLiveness.Theme) -> Swift.Bool
 }
 public protocol UnicoLivenessDelegate : AnyObject {
-  func onSuccess(livenessResult: UnicoSdkLiveness.LivenessResult)
+  func onSuccess(livenessResult: any UnicoSdkLiveness.LivenessResult)
   func onError(livenessError: UnicoSdkLiveness.LivenessError)
-  func onLoggerListener(_ liveness: UnicoSdkLiveness.LivenessLogger?)
+  func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
 }
 public struct LivenessError : Swift.Error, Swift.Equatable {
   public let code: Swift.Int
@@ -73,27 +76,27 @@ public protocol LivenessResult {
   @objc deinit
 }
 public enum Env {
-  case custom(service: UnicoSdkBase.DataTransferService, endpointKey: Swift.String, endpointIv: Swift.String)
+  case custom(service: any UnicoSdkBase.DataTransferService, endpointKey: Swift.String, endpointIv: Swift.String)
   case development(endpointKey: Swift.String, endpointIv: Swift.String)
   case production(endpointKey: Swift.String, endpointIv: Swift.String)
 }
 public protocol UnicoLivenessPrepareCameraDelegate : AnyObject {
-  func onCameraReady(unicoLivenessOpenCamera: UnicoSdkLiveness.UnicoLivenessOpenCamera)
+  func onCameraReady(unicoLivenessOpenCamera: any UnicoSdkLiveness.UnicoLivenessOpenCamera)
   func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
 }
 public struct OpenLivenessDTO {
   public init(sdkKey: Swift.String?, sessionToken: Swift.String?, keyBody: Swift.String?, isIntegrationCaptureFlow: Swift.Bool, maxAttempts: Swift.Int)
 }
 public protocol UnicoLivenessRepresentable {
-  func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
 }
 @_hasMissingDesignatedInitializers final public class UnicoLiveness : UnicoSdkLiveness.UnicoLivenessRepresentable {
   public init(viewController: UIKit.UIViewController, hostKey: Swift.String)
-  final public func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  final public func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
   @objc deinit
 }
 public protocol UnicoLivenessOpenCamera {
-  func openCamera(data: UnicoSdkLiveness.OpenLivenessDTO, unicoLivenessDelegate: UnicoSdkLiveness.UnicoLivenessDelegate)
+  func openCamera(data: UnicoSdkLiveness.OpenLivenessDTO, unicoLivenessDelegate: any UnicoSdkLiveness.UnicoLivenessDelegate)
 }
 public protocol LivenessLoggerProvider {
   var name: Swift.String { get }
@@ -101,7 +104,7 @@ public protocol LivenessLoggerProvider {
   var version: Swift.String? { get }
 }
 public protocol LivenessLogger {
-  var provider: UnicoSdkLiveness.LivenessLoggerProvider? { get }
+  var provider: (any UnicoSdkLiveness.LivenessLoggerProvider)? { get }
   var attempts: Swift.Int? { get set }
   var maxAttempts: Swift.Int? { get set }
   var isLive: Swift.Bool? { get set }

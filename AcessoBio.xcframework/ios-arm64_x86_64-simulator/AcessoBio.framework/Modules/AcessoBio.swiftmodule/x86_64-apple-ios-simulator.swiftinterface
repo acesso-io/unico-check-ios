@@ -1,15 +1,17 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AcessoBio
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 @_exported import AcessoBio
 import CoreMotion
 import CoreTelephony
+import DeveloperToolsSupport
 import DeviceProfiling
 import FaceTecSDK
 import Foundation
 import Swift
+import SwiftUI
 import SystemConfiguration
 import UIKit.UIDevice
 import UIKit
@@ -21,6 +23,7 @@ import UnicoSdkPlugins
 import UnicoSdkSecurity
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public protocol LibInfoWoker {
   func commitLibInfo()
 }
@@ -59,7 +62,7 @@ extension AcessoBio.DefaultLibInfoWoker : AcessoBio.LibInfoWoker {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class UnicoConfigDataSourceManager : ObjectiveC.NSObject {
-  @objc public func manage(dataSource: AcessoBio.AcessoBioConfigDataSource) -> AcessoBio.UnicoSetupData
+  @objc public func manage(dataSource: any AcessoBio.AcessoBioConfigDataSource) -> AcessoBio.UnicoSetupData
   @objc override dynamic public init()
   @objc deinit
 }
@@ -135,9 +138,9 @@ public protocol UnicoSetupServicesProtocol {
 extension AcessoBio.ErrorBio : Swift.Error {
 }
 @objc public class UnicoCheckThemes : ObjectiveC.NSObject, AcessoBio.AcessoBioThemeDelegate {
-  @objc public var defaultTheme: AcessoBio.AcessoBioThemeDelegate!
-  @objc public var acessoBioThemeDelegate: AcessoBio.AcessoBioThemeDelegate!
-  @objc public init(currentTheme: Any, defaultTheme: AcessoBio.AcessoBioThemeDelegate!, completion: @escaping (AcessoBio.AcessoBioThemeDelegate?, Swift.String?) -> Swift.Void)
+  @objc public var defaultTheme: (any AcessoBio.AcessoBioThemeDelegate)!
+  @objc public var acessoBioThemeDelegate: (any AcessoBio.AcessoBioThemeDelegate)!
+  @objc public init(currentTheme: Any, defaultTheme: (any AcessoBio.AcessoBioThemeDelegate)!, completion: @escaping ((any AcessoBio.AcessoBioThemeDelegate)?, Swift.String?) -> Swift.Void)
   @objc public func getColorBackground() -> Any!
   @objc public func getColorBoxMessage() -> Any!
   @objc public func getColorTextMessage() -> Any!
@@ -162,24 +165,24 @@ extension AcessoBio.UnicoCheckThemes {
   public typealias PrepareCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
   public typealias OpenCompletionSuccess = ([Swift.String : Any]) -> Swift.Void
   public typealias OpenCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
-  @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKTokenResponseDTOAdapter, bioThemeDelegate: AcessoBio.AcessoBioThemeDelegate?, isHomolog: Swift.Bool, hostKey: Swift.String)
+  @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKTokenResponseDTOAdapter, bioThemeDelegate: (any AcessoBio.AcessoBioThemeDelegate)?, isHomolog: Swift.Bool, hostKey: Swift.String)
   @objc public func prepareCamera(success: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionFailure)
   @objc public func openCamera(unicoSetup: AcessoBio.UnicoSetupData, timeoutInterval: Swift.Double, success: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionFailure)
   @objc public func getLivenessKeybody() -> Swift.String
   @objc deinit
 }
 extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate {
-  public func onCameraReady(unicoLivenessOpenCamera: UnicoSdkLiveness.UnicoLivenessOpenCamera)
+  public func onCameraReady(unicoLivenessOpenCamera: any UnicoSdkLiveness.UnicoLivenessOpenCamera)
   public func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
 }
 extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDelegate {
-  public func onSuccess(livenessResult: UnicoSdkLiveness.LivenessResult)
+  public func onSuccess(livenessResult: any UnicoSdkLiveness.LivenessResult)
   public func onError(livenessError: UnicoSdkLiveness.LivenessError)
-  public func onLoggerListener(_ liveness: UnicoSdkLiveness.LivenessLogger?)
+  public func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
 }
 public class SDKPredictResponseDTO : Swift.Decodable {
   @objc deinit
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc public protocol SensorsWorker {
   @objc func startMotion()
@@ -187,14 +190,14 @@ public class SDKPredictResponseDTO : Swift.Decodable {
   func stopMotion() -> AcessoBio.DeviceBehaviorsDTO
 }
 @objc public protocol SensorsWorkerFactory {
-  @objc func make() -> AcessoBio.SensorsWorker
+  @objc func make() -> any AcessoBio.SensorsWorker
 }
 @objc @_hasMissingDesignatedInitializers final public class UnicoSetupData : ObjectiveC.NSObject {
   @objc final public func getHostKey() -> Swift.String?
   @objc deinit
 }
 extension AcessoBio.UnicoSetupData : Swift.Decodable {
-  convenience public init(from decoder: Swift.Decoder) throws
+  convenience public init(from decoder: any Swift.Decoder) throws
 }
 @objc final public class DefaultGetCameraResultUseCase : ObjectiveC.NSObject {
   @objc public init(key: Swift.String, keyBody: Swift.String, expires: Swift.Double, sessionToken: Swift.String?, isIntegrationCaptureFlow: Swift.Bool)
@@ -291,7 +294,7 @@ extension AcessoBio.DefaultCallbackWorker : AcessoBio.CallbackWorker {
   @objc deinit
 }
 @objc public protocol ProviderFactory {
-  @objc func create() -> AcessoBio.CreateProviderUseCase
+  @objc func create() -> any AcessoBio.CreateProviderUseCase
 }
 @objc @_hasMissingDesignatedInitializers final public class DefaultProviderFactory : ObjectiveC.NSObject {
   @objc public enum Source : Swift.Int {
@@ -305,7 +308,7 @@ extension AcessoBio.DefaultCallbackWorker : AcessoBio.CallbackWorker {
   @objc deinit
 }
 extension AcessoBio.DefaultProviderFactory : AcessoBio.ProviderFactory {
-  @objc final public func create() -> AcessoBio.CreateProviderUseCase
+  @objc final public func create() -> any AcessoBio.CreateProviderUseCase
 }
 public protocol Cancellable {
   func cancel()
@@ -346,13 +349,13 @@ public protocol Cancellable {
   @objc deinit
 }
 @objc public protocol Factories {
-  @objc func createProviderFactory(source: AcessoBio.DefaultProviderFactory.Source) -> AcessoBio.CreateProviderUseCase
-  @objc func makeSensorsWorkerFactory() -> AcessoBio.SensorsWorkerFactory
+  @objc func createProviderFactory(source: AcessoBio.DefaultProviderFactory.Source) -> any AcessoBio.CreateProviderUseCase
+  @objc func makeSensorsWorkerFactory() -> any AcessoBio.SensorsWorkerFactory
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FactoriesContainer : ObjectiveC.NSObject, AcessoBio.Factories {
   @objc public class func sharedContainer() -> AcessoBio.FactoriesContainer
-  @objc public func createProviderFactory(source: AcessoBio.DefaultProviderFactory.Source) -> AcessoBio.CreateProviderUseCase
-  @objc public func makeSensorsWorkerFactory() -> AcessoBio.SensorsWorkerFactory
+  @objc public func createProviderFactory(source: AcessoBio.DefaultProviderFactory.Source) -> any AcessoBio.CreateProviderUseCase
+  @objc public func makeSensorsWorkerFactory() -> any AcessoBio.SensorsWorkerFactory
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class DocumentResult : AcessoBio.CaptureResult {
@@ -451,7 +454,7 @@ public protocol Cancellable {
   @objc func stopCaptureAndSendData(screenBrightness: CoreFoundation.CGFloat, isCameraTypeChanged: Foundation.NSNumber, imageResolution: Swift.String, faceBehavior: AcessoBio.FaceBehaviorsDTO, video: AcessoBio.VideoDTO, timers: AcessoBio.TimersDTO)
 }
 @objc final public class UnicoFaceCameraInteractor : ObjectiveC.NSObject {
-  @objc public init(presenter: AcessoBio.UnicoFaceCameraPresenterInput)
+  @objc public init(presenter: any AcessoBio.UnicoFaceCameraPresenterInput)
   @objc deinit
 }
 extension AcessoBio.UnicoFaceCameraInteractor : AcessoBio.UnicoFaceCameraInteractorInput {

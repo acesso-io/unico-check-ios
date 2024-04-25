@@ -1,7 +1,7 @@
 framework module UnicoSdkPlugins {
   umbrella header "UnicoSdkPlugins.h"
-
   export *
+
   module * { export * }
 }
 

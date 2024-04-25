@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		hUtXCe3FsbDhTsYBOBqvH2StN+M=
+		AO+dIyNsm6vV4KzHeAw/8PezUio=
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		1i+dRh8G1C5jPEQ0Sz13Qkj4li4=
+		6bhLBVa6G2pXRiHomEBp07hgNgU=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
@@ -114,27 +114,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bu8BNduZQYfSait6dqRGqSnRgEQ=
+		ZVuDtAon417DycaVh7uexydx8RM=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		e1V/2EhjenZbFKofeMeDcdtee3M=
+		S9QitFDDsZ4ss3GVhpJT8uF1H1I=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		SQWIXb2bUhtzpm7o53N9MdROpio=
+		xl+55WlkkI2dfct+Wo0GkJR0TCw=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		e1V/2EhjenZbFKofeMeDcdtee3M=
+		S9QitFDDsZ4ss3GVhpJT8uF1H1I=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		1FPrSPnVGVE0gIuld2M+BYCY1T8=
+		kVvjdmX8wPzZvEr7k0BY+BQlHNA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		0ZOb42mDVV3SSSZdNVZdZbp2UZY=
+		syKOqdsmsZFt3zlPK1Q6mjCjAGE=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		05HgfJKVPjVEReqym4o5vSofJUQ=
 		</data>
 		<key>frame_cnh.png</key>
 		<data>
@@ -195,14 +199,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1WqCO0oiENGvmW1f2XcBiDJsJC3WqEDDxJIPiG1A7PA=
+			Y4NDZQVEWFICSF92mOH6RRz42sQguNDT7F3C9TtOX4Q=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8GNtzL4/mKSLdUEjgicOkLzB13UrpzgUwBd2Mt0tkGc=
+			qIP/SCz5Z5h2pUxi6bQq+ykHw7WMcSuEa02WsOki8h0=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
@@ -384,35 +388,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f50sgmh4kiId2qi0KXb0ESpHD99zt2bqtvqbdEmdu3M=
+			hWkuWoqoTzZpNKmrqzvuo5kKeni3hknueg+DJNCsluc=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KQhVZX++ZBBltc5KuHm5EWgh5uFpc8Wnp9ZAVNo6U90=
+			YgfU+ptJnlH5wvkuIf8rPfSq1mSXumbxthxp8UKK22Q=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f50sgmh4kiId2qi0KXb0ESpHD99zt2bqtvqbdEmdu3M=
+			hWkuWoqoTzZpNKmrqzvuo5kKeni3hknueg+DJNCsluc=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nRCQnx3/ldDK+ASaE3ol8rsGKzQAYlwdDDvllADafKQ=
+			rCfTVnpmHftLeWMiy9h8z8mIAmQMBzRCsNSh0JFswLc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s9JJRoI6ngU3lSoIURNG9rYzDJkYMWUVmvdKKZaDKZ0=
+			jDXQU9+rK3iWVlYmISWfdQwkagGNbfOdwbZTReQ82pE=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bOayODDyzrvm6QF2o+HTrkp6RLHP0IIw088PhFyeF2k=
 			</data>
 		</dict>
 		<key>frame_cnh.png</key>
