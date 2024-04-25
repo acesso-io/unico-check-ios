@@ -26,11 +26,6 @@ Pod::Spec.new do |spec|
     "UnicoSdkSecurity.xcframework"
   ]
 
-  spec.resource_bundles = {
-    "unicocheck-ios" => [
-      "AcessoBio.xcframework/ios-arm64/AcessoBio.framework/PrivacyInfo.xcprivacy",
-      "FaceTecSDK.xcframework/ios-arm64/FaceTecSDK.framework/PrivacyInfo.xcprivacy"
-      ]
-    }
+  spec.resource_bundles = {"unicocheck-ios" => ["AcessoBio.xcframework/ios-arm64/AcessoBio.framework/PrivacyInfo.xcprivacy"]}
 
 end
