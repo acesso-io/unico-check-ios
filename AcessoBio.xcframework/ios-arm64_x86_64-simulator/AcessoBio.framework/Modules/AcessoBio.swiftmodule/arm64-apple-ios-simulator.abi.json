@@ -18032,8 +18032,8 @@
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkVersionConfig.swift",
       "kind": "StringLiteral",
       "offset": 215,
-      "length": 13,
-      "value": "\"2.12.0-beta\""
+      "length": 8,
+      "value": "\"2.12.1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
