@@ -66,7 +66,7 @@
 		</data>
 		<key>USDKResources.bundle/Assets.car</key>
 		<data>
-		ohf/oUddAp0hvFyIhWnuHqCal3s=
+		UYfWHneuTg0gQefKVgVEKtsktPI=
 		</data>
 		<key>USDKResources.bundle/Base.lproj/Localizable.strings</key>
 		<dict>
@@ -79,35 +79,15 @@
 		</dict>
 		<key>USDKResources.bundle/Info.plist</key>
 		<data>
-		8KGnUpCpmW3AEuSiseFFMpy8rOM=
+		nL5kPoUOJIUkw7CiDKDz3YKyxBM=
 		</data>
 		<key>USDKResources.bundle/OZJournalList.momd/JournalCoreData.mom</key>
 		<data>
-		WfmJ7t8tVQPFQUyNJlysAmJNyd4=
+		A253YY1JwKSrmXREu/V1PGdBE3E=
 		</data>
 		<key>USDKResources.bundle/OZJournalList.momd/VersionInfo.plist</key>
 		<data>
-		ABluvLlGVHodY+7GGzQwuUcn+bU=
-		</data>
-		<key>USDKResources.bundle/_CodeSignature/CodeDirectory</key>
-		<data>
-		TeXThSUuwnxjdGG8cZ6jhUfEf1U=
-		</data>
-		<key>USDKResources.bundle/_CodeSignature/CodeRequirements</key>
-		<data>
-		PxB2g+c9UGE3TyhULoAq9VLQ6EA=
-		</data>
-		<key>USDKResources.bundle/_CodeSignature/CodeRequirements-1</key>
-		<data>
-		ud3G7pXGvG5P19JuQ+PEFmh8Tz8=
-		</data>
-		<key>USDKResources.bundle/_CodeSignature/CodeResources</key>
-		<data>
-		46kjeYfEB5M7gJSORKCj80VSTkA=
-		</data>
-		<key>USDKResources.bundle/_CodeSignature/CodeSignature</key>
-		<data>
-		v13YxwVSi11TChex/vYXWe+6QPQ=
+		gSWT0fjpiZYYjsNghlJgkr2WlUc=
 		</data>
 		<key>USDKResources.bundle/accessories.json</key>
 		<data>
@@ -370,7 +350,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VnY1j/NZqnT0pDp2OEyBgpEvYEBXhGTy+2vKOwQ5qs0=
+			5xOcP4DTvCS0uzfeHuELk75t4A18YavQyD4CLQCF1JU=
 			</data>
 		</dict>
 		<key>USDKResources.bundle/Base.lproj/Localizable.strings</key>
@@ -386,56 +366,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pg6X8ZD8XgeFGiTFDmSi0HyCQglHb7xMS2F6sOh0OL4=
+			hQ1BbFU0+w+QsoI0awu2dngU7cy18JyFoRgbNqFoL6g=
 			</data>
 		</dict>
 		<key>USDKResources.bundle/OZJournalList.momd/JournalCoreData.mom</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eC4LDTI48EdEGOzBJRmZGBwJAxrgedo8gNAlgLADLkM=
+			Ru0bpgJudcywG5qpU+AP9J6RbX6bf0Njk+2cVgEhP+A=
 			</data>
 		</dict>
 		<key>USDKResources.bundle/OZJournalList.momd/VersionInfo.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qSUSdEwCkxrdUJi1zJWV7MJ+aDUgDZh6dydtsU9SWjA=
-			</data>
-		</dict>
-		<key>USDKResources.bundle/_CodeSignature/CodeDirectory</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cjPH73hPC7h+s3LLZOZ/9i/isiqriZbscUakp/mch1U=
-			</data>
-		</dict>
-		<key>USDKResources.bundle/_CodeSignature/CodeRequirements</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			FxkEN6npUnsmRQfNuDqTwb7J2QBdi6pgAi1EXEvQ3x8=
-			</data>
-		</dict>
-		<key>USDKResources.bundle/_CodeSignature/CodeRequirements-1</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PfTLw9AmPJhbkeY2MHXUNCzkOxEcB6TrTPt7VZfQK94=
-			</data>
-		</dict>
-		<key>USDKResources.bundle/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			L5gBOI78F6SOvKTjtk1hOw1E3eD+BqLFD6geis4jqeQ=
-			</data>
-		</dict>
-		<key>USDKResources.bundle/_CodeSignature/CodeSignature</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			S7qdooHSRaurkeJxvrb27EHiuuC++WdtFBMILe7nrXE=
+			xeuYbYAebp1K6XQwkrly21cySfu+/VbCMFsiRaMIRQ4=
 			</data>
 		</dict>
 		<key>USDKResources.bundle/accessories.json</key>

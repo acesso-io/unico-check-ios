@@ -264,6 +264,179 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "LivenessDTO",
+        "printedName": "LivenessDTO",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(provider:maxAttempts:attempts:isLive:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LivenessDTO",
+                "printedName": "AcessoBio.LivenessDTO",
+                "usr": "c:@M@AcessoBio@objc(cs)LivenessDTO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AcessoBio.ProviderDTO?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProviderDTO",
+                    "printedName": "AcessoBio.ProviderDTO",
+                    "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int32?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int32?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AcessoBio11LivenessDTOC8provider11maxAttempts8attempts6isLiveAcA08ProviderD0CSg_s5Int32VSgAMSbSgtcfc",
+            "mangledName": "$s9AcessoBio11LivenessDTOC8provider11maxAttempts8attempts6isLiveAcA08ProviderD0CSg_s5Int32VSgAMSbSgtcfc",
+            "moduleName": "AcessoBio",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LivenessDTO",
+                "printedName": "AcessoBio.LivenessDTO",
+                "usr": "c:@M@AcessoBio@objc(cs)LivenessDTO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AcessoBio@objc(cs)LivenessDTO(im)init",
+            "mangledName": "$s9AcessoBio11LivenessDTOCACycfc",
+            "moduleName": "AcessoBio",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AcessoBio@objc(cs)LivenessDTO",
+        "mangledName": "$s9AcessoBio11LivenessDTOC",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -4813,30 +4986,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "UnicoSdkLogger",
-        "printedName": "UnicoSdkLogger",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "UnicoSdkSecurity",
-        "printedName": "UnicoSdkSecurity",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "SensorsWorker",
         "printedName": "SensorsWorker",
@@ -4956,13 +5105,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UnicoSdkLogger",
-        "printedName": "UnicoSdkLogger",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
       },
       {
         "kind": "Import",
@@ -5123,6 +5265,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkLogger",
+        "printedName": "UnicoSdkLogger",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
       },
       {
         "kind": "Import",
@@ -6298,16 +6447,6 @@
         "printedName": "UnicoSdkLogger",
         "declKind": "Import",
         "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -8651,326 +8790,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "LivenessDTO",
-        "printedName": "LivenessDTO",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(provider:maxAttempts:attemps:isLive:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "LivenessDTO",
-                "printedName": "AcessoBio.LivenessDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)LivenessDTO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AcessoBio.ProviderDTO?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProviderDTO",
-                    "printedName": "AcessoBio.ProviderDTO",
-                    "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.NSNumber?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.NSNumber?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.NSNumber?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@AcessoBio@objc(cs)LivenessDTO(im)initWithProvider:maxAttempts:attemps:isLive:",
-            "mangledName": "$s9AcessoBio11LivenessDTOC8provider11maxAttempts7attemps6isLiveAcA08ProviderD0CSg_So8NSNumberCSgA2Mtcfc",
-            "moduleName": "AcessoBio",
-            "objc_name": "initWithProvider:maxAttempts:attemps:isLive:",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "LivenessDTO",
-                "printedName": "AcessoBio.LivenessDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)LivenessDTO"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@AcessoBio@objc(cs)LivenessDTO(im)init",
-            "mangledName": "$s9AcessoBio11LivenessDTOCACycfc",
-            "moduleName": "AcessoBio",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@AcessoBio@objc(cs)LivenessDTO",
-        "mangledName": "$s9AcessoBio11LivenessDTOC",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ProviderDTO",
-        "printedName": "ProviderDTO",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(name:type:version:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ProviderDTO",
-                "printedName": "AcessoBio.ProviderDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO(im)initWithName:type:version:",
-            "mangledName": "$s9AcessoBio11ProviderDTOC4name4type7versionACSS_S2SSgtcfc",
-            "moduleName": "AcessoBio",
-            "objc_name": "initWithName:type:version:",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ProviderDTO",
-                "printedName": "AcessoBio.ProviderDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO(im)init",
-            "mangledName": "$s9AcessoBio11ProviderDTOCACycfc",
-            "moduleName": "AcessoBio",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO",
-        "mangledName": "$s9AcessoBio11ProviderDTOC",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -10345,16 +10164,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "DocumentResult",
         "printedName": "DocumentResult",
@@ -10496,6 +10305,16 @@
         "printedName": "UnicoSdkBase",
         "declKind": "Import",
         "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -10655,8 +10474,7 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl",
-          "ObjC",
-          "RawDocComment"
+          "ObjC"
         ]
       },
       {
@@ -12740,16 +12558,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UnicoSdkLogger",
         "printedName": "UnicoSdkLogger",
         "declKind": "Import",
@@ -13177,6 +12985,149 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "ProviderDTO",
+        "printedName": "ProviderDTO",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:type:version:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProviderDTO",
+                "printedName": "AcessoBio.ProviderDTO",
+                "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AcessoBio11ProviderDTOC4name4type7versionACSS_S2SSgtcfc",
+            "mangledName": "$s9AcessoBio11ProviderDTOC4name4type7versionACSS_S2SSgtcfc",
+            "moduleName": "AcessoBio",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProviderDTO",
+                "printedName": "AcessoBio.ProviderDTO",
+                "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO(im)init",
+            "mangledName": "$s9AcessoBio11ProviderDTOCACycfc",
+            "moduleName": "AcessoBio",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AcessoBio@objc(cs)ProviderDTO",
+        "mangledName": "$s9AcessoBio11ProviderDTOC",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -13185,13 +13136,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UnicoSdkSecurity",
-        "printedName": "UnicoSdkSecurity",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
       },
       {
         "kind": "Import",
@@ -15026,13 +14970,6 @@
       },
       {
         "kind": "Import",
-        "name": "UnicoSdkSecurity",
-        "printedName": "UnicoSdkSecurity",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
         "name": "UnicoSdkBase",
         "printedName": "UnicoSdkBase",
         "declKind": "Import",
@@ -16338,16 +16275,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UnicoSdkLiveness",
         "printedName": "UnicoSdkLiveness",
         "declKind": "Import",
@@ -16748,20 +16675,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "UnicoSecuritySDK",
-        "printedName": "UnicoSecuritySDK",
-        "declKind": "Class",
-        "usr": "s:16UnicoSdkSecurity0aC3SDKC",
-        "mangledName": "$s16UnicoSdkSecurity0aC3SDKC",
-        "moduleName": "UnicoSdkSecurity",
-        "declAttributes": [
-          "Final"
-        ],
-        "isExternal": true,
-        "hasMissingDesignatedInitializers": true
-      },
-      {
-        "kind": "TypeDecl",
         "name": "CMMotionManager",
         "printedName": "CMMotionManager",
         "declKind": "Class",
@@ -16914,6 +16827,13 @@
       "offset": 273,
       "length": 4,
       "value": "13.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/LivenessDTO.swift",
+      "kind": "StringLiteral",
+      "offset": 13,
+      "length": 11,
+      "value": "\"AcessoBio.LivenessDTO\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Domain\/UseCases\/CreateProviderUseCase.swift",
@@ -17329,111 +17249,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "Array",
-      "offset": 642,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3058,
-      "length": 10,
-      "value": "\"security\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3089,
-      "length": 7,
-      "value": "\"haven\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3123,
-      "length": 12,
-      "value": "\"debugCheck\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3161,
-      "length": 11,
-      "value": "\"rootCheck\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3203,
-      "length": 16,
-      "value": "\"simulatorCheck\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3244,
-      "length": 10,
-      "value": "\"deviceID\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3282,
-      "length": 13,
-      "value": "\"deviceIDGen\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3058,
-      "length": 10,
-      "value": "\"security\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3089,
-      "length": 7,
-      "value": "\"haven\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3123,
-      "length": 12,
-      "value": "\"debugCheck\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3161,
-      "length": 11,
-      "value": "\"rootCheck\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3203,
-      "length": 16,
-      "value": "\"simulatorCheck\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3244,
-      "length": 10,
-      "value": "\"deviceID\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Datasources\/UnicoSdkSecurityInfo.swift",
-      "kind": "StringLiteral",
-      "offset": 3282,
-      "length": 13,
-      "value": "\"deviceIDGen\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/UnicoCheck\/SensorsWorker.swift",
       "kind": "StringLiteral",
       "offset": 322,
@@ -17618,65 +17433,51 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/UserInteractionDTO.swift",
       "kind": "StringLiteral",
-      "offset": 3196,
+      "offset": 3194,
       "length": 14,
       "value": "\"AcessoBio.ConnectionsDTO\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/UserInteractionDTO.swift",
       "kind": "StringLiteral",
-      "offset": 3753,
+      "offset": 3805,
       "length": 9,
       "value": "\"AcessoBio.TimersDTO\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/UserInteractionDTO.swift",
       "kind": "StringLiteral",
-      "offset": 4235,
+      "offset": 4286,
       "length": 12,
       "value": "\"AcessoBio.BehaviorsDTO\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/UserInteractionDTO.swift",
       "kind": "StringLiteral",
-      "offset": 4535,
+      "offset": 4585,
       "length": 16,
       "value": "\"AcessoBio.FaceBehaviorsDTO\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/UserInteractionDTO.swift",
       "kind": "StringLiteral",
-      "offset": 5392,
+      "offset": 5414,
       "length": 18,
       "value": "\"AcessoBio.DeviceBehaviorsDTO\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/UserInteractionDTO.swift",
       "kind": "StringLiteral",
-      "offset": 6417,
+      "offset": 6465,
       "length": 30,
       "value": "\"AcessoBio.AccelerometerDeviceBehaviorDTO\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/UserInteractionDTO.swift",
       "kind": "StringLiteral",
-      "offset": 6988,
+      "offset": 7036,
       "length": 15,
       "value": "\"AcessoBio.SensorValuesDTO\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/UserInteractionDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 7570,
-      "length": 11,
-      "value": "\"AcessoBio.LivenessDTO\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/UserInteractionDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 8307,
-      "length": 11,
-      "value": "\"AcessoBio.ProviderDTO\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/provider\/ProviderFactory.swift",
@@ -17940,7 +17741,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/UnicoSetup.swift",
       "kind": "BooleanLiteral",
-      "offset": 1167,
+      "offset": 1342,
       "length": 5,
       "value": "false"
     },
@@ -18022,6 +17823,13 @@
       "value": "\"AcessoBio.UnicoLogoImageView\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/ProviderDTO.swift",
+      "kind": "StringLiteral",
+      "offset": 13,
+      "length": 11,
+      "value": "\"AcessoBio.ProviderDTO\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/workers\/AttemptsWorker.swift",
       "kind": "StringLiteral",
       "offset": 400,
@@ -18033,7 +17841,7 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 8,
-      "value": "\"2.12.1\""
+      "value": "\"2.13.0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",
@@ -18094,7 +17902,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/LoggerFactory.swift",
       "kind": "Dictionary",
-      "offset": 459,
+      "offset": 435,
       "length": 3,
       "value": "[]"
     },

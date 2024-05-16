@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		6bhLBVa6G2pXRiHomEBp07hgNgU=
+		55kwqA7FGLrhA/AjHQ00jOSZ7XE=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Headers/UnicoCameraViewController.h</key>
 		<data>
-		zCUIXRBKm4UWTOoZXlLPTrCI1MQ=
+		d+iwI5xq5DdIUsL8fumgH1wPlcI=
 		</data>
 		<key>Headers/UnicoCheck.h</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		S9QitFDDsZ4ss3GVhpJT8uF1H1I=
+		b7z4QVgxjQH0+OfQhUwzEVmbYwY=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -126,11 +126,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		S9QitFDDsZ4ss3GVhpJT8uF1H1I=
+		b7z4QVgxjQH0+OfQhUwzEVmbYwY=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		kismrus0VWy2DvFy+Tuv3vRGL5U=
+		rgcLGk5GZk14A8jj5O6Xuob3c4c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>frame_cnh.png</key>
 		<data>
-		+MWsaH7N3D+VyYL2eoocNsdy3n0=
+		CotLPfnq6JRjapwfhbExaSNJ54I=
 		</data>
 		<key>frame_cnh_frente.png</key>
 		<data>
@@ -154,15 +154,15 @@
 		</data>
 		<key>frame_cpf.png</key>
 		<data>
-		3QmsCkwVcHrZ/uu4bYhvFHuNnzY=
+		2NGcy7mZJKVn5v8xPDIKrJINKbw=
 		</data>
 		<key>frame_rg_frente.png</key>
 		<data>
-		AZ4OKqp8yRliw1VLgmYpIttySIg=
+		v1p+Qs5ApGNMxI0E9pXQh89cF9k=
 		</data>
 		<key>frame_rg_verso.png</key>
 		<data>
-		4vIvfsGxMRhwyGwN+p2wzyK5Hag=
+		5emp3RqdDptO39W2bsGtENbgW0A=
 		</data>
 		<key>ic_close.png</key>
 		<data>
@@ -206,7 +206,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qIP/SCz5Z5h2pUxi6bQq+ykHw7WMcSuEa02WsOki8h0=
+			fCQLi3VPdWzi1MB1z60+QtPC+B+AS6VcZVMhrtZnwYw=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
@@ -346,7 +346,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0u8c9Obt66uuUxfks3hONAi7j2IXiaIihVbcI9BVQXI=
+			u0O0qkih7sEeNmFquko0YL4GkZwzmXdMcBlYJmfWbyE=
 			</data>
 		</dict>
 		<key>Headers/UnicoCheck.h</key>
@@ -388,7 +388,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hWkuWoqoTzZpNKmrqzvuo5kKeni3hknueg+DJNCsluc=
+			Aa5WouE3+hdwsxKODsoDHxgkK1Ch5HpQB+WediUL6VY=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -402,14 +402,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hWkuWoqoTzZpNKmrqzvuo5kKeni3hknueg+DJNCsluc=
+			Aa5WouE3+hdwsxKODsoDHxgkK1Ch5HpQB+WediUL6VY=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xFYWDBWnlR94ARb6E3gtIKzg6vtHpp7t9YQ+PUdOAYI=
+			zGYq1d87Nhe0L+VQOtNcuBSCS50ZUMm4iTAkep0C524=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -430,7 +430,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OHEtHmz92Sqe5BJfupced75Ne9yjsJQmpohNxtjZI/g=
+			iOWjlUjcKv/m9IhJErXUNeThjKt+s3ieO4RvDYOaPXg=
 			</data>
 		</dict>
 		<key>frame_cnh_frente.png</key>
@@ -451,21 +451,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e5xKv6ojMbiFfD5QsFVlGc2PO0/OzOSTBmk7uYjw0WY=
+			pBCtB7JkNBFw/v8/j8xJ7NDWMq1xRzIsIq/yb3j8i3M=
 			</data>
 		</dict>
 		<key>frame_rg_frente.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Bd94acNS0OxwttRIJhgH+10NflVaEWqpGXPNeBHoJyM=
+			3VFBLJWP4wQ0FVAgPhGG2IzC7AMjhSWI8pBA1i4wNVE=
 			</data>
 		</dict>
 		<key>frame_rg_verso.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			09wp1L1rhHnw/zEv73RVg68jHxzRSvrmJr4ZWJVSg38=
+			UnPTXUv7W1YeA8I8Fcs8K8nBTDvRdBK7Jm+wvF7AO8Y=
 			</data>
 		</dict>
 		<key>ic_close.png</key>
