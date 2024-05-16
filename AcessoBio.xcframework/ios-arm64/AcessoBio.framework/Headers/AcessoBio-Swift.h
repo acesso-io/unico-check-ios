@@ -530,7 +530,6 @@ SWIFT_CLASS("_TtC9AcessoBio14GeolocationDTO")
 
 SWIFT_CLASS("_TtC9AcessoBio11LivenessDTO")
 @interface LivenessDTO : NSObject
-- (nonnull instancetype)initWithProvider:(ProviderDTO * _Nullable)provider maxAttempts:(NSNumber * _Nullable)maxAttempts attemps:(NSNumber * _Nullable)attemps isLive:(NSNumber * _Nullable)isLive OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -546,7 +545,6 @@ SWIFT_CLASS("_TtC9AcessoBio13OpenCameraDTO")
 
 SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 @interface ProviderDTO : NSObject
-- (nonnull instancetype)initWithName:(NSString * _Nonnull)name type:(NSString * _Nonnull)type version:(NSString * _Nullable)version OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

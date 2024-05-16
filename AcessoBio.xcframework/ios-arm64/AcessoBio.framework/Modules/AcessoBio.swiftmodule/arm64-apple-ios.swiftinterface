@@ -20,7 +20,6 @@ import UnicoSdkBase/*.NetworkCancellable*/
 import UnicoSdkLiveness
 import UnicoSdkLogger
 import UnicoSdkPlugins
-import UnicoSdkSecurity
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -36,6 +35,10 @@ extension AcessoBio.DefaultLibInfoWoker : AcessoBio.LibInfoWoker {
 @objc @_inheritsConvenienceInitializers public class UnicoDefaults : ObjectiveC.NSObject {
   @objc public static let defaultFaceInferenceTimeout: Swift.Double
   @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class LivenessDTO : ObjectiveC.NSObject {
+  public init(provider: AcessoBio.ProviderDTO?, maxAttempts: Swift.Int32?, attempts: Swift.Int32?, isLive: Swift.Bool?)
   @objc deinit
 }
 @objc public enum CreateProviderError : Swift.Int, Swift.Error {
@@ -285,14 +288,6 @@ extension AcessoBio.DefaultCallbackWorker : AcessoBio.CallbackWorker {
   public init(timestamp: Swift.Int64, value: Swift.Double)
   @objc deinit
 }
-@objc public class LivenessDTO : ObjectiveC.NSObject {
-  @objc public init(provider: AcessoBio.ProviderDTO?, maxAttempts: Foundation.NSNumber?, attemps: Foundation.NSNumber?, isLive: Foundation.NSNumber?)
-  @objc deinit
-}
-@objc public class ProviderDTO : ObjectiveC.NSObject {
-  @objc public init(name: Swift.String, type: Swift.String, version: Swift.String?)
-  @objc deinit
-}
 @objc public protocol ProviderFactory {
   @objc func create() -> any AcessoBio.CreateProviderUseCase
 }
@@ -427,6 +422,10 @@ public protocol Cancellable {
   }
   @objc public func addLogo(location: CoreFoundation.CGPoint, type: AcessoBio.UnicoLogoImageView.LogoType) -> UIKit.UIImageView!
   @objc public func removeLogo()
+  @objc deinit
+}
+@objc public class ProviderDTO : ObjectiveC.NSObject {
+  public init(name: Swift.String, type: Swift.String, version: Swift.String?)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class SelfieResult : AcessoBio.CaptureResult {
