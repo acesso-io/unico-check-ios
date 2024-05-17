@@ -32,60 +32,111 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "CoreLocation.CLLocation",
-        "printedName": "CoreLocation.CLLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
+        "kind": "TypeDecl",
+        "name": "FeatureFlagDataSource",
+        "printedName": "FeatureFlagDataSource",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getValue",
+            "printedName": "getValue(feature:defaultValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FeaturesRepresentable",
+                "printedName": "UnicoSdkBase.FeaturesRepresentable",
+                "usr": "s:12UnicoSdkBase21FeaturesRepresentableP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase21FeatureFlagDataSourceP8getValue7feature07defaultI0SbAA21FeaturesRepresentable_p_SbtF",
+            "mangledName": "$s12UnicoSdkBase21FeatureFlagDataSourceP8getValue7feature07defaultI0SbAA21FeaturesRepresentable_p_SbtF",
+            "moduleName": "UnicoSdkBase",
+            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.FeatureFlagDataSource>",
+            "sugared_genericSig": "<Self where Self : UnicoSdkBase.FeatureFlagDataSource>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getValue",
+            "printedName": "getValue(feature:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FeaturesRepresentable",
+                "printedName": "UnicoSdkBase.FeaturesRepresentable",
+                "usr": "s:12UnicoSdkBase21FeaturesRepresentableP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase21FeatureFlagDataSourcePAAE8getValue7featureSbAA21FeaturesRepresentable_p_tF",
+            "mangledName": "$s12UnicoSdkBase21FeatureFlagDataSourcePAAE8getValue7featureSbAA21FeaturesRepresentable_p_tF",
+            "moduleName": "UnicoSdkBase",
+            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.FeatureFlagDataSource>",
+            "sugared_genericSig": "<Self where Self : UnicoSdkBase.FeatureFlagDataSource>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12UnicoSdkBase21FeatureFlagDataSourceP",
+        "mangledName": "$s12UnicoSdkBase21FeatureFlagDataSourceP",
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
-          "RawDocComment"
+          "AccessControl"
         ]
       },
       {
-        "kind": "Import",
-        "name": "CoreLocation.CLLocation",
-        "printedName": "CoreLocation.CLLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
         "kind": "TypeDecl",
-        "name": "GeoLocationError",
-        "printedName": "GeoLocationError",
+        "name": "FeatureFlagDataSourceFetcherError",
+        "printedName": "FeatureFlagDataSourceFetcherError",
         "children": [
           {
             "kind": "Var",
-            "name": "usageDescriptionPlistNotAvailable",
-            "printedName": "usageDescriptionPlistNotAvailable",
+            "name": "noFlagsAvailable",
+            "printedName": "noFlagsAvailable",
             "children": [
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UnicoSdkBase.GeoLocationError.Type) -> UnicoSdkBase.GeoLocationError",
+                "printedName": "(UnicoSdkBase.FeatureFlagDataSourceFetcherError.Type) -> UnicoSdkBase.FeatureFlagDataSourceFetcherError",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "GeoLocationError",
-                    "printedName": "UnicoSdkBase.GeoLocationError",
-                    "usr": "s:12UnicoSdkBase16GeoLocationErrorO"
+                    "name": "FeatureFlagDataSourceFetcherError",
+                    "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError",
+                    "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "UnicoSdkBase.GeoLocationError.Type",
+                    "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "GeoLocationError",
-                        "printedName": "UnicoSdkBase.GeoLocationError",
-                        "usr": "s:12UnicoSdkBase16GeoLocationErrorO"
+                        "name": "FeatureFlagDataSourceFetcherError",
+                        "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError",
+                        "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO"
                       }
                     ]
                   }
@@ -93,56 +144,36 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:12UnicoSdkBase16GeoLocationErrorO33usageDescriptionPlistNotAvailableyA2CmF",
-            "mangledName": "$s12UnicoSdkBase16GeoLocationErrorO33usageDescriptionPlistNotAvailableyA2CmF",
+            "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO16noFlagsAvailableyA2CmF",
+            "mangledName": "$s12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO16noFlagsAvailableyA2CmF",
             "moduleName": "UnicoSdkBase"
           },
           {
             "kind": "Var",
-            "name": "locationFailed",
-            "printedName": "locationFailed",
+            "name": "networkFailed",
+            "printedName": "networkFailed",
             "children": [
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UnicoSdkBase.GeoLocationError.Type) -> (Swift.Error) -> UnicoSdkBase.GeoLocationError",
+                "printedName": "(UnicoSdkBase.FeatureFlagDataSourceFetcherError.Type) -> UnicoSdkBase.FeatureFlagDataSourceFetcherError",
                 "children": [
                   {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Error) -> UnicoSdkBase.GeoLocationError",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "GeoLocationError",
-                        "printedName": "UnicoSdkBase.GeoLocationError",
-                        "usr": "s:12UnicoSdkBase16GeoLocationErrorO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(locationError: Swift.Error)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "Swift.Error",
-                            "usr": "s:s5ErrorP"
-                          }
-                        ]
-                      }
-                    ]
+                    "kind": "TypeNominal",
+                    "name": "FeatureFlagDataSourceFetcherError",
+                    "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError",
+                    "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO"
                   },
                   {
                     "kind": "TypeNominal",
                     "name": "Metatype",
-                    "printedName": "UnicoSdkBase.GeoLocationError.Type",
+                    "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError.Type",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "GeoLocationError",
-                        "printedName": "UnicoSdkBase.GeoLocationError",
-                        "usr": "s:12UnicoSdkBase16GeoLocationErrorO"
+                        "name": "FeatureFlagDataSourceFetcherError",
+                        "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError",
+                        "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO"
                       }
                     ]
                   }
@@ -150,9 +181,110 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:12UnicoSdkBase16GeoLocationErrorO14locationFailedyACs0F0_p_tcACmF",
-            "mangledName": "$s12UnicoSdkBase16GeoLocationErrorO14locationFailedyACs0F0_p_tcACmF",
+            "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO13networkFailedyA2CmF",
+            "mangledName": "$s12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO13networkFailedyA2CmF",
             "moduleName": "UnicoSdkBase"
+          },
+          {
+            "kind": "Var",
+            "name": "decryptFailed",
+            "printedName": "decryptFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkBase.FeatureFlagDataSourceFetcherError.Type) -> UnicoSdkBase.FeatureFlagDataSourceFetcherError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FeatureFlagDataSourceFetcherError",
+                    "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError",
+                    "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagDataSourceFetcherError",
+                        "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError",
+                        "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO13decryptFailedyA2CmF",
+            "mangledName": "$s12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO13decryptFailedyA2CmF",
+            "moduleName": "UnicoSdkBase"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO9hashValueSivp",
+            "mangledName": "$s12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO9hashValueSivp",
+            "moduleName": "UnicoSdkBase",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO9hashValueSivg",
+                "mangledName": "$s12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO9hashValueSivg",
+                "moduleName": "UnicoSdkBase",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "UnicoSdkBase",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -167,36 +299,41 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "GeoLocationError",
-                "printedName": "UnicoSdkBase.GeoLocationError",
-                "usr": "s:12UnicoSdkBase16GeoLocationErrorO"
+                "name": "FeatureFlagDataSourceFetcherError",
+                "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError",
+                "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO"
               },
               {
                 "kind": "TypeNominal",
-                "name": "GeoLocationError",
-                "printedName": "UnicoSdkBase.GeoLocationError",
-                "usr": "s:12UnicoSdkBase16GeoLocationErrorO"
+                "name": "FeatureFlagDataSourceFetcherError",
+                "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError",
+                "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UnicoSdkBase16GeoLocationErrorO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s12UnicoSdkBase16GeoLocationErrorO2eeoiySbAC_ACtFZ",
+            "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO2eeoiySbAC_ACtFZ",
             "moduleName": "UnicoSdkBase",
             "static": true,
-            "declAttributes": [
-              "AccessControl"
-            ],
+            "implicit": true,
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
-        "usr": "s:12UnicoSdkBase16GeoLocationErrorO",
-        "mangledName": "$s12UnicoSdkBase16GeoLocationErrorO",
+        "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO",
+        "mangledName": "$s12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO",
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
           "AccessControl"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
           {
             "kind": "Conformance",
             "name": "Error",
@@ -221,13 +358,120 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
+        "kind": "TypeDecl",
+        "name": "FeatureFlagDataSourceFetcher",
+        "printedName": "FeatureFlagDataSourceFetcher",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "fetchFlags",
+            "printedName": "fetchFlags(headers:request:dataTransferService:decryptor:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DataTransferService",
+                "printedName": "UnicoSdkBase.DataTransferService",
+                "usr": "s:12UnicoSdkBase19DataTransferServiceP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnicoDecrypt",
+                "printedName": "UnicoSdkBase.UnicoDecrypt",
+                "usr": "s:12UnicoSdkBase0A7DecryptP"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), UnicoSdkBase.FeatureFlagDataSourceFetcherError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), UnicoSdkBase.FeatureFlagDataSourceFetcherError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagDataSourceFetcherError",
+                        "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError",
+                        "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase28FeatureFlagDataSourceFetcherP10fetchFlags7headers7request19dataTransferService9decryptor10completionySDyS2SG_SDySSypGAA0fnO0_pAA0A7Decrypt_pys6ResultOyytAA0defgH5ErrorOGctF",
+            "mangledName": "$s12UnicoSdkBase28FeatureFlagDataSourceFetcherP10fetchFlags7headers7request19dataTransferService9decryptor10completionySDyS2SG_SDySSypGAA0fnO0_pAA0A7Decrypt_pys6ResultOyytAA0defgH5ErrorOGctF",
+            "moduleName": "UnicoSdkBase",
+            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.FeatureFlagDataSourceFetcher>",
+            "sugared_genericSig": "<Self where Self : UnicoSdkBase.FeatureFlagDataSourceFetcher>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12UnicoSdkBase28FeatureFlagDataSourceFetcherP",
+        "mangledName": "$s12UnicoSdkBase28FeatureFlagDataSourceFetcherP",
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
-          "RawDocComment"
+          "AccessControl"
         ]
       },
       {
@@ -649,6 +893,89 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "FeatureFlagRequestDTO",
+        "printedName": "FeatureFlagRequestDTO",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(flagListKeys:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FeatureFlagRequestDTO",
+                "printedName": "UnicoSdkBase.FeatureFlagRequestDTO",
+                "usr": "s:12UnicoSdkBase21FeatureFlagRequestDTOV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UnicoSdkBase.Features]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UnicoSdkBase21FeatureFlagRequestDTOV12flagListKeysACSayAA8FeaturesOG_tcfc",
+            "mangledName": "$s12UnicoSdkBase21FeatureFlagRequestDTOV12flagListKeysACSayAA8FeaturesOG_tcfc",
+            "moduleName": "UnicoSdkBase",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase21FeatureFlagRequestDTOV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12UnicoSdkBase21FeatureFlagRequestDTOV6encode2toys7Encoder_p_tKF",
+            "moduleName": "UnicoSdkBase",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12UnicoSdkBase21FeatureFlagRequestDTOV",
+        "mangledName": "$s12UnicoSdkBase21FeatureFlagRequestDTOV",
+        "moduleName": "UnicoSdkBase",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -995,6 +1322,16 @@
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkBase",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -2120,16 +2457,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "Cancellable",
         "printedName": "Cancellable",
@@ -2185,87 +2512,21 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "GeoIP",
-        "printedName": "GeoIP",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "ip",
-            "printedName": "ip",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UnicoSdkBase5GeoIPP2ipSSvp",
-            "mangledName": "$s12UnicoSdkBase5GeoIPP2ipSSvp",
-            "moduleName": "UnicoSdkBase",
-            "protocolReq": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase5GeoIPP2ipSSvg",
-                "mangledName": "$s12UnicoSdkBase5GeoIPP2ipSSvg",
-                "moduleName": "UnicoSdkBase",
-                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.GeoIP>",
-                "sugared_genericSig": "<Self where Self : UnicoSdkBase.GeoIP>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:12UnicoSdkBase5GeoIPP",
-        "mangledName": "$s12UnicoSdkBase5GeoIPP",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "UnicoSdkBase"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkBase",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -3294,13 +3555,272 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
+        "kind": "TypeDecl",
+        "name": "DefaultFeatureFlagDataSource",
+        "printedName": "DefaultFeatureFlagDataSource",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultFeatureFlagDataSource",
+                "printedName": "UnicoSdkBase.DefaultFeatureFlagDataSource",
+                "usr": "s:12UnicoSdkBase28DefaultFeatureFlagDataSourceC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase28DefaultFeatureFlagDataSourceC6sharedACvpZ",
+            "mangledName": "$s12UnicoSdkBase28DefaultFeatureFlagDataSourceC6sharedACvpZ",
+            "moduleName": "UnicoSdkBase",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultFeatureFlagDataSource",
+                    "printedName": "UnicoSdkBase.DefaultFeatureFlagDataSource",
+                    "usr": "s:12UnicoSdkBase28DefaultFeatureFlagDataSourceC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase28DefaultFeatureFlagDataSourceC6sharedACvgZ",
+                "mangledName": "$s12UnicoSdkBase28DefaultFeatureFlagDataSourceC6sharedACvgZ",
+                "moduleName": "UnicoSdkBase",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultFeatureFlagDataSource",
+                    "printedName": "UnicoSdkBase.DefaultFeatureFlagDataSource",
+                    "usr": "s:12UnicoSdkBase28DefaultFeatureFlagDataSourceC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase28DefaultFeatureFlagDataSourceC6sharedACvsZ",
+                "mangledName": "$s12UnicoSdkBase28DefaultFeatureFlagDataSourceC6sharedACvsZ",
+                "moduleName": "UnicoSdkBase",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase28DefaultFeatureFlagDataSourceC6sharedACvMZ",
+                "mangledName": "$s12UnicoSdkBase28DefaultFeatureFlagDataSourceC6sharedACvMZ",
+                "moduleName": "UnicoSdkBase",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "fetchFlags",
+            "printedName": "fetchFlags(headers:request:dataTransferService:decryptor:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DataTransferService",
+                "printedName": "UnicoSdkBase.DataTransferService",
+                "usr": "s:12UnicoSdkBase19DataTransferServiceP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnicoDecrypt",
+                "printedName": "UnicoSdkBase.UnicoDecrypt",
+                "usr": "s:12UnicoSdkBase0A7DecryptP"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), UnicoSdkBase.FeatureFlagDataSourceFetcherError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), UnicoSdkBase.FeatureFlagDataSourceFetcherError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FeatureFlagDataSourceFetcherError",
+                        "printedName": "UnicoSdkBase.FeatureFlagDataSourceFetcherError",
+                        "usr": "s:12UnicoSdkBase33FeatureFlagDataSourceFetcherErrorO"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase28DefaultFeatureFlagDataSourceC10fetchFlags7headers7request19dataTransferService9decryptor10completionySDyS2SG_SDySSypGAA0gnO0_pAA0A7Decrypt_pys6ResultOyytAA0efgH12FetcherErrorOGctF",
+            "mangledName": "$s12UnicoSdkBase28DefaultFeatureFlagDataSourceC10fetchFlags7headers7request19dataTransferService9decryptor10completionySDyS2SG_SDySSypGAA0gnO0_pAA0A7Decrypt_pys6ResultOyytAA0efgH12FetcherErrorOGctF",
+            "moduleName": "UnicoSdkBase",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getValue",
+            "printedName": "getValue(feature:defaultValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FeaturesRepresentable",
+                "printedName": "UnicoSdkBase.FeaturesRepresentable",
+                "usr": "s:12UnicoSdkBase21FeaturesRepresentableP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase28DefaultFeatureFlagDataSourceC8getValue7feature07defaultJ0SbAA21FeaturesRepresentable_p_SbtF",
+            "mangledName": "$s12UnicoSdkBase28DefaultFeatureFlagDataSourceC8getValue7feature07defaultJ0SbAA21FeaturesRepresentable_p_SbtF",
+            "moduleName": "UnicoSdkBase",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12UnicoSdkBase28DefaultFeatureFlagDataSourceC",
+        "mangledName": "$s12UnicoSdkBase28DefaultFeatureFlagDataSourceC",
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
-          "RawDocComment"
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "FeatureFlagDataSourceFetcher",
+            "printedName": "FeatureFlagDataSourceFetcher",
+            "usr": "s:12UnicoSdkBase28FeatureFlagDataSourceFetcherP",
+            "mangledName": "$s12UnicoSdkBase28FeatureFlagDataSourceFetcherP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "FeatureFlagDataSource",
+            "printedName": "FeatureFlagDataSource",
+            "usr": "s:12UnicoSdkBase21FeatureFlagDataSourceP",
+            "mangledName": "$s12UnicoSdkBase21FeatureFlagDataSourceP"
+          }
         ]
       },
       {
@@ -3315,17 +3835,13 @@
       },
       {
         "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
+        "moduleName": "UnicoSdkBase",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -3439,8 +3955,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "GetTokenRequestHeadersDTO",
-        "printedName": "GetTokenRequestHeadersDTO",
+        "name": "RequestHeadersDTO",
+        "printedName": "RequestHeadersDTO",
         "children": [
           {
             "kind": "Constructor",
@@ -3449,9 +3965,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "GetTokenRequestHeadersDTO",
-                "printedName": "UnicoSdkBase.GetTokenRequestHeadersDTO",
-                "usr": "s:12UnicoSdkBase25GetTokenRequestHeadersDTOV"
+                "name": "RequestHeadersDTO",
+                "printedName": "UnicoSdkBase.RequestHeadersDTO",
+                "usr": "s:12UnicoSdkBase17RequestHeadersDTOV"
               },
               {
                 "kind": "TypeNominal",
@@ -3474,9 +3990,18 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Dependencies",
-                "printedName": "UnicoSdkBase.Dependencies",
-                "usr": "s:12UnicoSdkBase12DependenciesV"
+                "name": "Optional",
+                "printedName": "UnicoSdkBase.Dependencies?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dependencies",
+                    "printedName": "UnicoSdkBase.Dependencies",
+                    "usr": "s:12UnicoSdkBase12DependenciesV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -3495,18 +4020,86 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UnicoSdkBase25GetTokenRequestHeadersDTOV14projectVersion0I4Name8platform12dependencies6apiKeyACSS_S2SAA12DependenciesVSSSgtcfc",
-            "mangledName": "$s12UnicoSdkBase25GetTokenRequestHeadersDTOV14projectVersion0I4Name8platform12dependencies6apiKeyACSS_S2SAA12DependenciesVSSSgtcfc",
+            "usr": "s:12UnicoSdkBase17RequestHeadersDTOV14projectVersion0G4Name8platform12dependencies6apiKeyACSS_S2SAA12DependenciesVSgSSSgtcfc",
+            "mangledName": "$s12UnicoSdkBase17RequestHeadersDTOV14projectVersion0G4Name8platform12dependencies6apiKeyACSS_S2SAA12DependenciesVSgSSSgtcfc",
             "moduleName": "UnicoSdkBase",
             "declAttributes": [
               "AccessControl"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "serialize",
+            "printedName": "serialize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase17RequestHeadersDTOV9serializeSDyS2SGvp",
+            "mangledName": "$s12UnicoSdkBase17RequestHeadersDTOV9serializeSDyS2SGvp",
+            "moduleName": "UnicoSdkBase",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase17RequestHeadersDTOV9serializeSDyS2SGvg",
+                "mangledName": "$s12UnicoSdkBase17RequestHeadersDTOV9serializeSDyS2SGvg",
+                "moduleName": "UnicoSdkBase",
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Struct",
-        "usr": "s:12UnicoSdkBase25GetTokenRequestHeadersDTOV",
-        "mangledName": "$s12UnicoSdkBase25GetTokenRequestHeadersDTOV",
+        "usr": "s:12UnicoSdkBase17RequestHeadersDTOV",
+        "mangledName": "$s12UnicoSdkBase17RequestHeadersDTOV",
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
           "AccessControl"
@@ -3741,50 +4334,6 @@
             "usr": "s:SE",
             "mangledName": "$sSE"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -4284,73 +4833,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "GetGeoIP",
-        "printedName": "GetGeoIP",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "getGeoIP",
-            "printedName": "getGeoIP(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Result<UnicoSdkBase.GeoIP, Swift.Error>) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "Swift.Result<UnicoSdkBase.GeoIP, Swift.Error>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "GeoIP",
-                        "printedName": "UnicoSdkBase.GeoIP",
-                        "usr": "s:12UnicoSdkBase5GeoIPP"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Error",
-                        "printedName": "Swift.Error",
-                        "usr": "s:s5ErrorP"
-                      }
-                    ],
-                    "usr": "s:s6ResultO"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12UnicoSdkBase8GetGeoIPP03geteF010completionyys6ResultOyAA0eF0_ps5Error_pGc_tF",
-            "mangledName": "$s12UnicoSdkBase8GetGeoIPP03geteF010completionyys6ResultOyAA0eF0_ps5Error_pGc_tF",
-            "moduleName": "UnicoSdkBase",
-            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.GetGeoIP>",
-            "sugared_genericSig": "<Self where Self : UnicoSdkBase.GetGeoIP>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:12UnicoSdkBase8GetGeoIPP",
-        "mangledName": "$s12UnicoSdkBase8GetGeoIPP",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -4702,90 +5184,6 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "havenService",
-            "printedName": "havenService",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DataTransferService",
-                "printedName": "UnicoSdkBase.DataTransferService",
-                "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvp",
-            "mangledName": "$s12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvp",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "Lazy",
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvg",
-                "mangledName": "$s12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvg",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvs",
-                "mangledName": "$s12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvs",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvM",
-                "mangledName": "$s12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvM",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -4920,54 +5318,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "GetDeviceInfo",
         "printedName": "GetDeviceInfo",
@@ -5002,159 +5352,6 @@
         "declAttributes": [
           "AccessControl"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "GeoLocation",
-        "printedName": "GeoLocation",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "start",
-            "printedName": "start(handler:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Result<[CoreLocation.CLLocation], UnicoSdkBase.GeoLocationError>) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "Swift.Result<[CoreLocation.CLLocation], UnicoSdkBase.GeoLocationError>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[CoreLocation.CLLocation]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CLLocation",
-                            "printedName": "CoreLocation.CLLocation",
-                            "usr": "c:objc(cs)CLLocation"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "GeoLocationError",
-                        "printedName": "UnicoSdkBase.GeoLocationError",
-                        "usr": "s:12UnicoSdkBase16GeoLocationErrorO"
-                      }
-                    ],
-                    "usr": "s:s6ResultO"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12UnicoSdkBase11GeoLocationP5start7handleryys6ResultOySaySo10CLLocationCGAA0dE5ErrorOGc_tF",
-            "mangledName": "$s12UnicoSdkBase11GeoLocationP5start7handleryys6ResultOySaySo10CLLocationCGAA0dE5ErrorOGc_tF",
-            "moduleName": "UnicoSdkBase",
-            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.GeoLocation>",
-            "sugared_genericSig": "<Self where Self : UnicoSdkBase.GeoLocation>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "stop",
-            "printedName": "stop()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12UnicoSdkBase11GeoLocationP4stopyyF",
-            "mangledName": "$s12UnicoSdkBase11GeoLocationP4stopyyF",
-            "moduleName": "UnicoSdkBase",
-            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.GeoLocation>",
-            "sugared_genericSig": "<Self where Self : UnicoSdkBase.GeoLocation>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:12UnicoSdkBase11GeoLocationP",
-        "mangledName": "$s12UnicoSdkBase11GeoLocationP",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreLocation",
-        "printedName": "CoreLocation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "DefaultGeoLocationFactory",
-        "printedName": "DefaultGeoLocationFactory",
-        "declKind": "Class",
-        "usr": "s:12UnicoSdkBase25DefaultGeoLocationFactoryC",
-        "mangledName": "$s12UnicoSdkBase25DefaultGeoLocationFactoryC",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "hasMissingDesignatedInitializers": true
       },
       {
         "kind": "Import",
@@ -6361,9 +6558,59 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "timeoutInterval",
+            "printedName": "timeoutInterval",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase8EndpointC15timeoutIntervalSdvp",
+            "mangledName": "$s12UnicoSdkBase8EndpointC15timeoutIntervalSdvp",
+            "moduleName": "UnicoSdkBase",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase8EndpointC15timeoutIntervalSdvg",
+                "mangledName": "$s12UnicoSdkBase8EndpointC15timeoutIntervalSdvg",
+                "moduleName": "UnicoSdkBase",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<R>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(path:isFullPath:method:headerParameters:queryParametersEncodable:queryParameters:bodyParametersEncodable:bodyParameters:bodyEncoding:responseDecoder:)",
+            "printedName": "init(path:isFullPath:method:headerParameters:queryParametersEncodable:queryParameters:bodyParametersEncodable:bodyParameters:bodyEncoding:responseDecoder:timeoutInterval:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6501,11 +6748,18 @@
                 "printedName": "UnicoSdkBase.ResponseDecoder",
                 "hasDefaultArg": true,
                 "usr": "s:12UnicoSdkBase15ResponseDecoderP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UnicoSdkBase8EndpointC4path10isFullPath6method16headerParameters05queryK9Encodable0lK004bodykM00nK00N8Encoding15responseDecoderACyxGSS_SbAA14HTTPMethodTypeOSDyS2SGSE_pSgSDySSypGArsA04BodyO0OAA08ResponseQ0_ptcfc",
-            "mangledName": "$s12UnicoSdkBase8EndpointC4path10isFullPath6method16headerParameters05queryK9Encodable0lK004bodykM00nK00N8Encoding15responseDecoderACyxGSS_SbAA14HTTPMethodTypeOSDyS2SGSE_pSgSDySSypGArsA04BodyO0OAA08ResponseQ0_ptcfc",
+            "usr": "s:12UnicoSdkBase8EndpointC4path10isFullPath6method16headerParameters05queryK9Encodable0lK004bodykM00nK00N8Encoding15responseDecoder15timeoutIntervalACyxGSS_SbAA14HTTPMethodTypeOSDyS2SGSE_pSgSDySSypGAstA04BodyO0OAA08ResponseQ0_pSdtcfc",
+            "mangledName": "$s12UnicoSdkBase8EndpointC4path10isFullPath6method16headerParameters05queryK9Encodable0lK004bodykM00nK00N8Encoding15responseDecoder15timeoutIntervalACyxGSS_SbAA14HTTPMethodTypeOSDyS2SGSE_pSgSDySSypGAstA04BodyO0OAA08ResponseQ0_pSdtcfc",
             "moduleName": "UnicoSdkBase",
             "genericSig": "<τ_0_0>",
             "sugared_genericSig": "<R>",
@@ -7051,6 +7305,48 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "timeoutInterval",
+            "printedName": "timeoutInterval",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase11RequestableP15timeoutIntervalSdvp",
+            "mangledName": "$s12UnicoSdkBase11RequestableP15timeoutIntervalSdvp",
+            "moduleName": "UnicoSdkBase",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase11RequestableP15timeoutIntervalSdvg",
+                "mangledName": "$s12UnicoSdkBase11RequestableP15timeoutIntervalSdvg",
+                "moduleName": "UnicoSdkBase",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.Requestable>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkBase.Requestable>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "urlRequest",
             "printedName": "urlRequest(with:)",
@@ -7207,6 +7503,729 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "FeaturesRepresentable",
+        "printedName": "FeaturesRepresentable",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "hasFeatures",
+            "printedName": "hasFeatures",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase21FeaturesRepresentableP03hasD0SbvpZ",
+            "mangledName": "$s12UnicoSdkBase21FeaturesRepresentableP03hasD0SbvpZ",
+            "moduleName": "UnicoSdkBase",
+            "static": true,
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase21FeaturesRepresentableP03hasD0SbvgZ",
+                "mangledName": "$s12UnicoSdkBase21FeaturesRepresentableP03hasD0SbvgZ",
+                "moduleName": "UnicoSdkBase",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.FeaturesRepresentable>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkBase.FeaturesRepresentable>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allFeatures",
+            "printedName": "allFeatures",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase21FeaturesRepresentableP03allD0SayxGvpZ",
+            "mangledName": "$s12UnicoSdkBase21FeaturesRepresentableP03allD0SayxGvpZ",
+            "moduleName": "UnicoSdkBase",
+            "static": true,
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase21FeaturesRepresentableP03allD0SayxGvgZ",
+                "mangledName": "$s12UnicoSdkBase21FeaturesRepresentableP03allD0SayxGvgZ",
+                "moduleName": "UnicoSdkBase",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.FeaturesRepresentable>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkBase.FeaturesRepresentable>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase21FeaturesRepresentableP8rawValueSSvp",
+            "mangledName": "$s12UnicoSdkBase21FeaturesRepresentableP8rawValueSSvp",
+            "moduleName": "UnicoSdkBase",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase21FeaturesRepresentableP8rawValueSSvg",
+                "mangledName": "$s12UnicoSdkBase21FeaturesRepresentableP8rawValueSSvg",
+                "moduleName": "UnicoSdkBase",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.FeaturesRepresentable>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkBase.FeaturesRepresentable>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12UnicoSdkBase21FeaturesRepresentableP",
+        "mangledName": "$s12UnicoSdkBase21FeaturesRepresentableP",
+        "moduleName": "UnicoSdkBase",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Features",
+        "printedName": "Features",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkBase.Features.Type) -> UnicoSdkBase.Features",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkBase.Features.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Features",
+                        "printedName": "UnicoSdkBase.Features",
+                        "usr": "s:12UnicoSdkBase8FeaturesO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UnicoSdkBase8FeaturesO4noneyA2CmF",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO4noneyA2CmF",
+            "moduleName": "UnicoSdkBase"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase8FeaturesO8rawValueSSvp",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO8rawValueSSvp",
+            "moduleName": "UnicoSdkBase",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase8FeaturesO8rawValueSSvg",
+                "mangledName": "$s12UnicoSdkBase8FeaturesO8rawValueSSvg",
+                "moduleName": "UnicoSdkBase",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UnicoSdkBase.Features?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UnicoSdkBase8FeaturesO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO8rawValueACSgSS_tcfc",
+            "moduleName": "UnicoSdkBase",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UnicoSdkBase.Features]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase8FeaturesO8allCasesSayACGvpZ",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO8allCasesSayACGvpZ",
+            "moduleName": "UnicoSdkBase",
+            "static": true,
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UnicoSdkBase.Features]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Features",
+                        "printedName": "UnicoSdkBase.Features",
+                        "usr": "s:12UnicoSdkBase8FeaturesO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase8FeaturesO8allCasesSayACGvgZ",
+                "mangledName": "$s12UnicoSdkBase8FeaturesO8allCasesSayACGvgZ",
+                "moduleName": "UnicoSdkBase",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "stringValue",
+            "printedName": "stringValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase8FeaturesO11stringValueSSvp",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO11stringValueSSvp",
+            "moduleName": "UnicoSdkBase",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase8FeaturesO11stringValueSSvg",
+                "mangledName": "$s12UnicoSdkBase8FeaturesO11stringValueSSvg",
+                "moduleName": "UnicoSdkBase",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UnicoSdkBase.Features?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UnicoSdkBase8FeaturesO11stringValueACSgSS_tcfc",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO11stringValueACSgSS_tcfc",
+            "moduleName": "UnicoSdkBase",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "intValue",
+            "printedName": "intValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase8FeaturesO8intValueSiSgvp",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO8intValueSiSgvp",
+            "moduleName": "UnicoSdkBase",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase8FeaturesO8intValueSiSgvg",
+                "mangledName": "$s12UnicoSdkBase8FeaturesO8intValueSiSgvg",
+                "moduleName": "UnicoSdkBase",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(intValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UnicoSdkBase.Features?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UnicoSdkBase8FeaturesO8intValueACSgSi_tcfc",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO8intValueACSgSi_tcfc",
+            "moduleName": "UnicoSdkBase",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "allFeatures",
+            "printedName": "allFeatures",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UnicoSdkBase.Features]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase8FeaturesO03allD0SayACGvpZ",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO03allD0SayACGvpZ",
+            "moduleName": "UnicoSdkBase",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UnicoSdkBase.Features]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Features",
+                        "printedName": "UnicoSdkBase.Features",
+                        "usr": "s:12UnicoSdkBase8FeaturesO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase8FeaturesO03allD0SayACGvgZ",
+                "mangledName": "$s12UnicoSdkBase8FeaturesO03allD0SayACGvgZ",
+                "moduleName": "UnicoSdkBase",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasFeatures",
+            "printedName": "hasFeatures",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase8FeaturesO03hasD0SbvpZ",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO03hasD0SbvpZ",
+            "moduleName": "UnicoSdkBase",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase8FeaturesO03hasD0SbvgZ",
+                "mangledName": "$s12UnicoSdkBase8FeaturesO03hasD0SbvgZ",
+                "moduleName": "UnicoSdkBase",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12UnicoSdkBase8FeaturesO",
+        "mangledName": "$s12UnicoSdkBase8FeaturesO",
+        "moduleName": "UnicoSdkBase",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UnicoSdkBase.Features]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Features",
+                        "printedName": "UnicoSdkBase.Features",
+                        "usr": "s:12UnicoSdkBase8FeaturesO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CodingKey",
+            "printedName": "CodingKey",
+            "usr": "s:s9CodingKeyP",
+            "mangledName": "$ss9CodingKeyP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "FeaturesRepresentable",
+            "printedName": "FeaturesRepresentable",
+            "usr": "s:12UnicoSdkBase21FeaturesRepresentableP",
+            "mangledName": "$s12UnicoSdkBase21FeaturesRepresentableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkBase",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "CoreLocation",
         "printedName": "CoreLocation",
@@ -7275,102 +8294,6 @@
           },
           {
             "kind": "Var",
-            "name": "getGeoIP",
-            "printedName": "getGeoIP",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "GetGeoIP",
-                "printedName": "UnicoSdkBase.GetGeoIP",
-                "usr": "s:12UnicoSdkBase8GetGeoIPP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UnicoSdkBase0C0C8getGeoIPAA03GeteF0_pvp",
-            "mangledName": "$s12UnicoSdkBase0C0C8getGeoIPAA03GeteF0_pvp",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "GetGeoIP",
-                    "printedName": "UnicoSdkBase.GetGeoIP",
-                    "usr": "s:12UnicoSdkBase8GetGeoIPP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase0C0C8getGeoIPAA03GeteF0_pvg",
-                "mangledName": "$s12UnicoSdkBase0C0C8getGeoIPAA03GeteF0_pvg",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "geoLocation",
-            "printedName": "geoLocation",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "GeoLocation",
-                "printedName": "UnicoSdkBase.GeoLocation",
-                "usr": "s:12UnicoSdkBase11GeoLocationP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UnicoSdkBase0C0C11geoLocationAA03GeoE0_pvp",
-            "mangledName": "$s12UnicoSdkBase0C0C11geoLocationAA03GeoE0_pvp",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "GeoLocation",
-                    "printedName": "UnicoSdkBase.GeoLocation",
-                    "usr": "s:12UnicoSdkBase11GeoLocationP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase0C0C11geoLocationAA03GeoE0_pvg",
-                "mangledName": "$s12UnicoSdkBase0C0C11geoLocationAA03GeoE0_pvg",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "getDeviceInfo",
             "printedName": "getDeviceInfo",
             "children": [
@@ -7420,7 +8343,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(dataTransferService:locationManager:device:keyData:ivData:)",
+            "printedName": "init(dataTransferService:device:keyData:ivData:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7434,13 +8357,6 @@
                 "printedName": "UnicoSdkBase.DataTransferService",
                 "hasDefaultArg": true,
                 "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CLLocationManager",
-                "printedName": "CoreLocation.CLLocationManager",
-                "hasDefaultArg": true,
-                "usr": "c:objc(cs)CLLocationManager"
               },
               {
                 "kind": "TypeNominal",
@@ -7463,8 +8379,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12UnicoSdkBase0C0C19dataTransferService15locationManager6device7keyData02ivK0AcA0keF0_p_So010CLLocationH0CSo8UIDeviceCS2Stcfc",
-            "mangledName": "$s12UnicoSdkBase0C0C19dataTransferService15locationManager6device7keyData02ivK0AcA0keF0_p_So010CLLocationH0CSo8UIDeviceCS2Stcfc",
+            "usr": "s:12UnicoSdkBase0C0C19dataTransferService6device7keyData02ivI0AcA0ieF0_p_So8UIDeviceCS2Stcfc",
+            "mangledName": "$s12UnicoSdkBase0C0C19dataTransferService6device7keyData02ivI0AcA0ieF0_p_So8UIDeviceCS2Stcfc",
             "moduleName": "UnicoSdkBase",
             "declAttributes": [
               "Convenience",
@@ -7519,9 +8435,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "GetTokenRequestHeadersDTO",
-                "printedName": "UnicoSdkBase.GetTokenRequestHeadersDTO",
-                "usr": "s:12UnicoSdkBase25GetTokenRequestHeadersDTOV"
+                "name": "RequestHeadersDTO",
+                "printedName": "UnicoSdkBase.RequestHeadersDTO",
+                "usr": "s:12UnicoSdkBase17RequestHeadersDTOV"
               },
               {
                 "kind": "TypeFunc",
@@ -7557,8 +8473,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12UnicoSdkBase8GetTokenP03getE07headers10completionyAA0dE17RequestHeadersDTOV_ys6ResultOyAA0E0_ps5Error_pGctF",
-            "mangledName": "$s12UnicoSdkBase8GetTokenP03getE07headers10completionyAA0dE17RequestHeadersDTOV_ys6ResultOyAA0E0_ps5Error_pGctF",
+            "usr": "s:12UnicoSdkBase8GetTokenP03getE07headers10completionyAA17RequestHeadersDTOV_ys6ResultOyAA0E0_ps5Error_pGctF",
+            "mangledName": "$s12UnicoSdkBase8GetTokenP03getE07headers10completionyAA17RequestHeadersDTOV_ys6ResultOyAA0E0_ps5Error_pGctF",
             "moduleName": "UnicoSdkBase",
             "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.GetToken>",
             "sugared_genericSig": "<Self where Self : UnicoSdkBase.GetToken>",
@@ -7964,79 +8880,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "CLLocationManager",
-        "printedName": "CLLocationManager",
-        "declKind": "Class",
-        "usr": "c:objc(cs)CLLocationManager",
-        "moduleName": "CoreLocation",
-        "isOpen": true,
-        "intro_iOS": "2.0",
-        "objc_name": "CLLocationManager",
-        "declAttributes": [
-          "Available",
-          "ObjC",
-          "Dynamic"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "isExternal": true,
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "UIDevice",
         "printedName": "UIDevice",
         "children": [
@@ -8155,81 +8998,32 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/UseCases\/GeoLocationUseCase.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/DataSource\/FeatureFlagDataSource.swift",
       "kind": "BooleanLiteral",
-      "offset": 524,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/UseCases\/GeoLocationUseCase.swift",
-      "kind": "BooleanLiteral",
-      "offset": 598,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/UseCases\/GeoLocationUseCase.swift",
-      "kind": "BooleanLiteral",
-      "offset": 691,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/UseCases\/GeoLocationUseCase.swift",
-      "kind": "BooleanLiteral",
-      "offset": 785,
+      "offset": 1010,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 284,
-      "length": 17,
-      "value": "\"Project-Version\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
-      "kind": "StringLiteral",
-      "offset": 340,
-      "length": 14,
-      "value": "\"Project-Name\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
-      "kind": "StringLiteral",
-      "offset": 389,
-      "length": 10,
-      "value": "\"Platform\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
-      "kind": "StringLiteral",
-      "offset": 431,
-      "length": 14,
-      "value": "\"Dependencies\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
-      "kind": "StringLiteral",
-      "offset": 534,
-      "length": 9,
-      "value": "\"Api-key\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
-      "kind": "StringLiteral",
-      "offset": 606,
+      "offset": 274,
       "length": 18,
       "value": "\"sdk\/auth\/get-jwt\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 814,
-      "length": 12,
-      "value": "\"auth\/getIp\""
+      "offset": 599,
+      "length": 11,
+      "value": "\"sdk\/flags\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
+      "kind": "IntegerLiteral",
+      "offset": 744,
+      "length": 1,
+      "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/Entities\/TokenSDK.swift",
@@ -8400,25 +9194,53 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/GetTokenRequestHeadersDTO.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",
       "kind": "StringLiteral",
-      "offset": 382,
+      "offset": 342,
       "length": 5,
       "value": "\"IOS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/GetTokenRequestHeadersDTO.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",
       "kind": "StringLiteral",
-      "offset": 978,
-      "length": 2,
-      "value": "\"\""
+      "offset": 716,
+      "length": 17,
+      "value": "\"Project-Version\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Interfaces\/DataSources\/GeoLocationDataSource.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",
       "kind": "StringLiteral",
-      "offset": 824,
-      "length": 37,
-      "value": "\"NSLocationWhenInUseUsageDescription\""
+      "offset": 764,
+      "length": 14,
+      "value": "\"Project-Name\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",
+      "kind": "StringLiteral",
+      "offset": 805,
+      "length": 10,
+      "value": "\"Platform\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",
+      "kind": "StringLiteral",
+      "offset": 852,
+      "length": 9,
+      "value": "\"Api-key\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",
+      "kind": "StringLiteral",
+      "offset": 888,
+      "length": 14,
+      "value": "\"Dependencies\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",
+      "kind": "StringLiteral",
+      "offset": 1367,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkConfig.swift",
@@ -8435,2104 +9257,18 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/API.swift",
-      "kind": "Dictionary",
-      "offset": 1082,
-      "length": 36,
-      "value": "[(\"Content-Type\", \"application\/json\")]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Repositories\/DefaultGeoLocationRepository.swift",
-      "kind": "StringLiteral",
-      "offset": 322,
-      "length": 28,
-      "value": "\"UnicoSdkBase.DefaultGeoLocationRepository\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2694,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3180,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/DTO\/FeatureFlagListResponseDTO.swift",
       "kind": "Array",
-      "offset": 4192,
-      "length": 129,
-      "value": "[\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\"]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "Array",
-      "offset": 4420,
-      "length": 129,
-      "value": "[\"0\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\"]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4716,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "StringLiteral",
-      "offset": 4735,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4888,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4894,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4898,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5100,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5120,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5141,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5147,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5167,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5189,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5194,
-      "length": 10,
-      "value": "0b00000111"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5209,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5219,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5225,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5245,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5267,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5272,
-      "length": 10,
-      "value": "0b00111110"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5287,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5307,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5329,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5334,
-      "length": 10,
-      "value": "0b00000001"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5349,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5359,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5365,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5385,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5407,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5412,
-      "length": 10,
-      "value": "0b00001111"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5427,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5437,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5443,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5463,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5485,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5490,
-      "length": 10,
-      "value": "0b01111100"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5505,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5525,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5547,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5552,
-      "length": 10,
-      "value": "0b00000011"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5567,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5577,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5583,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5603,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5625,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5630,
-      "length": 10,
-      "value": "0b00011111"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5662,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5703,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5741,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5912,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5937,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5956,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5980,
-      "length": 10,
-      "value": "0b00000011"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5995,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6008,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6028,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6052,
-      "length": 10,
-      "value": "0b01111100"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6067,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6100,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6125,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6144,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6168,
-      "length": 10,
-      "value": "0b00001111"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6183,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6196,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6229,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6254,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6273,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6297,
-      "length": 10,
-      "value": "0b00000001"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6312,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6325,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6345,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6369,
-      "length": 10,
-      "value": "0b00111110"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6384,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6417,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6442,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6461,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6485,
-      "length": 10,
-      "value": "0b00000111"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6500,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6513,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6533,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6557,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "StringLiteral",
-      "offset": 6635,
-      "length": 3,
-      "value": "\"=\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6676,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6695,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6700,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6711,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6730,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6755,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6793,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6812,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6850,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6869,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6894,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6932,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6951,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7009,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7014,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "StringLiteral",
-      "offset": 7250,
-      "length": 16,
-      "value": "\"internal error\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7310,
-      "length": 3,
-      "value": "255"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7577,
-      "length": 2,
-      "value": "26"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7580,
-      "length": 2,
-      "value": "27"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7584,
-      "length": 2,
-      "value": "28"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7587,
-      "length": 2,
-      "value": "29"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7590,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7593,
-      "length": 2,
-      "value": "31"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7647,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7650,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7653,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7657,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7660,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7663,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7666,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7670,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7673,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7676,
-      "length": 1,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7678,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7682,
-      "length": 2,
-      "value": "11"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7685,
-      "length": 2,
-      "value": "12"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7688,
-      "length": 2,
-      "value": "13"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7691,
-      "length": 2,
-      "value": "14"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7715,
-      "length": 2,
-      "value": "15"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7718,
-      "length": 2,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7721,
-      "length": 2,
-      "value": "17"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7724,
-      "length": 2,
-      "value": "18"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7728,
-      "length": 2,
-      "value": "19"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7731,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7734,
-      "length": 2,
-      "value": "21"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7737,
-      "length": 2,
-      "value": "22"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7741,
-      "length": 2,
-      "value": "23"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7744,
-      "length": 2,
-      "value": "24"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7747,
-      "length": 2,
-      "value": "25"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7791,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7794,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7797,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7801,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7804,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7807,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7810,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7814,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7817,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7820,
-      "length": 1,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7822,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7826,
-      "length": 2,
-      "value": "11"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7829,
-      "length": 2,
-      "value": "12"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7832,
-      "length": 2,
-      "value": "13"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7835,
-      "length": 2,
-      "value": "14"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7859,
-      "length": 2,
-      "value": "15"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7862,
-      "length": 2,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7865,
-      "length": 2,
-      "value": "17"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7868,
-      "length": 2,
-      "value": "18"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7872,
-      "length": 2,
-      "value": "19"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7875,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7878,
-      "length": 2,
-      "value": "21"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7881,
-      "length": 2,
-      "value": "22"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7885,
-      "length": 2,
-      "value": "23"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7888,
-      "length": 2,
-      "value": "24"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7891,
-      "length": 2,
-      "value": "25"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8775,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8778,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8781,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8784,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8788,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8791,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8794,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8797,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8801,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8804,
-      "length": 1,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8849,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8852,
-      "length": 2,
-      "value": "11"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8855,
-      "length": 2,
-      "value": "12"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8859,
-      "length": 2,
-      "value": "13"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8862,
-      "length": 2,
-      "value": "14"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8865,
-      "length": 2,
-      "value": "15"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8868,
-      "length": 2,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8872,
-      "length": 2,
-      "value": "17"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8875,
-      "length": 2,
-      "value": "18"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8878,
-      "length": 2,
-      "value": "19"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8881,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8885,
-      "length": 2,
-      "value": "21"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8888,
-      "length": 2,
-      "value": "22"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8891,
-      "length": 2,
-      "value": "23"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8894,
-      "length": 2,
-      "value": "24"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8918,
-      "length": 2,
-      "value": "25"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8921,
-      "length": 2,
-      "value": "26"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8924,
-      "length": 2,
-      "value": "27"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8927,
-      "length": 2,
-      "value": "28"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8931,
-      "length": 2,
-      "value": "29"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8934,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8937,
-      "length": 2,
-      "value": "31"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8993,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8996,
-      "length": 2,
-      "value": "11"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 8999,
-      "length": 2,
-      "value": "12"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9003,
-      "length": 2,
-      "value": "13"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9006,
-      "length": 2,
-      "value": "14"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9009,
-      "length": 2,
-      "value": "15"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9012,
-      "length": 2,
-      "value": "16"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9016,
-      "length": 2,
-      "value": "17"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9019,
-      "length": 2,
-      "value": "18"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9022,
-      "length": 2,
-      "value": "19"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9025,
-      "length": 2,
-      "value": "20"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9029,
-      "length": 2,
-      "value": "21"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9032,
-      "length": 2,
-      "value": "22"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9035,
-      "length": 2,
-      "value": "23"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9038,
-      "length": 2,
-      "value": "24"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9062,
-      "length": 2,
-      "value": "25"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9065,
-      "length": 2,
-      "value": "26"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9068,
-      "length": 2,
-      "value": "27"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9071,
-      "length": 2,
-      "value": "28"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9075,
-      "length": 2,
-      "value": "29"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9078,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9081,
-      "length": 2,
-      "value": "31"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9848,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "Array",
-      "offset": 9867,
+      "offset": 467,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "StringLiteral",
-      "offset": 9994,
-      "length": 8,
-      "value": "\"======\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10025,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "StringLiteral",
-      "offset": 10062,
-      "length": 6,
-      "value": "\"====\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10091,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "StringLiteral",
-      "offset": 10128,
-      "length": 5,
-      "value": "\"===\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10156,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "StringLiteral",
-      "offset": 10193,
-      "length": 3,
-      "value": "\"=\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10219,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10257,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10433,
-      "length": 4,
-      "value": "0xff"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10464,
-      "length": 2,
-      "value": "31"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "StringLiteral",
-      "offset": 10780,
-      "length": 42,
-      "value": "\"string contains some invalid characters.\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10952,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 10987,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11017,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11035,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11056,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11067,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11088,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11099,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11120,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11131,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11152,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "StringLiteral",
-      "offset": 11188,
-      "length": 27,
-      "value": "\"string length is invalid.\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11305,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11309,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11573,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11621,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11877,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11920,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11964,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12008,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12052,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12096,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12140,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12184,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12228,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12296,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12310,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12347,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12362,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12376,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12390,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12427,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12442,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12456,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12493,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12508,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12522,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12536,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12573,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12588,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12647,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12678,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12723,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12917,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12959,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13003,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13045,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13087,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13129,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13171,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13215,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13257,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13299,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13343,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13431,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13469,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13484,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13498,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13512,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13551,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13589,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13604,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13618,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13657,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13695,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13710,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13724,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13738,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13777,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13830,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Plugins\/External\/Base32\/Base32.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13844,
-      "length": 1,
-      "value": "2"
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/API.swift",
+      "kind": "Dictionary",
+      "offset": 933,
+      "length": 36,
+      "value": "[(\"Content-Type\", \"application\/json\")]"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/UIDeviceExtensions.swift",
@@ -10635,98 +9371,105 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "BooleanLiteral",
-      "offset": 979,
+      "offset": 1024,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "Dictionary",
-      "offset": 1079,
+      "offset": 1124,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "Dictionary",
-      "offset": 1193,
+      "offset": 1238,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "Dictionary",
-      "offset": 1305,
+      "offset": 1350,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1546,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "StringLiteral",
-      "offset": 2762,
+      "offset": 2952,
       "length": 3,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "StringLiteral",
-      "offset": 2800,
+      "offset": 2990,
       "length": 3,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "StringLiteral",
-      "offset": 3265,
+      "offset": 3455,
       "length": 13,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "StringLiteral",
-      "offset": 3277,
+      "offset": 3467,
       "length": 3,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "BooleanLiteral",
-      "offset": 4691,
+      "offset": 4934,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "StringLiteral",
-      "offset": 4803,
+      "offset": 5046,
       "length": 23,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "StringLiteral",
-      "offset": 4813,
+      "offset": 5056,
       "length": 1,
       "value": "\"=\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "StringLiteral",
-      "offset": 4825,
+      "offset": 5068,
       "length": 3,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "StringLiteral",
-      "offset": 4860,
+      "offset": 5103,
       "length": 3,
       "value": "\"&\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",
       "kind": "StringLiteral",
-      "offset": 4958,
+      "offset": 5201,
       "length": 2,
       "value": "\"\""
     },
@@ -10750,13 +9493,6 @@
       "offset": 427,
       "length": 44,
       "value": "\"https:\/\/backend-sdk.prod.private.unico.run\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/AppConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 537,
-      "length": 25,
-      "value": "\"https:\/\/haven.mobi:8090\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/Cryptography\/DefaultUnicoDecrypt.swift",
@@ -10783,6 +9519,20 @@
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/Cryptography\/DefaultUnicoDecrypt.swift",
       "kind": "StringLiteral",
       "offset": 1136,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/DynamicCodingKey.swift",
+      "kind": "StringLiteral",
+      "offset": 341,
+      "length": 13,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/DynamicCodingKey.swift",
+      "kind": "StringLiteral",
+      "offset": 353,
       "length": 2,
       "value": "\"\""
     }
