@@ -1,0 +1,370 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkSecurity"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkSecurity"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkSecurity"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DeviceInfo",
+        "printedName": "DeviceInfo",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "ip",
+            "printedName": "ip",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16UnicoSdkSecurity10DeviceInfoP2ipSSSgvp",
+            "mangledName": "$s16UnicoSdkSecurity10DeviceInfoP2ipSSSgvp",
+            "moduleName": "UnicoSdkSecurity",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkSecurity10DeviceInfoP2ipSSSgvg",
+                "mangledName": "$s16UnicoSdkSecurity10DeviceInfoP2ipSSSgvg",
+                "moduleName": "UnicoSdkSecurity",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkSecurity.DeviceInfo>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkSecurity.DeviceInfo>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "geolocation",
+            "printedName": "geolocation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreLocation.CLLocation?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CLLocation",
+                    "printedName": "CoreLocation.CLLocation",
+                    "usr": "c:objc(cs)CLLocation"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16UnicoSdkSecurity10DeviceInfoP11geolocationSo10CLLocationCSgvp",
+            "mangledName": "$s16UnicoSdkSecurity10DeviceInfoP11geolocationSo10CLLocationCSgvp",
+            "moduleName": "UnicoSdkSecurity",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreLocation.CLLocation?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CLLocation",
+                        "printedName": "CoreLocation.CLLocation",
+                        "usr": "c:objc(cs)CLLocation"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16UnicoSdkSecurity10DeviceInfoP11geolocationSo10CLLocationCSgvg",
+                "mangledName": "$s16UnicoSdkSecurity10DeviceInfoP11geolocationSo10CLLocationCSgvg",
+                "moduleName": "UnicoSdkSecurity",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkSecurity.DeviceInfo>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkSecurity.DeviceInfo>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16UnicoSdkSecurity10DeviceInfoP",
+        "mangledName": "$s16UnicoSdkSecurity10DeviceInfoP",
+        "moduleName": "UnicoSdkSecurity",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkSecurity"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkSecurity",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UnicoSecuritySDK",
+        "printedName": "UnicoSecuritySDK",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnicoSecuritySDK",
+                "printedName": "UnicoSdkSecurity.UnicoSecuritySDK",
+                "usr": "s:16UnicoSdkSecurity0aC3SDKC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16UnicoSdkSecurity0aC3SDKCACycfc",
+            "mangledName": "$s16UnicoSdkSecurity0aC3SDKCACycfc",
+            "moduleName": "UnicoSdkSecurity",
+            "declAttributes": [
+              "AccessControl",
+              "Convenience"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "getDeviceInfo",
+            "printedName": "getDeviceInfo(completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkSecurity.DeviceInfo) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DeviceInfo",
+                    "printedName": "UnicoSdkSecurity.DeviceInfo",
+                    "usr": "s:16UnicoSdkSecurity10DeviceInfoP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16UnicoSdkSecurity0aC3SDKC13getDeviceInfo17completionHandleryyAA0fG0_pc_tF",
+            "mangledName": "$s16UnicoSdkSecurity0aC3SDKC13getDeviceInfo17completionHandleryyAA0fG0_pc_tF",
+            "moduleName": "UnicoSdkSecurity",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16UnicoSdkSecurity0aC3SDKC",
+        "mangledName": "$s16UnicoSdkSecurity0aC3SDKC",
+        "moduleName": "UnicoSdkSecurity",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 700,
+      "length": 35,
+      "value": "\"WARNING: optionals error recovery\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1281,
+      "length": 47,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1297,
+      "length": 1,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1327,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1469,
+      "length": 47,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1485,
+      "length": 1,
+      "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/AppSec\/Domain\/UseCases\/Implementations\/DefaultGetDeviceInfoUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 1515,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/Api\/UnicoSecuritySDKFactory.swift",
+      "kind": "StringLiteral",
+      "offset": 503,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkSecurity\/UnicoSdkSecurity\/Api\/UnicoSecuritySDKFactory.swift",
+      "kind": "StringLiteral",
+      "offset": 527,
+      "length": 2,
+      "value": "\"\""
+    }
+  ]
+}

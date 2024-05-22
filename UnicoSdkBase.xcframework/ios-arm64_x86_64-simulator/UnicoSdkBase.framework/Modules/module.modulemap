@@ -1,11 +1,4 @@
 framework module UnicoSdkBase {
-  umbrella header "UnicoSdkBase.h"
-  export *
-
-  module * { export * }
-}
-
-module UnicoSdkBase.Swift {
   header "UnicoSdkBase-Swift.h"
   requires objc
 }

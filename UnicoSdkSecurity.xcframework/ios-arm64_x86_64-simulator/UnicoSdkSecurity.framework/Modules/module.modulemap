@@ -1,0 +1,11 @@
+framework module UnicoSdkSecurity {
+  umbrella header "UnicoSdkSecurity.h"
+
+  export *
+  module * { export * }
+}
+
+module UnicoSdkSecurity.Swift {
+  header "UnicoSdkSecurity-Swift.h"
+  requires objc
+}
