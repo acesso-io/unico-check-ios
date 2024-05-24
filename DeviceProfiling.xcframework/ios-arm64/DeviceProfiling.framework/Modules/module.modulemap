@@ -1,6 +1,6 @@
 framework module DeviceProfiling {
   umbrella header "DeviceProfiling.h"
-
   export *
+
   module * { export * }
 }
