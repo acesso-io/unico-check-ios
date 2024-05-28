@@ -4,22 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Frameworks/OpenSSL.framework/Info.plist</key>
-		<data>
-		wxwQ/4UA3wJbQqZkoK2uzJwkrpg=
-		</data>
-		<key>Frameworks/OpenSSL.framework/OpenSSL</key>
-		<data>
-		GWb6DWCqTBYN2jHPU9Cyt37gFwk=
-		</data>
-		<key>Frameworks/OpenSSL.framework/PrivacyInfo.xcprivacy</key>
-		<data>
-		UYZlZBFpyqfX1ZhSqn/BDUyZFpI=
-		</data>
-		<key>Frameworks/OpenSSL.framework/_CodeSignature/CodeResources</key>
-		<data>
-		gsPMWsb/5CvT3r1oAMRsXTuG3qk=
-		</data>
 		<key>Headers/DeviceProfiling.h</key>
 		<data>
 		8dFQ4QuXm8Hm5VlBLB0dXANuS9o=
@@ -32,37 +16,13 @@
 		<data>
 		b43d0SxN9aW0TDBsRGRyPKfb8Ds=
 		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		UYZlZBFpyqfX1ZhSqn/BDUyZFpI=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/OpenSSL.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KSbbL4Nje0D/AA31ENNRJ7KtMYXFp8pTFErLMFKnElE=
-			</data>
-		</dict>
-		<key>Frameworks/OpenSSL.framework/OpenSSL</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			y6yMq64+GOAB+QfRRbKO0g5N5hWU5PT1yjnT93t7Zuo=
-			</data>
-		</dict>
-		<key>Frameworks/OpenSSL.framework/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			r/nIkOe5UnJDpHwoG6NljDfx+dZ21j4CsuNro4wq8+4=
-			</data>
-		</dict>
-		<key>Frameworks/OpenSSL.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			edXhQQTTKfpo33og8KgrXrealt75lRupe3sR0IIkbH4=
-			</data>
-		</dict>
 		<key>Headers/DeviceProfiling.h</key>
 		<dict>
 			<key>hash2</key>
@@ -75,6 +35,13 @@
 			<key>hash2</key>
 			<data>
 			MzsmURjHeTGWjAhB75pMLmAeA+tqEOLocRjWoIg6qlw=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			r/nIkOe5UnJDpHwoG6NljDfx+dZ21j4CsuNro4wq8+4=
 			</data>
 		</dict>
 	</dict>
