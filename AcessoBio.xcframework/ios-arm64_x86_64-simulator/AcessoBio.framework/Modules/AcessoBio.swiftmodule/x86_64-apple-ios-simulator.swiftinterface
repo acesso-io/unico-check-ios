@@ -7,7 +7,6 @@ import AVFoundation
 import CoreMotion
 import CoreTelephony
 import DeveloperToolsSupport
-import DeviceProfiling
 import FaceTecSDK
 import Foundation
 import Swift
