@@ -463,7 +463,6 @@ SWIFT_CLASS("_TtC9AcessoBio18DeviceBehaviorsDTO")
 @end
 
 
-
 SWIFT_CLASS("_TtC9AcessoBio14DocumentResult")
 @interface DocumentResult : CaptureResult
 - (nonnull instancetype)initWithBase64:(NSString * _Null_unspecified)base64 encrypted:(NSString * _Null_unspecified)encrypted OBJC_DESIGNATED_INITIALIZER;
