@@ -1656,90 +1656,6 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "havenService",
-            "printedName": "havenService",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DataTransferService",
-                "printedName": "UnicoSdkBase.DataTransferService",
-                "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvp",
-            "mangledName": "$s12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvp",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "Lazy",
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvg",
-                "mangledName": "$s12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvg",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvs",
-                "mangledName": "$s12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvs",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvM",
-                "mangledName": "$s12UnicoSdkBase3APIC12havenServiceAA012DataTransferF0_pvM",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -7447,6 +7363,13 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "UnicoSdkBase"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
           "RawDocComment"
@@ -9928,7 +9851,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/API.swift",
       "kind": "Dictionary",
-      "offset": 1082,
+      "offset": 933,
       "length": 36,
       "value": "[(\"Content-Type\", \"application\/json\")]"
     },
@@ -9991,9 +9914,16 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 861,
+      "offset": 874,
       "length": 12,
-      "value": "\"auth\/getIp\""
+      "value": "\"sdk\/get-ip\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 962,
+      "length": 7,
+      "value": "\"Token\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/Entities\/TokenSDK.swift",
@@ -10171,6 +10101,20 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/GetGeoIPRequestDTO+Mapping.swift",
+      "kind": "StringLiteral",
+      "offset": 238,
+      "length": 6,
+      "value": "\"body\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/GetGeoIPRequestDTO+Mapping.swift",
+      "kind": "StringLiteral",
+      "offset": 238,
+      "length": 6,
+      "value": "\"body\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/DynamicCodingKey.swift",
       "kind": "StringLiteral",
       "offset": 341,
@@ -10283,6 +10227,27 @@
       "value": "\"Expected Data type\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/SdkVersionConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 248,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/SdkVersionConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 370,
+      "length": 23,
+      "value": "\"unico.io.UnicoSdkBase\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/SdkVersionConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 492,
+      "length": 28,
+      "value": "\"CFBundleShortVersionString\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/AppConfiguration.swift",
       "kind": "StringLiteral",
       "offset": 212,
@@ -10302,13 +10267,6 @@
       "offset": 427,
       "length": 44,
       "value": "\"https:\/\/backend-sdk.prod.private.unico.run\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/AppConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 537,
-      "length": 25,
-      "value": "\"https:\/\/haven.mobi:8090\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",

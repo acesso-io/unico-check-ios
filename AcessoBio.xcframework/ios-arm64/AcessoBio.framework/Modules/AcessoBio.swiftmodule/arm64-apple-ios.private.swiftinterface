@@ -4,6 +4,7 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 @_exported import AcessoBio
+import CoreLocation
 import CoreMotion
 import CoreTelephony
 import DeveloperToolsSupport
@@ -66,6 +67,15 @@ extension AcessoBio.DefaultLibInfoWoker : AcessoBio.LibInfoWoker {
 @objc @_inheritsConvenienceInitializers public class UnicoConfigDataSourceManager : ObjectiveC.NSObject {
   @objc public func manage(dataSource: any AcessoBio.AcessoBioConfigDataSource) -> AcessoBio.UnicoSetupData
   @objc override dynamic public init()
+  @objc deinit
+}
+public protocol UnicoSecuritySDKDeviceInfo {
+  var ip: Swift.String? { get }
+  var geolocation: CoreLocation.CLLocation? { get }
+}
+public class UnicoSecuritySDK {
+  public init()
+  public func getDeviceInfo(completionHandler: @escaping (any AcessoBio.UnicoSecuritySDKDeviceInfo) -> Swift.Void)
   @objc deinit
 }
 public func printIfDebug(_ message: Any)

@@ -1508,6 +1508,240 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkSecurity",
+        "printedName": "UnicoSdkSecurity",
+        "declKind": "Import",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UnicoSecuritySDKDeviceInfo",
+        "printedName": "UnicoSecuritySDKDeviceInfo",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "ip",
+            "printedName": "ip",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AcessoBio26UnicoSecuritySDKDeviceInfoP2ipSSSgvp",
+            "mangledName": "$s9AcessoBio26UnicoSecuritySDKDeviceInfoP2ipSSSgvp",
+            "moduleName": "AcessoBio",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AcessoBio26UnicoSecuritySDKDeviceInfoP2ipSSSgvg",
+                "mangledName": "$s9AcessoBio26UnicoSecuritySDKDeviceInfoP2ipSSSgvg",
+                "moduleName": "AcessoBio",
+                "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.UnicoSecuritySDKDeviceInfo>",
+                "sugared_genericSig": "<Self where Self : AcessoBio.UnicoSecuritySDKDeviceInfo>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "geolocation",
+            "printedName": "geolocation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreLocation.CLLocation?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CLLocation",
+                    "printedName": "CoreLocation.CLLocation",
+                    "usr": "c:objc(cs)CLLocation"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AcessoBio26UnicoSecuritySDKDeviceInfoP11geolocationSo10CLLocationCSgvp",
+            "mangledName": "$s9AcessoBio26UnicoSecuritySDKDeviceInfoP11geolocationSo10CLLocationCSgvp",
+            "moduleName": "AcessoBio",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreLocation.CLLocation?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CLLocation",
+                        "printedName": "CoreLocation.CLLocation",
+                        "usr": "c:objc(cs)CLLocation"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AcessoBio26UnicoSecuritySDKDeviceInfoP11geolocationSo10CLLocationCSgvg",
+                "mangledName": "$s9AcessoBio26UnicoSecuritySDKDeviceInfoP11geolocationSo10CLLocationCSgvg",
+                "moduleName": "AcessoBio",
+                "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.UnicoSecuritySDKDeviceInfo>",
+                "sugared_genericSig": "<Self where Self : AcessoBio.UnicoSecuritySDKDeviceInfo>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:9AcessoBio26UnicoSecuritySDKDeviceInfoP",
+        "mangledName": "$s9AcessoBio26UnicoSecuritySDKDeviceInfoP",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UnicoSecuritySDK",
+        "printedName": "UnicoSecuritySDK",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UnicoSecuritySDK",
+                "printedName": "AcessoBio.UnicoSecuritySDK",
+                "usr": "s:9AcessoBio16UnicoSecuritySDKC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AcessoBio16UnicoSecuritySDKCACycfc",
+            "mangledName": "$s9AcessoBio16UnicoSecuritySDKCACycfc",
+            "moduleName": "AcessoBio",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getDeviceInfo",
+            "printedName": "getDeviceInfo(completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(AcessoBio.UnicoSecuritySDKDeviceInfo) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnicoSecuritySDKDeviceInfo",
+                    "printedName": "AcessoBio.UnicoSecuritySDKDeviceInfo",
+                    "usr": "s:9AcessoBio26UnicoSecuritySDKDeviceInfoP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AcessoBio16UnicoSecuritySDKC13getDeviceInfo17completionHandleryyAA0cd9SDKDeviceH0_pc_tF",
+            "mangledName": "$s9AcessoBio16UnicoSecuritySDKC13getDeviceInfo17completionHandleryyAA0cd9SDKDeviceH0_pc_tF",
+            "moduleName": "AcessoBio",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9AcessoBio16UnicoSecuritySDKC",
+        "mangledName": "$s9AcessoBio16UnicoSecuritySDKC",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
         "kind": "Function",
         "name": "printIfDebug",
         "printedName": "printIfDebug(_:)",
@@ -16800,6 +17034,13 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/UnicoSecuritySDK\/UnicoSecuritySDKBridge.swift",
+      "kind": "BooleanLiteral",
+      "offset": 512,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO+BackendSDK.swift",
       "kind": "StringLiteral",
       "offset": 501,
@@ -17763,7 +18004,7 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 8,
-      "value": "\"2.14.1\""
+      "value": "\"2.14.2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKTokenResponseDTO.swift",

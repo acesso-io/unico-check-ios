@@ -74,10 +74,6 @@ public class API {
     get
     set
   }
-  public var havenService: any UnicoSdkBase.DataTransferService {
-    get
-    set
-  }
   public init()
   @objc deinit
 }
