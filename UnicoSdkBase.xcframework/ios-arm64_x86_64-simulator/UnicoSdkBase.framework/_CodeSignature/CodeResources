@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/UnicoSdkBase-Swift.h</key>
 		<data>
-		008xu4pltYB11/NkJavBldP+9x0=
+		uVsGhiGJGw5TogJRG7x82oaRi2w=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -14,11 +14,11 @@
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		E5JRE27xkTmjJzvvXuNyEkCTBZc=
+		y/Ii0EJwBl0GfK1v+YEoh85pj5U=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		2U6ZTrJXBe+rTPY20pOrXF7w9+Q=
+		md89vJIZWP2Gnu9d+fHXQQZiDW4=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		2U6ZTrJXBe+rTPY20pOrXF7w9+Q=
+		md89vJIZWP2Gnu9d+fHXQQZiDW4=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1qRpBnsbw06i9tkHaO9GDOZhbIc=
+		QXzfz1rondKvY23KBwlNeCtQhvU=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		E5JRE27xkTmjJzvvXuNyEkCTBZc=
+		y/Ii0EJwBl0GfK1v+YEoh85pj5U=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		LVX4p+fyfouzsXcDpWotMkZcqVY=
+		nf0SupkkAdNPR1tz2nJAHmJZQ5E=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		LVX4p+fyfouzsXcDpWotMkZcqVY=
+		nf0SupkkAdNPR1tz2nJAHmJZQ5E=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6iFq4qqfdMu/qVodB7NlNqxq/Ns=
+		awjnq0Xidag4X8LKYwn1n7RBo7M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,21 +63,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e5uPLCJsoYs4acEbynSWh114/KqwKUei/dWk+SQ3K9Y=
+			CqsJFkBTeeZXTuKZWe2ZO+A0wR7vXgBQ3EBTuivq9+0=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FbINWhuAA8fIPHhB+YxXKGeIpHlKfrb+mjj6j1mycIo=
+			ke5+EagnnOw9P2Nwjm+O4aIbGfGwjYmw+ytS3iVGPpA=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OXSCVjBz2U+lQ2ynURXCvNHOUoOgX+cZsa6MtpACJRU=
+			ZLswAI8oaXkzWG9yIuNIP4TwL/Xx51MlrBgVvNpZ1Vg=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -91,28 +91,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OXSCVjBz2U+lQ2ynURXCvNHOUoOgX+cZsa6MtpACJRU=
+			ZLswAI8oaXkzWG9yIuNIP4TwL/Xx51MlrBgVvNpZ1Vg=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			saqeEyDlMtAzPdoLYfxx46gzyLrP7AIKNWR78h55OSY=
+			eyAdYyykzitpVAsWS/2/XQtor1B38WxCfpAj7oCuZcU=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FbINWhuAA8fIPHhB+YxXKGeIpHlKfrb+mjj6j1mycIo=
+			ke5+EagnnOw9P2Nwjm+O4aIbGfGwjYmw+ytS3iVGPpA=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			71k0nGc7DNzkAWRJbvSUPhgzL1wowY+1wUlFnAjyaTg=
+			Zy1A/mmp8LYoNfLfeDiUCU4fCR8AkYLTnr+Tn34Iqj0=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -126,14 +126,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			71k0nGc7DNzkAWRJbvSUPhgzL1wowY+1wUlFnAjyaTg=
+			Zy1A/mmp8LYoNfLfeDiUCU4fCR8AkYLTnr+Tn34Iqj0=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wrIYcKdSgK1mGLrkMSs5QpNsmT069KzC0tC6Xw0Glmc=
+			TlAabwAsga6LPc0uZe1I3i9S+ZMWjnJQAdyHZDAi8VI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
