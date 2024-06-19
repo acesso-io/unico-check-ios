@@ -57,6 +57,11 @@ public struct ApiDataNetworkConfig : UnicoSdkBase.NetworkConfigurable {
 public protocol UnicoDecrypt {
   func decrypt(encoded: Swift.String?) -> Swift.String?
 }
+public class CryptedJSONResponseDecoder : UnicoSdkBase.ResponseDecoder {
+  public init(dateDecodingStrategy: Foundation.JSONDecoder.DateDecodingStrategy = .deferredToDate, decrypt: any UnicoSdkBase.UnicoDecrypt)
+  public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
+  @objc deinit
+}
 public class API {
   public var defaultService: any UnicoSdkBase.DataTransferService {
     get
@@ -88,17 +93,17 @@ extension UnicoSdkBase.CryptedResponseDTO : Swift.Decodable {
 extension UnicoSdkBase.CryptedResponseDTO {
   public func decrypt(using decryptor: any UnicoSdkBase.UnicoDecrypt) throws -> T
 }
-final public class DefaultUnicoDecrypt : UnicoSdkBase.UnicoDecrypt {
-  public init(keyData: [Swift.UInt8], ivData: [Swift.UInt8])
+@_hasMissingDesignatedInitializers final public class DefaultAESUnicoDecrypt : UnicoSdkBase.UnicoDecrypt {
   final public func decrypt(encoded: Swift.String?) -> Swift.String?
   @objc deinit
 }
-extension UnicoSdkBase.DefaultUnicoDecrypt {
+extension UnicoSdkBase.DefaultAESUnicoDecrypt {
   public static func makeHostDecrypt(keyData: [Swift.UInt8], ivData: [Swift.UInt8]) -> any UnicoSdkBase.UnicoDecrypt
   public static func makeTokenDecrypt(keyData: [Swift.UInt8], ivData: [Swift.UInt8]) -> any UnicoSdkBase.UnicoDecrypt
 }
-extension UnicoSdkBase.DefaultUnicoDecrypt {
-  public static func make(keyData: Swift.String, ivData: Swift.String) -> any UnicoSdkBase.UnicoDecrypt
+extension UnicoSdkBase.DefaultAESUnicoDecrypt {
+  public static func makeWithCBCBlockMode(keyData: Swift.String, ivData: Swift.String) -> any UnicoSdkBase.UnicoDecrypt
+  public static func makeWithGCMBlockMode(keyData: Swift.String, ivData: Swift.String) -> any UnicoSdkBase.UnicoDecrypt
 }
 public protocol Token {
   var token: Swift.String { get }
@@ -171,6 +176,26 @@ extension UnicoSdkBase.NetworkError {
   convenience public init(dataTransferService: any UnicoSdkBase.DataTransferService, locationManager: CoreLocation.CLLocationManager = CLLocationManager(), device: UIKit.UIDevice = UIDevice.current, keyData: Swift.String, ivData: Swift.String)
   @objc deinit
 }
+extension Swift.Optional {
+  public enum UnwrapOptionalError : Swift.Error {
+    case unwrapFailed
+    public static func == (a: Swift.Optional<Wrapped>.UnwrapOptionalError, b: Swift.Optional<Wrapped>.UnwrapOptionalError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public func unwrapOrThrow() throws -> Wrapped
+}
+extension Swift.Optional where Wrapped == Swift.String {
+  public func unwrapOrThrow() throws -> Wrapped
+}
+extension Swift.String {
+  public static var newUUID: Swift.String {
+    get
+  }
+  public static func randomString(length: Swift.Int) -> Swift.String
+}
 @_hasMissingDesignatedInitializers final public class DefaultFeatureFlagDataSource : UnicoSdkBase.FeatureFlagDataSourceFetcher, UnicoSdkBase.FeatureFlagDataSource {
   public static var shared: UnicoSdkBase.DefaultFeatureFlagDataSource
   final public func fetchFlags(headers: [Swift.String : Swift.String], request: [Swift.String : Any], dataTransferService: any UnicoSdkBase.DataTransferService, decryptor: any UnicoSdkBase.UnicoDecrypt, completion: @escaping UnicoSdkBase.DefaultFeatureFlagDataSource.Completion)
@@ -186,6 +211,10 @@ public protocol FeaturesRepresentable {
   var rawValue: Swift.String { get }
 }
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
+  case initDeviceProfiling
+  case sendRaspOnConfig
+  case sdkSessionIdOnSubmit
+  case endpointConfigV2
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
@@ -264,6 +293,11 @@ public func printIfDebug(_ message: Any)
 extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public static func modelName() -> Swift.String
 }
+public class JSONResponseDecoder : UnicoSdkBase.ResponseDecoder {
+  public init(dateDecodingStrategy: Foundation.JSONDecoder.DateDecodingStrategy = .deferredToDate)
+  public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
+  @objc deinit
+}
 public enum DataTransferError : Swift.Error {
   case noResponse
   case parsing(any Swift.Error)
@@ -304,11 +338,6 @@ public class DefaultDataTransferErrorResolver : UnicoSdkBase.DataTransferErrorRe
   public func resolve(error: UnicoSdkBase.NetworkError) -> any Swift.Error
   @objc deinit
 }
-public class JSONResponseDecoder : UnicoSdkBase.ResponseDecoder {
-  public init(dateDecodingStrategy: Foundation.JSONDecoder.DateDecodingStrategy = .deferredToDate)
-  public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
-  @objc deinit
-}
 public class RawDataResponseDecoder : UnicoSdkBase.ResponseDecoder {
   public init()
   public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
@@ -336,7 +365,7 @@ public enum BodyEncoding {
     get
   }
 }
-public class Endpoint<R> : UnicoSdkBase.ResponseRequestable {
+open class Endpoint<R> : UnicoSdkBase.ResponseRequestable {
   public typealias Response = R
   final public let path: Swift.String
   final public let isFullPath: Swift.Bool
@@ -373,6 +402,8 @@ extension UnicoSdkBase.Requestable {
   public func urlRequest(with config: any UnicoSdkBase.NetworkConfigurable) throws -> Foundation.URLRequest
 }
 extension UnicoSdkBase.FeatureFlagDataSourceFetcherError : Swift.Hashable {}
+extension Swift.Optional.UnwrapOptionalError : Swift.Equatable {}
+extension Swift.Optional.UnwrapOptionalError : Swift.Hashable {}
 extension UnicoSdkBase.Features : Swift.Hashable {}
 extension UnicoSdkBase.Features : Swift.RawRepresentable {}
 extension UnicoSdkBase.HTTPMethodType : Swift.Equatable {}

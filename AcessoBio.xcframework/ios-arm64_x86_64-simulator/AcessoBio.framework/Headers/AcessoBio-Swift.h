@@ -550,8 +550,8 @@ SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 
 
 
-SWIFT_CLASS("_TtC9AcessoBio26SDKTokenResponseDTOAdapter")
-@interface SDKTokenResponseDTOAdapter : NSObject
+SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
+@interface SDKConfigResponseDTOAdapter : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nullable facetecSessionToken;
 @property (nonatomic, readonly) BOOL geolocationEnabled;
 @property (nonatomic, readonly, copy) NSString * _Nonnull key;
@@ -660,7 +660,7 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCameraMetadataOutput")
 
 SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
 @interface UnicoCheckLivenessAdapter : NSObject
-- (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKTokenResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate isHomolog:(BOOL)isHomolog hostKey:(NSString * _Nonnull)hostKey;
+- (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKConfigResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate isHomolog:(BOOL)isHomolog hostKey:(NSString * _Nonnull)hostKey;
 - (void)prepareCameraWithSuccess:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (void)openCameraWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup timeoutInterval:(double)timeoutInterval success:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (NSString * _Nonnull)getLivenessKeybody SWIFT_WARN_UNUSED_RESULT;
@@ -868,7 +868,7 @@ SWIFT_CLASS("_TtC9AcessoBio21UnicoNetworkingModule")
 SWIFT_PROTOCOL("_TtP9AcessoBio18UnicoSetupProtocol_")
 @protocol UnicoSetupProtocol
 - (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData localeTypes:(LocaleTypes)localeTypes completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
-- (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
+- (SDKConfigResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL isHomolog;
 @end
 
@@ -877,7 +877,7 @@ SWIFT_CLASS("_TtC9AcessoBio10UnicoSetup")
 @interface UnicoSetup : NSObject <UnicoSetupProtocol>
 @property (nonatomic) BOOL isHomolog;
 - (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData localeTypes:(LocaleTypes)localeTypes completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
-- (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
+- (SDKConfigResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1484,8 +1484,8 @@ SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 
 
 
-SWIFT_CLASS("_TtC9AcessoBio26SDKTokenResponseDTOAdapter")
-@interface SDKTokenResponseDTOAdapter : NSObject
+SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
+@interface SDKConfigResponseDTOAdapter : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nullable facetecSessionToken;
 @property (nonatomic, readonly) BOOL geolocationEnabled;
 @property (nonatomic, readonly, copy) NSString * _Nonnull key;
@@ -1594,7 +1594,7 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCameraMetadataOutput")
 
 SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
 @interface UnicoCheckLivenessAdapter : NSObject
-- (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKTokenResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate isHomolog:(BOOL)isHomolog hostKey:(NSString * _Nonnull)hostKey;
+- (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKConfigResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate isHomolog:(BOOL)isHomolog hostKey:(NSString * _Nonnull)hostKey;
 - (void)prepareCameraWithSuccess:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (void)openCameraWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup timeoutInterval:(double)timeoutInterval success:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (NSString * _Nonnull)getLivenessKeybody SWIFT_WARN_UNUSED_RESULT;
@@ -1802,7 +1802,7 @@ SWIFT_CLASS("_TtC9AcessoBio21UnicoNetworkingModule")
 SWIFT_PROTOCOL("_TtP9AcessoBio18UnicoSetupProtocol_")
 @protocol UnicoSetupProtocol
 - (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData localeTypes:(LocaleTypes)localeTypes completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
-- (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
+- (SDKConfigResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL isHomolog;
 @end
 
@@ -1811,7 +1811,7 @@ SWIFT_CLASS("_TtC9AcessoBio10UnicoSetup")
 @interface UnicoSetup : NSObject <UnicoSetupProtocol>
 @property (nonatomic) BOOL isHomolog;
 - (void)setupSDKWithUnicoSetupData:(UnicoSetupData * _Nonnull)unicoSetupData localeTypes:(LocaleTypes)localeTypes completion:(void (^ _Nonnull)(ErrorBio * _Nullable))completion;
-- (SDKTokenResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
+- (SDKConfigResponseDTOAdapter * _Nullable)getSdkTokenObject SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

@@ -242,7 +242,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readwrite)double secondsTimeoutSession;
 
-@property (strong, nonatomic)SDKTokenResponseDTOAdapter *sdkToken;
+@property (strong, nonatomic)SDKConfigResponseDTOAdapter *sdkToken;
 
 #pragma mark - Behaviors
 
