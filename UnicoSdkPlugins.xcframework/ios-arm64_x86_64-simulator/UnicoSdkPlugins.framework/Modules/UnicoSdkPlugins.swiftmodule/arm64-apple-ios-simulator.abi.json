@@ -7674,6 +7674,539 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "GCM",
+        "printedName": "GCM",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Mode",
+            "printedName": "Mode",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "combined",
+                "printedName": "combined",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UnicoSdkPlugins.GCM.Mode.Type) -> UnicoSdkPlugins.GCM.Mode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "UnicoSdkPlugins.GCM.Mode",
+                        "usr": "s:15UnicoSdkPlugins3GCMC4ModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "UnicoSdkPlugins.GCM.Mode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Mode",
+                            "printedName": "UnicoSdkPlugins.GCM.Mode",
+                            "usr": "s:15UnicoSdkPlugins3GCMC4ModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15UnicoSdkPlugins3GCMC4ModeO8combinedyA2EmF",
+                "mangledName": "$s15UnicoSdkPlugins3GCMC4ModeO8combinedyA2EmF",
+                "moduleName": "UnicoSdkPlugins",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "detached",
+                "printedName": "detached",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UnicoSdkPlugins.GCM.Mode.Type) -> UnicoSdkPlugins.GCM.Mode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "UnicoSdkPlugins.GCM.Mode",
+                        "usr": "s:15UnicoSdkPlugins3GCMC4ModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "UnicoSdkPlugins.GCM.Mode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Mode",
+                            "printedName": "UnicoSdkPlugins.GCM.Mode",
+                            "usr": "s:15UnicoSdkPlugins3GCMC4ModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:15UnicoSdkPlugins3GCMC4ModeO8detachedyA2EmF",
+                "mangledName": "$s15UnicoSdkPlugins3GCMC4ModeO8detachedyA2EmF",
+                "moduleName": "UnicoSdkPlugins",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "UnicoSdkPlugins.GCM.Mode",
+                    "usr": "s:15UnicoSdkPlugins3GCMC4ModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "UnicoSdkPlugins.GCM.Mode",
+                    "usr": "s:15UnicoSdkPlugins3GCMC4ModeO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:15UnicoSdkPlugins3GCMC4ModeO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s15UnicoSdkPlugins3GCMC4ModeO2eeoiySbAE_AEtFZ",
+                "moduleName": "UnicoSdkPlugins",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:15UnicoSdkPlugins3GCMC4ModeO9hashValueSivp",
+                "mangledName": "$s15UnicoSdkPlugins3GCMC4ModeO9hashValueSivp",
+                "moduleName": "UnicoSdkPlugins",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:15UnicoSdkPlugins3GCMC4ModeO9hashValueSivg",
+                    "mangledName": "$s15UnicoSdkPlugins3GCMC4ModeO9hashValueSivg",
+                    "moduleName": "UnicoSdkPlugins",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:15UnicoSdkPlugins3GCMC4ModeO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s15UnicoSdkPlugins3GCMC4ModeO4hash4intoys6HasherVz_tF",
+                "moduleName": "UnicoSdkPlugins",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:15UnicoSdkPlugins3GCMC4ModeO",
+            "mangledName": "$s15UnicoSdkPlugins3GCMC4ModeO",
+            "moduleName": "UnicoSdkPlugins",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "options",
+            "printedName": "options",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BlockModeOption",
+                "printedName": "UnicoSdkPlugins.BlockModeOption",
+                "usr": "s:15UnicoSdkPlugins15BlockModeOptionV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15UnicoSdkPlugins3GCMC7optionsAA15BlockModeOptionVvp",
+            "mangledName": "$s15UnicoSdkPlugins3GCMC7optionsAA15BlockModeOptionVvp",
+            "moduleName": "UnicoSdkPlugins",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BlockModeOption",
+                    "printedName": "UnicoSdkPlugins.BlockModeOption",
+                    "usr": "s:15UnicoSdkPlugins15BlockModeOptionV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15UnicoSdkPlugins3GCMC7optionsAA15BlockModeOptionVvg",
+                "mangledName": "$s15UnicoSdkPlugins3GCMC7optionsAA15BlockModeOptionVvg",
+                "moduleName": "UnicoSdkPlugins",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "customBlockSize",
+            "printedName": "customBlockSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15UnicoSdkPlugins3GCMC15customBlockSizeSiSgvp",
+            "mangledName": "$s15UnicoSdkPlugins3GCMC15customBlockSizeSiSgvp",
+            "moduleName": "UnicoSdkPlugins",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15UnicoSdkPlugins3GCMC15customBlockSizeSiSgvg",
+                "mangledName": "$s15UnicoSdkPlugins3GCMC15customBlockSizeSiSgvg",
+                "moduleName": "UnicoSdkPlugins",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(iv:additionalAuthenticatedData:tagLength:mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GCM",
+                "printedName": "UnicoSdkPlugins.GCM",
+                "usr": "s:15UnicoSdkPlugins3GCMC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.UInt8]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt8",
+                    "printedName": "Swift.UInt8",
+                    "usr": "s:s5UInt8V"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.UInt8]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.UInt8]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt8",
+                        "printedName": "Swift.UInt8",
+                        "usr": "s:s5UInt8V"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Mode",
+                "printedName": "UnicoSdkPlugins.GCM.Mode",
+                "hasDefaultArg": true,
+                "usr": "s:15UnicoSdkPlugins3GCMC4ModeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15UnicoSdkPlugins3GCMC2iv27additionalAuthenticatedData9tagLength4modeACSays5UInt8VG_AJSgSiAC4ModeOtcfc",
+            "mangledName": "$s15UnicoSdkPlugins3GCMC2iv27additionalAuthenticatedData9tagLength4modeACSays5UInt8VG_AJSgSiAC4ModeOtcfc",
+            "moduleName": "UnicoSdkPlugins",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "worker",
+            "printedName": "worker(blockSize:cipherOperation:encryptionOperation:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CipherModeWorker",
+                "printedName": "UnicoSdkPlugins.CipherModeWorker",
+                "usr": "s:15UnicoSdkPlugins16CipherModeWorkerP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.ArraySlice<Swift.UInt8>) -> [Swift.UInt8]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.UInt8]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.UInt8]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt8",
+                            "printedName": "Swift.UInt8",
+                            "usr": "s:s5UInt8V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ArraySlice",
+                    "printedName": "Swift.ArraySlice<Swift.UInt8>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt8",
+                        "printedName": "Swift.UInt8",
+                        "usr": "s:s5UInt8V"
+                      }
+                    ],
+                    "usr": "s:s10ArraySliceV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.ArraySlice<Swift.UInt8>) -> [Swift.UInt8]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.UInt8]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.UInt8]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt8",
+                            "printedName": "Swift.UInt8",
+                            "usr": "s:s5UInt8V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ArraySlice",
+                    "printedName": "Swift.ArraySlice<Swift.UInt8>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt8",
+                        "printedName": "Swift.UInt8",
+                        "usr": "s:s5UInt8V"
+                      }
+                    ],
+                    "usr": "s:s10ArraySliceV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15UnicoSdkPlugins3GCMC6worker9blockSize15cipherOperation010encryptionI0AA16CipherModeWorker_pSi_Says5UInt8VGSgs10ArraySliceVyAJGcAlOctKF",
+            "mangledName": "$s15UnicoSdkPlugins3GCMC6worker9blockSize15cipherOperation010encryptionI0AA16CipherModeWorker_pSi_Says5UInt8VGSgs10ArraySliceVyAJGcAlOctKF",
+            "moduleName": "UnicoSdkPlugins",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15UnicoSdkPlugins3GCMC",
+        "mangledName": "$s15UnicoSdkPlugins3GCMC",
+        "moduleName": "UnicoSdkPlugins",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "BlockMode",
+            "printedName": "BlockMode",
+            "usr": "s:15UnicoSdkPlugins9BlockModeP",
+            "mangledName": "$s15UnicoSdkPlugins9BlockModeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "Cryptor",
         "printedName": "Cryptor",
         "children": [
@@ -33069,245 +33602,245 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 2450,
+      "offset": 2485,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 3940,
+      "offset": 3982,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 4075,
+      "offset": 4117,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5142,
+      "offset": 5184,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 5311,
+      "offset": 5353,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "Array",
-      "offset": 8391,
+      "offset": 8433,
       "length": 12,
       "value": "[0, 0, 0, 1]"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 8688,
+      "offset": 8730,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 8706,
+      "offset": 8748,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 8724,
+      "offset": 8766,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9055,
+      "offset": 9097,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9141,
+      "offset": 9183,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9230,
+      "offset": 9272,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9277,
+      "offset": 9319,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9415,
+      "offset": 9457,
       "length": 18,
       "value": "0xE100000000000000"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9438,
+      "offset": 9480,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9769,
+      "offset": 9811,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 9799,
+      "offset": 9841,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 10329,
+      "offset": 10371,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 10362,
+      "offset": 10404,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 10504,
+      "offset": 10546,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 10832,
+      "offset": 10874,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 10865,
+      "offset": 10907,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 11279,
+      "offset": 11321,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12092,
+      "offset": 12134,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12437,
+      "offset": 12479,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12476,
+      "offset": 12518,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12481,
+      "offset": 12523,
       "length": 2,
       "value": "63"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12488,
+      "offset": 12530,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12505,
+      "offset": 12547,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12509,
+      "offset": 12551,
       "length": 3,
       "value": "128"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12577,
+      "offset": 12619,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12582,
+      "offset": 12624,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12603,
+      "offset": 12645,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12638,
+      "offset": 12680,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/BlockMode\/GCM.swift",
       "kind": "IntegerLiteral",
-      "offset": 12674,
+      "offset": 12716,
       "length": 1,
       "value": "1"
     },

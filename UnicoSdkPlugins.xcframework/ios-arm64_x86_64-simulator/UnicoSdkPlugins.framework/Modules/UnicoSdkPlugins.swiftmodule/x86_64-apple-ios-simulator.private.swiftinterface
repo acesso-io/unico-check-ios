@@ -296,6 +296,22 @@ extension UnicoSdkPlugins.SecureBytes : Swift.ExpressibleByArrayLiteral {
   convenience public init(arrayLiteral elements: Swift.UInt8...)
   public typealias ArrayLiteralElement = Swift.UInt8
 }
+final public class GCM : UnicoSdkPlugins.BlockMode {
+  public enum Mode {
+    case combined
+    case detached
+    public static func == (a: UnicoSdkPlugins.GCM.Mode, b: UnicoSdkPlugins.GCM.Mode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let options: UnicoSdkPlugins.BlockModeOption
+  final public let customBlockSize: Swift.Int?
+  public init(iv: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: UnicoSdkPlugins.GCM.Mode = .detached)
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock, encryptionOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock) throws -> any UnicoSdkPlugins.CipherModeWorker
+  @objc deinit
+}
 public protocol Cryptor {
   mutating func seek(to: Swift.Int) throws
 }
@@ -323,3 +339,5 @@ extension UnicoSdkPlugins.Padding : Swift.Hashable {}
 extension UnicoSdkPlugins.AES.Variant : Swift.Equatable {}
 extension UnicoSdkPlugins.AES.Variant : Swift.Hashable {}
 extension UnicoSdkPlugins.AES.Variant : Swift.RawRepresentable {}
+extension UnicoSdkPlugins.GCM.Mode : Swift.Equatable {}
+extension UnicoSdkPlugins.GCM.Mode : Swift.Hashable {}

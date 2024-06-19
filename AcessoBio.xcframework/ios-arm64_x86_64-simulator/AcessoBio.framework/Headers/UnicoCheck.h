@@ -25,7 +25,7 @@
 @class UnicoSetup;
 @class UnicoConfigDelegate;
 @class UnicoSetupData;
-@class SDKTokenResponseDTOAdapter;
+@class SDKConfigResponseDTOAdapter;
 @class UnicoJsonLoad;
 @class UnicoConfigDataSourceManager;
 @class UnicoFaceCameraViewController;
@@ -74,7 +74,7 @@ typedef NS_ENUM(NSInteger, CameraType) {
     BOOL hasImplementationError;
 
     id<UnicoSetupProtocol> unicoSetup;
-    SDKTokenResponseDTOAdapter *sdkTokenResponse;
+    SDKConfigResponseDTOAdapter *sdkTokenResponse;
 
     CameraType cameraType;
     DocumentEnums documentType;

@@ -143,7 +143,7 @@ extension AcessoBio.DefaultMotionSensorsDevice {
   @objc final public func stopUpdate()
 }
 public protocol UnicoSetupServicesProtocol {
-  typealias Response = Swift.Result<AcessoBio.SDKTokenResponseDTOAdapter, AcessoBio.ErrorBio>
+  typealias Response = Swift.Result<AcessoBio.SDKConfigResponseDTOAdapter, AcessoBio.ErrorBio>
   typealias Completion = (Self.Response) -> Swift.Void
   func getTokenUnico(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, completion: @escaping Self.Completion)
 }
@@ -177,7 +177,7 @@ extension AcessoBio.UnicoCheckThemes {
   public typealias PrepareCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
   public typealias OpenCompletionSuccess = ([Swift.String : Any]) -> Swift.Void
   public typealias OpenCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
-  @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKTokenResponseDTOAdapter, bioThemeDelegate: (any AcessoBio.AcessoBioThemeDelegate)?, isHomolog: Swift.Bool, hostKey: Swift.String)
+  @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKConfigResponseDTOAdapter, bioThemeDelegate: (any AcessoBio.AcessoBioThemeDelegate)?, isHomolog: Swift.Bool, hostKey: Swift.String)
   @objc public func prepareCamera(success: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionFailure)
   @objc public func openCamera(unicoSetup: AcessoBio.UnicoSetupData, timeoutInterval: Swift.Double, success: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionFailure)
   @objc public func getLivenessKeybody() -> Swift.String
@@ -222,6 +222,9 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
 }
 @objc @_hasMissingDesignatedInitializers public class DataLogger : ObjectiveC.NSObject {
   @objc public class func shared() -> AcessoBio.DataLogger
+  public var sdkSessionId: Swift.String? {
+    get
+  }
   @objc public func commitBuild()
   @objc public func commitPrepareCamera()
   @objc public func commitOpenCamera(_ openCamera: AcessoBio.OpenCameraDTO)
@@ -317,7 +320,7 @@ extension AcessoBio.DefaultProviderFactory : AcessoBio.ProviderFactory {
 public protocol Cancellable {
   func cancel()
 }
-@objc @_hasMissingDesignatedInitializers public class SDKTokenResponseDTOAdapter : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers public class SDKConfigResponseDTOAdapter : ObjectiveC.NSObject {
   @objc public var facetecSessionToken: Swift.String? {
     @objc get
   }
@@ -368,13 +371,13 @@ public protocol Cancellable {
 }
 @objc public protocol UnicoSetupProtocol {
   @objc func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
-  @objc func getSdkTokenObject() -> AcessoBio.SDKTokenResponseDTOAdapter?
+  @objc func getSdkTokenObject() -> AcessoBio.SDKConfigResponseDTOAdapter?
   @objc var isHomolog: Swift.Bool { get }
 }
 @objc @_inheritsConvenienceInitializers public class UnicoSetup : ObjectiveC.NSObject, AcessoBio.UnicoSetupProtocol {
   @objc public var isHomolog: Swift.Bool
   @objc public func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
-  @objc public func getSdkTokenObject() -> AcessoBio.SDKTokenResponseDTOAdapter?
+  @objc public func getSdkTokenObject() -> AcessoBio.SDKConfigResponseDTOAdapter?
   @objc override dynamic public init()
   @objc deinit
 }

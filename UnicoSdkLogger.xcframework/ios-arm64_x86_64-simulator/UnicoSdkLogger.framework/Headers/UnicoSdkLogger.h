@@ -8,7 +8,7 @@
 
 @class USLDefaultLogger, USLSensorValue, USLAccelerometerDeviceBehavior, USLAppSec, USLAttempts, USLFaceBehavior, USLDeviceBehavior, USLBehaviors, USLCameraTypes, USLCameraTypesDocument, USLCameraTypesDocumentDriversLicense, USLCameraTypesDocumentDriversLicenseBack, USLCameraTypesDocumentDriversLicenseFront, USLCameraTypesDocumentDriversLicenseFull, USLCameraTypesDocumentID, USLCameraTypesDocumentIDBack, USLCameraTypesDocumentIDFront, USLCameraTypesDocumentNewID, USLCameraTypesDocumentNewIDBack, USLCameraTypesDocumentNewIDFront, USLCameraTypesDocumentOther, USLCameraTypesDocumentRegistration, USLCameraTypesSelfie, USLCameraTypesSelfieDefault, USLCameraTypesSelfieLiveness, USLCameraTypesSelfieSmart, USLSilhouette, USLImage, USLJwtInfo, USLVideo, USLTimers, USLConnections, USLProvider, USLLiveness, USLCapture, USLOSTypes, USLDeviceInfo, USLErrorSDK, USLExtra, USLGeolocation, USLInfoValue, USLIInfo, USLKotlinEnumCompanion, USLKotlinEnum<E>, USLKotlinArray<T>, USLOriginTypes, USLOther, USLPlatformTypes, USLSessionTransactionsId, USLSize, USLEitherError, USLEitherSuccess<T>, USLKotlinNothing, USLDependencyInjection, USLDateKMM, USLEither<__covariant T>, USLEitherEmpty, USLKotlinThrowable, USLExceptionParam;
 
-@protocol USLBaseCameraTypes, USLKotlinComparable, USLUseCase, USLAddProviderUseCase, USLLogProviderRepository, USLLogProvider, USLGetLogUseCase, USLMapToJsonUseCase, USLSetLogAppSecUseCase, USLSetLogAttemptsUseCase, USLSetLogCallbackUseCase, USLSetLogCameraTypeUseCase, USLSetLogCameraUseCase, USLSetLogCaptureUseCase, USLSetLogDeviceInfoUseCase, USLSetLogDomainUseCase, USLSetLogErrorSdkUseCase, USLSetExtraDataUseCase, USLSetLogGeolocationUseCase, USLSetLogIInfoUseCase, USLSetLogOriginUseCase, USLSetLogOthersUseCase, USLSetLogPlataformUseCase, USLSetLogSessionIdUseCase, USLSetLogSessionTransactionsIdsUseCase, USLSetLogStatusUseCase, USLSetLogVersionUseCase, USLSetUuidUseCase, USLKotlinKClass, USLInjector, USLKotlinIterator, USLKotlinKDeclarationContainer, USLKotlinKAnnotatedElement, USLKotlinKClassifier;
+@protocol USLBaseCameraTypes, USLKotlinComparable, USLUseCase, USLAddProviderUseCase, USLLogProviderRepository, USLLogProvider, USLGetLogUseCase, USLMapToJsonUseCase, USLSetLogAppSecUseCase, USLSetLogAttemptsUseCase, USLSetLogCallbackUseCase, USLSetLogCameraTypeUseCase, USLSetLogCameraUseCase, USLSetLogCaptureUseCase, USLSetLogDeviceInfoUseCase, USLSetLogDomainUseCase, USLSetLogErrorSdkUseCase, USLSetExtraDataUseCase, USLSetLogGeolocationUseCase, USLSetLogIInfoUseCase, USLSetLogOriginUseCase, USLSetLogOthersUseCase, USLSetLogPlataformUseCase, USLSetLogSdkSessionIdUseCase, USLSetLogSessionIdUseCase, USLSetLogSessionTransactionsIdsUseCase, USLSetLogStatusUseCase, USLSetLogVersionUseCase, USLSetUuidUseCase, USLKotlinKClass, USLInjector, USLKotlinIterator, USLKotlinKDeclarationContainer, USLKotlinKAnnotatedElement, USLKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -864,6 +864,11 @@ __attribute__((swift_name("SetLogPlataformUseCase")))
 @required
 @end
 
+__attribute__((swift_name("SetLogSdkSessionIdUseCase")))
+@protocol USLSetLogSdkSessionIdUseCase <USLUseCase>
+@required
+@end
+
 __attribute__((swift_name("SetLogSessionIdUseCase")))
 @protocol USLSetLogSessionIdUseCase <USLUseCase>
 @required
@@ -1014,6 +1019,13 @@ __attribute__((swift_name("DefaultSetLogPlataformUseCase")))
 @interface USLDefaultSetLogPlataformUseCase : USLBase <USLSetLogPlataformUseCase>
 - (instancetype)initWithRepository:(id<USLLogProviderRepository>)repository __attribute__((swift_name("init(repository:)"))) __attribute__((objc_designated_initializer));
 - (USLBoolean * _Nullable)executeParam:(USLPlatformTypes * _Nullable)param __attribute__((swift_name("execute(param:)")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DefaultSetLogSdkSessionIdUseCase")))
+@interface USLDefaultSetLogSdkSessionIdUseCase : USLBase <USLSetLogSdkSessionIdUseCase>
+- (instancetype)initWithRepository:(id<USLLogProviderRepository>)repository __attribute__((swift_name("init(repository:)"))) __attribute__((objc_designated_initializer));
+- (USLBoolean * _Nullable)executeParam:(NSString * _Nullable)param __attribute__((swift_name("execute(param:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
