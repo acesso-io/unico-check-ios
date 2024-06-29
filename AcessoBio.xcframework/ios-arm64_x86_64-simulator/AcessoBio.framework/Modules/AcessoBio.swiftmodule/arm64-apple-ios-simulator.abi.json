@@ -13317,6 +13317,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "DeviceProfiling",
+        "printedName": "DeviceProfiling",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
         "kind": "TypeDecl",
         "name": "ProviderDTO",
         "printedName": "ProviderDTO",
@@ -18137,7 +18144,7 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 8,
-      "value": "\"2.15.1\""
+      "value": "\"2.15.2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKConfigResponseDTO.swift",
