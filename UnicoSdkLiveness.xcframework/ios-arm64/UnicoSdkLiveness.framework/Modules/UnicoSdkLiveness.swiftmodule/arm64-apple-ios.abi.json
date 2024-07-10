@@ -3767,13 +3767,6 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness"
-      },
-      {
-        "kind": "Import",
         "name": "DeveloperToolsSupport",
         "printedName": "DeveloperToolsSupport",
         "declKind": "Import",
@@ -5585,21 +5578,21 @@
     {
       "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/UnicoSdkLiveness\/IntermediateBuildFilesPath\/UnicoSdkLiveness.build\/Release-iphoneos\/UnicoSdkLiveness.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 741,
+      "offset": 696,
       "length": 17,
       "value": "\"ic_alert_circle\""
     },
     {
       "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/UnicoSdkLiveness\/IntermediateBuildFilesPath\/UnicoSdkLiveness.build\/Release-iphoneos\/UnicoSdkLiveness.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 883,
+      "offset": 838,
       "length": 10,
       "value": "\"ic_close\""
     },
     {
       "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/UnicoSdkLiveness\/IntermediateBuildFilesPath\/UnicoSdkLiveness.build\/Release-iphoneos\/UnicoSdkLiveness.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1029,
+      "offset": 984,
       "length": 16,
       "value": "\"ic_footer_logo\""
     }

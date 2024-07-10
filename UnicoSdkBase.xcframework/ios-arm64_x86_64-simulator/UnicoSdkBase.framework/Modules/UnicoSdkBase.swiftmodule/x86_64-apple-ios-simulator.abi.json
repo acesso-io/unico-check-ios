@@ -2569,6 +2569,80 @@
           },
           {
             "kind": "Var",
+            "name": "versionDataActions",
+            "printedName": "versionDataActions",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UnicoSdkBase.TokenVersionDataAction]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UnicoSdkBase.TokenVersionDataAction]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TokenVersionDataAction",
+                        "printedName": "UnicoSdkBase.TokenVersionDataAction",
+                        "usr": "s:12UnicoSdkBase22TokenVersionDataActionO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase5TokenP18versionDataActionsSayAA0d7VersionF6ActionOGSgvp",
+            "mangledName": "$s12UnicoSdkBase5TokenP18versionDataActionsSayAA0d7VersionF6ActionOGSgvp",
+            "moduleName": "UnicoSdkBase",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[UnicoSdkBase.TokenVersionDataAction]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[UnicoSdkBase.TokenVersionDataAction]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TokenVersionDataAction",
+                            "printedName": "UnicoSdkBase.TokenVersionDataAction",
+                            "usr": "s:12UnicoSdkBase22TokenVersionDataActionO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase5TokenP18versionDataActionsSayAA0d7VersionF6ActionOGSgvg",
+                "mangledName": "$s12UnicoSdkBase5TokenP18versionDataActionsSayAA0d7VersionF6ActionOGSgvg",
+                "moduleName": "UnicoSdkBase",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.Token>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkBase.Token>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "isValid",
             "printedName": "isValid",
             "children": [
@@ -2615,6 +2689,118 @@
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TokenVersionDataAction",
+        "printedName": "TokenVersionDataAction",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "consoleLog",
+            "printedName": "consoleLog",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkBase.TokenVersionDataAction.Type) -> (Swift.String) -> UnicoSdkBase.TokenVersionDataAction",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> UnicoSdkBase.TokenVersionDataAction",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TokenVersionDataAction",
+                        "printedName": "UnicoSdkBase.TokenVersionDataAction",
+                        "usr": "s:12UnicoSdkBase22TokenVersionDataActionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(warningMessage: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkBase.TokenVersionDataAction.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TokenVersionDataAction",
+                        "printedName": "UnicoSdkBase.TokenVersionDataAction",
+                        "usr": "s:12UnicoSdkBase22TokenVersionDataActionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UnicoSdkBase22TokenVersionDataActionO10consoleLogyACSS_tcACmF",
+            "mangledName": "$s12UnicoSdkBase22TokenVersionDataActionO10consoleLogyACSS_tcACmF",
+            "moduleName": "UnicoSdkBase"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TokenVersionDataAction",
+                "printedName": "UnicoSdkBase.TokenVersionDataAction",
+                "usr": "s:12UnicoSdkBase22TokenVersionDataActionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TokenVersionDataAction",
+                "printedName": "UnicoSdkBase.TokenVersionDataAction",
+                "usr": "s:12UnicoSdkBase22TokenVersionDataActionO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12UnicoSdkBase22TokenVersionDataActionO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12UnicoSdkBase22TokenVersionDataActionO2eeoiySbAC_ACtFZ",
+            "moduleName": "UnicoSdkBase",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12UnicoSdkBase22TokenVersionDataActionO",
+        "mangledName": "$s12UnicoSdkBase22TokenVersionDataActionO",
+        "moduleName": "UnicoSdkBase",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
         ]
       },
       {
@@ -4699,6 +4885,43 @@
             "declKind": "EnumElement",
             "usr": "s:12UnicoSdkBase8FeaturesO16endpointConfigV2yA2CmF",
             "mangledName": "$s12UnicoSdkBase8FeaturesO16endpointConfigV2yA2CmF",
+            "moduleName": "UnicoSdkBase"
+          },
+          {
+            "kind": "Var",
+            "name": "versionSupport",
+            "printedName": "versionSupport",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkBase.Features.Type) -> UnicoSdkBase.Features",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkBase.Features.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Features",
+                        "printedName": "UnicoSdkBase.Features",
+                        "usr": "s:12UnicoSdkBase8FeaturesO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UnicoSdkBase8FeaturesO14versionSupportyA2CmF",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO14versionSupportyA2CmF",
             "moduleName": "UnicoSdkBase"
           },
           {
@@ -11168,6 +11391,13 @@
       "value": "60"
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Domain\/Entities\/TokenSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 634,
+      "length": 13,
+      "value": "\"CONSOLE_LOG\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/NetworkService.swift",
       "kind": "IntegerLiteral",
       "offset": 1109,
@@ -11331,6 +11561,13 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
       "kind": "StringLiteral",
+      "offset": 735,
+      "length": 41,
+      "value": "\"ios-feature-version-support-short-lived\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
       "offset": 440,
       "length": 47,
       "value": "\"ios-feature-init-device-profiling-short-lived\""
@@ -11355,6 +11592,13 @@
       "offset": 673,
       "length": 35,
       "value": "\"ios-feature-config-v2-short-lived\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
+      "offset": 735,
+      "length": 41,
+      "value": "\"ios-feature-version-support-short-lived\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",
