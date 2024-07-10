@@ -6,7 +6,6 @@ import DeveloperToolsSupport
 import FaceTecSDK
 import Foundation
 import Swift
-import SwiftUI
 import UIKit
 import UnicoSdkBase
 import UnicoSdkBase/*.API*/

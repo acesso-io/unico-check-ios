@@ -112,6 +112,11 @@ public protocol Token {
   var isMigrated: Swift.Bool? { get }
   var validateAt: Foundation.Date { get }
   var isValid: Swift.Bool { get }
+  var versionDataActions: [UnicoSdkBase.TokenVersionDataAction]? { get }
+}
+public enum TokenVersionDataAction : Swift.Equatable {
+  case consoleLog(warningMessage: Swift.String)
+  public static func == (a: UnicoSdkBase.TokenVersionDataAction, b: UnicoSdkBase.TokenVersionDataAction) -> Swift.Bool
 }
 extension UnicoSdkBase.Token {
   public var isValid: Swift.Bool {
@@ -215,6 +220,7 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case sendRaspOnConfig
   case sdkSessionIdOnSubmit
   case endpointConfigV2
+  case versionSupport
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
