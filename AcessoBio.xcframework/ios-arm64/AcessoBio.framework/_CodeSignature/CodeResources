@@ -102,7 +102,7 @@
 		</data>
 		<key>Headers/UnicoDocumentCameraViewController.h</key>
 		<data>
-		GtoXOofPMcMNiJqhBZyLgeOsO3s=
+		rStpnw19gyZJo3AS9YVAsEvVjoo=
 		</data>
 		<key>Headers/UnicoFaceCameraViewController.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		yMBE9l54U3uxBYcChWjkfzmN9Jg=
+		FqKHaQMDvYmXLOfrc4ntPtUIhGM=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		ky4LaMZolxjDt8k68nXHX5tgarM=
+		WOFLXZHlW284CWrhAD/zqKTwl7c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -367,7 +367,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			giECVWYoM4qTEGOq8F2XkVepSh4i6AtMBPBJEkg3m9A=
+			HezLpY+3JYgEhyv20SANwGK8bW5WLlJO0Sttcr4L4VE=
 			</data>
 		</dict>
 		<key>Headers/UnicoFaceCameraViewController.h</key>
@@ -409,7 +409,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5pgjn1bFUAq4Ki4HzoHaFnHilacrOY3wPXLEZMFfkVM=
+			xBkOM0geKoXkr5eUM+7MnVxgJVeR0KYLm7h7jfq7SzU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
