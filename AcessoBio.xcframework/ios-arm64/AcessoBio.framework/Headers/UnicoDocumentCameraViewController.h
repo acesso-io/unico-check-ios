@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readwrite) double secondsTimeoutSession;
 @property (assign, nonatomic)NSInteger type;
 @property (assign, nonatomic) OperationType operationType;
+
 @end
 
 NS_ASSUME_NONNULL_END

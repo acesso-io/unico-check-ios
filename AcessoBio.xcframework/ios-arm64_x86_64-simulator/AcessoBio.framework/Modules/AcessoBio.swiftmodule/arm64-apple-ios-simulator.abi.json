@@ -4609,6 +4609,13 @@
         "moduleName": "AcessoBio"
       },
       {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
         "kind": "TypeDecl",
         "name": "UnicoCheckLivenessAdapter",
         "printedName": "UnicoCheckLivenessAdapter",
@@ -17523,7 +17530,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/onboarding_private\/LivenessAdapter\/UnicoCheckLivenessAdapter.swift",
       "kind": "StringLiteral",
-      "offset": 216,
+      "offset": 236,
       "length": 25,
       "value": "\"AcessoBio.UnicoCheckLivenessAdapter\""
     },
@@ -18169,7 +18176,7 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 8,
-      "value": "\"2.15.5\""
+      "value": "\"2.15.6\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKConfigResponseDTO.swift",

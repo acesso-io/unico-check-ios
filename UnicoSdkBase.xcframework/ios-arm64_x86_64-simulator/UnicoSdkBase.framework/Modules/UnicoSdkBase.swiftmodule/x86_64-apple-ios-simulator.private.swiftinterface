@@ -221,6 +221,8 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case sdkSessionIdOnSubmit
   case endpointConfigV2
   case versionSupport
+  case shortClientJwt
+  case sendAuditImages
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
@@ -280,6 +282,9 @@ public protocol GetToken {
 }
 public protocol Cancellable {
   func cancel()
+}
+public protocol Serializable {
+  var serialize: [Swift.String : Any] { get }
 }
 public protocol DeviceInfo {
   var id: Swift.String { get }
