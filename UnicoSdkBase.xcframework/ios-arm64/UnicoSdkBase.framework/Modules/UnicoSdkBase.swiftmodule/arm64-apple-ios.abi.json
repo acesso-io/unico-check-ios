@@ -4926,6 +4926,80 @@
           },
           {
             "kind": "Var",
+            "name": "shortClientJwt",
+            "printedName": "shortClientJwt",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkBase.Features.Type) -> UnicoSdkBase.Features",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkBase.Features.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Features",
+                        "printedName": "UnicoSdkBase.Features",
+                        "usr": "s:12UnicoSdkBase8FeaturesO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UnicoSdkBase8FeaturesO14shortClientJwtyA2CmF",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO14shortClientJwtyA2CmF",
+            "moduleName": "UnicoSdkBase"
+          },
+          {
+            "kind": "Var",
+            "name": "sendAuditImages",
+            "printedName": "sendAuditImages",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkBase.Features.Type) -> UnicoSdkBase.Features",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkBase.Features.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Features",
+                        "printedName": "UnicoSdkBase.Features",
+                        "usr": "s:12UnicoSdkBase8FeaturesO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UnicoSdkBase8FeaturesO15sendAuditImagesyA2CmF",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO15sendAuditImagesyA2CmF",
+            "moduleName": "UnicoSdkBase"
+          },
+          {
+            "kind": "Var",
             "name": "none",
             "printedName": "none",
             "children": [
@@ -6292,6 +6366,95 @@
         "declKind": "Protocol",
         "usr": "s:12UnicoSdkBase11CancellableP",
         "mangledName": "$s12UnicoSdkBase11CancellableP",
+        "moduleName": "UnicoSdkBase",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkBase"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Serializable",
+        "printedName": "Serializable",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "serialize",
+            "printedName": "serialize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase12SerializableP9serializeSDySSypGvp",
+            "mangledName": "$s12UnicoSdkBase12SerializableP9serializeSDySSypGvp",
+            "moduleName": "UnicoSdkBase",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase12SerializableP9serializeSDySSypGvg",
+                "mangledName": "$s12UnicoSdkBase12SerializableP9serializeSDySSypGvg",
+                "moduleName": "UnicoSdkBase",
+                "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkBase.Serializable>",
+                "sugared_genericSig": "<Self where Self : UnicoSdkBase.Serializable>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12UnicoSdkBase12SerializableP",
+        "mangledName": "$s12UnicoSdkBase12SerializableP",
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
           "AccessControl"
@@ -11568,6 +11731,20 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
       "kind": "StringLiteral",
+      "offset": 803,
+      "length": 43,
+      "value": "\"cross-feature-short-client-jwt-long-lived\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
+      "offset": 874,
+      "length": 43,
+      "value": "\"cross-feature-send-audit-images-long-term\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
       "offset": 440,
       "length": 47,
       "value": "\"ios-feature-init-device-profiling-short-lived\""
@@ -11599,6 +11776,20 @@
       "offset": 735,
       "length": 41,
       "value": "\"ios-feature-version-support-short-lived\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
+      "offset": 803,
+      "length": 43,
+      "value": "\"cross-feature-short-client-jwt-long-lived\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
+      "offset": 874,
+      "length": 43,
+      "value": "\"cross-feature-send-audit-images-long-term\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",

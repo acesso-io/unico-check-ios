@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong)UIButton *btTakePic;
 
-@property (nonatomic)AVCaptureDevicePosition defaultCamera;
+@property (nonatomic)AVCaptureDevicePosition devicePosition;
 @property (nonatomic)AVCaptureSession *session;
 @property (nonatomic)AVCaptureDeviceInput *videoDeviceInput;
 @property (nonatomic)AVCaptureStillImageOutput *stillImageOutput;

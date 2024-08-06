@@ -10,6 +10,7 @@ import UIKit
 import UnicoSdkBase
 import UnicoSdkBase/*.API*/
 import UnicoSdkBase/*.DataTransferService*/
+import UnicoSdkBase/*.Serializable*/
 @_exported import UnicoSdkLiveness
 import UnicoSdkPlugins
 import _Concurrency
@@ -22,7 +23,7 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 public struct PrepareData : Swift.Equatable {
-  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?)
+  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, tinyJWTEnabled: Swift.Bool)
   public static func == (a: UnicoSdkLiveness.PrepareData, b: UnicoSdkLiveness.PrepareData) -> Swift.Bool
 }
 extension UnicoSdkLiveness.PrepareData {
@@ -69,6 +70,8 @@ public protocol LivenessResult {
   var transactionsId: [UnicoSdkLiveness.SessionTransactionDTO]? { get set }
   var serialize: [Swift.String : Any] { get }
   var session: [Swift.String : Any]? { get }
+  var tinyJWTEnabled: Swift.Bool { get }
+  var auditTrailCompressedBase64Images: [Swift.String]? { get }
 }
 @objc final public class SessionTransactionDTO : ObjectiveC.NSObject {
   @objc public init(transactionId: Swift.String, isLive: Swift.Bool, order: Swift.Int)
