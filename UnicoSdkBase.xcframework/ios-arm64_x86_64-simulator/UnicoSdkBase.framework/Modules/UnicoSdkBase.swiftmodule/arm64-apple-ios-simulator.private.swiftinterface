@@ -62,26 +62,6 @@ public class CryptedJSONResponseDecoder : UnicoSdkBase.ResponseDecoder {
   public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
   @objc deinit
 }
-public class API {
-  public var defaultService: any UnicoSdkBase.DataTransferService {
-    get
-    set
-  }
-  public var devService: any UnicoSdkBase.DataTransferService {
-    get
-    set
-  }
-  public var uatService: any UnicoSdkBase.DataTransferService {
-    get
-    set
-  }
-  public var prodService: any UnicoSdkBase.DataTransferService {
-    get
-    set
-  }
-  public init()
-  @objc deinit
-}
 public protocol GetGeoIP {
   func getGeoIP(completion: @escaping (Swift.Result<any UnicoSdkBase.GeoIP, any Swift.Error>) -> Swift.Void)
 }
@@ -223,6 +203,7 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case versionSupport
   case shortClientJwt
   case sendAuditImages
+  case dorothyLocalization
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
