@@ -1409,387 +1409,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "API",
-        "printedName": "API",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "defaultService",
-            "printedName": "defaultService",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DataTransferService",
-                "printedName": "UnicoSdkBase.DataTransferService",
-                "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UnicoSdkBase3APIC14defaultServiceAA012DataTransferF0_pvp",
-            "mangledName": "$s12UnicoSdkBase3APIC14defaultServiceAA012DataTransferF0_pvp",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "Lazy",
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC14defaultServiceAA012DataTransferF0_pvg",
-                "mangledName": "$s12UnicoSdkBase3APIC14defaultServiceAA012DataTransferF0_pvg",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC14defaultServiceAA012DataTransferF0_pvs",
-                "mangledName": "$s12UnicoSdkBase3APIC14defaultServiceAA012DataTransferF0_pvs",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC14defaultServiceAA012DataTransferF0_pvM",
-                "mangledName": "$s12UnicoSdkBase3APIC14defaultServiceAA012DataTransferF0_pvM",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "devService",
-            "printedName": "devService",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DataTransferService",
-                "printedName": "UnicoSdkBase.DataTransferService",
-                "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UnicoSdkBase3APIC10devServiceAA012DataTransferF0_pvp",
-            "mangledName": "$s12UnicoSdkBase3APIC10devServiceAA012DataTransferF0_pvp",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "Lazy",
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC10devServiceAA012DataTransferF0_pvg",
-                "mangledName": "$s12UnicoSdkBase3APIC10devServiceAA012DataTransferF0_pvg",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC10devServiceAA012DataTransferF0_pvs",
-                "mangledName": "$s12UnicoSdkBase3APIC10devServiceAA012DataTransferF0_pvs",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC10devServiceAA012DataTransferF0_pvM",
-                "mangledName": "$s12UnicoSdkBase3APIC10devServiceAA012DataTransferF0_pvM",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "uatService",
-            "printedName": "uatService",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DataTransferService",
-                "printedName": "UnicoSdkBase.DataTransferService",
-                "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UnicoSdkBase3APIC10uatServiceAA012DataTransferF0_pvp",
-            "mangledName": "$s12UnicoSdkBase3APIC10uatServiceAA012DataTransferF0_pvp",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "Lazy",
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC10uatServiceAA012DataTransferF0_pvg",
-                "mangledName": "$s12UnicoSdkBase3APIC10uatServiceAA012DataTransferF0_pvg",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC10uatServiceAA012DataTransferF0_pvs",
-                "mangledName": "$s12UnicoSdkBase3APIC10uatServiceAA012DataTransferF0_pvs",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC10uatServiceAA012DataTransferF0_pvM",
-                "mangledName": "$s12UnicoSdkBase3APIC10uatServiceAA012DataTransferF0_pvM",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "prodService",
-            "printedName": "prodService",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DataTransferService",
-                "printedName": "UnicoSdkBase.DataTransferService",
-                "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:12UnicoSdkBase3APIC11prodServiceAA012DataTransferF0_pvp",
-            "mangledName": "$s12UnicoSdkBase3APIC11prodServiceAA012DataTransferF0_pvp",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "Lazy",
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC11prodServiceAA012DataTransferF0_pvg",
-                "mangledName": "$s12UnicoSdkBase3APIC11prodServiceAA012DataTransferF0_pvg",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DataTransferService",
-                    "printedName": "UnicoSdkBase.DataTransferService",
-                    "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC11prodServiceAA012DataTransferF0_pvs",
-                "mangledName": "$s12UnicoSdkBase3APIC11prodServiceAA012DataTransferF0_pvs",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:12UnicoSdkBase3APIC11prodServiceAA012DataTransferF0_pvM",
-                "mangledName": "$s12UnicoSdkBase3APIC11prodServiceAA012DataTransferF0_pvM",
-                "moduleName": "UnicoSdkBase",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "API",
-                "printedName": "UnicoSdkBase.API",
-                "usr": "s:12UnicoSdkBase3APIC"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12UnicoSdkBase3APICACycfc",
-            "mangledName": "$s12UnicoSdkBase3APICACycfc",
-            "moduleName": "UnicoSdkBase",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:12UnicoSdkBase3APIC",
-        "mangledName": "$s12UnicoSdkBase3APIC",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "GetGeoIP",
         "printedName": "GetGeoIP",
         "children": [
@@ -5000,6 +4619,43 @@
           },
           {
             "kind": "Var",
+            "name": "dorothyLocalization",
+            "printedName": "dorothyLocalization",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkBase.Features.Type) -> UnicoSdkBase.Features",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkBase.Features.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Features",
+                        "printedName": "UnicoSdkBase.Features",
+                        "usr": "s:12UnicoSdkBase8FeaturesO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UnicoSdkBase8FeaturesO19dorothyLocalizationyA2CmF",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO19dorothyLocalizationyA2CmF",
+            "moduleName": "UnicoSdkBase"
+          },
+          {
+            "kind": "Var",
             "name": "none",
             "printedName": "none",
             "children": [
@@ -8002,16 +7658,6 @@
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "UnicoSdkBase"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkBase",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -11470,13 +11116,6 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/API.swift",
-      "kind": "Dictionary",
-      "offset": 933,
-      "length": 36,
-      "value": "[(\"Content-Type\", \"application\/json\")]"
-    },
-    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Repositories\/DefaultGeoLocationRepository.swift",
       "kind": "StringLiteral",
       "offset": 322,
@@ -11745,6 +11384,13 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
       "kind": "StringLiteral",
+      "offset": 949,
+      "length": 48,
+      "value": "\"cross-feature-dorothy-localization-short-lived\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
       "offset": 440,
       "length": 47,
       "value": "\"ios-feature-init-device-profiling-short-lived\""
@@ -11790,6 +11436,13 @@
       "offset": 874,
       "length": 43,
       "value": "\"cross-feature-send-audit-images-long-term\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
+      "offset": 949,
+      "length": 48,
+      "value": "\"cross-feature-dorothy-localization-short-lived\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",
@@ -11986,27 +11639,6 @@
       "offset": 492,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/AppConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 212,
-      "length": 43,
-      "value": "\"https:\/\/backend-sdk.dev.private.unico.run\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/AppConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 319,
-      "length": 43,
-      "value": "\"https:\/\/backend-sdk.uat.private.unico.run\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/AppConfiguration.swift",
-      "kind": "StringLiteral",
-      "offset": 427,
-      "length": 44,
-      "value": "\"https:\/\/backend-sdk.prod.private.unico.run\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Infra\/Networking\/Endpoint.swift",

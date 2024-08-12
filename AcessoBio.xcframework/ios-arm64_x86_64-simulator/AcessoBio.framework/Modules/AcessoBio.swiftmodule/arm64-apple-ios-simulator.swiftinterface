@@ -74,7 +74,7 @@ public protocol UnicoSecuritySDKDeviceInfo {
   var geolocation: CoreLocation.CLLocation? { get }
 }
 public class UnicoSecuritySDK {
-  public init()
+  public init(environment: AcessoBio.EnvironmentEnum = .PROD)
   public func getDeviceInfo(completionHandler: @escaping (any AcessoBio.UnicoSecuritySDKDeviceInfo) -> Swift.Void)
   @objc deinit
 }
@@ -103,6 +103,7 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   case JSON_NOT_FOUND = 73200
   case JSON_INVALID = 73202
   case CONFIG_DATASOURCE_INVALID = 73203
+  case CONFIG_ENVIRONMENT_NOT_SET = 73204
   case AUTHENTICATION_REQUEST_ERROR = 73300
   case AUTHENTICATION_PARSE_ERROR = 73301
   case AUTHENTICATION_TOKEN_NOT_FOUND = 73302
@@ -177,8 +178,8 @@ extension AcessoBio.UnicoCheckThemes {
   public typealias PrepareCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
   public typealias OpenCompletionSuccess = ([Swift.String : Any]) -> Swift.Void
   public typealias OpenCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
-  @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKConfigResponseDTOAdapter, bioThemeDelegate: (any AcessoBio.AcessoBioThemeDelegate)?, isHomolog: Swift.Bool, hostKey: Swift.String)
-  @objc public func prepareCamera(success: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionFailure)
+  @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKConfigResponseDTOAdapter, bioThemeDelegate: (any AcessoBio.AcessoBioThemeDelegate)?, environment: AcessoBio.EnvironmentEnum, hostInfo: Swift.String?, hostKey: Swift.String)
+  @objc public func prepareCamera(localeType: AcessoBio.LocaleTypes, success: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionFailure)
   @objc public func openCamera(unicoSetup: AcessoBio.UnicoSetupData, timeoutInterval: Swift.Double, success: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionFailure)
   @objc public func getLivenessKeybody() -> Swift.String
   @objc deinit
@@ -205,6 +206,7 @@ public class SDKPredictResponseDTO : Swift.Decodable {
   @objc func make() -> any AcessoBio.SensorsWorker
 }
 @objc @_hasMissingDesignatedInitializers final public class UnicoSetupData : ObjectiveC.NSObject {
+  @objc final public func getHostInfo() -> Swift.String?
   @objc final public func getHostKey() -> Swift.String?
   @objc deinit
 }
@@ -370,13 +372,11 @@ public protocol Cancellable {
   @objc deinit
 }
 @objc public protocol UnicoSetupProtocol {
-  @objc func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
+  @objc func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, environment: AcessoBio.EnvironmentEnum, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
   @objc func getSdkTokenObject() -> AcessoBio.SDKConfigResponseDTOAdapter?
-  @objc var isHomolog: Swift.Bool { get }
 }
 @objc @_inheritsConvenienceInitializers public class UnicoSetup : ObjectiveC.NSObject, AcessoBio.UnicoSetupProtocol {
-  @objc public var isHomolog: Swift.Bool
-  @objc public func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
+  @objc public func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, environment: AcessoBio.EnvironmentEnum, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
   @objc public func getSdkTokenObject() -> AcessoBio.SDKConfigResponseDTOAdapter?
   @objc override dynamic public init()
   @objc deinit
@@ -460,6 +460,14 @@ public protocol Cancellable {
   @objc override dynamic public init()
   @objc deinit
 }
+public enum SdkEnvironmentEnum : Swift.Int, Swift.Equatable {
+  case uat, prod, dev, notSet
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public protocol UnicoFaceCameraInteractorInput {
   @objc func startCapture()
   @objc func stopCaptureAndSendData(screenBrightness: CoreFoundation.CGFloat, isCameraTypeChanged: Foundation.NSNumber, imageResolution: Swift.String, faceBehavior: AcessoBio.FaceBehaviorsDTO, video: AcessoBio.VideoDTO, timers: AcessoBio.TimersDTO)
@@ -524,3 +532,5 @@ extension AcessoBio.DefaultProviderFactory.Source : Swift.RawRepresentable {}
 extension AcessoBio.UnicoLogoImageView.LogoType : Swift.Equatable {}
 extension AcessoBio.UnicoLogoImageView.LogoType : Swift.Hashable {}
 extension AcessoBio.UnicoLogoImageView.LogoType : Swift.RawRepresentable {}
+extension AcessoBio.SdkEnvironmentEnum : Swift.Hashable {}
+extension AcessoBio.SdkEnvironmentEnum : Swift.RawRepresentable {}

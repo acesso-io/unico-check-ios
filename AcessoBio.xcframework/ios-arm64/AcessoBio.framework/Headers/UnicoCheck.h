@@ -114,6 +114,7 @@ typedef NS_ENUM(NSInteger, CameraType) {
 @property (readonly) BOOL isAutoCapture;
 @property (readonly) BOOL isSmartCamera;
 @property (nonatomic, assign) LocaleTypes localeTypes;
+@property (nonatomic, assign) EnvironmentEnum environment;
 
 #pragma mark - Config
 

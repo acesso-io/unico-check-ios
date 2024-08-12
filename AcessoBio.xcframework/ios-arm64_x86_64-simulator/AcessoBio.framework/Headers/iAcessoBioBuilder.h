@@ -15,6 +15,12 @@ typedef NS_ENUM(NSInteger, LocaleTypes) {
     EN_US, ES_ES, ES_MX, PT_BR,
 };
 
+typedef NS_ENUM(NSInteger, EnvironmentEnum) {
+    UAT,
+    PROD,
+    DEV
+};
+
 @protocol iAcessoBioBuilder
 
 - (id<iAcessoBioBuilder>) setTheme: (id<AcessoBioThemeDelegate>)theme;
@@ -22,6 +28,7 @@ typedef NS_ENUM(NSInteger, LocaleTypes) {
 - (id<iAcessoBioBuilder>) setSmartFrame: (BOOL)isEnabled;
 - (id<iAcessoBioBuilder>) setTimeoutSession: (double)timeoutInSeconds;
 - (id<iAcessoBioBuilder>) setLocale:(LocaleTypes)localeTypes;
+- (id<iAcessoBioBuilder>) setEnvironment:(EnvironmentEnum)environment;
 - (id<AcessoBioCameraDelegate>) build;
 
 @end

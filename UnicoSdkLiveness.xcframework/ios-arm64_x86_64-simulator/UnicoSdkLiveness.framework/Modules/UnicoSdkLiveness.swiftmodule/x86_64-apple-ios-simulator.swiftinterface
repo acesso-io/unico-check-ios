@@ -8,8 +8,6 @@ import Foundation
 import Swift
 import UIKit
 import UnicoSdkBase
-import UnicoSdkBase/*.API*/
-import UnicoSdkBase/*.DataTransferService*/
 import UnicoSdkBase/*.Serializable*/
 @_exported import UnicoSdkLiveness
 import UnicoSdkPlugins
@@ -43,12 +41,20 @@ extension UnicoSdkLiveness.PrepareData {
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyLicense, b: UnicoSdkLiveness.PrepareData.DorothyLicense) -> Swift.Bool
   }
   public struct DorothyData : Swift.Equatable {
-    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense)
+    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense, localizationCode: UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode?)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyData, b: UnicoSdkLiveness.PrepareData.DorothyData) -> Swift.Bool
   }
   public struct DorothyDataMetaTag : Swift.Equatable {
     public init(action: Swift.String)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyDataMetaTag, b: UnicoSdkLiveness.PrepareData.DorothyDataMetaTag) -> Swift.Bool
+  }
+  public enum DorothyDataLocalizationCode : Swift.String, Swift.Equatable {
+    case en, es, pt_BR
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
 }
 public struct Theme : Swift.Equatable {
@@ -77,10 +83,8 @@ public protocol LivenessResult {
   @objc public init(transactionId: Swift.String, isLive: Swift.Bool, order: Swift.Int)
   @objc deinit
 }
-public enum Env {
-  case custom(service: any UnicoSdkBase.DataTransferService, endpointKey: Swift.String, endpointIv: Swift.String)
-  case development(endpointKey: Swift.String, endpointIv: Swift.String)
-  case production(endpointKey: Swift.String, endpointIv: Swift.String)
+public struct Env {
+  public init(dataService: any UnicoSdkBase.DataTransferService, keyData: Swift.String, ivData: Swift.String)
 }
 public protocol UnicoLivenessPrepareCameraDelegate : AnyObject {
   func onCameraReady(unicoLivenessOpenCamera: any UnicoSdkLiveness.UnicoLivenessOpenCamera)
@@ -111,3 +115,5 @@ public protocol LivenessLogger {
   var maxAttempts: Swift.Int? { get set }
   var isLive: Swift.Bool? { get set }
 }
+extension UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode : Swift.Hashable {}
+extension UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode : Swift.RawRepresentable {}

@@ -954,7 +954,7 @@
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(metaTags:license:)",
+                "printedName": "init(metaTags:license:localizationCode:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -981,11 +981,25 @@
                     "name": "DorothyLicense",
                     "printedName": "UnicoSdkLiveness.PrepareData.DorothyLicense",
                     "usr": "s:16UnicoSdkLiveness11PrepareDataV14DorothyLicenseV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DorothyDataLocalizationCode",
+                        "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode",
+                        "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE0V8metaTags7licenseAESayAC0fE7MetaTagVG_AC0F7LicenseVtcfc",
-                "mangledName": "$s16UnicoSdkLiveness11PrepareDataV07DorothyE0V8metaTags7licenseAESayAC0fE7MetaTagVG_AC0F7LicenseVtcfc",
+                "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE0V8metaTags7license16localizationCodeAESayAC0fE7MetaTagVG_AC0F7LicenseVAC0fe12LocalizationK0OSgtcfc",
+                "mangledName": "$s16UnicoSdkLiveness11PrepareDataV07DorothyE0V8metaTags7license16localizationCodeAESayAC0fE7MetaTagVG_AC0F7LicenseVAC0fe12LocalizationK0OSgtcfc",
                 "moduleName": "UnicoSdkLiveness",
                 "declAttributes": [
                   "AccessControl"
@@ -1111,6 +1125,240 @@
             "moduleName": "UnicoSdkLiveness",
             "isFromExtension": true,
             "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "DorothyDataLocalizationCode",
+            "printedName": "DorothyDataLocalizationCode",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "en",
+                "printedName": "en",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode.Type) -> UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DorothyDataLocalizationCode",
+                        "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode",
+                        "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DorothyDataLocalizationCode",
+                            "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode",
+                            "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO2enyA2EmF",
+                "mangledName": "$s16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO2enyA2EmF",
+                "moduleName": "UnicoSdkLiveness"
+              },
+              {
+                "kind": "Var",
+                "name": "es",
+                "printedName": "es",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode.Type) -> UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DorothyDataLocalizationCode",
+                        "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode",
+                        "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DorothyDataLocalizationCode",
+                            "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode",
+                            "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO2esyA2EmF",
+                "mangledName": "$s16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO2esyA2EmF",
+                "moduleName": "UnicoSdkLiveness"
+              },
+              {
+                "kind": "Var",
+                "name": "pt_BR",
+                "printedName": "pt_BR",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode.Type) -> UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DorothyDataLocalizationCode",
+                        "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode",
+                        "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DorothyDataLocalizationCode",
+                            "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode",
+                            "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO5pt_BRyA2EmF",
+                "mangledName": "$s16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO5pt_BRyA2EmF",
+                "moduleName": "UnicoSdkLiveness"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DorothyDataLocalizationCode",
+                        "printedName": "UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode",
+                        "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO8rawValueAESgSS_tcfc",
+                "mangledName": "$s16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO8rawValueAESgSS_tcfc",
+                "moduleName": "UnicoSdkLiveness",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO8rawValueSSvp",
+                "mangledName": "$s16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO8rawValueSSvp",
+                "moduleName": "UnicoSdkLiveness",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO8rawValueSSvg",
+                    "mangledName": "$s16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO8rawValueSSvg",
+                    "moduleName": "UnicoSdkLiveness",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO",
+            "mangledName": "$s16UnicoSdkLiveness11PrepareDataV07DorothyE16LocalizationCodeO",
+            "moduleName": "UnicoSdkLiveness",
+            "isFromExtension": true,
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
               {
                 "kind": "Conformance",
                 "name": "Equatable",
@@ -2395,8 +2643,8 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
@@ -2404,223 +2652,53 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "UnicoSdkBase",
-        "printedName": "UnicoSdkBase",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness"
-      },
-      {
-        "kind": "Import",
-        "name": "UnicoSdkBase",
-        "printedName": "UnicoSdkBase",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness"
-      },
-      {
         "kind": "TypeDecl",
         "name": "Env",
         "printedName": "Env",
         "children": [
           {
-            "kind": "Var",
-            "name": "custom",
-            "printedName": "custom",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(dataService:keyData:ivData:)",
             "children": [
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UnicoSdkLiveness.Env.Type) -> (UnicoSdkBase.DataTransferService, Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(UnicoSdkBase.DataTransferService, Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Env",
-                        "printedName": "UnicoSdkLiveness.Env",
-                        "usr": "s:16UnicoSdkLiveness3EnvO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(service: UnicoSdkBase.DataTransferService, endpointKey: Swift.String, endpointIv: Swift.String)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "DataTransferService",
-                            "printedName": "UnicoSdkBase.DataTransferService",
-                            "usr": "s:12UnicoSdkBase19DataTransferServiceP"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "UnicoSdkLiveness.Env.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Env",
-                        "printedName": "UnicoSdkLiveness.Env",
-                        "usr": "s:16UnicoSdkLiveness3EnvO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:16UnicoSdkLiveness3EnvO6customyAC0aB4Base19DataTransferService_p_S2StcACmF",
-            "mangledName": "$s16UnicoSdkLiveness3EnvO6customyAC0aB4Base19DataTransferService_p_S2StcACmF",
-            "moduleName": "UnicoSdkLiveness"
-          },
-          {
-            "kind": "Var",
-            "name": "development",
-            "printedName": "development",
-            "children": [
+                "kind": "TypeNominal",
+                "name": "Env",
+                "printedName": "UnicoSdkLiveness.Env",
+                "usr": "s:16UnicoSdkLiveness3EnvV"
+              },
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UnicoSdkLiveness.Env.Type) -> (Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Env",
-                        "printedName": "UnicoSdkLiveness.Env",
-                        "usr": "s:16UnicoSdkLiveness3EnvO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(endpointKey: Swift.String, endpointIv: Swift.String)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "UnicoSdkLiveness.Env.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Env",
-                        "printedName": "UnicoSdkLiveness.Env",
-                        "usr": "s:16UnicoSdkLiveness3EnvO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:16UnicoSdkLiveness3EnvO11developmentyACSS_SStcACmF",
-            "mangledName": "$s16UnicoSdkLiveness3EnvO11developmentyACSS_SStcACmF",
-            "moduleName": "UnicoSdkLiveness"
-          },
-          {
-            "kind": "Var",
-            "name": "production",
-            "printedName": "production",
-            "children": [
+                "kind": "TypeNominal",
+                "name": "DataTransferService",
+                "printedName": "UnicoSdkBase.DataTransferService",
+                "usr": "s:12UnicoSdkBase19DataTransferServiceP"
+              },
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(UnicoSdkLiveness.Env.Type) -> (Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.String, Swift.String) -> UnicoSdkLiveness.Env",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Env",
-                        "printedName": "UnicoSdkLiveness.Env",
-                        "usr": "s:16UnicoSdkLiveness3EnvO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(endpointKey: Swift.String, endpointIv: Swift.String)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "UnicoSdkLiveness.Env.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Env",
-                        "printedName": "UnicoSdkLiveness.Env",
-                        "usr": "s:16UnicoSdkLiveness3EnvO"
-                      }
-                    ]
-                  }
-                ]
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
-            "declKind": "EnumElement",
-            "usr": "s:16UnicoSdkLiveness3EnvO10productionyACSS_SStcACmF",
-            "mangledName": "$s16UnicoSdkLiveness3EnvO10productionyACSS_SStcACmF",
-            "moduleName": "UnicoSdkLiveness"
+            "declKind": "Constructor",
+            "usr": "s:16UnicoSdkLiveness3EnvV11dataService7keyData02ivH0AC0aB4Base0h8TransferF0_p_S2Stcfc",
+            "mangledName": "$s16UnicoSdkLiveness3EnvV11dataService7keyData02ivH0AC0aB4Base0h8TransferF0_p_S2Stcfc",
+            "moduleName": "UnicoSdkLiveness",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
           }
         ],
-        "declKind": "Enum",
-        "usr": "s:16UnicoSdkLiveness3EnvO",
-        "mangledName": "$s16UnicoSdkLiveness3EnvO",
+        "declKind": "Struct",
+        "usr": "s:16UnicoSdkLiveness3EnvV",
+        "mangledName": "$s16UnicoSdkLiveness3EnvV",
         "moduleName": "UnicoSdkLiveness",
         "declAttributes": [
           "AccessControl"
@@ -3062,7 +3140,7 @@
                 "kind": "TypeNominal",
                 "name": "Env",
                 "printedName": "UnicoSdkLiveness.Env",
-                "usr": "s:16UnicoSdkLiveness3EnvO"
+                "usr": "s:16UnicoSdkLiveness3EnvV"
               },
               {
                 "kind": "TypeNominal",
@@ -3078,8 +3156,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:16UnicoSdkLiveness0aC13RepresentableP13prepareCamera3env4data0E8DelegateyAA3EnvO_AA11PrepareDataVAA0ackfI0_ptF",
-            "mangledName": "$s16UnicoSdkLiveness0aC13RepresentableP13prepareCamera3env4data0E8DelegateyAA3EnvO_AA11PrepareDataVAA0ackfI0_ptF",
+            "usr": "s:16UnicoSdkLiveness0aC13RepresentableP13prepareCamera3env4data0E8DelegateyAA3EnvV_AA11PrepareDataVAA0ackfI0_ptF",
+            "mangledName": "$s16UnicoSdkLiveness0aC13RepresentableP13prepareCamera3env4data0E8DelegateyAA3EnvV_AA11PrepareDataVAA0ackfI0_ptF",
             "moduleName": "UnicoSdkLiveness",
             "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.UnicoLivenessRepresentable>",
             "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.UnicoLivenessRepresentable>",
@@ -3148,7 +3226,7 @@
                 "kind": "TypeNominal",
                 "name": "Env",
                 "printedName": "UnicoSdkLiveness.Env",
-                "usr": "s:16UnicoSdkLiveness3EnvO"
+                "usr": "s:16UnicoSdkLiveness3EnvV"
               },
               {
                 "kind": "TypeNominal",
@@ -3164,8 +3242,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:16UnicoSdkLiveness0aC0C13prepareCamera3env4data0D8DelegateyAA3EnvO_AA11PrepareDataVAA0acjeH0_ptF",
-            "mangledName": "$s16UnicoSdkLiveness0aC0C13prepareCamera3env4data0D8DelegateyAA3EnvO_AA11PrepareDataVAA0acjeH0_ptF",
+            "usr": "s:16UnicoSdkLiveness0aC0C13prepareCamera3env4data0D8DelegateyAA3EnvV_AA11PrepareDataVAA0acjeH0_ptF",
+            "mangledName": "$s16UnicoSdkLiveness0aC0C13prepareCamera3env4data0D8DelegateyAA3EnvV_AA11PrepareDataVAA0acjeH0_ptF",
             "moduleName": "UnicoSdkLiveness",
             "declAttributes": [
               "Final",
@@ -5804,7 +5882,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/DorothyProvider.swift",
       "kind": "StringLiteral",
-      "offset": 3183,
+      "offset": 3371,
       "length": 18,
       "value": "\"forensis.license\""
     },
