@@ -15,6 +15,11 @@ import UnicoSdkPlugins
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+extension Swift.Encodable {
+  public var stringValue: Swift.String? {
+    get
+  }
+}
 public protocol GeoLocation {
   func start(handler: @escaping (Swift.Result<[CoreLocation.CLLocation], UnicoSdkBase.GeoLocationError>) -> Swift.Void)
   func stop()
@@ -43,6 +48,15 @@ extension UnicoSdkBase.FeatureFlagDataSource {
 public protocol GeoIP {
   var ip: Swift.String { get }
 }
+final public class CryptedEndpoint<R> : UnicoSdkBase.Endpoint<R> {
+  public init(path: Swift.String, method: UnicoSdkBase.HTTPMethodType, headerParameters: [Swift.String : Swift.String] = [:], cryptedHeaderParameters: [Swift.String : Swift.String] = [:], bodyParametersEncodable: (any Swift.Encodable)? = nil, rsaPublicKey: Swift.String)
+  @objc deinit
+}
+public struct CryptedRequestDTO<T> : Swift.Encodable where T : Swift.Encodable {
+  public let dataValue: T
+  public init(dataValue: T, endpointPrivateKey: Swift.String, endpointPrivateIv: Swift.String) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
 public protocol NetworkConfigurable {
   var baseURL: Foundation.URL { get }
   var headers: [Swift.String : Swift.String] { get }
@@ -53,6 +67,11 @@ public struct ApiDataNetworkConfig : UnicoSdkBase.NetworkConfigurable {
   public let headers: [Swift.String : Swift.String]
   public let queryParameters: [Swift.String : Swift.String]
   public init(baseURL: Foundation.URL, headers: [Swift.String : Swift.String] = [:], queryParameters: [Swift.String : Swift.String] = [:])
+}
+open class Repository<DataSource> {
+  final public let dataSource: DataSource
+  public init(dataSource: DataSource)
+  @objc deinit
 }
 public protocol UnicoDecrypt {
   func decrypt(encoded: Swift.String?) -> Swift.String?
@@ -179,13 +198,18 @@ extension Swift.String {
   public static var newUUID: Swift.String {
     get
   }
-  public static func randomString(length: Swift.Int) -> Swift.String
+  public func toBase64() -> Swift.String
 }
 @_hasMissingDesignatedInitializers final public class DefaultFeatureFlagDataSource : UnicoSdkBase.FeatureFlagDataSourceFetcher, UnicoSdkBase.FeatureFlagDataSource {
   public static var shared: UnicoSdkBase.DefaultFeatureFlagDataSource
   final public func fetchFlags(headers: [Swift.String : Swift.String], request: [Swift.String : Any], dataTransferService: any UnicoSdkBase.DataTransferService, decryptor: any UnicoSdkBase.UnicoDecrypt, completion: @escaping UnicoSdkBase.DefaultFeatureFlagDataSource.Completion)
   final public func getValue(feature: any UnicoSdkBase.FeaturesRepresentable, defaultValue: Swift.Bool) -> Swift.Bool
   @objc deinit
+}
+public protocol AsyncUseCase {
+  associatedtype Request
+  associatedtype Response
+  func execute(_ request: Self.Request, completionHandler: @escaping (Self.Response) -> Swift.Void)
 }
 @_hasMissingDesignatedInitializers public class DefaultGeoLocationFactory {
   @objc deinit
@@ -257,6 +281,16 @@ public enum GeoLocationError : Swift.Error, Swift.Equatable {
   case usageDescriptionPlistNotAvailable
   case locationFailed(locationError: any Swift.Error)
   public static func == (lhsError: UnicoSdkBase.GeoLocationError, rhsError: UnicoSdkBase.GeoLocationError) -> Swift.Bool
+}
+public protocol SyncUseCase {
+  associatedtype Request
+  associatedtype Response
+  func execute(_ request: Self.Request) throws -> Self.Response
+}
+open class RepositoryUseCase<Repository> {
+  final public let repository: Repository
+  public init(repository: Repository)
+  @objc deinit
 }
 public protocol GetToken {
   func getToken(headers: UnicoSdkBase.RequestHeadersDTO, completion: @escaping (Swift.Result<any UnicoSdkBase.Token, any Swift.Error>) -> Swift.Void)

@@ -1409,16 +1409,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -1827,16 +1817,6 @@
         "printedName": "UnicoSdkBase",
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -2984,16 +2964,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "USDK",
         "printedName": "USDK",
         "declKind": "Import",
@@ -4104,42 +4074,42 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Domain\/UseCase\/GetLivenessPredictUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 914,
+      "offset": 892,
       "length": 9,
       "value": "\"capture\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Domain\/UseCase\/GetLivenessPredictUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 1086,
+      "offset": 1064,
       "length": 9,
       "value": "\"capture\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Domain\/UseCase\/GetLivenessPredictUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 1220,
+      "offset": 1198,
       "length": 13,
       "value": "\"auditedInfo\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Domain\/UseCase\/GetLivenessPredictUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 1255,
+      "offset": 1233,
       "length": 15,
       "value": "\"transactionId\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Domain\/UseCase\/GetLivenessPredictUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 1303,
+      "offset": 1281,
       "length": 9,
       "value": "\"keyBody\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Domain\/UseCase\/GetLivenessPredictUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 1339,
+      "offset": 1317,
       "length": 8,
       "value": "\"images\""
     },
