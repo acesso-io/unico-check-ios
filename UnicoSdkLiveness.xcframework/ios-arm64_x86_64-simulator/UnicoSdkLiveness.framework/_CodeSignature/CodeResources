@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Nc6KtM+7dsmjqkQEuAKa1V+vIdA=
+		cveIvzGnIJGo7XZJNzXpZ4ESK5I=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		SLucQzXcQJOrBzb2ANlHe+lNAoI=
+		y1+X9ha5toq15R5TOW9i1SaAxy0=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1ocDNY3BdXRLJxCeSEAn9BFsILs=
+		/qoYDNHKsufda0LQCuy4cosLyk4=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		SLucQzXcQJOrBzb2ANlHe+lNAoI=
+		y1+X9ha5toq15R5TOW9i1SaAxy0=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YgYX7QUDF0jFTWHOyy632F4BEfc=
+		/jezM58dGmLE8pcfkfOiqlNrnzI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>USDKResources.bundle/Assets.car</key>
 		<data>
-		oa1pa90+LLu5uy5fiT06PwSWeNU=
+		UYfWHneuTg0gQefKVgVEKtsktPI=
 		</data>
 		<key>USDKResources.bundle/Base.lproj/Localizable.strings</key>
 		<dict>
@@ -79,7 +79,7 @@
 		</dict>
 		<key>USDKResources.bundle/Info.plist</key>
 		<data>
-		mNjm720NbDv0+4c25sV1yoRd0pM=
+		nL5kPoUOJIUkw7CiDKDz3YKyxBM=
 		</data>
 		<key>USDKResources.bundle/OZJournalList.momd/JournalCoreData.mom</key>
 		<data>
@@ -204,7 +204,7 @@
 		</data>
 		<key>USDKResources.bundle/podium_rules.zip</key>
 		<data>
-		9K/dZ+WuTcEznt2v8BqufrQE3HI=
+		ci0A+zOB0xRTI4BowVKJlwnyYCE=
 		</data>
 		<key>USDKResources.bundle/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -224,10 +224,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>USDKResources.bundle/sm.mp4</key>
-		<data>
-		nGaz/vKxUMbr8lZko6x84BEk0BI=
-		</data>
 		<key>USDKResources.bundle/to-smile.json</key>
 		<data>
 		lOPsBw4igZcuoVJ741AKwjwGJpY=
@@ -277,7 +273,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EJRbEZUCI1J3f5+G9WKRPahpCjOpfd7rCxma7MuAb3E=
+			XUQCKqfliw+nQadjmi/4BpE23DNmmSI7DC5CygXlcDQ=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -305,14 +301,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			44BE6d2+LNFaaNpPO1p0U7cXC2M+3S07U5HHrH4204Y=
+			eod0aIL2wOv6chrwKtD4++49vVItjeGg+sJ5e6UAnuc=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EJRbEZUCI1J3f5+G9WKRPahpCjOpfd7rCxma7MuAb3E=
+			XUQCKqfliw+nQadjmi/4BpE23DNmmSI7DC5CygXlcDQ=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -340,7 +336,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5A+bXQvoaiELQoAxMwC+/xEPYJuzXKgI6eooFw9S+EE=
+			D5s53abiZu4jyVOaRqE4UK5vHW8nVAQzz9xntdxrlXs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -354,7 +350,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nFo38hyE6TNMX2lMH99mNcavSu82HHgCriy5IBVuihw=
+			5xOcP4DTvCS0uzfeHuELk75t4A18YavQyD4CLQCF1JU=
 			</data>
 		</dict>
 		<key>USDKResources.bundle/Base.lproj/Localizable.strings</key>
@@ -370,7 +366,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5t9idSu4FtXIQEWgBVYwjLUsgATvz15Cz9/0VyGGLbo=
+			hQ1BbFU0+w+QsoI0awu2dngU7cy18JyFoRgbNqFoL6g=
 			</data>
 		</dict>
 		<key>USDKResources.bundle/OZJournalList.momd/JournalCoreData.mom</key>
@@ -555,7 +551,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PmopjiAXFwK6wW2xvXaXcEnfoV6jOEtQJJFgNzmx+GI=
+			2Owx1F3wNVddH1/EoLDiZtMsPzjp6Zlh5bROU+dPV2M=
 			</data>
 		</dict>
 		<key>USDKResources.bundle/pt-BR.lproj/Localizable.strings</key>
@@ -575,13 +571,6 @@
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>USDKResources.bundle/sm.mp4</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PHvZm5jR8F/COoIlNZZadJoIodKpmZcd6rsFYG+UhD4=
-			</data>
 		</dict>
 		<key>USDKResources.bundle/to-smile.json</key>
 		<dict>

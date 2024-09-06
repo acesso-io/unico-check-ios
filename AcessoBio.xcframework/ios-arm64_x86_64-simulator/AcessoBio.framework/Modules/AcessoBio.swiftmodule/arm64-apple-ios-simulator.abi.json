@@ -5434,27 +5434,6 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "UnicoSdkBase",
-        "printedName": "UnicoSdkBase",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "UnicoSdkPlugins",
-        "printedName": "UnicoSdkPlugins",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
         "moduleName": "AcessoBio",
         "declAttributes": [
           "RawDocComment"
@@ -5506,13 +5485,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UnicoSdkPlugins",
-        "printedName": "UnicoSdkPlugins",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
       },
       {
         "kind": "Import",
@@ -5678,16 +5650,6 @@
         "printedName": "UnicoSdkLogger",
         "declKind": "Import",
         "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -16871,13 +16833,6 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
         "moduleName": "AcessoBio",
         "declAttributes": [
           "RawDocComment"
@@ -16964,6 +16919,20 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
       },
       {
         "kind": "Import",
@@ -17826,20 +17795,6 @@
       "value": "\"AcessoBio.DefaultSensorsWorker\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/request\/CryptedEndpoint.swift",
-      "kind": "Dictionary",
-      "offset": 218,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/request\/CryptedEndpoint.swift",
-      "kind": "StringLiteral",
-      "offset": 74,
-      "length": 15,
-      "value": "\"AcessoBio.CryptedEndpoint\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/Commoms\/extensions\/UIDeviceExtensions.swift",
       "kind": "StringLiteral",
       "offset": 96,
@@ -18460,7 +18415,7 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 8,
-      "value": "\"2.16.0\""
+      "value": "\"2.16.1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKConfigResponseDTO.swift",
