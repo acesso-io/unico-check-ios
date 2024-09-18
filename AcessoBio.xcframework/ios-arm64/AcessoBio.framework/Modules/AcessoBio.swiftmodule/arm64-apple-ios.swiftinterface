@@ -192,6 +192,7 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDe
   public func onSuccess(livenessResult: any UnicoSdkLiveness.LivenessResult)
   public func onError(livenessError: UnicoSdkLiveness.LivenessError)
   public func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
+  public func onRenewKeyBody(newKeyBody: Swift.String?)
 }
 public class SDKPredictResponseDTO : Swift.Decodable {
   @objc deinit
@@ -228,7 +229,6 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
     get
   }
   @objc public func commitBuild()
-  @objc public func commitPrepareCamera()
   @objc public func commitOpenCamera(_ openCamera: AcessoBio.OpenCameraDTO)
   @objc public func commitSuccessCallback(successCallback: AcessoBio.SuccessCallbackDTO)
   @objc public func commitErrorCallback(errorCallback: AcessoBio.ErrorCallbackDTO)

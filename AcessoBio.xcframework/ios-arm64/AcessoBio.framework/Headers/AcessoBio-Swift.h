@@ -404,7 +404,6 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 @interface DataLogger : NSObject
 + (DataLogger * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)commitBuild;
-- (void)commitPrepareCamera;
 - (void)commitOpenCamera:(OpenCameraDTO * _Nonnull)openCamera;
 - (void)commitSuccessCallbackWithSuccessCallback:(SuccessCallbackDTO * _Nonnull)successCallback;
 - (void)commitErrorCallbackWithErrorCallback:(ErrorCallbackDTO * _Nonnull)errorCallback;
