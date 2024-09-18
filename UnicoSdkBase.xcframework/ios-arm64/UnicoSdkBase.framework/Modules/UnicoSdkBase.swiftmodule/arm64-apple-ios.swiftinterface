@@ -108,6 +108,8 @@ public protocol Token {
   var token: Swift.String { get }
   var sendLogIsEnable: Swift.Bool { get }
   var geolocationsLogsIsEnabled: Swift.Bool? { get }
+  var deviceProfilingIsEnabled: Swift.Bool { get }
+  var sdkDataCollectIsEnabled: Swift.Bool { get }
   var isMigrated: Swift.Bool? { get }
   var validateAt: Foundation.Date { get }
   var isValid: Swift.Bool { get }
@@ -220,7 +222,6 @@ public protocol FeaturesRepresentable {
   var rawValue: Swift.String { get }
 }
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
-  case initDeviceProfiling
   case sendRaspOnConfig
   case sdkSessionIdOnSubmit
   case endpointConfigV2
@@ -228,6 +229,7 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case shortClientJwt
   case sendAuditImages
   case dorothyLocalization
+  case renewKeybodyOnEachRetry
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)

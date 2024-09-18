@@ -5080,6 +5080,41 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onRenewKeyBody",
+            "printedName": "onRenewKeyBody(newKeyBody:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AcessoBio25UnicoCheckLivenessAdapterC14onRenewKeyBody03newiJ0ySSSg_tF",
+            "mangledName": "$s9AcessoBio25UnicoCheckLivenessAdapterC14onRenewKeyBody03newiJ0ySSSg_tF",
+            "moduleName": "AcessoBio",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -6401,27 +6436,6 @@
             "declKind": "Func",
             "usr": "c:@M@AcessoBio@objc(cs)DataLogger(im)commitBuild",
             "mangledName": "$s9AcessoBio10DataLoggerC11commitBuildyyF",
-            "moduleName": "AcessoBio",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "commitPrepareCamera",
-            "printedName": "commitPrepareCamera()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(cs)DataLogger(im)commitPrepareCamera",
-            "mangledName": "$s9AcessoBio10DataLoggerC19commitPrepareCamerayyF",
             "moduleName": "AcessoBio",
             "declAttributes": [
               "AccessControl",
@@ -10145,13 +10159,6 @@
       },
       {
         "kind": "Import",
-        "name": "UnicoSdkBase",
-        "printedName": "UnicoSdkBase",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -10717,13 +10724,6 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "UnicoSdkBase",
-        "printedName": "UnicoSdkBase",
         "declKind": "Import",
         "moduleName": "AcessoBio"
       },
@@ -12405,13 +12405,6 @@
         "kind": "Import",
         "name": "UnicoSdkLogger",
         "printedName": "UnicoSdkLogger",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
-        "name": "UnicoSdkBase",
-        "printedName": "UnicoSdkBase",
         "declKind": "Import",
         "moduleName": "AcessoBio"
       },
@@ -15573,13 +15566,6 @@
       },
       {
         "kind": "Import",
-        "name": "UnicoSdkBase",
-        "printedName": "UnicoSdkBase",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -17754,6 +17740,13 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/onboarding_private\/LivenessAdapter\/UnicoCheckLivenessAdapter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1186,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/onboarding_private\/LivenessAdapter\/UnicoCheckLivenessAdapter.swift",
       "kind": "StringLiteral",
       "offset": 236,
       "length": 25,
@@ -17916,7 +17909,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Plugins\/DataLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1425,
+      "offset": 1395,
       "length": 10,
       "value": "\"AcessoBio.DataLogger\""
     },
@@ -18415,7 +18408,7 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 8,
-      "value": "\"2.16.1\""
+      "value": "\"2.16.2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKConfigResponseDTO.swift",
