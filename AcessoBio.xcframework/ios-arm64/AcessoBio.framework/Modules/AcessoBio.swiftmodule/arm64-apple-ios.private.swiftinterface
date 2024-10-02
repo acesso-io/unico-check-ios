@@ -203,6 +203,20 @@ public class SDKPredictResponseDTO : Swift.Decodable {
   @objc @discardableResult
   func stopMotion() -> AcessoBio.DeviceBehaviorsDTO
 }
+@objc public protocol SAdapterProtocol {
+  typealias CompletionSuccess = (AcessoBio.CaptureResult) -> Swift.Void
+  typealias CompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
+  @objc func start(sdkKey: Swift.String?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+}
+@objc public protocol SAdapterProtocolDelegate {
+  @objc func onSuccessSDK(result: AcessoBio.CaptureResult)
+  @objc func onErrorSDK(error: AcessoBio.ErrorBio)
+}
+@objc final public class SAdapter : ObjectiveC.NSObject, AcessoBio.SAdapterProtocol {
+  @objc public init(viewController: UIKit.UIViewController, unicoSetup: AcessoBio.UnicoSetup)
+  @objc final public func start(sdkKey: Swift.String?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc deinit
+}
 @objc public protocol SensorsWorkerFactory {
   @objc func make() -> any AcessoBio.SensorsWorker
 }
@@ -225,7 +239,7 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
 }
 @objc @_hasMissingDesignatedInitializers public class DataLogger : ObjectiveC.NSObject {
   @objc public class func shared() -> AcessoBio.DataLogger
-  public var sdkSessionId: Swift.String? {
+  public var sdkSessionId: Swift.String {
     get
   }
   @objc public func commitBuild()
@@ -348,6 +362,9 @@ public protocol Cancellable {
     @objc get
   }
   @objc public var isLiveness: Swift.Bool {
+    @objc get
+  }
+  @objc public var isS: Swift.Bool {
     @objc get
   }
   @objc deinit

@@ -548,6 +548,32 @@ SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 @end
 
 
+@protocol SAdapterProtocolDelegate;
+
+SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
+@protocol SAdapterProtocol
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+@end
+
+@class UIViewController;
+@class UnicoSetup;
+
+SWIFT_CLASS("_TtC9AcessoBio8SAdapter")
+@interface SAdapter : NSObject <SAdapterProtocol>
+- (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController unicoSetup:(UnicoSetup * _Nonnull)unicoSetup OBJC_DESIGNATED_INITIALIZER;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
+@protocol SAdapterProtocolDelegate
+- (void)onSuccessSDKWithResult:(CaptureResult * _Nonnull)result;
+- (void)onErrorSDKWithError:(ErrorBio * _Nonnull)error;
+@end
+
 
 SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @interface SDKConfigResponseDTOAdapter : NSObject
@@ -560,6 +586,7 @@ SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @property (nonatomic, readonly) BOOL isIntegrationCaptureFlow;
 @property (nonatomic, readonly) NSInteger maxAttempts;
 @property (nonatomic, readonly) BOOL isLiveness;
+@property (nonatomic, readonly) BOOL isS;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -654,7 +681,6 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCameraMetadataOutput")
 @end
 
 
-@class UIViewController;
 @protocol AcessoBioThemeDelegate;
 
 SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
@@ -1483,6 +1509,32 @@ SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 @end
 
 
+@protocol SAdapterProtocolDelegate;
+
+SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
+@protocol SAdapterProtocol
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+@end
+
+@class UIViewController;
+@class UnicoSetup;
+
+SWIFT_CLASS("_TtC9AcessoBio8SAdapter")
+@interface SAdapter : NSObject <SAdapterProtocol>
+- (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController unicoSetup:(UnicoSetup * _Nonnull)unicoSetup OBJC_DESIGNATED_INITIALIZER;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
+@protocol SAdapterProtocolDelegate
+- (void)onSuccessSDKWithResult:(CaptureResult * _Nonnull)result;
+- (void)onErrorSDKWithError:(ErrorBio * _Nonnull)error;
+@end
+
 
 SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @interface SDKConfigResponseDTOAdapter : NSObject
@@ -1495,6 +1547,7 @@ SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @property (nonatomic, readonly) BOOL isIntegrationCaptureFlow;
 @property (nonatomic, readonly) NSInteger maxAttempts;
 @property (nonatomic, readonly) BOOL isLiveness;
+@property (nonatomic, readonly) BOOL isS;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1589,7 +1642,6 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCameraMetadataOutput")
 @end
 
 
-@class UIViewController;
 @protocol AcessoBioThemeDelegate;
 
 SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")

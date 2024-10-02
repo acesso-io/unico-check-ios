@@ -4041,6 +4041,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
         "kind": "TypeDecl",
         "name": "UnicoLivenessRepresentable",
         "printedName": "UnicoLivenessRepresentable",
@@ -5599,35 +5606,49 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Network\/APIEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 359,
+      "offset": 695,
+      "length": 7,
+      "value": "\"Token\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 736,
+      "length": 11,
+      "value": "\"X-SDK-KEY\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 829,
       "length": 13,
       "value": "\"sdk\/predict\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Network\/APIEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 449,
+      "offset": 1164,
       "length": 7,
       "value": "\"Token\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Network\/APIEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 705,
+      "offset": 1205,
+      "length": 11,
+      "value": "\"X-SDK-KEY\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Network\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 1300,
       "length": 28,
       "value": "\"sdk\/capture\/renew-key-body\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Network\/APIEndpoints.swift",
       "kind": "StringLiteral",
-      "offset": 810,
-      "length": 7,
-      "value": "\"Token\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Network\/APIEndpoints.swift",
-      "kind": "StringLiteral",
-      "offset": 886,
+      "offset": 1451,
       "length": 9,
       "value": "\"keybody\""
     },
