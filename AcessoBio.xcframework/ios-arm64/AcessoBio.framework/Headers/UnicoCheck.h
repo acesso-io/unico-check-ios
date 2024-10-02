@@ -36,6 +36,8 @@
 @protocol UnicoSetupProtocol;
 @class GeolocationDTO;
 @class UnicoCheckLivenessAdapter;
+@protocol SAdapterProtocol;
+@protocol SAdapterProtocolDelegate;
 
 typedef NS_ENUM(NSInteger, LanguageOrigin) {
     Native,
@@ -74,6 +76,8 @@ typedef NS_ENUM(NSInteger, CameraType) {
     BOOL hasImplementationError;
 
     id<UnicoSetupProtocol> unicoSetup;
+    id<SAdapterProtocol> sAdapter;
+
     SDKConfigResponseDTOAdapter *sdkTokenResponse;
 
     CameraType cameraType;
@@ -99,7 +103,9 @@ typedef NS_ENUM(NSInteger, CameraType) {
 
 - (id _Nullable)initWithViewController:(id _Nullable)view
                              delegates:(id<AcessoBioManagerDelegate>_Nullable)delegate
-                         sensorsWorker:(id<SensorsWorker>_Nullable)sensorsWorker;
+                         sensorsWorker:(id<SensorsWorker>_Nullable)sensorsWorker
+                            unicoSetup:(id<UnicoSetupProtocol>_Nonnull)unicoSetup
+                              sAdapter:(id<SAdapterProtocol>_Nonnull)sAdapter;
 
 #pragma mark - Language Origin
 

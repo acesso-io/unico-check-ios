@@ -230,6 +230,8 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case sendAuditImages
   case dorothyLocalization
   case renewKeybodyOnEachRetry
+  case internationalizationHeader
+  case shuriEnabled
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
@@ -393,7 +395,7 @@ public enum BodyEncoding {
     get
   }
 }
-open class Endpoint<R> : UnicoSdkBase.ResponseRequestable {
+public class Endpoint<R> : UnicoSdkBase.ResponseRequestable {
   public typealias Response = R
   final public let path: Swift.String
   final public let isFullPath: Swift.Bool
