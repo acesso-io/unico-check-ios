@@ -418,7 +418,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 ///
 /// \param completion Block to listen for request result
 ///
-- (void)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData success:(void (^ _Nullable)(NSString * _Nonnull, NSString * _Nullable))success failure:(void (^ _Nullable)(ErrorBio * _Nonnull))failure;
+- (void)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData isSdkSEnabled:(BOOL)isSdkSEnabled success:(void (^ _Nullable)(NSString * _Nonnull, NSString * _Nullable))success failure:(void (^ _Nullable)(ErrorBio * _Nonnull))failure;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -532,13 +532,28 @@ SWIFT_CLASS("_TtC9AcessoBio11LivenessDTO")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+enum OpenCameraType : NSInteger;
+enum OpenCaptureType : NSInteger;
 
 SWIFT_CLASS("_TtC9AcessoBio13OpenCameraDTO")
 @interface OpenCameraDTO : NSObject
-- (nonnull instancetype)initWithCaptureType:(NSString * _Nullable)captureType cameraType:(NSString * _Nullable)cameraType OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCameraType:(enum OpenCameraType)cameraType captureType:(enum OpenCaptureType)captureType OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+typedef SWIFT_ENUM(NSInteger, OpenCameraType, open) {
+  OpenCameraTypeSelfie = 0,
+  OpenCameraTypeDocument = 1,
+};
+
+typedef SWIFT_ENUM(NSInteger, OpenCaptureType, open) {
+  OpenCaptureTypeNormal = 0,
+  OpenCaptureTypeDocuments = 1,
+  OpenCaptureTypeSmart = 2,
+  OpenCaptureTypeSmartlive = 3,
+  OpenCaptureTypeWebapp = 4,
+};
 
 
 SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
@@ -548,11 +563,12 @@ SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 @end
 
 
+@protocol AcessoBioThemeDelegate;
 @protocol SAdapterProtocolDelegate;
 
 SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
 @protocol SAdapterProtocol
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 @end
 
 @class UIViewController;
@@ -561,7 +577,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
 SWIFT_CLASS("_TtC9AcessoBio8SAdapter")
 @interface SAdapter : NSObject <SAdapterProtocol>
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController unicoSetup:(UnicoSetup * _Nonnull)unicoSetup OBJC_DESIGNATED_INITIALIZER;
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -577,6 +593,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 
 SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @interface SDKConfigResponseDTOAdapter : NSObject
+@property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable uiTexts;
 @property (nonatomic, readonly, copy) NSString * _Nullable facetecSessionToken;
 @property (nonatomic, readonly) BOOL geolocationEnabled;
 @property (nonatomic, readonly, copy) NSString * _Nonnull key;
@@ -653,7 +670,6 @@ SWIFT_CLASS("_TtC9AcessoBio9TimersDTO")
 
 
 
-
 @class NSDate;
 
 SWIFT_PROTOCOL("_TtP9AcessoBio33UnicoCameraMetadataOutputDelegate_")
@@ -681,7 +697,6 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCameraMetadataOutput")
 @end
 
 
-@protocol AcessoBioThemeDelegate;
 
 SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
 @interface UnicoCheckLivenessAdapter : NSObject

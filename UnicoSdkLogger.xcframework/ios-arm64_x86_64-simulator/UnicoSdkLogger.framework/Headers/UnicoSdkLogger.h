@@ -385,11 +385,11 @@ __attribute__((swift_name("CameraTypes.SelfieSmart")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Capture")))
 @interface USLCapture : USLBase
-- (instancetype)initWithTimestamp:(NSString * _Nullable)timestamp camera:(NSString * _Nullable)camera cameraVendor:(NSString * _Nullable)cameraVendor type:(NSString * _Nullable)type screenBrightness:(USLDouble * _Nullable)screenBrightness lightingSensor:(USLDouble * _Nullable)lightingSensor silhouette:(USLSilhouette * _Nullable)silhouette image:(USLImage * _Nullable)image jwt:(USLJwtInfo * _Nullable)jwt video:(USLVideo * _Nullable)video isCameraTypeChanged:(USLBoolean * _Nullable)isCameraTypeChanged timers:(USLTimers * _Nullable)timers connections:(USLConnections * _Nullable)connections behaviors:(USLBehaviors * _Nullable)behaviors provider:(NSArray<USLProvider *> * _Nullable)provider liveness:(USLLiveness * _Nullable)liveness __attribute__((swift_name("init(timestamp:camera:cameraVendor:type:screenBrightness:lightingSensor:silhouette:image:jwt:video:isCameraTypeChanged:timers:connections:behaviors:provider:liveness:)"))) __attribute__((objc_designated_initializer));
-- (USLCapture *)doCopyTimestamp:(NSString * _Nullable)timestamp camera:(NSString * _Nullable)camera cameraVendor:(NSString * _Nullable)cameraVendor type:(NSString * _Nullable)type screenBrightness:(USLDouble * _Nullable)screenBrightness lightingSensor:(USLDouble * _Nullable)lightingSensor silhouette:(USLSilhouette * _Nullable)silhouette image:(USLImage * _Nullable)image jwt:(USLJwtInfo * _Nullable)jwt video:(USLVideo * _Nullable)video isCameraTypeChanged:(USLBoolean * _Nullable)isCameraTypeChanged timers:(USLTimers * _Nullable)timers connections:(USLConnections * _Nullable)connections behaviors:(USLBehaviors * _Nullable)behaviors provider:(NSArray<USLProvider *> * _Nullable)provider liveness:(USLLiveness * _Nullable)liveness __attribute__((swift_name("doCopy(timestamp:camera:cameraVendor:type:screenBrightness:lightingSensor:silhouette:image:jwt:video:isCameraTypeChanged:timers:connections:behaviors:provider:liveness:)")));
+- (instancetype)initWithTimestamp:(NSString * _Nullable)timestamp camera:(NSString * _Nullable)camera cameraVendor:(NSString * _Nullable)cameraVendor type:(NSString * _Nullable)type screenBrightness:(USLDouble * _Nullable)screenBrightness lightingSensor:(USLDouble * _Nullable)lightingSensor silhouette:(USLSilhouette * _Nullable)silhouette image:(USLImage * _Nullable)image jwt:(USLJwtInfo * _Nullable)jwt video:(USLVideo * _Nullable)video isCameraTypeChanged:(USLBoolean * _Nullable)isCameraTypeChanged timers:(USLTimers * _Nullable)timers connections:(USLConnections * _Nullable)connections behaviors:(USLBehaviors * _Nullable)behaviors provider:(NSArray<USLProvider *> * _Nullable)provider liveness:(USLLiveness * _Nullable)liveness webAppMode:(NSString * _Nullable)webAppMode __attribute__((swift_name("init(timestamp:camera:cameraVendor:type:screenBrightness:lightingSensor:silhouette:image:jwt:video:isCameraTypeChanged:timers:connections:behaviors:provider:liveness:webAppMode:)"))) __attribute__((objc_designated_initializer));
+- (USLCapture *)doCopyTimestamp:(NSString * _Nullable)timestamp camera:(NSString * _Nullable)camera cameraVendor:(NSString * _Nullable)cameraVendor type:(NSString * _Nullable)type screenBrightness:(USLDouble * _Nullable)screenBrightness lightingSensor:(USLDouble * _Nullable)lightingSensor silhouette:(USLSilhouette * _Nullable)silhouette image:(USLImage * _Nullable)image jwt:(USLJwtInfo * _Nullable)jwt video:(USLVideo * _Nullable)video isCameraTypeChanged:(USLBoolean * _Nullable)isCameraTypeChanged timers:(USLTimers * _Nullable)timers connections:(USLConnections * _Nullable)connections behaviors:(USLBehaviors * _Nullable)behaviors provider:(NSArray<USLProvider *> * _Nullable)provider liveness:(USLLiveness * _Nullable)liveness webAppMode:(NSString * _Nullable)webAppMode __attribute__((swift_name("doCopy(timestamp:camera:cameraVendor:type:screenBrightness:lightingSensor:silhouette:image:jwt:video:isCameraTypeChanged:timers:connections:behaviors:provider:liveness:webAppMode:)")));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSDictionary<NSString *, id> *)toMap __attribute__((swift_name("toMap()")));
+- (NSDictionary<NSString *, id> *)toMapIsSDKSEnabled:(BOOL)isSDKSEnabled __attribute__((swift_name("toMap(isSDKSEnabled:)")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) USLBehaviors * _Nullable behaviors __attribute__((swift_name("behaviors")));
 @property (readonly) NSString * _Nullable camera __attribute__((swift_name("camera")));
@@ -407,6 +407,7 @@ __attribute__((swift_name("Capture")))
 @property (readonly) NSString * _Nullable timestamp __attribute__((swift_name("timestamp")));
 @property (readonly) NSString * _Nullable type __attribute__((swift_name("type")));
 @property (readonly) USLVideo * _Nullable video __attribute__((swift_name("video")));
+@property (readonly) NSString * _Nullable webAppMode __attribute__((swift_name("webAppMode")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -782,6 +783,7 @@ __attribute__((swift_name("AddProviderUseCase")))
 __attribute__((swift_name("GetLogUseCase")))
 @protocol USLGetLogUseCase <USLUseCase>
 @required
+- (void)isSDKSEnabledIsSDKSEnabled:(BOOL)isSDKSEnabled __attribute__((swift_name("isSDKSEnabled(isSDKSEnabled:)")));
 @end
 
 __attribute__((swift_name("MapToJsonUseCase")))
@@ -906,6 +908,7 @@ __attribute__((swift_name("DefaultGetLogUseCase")))
 @interface USLDefaultGetLogUseCase : USLBase <USLGetLogUseCase>
 - (instancetype)initWithRepository:(id<USLLogProviderRepository>)repository __attribute__((swift_name("init(repository:)"))) __attribute__((objc_designated_initializer));
 - (NSArray<NSDictionary<NSString *, id> *> *)executeParam:(NSString * _Nullable)param __attribute__((swift_name("execute(param:)")));
+- (void)isSDKSEnabledIsSDKSEnabled:(BOOL)isSDKSEnabled __attribute__((swift_name("isSDKSEnabled(isSDKSEnabled:)")));
 @end
 
 __attribute__((objc_subclassing_restricted))
