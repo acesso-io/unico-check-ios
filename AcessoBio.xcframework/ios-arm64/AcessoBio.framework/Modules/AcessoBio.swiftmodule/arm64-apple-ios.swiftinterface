@@ -206,7 +206,7 @@ public class SDKPredictResponseDTO : Swift.Decodable {
 @objc public protocol SAdapterProtocol {
   typealias CompletionSuccess = (AcessoBio.CaptureResult) -> Swift.Void
   typealias CompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
-  @objc func start(sdkKey: Swift.String?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
 }
 @objc public protocol SAdapterProtocolDelegate {
   @objc func onSuccessSDK(result: AcessoBio.CaptureResult)
@@ -214,7 +214,7 @@ public class SDKPredictResponseDTO : Swift.Decodable {
 }
 @objc final public class SAdapter : ObjectiveC.NSObject, AcessoBio.SAdapterProtocol {
   @objc public init(viewController: UIKit.UIViewController, unicoSetup: AcessoBio.UnicoSetup)
-  @objc final public func start(sdkKey: Swift.String?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
   @objc deinit
 }
 @objc public protocol SensorsWorkerFactory {
@@ -250,7 +250,7 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
   @objc public func commitSessionTransactionsIds(_ sessionTransactions: [[Swift.String : Any]])
   @objc public func commitLiveness(_ liveness: AcessoBio.LivenessDTO?)
   @objc public func commitProvider(_ provider: AcessoBio.ProviderDTO)
-  @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData, success: ((Swift.String, Swift.String?) -> Swift.Void)?, failure: ((AcessoBio.ErrorBio) -> Swift.Void)?)
+  @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData, isSdkSEnabled: Swift.Bool, success: ((Swift.String, Swift.String?) -> Swift.Void)?, failure: ((AcessoBio.ErrorBio) -> Swift.Void)?)
   @objc deinit
 }
 public protocol CallbackWorker {
@@ -337,6 +337,9 @@ public protocol Cancellable {
   func cancel()
 }
 @objc @_hasMissingDesignatedInitializers public class SDKConfigResponseDTOAdapter : ObjectiveC.NSObject {
+  @objc public var uiTexts: [Swift.String : Swift.String]? {
+    @objc get
+  }
   @objc public var facetecSessionToken: Swift.String? {
     @objc get
   }
@@ -432,8 +435,24 @@ public protocol Cancellable {
   @objc deinit
 }
 @objc public class OpenCameraDTO : ObjectiveC.NSObject {
-  @objc public init(captureType: Swift.String? = nil, cameraType: Swift.String? = nil)
+  @objc public init(cameraType: AcessoBio.OpenCameraType, captureType: AcessoBio.OpenCaptureType)
   @objc deinit
+}
+@objc public enum OpenCameraType : Swift.Int {
+  case selfie = 0, document
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum OpenCaptureType : Swift.Int {
+  case normal = 0, documents, smart, smartlive, webapp
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 @_hasMissingDesignatedInitializers final public class DefaultSessionTransactionsWorker {
   @objc deinit
@@ -546,6 +565,12 @@ extension AcessoBio.DefaultMotionSensorsDevice : AcessoBio.SensorsDevice {}
 extension AcessoBio.DefaultProviderFactory.Source : Swift.Equatable {}
 extension AcessoBio.DefaultProviderFactory.Source : Swift.Hashable {}
 extension AcessoBio.DefaultProviderFactory.Source : Swift.RawRepresentable {}
+extension AcessoBio.OpenCameraType : Swift.Equatable {}
+extension AcessoBio.OpenCameraType : Swift.Hashable {}
+extension AcessoBio.OpenCameraType : Swift.RawRepresentable {}
+extension AcessoBio.OpenCaptureType : Swift.Equatable {}
+extension AcessoBio.OpenCaptureType : Swift.Hashable {}
+extension AcessoBio.OpenCaptureType : Swift.RawRepresentable {}
 extension AcessoBio.UnicoLogoImageView.LogoType : Swift.Equatable {}
 extension AcessoBio.UnicoLogoImageView.LogoType : Swift.Hashable {}
 extension AcessoBio.UnicoLogoImageView.LogoType : Swift.RawRepresentable {}

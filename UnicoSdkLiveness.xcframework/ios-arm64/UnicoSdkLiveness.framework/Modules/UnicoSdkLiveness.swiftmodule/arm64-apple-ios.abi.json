@@ -2784,13 +2784,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness"
-      },
-      {
         "kind": "TypeDecl",
         "name": "SessionTransactionDTO",
         "printedName": "SessionTransactionDTO",
@@ -6458,83 +6451,6 @@
       "value": "\"sessionTransactionsIds\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 409,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 557,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 655,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
-      "kind": "StringLiteral",
-      "offset": 839,
-      "length": 39,
-      "value": "\"init(coder:) has not been implemented\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
-      "kind": "StringLiteral",
-      "offset": 1247,
-      "length": 38,
-      "value": "\"Unico_result_facescan_upload_message\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
-      "kind": "FloatLiteral",
-      "offset": 1771,
-      "length": 4,
-      "value": "48.0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
-      "kind": "FloatLiteral",
-      "offset": 1975,
-      "length": 4,
-      "value": "16.0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
-      "kind": "FloatLiteral",
-      "offset": 2144,
-      "length": 4,
-      "value": "24.0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
-      "kind": "FloatLiteral",
-      "offset": 2242,
-      "length": 4,
-      "value": "24.0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
-      "kind": "FloatLiteral",
-      "offset": 2342,
-      "length": 5,
-      "value": "-24.0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/Scenes\/LivenessLoadingView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2412,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Api\/Models\/SessionTransactionDTO.swift",
       "kind": "StringLiteral",
       "offset": 19,
@@ -7016,6 +6932,13 @@
       "offset": 7296,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 7688,
+      "length": 38,
+      "value": "\"Unico_result_facescan_upload_message\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/JWT_debit\/Domain\/UseCases\/DefaultGetCameraResultUseCase.swift",

@@ -45,6 +45,10 @@ public protocol FeatureFlagDataSourceFetcher {
 extension UnicoSdkBase.FeatureFlagDataSource {
   public func getValue(feature: any UnicoSdkBase.FeaturesRepresentable) -> Swift.Bool
 }
+extension UIKit.UIColor {
+  convenience public init(hexString: Swift.String)
+  public func hexString() -> Swift.String
+}
 public protocol GeoIP {
   var ip: Swift.String { get }
 }
@@ -56,6 +60,13 @@ public struct CryptedRequestDTO<T> : Swift.Encodable where T : Swift.Encodable {
   public let dataValue: T
   public init(dataValue: T, endpointPrivateKey: Swift.String, endpointPrivateIv: Swift.String) throws
   public func encode(to encoder: any Swift.Encoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class LivenessLoadingView : UIKit.UIView {
+  public struct Customization {
+    public init(backgroundColor: UIKit.UIColor?, progressBarColor: UIKit.UIColor?, textMessageColor: UIKit.UIColor?, textLabel: Swift.String?)
+  }
+  @_Concurrency.MainActor(unsafe) final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization)
+  @objc deinit
 }
 public protocol NetworkConfigurable {
   var baseURL: Foundation.URL { get }

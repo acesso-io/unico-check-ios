@@ -45,11 +45,6 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     ReactNative
 };
 
-typedef NS_ENUM(NSInteger, CameraType) {
-    Selfie,
-    Document
-};
-
 @interface UnicoCheck:NSObject <UnicoCheckThemesDelegate, CLLocationManagerDelegate> {
 
     id<SensorsWorker>_Nonnull sensorsWorker;
@@ -79,8 +74,6 @@ typedef NS_ENUM(NSInteger, CameraType) {
     id<SAdapterProtocol> sAdapter;
 
     SDKConfigResponseDTOAdapter *sdkTokenResponse;
-
-    CameraType cameraType;
     DocumentEnums documentType;
 
     void(^completionHandlerSetupConfig)(ErrorBio *_Nullable error);
@@ -104,8 +97,7 @@ typedef NS_ENUM(NSInteger, CameraType) {
 - (id _Nullable)initWithViewController:(id _Nullable)view
                              delegates:(id<AcessoBioManagerDelegate>_Nullable)delegate
                          sensorsWorker:(id<SensorsWorker>_Nullable)sensorsWorker
-                            unicoSetup:(id<UnicoSetupProtocol>_Nonnull)unicoSetup
-                              sAdapter:(id<SAdapterProtocol>_Nonnull)sAdapter;
+                            unicoSetup:(id<UnicoSetupProtocol>_Nonnull)unicoSetup;
 
 #pragma mark - Language Origin
 
