@@ -22,7 +22,9 @@ Pod::Spec.new do |spec|
     "UnicoSdkBase.xcframework",
     "UnicoSdkLiveness.xcframework",
     "UnicoSdkLogger.xcframework",
-    "UnicoSdkPlugins.xcframework"
+    "UnicoSdkPlugins.xcframework",
+    "USDK.xcframework",
+    "USDKResources.xcframework"
   ]
 
   spec.resource_bundles = {"unicocheck-ios" => ["AcessoBio.xcframework/ios-arm64/AcessoBio.framework/PrivacyInfo.xcprivacy"]}
