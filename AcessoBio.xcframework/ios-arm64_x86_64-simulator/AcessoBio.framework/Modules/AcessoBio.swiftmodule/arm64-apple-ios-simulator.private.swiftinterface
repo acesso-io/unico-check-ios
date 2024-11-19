@@ -212,7 +212,7 @@ public class SDKPredictResponseDTO : Swift.Decodable {
   @objc func onSuccessSDK(result: AcessoBio.CaptureResult)
   @objc func onErrorSDK(error: AcessoBio.ErrorBio)
 }
-@objc final public class SAdapter : ObjectiveC.NSObject, AcessoBio.SAdapterProtocol {
+@objc @_hasMissingDesignatedInitializers final public class SAdapter : ObjectiveC.NSObject, AcessoBio.SAdapterProtocol {
   @objc public init(viewController: UIKit.UIViewController, unicoSetup: AcessoBio.UnicoSetup)
   @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
   @objc deinit

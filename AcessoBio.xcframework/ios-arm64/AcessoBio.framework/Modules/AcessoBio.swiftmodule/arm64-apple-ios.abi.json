@@ -5432,6 +5432,16 @@
         "moduleName": "AcessoBio"
       },
       {
+        "kind": "Import",
+        "name": "UnicoSdkShuri",
+        "printedName": "UnicoSdkShuri",
+        "declKind": "Import",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "SAdapterProtocol",
         "printedName": "SAdapterProtocol",
@@ -5786,6 +5796,7 @@
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
         ],
@@ -18031,6 +18042,16 @@
       },
       {
         "kind": "Import",
+        "name": "UnicoSdkShuri",
+        "printedName": "UnicoSdkShuri",
+        "declKind": "Import",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -18862,7 +18883,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/onboarding_private\/Adapters\/Shuri\/SAdapter.swift",
       "kind": "StringLiteral",
-      "offset": 4185,
+      "offset": 1138,
       "length": 8,
       "value": "\"AcessoBio.SAdapter\""
     },
@@ -19662,7 +19683,7 @@
       "kind": "StringLiteral",
       "offset": 215,
       "length": 8,
-      "value": "\"2.16.4\""
+      "value": "\"2.16.5\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKConfigResponseDTO.swift",
@@ -19751,14 +19772,14 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/BaseObject.swift",
       "kind": "StringLiteral",
-      "offset": 486,
+      "offset": 605,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/BaseObject.swift",
       "kind": "StringLiteral",
-      "offset": 498,
+      "offset": 633,
       "length": 2,
       "value": "\"\""
     },

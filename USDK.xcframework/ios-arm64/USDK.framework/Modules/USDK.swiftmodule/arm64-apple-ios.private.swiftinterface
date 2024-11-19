@@ -1,0 +1,640 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name USDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import Accelerate
+import SystemConfiguration.CaptiveNetwork
+import CommonCrypto
+import Compression
+import CoreBluetooth
+import CoreData
+import CoreFoundation
+import CoreGraphics
+import CoreImage
+import CoreLocation
+import CoreMedia
+import CoreNFC
+import CoreTelephony
+import CoreText
+import Darwin
+import DeveloperToolsSupport
+import Dispatch
+import Foundation
+import ImageIO
+import LocalAuthentication
+import MachO
+import MobileCoreServices
+import ObjectiveC
+import QuartzCore
+import Security
+import Swift
+import SystemConfiguration
+import UIKit
+@_exported import USDK
+import VideoToolbox
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import simd
+public enum OZError : Foundation.LocalizedError {
+  case selfieLengthError
+  case expireTokenError
+  case environmentSecurityCheckError
+  case emptyFolderId
+  public static func == (a: USDK.OZError, b: USDK.OZError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension USDK.OZError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension USDK.OZMedia : Swift.Equatable {
+  public static func == (left: USDK.OZMedia, right: USDK.OZMedia) -> Swift.Bool
+}
+infix operator +| : DefaultPrecedence
+infix operator +- : DefaultPrecedence
+public struct ResponseError : Foundation.LocalizedError {
+  public let code: Swift.Int?
+  public let errorType: USDK.ResponseError.ErrorType?
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public enum ErrorType {
+    case incorrectLoginOrPassword
+    case jsonSerializationError
+    case wrongURL
+    case timeout
+    case httpError
+    public static func == (a: USDK.ResponseError.ErrorType, b: USDK.ResponseError.ErrorType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public struct Features : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LicenseResponse {
+  public let code: USDK.LicenseError
+  public let message: Swift.String?
+}
+public enum LicenseError : Swift.Error {
+  case licenseFileNotFound(Swift.String)
+  case licenseParseError(Swift.String)
+  case licenseBundleError(Swift.String)
+  case licenseExpired(Swift.String)
+  case licenseSuspended
+  case licenseFraudDetected
+  case checkLicenseUnknownError
+  case invalidLicenseData
+  case checkLicenseTemporaryError
+  case invalidLicenseProductId
+  case licenseRevoked
+  case invalidLicenseKey
+  case licenseMeterAttributeLimitReached(Swift.String)
+  case licenseActivationLimitReached
+  case syncCheckLicenseMethodUsed
+  case invalidLicenseServerRequest
+  case checkLicenseTimeout
+  case noConnection
+  case masterLicensePublicKeyMissing
+  case masterLicensePublicKeyInvalid
+  case masterLicenseFraudDetected
+  case masterLicenseSignatureMissing
+  public var code: Swift.String {
+    get
+  }
+}
+extension USDK.LicenseError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension Foundation.FileManager {
+  public func secureCopyItem(at srcURL: Foundation.URL, to dstURL: Foundation.URL) -> Swift.Bool
+}
+public struct Customization : Swift.Codable, Swift.Equatable {
+  public var toolbarCustomization: USDK.ToolbarCustomization
+  public var antiscamCustomization: USDK.AntiscamCustomization
+  public var centerHintCustomization: USDK.CenterHintCustomization
+  public var hintAnimationCustomization: USDK.HintAnimationCustomization
+  public var faceFrameCustomization: USDK.FaceFrameCustomization
+  public var versionCustomization: USDK.VersionLabelCustomization
+  public var backgroundCustomization: USDK.BackgroundCustomization
+  public var logoCustomization: USDK.LogoCustomization?
+  public init(toolbarCustomization: USDK.ToolbarCustomization, antiscamCustomization: USDK.AntiscamCustomization, centerHintCustomization: USDK.CenterHintCustomization, hintAnimationCustomization: USDK.HintAnimationCustomization, faceFrameCustomization: USDK.FaceFrameCustomization, versionCustomization: USDK.VersionLabelCustomization, backgroundCustomization: USDK.BackgroundCustomization, logoCustomization: USDK.LogoCustomization? = nil)
+  public static func == (a: USDK.Customization, b: USDK.Customization) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LogoCustomization : Swift.Codable, Swift.Equatable {
+  public var image: UIKit.UIImage
+  public var size: CoreFoundation.CGSize
+  public init(image: UIKit.UIImage, size: CoreFoundation.CGSize)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: USDK.LogoCustomization, b: USDK.LogoCustomization) -> Swift.Bool
+}
+public struct ToolbarCustomization : Swift.Codable, Swift.Equatable {
+  public var closeButtonIcon: UIKit.UIImage?
+  public var closeButtonColor: UIKit.UIColor?
+  public var titleText: Swift.String?
+  public var titleFont: UIKit.UIFont?
+  public var titleColor: UIKit.UIColor?
+  public var backgroundColor: UIKit.UIColor?
+  public init(closeButtonIcon: UIKit.UIImage? = nil, closeButtonColor: UIKit.UIColor? = nil, titleText: Swift.String? = nil, titleFont: UIKit.UIFont? = nil, titleColor: UIKit.UIColor? = nil, backgroundColor: UIKit.UIColor? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: USDK.ToolbarCustomization, b: USDK.ToolbarCustomization) -> Swift.Bool
+}
+public struct AntiscamCustomization : Swift.Codable, Swift.Equatable {
+  public var customizationEnableAntiscam: Swift.Bool?
+  public var customizationAntiscamTextMessage: Swift.String?
+  public var customizationAntiscamTextFont: UIKit.UIFont?
+  public var customizationAntiscamTextColor: UIKit.UIColor?
+  public var customizationAntiscamBackgroundColor: UIKit.UIColor?
+  public var customizationAntiscamCornerRadius: CoreFoundation.CGFloat?
+  public var customizationAntiscamFlashColor: UIKit.UIColor?
+  public init(customizationEnableAntiscam: Swift.Bool? = nil, customizationAntiscamTextMessage: Swift.String? = nil, customizationAntiscamTextFont: UIKit.UIFont? = nil, customizationAntiscamTextColor: UIKit.UIColor? = nil, customizationAntiscamBackgroundColor: UIKit.UIColor? = nil, customizationAntiscamCornerRadius: CoreFoundation.CGFloat? = nil, customizationAntiscamFlashColor: UIKit.UIColor? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: USDK.AntiscamCustomization, b: USDK.AntiscamCustomization) -> Swift.Bool
+}
+public struct CenterHintCustomization : Swift.Codable, Swift.Equatable {
+  public var textColor: UIKit.UIColor?
+  public var textFont: UIKit.UIFont?
+  public var verticalPosition: Swift.Int?
+  public var backgroundColor: UIKit.UIColor?
+  public var hideTextBackground: Swift.Bool?
+  public var backgroundCornerRadius: Swift.Int?
+  public init(textColor: UIKit.UIColor? = nil, textFont: UIKit.UIFont? = nil, verticalPosition: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, hideTextBackground: Swift.Bool? = nil, backgroundCornerRadius: Swift.Int? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: USDK.CenterHintCustomization, b: USDK.CenterHintCustomization) -> Swift.Bool
+}
+public struct HintAnimationCustomization : Swift.Codable, Swift.Equatable {
+  public var hideAnimation: Swift.Bool
+  public var animationIconSize: CoreFoundation.CGFloat
+  @available(*, deprecated, renamed: "hintGradientColor")
+  public var toFrameGradientColor: UIKit.UIColor?
+  public var hintGradientColor: UIKit.UIColor?
+  @available(*, deprecated, message: "Use init(hideAnimation: Bool, animationIconSize: CGFloat, hintGradientColor: UIColor) instead")
+  public init(hideAnimation: Swift.Bool, animationIconSize: CoreFoundation.CGFloat, toFrameGradientColor: UIKit.UIColor)
+  public init(hideAnimation: Swift.Bool, animationIconSize: CoreFoundation.CGFloat, hintGradientColor: UIKit.UIColor)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: USDK.HintAnimationCustomization, b: USDK.HintAnimationCustomization) -> Swift.Bool
+}
+public struct FaceFrameCustomization : Swift.Codable, Swift.Equatable {
+  public enum GeometryType : Swift.Codable, Swift.Equatable {
+    case oval
+    case rectangle(cornerRadius: CoreFoundation.CGFloat)
+    case circle
+    case square(cornerRadius: CoreFoundation.CGFloat)
+    public static func == (a: USDK.FaceFrameCustomization.GeometryType, b: USDK.FaceFrameCustomization.GeometryType) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public var strokeWidth: CoreFoundation.CGFloat
+  public var strokeFaceAlignedColor: UIKit.UIColor
+  public var strokeFaceNotAlignedColor: UIKit.UIColor
+  public var geometryType: USDK.FaceFrameCustomization.GeometryType
+  @available(*, deprecated)
+  public var strokePadding: CoreFoundation.CGFloat
+  public init(strokeWidth: CoreFoundation.CGFloat, strokeFaceAlignedColor: UIKit.UIColor, strokeFaceNotAlignedColor: UIKit.UIColor, geometryType: USDK.FaceFrameCustomization.GeometryType, strokePadding: CoreFoundation.CGFloat)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: USDK.FaceFrameCustomization, b: USDK.FaceFrameCustomization) -> Swift.Bool
+}
+public struct VersionLabelCustomization : Swift.Codable, Swift.Equatable {
+  public var textFont: UIKit.UIFont?
+  public var textColor: UIKit.UIColor?
+  public init(textFont: UIKit.UIFont? = nil, textColor: UIKit.UIColor? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: USDK.VersionLabelCustomization, b: USDK.VersionLabelCustomization) -> Swift.Bool
+}
+public struct BackgroundCustomization : Swift.Codable, Swift.Equatable {
+  public var backgroundColor: UIKit.UIColor?
+  public init(backgroundColor: UIKit.UIColor? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: USDK.BackgroundCustomization, b: USDK.BackgroundCustomization) -> Swift.Bool
+}
+public enum AnalysisType : Swift.CustomStringConvertible {
+  case quality, document, biometry, blackList
+  public static var all: Swift.Set<USDK.AnalysisType> {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: USDK.AnalysisType, b: USDK.AnalysisType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SizeReductionStrategy : Swift.String, Swift.CaseIterable {
+  case uploadOriginal
+  case uploadCompressed
+  case uploadBestShot
+  case uploadNothing
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [USDK.SizeReductionStrategy]
+  public typealias RawValue = Swift.String
+  public static var allCases: [USDK.SizeReductionStrategy] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AnalysisMode : Swift.Equatable {
+  case onDevice, serverBased, hybrid
+  public static func == (a: USDK.AnalysisMode, b: USDK.AnalysisMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Analysis {
+  public init(media: [USDK.OZMedia]?, type: USDK.AnalysisType, mode: USDK.AnalysisMode, sizeReductionStrategy: USDK.SizeReductionStrategy? = nil, params: [Swift.String : Any]?)
+  public init(media: [USDK.OZMedia]?, type: USDK.AnalysisType, mode: USDK.AnalysisMode, sizeReductionStrategy: USDK.SizeReductionStrategy? = nil)
+}
+public struct AnalysisStatus {
+  public let media: USDK.OZMedia
+  public let index: Swift.Int
+  public let from: Swift.Int
+  public let progress: Foundation.Progress
+  public let cancelableRequest: any USDK.OZCancelableRequest
+}
+public enum LicenseSource : Swift.Codable {
+  case licenseFilePath(Swift.String)
+  case licenseFileName(Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum SSLPin : Swift.Codable {
+  case pin(publicKeyHash: Swift.String, expirationDate: Foundation.Date)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum Connection {
+  case fromServiceToken(host: Swift.String, token: Swift.String, sslPins: [USDK.SSLPin]? = nil)
+  case fromCredentials(host: Swift.String, login: Swift.String, password: Swift.String, sslPins: [USDK.SSLPin]? = nil)
+}
+public struct LicenseData {
+  public var appIDS: [Swift.String]?
+  public var expires: Foundation.TimeInterval?
+  public var features: USDK.Features?
+}
+public struct OZFrameCustomization {
+  public var backgroundColor: UIKit.UIColor
+}
+@available(iOS 11.0, *)
+public var OZSDK: any USDK.OZSDKProtocol {
+  get
+}
+public func OZSDK(licenseSources: [USDK.LicenseSource], masterLicenseSignature: Swift.String? = nil, completion: @escaping ((USDK.LicenseData?, USDK.LicenseError?) -> Swift.Void))
+public func AnalysisRequestBuilder(_ folderId: Swift.String? = nil) -> any USDK.OZRequestProtocol
+public typealias FaceCaptureCompletion = (_ results: [USDK.OZMedia]?, _ error: USDK.OZVerificationStatus?) -> Swift.Void
+public protocol OZRequestProtocol : AnyObject {
+  func addAnalysis(_ analysis: USDK.Analysis)
+  func addAnalysis(_ analysis: [USDK.Analysis])
+  func uploadMedia(_ media: USDK.OZMedia)
+  func uploadMedia(_ media: [USDK.OZMedia])
+  func addFolderId(_ folderId: Swift.String)
+  func addFolderMeta(_ meta: [Swift.String : Any])
+  @discardableResult
+  func run(statusHandler: @escaping ((_ status: USDK.RequestStatus) -> Swift.Void), errorHandler: @escaping ((_ error: any Swift.Error) -> Swift.Void), completionHandler: @escaping (_ results: USDK.RequestResult) -> Swift.Void) -> (any USDK.OZCancelableRequest)?
+}
+public protocol OZSDKProtocol : AnyObject {
+  var resultObserver: (([USDK.OZMedia]) -> Swift.Void) { get set }
+  var journalObserver: ((Swift.String) -> Swift.Void) { get set }
+  var licenseResult: ((USDK.LicenseData?, USDK.LicenseError?) -> Swift.Void) { get set }
+  var localizationCode: USDK.OZLocalizationCode? { get set }
+  var host: Swift.String { get }
+  var eventsHost: Swift.String { get }
+  var attemptSettings: USDK.OZAttemptSettings { get set }
+  var customization: USDK.Customization { get set }
+  var version: Swift.String { get }
+  var licenseData: USDK.LicenseData? { get }
+  @available(*, deprecated, message: "Use setApiConnection(Connection) method")
+  @discardableResult
+  func login(_ login: Swift.String, password: Swift.String, completion: @escaping (_ accessToken: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void) -> any USDK.OZCancelableRequest
+  func isLoggedIn() -> Swift.Bool
+  func hasEventsConnection() -> Swift.Bool
+  func logout()
+  @available(*, deprecated, message: "Use setApiConnection(Connection) method")
+  func setPermanentAccessToken(_ accessToken: Swift.String)
+  func createVerificationVCWithDelegate(_ delegate: any USDK.OZLivenessDelegate, actions: [USDK.OZVerificationMovement]) throws -> UIKit.UIViewController
+  func createVerificationVCWithDelegate(_ delegate: any USDK.OZLivenessDelegate, actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position) throws -> UIKit.UIViewController
+  func createVerificationVC(actions: [USDK.OZVerificationMovement], completion: @escaping USDK.FaceCaptureCompletion) throws -> UIKit.UIViewController
+  func createVerificationVC(actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position, completion: @escaping USDK.FaceCaptureCompletion) throws -> UIKit.UIViewController
+  func cleanTempDirectory()
+  @available(*, deprecated, message: "Use setApiConnection(Connection) method")
+  func configure(with host: Swift.String)
+  func set(licenseBundle: Foundation.Bundle) throws
+  func set(languageBundle: Foundation.Bundle)
+  func set(licenseBundle: Foundation.Bundle, licenseSources: [USDK.LicenseSource])
+  @available(*, deprecated, message: "Use setLicense(licenseSource: LicenseSource) method")
+  func setLicense(from path: Swift.String)
+  func setLicense(licenseSource: USDK.LicenseSource)
+  func setLicense(licenseSource: USDK.LicenseSource, masterLicenseSignature: Swift.String?)
+  func setApiConnection(_ apiConnection: USDK.Connection, completion: @escaping (_ accessToken: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void)
+  func setEventsConnection(_ eventsConnection: USDK.Connection?, completion: @escaping (_ accessToken: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void)
+  func getEventSessionId() -> Swift.String
+  func setSelfieLength(length: Swift.Int) throws
+  @available(*, deprecated, message: "Use generateSignedPayload instead")
+  func generatePayload(medias: [USDK.OZMedia]) -> Swift.String?
+  func generateSignedPayload(medias: [USDK.OZMedia]) -> Swift.String?
+}
+public protocol OZCancelableRequest {
+  func cancel()
+}
+public struct DocumentPhoto {
+  public init(front: Foundation.URL?, back: Foundation.URL?)
+  public var front: Foundation.URL?
+  public var back: Foundation.URL?
+}
+public enum OZAnalysesState : Swift.String {
+  case liveness
+  case quality
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol OZLivenessDelegate : AnyObject {
+  func onOZLivenessResult(results: [USDK.OZMedia])
+  func onError(status: USDK.OZVerificationStatus?)
+}
+public struct OZLivenessResult {
+  public var status: USDK.OZVerificationStatus {
+    get
+  }
+  public var media: USDK.OZMedia
+}
+public enum MediaType {
+  case movement
+  case documentBack
+  case documentFront
+  public static func == (a: USDK.MediaType, b: USDK.MediaType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct MediaName {
+}
+public struct OZMedia {
+  public init(movement: USDK.OZVerificationMovement?, mediaType: USDK.MediaType, metaData: [Swift.String : Any]?, additionalTags: [Swift.String]? = nil, videoURL: Foundation.URL?, bestShotURL: Foundation.URL?, preferredMediaURL: Foundation.URL?, timestamp: Foundation.Date)
+  public init(movement: USDK.OZVerificationMovement?, mediaType: USDK.MediaType, metaData: [Swift.String : Any]?, additionalTags: [Swift.String]? = nil, videoURL: Foundation.URL?, bestShotURL: Foundation.URL?, preferredMediaURL: Foundation.URL?, losslessFrameURL: Foundation.URL?, timestamp: Foundation.Date)
+  public init(mediaType: USDK.MediaType, metaData: [Swift.String : Any]?, additionalTags: [Swift.String]? = nil, preferredMediaURL: Foundation.URL?, timestamp: Foundation.Date)
+  public var movement: USDK.OZVerificationMovement?
+  public var mediaType: USDK.MediaType
+  public var metaData: [Swift.String : Any]?
+  public var additionalTags: [Swift.String]?
+  public var videoURL: Foundation.URL?
+  public var bestShotURL: Foundation.URL?
+  public var preferredMediaURL: Foundation.URL?
+  public var losslessFrameURL: Foundation.URL?
+  public var timestamp: Foundation.Date
+  public var mediaName: USDK.MediaName {
+    get
+  }
+  public func validate() -> Swift.Bool
+}
+public enum OZVerificationStatus : Swift.Equatable {
+  public var rawValue: Swift.String {
+    get
+  }
+  public static func == (lhs: USDK.OZVerificationStatus, rhs: USDK.OZVerificationStatus) -> Swift.Bool
+  case userNotProcessed
+  case failedBecauseUserCancelled
+  case failedBecauseCameraPermissionDenied
+  case failedBecauseOfBackgroundMode
+  case failedBecauseOfTimeout
+  case failedBecauseOfAttemptLimit
+  case failedBecausePreparingTimout
+  case failedBecauseOfLowMemory
+  case failedBecauseOfLicenseError(USDK.LicenseError)
+}
+public struct OZAttemptSettings {
+  public var faceAlignmentTimeout: Swift.Double?
+  public var uploadMediaSettings: USDK.UploadMediaSettings
+  public init(singleCount: Swift.Int? = nil, commonCount: Swift.Int? = nil, faceAlignmentTimeout: Swift.Double? = nil, uploadMediaSettings: USDK.UploadMediaSettings? = nil)
+}
+public struct UploadMediaSettings {
+  public var attemptsCount: Swift.Int
+  public var attemptsTimeout: Swift.UInt64
+  public init(attemptsCount: Swift.Int, attemptsTimeout: Swift.UInt64)
+}
+public enum OZVerificationMovement {
+  case smile
+  case eyes
+  case scanning
+  case selfie
+  case one_shot
+  case left
+  case right
+  case down
+  case up
+  public static func == (a: USDK.OZVerificationMovement, b: USDK.OZVerificationMovement) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class AnalyseResolution {
+  public var status: USDK.AnalyseResolutionStatus
+  public var type: Swift.String
+  public var folderID: Swift.String?
+  public var score: Swift.Float?
+  public init(type: Swift.String, status: USDK.AnalyseResolutionStatus, folderID: Swift.String?)
+  public init(type: Swift.String, status: USDK.AnalyseResolutionStatus, folderID: Swift.String?, score: Swift.Float?)
+  @objc deinit
+}
+public enum AnalysisError : Swift.Error {
+  case missingMedia
+  case framingFailed
+  case analysisTypeNonSupported
+  case validateMediaFailed
+  case onDeviceDisable
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: USDK.AnalysisError, b: USDK.AnalysisError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class MediaProgressStatus {
+  public init(media: USDK.OZMedia, index: Swift.Int, from: Swift.Int, progress: Foundation.Progress, cancelableRequest: any USDK.OZCancelableRequest)
+  final public let media: USDK.OZMedia
+  final public let index: Swift.Int
+  final public let from: Swift.Int
+  final public let progress: Foundation.Progress
+  final public let cancelableRequest: any USDK.OZCancelableRequest
+  @objc deinit
+}
+public class RequestStatus {
+  public init(status: USDK.ScenarioState, progressStatus: USDK.MediaProgressStatus? = nil)
+  public var status: USDK.ScenarioState
+  public var progressStatus: USDK.MediaProgressStatus?
+  @objc deinit
+}
+public class RequestResult {
+  public var resolution: USDK.AnalyseResolutionStatus
+  public var folderID: Swift.String?
+  public var analysisResults: [USDK.AnalysisResult]
+  public init(resolution: USDK.AnalyseResolutionStatus, folderID: Swift.String? = nil, analysisResults: [USDK.AnalysisResult])
+  @objc deinit
+}
+extension USDK.RequestResult : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public class AnalysisResult {
+  public init(resolution: USDK.AnalyseResolutionStatus, type: Swift.String, mode: USDK.AnalysisMode, resultsMedia: [USDK.ResultMedia], analysisID: Swift.String? = nil, confidenceScore: Swift.Float? = nil, serverRawResponse: Swift.String? = nil, error: (any Swift.Error)? = nil)
+  public var resolution: USDK.AnalyseResolutionStatus
+  public var type: Swift.String
+  public var mode: USDK.AnalysisMode
+  public var analysisID: Swift.String?
+  public var error: (any Swift.Error)?
+  public var confidenceScore: Swift.Float?
+  public var serverRawResponse: Swift.String?
+  public var resultsMedia: [USDK.ResultMedia]
+  @objc deinit
+}
+extension USDK.AnalysisResult : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public class ResultMedia {
+  public init(resolution: USDK.AnalyseResolutionStatus? = nil, media: USDK.OZMedia, sourceID: Swift.String? = nil, isOnDevice: Swift.Bool, confidenceScore: Swift.Float? = nil, mediaType: Swift.String? = nil, error: (any Swift.Error)? = nil)
+  public var resolution: USDK.AnalyseResolutionStatus?
+  public var sourceID: Swift.String?
+  public var isOnDevice: Swift.Bool
+  public var confidenceScore: Swift.Float?
+  public var mediaType: Swift.String?
+  public var media: USDK.OZMedia
+  public var error: (any Swift.Error)?
+  @objc deinit
+}
+extension USDK.ResultMedia : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class DocumentAnalyseResolution : USDK.AnalysisResult {
+  public func getTextValue(by fieldName: Swift.String) -> Swift.String?
+  override public init(resolution: USDK.AnalyseResolutionStatus, type: Swift.String, mode: USDK.AnalysisMode, resultsMedia: [USDK.ResultMedia], analysisID: Swift.String? = nil, confidenceScore: Swift.Float? = nil, serverRawResponse: Swift.String? = nil, error: (any Swift.Error)? = nil)
+  @objc deinit
+}
+public enum AnalyseResolutionStatus : Swift.String {
+  case initial
+  case processing
+  case failed
+  case finished
+  case declined
+  case success
+  case operatorRequired
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ScenarioState {
+  case addToFolder, addAnalyses, waitAnalysisResult
+  public static func == (a: USDK.ScenarioState, b: USDK.ScenarioState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum OZLocalizationCode {
+  case ru, en, hy, kk, ky, tr, es, pt_BR
+  case custom(Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+}
+public enum OZJournalEvent : Swift.String {
+  case unknown
+  case sdkInitialization
+  case livenessCheckStart
+  case actionStart
+  case actionRestart
+  case actionFinish
+  case actionFailed
+  case livenessCheckFinish
+  case actionFacePositionFixed
+  case actionFacePositionRecommendation
+  case actionRecordStart
+  case actionRecordFinish
+  case actionRecordSaved
+  case brightnessChanged
+  case error
+  case request
+  case response
+  case analysisRequestRun
+  case hybridAnalysisStart
+  case onDeviceAnalysisStart
+  case onDeviceVideoInfo
+  case onDeviceImageInfo
+  case onDeviceAlignFace
+  case onDeviceModelResult
+  case onDeviceError
+  case environmentSecurityCheck
+  case environmentSecurityCallback
+  case sslPinning
+  case sslPinningCheck
+  case mediaUploadRequestSignature
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension USDK.OZVerificationMovement : Swift.Equatable {}
+extension USDK.OZVerificationMovement : Swift.Hashable {}
+extension USDK.OZJournalEvent : Swift.Equatable {}
+extension USDK.OZJournalEvent : Swift.Hashable {}
+extension USDK.OZJournalEvent : Swift.RawRepresentable {}
+extension USDK.OZError : Swift.Equatable {}
+extension USDK.OZError : Swift.Hashable {}
+extension USDK.AnalysisType : Swift.Equatable {}
+extension USDK.AnalysisType : Swift.Hashable {}
+extension USDK.AnalysisMode : Swift.Hashable {}
+extension USDK.ResponseError.ErrorType : Swift.Equatable {}
+extension USDK.ResponseError.ErrorType : Swift.Hashable {}
+extension USDK.SizeReductionStrategy : Swift.Equatable {}
+extension USDK.SizeReductionStrategy : Swift.Hashable {}
+extension USDK.SizeReductionStrategy : Swift.RawRepresentable {}
+extension USDK.OZAnalysesState : Swift.Equatable {}
+extension USDK.OZAnalysesState : Swift.Hashable {}
+extension USDK.OZAnalysesState : Swift.RawRepresentable {}
+extension USDK.MediaType : Swift.Equatable {}
+extension USDK.MediaType : Swift.Hashable {}
+extension USDK.AnalysisError : Swift.Equatable {}
+extension USDK.AnalysisError : Swift.Hashable {}
+extension USDK.AnalyseResolutionStatus : Swift.Equatable {}
+extension USDK.AnalyseResolutionStatus : Swift.Hashable {}
+extension USDK.AnalyseResolutionStatus : Swift.RawRepresentable {}
+extension USDK.ScenarioState : Swift.Equatable {}
+extension USDK.ScenarioState : Swift.Hashable {}
