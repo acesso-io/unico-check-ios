@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		QlP7EM427GJ+1WbnVzCMiNedRzk=
+		DCPrLo0g8MY/ToJSxNXtt+NOxck=
 		</data>
 		<key>Headers/UnicoSdkLiveness-Swift.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		aC7T7YGt1iRBSLb1gvJPvI9lCZQ=
+		tkiO4Txx41DT0TUFh2Fj15YEA38=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		FAfTsvBU8hFQCHSPEsBaHT42Ctc=
+		rGrRCF+WTJjQhz9Bu/DX/xopw8A=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2Rj2hSssXudcK9LE8rLD5mV8Stg=
+		9kFm6azUXtFbAvPU1LVJIHM+VfY=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		FAfTsvBU8hFQCHSPEsBaHT42Ctc=
+		rGrRCF+WTJjQhz9Bu/DX/xopw8A=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kqh3ojYKatz9U7rGo5dP+N5f6qU=
+		C3gSUWxsdAOvs6IlGq11arsgGhA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -252,7 +252,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sL1LmFHjRLG02SgsCkoWXjHBLwJvtcBFhsvhjUHnwQs=
+			XoynDDa45E65Bbg55SkBjEH0g6PEmAMZ8xfqqyXCXOk=
 			</data>
 		</dict>
 		<key>Headers/UnicoSdkLiveness-Swift.h</key>
@@ -273,7 +273,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			p1qemJB7YQfCiNsHx/ePtD/Yn2G5ElvJ9nwWYr2x7+g=
+			NeVPcPc8Bpxk4Dxe6ReQGhYjGVJXsXgi5wfEfEumPvM=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -301,14 +301,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rUMMzoWckRGr0DGyHBeG4qAoVsa4PLmGAcktJnh71K8=
+			mqcLQNhMCBPnEKsqsreO1E6ZnSrtPqAsAV49naXIAjE=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			p1qemJB7YQfCiNsHx/ePtD/Yn2G5ElvJ9nwWYr2x7+g=
+			NeVPcPc8Bpxk4Dxe6ReQGhYjGVJXsXgi5wfEfEumPvM=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -336,7 +336,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IH3PwyynSbj271UeoLqcgRTNSyJ9ftSoXQscQPoZCUg=
+			nVkhoS5uJb5cDW3UDfhKLTB/rFeBJBogyrUtk1l3V/I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
