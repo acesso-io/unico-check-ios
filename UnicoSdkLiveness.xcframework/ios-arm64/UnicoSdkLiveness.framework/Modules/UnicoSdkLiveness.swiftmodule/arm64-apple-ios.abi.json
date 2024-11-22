@@ -3083,6 +3083,13 @@
       },
       {
         "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -3989,6 +3996,13 @@
         "kind": "Import",
         "name": "FaceTecSDK",
         "printedName": "FaceTecSDK",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
         "declKind": "Import",
         "moduleName": "UnicoSdkLiveness"
       },
@@ -6460,28 +6474,28 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
       "kind": "StringLiteral",
-      "offset": 330,
+      "offset": 350,
       "length": 10,
       "value": "\"ic_close\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 989,
+      "offset": 1004,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
       "kind": "FloatLiteral",
-      "offset": 1104,
+      "offset": 1119,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
       "kind": "FloatLiteral",
-      "offset": 1427,
+      "offset": 1442,
       "length": 3,
       "value": "0.2"
     },
@@ -6684,119 +6698,119 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "StringLiteral",
-      "offset": 1132,
+      "offset": 1152,
       "length": 10,
       "value": "\"ic_close\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "BooleanLiteral",
-      "offset": 2573,
+      "offset": 2589,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "BooleanLiteral",
-      "offset": 2657,
+      "offset": 2673,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 2911,
+      "offset": 2927,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 2985,
+      "offset": 3001,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 3079,
+      "offset": 3095,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 3162,
+      "offset": 3178,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 3246,
+      "offset": 3262,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 3331,
+      "offset": 3347,
       "length": 4,
       "value": "2000"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 3523,
+      "offset": 3539,
       "length": 3,
       "value": "800"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "FloatLiteral",
-      "offset": 3807,
+      "offset": 3823,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 3877,
+      "offset": 3893,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 3941,
+      "offset": 3957,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 4006,
+      "offset": 4022,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "StringLiteral",
-      "offset": 4495,
+      "offset": 4511,
       "length": 26,
       "value": "\"unico_custom_footer_logo\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "BooleanLiteral",
-      "offset": 4635,
+      "offset": 4651,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Facetec\/Customization\/UnicoFacetecCustomization.swift",
       "kind": "StringLiteral",
-      "offset": 4707,
+      "offset": 4723,
       "length": 16,
       "value": "\"ic_footer_logo\""
     },
@@ -6936,7 +6950,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/RetryFlow\/LivenessRetryUseCase.swift",
       "kind": "StringLiteral",
-      "offset": 7688,
+      "offset": 7763,
       "length": 38,
       "value": "\"Unico_result_facescan_upload_message\""
     },
@@ -7209,14 +7223,7 @@
     {
       "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/UnicoSdkLiveness\/IntermediateBuildFilesPath\/UnicoSdkLiveness.build\/Release-iphoneos\/UnicoSdkLiveness.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 838,
-      "length": 10,
-      "value": "\"ic_close\""
-    },
-    {
-      "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/UnicoSdkLiveness\/IntermediateBuildFilesPath\/UnicoSdkLiveness.build\/Release-iphoneos\/UnicoSdkLiveness.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 984,
+      "offset": 849,
       "length": 16,
       "value": "\"ic_footer_logo\""
     }

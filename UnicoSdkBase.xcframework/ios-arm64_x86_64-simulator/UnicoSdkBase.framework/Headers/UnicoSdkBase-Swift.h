@@ -307,7 +307,11 @@ SWIFT_CLASS("_TtC12UnicoSdkBase19LivenessLoadingView")
 @interface LivenessLoadingView : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (void)didMoveToSuperview;
+- (void)removeFromSuperview;
 @end
+
+
 
 
 
@@ -630,7 +634,11 @@ SWIFT_CLASS("_TtC12UnicoSdkBase19LivenessLoadingView")
 @interface LivenessLoadingView : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (void)didMoveToSuperview;
+- (void)removeFromSuperview;
 @end
+
+
 
 
 

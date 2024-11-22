@@ -8,6 +8,7 @@ import CoreLocation/*.CLAuthorizationStatus*/
 import CoreLocation/*.CLLocation*/
 import CoreLocation/*.CLLocationManager*/
 import CoreLocation/*.CLLocationManagerDelegate*/
+import DeveloperToolsSupport
 import Foundation
 import Swift
 import UIKit
@@ -63,9 +64,11 @@ public struct CryptedRequestDTO<T> : Swift.Encodable where T : Swift.Encodable {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class LivenessLoadingView : UIKit.UIView {
   public struct Customization {
-    public init(backgroundColor: UIKit.UIColor?, progressBarColor: UIKit.UIColor?, textMessageColor: UIKit.UIColor?, textLabel: Swift.String?)
+    public init(closeButtonColor: UIKit.UIColor?, backgroundColor: UIKit.UIColor?, progressBarColor: UIKit.UIColor?, textMessageColor: UIKit.UIColor?, textLabel: Swift.String?)
   }
-  @_Concurrency.MainActor(unsafe) final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization)
+  @_Concurrency.MainActor(unsafe) final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization, onClose: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override final public func didMoveToSuperview()
+  @_Concurrency.MainActor(unsafe) @objc override final public func removeFromSuperview()
   @objc deinit
 }
 public protocol NetworkConfigurable {
@@ -190,7 +193,7 @@ extension UnicoSdkBase.NetworkError {
   final public let getGeoIP: any UnicoSdkBase.GetGeoIP
   final public let geoLocation: any UnicoSdkBase.GeoLocation
   final public let getDeviceInfo: any UnicoSdkBase.GetDeviceInfo
-  convenience public init(dataTransferService: any UnicoSdkBase.DataTransferService, locationManager: CoreLocation.CLLocationManager = CLLocationManager(), device: UIKit.UIDevice = UIDevice.current, keyData: Swift.String, ivData: Swift.String)
+  convenience public init(dataTransferService: any UnicoSdkBase.DataTransferService, locationManager: CoreLocation.CLLocationManager = CLLocationManager(), device: UIKit.UIDevice = UIDevice.current, keyData: Swift.String, ivData: Swift.String, sdkSessionId: Swift.String)
   @objc deinit
 }
 extension Swift.Optional {
