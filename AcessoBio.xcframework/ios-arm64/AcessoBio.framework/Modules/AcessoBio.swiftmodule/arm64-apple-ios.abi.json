@@ -5432,6 +5432,16 @@
         "moduleName": "AcessoBio"
       },
       {
+        "kind": "Import",
+        "name": "UnicoSdkShuri",
+        "printedName": "UnicoSdkShuri",
+        "declKind": "Import",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "SAdapterProtocol",
         "printedName": "SAdapterProtocol",
@@ -5786,6 +5796,7 @@
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
         ],
@@ -13225,13 +13236,6 @@
         "moduleName": "AcessoBio"
       },
       {
-        "kind": "Import",
-        "name": "UnicoSdkBase",
-        "printedName": "UnicoSdkBase",
-        "declKind": "Import",
-        "moduleName": "AcessoBio"
-      },
-      {
         "kind": "TypeDecl",
         "name": "OpenCameraDTO",
         "printedName": "OpenCameraDTO",
@@ -18024,10 +18028,27 @@
       },
       {
         "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkShuri",
+        "printedName": "UnicoSdkShuri",
+        "declKind": "Import",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
       },
       {
         "kind": "Import",
@@ -18862,14 +18883,14 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/onboarding_private\/Adapters\/Shuri\/SAdapter.swift",
       "kind": "StringLiteral",
-      "offset": 4185,
+      "offset": 1138,
       "length": 8,
       "value": "\"AcessoBio.SAdapter\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Data\/Network\/APIEndpoints.swift",
       "kind": "BooleanLiteral",
-      "offset": 441,
+      "offset": 334,
       "length": 5,
       "value": "false"
     },
@@ -18995,7 +19016,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Plugins\/DataLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1415,
+      "offset": 1352,
       "length": 10,
       "value": "\"AcessoBio.DataLogger\""
     },
@@ -19378,13 +19399,6 @@
       "value": "\"AcessoBio.UnicoJsonLoad\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/LoggerInteractor.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1114,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/OpenCameraDTO.swift",
       "kind": "StringLiteral",
       "offset": 13,
@@ -19658,13 +19672,6 @@
       "value": "3"
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkVersionConfig.swift",
-      "kind": "StringLiteral",
-      "offset": 215,
-      "length": 8,
-      "value": "\"2.16.4\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/services\/dto\/response\/SDKConfigResponseDTO.swift",
       "kind": "StringLiteral",
       "offset": 1709,
@@ -19751,42 +19758,35 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/BaseObject.swift",
       "kind": "StringLiteral",
-      "offset": 486,
+      "offset": 605,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Factories\/DIContainer\/BaseObject.swift",
       "kind": "StringLiteral",
-      "offset": 498,
+      "offset": 633,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/ConfigUnico.swift",
       "kind": "StringLiteral",
-      "offset": 273,
+      "offset": 293,
       "length": 12,
       "value": "\"ios-native\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/ConfigUnico.swift",
       "kind": "StringLiteral",
-      "offset": 316,
+      "offset": 336,
       "length": 5,
       "value": "\"IOS\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/ConfigUnico.swift",
-      "kind": "StringLiteral",
-      "offset": 359,
-      "length": 22,
-      "value": "\"com.acesso.AcessoBio\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/ConfigUnico.swift",
       "kind": "BooleanLiteral",
-      "offset": 416,
+      "offset": 446,
       "length": 5,
       "value": "false"
     },

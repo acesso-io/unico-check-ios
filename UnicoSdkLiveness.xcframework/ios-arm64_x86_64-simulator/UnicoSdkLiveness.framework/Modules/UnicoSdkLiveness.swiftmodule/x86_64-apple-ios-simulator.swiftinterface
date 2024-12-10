@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkLiveness
 // swift-module-flags-ignorable: -enable-experimental-feature AccessLevelOnImport -enable-bare-slash-regex
+import AVFAudio
 import DeveloperToolsSupport
 import FaceTecSDK
 import Foundation
@@ -33,7 +34,7 @@ extension UnicoSdkLiveness.PrepareData {
 }
 extension UnicoSdkLiveness.PrepareData {
   public struct FacetecData : Swift.Equatable {
-    public init(dk: Swift.String, ec: Swift.String, appId: Swift.String, expiryDate: Swift.String, key: Swift.String)
+    public init(dk: Swift.String, ec: Swift.String, appId: Swift.String, expiryDate: Swift.String, key: Swift.String, localizationCode: UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode)
     public static func == (a: UnicoSdkLiveness.PrepareData.FacetecData, b: UnicoSdkLiveness.PrepareData.FacetecData) -> Swift.Bool
   }
   public struct DorothyLicense : Swift.Equatable {
@@ -41,14 +42,14 @@ extension UnicoSdkLiveness.PrepareData {
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyLicense, b: UnicoSdkLiveness.PrepareData.DorothyLicense) -> Swift.Bool
   }
   public struct DorothyData : Swift.Equatable {
-    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense, localizationCode: UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode?)
+    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense, localizationCode: UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyData, b: UnicoSdkLiveness.PrepareData.DorothyData) -> Swift.Bool
   }
   public struct DorothyDataMetaTag : Swift.Equatable {
     public init(action: Swift.String)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyDataMetaTag, b: UnicoSdkLiveness.PrepareData.DorothyDataMetaTag) -> Swift.Bool
   }
-  public enum DorothyDataLocalizationCode : Swift.String, Swift.Equatable {
+  public enum PrepareDataLocalizationCode : Swift.String, Swift.Equatable {
     case en, es, pt_BR
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
@@ -167,8 +168,8 @@ public protocol LivenessLogger {
   var maxAttempts: Swift.Int? { get set }
   var isLive: Swift.Bool? { get set }
 }
-extension UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode : Swift.Hashable {}
-extension UnicoSdkLiveness.PrepareData.DorothyDataLocalizationCode : Swift.RawRepresentable {}
+extension UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode : Swift.Hashable {}
+extension UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode : Swift.RawRepresentable {}
 extension UnicoSdkLiveness.DefaultRenewKeyBodyRepository : UnicoSdkLiveness.RenewKeyBodyDataSource {}
 extension UnicoSdkLiveness.DataTransferErrors : Swift.Equatable {}
 extension UnicoSdkLiveness.DataTransferErrors : Swift.Hashable {}
