@@ -8,6 +8,7 @@ import CoreLocation/*.CLAuthorizationStatus*/
 import CoreLocation/*.CLLocation*/
 import CoreLocation/*.CLLocationManager*/
 import CoreLocation/*.CLLocationManagerDelegate*/
+import DeveloperToolsSupport
 import Foundation
 import Swift
 import UIKit
@@ -63,9 +64,11 @@ public struct CryptedRequestDTO<T> : Swift.Encodable where T : Swift.Encodable {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class LivenessLoadingView : UIKit.UIView {
   public struct Customization {
-    public init(backgroundColor: UIKit.UIColor?, progressBarColor: UIKit.UIColor?, textMessageColor: UIKit.UIColor?, textLabel: Swift.String?)
+    public init(closeButtonColor: UIKit.UIColor?, backgroundColor: UIKit.UIColor?, progressBarColor: UIKit.UIColor?, textMessageColor: UIKit.UIColor?, textLabel: Swift.String?)
   }
-  @_Concurrency.MainActor(unsafe) final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization)
+  @_Concurrency.MainActor(unsafe) final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization, onClose: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override final public func didMoveToSuperview()
+  @_Concurrency.MainActor(unsafe) @objc override final public func removeFromSuperview()
   @objc deinit
 }
 public protocol NetworkConfigurable {
@@ -190,8 +193,13 @@ extension UnicoSdkBase.NetworkError {
   final public let getGeoIP: any UnicoSdkBase.GetGeoIP
   final public let geoLocation: any UnicoSdkBase.GeoLocation
   final public let getDeviceInfo: any UnicoSdkBase.GetDeviceInfo
-  convenience public init(dataTransferService: any UnicoSdkBase.DataTransferService, locationManager: CoreLocation.CLLocationManager = CLLocationManager(), device: UIKit.UIDevice = UIDevice.current, keyData: Swift.String, ivData: Swift.String)
+  convenience public init(dataTransferService: any UnicoSdkBase.DataTransferService, locationManager: CoreLocation.CLLocationManager = CLLocationManager(), device: UIKit.UIDevice = UIDevice.current, keyData: Swift.String, ivData: Swift.String, sdkSessionId: Swift.String)
   @objc deinit
+}
+extension Foundation.Bundle {
+  public var shortVersionString: Swift.String? {
+    get
+  }
 }
 extension Swift.Optional {
   public enum UnwrapOptionalError : Swift.Error {
@@ -233,8 +241,6 @@ public protocol FeaturesRepresentable {
   var rawValue: Swift.String { get }
 }
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
-  case sendRaspOnConfig
-  case sdkSessionIdOnSubmit
   case endpointConfigV2
   case versionSupport
   case shortClientJwt
@@ -243,6 +249,9 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case renewKeybodyOnEachRetry
   case internationalizationHeader
   case shuriEnabled
+  case accessibilityFaceTecEnabled
+  case fixDorothyPrepareCamera
+  case retryPredictDisabled
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
@@ -330,6 +339,9 @@ public protocol DeviceInfo {
 public protocol GetDeviceInfo {
   func device() -> any UnicoSdkBase.DeviceInfo
 }
+extension UnicoSdkBase.Features {
+  public func getValue() -> Swift.Bool
+}
 public func printIfDebug(_ message: Any)
 extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public static func modelName() -> Swift.String
@@ -382,6 +394,11 @@ public class DefaultDataTransferErrorResolver : UnicoSdkBase.DataTransferErrorRe
 public class RawDataResponseDecoder : UnicoSdkBase.ResponseDecoder {
   public init()
   public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SdkVersionConfig {
+  public static let sdkVersion: Swift.String
+  public static let projectNameBundle: Swift.String
   @objc deinit
 }
 public enum HTTPMethodType : Swift.String {
