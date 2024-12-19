@@ -14139,7 +14139,7 @@
       "kind": "StringLiteral",
       "offset": 92,
       "length": 8,
-      "value": "\"2.16.5\""
+      "value": "\"2.16.6\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/SdkVersionConfig.swift",
