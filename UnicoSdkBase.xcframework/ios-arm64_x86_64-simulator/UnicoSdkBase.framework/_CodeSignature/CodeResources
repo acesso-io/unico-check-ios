@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PCf0BMdx0XDiZMsZOIxmJrxap5I=
+		d5rDjVvSknsn33ihKwX6uHvWDdc=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		61ETsdMrNPHdExkDcsXMwI5Rlwk=
+		lvPQT8q9rbsFxe14WjaHZqPH6NQ=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YnuorPp4x1cgBj4G9bAu4tADAa8=
+		d77KYjaZUolpMuYCUZGdUH4gsl0=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		61ETsdMrNPHdExkDcsXMwI5Rlwk=
+		lvPQT8q9rbsFxe14WjaHZqPH6NQ=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JzvUVgkdM/m3FWjoAYybQHXY2Zg=
+		S9PX3vpCXV7Ke4ZUUS/ASPXf3Sc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,7 +81,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PxLgFkf72BI4Lq+T9mppgvUFTAss2juE7kBfoB0XcCY=
+			QR7FaYiMXscCdU/BvEz+1Z4VzAAj+KNK6j8B0W7CgeY=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -109,14 +109,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			17WjGKzc1AUug8w8VQa51iwyxEun1ONit/6G88tALXc=
+			GwC+QTIq9ElZ1z4M8SUVp8+vcGJY770Fznfa2ojeWtE=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PxLgFkf72BI4Lq+T9mppgvUFTAss2juE7kBfoB0XcCY=
+			QR7FaYiMXscCdU/BvEz+1Z4VzAAj+KNK6j8B0W7CgeY=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Efzd1zMjw0GOEcFi1ifTlPOIAXzTF3KiWI2o6zwChRE=
+			e2pBpDtXJVvFt6IVFCLfbP6EwYUNUjkwD3UK5UxbJIQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
