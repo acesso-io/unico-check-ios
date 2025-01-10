@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		kbUePp+4CJC7GLPQlvMvH3KizuE=
+		0YEp7O1Y1yRY8T83DXDyyDBdzrI=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
@@ -118,23 +118,23 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		5JCPA6UcNtaFaIziJUWMK6uLTBQ=
+		1MBEfqwlRW/tF9N0iAsGxnkgEgI=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		mdFqLgd02LRE6deyhsJFvr06Ebs=
+		8TSjCUn7NYbpMsz/srzIIZg/I78=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		LzYtPijEN9rsYr1t6v6eBwaKsgw=
+		lelN9JBbriUv3qQ/W3d/X18ELQQ=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		mdFqLgd02LRE6deyhsJFvr06Ebs=
+		8TSjCUn7NYbpMsz/srzIIZg/I78=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		i93GEe+7n8nw892GISBtkPQHauk=
+		EiMvncNGEwkScujmHdHLRIPEclo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -210,7 +210,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mEjA9b/O3LYBvPJyc9CuvVjucFe2E7iNxsPbiH24hoI=
+			Tp1WcOI/jBHfZVQ0pyysUFV1ycVgvoVDibpsqN1acS0=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
@@ -392,35 +392,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tM340niCTmqP/ogsp73og6092ePYY0oNbN86+yyT53c=
+			2VR2YPL/zlL2NlxHGNzuJfAiPI1MR2SY3UARqsn4R9M=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xUSvgHvUfsufeMJI/eWI/LZlmvcsMFFzb6pHktq0q3k=
+			4F8jxk2e4VfOyPN5Pn4EyuqZOQEbAJfkS6nN4rP92OA=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bSsncbQODxX1ZyThQZZyQTkbh5unXUrRMq+TGVjzF/E=
+			xTxBm5cGTCrjOk8qdemye9eoVRVtwnGdU2xPb9Pd3h0=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xUSvgHvUfsufeMJI/eWI/LZlmvcsMFFzb6pHktq0q3k=
+			4F8jxk2e4VfOyPN5Pn4EyuqZOQEbAJfkS6nN4rP92OA=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LtLRqifUlRpqsPO4jXTgil8yQnQDo01DKR+SvlO/ATo=
+			X96aCRugBLF+spTxyNpuR6TSHu0MqdSs98+vIsMX90w=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

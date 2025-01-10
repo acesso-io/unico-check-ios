@@ -111,6 +111,7 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   case SESSION_STATUS_USER_CANCELLED = 73704
   case SESSION_STATUS_TIMEOUT = 73710
   case ENCRYPTION_ERROR = 73800
+  case CONSENT_NOT_GIVEN_ERROR = 73740
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -211,6 +212,8 @@ public class SDKPredictResponseDTO : Swift.Decodable {
 @objc public protocol SAdapterProtocolDelegate {
   @objc func onSuccessSDK(result: AcessoBio.CaptureResult)
   @objc func onErrorSDK(error: AcessoBio.ErrorBio)
+  @objc func onSuccessConsent()
+  @objc func onErrorConsent()
 }
 @objc @_hasMissingDesignatedInitializers final public class SAdapter : ObjectiveC.NSObject, AcessoBio.SAdapterProtocol {
   @objc public init(viewController: UIKit.UIViewController, unicoSetup: AcessoBio.UnicoSetup)
@@ -365,6 +368,9 @@ public protocol Cancellable {
     @objc get
   }
   @objc public var isLiveness: Swift.Bool {
+    @objc get
+  }
+  @objc public var requiresConsent: Swift.Bool {
     @objc get
   }
   @objc public var isS: Swift.Bool {

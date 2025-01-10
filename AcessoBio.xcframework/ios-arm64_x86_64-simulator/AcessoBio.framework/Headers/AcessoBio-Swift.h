@@ -587,6 +587,8 @@ SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 @protocol SAdapterProtocolDelegate
 - (void)onSuccessSDKWithResult:(CaptureResult * _Nonnull)result;
 - (void)onErrorSDKWithError:(ErrorBio * _Nonnull)error;
+- (void)onSuccessConsent;
+- (void)onErrorConsent;
 @end
 
 
@@ -602,6 +604,7 @@ SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @property (nonatomic, readonly) BOOL isIntegrationCaptureFlow;
 @property (nonatomic, readonly) NSInteger maxAttempts;
 @property (nonatomic, readonly) BOOL isLiveness;
+@property (nonatomic, readonly) BOOL requiresConsent;
 @property (nonatomic, readonly) BOOL isS;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -805,6 +808,8 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsSESSION_STATUS_TIMEOUT = 73710,
 /// Encryption
   UnicoEnumsIErrorsENCRYPTION_ERROR = 73800,
+/// Consent
+  UnicoEnumsIErrorsCONSENT_NOT_GIVEN_ERROR = 73740,
 };
 
 @class NSException;
@@ -1562,6 +1567,8 @@ SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 @protocol SAdapterProtocolDelegate
 - (void)onSuccessSDKWithResult:(CaptureResult * _Nonnull)result;
 - (void)onErrorSDKWithError:(ErrorBio * _Nonnull)error;
+- (void)onSuccessConsent;
+- (void)onErrorConsent;
 @end
 
 
@@ -1577,6 +1584,7 @@ SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @property (nonatomic, readonly) BOOL isIntegrationCaptureFlow;
 @property (nonatomic, readonly) NSInteger maxAttempts;
 @property (nonatomic, readonly) BOOL isLiveness;
+@property (nonatomic, readonly) BOOL requiresConsent;
 @property (nonatomic, readonly) BOOL isS;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1780,6 +1788,8 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsSESSION_STATUS_TIMEOUT = 73710,
 /// Encryption
   UnicoEnumsIErrorsENCRYPTION_ERROR = 73800,
+/// Consent
+  UnicoEnumsIErrorsCONSENT_NOT_GIVEN_ERROR = 73740,
 };
 
 @class NSException;
