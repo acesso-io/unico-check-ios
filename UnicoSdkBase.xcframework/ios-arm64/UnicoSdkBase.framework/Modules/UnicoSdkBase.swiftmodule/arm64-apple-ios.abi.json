@@ -5893,6 +5893,43 @@
           },
           {
             "kind": "Var",
+            "name": "consentScreen",
+            "printedName": "consentScreen",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkBase.Features.Type) -> UnicoSdkBase.Features",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkBase.Features.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Features",
+                        "printedName": "UnicoSdkBase.Features",
+                        "usr": "s:12UnicoSdkBase8FeaturesO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UnicoSdkBase8FeaturesO13consentScreenyA2CmF",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO13consentScreenyA2CmF",
+            "moduleName": "UnicoSdkBase"
+          },
+          {
+            "kind": "Var",
             "name": "none",
             "printedName": "none",
             "children": [
@@ -13871,6 +13908,13 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
       "kind": "StringLiteral",
+      "offset": 1273,
+      "length": 42,
+      "value": "\"cross-feature-consent-screen-short-lived\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
       "offset": 437,
       "length": 35,
       "value": "\"ios-feature-config-v2-short-lived\""
@@ -13944,6 +13988,13 @@
       "offset": 1202,
       "length": 45,
       "value": "\"ios-remove-retry-predict-request-short-term\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
+      "offset": 1273,
+      "length": 42,
+      "value": "\"cross-feature-consent-screen-short-lived\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",
@@ -14139,7 +14190,7 @@
       "kind": "StringLiteral",
       "offset": 92,
       "length": 8,
-      "value": "\"2.16.6\""
+      "value": "\"2.16.7\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/SdkVersionConfig.swift",
