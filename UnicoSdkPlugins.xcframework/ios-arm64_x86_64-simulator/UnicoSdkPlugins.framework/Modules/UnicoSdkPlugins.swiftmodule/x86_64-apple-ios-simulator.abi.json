@@ -9373,6 +9373,28 @@
         "printedName": "Data",
         "children": [
           {
+            "kind": "Function",
+            "name": "sha256",
+            "printedName": "sha256()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation4DataV15UnicoSdkPluginsE6sha256ACyF",
+            "mangledName": "$s10Foundation4DataV15UnicoSdkPluginsE6sha256ACyF",
+            "moduleName": "UnicoSdkPlugins",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Var",
             "name": "base32EncodedString",
             "printedName": "base32EncodedString",
@@ -20288,14 +20310,14 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/Foundation\/Data+Extension.swift",
       "kind": "BooleanLiteral",
-      "offset": 1722,
+      "offset": 1729,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkPlugins\/UnicoSdkPlugins\/external_plugins\/CryptoSwiftUnico\/Foundation\/Data+Extension.swift",
       "kind": "BooleanLiteral",
-      "offset": 1865,
+      "offset": 1872,
       "length": 4,
       "value": "true"
     },

@@ -219,6 +219,9 @@ extension Swift.String {
   public static var newUUID: Swift.String {
     get
   }
+  public var isRawUUID: Swift.Bool {
+    get
+  }
   public func toBase64() -> Swift.String
 }
 @_hasMissingDesignatedInitializers final public class DefaultFeatureFlagDataSource : UnicoSdkBase.FeatureFlagDataSourceFetcher, UnicoSdkBase.FeatureFlagDataSource {
@@ -253,6 +256,8 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case fixDorothyPrepareCamera
   case retryPredictDisabled
   case consentScreen
+  case sendFingerprintOnConfig
+  case newCollectData
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
@@ -343,7 +348,7 @@ public protocol GetDeviceInfo {
 extension UnicoSdkBase.Features {
   public func getValue() -> Swift.Bool
 }
-public func printIfDebug(_ message: Any)
+public func printIfDebug(_ message: Any, file: Swift.StaticString = #file, line: Swift.UInt = #line, function: Swift.String = #function)
 extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public static func modelName() -> Swift.String
 }

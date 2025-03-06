@@ -247,6 +247,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Behaviors
 
 - (void)setIsDebug :(BOOL)debug;
+- (void)prepare;
 
 @end
 

@@ -1756,32 +1756,6 @@
         ]
       },
       {
-        "kind": "Function",
-        "name": "printIfDebug",
-        "printedName": "printIfDebug(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Void",
-            "printedName": "()"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "ProtocolComposition",
-            "printedName": "Any"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:9AcessoBio12printIfDebugyyypF",
-        "mangledName": "$s9AcessoBio12printIfDebugyyypF",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "funcSelfKind": "NonMutating"
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -3323,6 +3297,13 @@
         "kind": "Import",
         "name": "UnicoSdkLogger",
         "printedName": "UnicoSdkLogger",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
         "declKind": "Import",
         "moduleName": "AcessoBio"
       },
@@ -5189,6 +5170,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UnicoLivenessLoggerDelegate",
+            "printedName": "UnicoLivenessLoggerDelegate",
+            "usr": "s:16UnicoSdkLiveness0aC14LoggerDelegateP",
+            "mangledName": "$s16UnicoSdkLiveness0aC14LoggerDelegateP"
+          },
+          {
+            "kind": "Conformance",
             "name": "UnicoLivenessDelegate",
             "printedName": "UnicoLivenessDelegate",
             "usr": "s:16UnicoSdkLiveness0aC8DelegateP",
@@ -5995,6 +5983,20 @@
       },
       {
         "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -6002,6 +6004,20 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkLogger",
+        "printedName": "UnicoSdkLogger",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
       },
       {
         "kind": "Import",
@@ -6065,6 +6081,279 @@
         "moduleName": "AcessoBio",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GeolocationDTO",
+        "printedName": "GeolocationDTO",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(lat:lng:alt:precision:city:uf:country:postalCode:address:gpsFlag:mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeolocationDTO",
+                "printedName": "AcessoBio.GeolocationDTO",
+                "usr": "c:@M@AcessoBio@objc(cs)GeolocationDTO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AcessoBio@objc(cs)GeolocationDTO(im)initWithLat:lng:alt:precision:city:uf:country:postalCode:address:gpsFlag:mode:",
+            "mangledName": "$s9AcessoBio14GeolocationDTOC3lat3lng3alt9precision4city2uf7country10postalCode7address7gpsFlag4modeACSo8NSNumberCSg_A3QSSSgA6Rtcfc",
+            "moduleName": "AcessoBio",
+            "objc_name": "initWithLat:lng:alt:precision:city:uf:country:postalCode:address:gpsFlag:mode:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GeolocationDTO",
+                "printedName": "AcessoBio.GeolocationDTO",
+                "usr": "c:@M@AcessoBio@objc(cs)GeolocationDTO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AcessoBio@objc(cs)GeolocationDTO(im)init",
+            "mangledName": "$s9AcessoBio14GeolocationDTOCACycfc",
+            "moduleName": "AcessoBio",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AcessoBio@objc(cs)GeolocationDTO",
+        "mangledName": "$s9AcessoBio14GeolocationDTOC",
+        "moduleName": "AcessoBio",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -6946,6 +7235,60 @@
             "declKind": "Func",
             "usr": "c:@M@AcessoBio@objc(cs)DataLogger(im)commitBuild",
             "mangledName": "$s9AcessoBio10DataLoggerC11commitBuildyyF",
+            "moduleName": "AcessoBio",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "commitGeolocation",
+            "printedName": "commitGeolocation(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GeolocationDTO",
+                "printedName": "AcessoBio.GeolocationDTO",
+                "usr": "c:@M@AcessoBio@objc(cs)GeolocationDTO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AcessoBio@objc(cs)DataLogger(im)commitGeolocation:",
+            "mangledName": "$s9AcessoBio10DataLoggerC17commitGeolocationyyAA0F3DTOCF",
+            "moduleName": "AcessoBio",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "commitIsSdkSEnabled",
+            "printedName": "commitIsSdkSEnabled(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AcessoBio@objc(cs)DataLogger(im)commitIsSdkSEnabled:",
+            "mangledName": "$s9AcessoBio10DataLoggerC19commitIsSdkSEnabledyySbF",
             "moduleName": "AcessoBio",
             "declAttributes": [
               "AccessControl",
@@ -11411,6 +11754,20 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMotion",
+        "printedName": "CoreMotion",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -11431,10 +11788,7 @@
         "name": "UnicoSdkBase",
         "printedName": "UnicoSdkBase",
         "declKind": "Import",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "AcessoBio"
       },
       {
         "kind": "TypeDecl",
@@ -11755,6 +12109,13 @@
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkLogger",
+        "printedName": "UnicoSdkLogger",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
       },
       {
         "kind": "Import",
@@ -12808,279 +13169,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "GeolocationDTO",
-        "printedName": "GeolocationDTO",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(lat:lng:alt:precision:city:uf:country:postalCode:address:gpsFlag:mode:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "GeolocationDTO",
-                "printedName": "AcessoBio.GeolocationDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)GeolocationDTO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.NSNumber?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.NSNumber?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.NSNumber?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.NSNumber?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSNumber",
-                    "printedName": "Foundation.NSNumber",
-                    "usr": "c:objc(cs)NSNumber"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@AcessoBio@objc(cs)GeolocationDTO(im)initWithLat:lng:alt:precision:city:uf:country:postalCode:address:gpsFlag:mode:",
-            "mangledName": "$s9AcessoBio14GeolocationDTOC3lat3lng3alt9precision4city2uf7country10postalCode7address7gpsFlag4modeACSo8NSNumberCSg_A3QSSSgA6Rtcfc",
-            "moduleName": "AcessoBio",
-            "objc_name": "initWithLat:lng:alt:precision:city:uf:country:postalCode:address:gpsFlag:mode:",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "GeolocationDTO",
-                "printedName": "AcessoBio.GeolocationDTO",
-                "usr": "c:@M@AcessoBio@objc(cs)GeolocationDTO"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@AcessoBio@objc(cs)GeolocationDTO(im)init",
-            "mangledName": "$s9AcessoBio14GeolocationDTOCACycfc",
-            "moduleName": "AcessoBio",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@AcessoBio@objc(cs)GeolocationDTO",
-        "mangledName": "$s9AcessoBio14GeolocationDTOC",
-        "moduleName": "AcessoBio",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -13104,6 +13192,20 @@
         "kind": "Import",
         "name": "UnicoSdkLogger",
         "printedName": "UnicoSdkLogger",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
         "declKind": "Import",
         "moduleName": "AcessoBio"
       },
@@ -13366,6 +13468,13 @@
         "kind": "Import",
         "name": "UnicoSdkLogger",
         "printedName": "UnicoSdkLogger",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
         "declKind": "Import",
         "moduleName": "AcessoBio"
       },
@@ -14629,6 +14738,27 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkLogger",
+        "printedName": "UnicoSdkLogger",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "AcessoBio",
         "declAttributes": [
           "RawDocComment"
@@ -15619,6 +15749,30 @@
         "children": [
           {
             "kind": "Function",
+            "name": "prepare",
+            "printedName": "prepare()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AcessoBio@objc(pl)UnicoFaceCameraInteractorInput(im)prepare",
+            "mangledName": "$s9AcessoBio30UnicoFaceCameraInteractorInputP7prepareyyF",
+            "moduleName": "AcessoBio",
+            "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.UnicoFaceCameraInteractorInput>",
+            "sugared_genericSig": "<Self where Self : AcessoBio.UnicoFaceCameraInteractorInput>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "startCapture",
             "printedName": "startCapture()",
             "children": [
@@ -15772,6 +15926,30 @@
               "Override"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "prepare",
+            "printedName": "prepare()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@AcessoBio@objc(cs)UnicoFaceCameraInteractor(im)prepare",
+            "mangledName": "$s9AcessoBio25UnicoFaceCameraInteractorC7prepareyyF",
+            "moduleName": "AcessoBio",
+            "objc_name": "prepare",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -18046,6 +18224,13 @@
       },
       {
         "kind": "Import",
+        "name": "UnicoSdkPlugins",
+        "printedName": "UnicoSdkPlugins",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -18094,6 +18279,13 @@
       },
       {
         "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
         "name": "CoreMotion",
         "printedName": "CoreMotion",
         "declKind": "Import",
@@ -18108,6 +18300,20 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
       },
       {
         "kind": "Import",
@@ -19036,6 +19242,27 @@
       "value": "\"AcessoBio.SAdapter\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/UnicoSdkFingerprint\/Infra\/UseCases\/DefaultKeychainUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 222,
+      "length": 28,
+      "value": "\"io.umbra.deviceFingerprint\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/UnicoSdkFingerprint\/Infra\/UseCases\/DefaultKeychainUseCase.swift",
+      "kind": "StringLiteral",
+      "offset": 287,
+      "length": 28,
+      "value": "\"io.umbra.deviceFingerprint\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/GeolocationDTO.swift",
+      "kind": "StringLiteral",
+      "offset": 13,
+      "length": 14,
+      "value": "\"AcessoBio.GeolocationDTO\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Data\/Network\/APIEndpoints.swift",
       "kind": "BooleanLiteral",
       "offset": 334,
@@ -19164,9 +19391,23 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Plugins\/DataLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1352,
+      "offset": 1539,
       "length": 10,
       "value": "\"AcessoBio.DataLogger\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/workers\/CaptureWorker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1610,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/UnicoSdkFingerprint\/API\/UnicoSdkFingerprint.swift",
+      "kind": "BooleanLiteral",
+      "offset": 320,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/UserInteractionDTO.swift",
@@ -19533,13 +19774,6 @@
       "value": "\"AcessoBio.ErrorCallbackDTO\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/LoggerScene\/dtos\/CallbackDTO.swift",
-      "kind": "StringLiteral",
-      "offset": 2139,
-      "length": 14,
-      "value": "\"AcessoBio.GeolocationDTO\""
-    },
-    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/setup\/UnicoJsonLoad.swift",
       "kind": "StringLiteral",
       "offset": 204,
@@ -19864,7 +20098,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Presentation\/VIP\/Scenes\/CameraScene\/unico\/UnicoFaceCameraInteractor.swift",
       "kind": "StringLiteral",
-      "offset": 542,
+      "offset": 562,
       "length": 25,
       "value": "\"AcessoBio.UnicoFaceCameraInteractor\""
     },
@@ -19937,6 +20171,13 @@
       "offset": 446,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Plugins\/LocalCacheProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 354,
+      "length": 21,
+      "value": "\"property.lock.queue\""
     },
     {
       "filePath": "\/Users\/runner\/Library\/Developer\/Xcode\/DerivedData\/AcessoBio-cgprzlngqlvhghbaufehyhlhmpcc\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AcessoBio\/IntermediateBuildFilesPath\/AcessoBio.build\/Release-iphoneos\/AcessoBio.build\/DerivedSources\/GeneratedAssetSymbols.swift",

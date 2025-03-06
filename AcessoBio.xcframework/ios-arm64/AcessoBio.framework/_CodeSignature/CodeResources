@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		0YEp7O1Y1yRY8T83DXDyyDBdzrI=
+		+nkjrH+jsTNnyFesujxa2OnyYbA=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Headers/UnicoFaceCameraViewController.h</key>
 		<data>
-		WB9z1FHpOoO13IqQljyGYHi9Kik=
+		bShXwFJnxi7VxXFP6KPAB9bL7g0=
 		</data>
 		<key>Headers/iAcessoBioBuilder.h</key>
 		<data>
@@ -114,15 +114,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bOMNw7AO8FAdSR3x9SkhRLV1tZw=
+		X1LjXf8CjrrmlK5jGvCeOsHJj3A=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		1MBEfqwlRW/tF9N0iAsGxnkgEgI=
+		LWTyvRUz8wNaJSLymuAGoiumLws=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		8TSjCUn7NYbpMsz/srzIIZg/I78=
+		9/M+yqURV9aEigqLK/zMyfWRHhU=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -130,11 +130,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		8TSjCUn7NYbpMsz/srzIIZg/I78=
+		9/M+yqURV9aEigqLK/zMyfWRHhU=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		EiMvncNGEwkScujmHdHLRIPEclo=
+		fJQT0+xKy9UQwcWbyD/+fbWdJzI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -210,7 +210,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tp1WcOI/jBHfZVQ0pyysUFV1ycVgvoVDibpsqN1acS0=
+			X/pwJ9zsTYw8h9D5ZIyPW6iReB+AiHjygwjiLxvmSss=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
@@ -378,7 +378,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YyNiaKy0WK/u/JOG9Kx3KlHLb3e1On04CRzPJ/ZUBps=
+			octnM5tnUJtXCanOZ8SVp9oD+nzH4x31GZ+C3AJMHEw=
 			</data>
 		</dict>
 		<key>Headers/iAcessoBioBuilder.h</key>
@@ -392,14 +392,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2VR2YPL/zlL2NlxHGNzuJfAiPI1MR2SY3UARqsn4R9M=
+			M10hsVXCOzzh8wj+KKwZ0RcBxwRfhIFu4B7yZuE0dws=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4F8jxk2e4VfOyPN5Pn4EyuqZOQEbAJfkS6nN4rP92OA=
+			VeaCsWZCNQv6IoCVz/RVbSa6bfF106Nkar/G+Fhqzqo=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -413,14 +413,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4F8jxk2e4VfOyPN5Pn4EyuqZOQEbAJfkS6nN4rP92OA=
+			VeaCsWZCNQv6IoCVz/RVbSa6bfF106Nkar/G+Fhqzqo=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X96aCRugBLF+spTxyNpuR6TSHu0MqdSs98+vIsMX90w=
+			SVgiYOt3HuwVlrEYyiRmsX0GUl3/GqbsrS94rXBT0ro=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

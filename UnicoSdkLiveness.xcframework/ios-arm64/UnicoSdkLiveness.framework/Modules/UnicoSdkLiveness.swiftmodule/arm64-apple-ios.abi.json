@@ -1766,41 +1766,6 @@
           },
           {
             "kind": "Function",
-            "name": "onLoggerListener",
-            "printedName": "onLoggerListener(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UnicoSdkLiveness.LivenessLogger?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "LivenessLogger",
-                    "printedName": "UnicoSdkLiveness.LivenessLogger",
-                    "usr": "s:16UnicoSdkLiveness0C6LoggerP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:16UnicoSdkLiveness0aC8DelegateP16onLoggerListeneryyAA0cF0_pSgF",
-            "mangledName": "$s16UnicoSdkLiveness0aC8DelegateP16onLoggerListeneryyAA0cF0_pSgF",
-            "moduleName": "UnicoSdkLiveness",
-            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.UnicoLivenessDelegate>",
-            "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.UnicoLivenessDelegate>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "onRenewKeyBody",
             "printedName": "onRenewKeyBody(newKeyBody:)",
             "children": [
@@ -1839,10 +1804,19 @@
         "usr": "s:16UnicoSdkLiveness0aC8DelegateP",
         "mangledName": "$s16UnicoSdkLiveness0aC8DelegateP",
         "moduleName": "UnicoSdkLiveness",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
+        "genericSig": "<τ_0_0 : UnicoSdkLiveness.UnicoLivenessLoggerDelegate>",
+        "sugared_genericSig": "<Self : UnicoSdkLiveness.UnicoLivenessLoggerDelegate>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UnicoLivenessLoggerDelegate",
+            "printedName": "UnicoLivenessLoggerDelegate",
+            "usr": "s:16UnicoSdkLiveness0aC14LoggerDelegateP",
+            "mangledName": "$s16UnicoSdkLiveness0aC14LoggerDelegateP"
+          }
         ]
       },
       {
@@ -3091,10 +3065,19 @@
         "usr": "s:16UnicoSdkLiveness0aC21PrepareCameraDelegateP",
         "mangledName": "$s16UnicoSdkLiveness0aC21PrepareCameraDelegateP",
         "moduleName": "UnicoSdkLiveness",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
+        "genericSig": "<τ_0_0 : UnicoSdkLiveness.UnicoLivenessLoggerDelegate>",
+        "sugared_genericSig": "<Self : UnicoSdkLiveness.UnicoLivenessLoggerDelegate>",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UnicoLivenessLoggerDelegate",
+            "printedName": "UnicoLivenessLoggerDelegate",
+            "usr": "s:16UnicoSdkLiveness0aC14LoggerDelegateP",
+            "mangledName": "$s16UnicoSdkLiveness0aC14LoggerDelegateP"
+          }
         ]
       },
       {
@@ -4734,6 +4717,64 @@
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UnicoSdkLiveness"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UnicoLivenessLoggerDelegate",
+        "printedName": "UnicoLivenessLoggerDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onLoggerListener",
+            "printedName": "onLoggerListener(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UnicoSdkLiveness.LivenessLogger?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LivenessLogger",
+                    "printedName": "UnicoSdkLiveness.LivenessLogger",
+                    "usr": "s:16UnicoSdkLiveness0C6LoggerP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16UnicoSdkLiveness0aC14LoggerDelegateP02onD8ListeneryyAA0cD0_pSgF",
+            "mangledName": "$s16UnicoSdkLiveness0aC14LoggerDelegateP02onD8ListeneryyAA0cD0_pSgF",
+            "moduleName": "UnicoSdkLiveness",
+            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.UnicoLivenessLoggerDelegate>",
+            "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.UnicoLivenessLoggerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16UnicoSdkLiveness0aC14LoggerDelegateP",
+        "mangledName": "$s16UnicoSdkLiveness0aC14LoggerDelegateP",
+        "moduleName": "UnicoSdkLiveness",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
         ]
       },
       {
