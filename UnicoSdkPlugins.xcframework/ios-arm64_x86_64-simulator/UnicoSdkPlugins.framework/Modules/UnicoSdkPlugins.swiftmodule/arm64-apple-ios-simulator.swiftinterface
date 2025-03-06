@@ -82,6 +82,9 @@ public protocol FinalizingDecryptModeWorker : UnicoSdkPlugins.CipherModeWorker {
   mutating func didDecryptLast(bytes plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
   mutating func finalize(decrypt plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
 }
+extension Foundation.Data {
+  public func sha256() -> Foundation.Data
+}
 public struct BlockModeOption : Swift.OptionSet {
   public let rawValue: Swift.Int
   public init(rawValue: Swift.Int)

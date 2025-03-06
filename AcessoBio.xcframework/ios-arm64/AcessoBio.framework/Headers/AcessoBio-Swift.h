@@ -403,6 +403,8 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 @interface DataLogger : NSObject
 + (DataLogger * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)commitBuild;
+- (void)commitGeolocation:(GeolocationDTO * _Nonnull)geolocation;
+- (void)commitIsSdkSEnabled:(BOOL)isSdkSEnabled;
 - (void)commitOpenCamera:(OpenCameraDTO * _Nonnull)openCamera;
 - (void)commitSuccessCallbackWithSuccessCallback:(SuccessCallbackDTO * _Nonnull)successCallback;
 - (void)commitErrorCallbackWithErrorCallback:(ErrorCallbackDTO * _Nonnull)errorCallback;
@@ -834,12 +836,14 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoFaceCameraInteractor")
 
 SWIFT_PROTOCOL("_TtP9AcessoBio30UnicoFaceCameraInteractorInput_")
 @protocol UnicoFaceCameraInteractorInput
+- (void)prepare;
 - (void)startCapture;
 - (void)stopCaptureAndSendDataWithScreenBrightness:(CGFloat)screenBrightness isCameraTypeChanged:(NSNumber * _Nonnull)isCameraTypeChanged imageResolution:(NSString * _Nonnull)imageResolution faceBehavior:(FaceBehaviorsDTO * _Nonnull)faceBehavior video:(VideoDTO * _Nonnull)video timers:(TimersDTO * _Nonnull)timers;
 @end
 
 
 @interface UnicoFaceCameraInteractor (SWIFT_EXTENSION(AcessoBio)) <UnicoFaceCameraInteractorInput>
+- (void)prepare;
 - (void)startCapture;
 - (void)stopCaptureAndSendDataWithScreenBrightness:(CGFloat)screenBrightness isCameraTypeChanged:(NSNumber * _Nonnull)isCameraTypeChanged imageResolution:(NSString * _Nonnull)imageResolution faceBehavior:(FaceBehaviorsDTO * _Nonnull)faceBehavior video:(VideoDTO * _Nonnull)video timers:(TimersDTO * _Nonnull)timers;
 @end

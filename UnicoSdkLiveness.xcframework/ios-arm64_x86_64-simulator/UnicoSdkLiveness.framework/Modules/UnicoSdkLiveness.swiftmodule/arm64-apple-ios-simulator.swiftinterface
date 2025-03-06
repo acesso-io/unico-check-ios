@@ -62,10 +62,9 @@ public struct Theme : Swift.Equatable {
   public init(backgroundColor: UIKit.UIColor, boxMessageColor: UIKit.UIColor, textMessageColor: UIKit.UIColor, backgroundTakePictureButtonColor: UIKit.UIColor, iconTakePictureButtonColor: UIKit.UIColor, backgroundBottomDocumentColor: UIKit.UIColor, textBottomDocumentColor: UIKit.UIColor, silhouetteSuccessColor: UIKit.UIColor, silhouetteErrorColor: UIKit.UIColor, silhouetteNeutralColor: UIKit.UIColor, progressBarColor: UIKit.UIColor, cancelButtonIconColor: UIKit.UIColor)
   public static func == (a: UnicoSdkLiveness.Theme, b: UnicoSdkLiveness.Theme) -> Swift.Bool
 }
-public protocol UnicoLivenessDelegate : AnyObject {
+public protocol UnicoLivenessDelegate : UnicoSdkLiveness.UnicoLivenessLoggerDelegate {
   func onSuccess(livenessResult: any UnicoSdkLiveness.LivenessResult)
   func onError(livenessError: UnicoSdkLiveness.LivenessError)
-  func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
   func onRenewKeyBody(newKeyBody: Swift.String?)
 }
 public protocol RenewKeyBodyUseCase {
@@ -100,7 +99,7 @@ public protocol LivenessResult {
 public struct Env {
   public init(dataService: any UnicoSdkBase.DataTransferService, keyData: Swift.String, ivData: Swift.String)
 }
-public protocol UnicoLivenessPrepareCameraDelegate : AnyObject {
+public protocol UnicoLivenessPrepareCameraDelegate : UnicoSdkLiveness.UnicoLivenessLoggerDelegate {
   func onCameraReady(unicoLivenessOpenCamera: any UnicoSdkLiveness.UnicoLivenessOpenCamera)
   func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
 }
@@ -156,6 +155,9 @@ public enum DataTransferErrors : Swift.Error {
   public var hashValue: Swift.Int {
     get
   }
+}
+public protocol UnicoLivenessLoggerDelegate : AnyObject {
+  func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
 }
 public protocol LivenessLoggerProvider {
   var name: Swift.String { get }

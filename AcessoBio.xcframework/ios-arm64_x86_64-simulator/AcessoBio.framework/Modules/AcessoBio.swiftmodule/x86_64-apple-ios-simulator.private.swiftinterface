@@ -11,6 +11,7 @@ import DeveloperToolsSupport
 import DeviceProfiling
 import FaceTecSDK
 import Foundation
+import Security
 import Swift
 import SystemConfiguration
 import UIKit.UIDevice
@@ -78,7 +79,6 @@ public class UnicoSecuritySDK {
   public func getDeviceInfo(completionHandler: @escaping (any AcessoBio.UnicoSecuritySDKDeviceInfo) -> Swift.Void)
   @objc deinit
 }
-public func printIfDebug(_ message: Any)
 @objc public protocol UnicoFaceCameraPresenterInput {
   @objc var provider: AcessoBio.ProviderDTO { get }
 }
@@ -220,6 +220,10 @@ public class SDKPredictResponseDTO : Swift.Decodable {
   @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
   @objc deinit
 }
+@objc public class GeolocationDTO : ObjectiveC.NSObject {
+  @objc public init(lat: Foundation.NSNumber?, lng: Foundation.NSNumber?, alt: Foundation.NSNumber?, precision: Foundation.NSNumber?, city: Swift.String?, uf: Swift.String?, country: Swift.String?, postalCode: Swift.String?, address: Swift.String?, gpsFlag: Swift.String?, mode: Swift.String?)
+  @objc deinit
+}
 @objc public protocol SensorsWorkerFactory {
   @objc func make() -> any AcessoBio.SensorsWorker
 }
@@ -246,6 +250,8 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
     get
   }
   @objc public func commitBuild()
+  @objc public func commitGeolocation(_ geolocation: AcessoBio.GeolocationDTO)
+  @objc public func commitIsSdkSEnabled(_ isSdkSEnabled: Swift.Bool)
   @objc public func commitOpenCamera(_ openCamera: AcessoBio.OpenCameraDTO)
   @objc public func commitSuccessCallback(successCallback: AcessoBio.SuccessCallbackDTO)
   @objc public func commitErrorCallback(errorCallback: AcessoBio.ErrorCallbackDTO)
@@ -431,10 +437,6 @@ public protocol Cancellable {
   @objc public init(code: Foundation.NSNumber? = nil, title: Swift.String? = nil, message: Swift.String? = nil)
   @objc deinit
 }
-@objc public class GeolocationDTO : ObjectiveC.NSObject {
-  @objc public init(lat: Foundation.NSNumber?, lng: Foundation.NSNumber?, alt: Foundation.NSNumber?, precision: Foundation.NSNumber?, city: Swift.String?, uf: Swift.String?, country: Swift.String?, postalCode: Swift.String?, address: Swift.String?, gpsFlag: Swift.String?, mode: Swift.String?)
-  @objc deinit
-}
 @objc public class UnicoJsonLoad : ObjectiveC.NSObject {
   @objc public init(bundle: Foundation.Bundle?)
   @objc public func loadJson(jsonName: Swift.String, completion: @escaping (AcessoBio.UnicoSetupData?, AcessoBio.ErrorBio?) -> Swift.Void)
@@ -511,6 +513,7 @@ public enum SdkEnvironmentEnum : Swift.Int, Swift.Equatable {
   }
 }
 @objc public protocol UnicoFaceCameraInteractorInput {
+  @objc func prepare()
   @objc func startCapture()
   @objc func stopCaptureAndSendData(screenBrightness: CoreFoundation.CGFloat, isCameraTypeChanged: Foundation.NSNumber, imageResolution: Swift.String, faceBehavior: AcessoBio.FaceBehaviorsDTO, video: AcessoBio.VideoDTO, timers: AcessoBio.TimersDTO)
 }
@@ -519,6 +522,7 @@ public enum SdkEnvironmentEnum : Swift.Int, Swift.Equatable {
   @objc deinit
 }
 extension AcessoBio.UnicoFaceCameraInteractor : AcessoBio.UnicoFaceCameraInteractorInput {
+  @objc final public func prepare()
   @objc final public func startCapture()
   @objc final public func stopCaptureAndSendData(screenBrightness: CoreFoundation.CGFloat, isCameraTypeChanged: Foundation.NSNumber, imageResolution: Swift.String, faceBehavior: AcessoBio.FaceBehaviorsDTO, video: AcessoBio.VideoDTO, timers: AcessoBio.TimersDTO)
 }
