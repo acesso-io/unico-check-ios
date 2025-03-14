@@ -17,8 +17,8 @@ let package = Package(
                 "UnicoSdkLiveness",
                 "UnicoSdkLogger",
                 "UnicoSdkPlugins",
-                "USDK.xcframework",
-                "USDKResources.xcframework"
+                "USDK",
+                "USDKResources"
             ]
         ),
     ],
