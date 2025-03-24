@@ -5145,6 +5145,41 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onTelemetryListener",
+            "printedName": "onTelemetryListener(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AcessoBio25UnicoCheckLivenessAdapterC19onTelemetryListeneryySSSgF",
+            "mangledName": "$s9AcessoBio25UnicoCheckLivenessAdapterC19onTelemetryListeneryySSSgF",
+            "moduleName": "AcessoBio",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -5479,7 +5514,7 @@
           {
             "kind": "Function",
             "name": "start",
-            "printedName": "start(sdkKey:locale:theme:uiTexts:delegate:)",
+            "printedName": "start(sdkKey:locale:theme:uiTexts:extraData:delegate:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5543,6 +5578,33 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
                 "printedName": "AcessoBio.SAdapterProtocolDelegate?",
                 "children": [
                   {
@@ -5556,13 +5618,13 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(pl)SAdapterProtocol(im)startWithSdkKey:locale:theme:uiTexts:delegate:",
-            "mangledName": "$s9AcessoBio16SAdapterProtocolP5start6sdkKey6locale5theme7uiTexts8delegateySSSg_So11LocaleTypesVSo0aB13ThemeDelegate_pSDyS2SGSgAA0cdP0_pSgtF",
+            "usr": "c:@M@AcessoBio@objc(pl)SAdapterProtocol(im)startWithSdkKey:locale:theme:uiTexts:extraData:delegate:",
+            "mangledName": "$s9AcessoBio16SAdapterProtocolP5start6sdkKey6locale5theme7uiTexts9extraData8delegateySSSg_So11LocaleTypesVSo0aB13ThemeDelegate_pSDyS2SGSgSDySSypGSgAA0cdR0_pSgtF",
             "moduleName": "AcessoBio",
             "genericSig": "<τ_0_0 where τ_0_0 : AcessoBio.SAdapterProtocol>",
             "sugared_genericSig": "<Self where Self : AcessoBio.SAdapterProtocol>",
             "protocolReq": true,
-            "objc_name": "startWithSdkKey:locale:theme:uiTexts:delegate:",
+            "objc_name": "startWithSdkKey:locale:theme:uiTexts:extraData:delegate:",
             "declAttributes": [
               "ObjC"
             ],
@@ -5749,7 +5811,7 @@
           {
             "kind": "Function",
             "name": "start",
-            "printedName": "start(sdkKey:locale:theme:uiTexts:delegate:)",
+            "printedName": "start(sdkKey:locale:theme:uiTexts:extraData:delegate:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5813,6 +5875,33 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
                 "printedName": "AcessoBio.SAdapterProtocolDelegate?",
                 "children": [
                   {
@@ -5826,10 +5915,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@AcessoBio@objc(cs)SAdapter(im)startWithSdkKey:locale:theme:uiTexts:delegate:",
-            "mangledName": "$s9AcessoBio8SAdapterC5start6sdkKey6locale5theme7uiTexts8delegateySSSg_So11LocaleTypesVSo0aB13ThemeDelegate_pSDyS2SGSgAA0c8ProtocolO0_pSgtF",
+            "usr": "c:@M@AcessoBio@objc(cs)SAdapter(im)startWithSdkKey:locale:theme:uiTexts:extraData:delegate:",
+            "mangledName": "$s9AcessoBio8SAdapterC5start6sdkKey6locale5theme7uiTexts9extraData8delegateySSSg_So11LocaleTypesVSo0aB13ThemeDelegate_pSDyS2SGSgSDySSypGSgAA0c8ProtocolQ0_pSgtF",
             "moduleName": "AcessoBio",
-            "objc_name": "startWithSdkKey:locale:theme:uiTexts:delegate:",
+            "objc_name": "startWithSdkKey:locale:theme:uiTexts:extraData:delegate:",
             "declAttributes": [
               "Final",
               "ObjC",
@@ -6397,6 +6486,20 @@
           "AccessControl",
           "ObjC"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkLogger",
+        "printedName": "UnicoSdkLogger",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
+      },
+      {
+        "kind": "Import",
+        "name": "UnicoSdkBase",
+        "printedName": "UnicoSdkBase",
+        "declKind": "Import",
+        "moduleName": "AcessoBio"
       },
       {
         "kind": "Import",
@@ -15645,6 +15748,63 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[AcessoBio.SdkEnvironmentEnum]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SdkEnvironmentEnum",
+                    "printedName": "AcessoBio.SdkEnvironmentEnum",
+                    "usr": "s:9AcessoBio18SdkEnvironmentEnumO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AcessoBio18SdkEnvironmentEnumO8allCasesSayACGvpZ",
+            "mangledName": "$s9AcessoBio18SdkEnvironmentEnumO8allCasesSayACGvpZ",
+            "moduleName": "AcessoBio",
+            "static": true,
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[AcessoBio.SdkEnvironmentEnum]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SdkEnvironmentEnum",
+                        "printedName": "AcessoBio.SdkEnvironmentEnum",
+                        "usr": "s:9AcessoBio18SdkEnvironmentEnumO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AcessoBio18SdkEnvironmentEnumO8allCasesSayACGvgZ",
+                "mangledName": "$s9AcessoBio18SdkEnvironmentEnumO8allCasesSayACGvgZ",
+                "moduleName": "AcessoBio",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Enum",
@@ -15692,6 +15852,36 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[AcessoBio.SdkEnvironmentEnum]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SdkEnvironmentEnum",
+                        "printedName": "AcessoBio.SdkEnvironmentEnum",
+                        "usr": "s:9AcessoBio18SdkEnvironmentEnumO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
           }
         ]
       },
@@ -19237,7 +19427,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/onboarding_private\/Adapters\/Shuri\/SAdapter.swift",
       "kind": "StringLiteral",
-      "offset": 1272,
+      "offset": 1307,
       "length": 8,
       "value": "\"AcessoBio.SAdapter\""
     },
@@ -19391,7 +19581,7 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/CleanArchitecture\/Infra\/Plugins\/DataLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1539,
+      "offset": 1647,
       "length": 10,
       "value": "\"AcessoBio.DataLogger\""
     },
@@ -19993,63 +20183,63 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkEnvironmentEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 121,
+      "offset": 135,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkEnvironmentEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 127,
+      "offset": 141,
       "length": 3,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkEnvironmentEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 132,
+      "offset": 146,
       "length": 6,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkEnvironmentEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 121,
+      "offset": 135,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkEnvironmentEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 127,
+      "offset": 141,
       "length": 3,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkEnvironmentEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 132,
+      "offset": 146,
       "length": 6,
       "value": "3"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkEnvironmentEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 121,
+      "offset": 135,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkEnvironmentEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 127,
+      "offset": 141,
       "length": 3,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/AcessoBio\/config\/SdkEnvironmentEnum.swift",
       "kind": "IntegerLiteral",
-      "offset": 132,
+      "offset": 146,
       "length": 6,
       "value": "3"
     },

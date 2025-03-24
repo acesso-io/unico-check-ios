@@ -15,6 +15,7 @@
 @protocol AcessoBioCameraOpenerDelegate
 
 - (void)open:(id <AcessoBioSelfieDelegate>)delegate;
+- (void)open:(id <AcessoBioSelfieDelegate>)delegate extraData:(NSDictionary<NSString *, id> *)extraData;
 - (void)openDocument:(DocumentEnums)documentType delegate:(id <AcessoBioDocumentDelegate>)delegate;
 
 @end

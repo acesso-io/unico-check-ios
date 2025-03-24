@@ -113,6 +113,7 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 @property (readonly) BOOL isSmartCamera;
 @property (nonatomic, assign) LocaleTypes localeTypes;
 @property (nonatomic, assign) EnvironmentEnum environment;
+@property (nonatomic, retain) NSDictionary<NSString *, id> *_Nullable extraData;
 
 #pragma mark - Config
 

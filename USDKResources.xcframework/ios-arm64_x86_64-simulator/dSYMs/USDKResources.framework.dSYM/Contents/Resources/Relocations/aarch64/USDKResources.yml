@@ -1,0 +1,18 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ilyapostanogov/Documents/Projects/OZForensics/oz-liveness-ios-internal/build/USDKResources/DerivedData/Build/Products/Release-iphonesimulator/USDKResources.framework/USDKResources'
+relocations:
+  - { offsetInCU: 0x34, offset: 0x5DC2A, size: 0x8, addend: 0x0, symName: _USDKResourcesVersionString, symObjAddr: 0x0, symBinAddr: 0x3BF0, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x5DC5F, size: 0x8, addend: 0x0, symName: _USDKResourcesVersionNumber, symObjAddr: 0x38, symBinAddr: 0x3C28, symSize: 0x0 }
+  - { offsetInCU: 0x27, offset: 0x5DC9C, size: 0x8, addend: 0x0, symName: '_$s13USDKResources12SDKResourcesC3getSo8NSBundleCyFZ', symObjAddr: 0x0, symBinAddr: 0x2AF0, symSize: 0x44 }
+  - { offsetInCU: 0x4B, offset: 0x5DCC0, size: 0x8, addend: 0x0, symName: '_$s13USDKResources12SDKResourcesC3getSo8NSBundleCyFZ', symObjAddr: 0x0, symBinAddr: 0x2AF0, symSize: 0x44 }
+  - { offsetInCU: 0x99, offset: 0x5DD0E, size: 0x8, addend: 0x0, symName: '_$s13USDKResources12SDKResourcesC3getSo8NSBundleCyFZTo', symObjAddr: 0x64, symBinAddr: 0x2B54, symSize: 0x48 }
+  - { offsetInCU: 0xE1, offset: 0x5DD56, size: 0x8, addend: 0x0, symName: '_$s13USDKResources12SDKResourcesCACycfC', symObjAddr: 0xAC, symBinAddr: 0x2B9C, symSize: 0x20 }
+  - { offsetInCU: 0xFF, offset: 0x5DD74, size: 0x8, addend: 0x0, symName: '_$s13USDKResources12SDKResourcesCACycfc', symObjAddr: 0xCC, symBinAddr: 0x2BBC, symSize: 0x30 }
+  - { offsetInCU: 0x13A, offset: 0x5DDAF, size: 0x8, addend: 0x0, symName: '_$s13USDKResources12SDKResourcesCACycfcTo', symObjAddr: 0xFC, symBinAddr: 0x2BEC, symSize: 0x3C }
+  - { offsetInCU: 0x175, offset: 0x5DDEA, size: 0x8, addend: 0x0, symName: '_$s13USDKResources12SDKResourcesCfD', symObjAddr: 0x138, symBinAddr: 0x2C28, symSize: 0x30 }
+  - { offsetInCU: 0x1A3, offset: 0x5DE18, size: 0x8, addend: 0x0, symName: '_$s13USDKResources12SDKResourcesCMa', symObjAddr: 0x44, symBinAddr: 0x2B34, symSize: 0x20 }
+  - { offsetInCU: 0x2B, offset: 0x5DF31, size: 0x8, addend: 0x0, symName: '_$s13USDKResources19ResourceBundleClass33_C264768637D9AB29D4CC691BA1007C31LLCfD', symObjAddr: 0x0, symBinAddr: 0x2C58, symSize: 0x10 }
+  - { offsetInCU: 0x55, offset: 0x5DF5B, size: 0x8, addend: 0x0, symName: '_$s13USDKResources19ResourceBundleClass33_C264768637D9AB29D4CC691BA1007C31LLCfD', symObjAddr: 0x0, symBinAddr: 0x2C58, symSize: 0x10 }
+  - { offsetInCU: 0x86, offset: 0x5DF8C, size: 0x8, addend: 0x0, symName: '_$s13USDKResources19ResourceBundleClass33_C264768637D9AB29D4CC691BA1007C31LLCMa', symObjAddr: 0x10, symBinAddr: 0x2C68, symSize: 0x20 }
+...

@@ -194,6 +194,7 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDe
   public func onError(livenessError: UnicoSdkLiveness.LivenessError)
   public func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
   public func onRenewKeyBody(newKeyBody: Swift.String?)
+  public func onTelemetryListener(_ event: Swift.String?)
 }
 public class SDKPredictResponseDTO : Swift.Decodable {
   @objc deinit
@@ -207,7 +208,7 @@ public class SDKPredictResponseDTO : Swift.Decodable {
 @objc public protocol SAdapterProtocol {
   typealias CompletionSuccess = (AcessoBio.CaptureResult) -> Swift.Void
   typealias CompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
-  @objc func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, extraData: [Swift.String : Any]?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
 }
 @objc public protocol SAdapterProtocolDelegate {
   @objc func onSuccessSDK(result: AcessoBio.CaptureResult)
@@ -217,7 +218,7 @@ public class SDKPredictResponseDTO : Swift.Decodable {
 }
 @objc @_hasMissingDesignatedInitializers final public class SAdapter : ObjectiveC.NSObject, AcessoBio.SAdapterProtocol {
   @objc public init(viewController: UIKit.UIViewController, unicoSetup: AcessoBio.UnicoSetup)
-  @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, extraData: [Swift.String : Any]?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
   @objc deinit
 }
 @objc public class GeolocationDTO : ObjectiveC.NSObject {
@@ -504,10 +505,14 @@ public protocol Cancellable {
   @objc override dynamic public init()
   @objc deinit
 }
-public enum SdkEnvironmentEnum : Swift.Int, Swift.Equatable {
+public enum SdkEnvironmentEnum : Swift.Int, Swift.Equatable, Swift.CaseIterable {
   case uat, prod, dev, notSet
   public init?(rawValue: Swift.Int)
+  public typealias AllCases = [AcessoBio.SdkEnvironmentEnum]
   public typealias RawValue = Swift.Int
+  public static var allCases: [AcessoBio.SdkEnvironmentEnum] {
+    get
+  }
   public var rawValue: Swift.Int {
     get
   }

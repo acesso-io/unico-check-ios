@@ -21,6 +21,10 @@ extension Swift.Encodable {
     get
   }
 }
+extension Swift.Encodable {
+  public func encodeValue(fromObjectContainer container: inout Swift.KeyedEncodingContainer<UnicoSdkBase.DynamicCodingKey>, dictionary: [Swift.String : Any]) throws
+  public func encodeValue(fromArrayContainer container: inout any Swift.UnkeyedEncodingContainer, array: [Any]) throws
+}
 public protocol GeoLocation {
   func start(handler: @escaping (Swift.Result<[CoreLocation.CLLocation], UnicoSdkBase.GeoLocationError>) -> Swift.Void)
   func stop()
@@ -258,6 +262,7 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case consentScreen
   case sendFingerprintOnConfig
   case newCollectData
+  case dorothyTelemetryEnabled
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
@@ -306,6 +311,12 @@ extension UnicoSdkBase.Dependencies {
     public func encode(to encoder: any Swift.Encoder) throws
     public init(from decoder: any Swift.Decoder) throws
   }
+}
+public struct DynamicCodingKey : Swift.CodingKey {
+  public var stringValue: Swift.String
+  public var intValue: Swift.Int?
+  public init(stringValue: Swift.String)
+  public init(intValue: Swift.Int)
 }
 public enum GeoLocationError : Swift.Error, Swift.Equatable {
   case usageDescriptionPlistNotAvailable

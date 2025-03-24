@@ -1,0 +1,13 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/var/folders/h0/530vvrtn21nc9hg5bf_zp79c0000gn/T/ixguard-USDK-VUt0yx/obfapps/USDK.framework/USDK'
+relocations:
+  - { offsetInCU: 0x4F, offset: 0x4F, size: 0x8, addend: 0x0, symName: '_$s4USDK9OZJournalC8addEntry5event7context15actionSessionId08scenariohI0yAA0B5EventO_SDySSypGSgSSSgAMtFyyYbcfU_yyXEfU_', symObjAddr: 0x129ED0, symBinAddr: 0x12DC20, symSize: 0xAF0 }
+  - { offsetInCU: 0xB9, offset: 0xB9, size: 0x8, addend: 0x0, symName: '_$s4USDK16OZRequestManagerV11generateKey33_F5107DBF0223D39E527A1D558FEB02C6LLSo03SecE3RefaSgyFZTf4d_n', symObjAddr: 0x162CD0, symBinAddr: 0x166A20, symSize: 0xCF0 }
+  - { offsetInCU: 0x123, offset: 0x123, size: 0x8, addend: 0x0, symName: '_$s4USDK5OZLogC15generateStringsSS_SStyFZTf4d_n', symObjAddr: 0x166850, symBinAddr: 0x16A5A0, symSize: 0xB60 }
+  - { offsetInCU: 0x18D, offset: 0x18D, size: 0x8, addend: 0x0, symName: '_$s4USDK14ModelDecryprorV11decryptDatay10Foundation0E0VSgAGFZTf4nd_n', symObjAddr: 0x178FA0, symBinAddr: 0x17CCF0, symSize: 0xB20 }
+  - { offsetInCU: 0x1F7, offset: 0x1F7, size: 0x8, addend: 0x0, symName: '_$s4USDK18SecurityEnvCheckerC25suspiciousAppsPathToCheckSaySSGvgZTf4d_n', symObjAddr: 0x1A58B0, symBinAddr: 0x1A9600, symSize: 0xD00 }
+  - { offsetInCU: 0x261, offset: 0x261, size: 0x8, addend: 0x0, symName: '_$s4USDK24OZLivenessViewControllerC11viewDidLoadyyF', symObjAddr: 0x1C18F0, symBinAddr: 0x1C5640, symSize: 0x1A30 }
+  - { offsetInCU: 0x2CB, offset: 0x2CB, size: 0x8, addend: 0x0, symName: '_$s4USDK15LicenseProviderC06onlineB09productID3key7configs10completionySS_SSAA0B14ConfigurationsVyAA0B4DataVSg_AA0B5ErrorOSgtctFyAA14CryptlexResultVSg_AA0mL0VSgtcfU_', symObjAddr: 0x1CBFF0, symBinAddr: 0x1CFD40, symSize: 0x37A0 }
+  - { offsetInCU: 0x335, offset: 0x335, size: 0x8, addend: 0x0, symName: _wbaXW6sc, symObjAddr: 0x2A9D10, symBinAddr: 0x2ADA60, symSize: 0x710 }
+...
