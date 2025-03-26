@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
  
   spec.name         = "unicocheck-ios"
-  spec.version      = "2.16.10"
+  spec.version      = "2.16.11"
   spec.summary      = "Esta biblioteca visa implementar as soluções unico | check sob a plataforma iOS."
   spec.description  = "O objetivo da SDK unico-check-ios é proporcionar a melhor experiência de captura de imagens. Auxiliando também na implementação do desenvolvedor/cliente unico."
   spec.homepage     = "https://devcenter.unico.io/idcloud/integracao/sdk"
@@ -16,13 +16,7 @@ Pod::Spec.new do |spec|
 
   spec.social_media_url         = "https://ajuda.unico.io/hc/pt-br"
   spec.ios.vendored_frameworks  = [
-    "AcessoBio.xcframework",
-    "DeviceProfiling.xcframework",
-    "FacetecSDK.xcframework",
-    "UnicoSdkBase.xcframework",
-    "UnicoSdkLiveness.xcframework",
-    "UnicoSdkLogger.xcframework",
-    "UnicoSdkPlugins.xcframework"
+    "*.xcframework",
   ]
 
   spec.resource_bundles = {"unicocheck-ios" => ["AcessoBio.xcframework/ios-arm64/AcessoBio.framework/PrivacyInfo.xcprivacy"]}

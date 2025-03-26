@@ -1,0 +1,11 @@
+framework module USDK {
+  umbrella header "USDK.h"
+  export *
+
+  module * { export * }
+}
+
+module USDK.Swift {
+  header "USDK-Swift.h"
+  requires objc
+}

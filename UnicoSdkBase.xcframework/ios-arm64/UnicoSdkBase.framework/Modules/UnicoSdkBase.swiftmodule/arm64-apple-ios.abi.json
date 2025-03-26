@@ -6004,6 +6004,43 @@
           },
           {
             "kind": "Var",
+            "name": "dorothyTelemetryEnabled",
+            "printedName": "dorothyTelemetryEnabled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UnicoSdkBase.Features.Type) -> UnicoSdkBase.Features",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Features",
+                    "printedName": "UnicoSdkBase.Features",
+                    "usr": "s:12UnicoSdkBase8FeaturesO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UnicoSdkBase.Features.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Features",
+                        "printedName": "UnicoSdkBase.Features",
+                        "usr": "s:12UnicoSdkBase8FeaturesO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12UnicoSdkBase8FeaturesO23dorothyTelemetryEnabledyA2CmF",
+            "mangledName": "$s12UnicoSdkBase8FeaturesO23dorothyTelemetryEnabledyA2CmF",
+            "moduleName": "UnicoSdkBase"
+          },
+          {
+            "kind": "Var",
             "name": "none",
             "printedName": "none",
             "children": [
@@ -7072,6 +7109,299 @@
         "moduleName": "UnicoSdkBase",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DynamicCodingKey",
+        "printedName": "DynamicCodingKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "stringValue",
+            "printedName": "stringValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase16DynamicCodingKeyV11stringValueSSvp",
+            "mangledName": "$s12UnicoSdkBase16DynamicCodingKeyV11stringValueSSvp",
+            "moduleName": "UnicoSdkBase",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase16DynamicCodingKeyV11stringValueSSvg",
+                "mangledName": "$s12UnicoSdkBase16DynamicCodingKeyV11stringValueSSvg",
+                "moduleName": "UnicoSdkBase",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase16DynamicCodingKeyV11stringValueSSvs",
+                "mangledName": "$s12UnicoSdkBase16DynamicCodingKeyV11stringValueSSvs",
+                "moduleName": "UnicoSdkBase",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase16DynamicCodingKeyV11stringValueSSvM",
+                "mangledName": "$s12UnicoSdkBase16DynamicCodingKeyV11stringValueSSvM",
+                "moduleName": "UnicoSdkBase",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "intValue",
+            "printedName": "intValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12UnicoSdkBase16DynamicCodingKeyV8intValueSiSgvp",
+            "mangledName": "$s12UnicoSdkBase16DynamicCodingKeyV8intValueSiSgvp",
+            "moduleName": "UnicoSdkBase",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase16DynamicCodingKeyV8intValueSiSgvg",
+                "mangledName": "$s12UnicoSdkBase16DynamicCodingKeyV8intValueSiSgvg",
+                "moduleName": "UnicoSdkBase",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase16DynamicCodingKeyV8intValueSiSgvs",
+                "mangledName": "$s12UnicoSdkBase16DynamicCodingKeyV8intValueSiSgvs",
+                "moduleName": "UnicoSdkBase",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12UnicoSdkBase16DynamicCodingKeyV8intValueSiSgvM",
+                "mangledName": "$s12UnicoSdkBase16DynamicCodingKeyV8intValueSiSgvM",
+                "moduleName": "UnicoSdkBase",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicCodingKey",
+                "printedName": "UnicoSdkBase.DynamicCodingKey",
+                "usr": "s:12UnicoSdkBase16DynamicCodingKeyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UnicoSdkBase16DynamicCodingKeyV11stringValueACSS_tcfc",
+            "mangledName": "$s12UnicoSdkBase16DynamicCodingKeyV11stringValueACSS_tcfc",
+            "moduleName": "UnicoSdkBase",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(intValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicCodingKey",
+                "printedName": "UnicoSdkBase.DynamicCodingKey",
+                "usr": "s:12UnicoSdkBase16DynamicCodingKeyV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12UnicoSdkBase16DynamicCodingKeyV8intValueACSi_tcfc",
+            "mangledName": "$s12UnicoSdkBase16DynamicCodingKeyV8intValueACSi_tcfc",
+            "moduleName": "UnicoSdkBase",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12UnicoSdkBase16DynamicCodingKeyV",
+        "mangledName": "$s12UnicoSdkBase16DynamicCodingKeyV",
+        "moduleName": "UnicoSdkBase",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "CodingKey",
+            "printedName": "CodingKey",
+            "usr": "s:s9CodingKeyP",
+            "mangledName": "$ss9CodingKeyP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
         ]
       },
       {
@@ -11605,6 +11935,102 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Function",
+            "name": "encodeValue",
+            "printedName": "encodeValue(fromObjectContainer:dictionary:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "KeyedEncodingContainer",
+                "printedName": "Swift.KeyedEncodingContainer<UnicoSdkBase.DynamicCodingKey>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DynamicCodingKey",
+                    "printedName": "UnicoSdkBase.DynamicCodingKey",
+                    "usr": "s:12UnicoSdkBase16DynamicCodingKeyV"
+                  }
+                ],
+                "paramValueOwnership": "InOut",
+                "usr": "s:s22KeyedEncodingContainerV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:SE12UnicoSdkBaseE11encodeValue19fromObjectContainer10dictionaryys013KeyedEncodingH0VyAA16DynamicCodingKeyVGz_SDySSypGtKF",
+            "mangledName": "$sSE12UnicoSdkBaseE11encodeValue19fromObjectContainer10dictionaryys013KeyedEncodingH0VyAA16DynamicCodingKeyVGz_SDySSypGtKF",
+            "moduleName": "UnicoSdkBase",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Self where Self : Swift.Encodable>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encodeValue",
+            "printedName": "encodeValue(fromArrayContainer:array:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnkeyedEncodingContainer",
+                "printedName": "Swift.UnkeyedEncodingContainer",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s24UnkeyedEncodingContainerP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:SE12UnicoSdkBaseE11encodeValue18fromArrayContainer5arrayys015UnkeyedEncodingH0_pz_SayypGtKF",
+            "mangledName": "$sSE12UnicoSdkBaseE11encodeValue18fromArrayContainer5arrayys015UnkeyedEncodingH0_pz_SayypGtKF",
+            "moduleName": "UnicoSdkBase",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<Self where Self : Swift.Encodable>",
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -14090,6 +14516,13 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
       "kind": "StringLiteral",
+      "offset": 1489,
+      "length": 45,
+      "value": "\"cross-feature-dorothy-telemetry-short-lived\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
       "offset": 437,
       "length": 35,
       "value": "\"ios-feature-config-v2-short-lived\""
@@ -14186,6 +14619,13 @@
       "value": "\"cross-new-collect-data-short-lived\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/FeatureFlags\/Features.swift",
+      "kind": "StringLiteral",
+      "offset": 1489,
+      "length": 45,
+      "value": "\"cross-feature-dorothy-telemetry-short-lived\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Data\/Network\/dto\/Request\/RequestHeadersDTO.swift",
       "kind": "StringLiteral",
       "offset": 362,
@@ -14265,14 +14705,14 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/DynamicCodingKey.swift",
       "kind": "StringLiteral",
-      "offset": 341,
+      "offset": 374,
       "length": 13,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/Common\/DynamicCodingKey.swift",
       "kind": "StringLiteral",
-      "offset": 353,
+      "offset": 386,
       "length": 2,
       "value": "\"\""
     },
@@ -14379,7 +14819,7 @@
       "kind": "StringLiteral",
       "offset": 92,
       "length": 9,
-      "value": "\"2.16.10\""
+      "value": "\"2.16.11\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkBase\/UnicoSdkBase\/SdkVersionConfig.swift",

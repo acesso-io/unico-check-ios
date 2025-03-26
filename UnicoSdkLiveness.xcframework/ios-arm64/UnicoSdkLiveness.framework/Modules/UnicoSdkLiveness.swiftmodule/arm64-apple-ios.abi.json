@@ -29,10 +29,7 @@
         "name": "USDK",
         "printedName": "USDK",
         "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness",
-        "declAttributes": [
-          "AccessControl"
-        ]
+        "moduleName": "UnicoSdkLiveness"
       },
       {
         "kind": "Import",
@@ -1416,11 +1413,7 @@
         "name": "USDK",
         "printedName": "USDK",
         "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ]
+        "moduleName": "UnicoSdkLiveness"
       },
       {
         "kind": "Import",
@@ -1680,10 +1673,7 @@
         "name": "USDK",
         "printedName": "USDK",
         "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness",
-        "declAttributes": [
-          "AccessControl"
-        ]
+        "moduleName": "UnicoSdkLiveness"
       },
       {
         "kind": "Import",
@@ -2036,10 +2026,7 @@
         "name": "USDK",
         "printedName": "USDK",
         "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness",
-        "declAttributes": [
-          "AccessControl"
-        ]
+        "moduleName": "UnicoSdkLiveness"
       },
       {
         "kind": "Import",
@@ -3085,10 +3072,7 @@
         "name": "USDK",
         "printedName": "USDK",
         "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness",
-        "declAttributes": [
-          "AccessControl"
-        ]
+        "moduleName": "UnicoSdkLiveness"
       },
       {
         "kind": "Import",
@@ -3932,10 +3916,7 @@
         "name": "USDK",
         "printedName": "USDK",
         "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness",
-        "declAttributes": [
-          "AccessControl"
-        ]
+        "moduleName": "UnicoSdkLiveness"
       },
       {
         "kind": "Import",
@@ -4214,7 +4195,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(viewController:hostKey:sessionConfiguration:)",
+            "printedName": "init(viewController:hostKey:sessionConfiguration:isDebug:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4239,11 +4220,17 @@
                 "name": "LivenessSessionConfig",
                 "printedName": "UnicoSdkLiveness.LivenessSessionConfig",
                 "usr": "s:16UnicoSdkLiveness0C13SessionConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:16UnicoSdkLiveness0aC0C14viewController7hostKey20sessionConfigurationACSo06UIViewE0C_SSAA0C13SessionConfigVtcfc",
-            "mangledName": "$s16UnicoSdkLiveness0aC0C14viewController7hostKey20sessionConfigurationACSo06UIViewE0C_SSAA0C13SessionConfigVtcfc",
+            "usr": "s:16UnicoSdkLiveness0aC0C14viewController7hostKey20sessionConfiguration7isDebugACSo06UIViewE0C_SSAA0C13SessionConfigVSbtcfc",
+            "mangledName": "$s16UnicoSdkLiveness0aC0C14viewController7hostKey20sessionConfiguration7isDebugACSo06UIViewE0C_SSAA0C13SessionConfigVSbtcfc",
             "moduleName": "UnicoSdkLiveness",
             "declAttributes": [
               "AccessControl"
@@ -4759,6 +4746,41 @@
             "declKind": "Func",
             "usr": "s:16UnicoSdkLiveness0aC14LoggerDelegateP02onD8ListeneryyAA0cD0_pSgF",
             "mangledName": "$s16UnicoSdkLiveness0aC14LoggerDelegateP02onD8ListeneryyAA0cD0_pSgF",
+            "moduleName": "UnicoSdkLiveness",
+            "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.UnicoLivenessLoggerDelegate>",
+            "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.UnicoLivenessLoggerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onTelemetryListener",
+            "printedName": "onTelemetryListener(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16UnicoSdkLiveness0aC14LoggerDelegateP19onTelemetryListeneryySSSgF",
+            "mangledName": "$s16UnicoSdkLiveness0aC14LoggerDelegateP19onTelemetryListeneryySSSgF",
             "moduleName": "UnicoSdkLiveness",
             "genericSig": "<τ_0_0 where τ_0_0 : UnicoSdkLiveness.UnicoLivenessLoggerDelegate>",
             "sugared_genericSig": "<Self where Self : UnicoSdkLiveness.UnicoLivenessLoggerDelegate>",
@@ -5406,10 +5428,7 @@
         "name": "USDK",
         "printedName": "USDK",
         "declKind": "Import",
-        "moduleName": "UnicoSdkLiveness",
-        "declAttributes": [
-          "AccessControl"
-        ]
+        "moduleName": "UnicoSdkLiveness"
       },
       {
         "kind": "Import",
@@ -5446,63 +5465,63 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 332,
+      "offset": 267,
       "length": 20,
       "value": "\"video_selfie_smile\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 396,
+      "offset": 331,
       "length": 19,
       "value": "\"video_selfie_eyes\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 458,
+      "offset": 393,
       "length": 19,
       "value": "\"video_selfie_scan\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 524,
+      "offset": 459,
       "length": 20,
       "value": "\"video_selfie_blank\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 589,
+      "offset": 524,
       "length": 22,
       "value": "\"video_selfie_oneshot\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 658,
+      "offset": 593,
       "length": 19,
       "value": "\"video_selfie_left\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 720,
+      "offset": 655,
       "length": 20,
       "value": "\"video_selfie_right\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 784,
+      "offset": 719,
       "length": 19,
       "value": "\"video_selfie_down\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/OZVerificationMovement+Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 846,
+      "offset": 781,
       "length": 19,
       "value": "\"video_selfie_high\""
     },
@@ -6566,28 +6585,28 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
       "kind": "StringLiteral",
-      "offset": 350,
+      "offset": 285,
       "length": 10,
       "value": "\"ic_close\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
       "kind": "IntegerLiteral",
-      "offset": 1004,
+      "offset": 939,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
       "kind": "FloatLiteral",
-      "offset": 1119,
+      "offset": 1054,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/customization\/UnicoDorothyCustomization.swift",
       "kind": "FloatLiteral",
-      "offset": 1442,
+      "offset": 1377,
       "length": 3,
       "value": "0.2"
     },
@@ -7273,35 +7292,35 @@
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/DorothyProvider.swift",
       "kind": "Array",
-      "offset": 1154,
+      "offset": 1164,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/DorothyProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 1349,
+      "offset": 1359,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/DorothyProvider.swift",
       "kind": "BooleanLiteral",
-      "offset": 1392,
+      "offset": 1402,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/DorothyProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1984,
+      "offset": 1994,
       "length": 9,
       "value": "\"dorothy\""
     },
     {
       "filePath": "\/Users\/runner\/work\/acessobio-ios\/acessobio-ios\/modules\/UnicoSdkLiveness\/UnicoSdkLiveness\/Providers\/Dorothy\/DorothyProvider.swift",
       "kind": "StringLiteral",
-      "offset": 3630,
+      "offset": 4054,
       "length": 18,
       "value": "\"forensis.license\""
     },

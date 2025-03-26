@@ -8,6 +8,7 @@ import FaceTecSDK
 import Foundation
 import Swift
 import UIKit
+import USDK
 import UnicoSdkBase
 import UnicoSdkBase/*.Serializable*/
 @_exported import UnicoSdkLiveness
@@ -138,7 +139,7 @@ public protocol UnicoLivenessRepresentable {
   final public var renewKeyBodyUseCase: any UnicoSdkLiveness.RenewKeyBodyUseCase {
     get
   }
-  public init(viewController: UIKit.UIViewController, hostKey: Swift.String, sessionConfiguration: UnicoSdkLiveness.LivenessSessionConfig)
+  public init(viewController: UIKit.UIViewController, hostKey: Swift.String, sessionConfiguration: UnicoSdkLiveness.LivenessSessionConfig, isDebug: Swift.Bool)
   final public func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
   @objc deinit
 }
@@ -158,6 +159,7 @@ public enum DataTransferErrors : Swift.Error {
 }
 public protocol UnicoLivenessLoggerDelegate : AnyObject {
   func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
+  func onTelemetryListener(_ event: Swift.String?)
 }
 public protocol LivenessLoggerProvider {
   var name: Swift.String { get }
