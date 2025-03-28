@@ -23,11 +23,6 @@ let package = Package(
         ),
     ],
     targets: [
-        .target(
-            name: "unicocheck-ios-spm",
-            path: "AcessoBio.xcframework/ios-arm64/AcessoBio.framework",
-            resources: [.copy("PrivacyInfo.xcprivacy")]
-        ),
         .binaryTarget(name: "AcessoBio",        path: "AcessoBio.xcframework"),
         .binaryTarget(name: "DeviceProfiling",  path: "DeviceProfiling.xcframework"),
         .binaryTarget(name: "FaceTecSDK",       path: "FaceTecSDK.xcframework"),
