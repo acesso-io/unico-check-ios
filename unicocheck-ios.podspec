@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.authors      = {
     "Check SDK iOS" => "sdk-ios@unico.io"
   }
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/acesso-io/unico-check-ios", :tag => "#{spec.version}" }
   spec.source_files = "unicocheck-ios/**/*.{h,m,swift}", "unicocheck-ios/**/*.{mlmodel}", "unicocheck-ios/*.lproj","unicocheck-ios/**/*.lproj"
 
