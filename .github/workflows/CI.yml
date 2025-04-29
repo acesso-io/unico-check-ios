@@ -37,7 +37,7 @@ jobs:
   test:
       name: Test Project
       needs: build
-      runs-on: macos-13
+      runs-on: macos-15
 
       steps:
       - name: Chechout Repository
