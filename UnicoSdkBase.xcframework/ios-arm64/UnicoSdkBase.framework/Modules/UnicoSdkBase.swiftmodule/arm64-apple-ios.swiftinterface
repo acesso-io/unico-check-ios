@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UnicoSdkBase
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name UnicoSdkBase
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import CoreLocation.CLLocation
 import CoreLocation
 import CoreLocation/*.CLAuthorizationStatus*/
@@ -66,13 +66,13 @@ public struct CryptedRequestDTO<T> : Swift.Encodable where T : Swift.Encodable {
   public init(dataValue: T, endpointPrivateKey: Swift.String, endpointPrivateIv: Swift.String) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class LivenessLoadingView : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class LivenessLoadingView : UIKit.UIView {
   public struct Customization {
     public init(closeButtonColor: UIKit.UIColor?, backgroundColor: UIKit.UIColor?, progressBarColor: UIKit.UIColor?, textMessageColor: UIKit.UIColor?, textLabel: Swift.String?)
   }
-  @_Concurrency.MainActor(unsafe) final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization, onClose: (() -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) @objc override final public func didMoveToSuperview()
-  @_Concurrency.MainActor(unsafe) @objc override final public func removeFromSuperview()
+  @_Concurrency.MainActor @preconcurrency final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization, onClose: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func didMoveToSuperview()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func removeFromSuperview()
   @objc deinit
 }
 public protocol NetworkConfigurable {
@@ -205,6 +205,7 @@ extension Foundation.Bundle {
     get
   }
 }
+#if compiler(>=5.3) && $NoncopyableGenerics
 extension Swift.Optional {
   public enum UnwrapOptionalError : Swift.Error {
     case unwrapFailed
@@ -216,9 +217,28 @@ extension Swift.Optional {
   }
   public func unwrapOrThrow() throws -> Wrapped
 }
+#else
+extension Swift.Optional {
+  public enum UnwrapOptionalError : Swift.Error {
+    case unwrapFailed
+    public static func == (a: Swift.Optional<Wrapped>.UnwrapOptionalError, b: Swift.Optional<Wrapped>.UnwrapOptionalError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public func unwrapOrThrow() throws -> Wrapped
+}
+#endif
+#if compiler(>=5.3) && $NoncopyableGenerics
 extension Swift.Optional where Wrapped == Swift.String {
   public func unwrapOrThrow() throws -> Wrapped
 }
+#else
+extension Swift.Optional where Wrapped == Swift.String {
+  public func unwrapOrThrow() throws -> Wrapped
+}
+#endif
 extension Swift.String {
   public static var newUUID: Swift.String {
     get
@@ -263,13 +283,14 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case sendFingerprintOnConfig
   case newCollectData
   case dorothyTelemetryEnabled
+  case sendDetailedFingerprint
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
   public init?(intValue: Swift.Int)
   public typealias AllCases = [UnicoSdkBase.Features]
   public typealias RawValue = Swift.String
-  public static var allCases: [UnicoSdkBase.Features] {
+  nonisolated public static var allCases: [UnicoSdkBase.Features] {
     get
   }
   public var intValue: Swift.Int? {
@@ -361,7 +382,7 @@ extension UnicoSdkBase.Features {
 }
 public func printIfDebug(_ message: Any, file: Swift.StaticString = #file, line: Swift.UInt = #line, function: Swift.String = #function)
 extension UIKit.UIDevice {
-  @_Concurrency.MainActor(unsafe) public static func modelName() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency public static func modelName() -> Swift.String
 }
 public class JSONResponseDecoder : UnicoSdkBase.ResponseDecoder {
   public init(dateDecodingStrategy: Foundation.JSONDecoder.DateDecodingStrategy = .deferredToDate)
@@ -477,8 +498,6 @@ extension UnicoSdkBase.Requestable {
   public func urlRequest(with config: any UnicoSdkBase.NetworkConfigurable) throws -> Foundation.URLRequest
 }
 extension UnicoSdkBase.FeatureFlagDataSourceFetcherError : Swift.Hashable {}
-extension Swift.Optional.UnwrapOptionalError : Swift.Equatable {}
-extension Swift.Optional.UnwrapOptionalError : Swift.Hashable {}
 extension UnicoSdkBase.Features : Swift.Hashable {}
 extension UnicoSdkBase.Features : Swift.RawRepresentable {}
 extension UnicoSdkBase.HTTPMethodType : Swift.Equatable {}
