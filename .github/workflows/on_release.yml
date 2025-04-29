@@ -7,7 +7,7 @@ on:
 
 jobs:
   verify-changed-files:
-    runs-on: macos-13
+    runs-on: macos-15
 
     outputs:
       output1: ${{ steps.changed-files.outputs.modified_files }}
@@ -17,7 +17,7 @@ jobs:
 
       - uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '15.0'
+          xcode-version: '16.0'
 
       - name: Get changed files
         id: changed-files
