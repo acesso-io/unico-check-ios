@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "USDKResources",
+    "printedName": "USDKResources",
     "children": [
       {
         "kind": "Import",
@@ -86,6 +86,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -161,14 +175,14 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ilyapostanogov\/Documents\/Projects\/OZForensics\/oz-liveness-ios-internal\/build\/USDKResources\/DerivedData\/Build\/Intermediates.noindex\/OZLiveness.build\/Release-iphonesimulator\/USDKSDKResources.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/almirka\/Documents\/Forensics\/oz-liveness-ios-internal\/build\/USDKResources\/DerivedData\/Build\/Intermediates.noindex\/OZLiveness.build\/Release-iphonesimulator\/USDKSDKResources.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 684,
       "length": 10,
       "value": "\"BackIcon\""
     },
     {
-      "filePath": "\/Users\/ilyapostanogov\/Documents\/Projects\/OZForensics\/oz-liveness-ios-internal\/build\/USDKResources\/DerivedData\/Build\/Intermediates.noindex\/OZLiveness.build\/Release-iphonesimulator\/USDKSDKResources.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/almirka\/Documents\/Forensics\/oz-liveness-ios-internal\/build\/USDKResources\/DerivedData\/Build\/Intermediates.noindex\/OZLiveness.build\/Release-iphonesimulator\/USDKSDKResources.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 822,
       "length": 11,
