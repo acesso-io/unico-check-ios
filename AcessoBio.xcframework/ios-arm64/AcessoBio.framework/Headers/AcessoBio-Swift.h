@@ -914,6 +914,17 @@ typedef SWIFT_ENUM(NSInteger, LogoType, open) {
 };
 
 
+SWIFT_CLASS("_TtC9AcessoBio22UnicoManageControllers")
+@interface UnicoManageControllers : NSObject
+/// Obtém uma string que representa a pilha de view controllers visíveis, da base até o topo.
+///
+/// returns:
+/// Uma String descrevendo a pilha, ou uma mensagem indicando que não pôde ser determinada.
++ (NSString * _Nonnull)getViewControllerStackString SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC9AcessoBio21UnicoNetworkingModule")
 @interface UnicoNetworkingModule : NSObject
 - (BOOL)isConnectedToNetwork SWIFT_WARN_UNUSED_RESULT;
