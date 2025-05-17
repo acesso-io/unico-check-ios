@@ -333,7 +333,9 @@ __attribute__((swift_name("DataCollectionServiceState")))
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @property (class, readonly) USLDataCollectionServiceState *build __attribute__((swift_name("build")));
 @property (class, readonly) USLDataCollectionServiceState *startCapture __attribute__((swift_name("startCapture")));
+@property (class, readonly) USLDataCollectionServiceState *startCaptureLegacy __attribute__((swift_name("startCaptureLegacy")));
 @property (class, readonly) USLDataCollectionServiceState *endCapture __attribute__((swift_name("endCapture")));
+@property (class, readonly) USLDataCollectionServiceState *endCaptureLegacy __attribute__((swift_name("endCaptureLegacy")));
 @property (class, readonly) USLDataCollectionServiceState *geolocation __attribute__((swift_name("geolocation")));
 @property (class, readonly) USLDataCollectionServiceState *profiling __attribute__((swift_name("profiling")));
 @property (class, readonly) USLDataCollectionServiceState *telemetry __attribute__((swift_name("telemetry")));
