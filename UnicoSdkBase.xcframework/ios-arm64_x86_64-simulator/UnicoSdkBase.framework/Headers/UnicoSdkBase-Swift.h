@@ -281,6 +281,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreFoundation;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -316,10 +317,25 @@ SWIFT_CLASS("_TtC12UnicoSdkBase19LivenessLoadingView")
 @end
 
 
+typedef SWIFT_ENUM(NSInteger, StorageType, open) {
+  StorageTypeInternal = 0,
+  StorageTypeExternal = 1,
+};
 
 
 
 
+
+
+@class NSString;
+
+SWIFT_CLASS("_TtC12UnicoSdkBase17UnicoTraceManager")
+@interface UnicoTraceManager : NSObject
++ (void)saveTrace:(NSString * _Nonnull)trace to:(enum StorageType)storageType;
++ (NSString * _Nullable)retrieveTraceLogFrom:(enum StorageType)storageType SWIFT_WARN_UNUSED_RESULT;
++ (void)persistToExternal;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #endif
 #if __has_attribute(external_source_symbol)
@@ -612,6 +628,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreFoundation;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -647,10 +664,25 @@ SWIFT_CLASS("_TtC12UnicoSdkBase19LivenessLoadingView")
 @end
 
 
+typedef SWIFT_ENUM(NSInteger, StorageType, open) {
+  StorageTypeInternal = 0,
+  StorageTypeExternal = 1,
+};
 
 
 
 
+
+
+@class NSString;
+
+SWIFT_CLASS("_TtC12UnicoSdkBase17UnicoTraceManager")
+@interface UnicoTraceManager : NSObject
++ (void)saveTrace:(NSString * _Nonnull)trace to:(enum StorageType)storageType;
++ (NSString * _Nullable)retrieveTraceLogFrom:(enum StorageType)storageType SWIFT_WARN_UNUSED_RESULT;
++ (void)persistToExternal;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #endif
 #if __has_attribute(external_source_symbol)

@@ -16,6 +16,8 @@ import UnicoSdkPlugins
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+import os.log
+import os
 extension Swift.Encodable {
   public var stringValue: Swift.String? {
     get
@@ -248,6 +250,9 @@ extension Swift.String {
   }
   public func toBase64() -> Swift.String
 }
+extension Swift.String {
+  public func saveAsTrace(type: UnicoSdkBase.StorageType)
+}
 @_hasMissingDesignatedInitializers final public class DefaultFeatureFlagDataSource : UnicoSdkBase.FeatureFlagDataSourceFetcher, UnicoSdkBase.FeatureFlagDataSource {
   public static var shared: UnicoSdkBase.DefaultFeatureFlagDataSource
   final public func fetchFlags(headers: [Swift.String : Swift.String], request: [Swift.String : Any], dataTransferService: any UnicoSdkBase.DataTransferService, decryptor: any UnicoSdkBase.UnicoDecrypt, completion: @escaping UnicoSdkBase.DefaultFeatureFlagDataSource.Completion)
@@ -392,6 +397,22 @@ public class JSONResponseDecoder : UnicoSdkBase.ResponseDecoder {
   public func decode<T>(_ data: Foundation.Data) throws -> T where T : Swift.Decodable
   @objc deinit
 }
+@objc public enum StorageType : Swift.Int {
+  case `internal`
+  case external
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class UnicoTraceManager : ObjectiveC.NSObject {
+  @objc public static func saveTrace(_ trace: Swift.String, to storageType: UnicoSdkBase.StorageType)
+  @objc public static func retrieveTraceLog(from storageType: UnicoSdkBase.StorageType) -> Swift.String?
+  @objc public static func persistToExternal()
+  @objc override dynamic public init()
+  @objc deinit
+}
 public enum DataTransferError : Swift.Error {
   case noResponse
   case parsing(any Swift.Error)
@@ -503,6 +524,9 @@ extension UnicoSdkBase.Requestable {
 extension UnicoSdkBase.FeatureFlagDataSourceFetcherError : Swift.Hashable {}
 extension UnicoSdkBase.Features : Swift.Hashable {}
 extension UnicoSdkBase.Features : Swift.RawRepresentable {}
+extension UnicoSdkBase.StorageType : Swift.Equatable {}
+extension UnicoSdkBase.StorageType : Swift.Hashable {}
+extension UnicoSdkBase.StorageType : Swift.RawRepresentable {}
 extension UnicoSdkBase.HTTPMethodType : Swift.Equatable {}
 extension UnicoSdkBase.HTTPMethodType : Swift.Hashable {}
 extension UnicoSdkBase.HTTPMethodType : Swift.RawRepresentable {}

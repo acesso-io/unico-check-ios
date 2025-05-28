@@ -200,6 +200,11 @@ public class SDKPredictResponseDTO : Swift.Decodable {
   @objc deinit
   required public init(from decoder: any Swift.Decoder) throws
 }
+@objc @_inheritsConvenienceInitializers public class UnicoManageControllers : ObjectiveC.NSObject {
+  @objc public static func getViewControllerStackString() -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
 @objc public protocol SensorsWorker {
   @objc func startMotion()
   @objc @discardableResult
