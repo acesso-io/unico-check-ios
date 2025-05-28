@@ -286,6 +286,7 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case sendDetailedFingerprint
   case dorothyLosslessFrameSignedPayload
   case appIdentifierCollectEnable
+  case changeCaptureAggregateTypes
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
