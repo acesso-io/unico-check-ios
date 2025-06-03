@@ -573,7 +573,7 @@ SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 
 SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
 @protocol SAdapterProtocol
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts extraData:(NSDictionary<NSString *, id> * _Nullable)extraData delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 @end
 
 @class UIViewController;
@@ -582,16 +582,17 @@ SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
 SWIFT_CLASS("_TtC9AcessoBio8SAdapter")
 @interface SAdapter : NSObject <SAdapterProtocol>
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController unicoSetup:(UnicoSetup * _Nonnull)unicoSetup OBJC_DESIGNATED_INITIALIZER;
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts extraData:(NSDictionary<NSString *, id> * _Nullable)extraData delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+@class SuccessResult;
 
 SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 @protocol SAdapterProtocolDelegate
-- (void)onSuccessSDKWithResult:(CaptureResult * _Nonnull)result;
+- (void)onSuccessSDKWithResult:(SuccessResult * _Nonnull)result;
 - (void)onErrorSDKWithError:(ErrorBio * _Nonnull)error;
 - (void)onSuccessConsent;
 - (void)onErrorConsent;
@@ -663,6 +664,15 @@ SWIFT_CLASS("_TtC9AcessoBio18SuccessCallbackDTO")
 @interface SuccessCallbackDTO : CallbackDTO
 - (nonnull instancetype)initWithCallback:(NSString * _Nullable)callback attempts:(AttemptsDTO * _Nullable)attempts totalTime:(NSNumber * _Nullable)totalTime jwtWeight:(NSNumber * _Nullable)jwtWeight OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithCallback:(NSString * _Nullable)callback attempts:(AttemptsDTO * _Nullable)attempts totalTime:(NSNumber * _Nullable)totalTime geolocation:(GeolocationDTO * _Nullable)geolocation deviceBehavior:(DeviceBehaviorsDTO * _Nullable)deviceBehavior SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC9AcessoBio13SuccessResult")
+@interface SuccessResult : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull processId;
+- (nonnull instancetype)initWithProcessId:(NSString * _Nonnull)processId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -816,6 +826,7 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsENCRYPTION_ERROR = 73800,
 /// Consent
   UnicoEnumsIErrorsCONSENT_NOT_GIVEN_ERROR = 73740,
+  UnicoEnumsIErrorsON_SUCCESS_NOT_IMPLEMENTED = 74001,
 };
 
 @class NSException;
@@ -1561,7 +1572,7 @@ SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 
 SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
 @protocol SAdapterProtocol
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts extraData:(NSDictionary<NSString *, id> * _Nullable)extraData delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 @end
 
 @class UIViewController;
@@ -1570,16 +1581,17 @@ SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
 SWIFT_CLASS("_TtC9AcessoBio8SAdapter")
 @interface SAdapter : NSObject <SAdapterProtocol>
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController unicoSetup:(UnicoSetup * _Nonnull)unicoSetup OBJC_DESIGNATED_INITIALIZER;
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts extraData:(NSDictionary<NSString *, id> * _Nullable)extraData delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+@class SuccessResult;
 
 SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 @protocol SAdapterProtocolDelegate
-- (void)onSuccessSDKWithResult:(CaptureResult * _Nonnull)result;
+- (void)onSuccessSDKWithResult:(SuccessResult * _Nonnull)result;
 - (void)onErrorSDKWithError:(ErrorBio * _Nonnull)error;
 - (void)onSuccessConsent;
 - (void)onErrorConsent;
@@ -1651,6 +1663,15 @@ SWIFT_CLASS("_TtC9AcessoBio18SuccessCallbackDTO")
 @interface SuccessCallbackDTO : CallbackDTO
 - (nonnull instancetype)initWithCallback:(NSString * _Nullable)callback attempts:(AttemptsDTO * _Nullable)attempts totalTime:(NSNumber * _Nullable)totalTime jwtWeight:(NSNumber * _Nullable)jwtWeight OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithCallback:(NSString * _Nullable)callback attempts:(AttemptsDTO * _Nullable)attempts totalTime:(NSNumber * _Nullable)totalTime geolocation:(GeolocationDTO * _Nullable)geolocation deviceBehavior:(DeviceBehaviorsDTO * _Nullable)deviceBehavior SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC9AcessoBio13SuccessResult")
+@interface SuccessResult : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull processId;
+- (nonnull instancetype)initWithProcessId:(NSString * _Nonnull)processId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -1804,6 +1825,7 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsENCRYPTION_ERROR = 73800,
 /// Consent
   UnicoEnumsIErrorsCONSENT_NOT_GIVEN_ERROR = 73740,
+  UnicoEnumsIErrorsON_SUCCESS_NOT_IMPLEMENTED = 74001,
 };
 
 @class NSException;

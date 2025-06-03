@@ -10,6 +10,7 @@
 #define AcessoBioSelfieDelegate_h
 @class SelfieResult;
 @class CaptureResult;
+@class SuccessResult;
 
 #import "ErrorBio.h"
 
@@ -17,6 +18,9 @@
 
 - (void)onSuccessSelfie: (SelfieResult *)result;
 - (void)onErrorSelfie:(ErrorBio *)errorBio;
+
+@optional
+- (void)onSuccess:(SuccessResult *)successResult;
 
 @end
 #endif /* iAcessoBioSelfie_h */

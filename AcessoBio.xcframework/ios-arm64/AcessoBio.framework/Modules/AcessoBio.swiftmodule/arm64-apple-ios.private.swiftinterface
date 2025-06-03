@@ -112,6 +112,7 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   case SESSION_STATUS_TIMEOUT = 73710
   case ENCRYPTION_ERROR = 73800
   case CONSENT_NOT_GIVEN_ERROR = 73740
+  case ON_SUCCESS_NOT_IMPLEMENTED = 74001
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -200,25 +201,28 @@ public class SDKPredictResponseDTO : Swift.Decodable {
   @objc deinit
   required public init(from decoder: any Swift.Decoder) throws
 }
+@objc public class SuccessResult : ObjectiveC.NSObject {
+  @objc final public let processId: Swift.String
+  @objc public init(processId: Swift.String)
+  @objc deinit
+}
 @objc public protocol SensorsWorker {
   @objc func startMotion()
   @objc @discardableResult
   func stopMotion() -> AcessoBio.DeviceBehaviorsDTO
 }
 @objc public protocol SAdapterProtocol {
-  typealias CompletionSuccess = (AcessoBio.CaptureResult) -> Swift.Void
-  typealias CompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
-  @objc func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, extraData: [Swift.String : Any]?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
 }
 @objc public protocol SAdapterProtocolDelegate {
-  @objc func onSuccessSDK(result: AcessoBio.CaptureResult)
+  @objc func onSuccessSDK(result: AcessoBio.SuccessResult)
   @objc func onErrorSDK(error: AcessoBio.ErrorBio)
   @objc func onSuccessConsent()
   @objc func onErrorConsent()
 }
 @objc @_hasMissingDesignatedInitializers final public class SAdapter : ObjectiveC.NSObject, AcessoBio.SAdapterProtocol {
   @objc public init(viewController: UIKit.UIViewController, unicoSetup: AcessoBio.UnicoSetup)
-  @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, extraData: [Swift.String : Any]?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
   @objc deinit
 }
 @objc public class GeolocationDTO : ObjectiveC.NSObject {

@@ -21,10 +21,6 @@ extension Swift.Encodable {
     get
   }
 }
-extension Swift.Encodable {
-  public func encodeValue(fromObjectContainer container: inout Swift.KeyedEncodingContainer<UnicoSdkBase.DynamicCodingKey>, dictionary: [Swift.String : Any]) throws
-  public func encodeValue(fromArrayContainer container: inout any Swift.UnkeyedEncodingContainer, array: [Any]) throws
-}
 public protocol GeoLocation {
   func start(handler: @escaping (Swift.Result<[CoreLocation.CLLocation], UnicoSdkBase.GeoLocationError>) -> Swift.Void)
   func stop()
@@ -275,7 +271,6 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case dorothyLocalization
   case renewKeybodyOnEachRetry
   case internationalizationHeader
-  case shuriEnabled
   case accessibilityFaceTecEnabled
   case fixDorothyPrepareCamera
   case retryPredictDisabled
@@ -397,6 +392,19 @@ public enum DataTransferError : Swift.Error {
   case parsing(any Swift.Error)
   case networkFailure(UnicoSdkBase.NetworkError)
   case resolvedNetworkFailure(any Swift.Error)
+}
+extension UnicoSdkBase.DataTransferError {
+  public var apiResponseError: UnicoSdkBase.APIResponseError? {
+    get
+  }
+}
+public struct APIResponseError : Swift.Decodable {
+  public struct Body : Swift.Decodable {
+    public let desc: Swift.String
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public let body: UnicoSdkBase.APIResponseError.Body
+  public init(from decoder: any Swift.Decoder) throws
 }
 public protocol DataTransferService {
   typealias CompletionHandler<T> = (Swift.Result<T, UnicoSdkBase.DataTransferError>) -> Swift.Void
