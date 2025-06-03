@@ -92,6 +92,7 @@ public protocol LivenessResult {
   var session: [Swift.String : Any]? { get }
   var tinyJWTEnabled: Swift.Bool { get }
   var auditTrailCompressedBase64Images: [Swift.String]? { get }
+  var livenessImage: Swift.String? { get }
 }
 @objc final public class SessionTransactionDTO : ObjectiveC.NSObject {
   @objc public init(transactionId: Swift.String, isLive: Swift.Bool, order: Swift.Int)
