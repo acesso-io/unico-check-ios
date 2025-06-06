@@ -16,11 +16,6 @@ import UnicoSdkPlugins
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-extension Swift.Encodable {
-  public var stringValue: Swift.String? {
-    get
-  }
-}
 public protocol GeoLocation {
   func start(handler: @escaping (Swift.Result<[CoreLocation.CLLocation], UnicoSdkBase.GeoLocationError>) -> Swift.Void)
   func stop()
