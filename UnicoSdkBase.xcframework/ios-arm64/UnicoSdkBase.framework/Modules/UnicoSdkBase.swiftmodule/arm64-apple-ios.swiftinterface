@@ -16,11 +16,6 @@ import UnicoSdkPlugins
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-extension Swift.Encodable {
-  public var stringValue: Swift.String? {
-    get
-  }
-}
 public protocol GeoLocation {
   func start(handler: @escaping (Swift.Result<[CoreLocation.CLLocation], UnicoSdkBase.GeoLocationError>) -> Swift.Void)
   func stop()
@@ -264,14 +259,8 @@ public protocol FeaturesRepresentable {
   var rawValue: Swift.String { get }
 }
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
-  case endpointConfigV2
-  case versionSupport
   case shortClientJwt
-  case sendAuditImages
-  case dorothyLocalization
-  case renewKeybodyOnEachRetry
   case internationalizationHeader
-  case accessibilityFaceTecEnabled
   case fixDorothyPrepareCamera
   case retryPredictDisabled
   case consentScreen
@@ -282,6 +271,7 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case dorothyLosslessFrameSignedPayload
   case appIdentifierCollectEnable
   case changeCaptureAggregateTypes
+  case facetecNoRetriesCancelCallback
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
