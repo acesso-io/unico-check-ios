@@ -428,9 +428,18 @@ public struct OZMedia {
     get
     set
   }
-  public var bestShotURL: Foundation.URL?
-  public var preferredMediaURL: Foundation.URL?
-  public var losslessFrameURL: Foundation.URL?
+  public var bestShotURL: Foundation.URL? {
+    get
+    set
+  }
+  public var preferredMediaURL: Foundation.URL? {
+    get
+    set
+  }
+  public var losslessFrameURL: Foundation.URL? {
+    get
+    set
+  }
   public var timestamp: Foundation.Date
   public var mediaName: USDK.MediaName {
     get
