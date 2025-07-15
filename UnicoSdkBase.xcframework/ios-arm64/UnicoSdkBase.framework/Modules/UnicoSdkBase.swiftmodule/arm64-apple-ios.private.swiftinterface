@@ -261,9 +261,6 @@ public protocol FeaturesRepresentable {
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
   case shortClientJwt
   case internationalizationHeader
-  case fixDorothyPrepareCamera
-  case retryPredictDisabled
-  case consentScreen
   case sendFingerprintOnConfig
   case newCollectData
   case dorothyTelemetryEnabled
@@ -272,6 +269,7 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case appIdentifierCollectEnable
   case changeCaptureAggregateTypes
   case facetecNoRetriesCancelCallback
+  case dorothyEnableJwsAnalysis
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)

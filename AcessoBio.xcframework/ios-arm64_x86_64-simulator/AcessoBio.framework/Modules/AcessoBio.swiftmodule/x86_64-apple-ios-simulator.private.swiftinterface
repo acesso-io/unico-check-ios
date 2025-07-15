@@ -113,6 +113,7 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   case ENCRYPTION_ERROR = 73800
   case CONSENT_NOT_GIVEN_ERROR = 73740
   case ON_SUCCESS_NOT_IMPLEMENTED = 74001
+  case CAPTURE_NOT_STARTED_CAPTURE_ID = 737220
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -196,6 +197,7 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDe
   public func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
   public func onRenewKeyBody(newKeyBody: Swift.String?)
   public func onTelemetryListener(_ event: Swift.String?)
+  public func onPredict()
 }
 public class SDKPredictResponseDTO : Swift.Decodable {
   @objc deinit
