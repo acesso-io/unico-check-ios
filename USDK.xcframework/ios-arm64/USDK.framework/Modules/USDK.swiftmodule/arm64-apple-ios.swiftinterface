@@ -267,9 +267,10 @@ public enum AnalysisMode : Swift.Equatable {
     get
   }
 }
-public struct Analysis {
+public struct Analysis : Swift.Equatable {
   public init(media: [USDK.OZMedia]?, type: USDK.AnalysisType, mode: USDK.AnalysisMode, sizeReductionStrategy: USDK.SizeReductionStrategy? = nil, params: [Swift.String : Any]?)
   public init(media: [USDK.OZMedia]?, type: USDK.AnalysisType, mode: USDK.AnalysisMode, sizeReductionStrategy: USDK.SizeReductionStrategy? = nil)
+  public static func == (lhs: USDK.Analysis, rhs: USDK.Analysis) -> Swift.Bool
 }
 public struct AnalysisStatus {
   public let media: USDK.OZMedia

@@ -1,14 +1,14 @@
 ---
 triple:          'x86_64-apple-darwin'
-binary-path:     '/var/folders/4h/d2k68j1j14z8hxxz0pz21bd80000gn/T/ixguard-USDK-FnTA2C/obfapps/USDK.framework/USDK'
+binary-path:     '/var/folders/xy/lsssg5316d71cb0h5zvyghwr0000gn/T/ixguard-USDK-tprdFU/obfapps/USDK.framework/USDK'
 relocations:
-  - { offset: 0x4F, size: 0x8, addend: 0x0, symName: '_$s4USDK9OZJournalC8addEntry5event7context15actionSessionId08scenariohI0yAA0B5EventO_SDySSypGSgSSSgAMtFyyYbcfU_yyXEfU_', symObjAddr: 0x11D5E0, symBinAddr: 0x11F640, symSize: 0x9E0 }
-  - { offset: 0xB9, size: 0x8, addend: 0x0, symName: '_$s4USDK18SecurityEnvCheckerC26checkSuspiciousFilesAndDirSayAA0B9DetectionVGyFZTf4d_n', symObjAddr: 0x154350, symBinAddr: 0x1563B0, symSize: 0xD10 }
-  - { offset: 0x123, size: 0x8, addend: 0x0, symName: '_$s4USDK16OZRequestManagerV11generateKey33_F5107DBF0223D39E527A1D558FEB02C6LLSo03SecE3RefaSgyFZTf4d_n', symObjAddr: 0x158060, symBinAddr: 0x15A0C0, symSize: 0x9E0 }
-  - { offset: 0x18D, size: 0x8, addend: 0x0, symName: '_$s4USDK5OZLogC15generateStringsSS_SStyFZTf4d_n', symObjAddr: 0x15D040, symBinAddr: 0x15F0A0, symSize: 0x920 }
-  - { offset: 0x1F7, size: 0x8, addend: 0x0, symName: '_$s4USDK16LicenseDecryprorV11decryptDatay10Foundation0E0VSgAGFZTf4nd_n', symObjAddr: 0x170510, symBinAddr: 0x172570, symSize: 0x310 }
-  - { offset: 0x261, size: 0x8, addend: 0x0, symName: '_$s4USDK24OZLivenessViewControllerC11viewDidLoadyyF', symObjAddr: 0x19DD80, symBinAddr: 0x19FDE0, symSize: 0xE10 }
-  - { offset: 0x2CB, size: 0x8, addend: 0x0, symName: '_$s4USDK15LicenseProviderC06onlineB09productID3key7configs10completionySS_SSAA0B14ConfigurationsVyAA0B4DataVSg_AA0B5ErrorOSgtctFyAA14CryptlexResultVSg_AA0mL0VSgtcfU_', symObjAddr: 0x1A4BB0, symBinAddr: 0x1A6C10, symSize: 0x1E30 }
-  - { offset: 0x335, size: 0x8, addend: 0x0, symName: '_$s4USDK18SecurityEnvCheckerC11isJailBreakSbyFZTf4d_n', symObjAddr: 0x1F1540, symBinAddr: 0x1F35A0, symSize: 0xFA0 }
-  - { offset: 0x39F, size: 0x8, addend: 0x0, symName: _CHMWdZ, symObjAddr: 0x29DD70, symBinAddr: 0x29FDD0, symSize: 0xE60 }
+  - { offset: 0x4F, size: 0x8, addend: 0x0, symName: '_$s4USDK9OZJournalC8addEntry5event7context15actionSessionId08scenariohI0yAA0B5EventO_SDySSypGSgSSSgAMtFyyYbcfU_yyXEfU_', symObjAddr: 0x11D5E0, symBinAddr: 0x120180, symSize: 0xC80 }
+  - { offset: 0xB9, size: 0x8, addend: 0x0, symName: '_$s4USDK18SecurityEnvCheckerC26checkSuspiciousFilesAndDirSayAA0B9DetectionVGyFZTf4d_n', symObjAddr: 0x154590, symBinAddr: 0x157130, symSize: 0xA30 }
+  - { offset: 0x123, size: 0x8, addend: 0x0, symName: '_$s4USDK16OZRequestManagerV11generateKey33_F5107DBF0223D39E527A1D558FEB02C6LLSo03SecE3RefaSgyFZTf4d_n', symObjAddr: 0x157FC0, symBinAddr: 0x15AB60, symSize: 0xC50 }
+  - { offset: 0x18D, size: 0x8, addend: 0x0, symName: '_$s4USDK5OZLogC15generateStringsSS_SStyFZTf4d_n', symObjAddr: 0x15D210, symBinAddr: 0x15FDB0, symSize: 0x810 }
+  - { offset: 0x1F7, size: 0x8, addend: 0x0, symName: '_$s4USDK16LicenseDecryprorV11decryptDatay10Foundation0E0VSgAGFZTf4nd_n', symObjAddr: 0x1705D0, symBinAddr: 0x173170, symSize: 0x3C0 }
+  - { offset: 0x261, size: 0x8, addend: 0x0, symName: '_$s4USDK24OZLivenessViewControllerC11viewDidLoadyyF', symObjAddr: 0x19DEF0, symBinAddr: 0x1A0A90, symSize: 0xEC0 }
+  - { offset: 0x2CB, size: 0x8, addend: 0x0, symName: '_$s4USDK15LicenseProviderC06onlineB09productID3key7configs10completionySS_SSAA0B14ConfigurationsVyAA0B4DataVSg_AA0B5ErrorOSgtctFyAA14CryptlexResultVSg_AA0mL0VSgtcfU_', symObjAddr: 0x1A4DD0, symBinAddr: 0x1A7970, symSize: 0x20B0 }
+  - { offset: 0x335, size: 0x8, addend: 0x0, symName: '_$s4USDK18SecurityEnvCheckerC11isJailBreakSbyFZTf4d_n', symObjAddr: 0x1EEA50, symBinAddr: 0x1F15F0, symSize: 0xDA0 }
+  - { offset: 0x39F, size: 0x8, addend: 0x0, symName: _qSiS, symObjAddr: 0x29E9D0, symBinAddr: 0x2A1570, symSize: 0x1420 }
 ...

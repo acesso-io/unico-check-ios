@@ -827,6 +827,7 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
 /// Consent
   UnicoEnumsIErrorsCONSENT_NOT_GIVEN_ERROR = 73740,
   UnicoEnumsIErrorsON_SUCCESS_NOT_IMPLEMENTED = 74001,
+  UnicoEnumsIErrorsCAPTURE_NOT_STARTED_CAPTURE_ID = 737220,
 };
 
 @class NSException;

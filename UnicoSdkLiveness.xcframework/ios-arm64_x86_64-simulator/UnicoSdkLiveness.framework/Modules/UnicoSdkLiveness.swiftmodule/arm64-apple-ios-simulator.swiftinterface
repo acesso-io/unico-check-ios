@@ -23,13 +23,14 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 public struct PrepareData : Swift.Equatable {
-  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, tinyJWTEnabled: Swift.Bool, losslessFrameSignedPayloadEnabled: Swift.Bool, facetecNoRetriesCancelCallbackEnabled: Swift.Bool)
+  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, tinyJWTEnabled: Swift.Bool, losslessFrameSignedPayloadEnabled: Swift.Bool, facetecNoRetriesCancelCallbackEnabled: Swift.Bool, enableJwsWithAnalysis: Swift.Bool)
   public static func == (a: UnicoSdkLiveness.PrepareData, b: UnicoSdkLiveness.PrepareData) -> Swift.Bool
 }
 extension UnicoSdkLiveness.PrepareData {
   public enum Engine : Swift.Equatable {
     case facetec(UnicoSdkLiveness.PrepareData.FacetecData)
     case dorothy(UnicoSdkLiveness.PrepareData.DorothyData)
+    case iproov(UnicoSdkLiveness.PrepareData.IproovData)
     public static func == (a: UnicoSdkLiveness.PrepareData.Engine, b: UnicoSdkLiveness.PrepareData.Engine) -> Swift.Bool
   }
 }
@@ -58,6 +59,10 @@ extension UnicoSdkLiveness.PrepareData {
       get
     }
   }
+  public struct IproovData : Swift.Equatable {
+    public init(streamURL: Swift.String, rsaPublicKey: Swift.String)
+    public static func == (a: UnicoSdkLiveness.PrepareData.IproovData, b: UnicoSdkLiveness.PrepareData.IproovData) -> Swift.Bool
+  }
 }
 public struct Theme : Swift.Equatable {
   public init(backgroundColor: UIKit.UIColor, boxMessageColor: UIKit.UIColor, textMessageColor: UIKit.UIColor, backgroundTakePictureButtonColor: UIKit.UIColor, iconTakePictureButtonColor: UIKit.UIColor, backgroundBottomDocumentColor: UIKit.UIColor, textBottomDocumentColor: UIKit.UIColor, silhouetteSuccessColor: UIKit.UIColor, silhouetteErrorColor: UIKit.UIColor, silhouetteNeutralColor: UIKit.UIColor, progressBarColor: UIKit.UIColor, cancelButtonIconColor: UIKit.UIColor)
@@ -67,6 +72,7 @@ public protocol UnicoLivenessDelegate : UnicoSdkLiveness.UnicoLivenessLoggerDele
   func onSuccess(livenessResult: any UnicoSdkLiveness.LivenessResult)
   func onError(livenessError: UnicoSdkLiveness.LivenessError)
   func onRenewKeyBody(newKeyBody: Swift.String?)
+  func onPredict()
 }
 public protocol RenewKeyBodyUseCase {
   typealias Request = Swift.String
