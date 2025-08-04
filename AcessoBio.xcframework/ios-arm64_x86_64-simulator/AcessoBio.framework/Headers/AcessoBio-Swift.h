@@ -611,7 +611,7 @@ SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @property (nonatomic, readonly) BOOL isIntegrationCaptureFlow;
 @property (nonatomic, readonly) NSInteger maxAttempts;
 @property (nonatomic, readonly) BOOL isLiveness;
-@property (nonatomic, readonly) BOOL requiresConsent;
+@property (nonatomic, readonly) BOOL requiresConsentScreen;
 @property (nonatomic, readonly) BOOL isS;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -650,6 +650,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio20SensorsWorkerFactory_")
 @protocol SensorsWorkerFactory
 - (id <SensorsWorker> _Nonnull)make SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 
 SWIFT_CLASS("_TtC9AcessoBio13SilhouetteDTO")
@@ -1611,7 +1612,7 @@ SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @property (nonatomic, readonly) BOOL isIntegrationCaptureFlow;
 @property (nonatomic, readonly) NSInteger maxAttempts;
 @property (nonatomic, readonly) BOOL isLiveness;
-@property (nonatomic, readonly) BOOL requiresConsent;
+@property (nonatomic, readonly) BOOL requiresConsentScreen;
 @property (nonatomic, readonly) BOOL isS;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1650,6 +1651,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio20SensorsWorkerFactory_")
 @protocol SensorsWorkerFactory
 - (id <SensorsWorker> _Nonnull)make SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 
 SWIFT_CLASS("_TtC9AcessoBio13SilhouetteDTO")

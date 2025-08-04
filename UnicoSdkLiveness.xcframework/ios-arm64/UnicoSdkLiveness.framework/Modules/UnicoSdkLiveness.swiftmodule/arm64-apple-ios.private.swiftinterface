@@ -23,7 +23,7 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 public struct PrepareData : Swift.Equatable {
-  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, tinyJWTEnabled: Swift.Bool, losslessFrameSignedPayloadEnabled: Swift.Bool, facetecNoRetriesCancelCallbackEnabled: Swift.Bool, enableJwsWithAnalysis: Swift.Bool)
+  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, tinyJWTEnabled: Swift.Bool, losslessFrameSignedPayloadEnabled: Swift.Bool, facetecNoRetriesCancelCallbackEnabled: Swift.Bool, enableJwsWithAnalysis: Swift.Bool, newLosslessResultPayloadEnabled: Swift.Bool)
   public static func == (a: UnicoSdkLiveness.PrepareData, b: UnicoSdkLiveness.PrepareData) -> Swift.Bool
 }
 extension UnicoSdkLiveness.PrepareData {

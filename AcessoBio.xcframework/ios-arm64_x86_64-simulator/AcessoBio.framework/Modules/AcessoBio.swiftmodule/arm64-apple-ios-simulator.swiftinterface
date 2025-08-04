@@ -12,6 +12,7 @@ import DeviceProfiling
 import FaceTecSDK
 import Foundation
 import Security
+import ShieldFraud
 import Swift
 import SystemConfiguration
 import UIKit.UIDevice
@@ -383,7 +384,7 @@ public protocol Cancellable {
   @objc public var isLiveness: Swift.Bool {
     @objc get
   }
-  @objc public var requiresConsent: Swift.Bool {
+  @objc public var requiresConsentScreen: Swift.Bool {
     @objc get
   }
   @objc public var isS: Swift.Bool {
