@@ -134,7 +134,7 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		eMejhvCqClvrWm47m0s8saxUccE=
+		/LzkG9wtp0B+Pk50vaxx1WAEvbU=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -154,7 +154,7 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		m4nriMJ2SE7bvtC+JlWRKw36VWQ=
+		+YN1Xz6sICW0lZKKStgMSjsqRPY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -440,7 +440,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2dmle7aR/a065S38B/6ghGks9YK6cLykA4sRVQud6+8=
+			cHzM93PMnrUSEeT1WXzJtf+HoTBtGvnPy9hUd0xSl+Y=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -475,7 +475,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QL1wXymue9AwYpTZ+vBMGYbKTKs90NmayR6nJ0P4jt0=
+			ylfWZ5/ZPPEKisoZ7WuQ22b+Pv6moGgVKTO5K7HwKKo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
