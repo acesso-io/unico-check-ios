@@ -304,7 +304,7 @@ __attribute__((swift_name("DataCollectionService")))
 /**
  * @note This method converts all Kotlin exceptions to errors.
 */
-- (void)sendCollectedDataBaseUrl:(NSString *)baseUrl uuid:(NSString *)uuid captureId:(NSString * _Nullable)captureId apiKey:(NSString * _Nullable)apiKey sdkKey:(NSString * _Nullable)sdkKey token:(NSString *)token state:(USLDataCollectionServiceState *)state completionHandler:(void (^)(NSDictionary<id<USLLogProvider>, USLCollectResult<USLKotlinUnit *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendCollectedData(baseUrl:uuid:captureId:apiKey:sdkKey:token:state:completionHandler:)")));
+- (void)sendCollectedDataBaseUrl:(NSString *)baseUrl uuid:(NSString *)uuid apiKey:(NSString * _Nullable)apiKey sdkKey:(NSString * _Nullable)sdkKey token:(NSString *)token state:(USLDataCollectionServiceState *)state completionHandler:(void (^)(NSDictionary<id<USLLogProvider>, USLCollectResult<USLKotlinUnit *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendCollectedData(baseUrl:uuid:apiKey:sdkKey:token:state:completionHandler:)")));
 @end
 
 __attribute__((swift_name("KotlinComparable")))
@@ -333,9 +333,7 @@ __attribute__((swift_name("DataCollectionServiceState")))
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @property (class, readonly) USLDataCollectionServiceState *build __attribute__((swift_name("build")));
 @property (class, readonly) USLDataCollectionServiceState *startCapture __attribute__((swift_name("startCapture")));
-@property (class, readonly) USLDataCollectionServiceState *startCaptureLegacy __attribute__((swift_name("startCaptureLegacy")));
 @property (class, readonly) USLDataCollectionServiceState *endCapture __attribute__((swift_name("endCapture")));
-@property (class, readonly) USLDataCollectionServiceState *endCaptureLegacy __attribute__((swift_name("endCaptureLegacy")));
 @property (class, readonly) USLDataCollectionServiceState *geolocation __attribute__((swift_name("geolocation")));
 @property (class, readonly) USLDataCollectionServiceState *profiling __attribute__((swift_name("profiling")));
 @property (class, readonly) USLDataCollectionServiceState *telemetry __attribute__((swift_name("telemetry")));
@@ -350,7 +348,7 @@ __attribute__((swift_name("DefaultDataCollectionService")))
 /**
  * @note This method converts all Kotlin exceptions to errors.
 */
-- (void)sendCollectedDataBaseUrl:(NSString *)baseUrl uuid:(NSString *)uuid captureId:(NSString * _Nullable)captureId apiKey:(NSString * _Nullable)apiKey sdkKey:(NSString * _Nullable)sdkKey token:(NSString *)token state:(USLDataCollectionServiceState *)state completionHandler:(void (^)(NSDictionary<id<USLLogProvider>, USLCollectResult<USLKotlinUnit *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendCollectedData(baseUrl:uuid:captureId:apiKey:sdkKey:token:state:completionHandler:)")));
+- (void)sendCollectedDataBaseUrl:(NSString *)baseUrl uuid:(NSString *)uuid apiKey:(NSString * _Nullable)apiKey sdkKey:(NSString * _Nullable)sdkKey token:(NSString *)token state:(USLDataCollectionServiceState *)state completionHandler:(void (^)(NSDictionary<id<USLLogProvider>, USLCollectResult<USLKotlinUnit *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendCollectedData(baseUrl:uuid:apiKey:sdkKey:token:state:completionHandler:)")));
 @end
 
 __attribute__((swift_name("LogProviderRepository")))

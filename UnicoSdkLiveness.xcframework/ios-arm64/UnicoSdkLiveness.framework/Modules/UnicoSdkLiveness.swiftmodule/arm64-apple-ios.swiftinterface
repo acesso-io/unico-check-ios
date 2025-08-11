@@ -51,6 +51,10 @@ extension UnicoSdkLiveness.PrepareData {
     public init(action: Swift.String)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyDataMetaTag, b: UnicoSdkLiveness.PrepareData.DorothyDataMetaTag) -> Swift.Bool
   }
+  public struct IproovData : Swift.Equatable {
+    public init(streamURL: Swift.String, rsaPublicKey: Swift.String)
+    public static func == (a: UnicoSdkLiveness.PrepareData.IproovData, b: UnicoSdkLiveness.PrepareData.IproovData) -> Swift.Bool
+  }
   public enum PrepareDataLocalizationCode : Swift.String, Swift.Equatable {
     case en, es, pt_BR
     public init?(rawValue: Swift.String)
@@ -58,10 +62,6 @@ extension UnicoSdkLiveness.PrepareData {
     public var rawValue: Swift.String {
       get
     }
-  }
-  public struct IproovData : Swift.Equatable {
-    public init(streamURL: Swift.String, rsaPublicKey: Swift.String)
-    public static func == (a: UnicoSdkLiveness.PrepareData.IproovData, b: UnicoSdkLiveness.PrepareData.IproovData) -> Swift.Bool
   }
 }
 public struct Theme : Swift.Equatable {
@@ -81,10 +81,6 @@ public protocol RenewKeyBodyUseCase {
 }
 public struct LivenessSessionConfig {
   public init(getToken: any UnicoSdkBase.GetToken, apiDataTransferService: any UnicoSdkBase.DataTransferService)
-}
-@_hasMissingDesignatedInitializers final public class DefaultRenewKeyBodyDataSource : UnicoSdkLiveness.RenewKeyBodyDataSource {
-  final public func renewKeyBody(_ request: Swift.String, token: Swift.String, completionHandler: @escaping (UnicoSdkLiveness.DefaultRenewKeyBodyDataSource.Response) -> Swift.Void)
-  @objc deinit
 }
 public struct LivenessError : Swift.Error, Swift.Equatable {
   public let code: Swift.Int
@@ -112,13 +108,9 @@ public protocol UnicoLivenessPrepareCameraDelegate : UnicoSdkLiveness.UnicoLiven
   func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
 }
 public struct OpenLivenessDTO {
-  public init(sdkTokenKey: Swift.String?, sessionToken: Swift.String?, keyBody: Swift.String?, isIntegrationCaptureFlow: Swift.Bool, maxAttempts: Swift.Int)
+  public init(sdkTokenKey: Swift.String?, sessionToken: Swift.String?, keyBody: Swift.String?, captureId: Swift.String?, isIntegrationCaptureFlow: Swift.Bool, maxAttempts: Swift.Int)
 }
 public protocol DataTransferBodyResponseDTO : Swift.Decodable, Swift.Equatable {
-}
-public protocol RenewKeyBodyDataSource {
-  typealias Response = Swift.Result<UnicoSdkLiveness.RenewKeyBodyResponseDTO, UnicoSdkLiveness.DataTransferErrors>
-  func renewKeyBody(_ request: Swift.String, token: Swift.String, completionHandler: @escaping (Self.Response) -> Swift.Void)
 }
 public struct RenewKeyBodyResponseDTO : UnicoSdkLiveness.DataTransferBodyResponseDTO {
   public var body: UnicoSdkLiveness.RenewKeyBodyResponseDTO.Body?
@@ -133,10 +125,6 @@ extension UnicoSdkLiveness.RenewKeyBodyResponseDTO {
     public static func == (a: UnicoSdkLiveness.RenewKeyBodyResponseDTO.Body, b: UnicoSdkLiveness.RenewKeyBodyResponseDTO.Body) -> Swift.Bool
     public init(from decoder: any Swift.Decoder) throws
   }
-}
-@_hasMissingDesignatedInitializers final public class DefaultRenewKeyBodyRepository {
-  final public func renewKeyBody(_ request: Swift.String, token: Swift.String, completionHandler: @escaping (UnicoSdkLiveness.DefaultRenewKeyBodyRepository.Response) -> Swift.Void)
-  @objc deinit
 }
 public protocol UnicoLivenessRepresentable {
   var renewKeyBodyUseCase: any UnicoSdkLiveness.RenewKeyBodyUseCase { get }
@@ -181,6 +169,5 @@ public protocol LivenessLogger {
 }
 extension UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode : Swift.Hashable {}
 extension UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode : Swift.RawRepresentable {}
-extension UnicoSdkLiveness.DefaultRenewKeyBodyRepository : UnicoSdkLiveness.RenewKeyBodyDataSource {}
 extension UnicoSdkLiveness.DataTransferErrors : Swift.Equatable {}
 extension UnicoSdkLiveness.DataTransferErrors : Swift.Hashable {}
