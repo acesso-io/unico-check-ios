@@ -10,7 +10,7 @@
 #define AcessoBioCameraOpenerDelegate_h
 #import "AcessoBioSelfieDelegate.h"
 #import "AcessoBioDocumentDelegate.h"
-#import "DocumentType.h"
+#import "AcessoBioDocumentType.h"
 
 @protocol AcessoBioCameraOpenerDelegate
 

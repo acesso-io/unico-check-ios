@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ShieldFraud-Swift.h</key>
 		<data>
-		pT3b25GMy1TDBEUpORiK0ek12FA=
+		N9LLGKVeop58pIYuMhEV7SHTeF8=
 		</data>
 		<key>Headers/ShieldFraud.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/ShieldFraud.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		x6vQZ7cOcjHciTYu/o2S1t+YYTQ=
+		9HucufD4obH0oGRWorkrAQU79lo=
 		</data>
 		<key>Modules/ShieldFraud.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/ShieldFraud.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		HIiwgeSdld2aeVPtKBPJwEQjHac=
+		aMIW6JwZ9eR8+30BGe6mkts3RTM=
 		</data>
 		<key>Modules/ShieldFraud.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		2zgY24U0yiqHTlAAOevoHlHuo7Y=
+		W5Tpt2oLNn9dcS+5MsWe2mPP55I=
 		</data>
 		<key>Modules/ShieldFraud.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/ShieldFraud.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qlXswzLUHBhrfDNQX2/ImOCUTLw=
+		v85aCrgv1pt3mBpGhPZaRObtfX4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f1eJikqEjmg3VOBO6mT7NQrdxnLtgibAgb/ZoPDX4JQ=
+			YfyRwnAyO1ov3W+e6uueHJxJ3n8Yq/r4jiwW6lJwwDg=
 			</data>
 		</dict>
 		<key>Headers/ShieldFraud.h</key>
@@ -85,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qy7Gl8E5JO3G/FGD1FkEo/xbKwnrEtM2eTDiNUMeBIA=
+			o79r2HTD3n+Jxic3jh1G48k1h63CG1iOpg06rIWf/1Q=
 			</data>
 		</dict>
 		<key>Modules/ShieldFraud.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -113,14 +113,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tYIGrGaA6nSHQplY0oQWEofjhGzg3Atbtvh4GzJh/7U=
+			YdvQMc74NN3gHyBKfnXi4ArlWv/wcmHQ5rC5T51U8i4=
 			</data>
 		</dict>
 		<key>Modules/ShieldFraud.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6DmJUtxraNGNFFoG/0g8oTtEiQPCW26X5ymR8eJyBA0=
+			+2DEhyAz2il9eWdpGZxk0/O0QxILTq26ISDM0Nxm3/A=
 			</data>
 		</dict>
 		<key>Modules/ShieldFraud.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -148,7 +148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uV9HBscJCGqmUd+sxFD+9zE50BX+z3VUXWHhieThgvc=
+			NJG7jzWURBkgR+y46t2awmCQpWUg6IO1II5Rhtgh2gk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

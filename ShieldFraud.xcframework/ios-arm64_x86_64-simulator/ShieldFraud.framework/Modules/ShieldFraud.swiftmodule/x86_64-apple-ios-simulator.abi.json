@@ -6600,6 +6600,23 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "ShieldFraud",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Darwin",
+        "printedName": "Darwin",
+        "declKind": "Import",
+        "moduleName": "ShieldFraud"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "ShieldFraud"
       },
       {
@@ -6759,16 +6776,6 @@
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "ShieldFraud"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "ShieldFraud",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "TypeDecl",
@@ -7890,107 +7897,114 @@
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 117,
+      "offset": 121,
       "length": 7,
       "value": "\"encPL\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 162,
+      "offset": 166,
       "length": 17,
       "value": "\"settingsVersion\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 213,
+      "offset": 217,
       "length": 13,
       "value": "\"fpAnalytics\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 262,
+      "offset": 266,
       "length": 15,
       "value": "\"disableAutoFp\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 314,
+      "offset": 318,
       "length": 16,
       "value": "\"fpSettingCache\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 370,
+      "offset": 374,
       "length": 19,
       "value": "\"fpConfigSavedTime\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 427,
+      "offset": 431,
       "length": 17,
       "value": "\"disabledModules\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 476,
+      "offset": 480,
       "length": 11,
       "value": "\"ntEnabled\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 526,
+      "offset": 530,
       "length": 18,
       "value": "\"locationInterval\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 582,
+      "offset": 586,
       "length": 17,
       "value": "\"locationTimeout\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 633,
+      "offset": 637,
       "length": 13,
       "value": "\"locationURL\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 684,
+      "offset": 688,
       "length": 17,
       "value": "\"disableApiCount\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 743,
+      "offset": 747,
       "length": 21,
       "value": "\"disabledPermissions\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 802,
+      "offset": 806,
       "length": 17,
       "value": "\"enabledFeatures\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
       "kind": "StringLiteral",
-      "offset": 852,
+      "offset": 856,
       "length": 12,
       "value": "\"enableStop\""
+    },
+    {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Repository\/CachedFPConfigRepository.swift",
+      "kind": "StringLiteral",
+      "offset": 897,
+      "length": 8,
+      "value": "\"fcJbdh\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Observer\/CallConnectionManager.swift",
@@ -9477,6 +9491,13 @@
       "value": "true"
     },
     {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Model\/FPConfigNetTaskRequest.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1859,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Model\/GetRiskAssessmentRequest.swift",
       "kind": "IntegerLiteral",
       "offset": 225,
@@ -9521,77 +9542,77 @@
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Observer\/InternetConnectionManager.swift",
       "kind": "StringLiteral",
-      "offset": 1625,
+      "offset": 1638,
       "length": 90,
       "value": "\"SHIELD_NETWORK_STATUS:: Internet connectivity changed from \""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Observer\/InternetConnectionManager.swift",
       "kind": "StringLiteral",
-      "offset": 1696,
+      "offset": 1709,
       "length": 2,
       "value": "\" to \""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Observer\/InternetConnectionManager.swift",
       "kind": "StringLiteral",
-      "offset": 1714,
+      "offset": 1727,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Observer\/InternetConnectionManager.swift",
       "kind": "StringLiteral",
-      "offset": 1879,
+      "offset": 1892,
       "length": 25,
       "value": "\"network_change_detected\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/JailbreakChecker.swift",
       "kind": "IntegerLiteral",
-      "offset": 13280,
+      "offset": 13982,
       "length": 2,
       "value": "-2"
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/JailbreakChecker.swift",
       "kind": "StringLiteral",
-      "offset": 13320,
+      "offset": 14022,
       "length": 6,
       "value": "\"fork\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/JailbreakChecker.swift",
       "kind": "IntegerLiteral",
-      "offset": 13520,
+      "offset": 14222,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/JailbreakChecker.swift",
       "kind": "IntegerLiteral",
-      "offset": 13556,
+      "offset": 14258,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/JailbreakChecker.swift",
       "kind": "StringLiteral",
-      "offset": 13664,
+      "offset": 14366,
       "length": 59,
       "value": "\"Fork was able to create a new process (sandbox violation)\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/JailbreakChecker.swift",
       "kind": "BooleanLiteral",
-      "offset": 13748,
+      "offset": 14450,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/JailbreakChecker.swift",
       "kind": "BooleanLiteral",
-      "offset": 13801,
+      "offset": 14503,
       "length": 5,
       "value": "false"
     },
@@ -10340,21 +10361,21 @@
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/ShieldConstant.swift",
       "kind": "StringLiteral",
-      "offset": 211,
+      "offset": 216,
       "length": 8,
-      "value": "\"1.5.50\""
+      "value": "\"1.5.51\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/ShieldConstant.swift",
       "kind": "StringLiteral",
-      "offset": 246,
+      "offset": 251,
       "length": 4,
-      "value": "\"83\""
+      "value": "\"84\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/ShieldConstant.swift",
       "kind": "StringLiteral",
-      "offset": 279,
+      "offset": 284,
       "length": 5,
       "value": "\"ptr\""
     },
@@ -10375,28 +10396,28 @@
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/ShieldContext.swift",
       "kind": "StringLiteral",
-      "offset": 62948,
+      "offset": 63593,
       "length": 5,
       "value": "\"en0\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/ShieldContext.swift",
       "kind": "StringLiteral",
-      "offset": 62974,
+      "offset": 63619,
       "length": 9,
       "value": "\"pdp_ip0\""
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/ShieldContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 63064,
+      "offset": 63709,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/ShieldContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 63081,
+      "offset": 63726,
       "length": 1,
       "value": "8"
     },
@@ -10457,6 +10478,76 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/DopaHideJB.swift",
+      "kind": "StringLiteral",
+      "offset": 460,
+      "length": 18,
+      "value": "\"\/private\/preboot\""
+    },
+    {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/DopaHideJB.swift",
+      "kind": "StringLiteral",
+      "offset": 523,
+      "length": 25,
+      "value": "\"\/private\/preboot\/active\""
+    },
+    {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/DopaHideJB.swift",
+      "kind": "StringLiteral",
+      "offset": 593,
+      "length": 9,
+      "value": "\"\/var\/jb\""
+    },
+    {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/DopaHideJB.swift",
+      "kind": "StringLiteral",
+      "offset": 648,
+      "length": 11,
+      "value": "\"dopamine-\""
+    },
+    {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/DopaHideJB.swift",
+      "kind": "StringLiteral",
+      "offset": 704,
+      "length": 5,
+      "value": "\"jb-\""
+    },
+    {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/DopaHideJB.swift",
+      "kind": "StringLiteral",
+      "offset": 755,
+      "length": 11,
+      "value": "\"procursus\""
+    },
+    {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/DopaHideJB.swift",
+      "kind": "StringLiteral",
+      "offset": 811,
+      "length": 21,
+      "value": "\".installed_dopamine\""
+    },
+    {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/DopaHideJB.swift",
+      "kind": "StringLiteral",
+      "offset": 877,
+      "length": 18,
+      "value": "\"basebin\/.version\""
+    },
+    {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/DopaHideJB.swift",
+      "kind": "StringLiteral",
+      "offset": 941,
+      "length": 3,
+      "value": "\".\""
+    },
+    {
+      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Context\/DopaHideJB.swift",
+      "kind": "StringLiteral",
+      "offset": 989,
+      "length": 4,
+      "value": "\"..\""
+    },
+    {
       "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Utils\/ThreadSafeDictionary.swift",
       "kind": "StringLiteral",
       "offset": 224,
@@ -10504,20 +10595,6 @@
       "offset": 164,
       "length": 1,
       "value": "2"
-    },
-    {
-      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Observer\/VCLifeCycleTracker.swift",
-      "kind": "IntegerLiteral",
-      "offset": 925,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/deepakrajm\/Documents\/shield-ios\/ShieldFraud\/ShieldFraud\/Observer\/VCLifeCycleTracker.swift",
-      "kind": "StringLiteral",
-      "offset": 3550,
-      "length": 33,
-      "value": "\"com.shield.ios.onceTrackerQueue\""
     }
   ]
 }

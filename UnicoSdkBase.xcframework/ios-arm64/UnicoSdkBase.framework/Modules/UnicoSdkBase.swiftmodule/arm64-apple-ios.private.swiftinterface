@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name UnicoSdkBase
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UnicoSdkBase
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import CoreLocation.CLLocation
 import CoreLocation
 import CoreLocation/*.CLAuthorizationStatus*/
@@ -27,15 +27,15 @@ public enum FeatureFlagDataSourceFetcherError : Swift.Error, Swift.Equatable {
   case noFlagsAvailable
   case networkFailed
   case decryptFailed
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: UnicoSdkBase.FeatureFlagDataSourceFetcherError, b: UnicoSdkBase.FeatureFlagDataSourceFetcherError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
 }
 public protocol FeatureFlagDataSourceFetcher {
   typealias CompletionResult = Swift.Result<Swift.Void, UnicoSdkBase.FeatureFlagDataSourceFetcherError>
-  typealias Completion = ((Self.CompletionResult) -> Swift.Void)
+  typealias Completion = (Self.CompletionResult) -> Swift.Void
   func fetchFlags(headers: [Swift.String : Swift.String], request: [Swift.String : Any], dataTransferService: any UnicoSdkBase.DataTransferService, decryptor: any UnicoSdkBase.UnicoDecrypt, completion: @escaping Self.Completion)
 }
 extension UnicoSdkBase.FeatureFlagDataSource {
@@ -196,7 +196,6 @@ extension Foundation.Bundle {
     get
   }
 }
-#if compiler(>=5.3) && $NoncopyableGenerics
 extension Swift.Optional {
   public enum UnwrapOptionalError : Swift.Error {
     case unwrapFailed
@@ -208,28 +207,9 @@ extension Swift.Optional {
   }
   public func unwrapOrThrow() throws -> Wrapped
 }
-#else
-extension Swift.Optional {
-  public enum UnwrapOptionalError : Swift.Error {
-    case unwrapFailed
-    public static func == (a: Swift.Optional<Wrapped>.UnwrapOptionalError, b: Swift.Optional<Wrapped>.UnwrapOptionalError) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public func unwrapOrThrow() throws -> Wrapped
-}
-#endif
-#if compiler(>=5.3) && $NoncopyableGenerics
 extension Swift.Optional where Wrapped == Swift.String {
   public func unwrapOrThrow() throws -> Wrapped
 }
-#else
-extension Swift.Optional where Wrapped == Swift.String {
-  public func unwrapOrThrow() throws -> Wrapped
-}
-#endif
 extension Swift.String {
   public static var newUUID: Swift.String {
     get

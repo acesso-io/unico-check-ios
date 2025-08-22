@@ -377,7 +377,6 @@ SWIFT_PROTOCOL("_TtP11ShieldFraud20DeviceShieldCallback_")
 @end
 
 
-
 typedef SWIFT_ENUM(NSInteger, Environment, open) {
   EnvironmentProd = 0,
   EnvironmentDev = 1,
@@ -534,7 +533,6 @@ SWIFT_CLASS("_TtC11ShieldFraud10TimeHelper")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 
@@ -926,7 +924,6 @@ SWIFT_PROTOCOL("_TtP11ShieldFraud20DeviceShieldCallback_")
 @end
 
 
-
 typedef SWIFT_ENUM(NSInteger, Environment, open) {
   EnvironmentProd = 0,
   EnvironmentDev = 1,
@@ -1083,7 +1080,6 @@ SWIFT_CLASS("_TtC11ShieldFraud10TimeHelper")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 
