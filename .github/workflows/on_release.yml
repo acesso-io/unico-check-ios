@@ -42,11 +42,15 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   cocoapods-publish:
-    runs-on: macos-latest
+    runs-on: macos-15
     needs: [verify-changed-files, create-tag]
     steps:
       - uses: actions/checkout@v2
       - run: echo ${{needs.verify-changed-files.outputs.output1}}
+
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '16.4'
 
       - name: Is there a change in the unicocheck-ios.podspec? Publish to CocoaPods
         if: contains(needs.verify-changed-files.outputs.output1, 'unicocheck-ios.podspec')
