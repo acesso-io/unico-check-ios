@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		sJCkRkzJd+dqQ2JMhxVtJjYRVfo=
+		jWE6QLtLsGa9gB+tohB1Uf3zw0g=
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		sZvdssycj5mK4srbNc83TRxxask=
+		UOCiEdnEzePbAdFbGppznCByok4=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
@@ -30,11 +30,15 @@
 		</data>
 		<key>Headers/AcessoBioCameraOpenerDelegate.h</key>
 		<data>
-		mMbAIgKTSj+VeQKBvrEgrSdQ77E=
+		5sI4ETBFOySYMsj/y8cOq3AAb1U=
 		</data>
 		<key>Headers/AcessoBioDocumentDelegate.h</key>
 		<data>
 		J1YZCnO2vnbRgtqF6S4/vSklEtY=
+		</data>
+		<key>Headers/AcessoBioDocumentType.h</key>
+		<data>
+		Et/GNEyCRhFBHm7P9L/Q3nOtuEQ=
 		</data>
 		<key>Headers/AcessoBioManager.h</key>
 		<data>
@@ -55,10 +59,6 @@
 		<key>Headers/DocumentCameraDelegate.h</key>
 		<data>
 		rXdUCdjo3Y0NKf+KvKkrQfL541w=
-		</data>
-		<key>Headers/DocumentType.h</key>
-		<data>
-		YgrIHWjSCtybORneMQSBs40p1As=
 		</data>
 		<key>Headers/ErrorBio.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		52fIlOr0ZqLHmFSPkljCTfitM4w=
+		DrdczNoI6St8R4bImBSFFG7lKGY=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -122,19 +122,19 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		LHWq5ahGQpoI0pK9oNpOWc959NI=
+		6jlRmiUCkhw8hecCXFpwJOd8tKE=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		SYIFp2pJ+t4FK1g2mgAjuAkyMag=
+		8w7xJTfQ/4NpJ8Ub9DT9EXqtPzM=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		LHWq5ahGQpoI0pK9oNpOWc959NI=
+		6jlRmiUCkhw8hecCXFpwJOd8tKE=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		vBFXS+vdXFsL47EdUcaFg/f8xYE=
+		chw/d4Ye2kWdreBZk9I77pMMUSA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -203,14 +203,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9uU2aNqQZrBzcmo6X+i+kwoKRtbIPRDd1Kac1kR69Tg=
+			Fo8mUMxZlYdiz+NwC0Z7PUm0il1Ah7HoTZtohJm2aBM=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CAJk+Rx89Jy3WUfoPLJghYam4v3M+8xjF9bsEuKzZKM=
+			JtUSWJDPSJhpyGGto4PpU4UsEruWVBOLhIG4e0MkhLM=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
@@ -245,7 +245,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yKF3RnilvTnQcx1mnxlnFEC2RpNvOxxbIcXCqq7uc7Q=
+			7M1gwCb2n8xUFu3MxiC3C4wYq8oTj1+OxyDNuPrjaIA=
 			</data>
 		</dict>
 		<key>Headers/AcessoBioDocumentDelegate.h</key>
@@ -253,6 +253,13 @@
 			<key>hash2</key>
 			<data>
 			G7P3wTUNnYfa8ziTsH2R0lJDnxwZ8Fu7aRIa66v3O4w=
+			</data>
+		</dict>
+		<key>Headers/AcessoBioDocumentType.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			u0zoBv+Jx1jOBwVju/FTvNyibj5scjTlFffhKeoO2oM=
 			</data>
 		</dict>
 		<key>Headers/AcessoBioManager.h</key>
@@ -288,13 +295,6 @@
 			<key>hash2</key>
 			<data>
 			l3oeNDxT+TCkAVMl+8ylRGOZZNICxfUE37GL+dhimxQ=
-			</data>
-		</dict>
-		<key>Headers/DocumentType.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			XSzC532UOsTHKywG9TMqxzmse68geDYxsMHnMUJTAAQ=
 			</data>
 		</dict>
 		<key>Headers/ErrorBio.h</key>
@@ -399,28 +399,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fsJNX40+rkkxmI1S/k2QxQJTNQjCbxJ3Dde1Y7HD0U8=
+			nuWnvt6D6t8AY3q7l1oCzcGeGNfqdaXrnujIML5CtZQ=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			a8HLnjUa5RG2QJwapxeLjcKd9unypl+i4wsRTgvKwWE=
+			MgN2aoI8wuoph14nteOSWMBi3oZRV3O3BgUUi973/p4=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fsJNX40+rkkxmI1S/k2QxQJTNQjCbxJ3Dde1Y7HD0U8=
+			nuWnvt6D6t8AY3q7l1oCzcGeGNfqdaXrnujIML5CtZQ=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ypu6bz79fGSDb0RMMCo2tuKBuCqx5bgCCSionMz+iTM=
+			vYLIWwJoh2xPghdaP+16Uc/m0NZNTG06rW4HAM23YVY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

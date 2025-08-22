@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, DocumentEnums) {
     DocumentCPF
 };
 
-@interface DocumentType : NSObject
+@interface AcessoBioDocumentType : NSObject
 
 @property (assign, nonatomic) DocumentEnums *documentType;
 
