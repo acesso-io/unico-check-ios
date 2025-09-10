@@ -304,7 +304,7 @@ __attribute__((swift_name("DataCollectionService")))
 /**
  * @note This method converts all Kotlin exceptions to errors.
 */
-- (void)sendCollectedDataBaseUrl:(NSString *)baseUrl uuid:(NSString *)uuid apiKey:(NSString * _Nullable)apiKey sdkKey:(NSString * _Nullable)sdkKey token:(NSString *)token state:(USLDataCollectionServiceState *)state completionHandler:(void (^)(NSDictionary<id<USLLogProvider>, USLCollectResult<USLKotlinUnit *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendCollectedData(baseUrl:uuid:apiKey:sdkKey:token:state:completionHandler:)")));
+- (void)sendCollectedDataBaseUrl:(NSString *)baseUrl uuid:(NSString *)uuid captureId:(NSString * _Nullable)captureId apiKey:(NSString * _Nullable)apiKey sdkKey:(NSString * _Nullable)sdkKey token:(NSString *)token state:(USLDataCollectionServiceState *)state completionHandler:(void (^)(NSDictionary<id<USLLogProvider>, USLCollectResult<USLKotlinUnit *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendCollectedData(baseUrl:uuid:captureId:apiKey:sdkKey:token:state:completionHandler:)")));
 @end
 
 __attribute__((swift_name("KotlinComparable")))
@@ -348,7 +348,7 @@ __attribute__((swift_name("DefaultDataCollectionService")))
 /**
  * @note This method converts all Kotlin exceptions to errors.
 */
-- (void)sendCollectedDataBaseUrl:(NSString *)baseUrl uuid:(NSString *)uuid apiKey:(NSString * _Nullable)apiKey sdkKey:(NSString * _Nullable)sdkKey token:(NSString *)token state:(USLDataCollectionServiceState *)state completionHandler:(void (^)(NSDictionary<id<USLLogProvider>, USLCollectResult<USLKotlinUnit *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendCollectedData(baseUrl:uuid:apiKey:sdkKey:token:state:completionHandler:)")));
+- (void)sendCollectedDataBaseUrl:(NSString *)baseUrl uuid:(NSString *)uuid captureId:(NSString * _Nullable)captureId apiKey:(NSString * _Nullable)apiKey sdkKey:(NSString * _Nullable)sdkKey token:(NSString *)token state:(USLDataCollectionServiceState *)state completionHandler:(void (^)(NSDictionary<id<USLLogProvider>, USLCollectResult<USLKotlinUnit *> *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("sendCollectedData(baseUrl:uuid:captureId:apiKey:sdkKey:token:state:completionHandler:)")));
 @end
 
 __attribute__((swift_name("LogProviderRepository")))

@@ -240,10 +240,7 @@ public protocol FeaturesRepresentable {
 }
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
   case shortClientJwt
-  case internationalizationHeader
-  case sendFingerprintOnConfig
   case newCollectData
-  case dorothyTelemetryEnabled
   case sendDetailedFingerprint
   case dorothyLosslessFrameSignedPayload
   case appIdentifierCollectEnable
@@ -252,6 +249,7 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case enableDeviceFingerprint
   case consentScreenV2ShortLived
   case newLosslessResultPayloadEnabled
+  case sendFacetecUserAgent
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)

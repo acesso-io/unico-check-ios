@@ -404,6 +404,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 - (void)commitCallback:(CallbackDTO * _Nonnull)callback;
 - (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
 - (void)commitLiveness:(LivenessDTO * _Nullable)liveness;
+- (void)setCaptureId:(NSString * _Nullable)captureId;
 - (void)commitProvider:(ProviderDTO * _Nonnull)provider;
 /// Send storage data signaling whether or not it is an <code>attempt</code>.
 /// \param saveAttempt Indicates whether should or not store a capture attempt .
@@ -420,7 +421,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 @interface DefaultGetCameraResultUseCase : NSObject
 - (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires sessionToken:(NSString * _Nullable)sessionToken isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
-- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
+- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId captureId:(NSString * _Nullable)captureId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1319,6 +1320,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 - (void)commitCallback:(CallbackDTO * _Nonnull)callback;
 - (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
 - (void)commitLiveness:(LivenessDTO * _Nullable)liveness;
+- (void)setCaptureId:(NSString * _Nullable)captureId;
 - (void)commitProvider:(ProviderDTO * _Nonnull)provider;
 /// Send storage data signaling whether or not it is an <code>attempt</code>.
 /// \param saveAttempt Indicates whether should or not store a capture attempt .
@@ -1335,7 +1337,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 @interface DefaultGetCameraResultUseCase : NSObject
 - (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires sessionToken:(NSString * _Nullable)sessionToken isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
-- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
+- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId captureId:(NSString * _Nullable)captureId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

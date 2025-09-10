@@ -24,7 +24,7 @@ jobs:
         set -o pipefail
         xcodebuild build \
         -scheme unicocheck-ios \
-        -destination 'platform=iOS Simulator,OS=26.0,name=iPhone 16' \
+        -destination 'platform=iOS Simulator,OS=18.4,name=iPhone 16' \
         -derivedDataPath build \
         | xcpretty
 
@@ -58,7 +58,7 @@ jobs:
           set -o pipefail
           xcodebuild build \
           -scheme unicocheck-ios \
-          -destination 'platform=iOS Simulator,OS=26.0,name=iPhone 16' \
+          -destination 'platform=iOS Simulator,OS=18.4,name=iPhone 16' \
           -derivedDataPath \
           test
    
