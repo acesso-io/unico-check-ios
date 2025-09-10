@@ -245,7 +245,7 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
 }
 @objc final public class DefaultGetCameraResultUseCase : ObjectiveC.NSObject {
   @objc public init(key: Swift.String, keyBody: Swift.String, expires: Swift.Double, sessionToken: Swift.String?, isIntegrationCaptureFlow: Swift.Bool)
-  @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, sessionId: Swift.String?, utcTimeNow: Swift.Double, uuid: Swift.String) -> AcessoBio.CaptureResult
+  @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, sessionId: Swift.String?, captureId: Swift.String?, utcTimeNow: Swift.Double, uuid: Swift.String) -> AcessoBio.CaptureResult
   @objc deinit
 }
 @objc public protocol SensorsDevice {
@@ -266,6 +266,7 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
   @objc public func commitCallback(_ callback: AcessoBio.CallbackDTO)
   @objc public func commitSessionTransactionsIds(_ sessionTransactions: [[Swift.String : Any]])
   @objc public func commitLiveness(_ liveness: AcessoBio.LivenessDTO?)
+  @objc public func setCaptureId(_ captureId: Swift.String?)
   @objc public func commitProvider(_ provider: AcessoBio.ProviderDTO)
   @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData, isSdkSEnabled: Swift.Bool, success: ((Swift.String, Swift.String?) -> Swift.Void)?, failure: ((AcessoBio.ErrorBio) -> Swift.Void)?)
   @objc deinit

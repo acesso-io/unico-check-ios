@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		cuZL5BFQL8dS1GA88FZaEMZr4CE=
+		wEfNP/PB4gvgNzzcq6VxLa1fDA4=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Oou2FbBdueX7E0vxvr0hWZV38Gk=
+		5BD31OW8FbV99vzlUsUyQopwj5Y=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -130,11 +130,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Oou2FbBdueX7E0vxvr0hWZV38Gk=
+		5BD31OW8FbV99vzlUsUyQopwj5Y=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4QovHUiBb8SJLFwFpRsTAhBEclI=
+		hsgS+JxUXBiDvhAggj+tP6dfEHw=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		fXUJ0Zw+pPQmkIHXh0JnyvugnE4=
+		+Hr5RR1B9g4y9zRvbpd7f7JGEzg=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -150,11 +150,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		fXUJ0Zw+pPQmkIHXh0JnyvugnE4=
+		+Hr5RR1B9g4y9zRvbpd7f7JGEzg=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JH+uoP1mS5dYUZs2mYiMlvbyHvs=
+		s/llQsNvfx/BKvNCCymJXBIVneE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -230,7 +230,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aBWEFi8pIMwqViHvbTkwN37xJ9iQE8Qp/7BP8GwDRIE=
+			GvFHt2CQf/KBkivVwp5VGnVh47nrNnXUgHzK3Zs+BRQ=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
@@ -419,7 +419,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HlIgmVFPhPV9W6sQ7lNfmvf9Mmj7E9wO97DFsIXOQfY=
+			GxmfELw0UcyS3oX3E8CjS7pzfWi1/JoQNiCoc3rknI8=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -433,14 +433,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HlIgmVFPhPV9W6sQ7lNfmvf9Mmj7E9wO97DFsIXOQfY=
+			GxmfELw0UcyS3oX3E8CjS7pzfWi1/JoQNiCoc3rknI8=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yhUaI+rrLujNesvPiYySsFb7Cdy19GFaNqEC+xGDWEc=
+			qGNcA88ZFYDWcGtP9vzTXGmkNIlf16pbe7AfykRoKWI=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -454,7 +454,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WU0qzTvapSy8+fhVMSqqiq1TEiM9BxFwrzN59AD5g6o=
+			efZTWEa0ThrHu/nN6Ox0byB/94dWTbnt3TEea0Mh/TE=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -468,14 +468,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WU0qzTvapSy8+fhVMSqqiq1TEiM9BxFwrzN59AD5g6o=
+			efZTWEa0ThrHu/nN6Ox0byB/94dWTbnt3TEea0Mh/TE=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c/6BTmFtvfOJ6E/J5wryMLheaMYcgFlg8DTQwbhxALc=
+			yM1MzblTHteqDnran6M3zefUGxdYtezqWE63Z3RGvcs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
