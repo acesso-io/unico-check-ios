@@ -23,7 +23,7 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 public struct PrepareData : Swift.Equatable {
-  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, tinyJWTEnabled: Swift.Bool, sendFacetecUserAgent: Swift.Bool, losslessFrameSignedPayloadEnabled: Swift.Bool, facetecNoRetriesCancelCallbackEnabled: Swift.Bool, enableJwsWithAnalysis: Swift.Bool, newLosslessResultPayloadEnabled: Swift.Bool)
+  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, sendFacetecUserAgent: Swift.Bool, enableJwsWithAnalysis: Swift.Bool, newLosslessResultPayloadEnabled: Swift.Bool)
   public static func == (a: UnicoSdkLiveness.PrepareData, b: UnicoSdkLiveness.PrepareData) -> Swift.Bool
 }
 extension UnicoSdkLiveness.PrepareData {
@@ -92,10 +92,11 @@ public protocol LivenessResult {
   var transactionsId: [UnicoSdkLiveness.SessionTransactionDTO]? { get set }
   var serialize: [Swift.String : Any] { get }
   var session: [Swift.String : Any]? { get }
-  var tinyJWTEnabled: Swift.Bool { get }
+  var tinyJWTEnabled: Swift.Bool { get set }
   var auditTrailCompressedBase64Images: [Swift.String]? { get }
   var livenessImage: Swift.String? { get }
   var livenessCaptureId: Swift.String? { get }
+  mutating func enableTinyJWT()
 }
 @objc final public class SessionTransactionDTO : ObjectiveC.NSObject {
   @objc public init(transactionId: Swift.String, isLive: Swift.Bool, order: Swift.Int)
