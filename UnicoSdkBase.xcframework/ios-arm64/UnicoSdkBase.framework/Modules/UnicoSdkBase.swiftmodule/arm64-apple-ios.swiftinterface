@@ -239,12 +239,6 @@ public protocol FeaturesRepresentable {
   var rawValue: Swift.String { get }
 }
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
-  case shortClientJwt
-  case newCollectData
-  case sendDetailedFingerprint
-  case dorothyLosslessFrameSignedPayload
-  case appIdentifierCollectEnable
-  case facetecNoRetriesCancelCallback
   case dorothyEnableJwsAnalysis
   case enableDeviceFingerprint
   case consentScreenV2ShortLived
