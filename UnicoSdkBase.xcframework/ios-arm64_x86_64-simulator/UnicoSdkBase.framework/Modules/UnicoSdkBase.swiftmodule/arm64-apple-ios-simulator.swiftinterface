@@ -239,11 +239,13 @@ public protocol FeaturesRepresentable {
   var rawValue: Swift.String { get }
 }
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
+  case dorothyTelemetryEnabled
   case dorothyEnableJwsAnalysis
   case enableDeviceFingerprint
   case consentScreenV2ShortLived
   case newLosslessResultPayloadEnabled
-  case sendFacetecUserAgent
+  case enableAsyncLoadingController
+  case requestTimeoutShortLived
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
@@ -410,6 +412,7 @@ public class RawDataResponseDecoder : UnicoSdkBase.ResponseDecoder {
 @_hasMissingDesignatedInitializers final public class SdkVersionConfig {
   public static let sdkVersion: Swift.String
   public static let projectNameBundle: Swift.String
+  public static var requestTimeout: Swift.Double
   @objc deinit
 }
 public enum HTTPMethodType : Swift.String {
@@ -447,7 +450,7 @@ public class Endpoint<R> : UnicoSdkBase.ResponseRequestable {
   final public let bodyEncoding: UnicoSdkBase.BodyEncoding
   final public let responseDecoder: any UnicoSdkBase.ResponseDecoder
   final public let timeoutInterval: Foundation.TimeInterval
-  public init(path: Swift.String, isFullPath: Swift.Bool = false, method: UnicoSdkBase.HTTPMethodType, headerParameters: [Swift.String : Swift.String] = [:], queryParametersEncodable: (any Swift.Encodable)? = nil, queryParameters: [Swift.String : Any] = [:], bodyParametersEncodable: (any Swift.Encodable)? = nil, bodyParameters: [Swift.String : Any] = [:], bodyEncoding: UnicoSdkBase.BodyEncoding = .jsonSerializationData, responseDecoder: any UnicoSdkBase.ResponseDecoder = JSONResponseDecoder(), timeoutInterval: Foundation.TimeInterval = 60)
+  public init(path: Swift.String, isFullPath: Swift.Bool = false, method: UnicoSdkBase.HTTPMethodType, headerParameters: [Swift.String : Swift.String] = [:], queryParametersEncodable: (any Swift.Encodable)? = nil, queryParameters: [Swift.String : Any] = [:], bodyParametersEncodable: (any Swift.Encodable)? = nil, bodyParameters: [Swift.String : Any] = [:], bodyEncoding: UnicoSdkBase.BodyEncoding = .jsonSerializationData, responseDecoder: any UnicoSdkBase.ResponseDecoder = JSONResponseDecoder(), timeoutInterval: Foundation.TimeInterval = SdkVersionConfig.requestTimeout)
   @objc deinit
 }
 public protocol Requestable {
