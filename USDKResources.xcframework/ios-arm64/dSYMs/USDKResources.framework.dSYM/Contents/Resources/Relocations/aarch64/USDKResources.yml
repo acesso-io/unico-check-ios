@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/ilyapostanogov/Documents/project/oz-liveness-ios-internal/build/USDKResources/DerivedData/Build/Products/Release-iphoneos/USDKResources.framework/USDKResources'
+binary-path:     '/Users/ilyapostanogov/Downloads/oz-liveness-ios-internal-stage/build/USDKResources/DerivedData/Build/Products/Release-iphoneos/USDKResources.framework/USDKResources'
 relocations:
   - { offset: 0x6296A, size: 0x8, addend: 0x0, symName: _USDKResourcesVersionString, symObjAddr: 0x0, symBinAddr: 0x6420, symSize: 0x0 }
   - { offset: 0x6299F, size: 0x8, addend: 0x0, symName: _USDKResourcesVersionNumber, symObjAddr: 0x38, symBinAddr: 0x6458, symSize: 0x0 }

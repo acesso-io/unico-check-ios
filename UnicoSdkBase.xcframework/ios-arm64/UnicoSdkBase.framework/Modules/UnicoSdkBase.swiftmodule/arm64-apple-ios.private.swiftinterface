@@ -240,11 +240,8 @@ public protocol FeaturesRepresentable {
 }
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
   case dorothyTelemetryEnabled
-  case dorothyEnableJwsAnalysis
   case enableDeviceFingerprint
   case consentScreenV2ShortLived
-  case newLosslessResultPayloadEnabled
-  case enableAsyncLoadingController
   case requestTimeoutShortLived
   case none
   public init?(rawValue: Swift.String)
@@ -278,7 +275,8 @@ public struct FeatureFlagRequestDTO : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 public struct RequestHeadersDTO {
-  public init(projectVersion: Swift.String, projectName: Swift.String, platform: Swift.String = "IOS", dependencies: UnicoSdkBase.Dependencies? = nil, apiKey: Swift.String? = nil)
+  public static let platform: Swift.String
+  public init(projectVersion: Swift.String, projectName: Swift.String, platform: Swift.String = RequestHeadersDTO.platform, dependencies: UnicoSdkBase.Dependencies, apiKey: Swift.String)
   public var serialize: [Swift.String : Swift.String] {
     get
   }
