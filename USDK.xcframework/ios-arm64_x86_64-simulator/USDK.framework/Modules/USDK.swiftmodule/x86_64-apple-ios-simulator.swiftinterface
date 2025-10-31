@@ -15,6 +15,7 @@ import CoreImage
 import CoreLocation
 import CoreML
 import CoreMedia
+import CoreMotion
 import CoreNFC
 import CoreTelephony
 import CoreText
@@ -29,6 +30,7 @@ import MachO
 import MobileCoreServices
 import ObjectiveC
 import QuartzCore
+import SQLite3
 import Security
 import Swift
 import SystemConfiguration
@@ -55,8 +57,15 @@ extension USDK.OZError : Swift.CustomStringConvertible {
     get
   }
 }
+extension USDK.OZVerificationMovement {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
 extension USDK.OZMedia : Swift.Equatable {
   public static func == (left: USDK.OZMedia, right: USDK.OZMedia) -> Swift.Bool
+}
+extension USDK.AnalysisType : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 infix operator +| : DefaultPrecedence
 infix operator +- : DefaultPrecedence
@@ -329,6 +338,7 @@ public protocol OZRequestProtocol : AnyObject {
   func addFolderId(_ folderId: Swift.String)
   func addFolderMeta(_ meta: [Swift.String : Any])
   func useInstantMode(_ use: Swift.Bool)
+  func addContainer(_ container: USDK.DataContainer)
   @discardableResult
   func run(statusHandler: @escaping ((_ status: USDK.RequestStatus) -> Swift.Void), errorHandler: @escaping ((_ error: any Swift.Error) -> Swift.Void), completionHandler: @escaping (_ results: USDK.RequestResult) -> Swift.Void) -> (any USDK.OZCancelableRequest)?
 }
@@ -354,8 +364,12 @@ public protocol OZSDKProtocol : AnyObject {
   func setPermanentAccessToken(_ accessToken: Swift.String)
   func createVerificationVCWithDelegate(_ delegate: any USDK.OZLivenessDelegate, actions: [USDK.OZVerificationMovement]) throws -> UIKit.UIViewController
   func createVerificationVCWithDelegate(_ delegate: any USDK.OZLivenessDelegate, actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position) throws -> UIKit.UIViewController
+  func createVerificationVCWithDelegate(_ delegate: any USDK.OZLivenessDelegate, actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position, sessionToken: Swift.String?) throws -> UIKit.UIViewController
   func createVerificationVC(actions: [USDK.OZVerificationMovement], completion: @escaping USDK.FaceCaptureCompletion) throws -> UIKit.UIViewController
   func createVerificationVC(actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position, completion: @escaping USDK.FaceCaptureCompletion) throws -> UIKit.UIViewController
+  func createVerificationVC(actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position, sessionToken: Swift.String?, completion: @escaping USDK.FaceCaptureCompletion) throws -> UIKit.UIViewController
+  func createMediaCaptureScreen(_ delegate: any USDK.LivenessDelegate, _ captureRequest: USDK.CaptureRequest) throws -> UIKit.UIViewController
+  func createMediaCaptureScreen(_ delegate: any USDK.LivenessDelegate, _ captureRequest: USDK.CaptureRequest, sessionToken: Swift.String?) throws -> UIKit.UIViewController
   func cleanTempDirectory()
   @available(*, deprecated, message: "Use setApiConnection(Connection) method")
   func configure(with host: Swift.String)
@@ -377,6 +391,7 @@ public protocol OZSDKProtocol : AnyObject {
   func generateSignedPayload(medias: [USDK.OZMedia]) -> Swift.String?
   func generateSignedPayload(medias: [USDK.OZMedia], analyses: [USDK.Analysis]?) -> Swift.String?
   func generateSignedPayload(medias: [USDK.OZMedia], analyses: [USDK.Analysis]?, folderMeta: [Swift.String : Any]?) -> Swift.String?
+  func generateSignedPayload(medias: [USDK.OZMedia], analyses: [USDK.Analysis]?, folderMeta: [Swift.String : Any]?, useLosslessFrameInfo: Swift.Bool?) -> Swift.String?
 }
 public protocol OZCancelableRequest {
   func cancel()
@@ -399,6 +414,10 @@ public protocol OZLivenessDelegate : AnyObject {
   func onOZLivenessResult(results: [USDK.OZMedia])
   func onError(status: USDK.OZVerificationStatus?)
 }
+public protocol LivenessDelegate : AnyObject {
+  func onResult(container: USDK.DataContainer)
+  func onError(status: USDK.OZVerificationStatus?)
+}
 public struct OZLivenessResult {
   public var status: USDK.OZVerificationStatus {
     get
@@ -417,6 +436,10 @@ public enum MediaType {
 }
 public struct MediaName {
 }
+public struct DataContainer {
+  public var data: Foundation.Data
+  public init(data: Foundation.Data)
+}
 public struct OZMedia {
   public init(movement: USDK.OZVerificationMovement?, mediaType: USDK.MediaType, metaData: [Swift.String : Any]?, additionalTags: [Swift.String]? = nil, videoURL: Foundation.URL?, bestShotURL: Foundation.URL?, preferredMediaURL: Foundation.URL?, timestamp: Foundation.Date)
   public init(movement: USDK.OZVerificationMovement?, mediaType: USDK.MediaType, metaData: [Swift.String : Any]?, additionalTags: [Swift.String]? = nil, videoURL: Foundation.URL?, bestShotURL: Foundation.URL?, preferredMediaURL: Foundation.URL?, losslessFrameURL: Foundation.URL?, timestamp: Foundation.Date)
@@ -429,15 +452,23 @@ public struct OZMedia {
     get
     set
   }
-  public var bestShotURL: Foundation.URL? {
-    get
-    set
-  }
   public var preferredMediaURL: Foundation.URL? {
     get
     set
   }
+  public var bestShotURL: Foundation.URL? {
+    get
+    set
+  }
   public var losslessFrameURL: Foundation.URL? {
+    get
+    set
+  }
+  public var bestShotData: Foundation.Data? {
+    get
+    set
+  }
+  public var losslessFrameData: Foundation.Data? {
     get
     set
   }
@@ -472,7 +503,7 @@ public struct UploadMediaSettings {
   public var attemptsTimeout: Swift.UInt64
   public init(attemptsCount: Swift.Int, attemptsTimeout: Swift.UInt64)
 }
-public enum OZVerificationMovement {
+public enum OZVerificationMovement : Swift.Encodable {
   case smile
   case eyes
   case scanning
@@ -579,6 +610,30 @@ extension USDK.ResultMedia : Swift.CustomDebugStringConvertible {
   override public init(resolution: USDK.AnalyseResolutionStatus, type: Swift.String, mode: USDK.AnalysisMode, resultsMedia: [USDK.ResultMedia], analysisID: Swift.String? = nil, confidenceScore: Swift.Float? = nil, serverRawResponse: Swift.String? = nil, error: (any Swift.Error)? = nil)
   @objc deinit
 }
+public struct CaptureRequest : Swift.Encodable {
+  public var analysisProfileList: [USDK.AnalysisProfile]
+  public var folderMeta: [Swift.String : Swift.String]
+  public var additionalMediaList: [USDK.MediaRequest]
+  public var cameraPosition: AVFoundation.AVCaptureDevice.Position
+  public init(analysisProfileList: [USDK.AnalysisProfile], folderMeta: [Swift.String : Swift.String] = [:], additionalMediaList: [USDK.MediaRequest] = [], cameraPosition: AVFoundation.AVCaptureDevice.Position = .front)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct AnalysisProfile : Swift.Encodable {
+  public var mediaList: [USDK.MediaRequest]
+  public var type: USDK.AnalysisType
+  public var params: [Swift.String : Any]
+  public init(mediaList: [USDK.MediaRequest], type: USDK.AnalysisType, params: [Swift.String : Any] = [:])
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum MediaRequest : Swift.Encodable {
+  case userMedia(USDK.OZMedia)
+  case actionMedia(USDK.OZVerificationMovement)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public typealias ActionNameProvider = (_ action: USDK.OZVerificationMovement) -> Swift.String
+extension Swift.CodingUserInfoKey {
+  public static let actionNameProvider: Swift.CodingUserInfoKey
+}
 public enum AnalyseResolutionStatus : Swift.String {
   case initial
   case processing
@@ -640,6 +695,7 @@ public enum OZJournalEvent : Swift.String {
   case sslPinning
   case sslPinningCheck
   case mediaUploadRequestSignature
+  case journalError
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		3pZr7eyHFAhtVPcWnw228Ir65Vo=
+		0HPpMAVNJXfjJkIJGHxyvwrz7tg=
 		</data>
 		<key>Base.lproj/Localizable.strings</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		R0n1H53TN+LgdsY4l0nbbtC26Bw=
+		pZ/67tKLus8KIe3+UV2SuwfSA2U=
 		</data>
 		<key>Modules/USDKResources.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		pWyv6/0mn44S51S4xXTgDcY6ibE=
+		XxBrXvjv+rpq/+wv+lQyApWF0ak=
 		</data>
 		<key>Modules/USDKResources.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/USDKResources.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		dDzxMrg9zWUvNa7gvCdYw+RAY/8=
+		+sL59Wlr3+sPOv4ri0CHGzwatD0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -219,7 +219,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vd4zVUdPuLtyVaksxrMdC6fAxKpWLQgEVCb40BoKeqY=
+			YdUfUiEABdjbR0HsEkaOKjGptJD5Q9d3xqhxeEcsaDY=
 			</data>
 		</dict>
 		<key>Base.lproj/Localizable.strings</key>
@@ -240,7 +240,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GM0dyc7glqdGcocrp7UHEq6fxyahEl/2wTrsAMgemVs=
+			wjcf5Noaei1zbpZD46nqCvJyun02cB57LmWt4bukbxc=
 			</data>
 		</dict>
 		<key>Modules/USDKResources.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -268,7 +268,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vYLmE48nIDcFNKbAJFgY2Tsm9uupQKJs/T1uRJ98WSs=
+			ZkarbzvYadhYq1CeIwdVs/+VIZEsL+VzB3RNinExxnY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
