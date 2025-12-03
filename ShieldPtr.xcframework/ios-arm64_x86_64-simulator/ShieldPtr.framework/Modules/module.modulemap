@@ -1,0 +1,11 @@
+framework module ShieldPtr {
+  umbrella header "ShieldPtr.h"
+  export *
+
+  module * { export * }
+}
+
+module ShieldPtr.Swift {
+  header "ShieldPtr-Swift.h"
+  requires objc
+}

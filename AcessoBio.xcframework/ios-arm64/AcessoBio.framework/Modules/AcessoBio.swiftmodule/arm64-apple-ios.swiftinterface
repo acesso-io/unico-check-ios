@@ -12,7 +12,7 @@ import DeviceProfiling
 import FaceTecSDK
 import Foundation
 import Security
-import ShieldFraud
+import ShieldPtr
 import Swift
 import SystemConfiguration
 import UIKit.UIDevice
