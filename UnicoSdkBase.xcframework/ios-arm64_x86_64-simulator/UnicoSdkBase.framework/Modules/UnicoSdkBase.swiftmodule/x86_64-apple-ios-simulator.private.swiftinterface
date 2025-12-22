@@ -242,6 +242,7 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case dorothyTelemetryEnabled
   case enableDeviceFingerprint
   case consentScreenV2ShortLived
+  case fixShieldIsReadyTime
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
