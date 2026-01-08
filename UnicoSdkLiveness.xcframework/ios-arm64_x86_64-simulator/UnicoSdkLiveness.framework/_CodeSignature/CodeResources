@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tKCwHS5AvNERaty0fioteH0j+Tc=
+		8hJLWdMkt0jrN4WAUSP54DPuYgk=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		5msWpO2IZPrUZOjkaQEoI65DaZs=
+		Jn84rWiGOPxAZO8Hw024iRjKAPk=
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		dSvxlCdtrUFkQmiw8PyD1e+banQ=
+		P+Jaqi8DrggaeeInrk/52HE33LA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -120,7 +120,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ics5g8XuDm6bK/onm01Nqtg2afq3epKi4FlnevtXzLo=
+			sYgB6lJAEzoFG4FCPFu0u2Vk7kjrO04qOqrtk++URQQ=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkLiveness.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -155,7 +155,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QuHWrhA5c3UXdOEb6nFTijvy9dmHs2/i0ZSRdwYeCGs=
+			HVYqgOQKNuC8yxtLjxcCQW+lNrxYp+EPRCVtIYQciwU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
