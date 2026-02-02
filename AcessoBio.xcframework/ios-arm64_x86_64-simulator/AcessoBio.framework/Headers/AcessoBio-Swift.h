@@ -420,7 +420,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 
 SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 @interface DefaultGetCameraResultUseCase : NSObject
-- (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires sessionToken:(NSString * _Nullable)sessionToken isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
 - (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId captureId:(NSString * _Nullable)captureId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -568,7 +568,6 @@ SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @interface SDKConfigResponseDTOAdapter : NSObject
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable uiTexts;
-@property (nonatomic, readonly, copy) NSString * _Nullable facetecSessionToken;
 @property (nonatomic, readonly) BOOL geolocationEnabled;
 @property (nonatomic, readonly, copy) NSString * _Nonnull key;
 @property (nonatomic, readonly, copy) NSString * _Nonnull keyBody;
@@ -668,7 +667,7 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
 @interface UnicoCheckLivenessAdapter : NSObject
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKConfigResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate environment:(EnvironmentEnum)environment hostInfo:(NSString * _Nullable)hostInfo hostKey:(NSString * _Nonnull)hostKey;
 - (void)prepareCameraWithLocaleType:(LocaleTypes)localeType success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
-- (void)openCameraWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup timeoutInterval:(double)timeoutInterval success:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
+- (void)openCameraWithSuccess:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (NSString * _Nonnull)getLivenessKeybody SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -758,6 +757,7 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsAUTHENTICATION_REQUEST_ERROR = 73300,
   UnicoEnumsIErrorsAUTHENTICATION_PARSE_ERROR = 73301,
   UnicoEnumsIErrorsAUTHENTICATION_TOKEN_NOT_FOUND = 73302,
+  UnicoEnumsIErrorsAUTHENTICATION_HOST_NOT_REGISTERED = 73303,
 /// Camera Response
   UnicoEnumsIErrorsFACETEC_GET_SESSION_FAILED = 73703,
   UnicoEnumsIErrorsSESSION_STATUS_USER_CANCELLED = 73704,
@@ -1336,7 +1336,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 
 SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 @interface DefaultGetCameraResultUseCase : NSObject
-- (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires sessionToken:(NSString * _Nullable)sessionToken isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
 - (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId captureId:(NSString * _Nullable)captureId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1484,7 +1484,6 @@ SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @interface SDKConfigResponseDTOAdapter : NSObject
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable uiTexts;
-@property (nonatomic, readonly, copy) NSString * _Nullable facetecSessionToken;
 @property (nonatomic, readonly) BOOL geolocationEnabled;
 @property (nonatomic, readonly, copy) NSString * _Nonnull key;
 @property (nonatomic, readonly, copy) NSString * _Nonnull keyBody;
@@ -1584,7 +1583,7 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
 @interface UnicoCheckLivenessAdapter : NSObject
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKConfigResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate environment:(EnvironmentEnum)environment hostInfo:(NSString * _Nullable)hostInfo hostKey:(NSString * _Nonnull)hostKey;
 - (void)prepareCameraWithLocaleType:(LocaleTypes)localeType success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
-- (void)openCameraWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup timeoutInterval:(double)timeoutInterval success:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
+- (void)openCameraWithSuccess:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
 - (NSString * _Nonnull)getLivenessKeybody SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1674,6 +1673,7 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsAUTHENTICATION_REQUEST_ERROR = 73300,
   UnicoEnumsIErrorsAUTHENTICATION_PARSE_ERROR = 73301,
   UnicoEnumsIErrorsAUTHENTICATION_TOKEN_NOT_FOUND = 73302,
+  UnicoEnumsIErrorsAUTHENTICATION_HOST_NOT_REGISTERED = 73303,
 /// Camera Response
   UnicoEnumsIErrorsFACETEC_GET_SESSION_FAILED = 73703,
   UnicoEnumsIErrorsSESSION_STATUS_USER_CANCELLED = 73704,

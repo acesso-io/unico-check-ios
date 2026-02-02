@@ -9,7 +9,6 @@ import CoreMotion
 import CoreTelephony
 import DeveloperToolsSupport
 import DeviceProfiling
-import FaceTecSDK
 import Foundation
 import Security
 import ShieldPtr
@@ -108,6 +107,7 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   case AUTHENTICATION_REQUEST_ERROR = 73300
   case AUTHENTICATION_PARSE_ERROR = 73301
   case AUTHENTICATION_TOKEN_NOT_FOUND = 73302
+  case AUTHENTICATION_HOST_NOT_REGISTERED = 73303
   case FACETEC_GET_SESSION_FAILED = 73703
   case SESSION_STATUS_USER_CANCELLED = 73704
   case SESSION_STATUS_TIMEOUT = 73710
@@ -184,7 +184,7 @@ extension AcessoBio.UnicoCheckThemes {
   public typealias OpenCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
   @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKConfigResponseDTOAdapter, bioThemeDelegate: (any AcessoBio.AcessoBioThemeDelegate)?, environment: AcessoBio.EnvironmentEnum, hostInfo: Swift.String?, hostKey: Swift.String)
   @objc public func prepareCamera(localeType: AcessoBio.LocaleTypes, success: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionFailure)
-  @objc public func openCamera(unicoSetup: AcessoBio.UnicoSetupData, timeoutInterval: Swift.Double, success: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionFailure)
+  @objc public func openCamera(success: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionFailure)
   @objc public func getLivenessKeybody() -> Swift.String
   @objc deinit
 }
@@ -244,7 +244,7 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
   convenience public init(from decoder: any Swift.Decoder) throws
 }
 @objc final public class DefaultGetCameraResultUseCase : ObjectiveC.NSObject {
-  @objc public init(key: Swift.String, keyBody: Swift.String, expires: Swift.Double, sessionToken: Swift.String?, isIntegrationCaptureFlow: Swift.Bool)
+  @objc public init(key: Swift.String, keyBody: Swift.String, expires: Swift.Double, isIntegrationCaptureFlow: Swift.Bool)
   @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, sessionId: Swift.String?, captureId: Swift.String?, utcTimeNow: Swift.Double, uuid: Swift.String) -> AcessoBio.CaptureResult
   @objc deinit
 }
@@ -356,9 +356,6 @@ public protocol Cancellable {
 }
 @objc @_hasMissingDesignatedInitializers public class SDKConfigResponseDTOAdapter : ObjectiveC.NSObject {
   @objc public var uiTexts: [Swift.String : Swift.String]? {
-    @objc get
-  }
-  @objc public var facetecSessionToken: Swift.String? {
     @objc get
   }
   @objc public var geolocationEnabled: Swift.Bool {
