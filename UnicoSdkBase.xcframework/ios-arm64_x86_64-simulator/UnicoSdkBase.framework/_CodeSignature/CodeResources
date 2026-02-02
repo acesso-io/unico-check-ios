@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		a5Txv55Loe7IzTzXrrV4PNtJzXU=
+		TVgl6omgeqgn9x7+cyN2aWCWk0A=
 		</data>
 		<key>Headers/UnicoSdkBase-Swift.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		O8w+YgX4rq4ItCH3hTIjASgsJiQ=
+		5Vkk7C+1Z3PbhY1XYMxZtOSafbs=
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LwqA6rpPMIbD2g5ejehyGsrJBKg=
+		smXHPhiUcqsnqrSYfEhvTTuckTA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xuq29BAkGiobe4e+HtiQ1fMuHDidWSTf5sqkjP+elsM=
+			+TYuMr6ujWAxYK29hdng7vOwS+mkb0+STCqCJ97aov4=
 			</data>
 		</dict>
 		<key>Headers/UnicoSdkBase-Swift.h</key>
@@ -109,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OPRIzY+0/VJUwCpt+U07LoSO7POOIqrHJeqxgyq0z00=
+			W2S78RGM7dSdsZgOk5+6vHTcjI1gJzMqLLmOsCOnLh4=
 			</data>
 		</dict>
 		<key>Modules/UnicoSdkBase.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z9NozVYAVDX3PRwt5F5HC37H/GsAx4CgD+PIcOLgC5I=
+			HiWpAF5wxOB4vL8rIAWOeL7cdG2N9jxymSdmPtvN2x0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
