@@ -334,6 +334,12 @@ public protocol DeviceInfo {
   var usbPlugged: Swift.Bool { get }
   func isEqual(to other: any UnicoSdkBase.DeviceInfo) -> Swift.Bool
 }
+@objc public class PrepareInfo : ObjectiveC.NSObject {
+  final public let externalUserId: Swift.String
+  final public let useCase: Swift.String?
+  @objc public init(externalUserId: Swift.String, useCase: Swift.String? = nil)
+  @objc deinit
+}
 public protocol GetDeviceInfo {
   func device() -> any UnicoSdkBase.DeviceInfo
 }

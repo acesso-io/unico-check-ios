@@ -282,6 +282,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreFoundation;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -312,6 +313,14 @@ SWIFT_CLASS("_TtC12UnicoSdkBase19LivenessLoadingView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (void)didMoveToSuperview;
 - (void)removeFromSuperview;
+@end
+
+@class NSString;
+SWIFT_CLASS("_TtC12UnicoSdkBase11PrepareInfo")
+@interface PrepareInfo : NSObject
+- (nonnull instancetype)initWithExternalUserId:(NSString * _Nonnull)externalUserId useCase:(NSString * _Nullable)useCase OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 #endif

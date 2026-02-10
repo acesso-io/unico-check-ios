@@ -2,9 +2,7 @@
 // swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UnicoSdkLiveness
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
-import AVFAudio
 import DeveloperToolsSupport
-import FaceTecSDK
 import Foundation
 import Swift
 import UIKit
@@ -28,17 +26,12 @@ public struct PrepareData : Swift.Equatable {
 }
 extension UnicoSdkLiveness.PrepareData {
   public enum Engine : Swift.Equatable {
-    case facetec(UnicoSdkLiveness.PrepareData.FacetecData)
     case dorothy(UnicoSdkLiveness.PrepareData.DorothyData)
     case iproov(UnicoSdkLiveness.PrepareData.IproovData)
     public static func == (a: UnicoSdkLiveness.PrepareData.Engine, b: UnicoSdkLiveness.PrepareData.Engine) -> Swift.Bool
   }
 }
 extension UnicoSdkLiveness.PrepareData {
-  public struct FacetecData : Swift.Equatable {
-    public init(dk: Swift.String, ec: Swift.String, appId: Swift.String, expiryDate: Swift.String, key: Swift.String, localizationCode: UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode)
-    public static func == (a: UnicoSdkLiveness.PrepareData.FacetecData, b: UnicoSdkLiveness.PrepareData.FacetecData) -> Swift.Bool
-  }
   public struct DorothyLicense : Swift.Equatable {
     public init(licensePayloadB64: Swift.String, masterLicenseSignature: Swift.String)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyLicense, b: UnicoSdkLiveness.PrepareData.DorothyLicense) -> Swift.Bool
@@ -110,7 +103,7 @@ public protocol UnicoLivenessPrepareCameraDelegate : UnicoSdkLiveness.UnicoLiven
   func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
 }
 public struct OpenLivenessDTO {
-  public init(sdkTokenKey: Swift.String?, sessionToken: Swift.String?, keyBody: Swift.String?, captureId: Swift.String?, isIntegrationCaptureFlow: Swift.Bool, maxAttempts: Swift.Int)
+  public init(sdkTokenKey: Swift.String?, keyBody: Swift.String?, captureId: Swift.String?, isIntegrationCaptureFlow: Swift.Bool, maxAttempts: Swift.Int)
 }
 public protocol DataTransferBodyResponseDTO : Swift.Decodable, Swift.Equatable {
 }
@@ -131,6 +124,7 @@ extension UnicoSdkLiveness.RenewKeyBodyResponseDTO {
 public protocol UnicoLivenessRepresentable {
   var renewKeyBodyUseCase: any UnicoSdkLiveness.RenewKeyBodyUseCase { get }
   func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, userContext: UnicoSdkBase.PrepareInfo, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
 }
 @_hasMissingDesignatedInitializers final public class UnicoLiveness : UnicoSdkLiveness.UnicoLivenessRepresentable {
   final public var renewKeyBodyUseCase: any UnicoSdkLiveness.RenewKeyBodyUseCase {
@@ -138,6 +132,7 @@ public protocol UnicoLivenessRepresentable {
   }
   public init(viewController: UIKit.UIViewController, hostKey: Swift.String, sessionConfiguration: UnicoSdkLiveness.LivenessSessionConfig, isDebug: Swift.Bool)
   final public func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  final public func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, userContext: UnicoSdkBase.PrepareInfo, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
   @objc deinit
 }
 public protocol UnicoLivenessOpenCamera {
