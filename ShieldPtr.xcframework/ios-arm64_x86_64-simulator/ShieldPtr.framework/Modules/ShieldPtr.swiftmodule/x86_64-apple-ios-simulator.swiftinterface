@@ -11,6 +11,7 @@ import Contacts
 import CoreLocation
 import CoreMotion
 import CoreTelephony
+import CryptoKit
 import Darwin
 import Foundation
 import LocalAuthentication
@@ -82,6 +83,18 @@ extension Foundation.Date {
   @objc override dynamic public init()
   @objc deinit
 }
+public typealias PartnerShield = ShieldPtr.Shield
+public typealias PartnerConfiguration = ShieldPtr.Configuration
+public typealias PartnerEnvironment = ShieldPtr.Environment
+public typealias PartnerLogLevel = ShieldPtr.LogLevel
+public typealias PartnerDeviceShieldCallback = ShieldPtr.DeviceShieldCallback
+public typealias PartnerDeviceResultStateDelegate = ShieldPtr.DeviceResultStateDelegate
+public typealias PartnerBlockedDialog = ShieldPtr.BlockedDialog
+public typealias PartnerShieldCrossPlatformHelper = ShieldPtr.ShieldCrossPlatformHelper
+public typealias PartnerShieldCrossPlatformParams = ShieldPtr.ShieldCrossPlatformParams
+public typealias PartnerShieldModuleParameters = ShieldPtr.ShieldModuleParameters
+public typealias PartnerShieldModule = ShieldPtr.ShieldModule
+public typealias PartnerHMACUtils = ShieldPtr.HMACUtils
 @objc(PartnerConfiguration) @objcMembers final public class Configuration : ObjectiveC.NSObject {
   @objc final public var environment: ShieldPtr.Environment
   @objc final public let siteId: Swift.String
@@ -120,18 +133,6 @@ extension ShieldPtr.Shield {
   @objc final public func startTracking(moduleName: Swift.String, eventName: Swift.String)
   @objc final public func stopTracking(moduleName: Swift.String)
 }
-public typealias PartnerShield = ShieldPtr.Shield
-public typealias PartnerConfiguration = ShieldPtr.Configuration
-public typealias PartnerEnvironment = ShieldPtr.Environment
-public typealias PartnerLogLevel = ShieldPtr.LogLevel
-public typealias PartnerDeviceShieldCallback = ShieldPtr.DeviceShieldCallback
-public typealias PartnerDeviceResultStateDelegate = ShieldPtr.DeviceResultStateDelegate
-public typealias PartnerBlockedDialog = ShieldPtr.BlockedDialog
-public typealias PartnerShieldCrossPlatformHelper = ShieldPtr.ShieldCrossPlatformHelper
-public typealias PartnerShieldCrossPlatformParams = ShieldPtr.ShieldCrossPlatformParams
-public typealias PartnerShieldModuleParameters = ShieldPtr.ShieldModuleParameters
-public typealias PartnerShieldModule = ShieldPtr.ShieldModule
-public typealias PartnerHMACUtils = ShieldPtr.HMACUtils
 @_inheritsConvenienceInitializers @objc(PartnerShieldCrossPlatformHelper) @objcMembers final public class ShieldCrossPlatformHelper : ObjectiveC.NSObject {
   @objc public static func setCrossPlatformParameters(_ params: ShieldPtr.ShieldCrossPlatformParams)
   @objc override dynamic public init()

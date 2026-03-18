@@ -2,9 +2,7 @@
 // swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UnicoSdkLiveness
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
-import AVFAudio
 import DeveloperToolsSupport
-import FaceTecSDK
 import Foundation
 import Swift
 import UIKit
@@ -28,23 +26,18 @@ public struct PrepareData : Swift.Equatable {
 }
 extension UnicoSdkLiveness.PrepareData {
   public enum Engine : Swift.Equatable {
-    case facetec(UnicoSdkLiveness.PrepareData.FacetecData)
     case dorothy(UnicoSdkLiveness.PrepareData.DorothyData)
     case iproov(UnicoSdkLiveness.PrepareData.IproovData)
     public static func == (a: UnicoSdkLiveness.PrepareData.Engine, b: UnicoSdkLiveness.PrepareData.Engine) -> Swift.Bool
   }
 }
 extension UnicoSdkLiveness.PrepareData {
-  public struct FacetecData : Swift.Equatable {
-    public init(dk: Swift.String, ec: Swift.String, appId: Swift.String, expiryDate: Swift.String, key: Swift.String, localizationCode: UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode)
-    public static func == (a: UnicoSdkLiveness.PrepareData.FacetecData, b: UnicoSdkLiveness.PrepareData.FacetecData) -> Swift.Bool
-  }
   public struct DorothyLicense : Swift.Equatable {
     public init(licensePayloadB64: Swift.String, masterLicenseSignature: Swift.String)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyLicense, b: UnicoSdkLiveness.PrepareData.DorothyLicense) -> Swift.Bool
   }
   public struct DorothyData : Swift.Equatable {
-    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense, localizationCode: UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode)
+    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense, localizationCode: UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode, rsaPublicKey: Swift.String)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyData, b: UnicoSdkLiveness.PrepareData.DorothyData) -> Swift.Bool
   }
   public struct DorothyDataMetaTag : Swift.Equatable {
@@ -69,7 +62,7 @@ public struct Theme : Swift.Equatable {
   public static func == (a: UnicoSdkLiveness.Theme, b: UnicoSdkLiveness.Theme) -> Swift.Bool
 }
 public protocol UnicoLivenessDelegate : UnicoSdkLiveness.UnicoLivenessLoggerDelegate {
-  func onSuccess(livenessResult: any UnicoSdkLiveness.LivenessResult)
+  func onSuccess(livenessResult: any UnicoSdkLiveness.LivenessProviderStrategyCaptureSuccess)
   func onError(livenessError: UnicoSdkLiveness.LivenessError)
   func onRenewKeyBody(newKeyBody: Swift.String?)
   func onPredict()
@@ -88,15 +81,35 @@ public struct LivenessError : Swift.Error, Swift.Equatable {
   public init(code: Swift.Int, message: Swift.String)
   public static func == (a: UnicoSdkLiveness.LivenessError, b: UnicoSdkLiveness.LivenessError) -> Swift.Bool
 }
-public protocol LivenessResult {
-  var transactionsId: [UnicoSdkLiveness.SessionTransactionDTO]? { get set }
-  var serialize: [Swift.String : Any] { get }
-  var session: [Swift.String : Any]? { get }
-  var tinyJWTEnabled: Swift.Bool { get set }
-  var auditTrailCompressedBase64Images: [Swift.String]? { get }
+extension UnicoSdkLiveness.LivenessError {
+  public static var livenessNotFound: UnicoSdkLiveness.LivenessError {
+    get
+  }
+}
+public protocol CoreLivenessResult {
   var livenessImage: Swift.String? { get }
   var livenessCaptureId: Swift.String? { get }
+}
+public protocol TransactionalLiveness {
+  var transactionsId: [UnicoSdkLiveness.SessionTransactionDTO]? { get set }
+  var session: [Swift.String : Any]? { get }
+}
+public protocol BackendJWTCapableLiveness {
+  var tinyJWT: Swift.String? { get set }
+}
+public protocol FrontEndJWTCapableLiveness {
+  var tinyJWTEnabled: Swift.Bool { get set }
+  var serialize: [Swift.String : Any] { get }
   mutating func enableTinyJWT()
+}
+public typealias LivenessResult = UnicoSdkLiveness.BackendJWTCapableLiveness & UnicoSdkLiveness.CoreLivenessResult & UnicoSdkLiveness.FrontEndJWTCapableLiveness & UnicoSdkLiveness.TransactionalLiveness
+extension UnicoSdkLiveness.TransactionalLiveness {
+  public var session: [Swift.String : Any]? {
+    get
+  }
+}
+extension UnicoSdkLiveness.FrontEndJWTCapableLiveness {
+  public mutating func enableTinyJWT()
 }
 @objc final public class SessionTransactionDTO : ObjectiveC.NSObject {
   @objc public init(transactionId: Swift.String, isLive: Swift.Bool, order: Swift.Int)
@@ -110,7 +123,7 @@ public protocol UnicoLivenessPrepareCameraDelegate : UnicoSdkLiveness.UnicoLiven
   func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
 }
 public struct OpenLivenessDTO {
-  public init(sdkTokenKey: Swift.String?, sessionToken: Swift.String?, keyBody: Swift.String?, captureId: Swift.String?, isIntegrationCaptureFlow: Swift.Bool, maxAttempts: Swift.Int)
+  public init(sdkTokenKey: Swift.String?, keyBody: Swift.String?, captureId: Swift.String?, isIntegrationCaptureFlow: Swift.Bool, maxAttempts: Swift.Int)
 }
 public protocol DataTransferBodyResponseDTO : Swift.Decodable, Swift.Equatable {
 }
@@ -157,6 +170,12 @@ public enum DataTransferErrors : Swift.Error {
 public protocol UnicoLivenessLoggerDelegate : AnyObject {
   func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
   func onTelemetryListener(_ event: Swift.String?)
+}
+public protocol LivenessProviderStrategyCaptureSuccess {
+  var serialize: [Swift.String : Any] { get }
+  var session: [Swift.String : Any]? { get }
+  var livenessCaptureId: Swift.String? { get }
+  var tinyJWT: Swift.String? { get }
 }
 public protocol LivenessLoggerProvider {
   var name: Swift.String { get }

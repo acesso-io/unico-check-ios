@@ -389,6 +389,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio21CreateProviderUseCase_")
 @class SuccessCallbackDTO;
 @class ErrorCallbackDTO;
 @class LivenessDTO;
+@class PrepareInfo;
 @class ProviderDTO;
 @class UnicoSetupData;
 @class ErrorBio;
@@ -405,6 +406,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 - (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
 - (void)commitLiveness:(LivenessDTO * _Nullable)liveness;
 - (void)setCaptureId:(NSString * _Nullable)captureId;
+- (void)setPrepareInfo:(PrepareInfo * _Nullable)prepareInfo;
 - (void)commitProvider:(ProviderDTO * _Nonnull)provider;
 /// Send storage data signaling whether or not it is an <code>attempt</code>.
 /// \param saveAttempt Indicates whether should or not store a capture attempt .
@@ -420,8 +422,8 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 
 SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 @interface DefaultGetCameraResultUseCase : NSObject
-- (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires sessionToken:(NSString * _Nullable)sessionToken isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
-- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId captureId:(NSString * _Nullable)captureId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
+- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId captureId:(NSString * _Nullable)captureId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid tinyJWT:(NSString * _Nullable)tinyJWT SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -498,6 +500,12 @@ SWIFT_CLASS("_TtC9AcessoBio18FactoriesContainer")
 - (id <SensorsWorkerFactory> _Nonnull)makeSensorsWorkerFactory SWIFT_WARN_UNUSED_RESULT;
 @end
 
+SWIFT_CLASS_NAMED("FeatureFlagManagerObjCBridge")
+@interface ObjCFeatureFlagManager : NSObject
++ (BOOL)isBackendJwtEnabled SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 SWIFT_CLASS("_TtC9AcessoBio14GeolocationDTO")
 @interface GeolocationDTO : NSObject
 - (nonnull instancetype)initWithLat:(NSNumber * _Nullable)lat lng:(NSNumber * _Nullable)lng alt:(NSNumber * _Nullable)alt precision:(NSNumber * _Nullable)precision city:(NSString * _Nullable)city uf:(NSString * _Nullable)uf country:(NSString * _Nullable)country postalCode:(NSString * _Nullable)postalCode address:(NSString * _Nullable)address gpsFlag:(NSString * _Nullable)gpsFlag mode:(NSString * _Nullable)mode OBJC_DESIGNATED_INITIALIZER;
@@ -533,6 +541,13 @@ typedef SWIFT_ENUM(NSInteger, OpenCaptureType, open) {
   OpenCaptureTypeWebapp = 4,
 };
 
+SWIFT_CLASS("_TtC9AcessoBio11PrepareInfo")
+@interface PrepareInfo : NSObject
+- (nonnull instancetype)initWithExternalUserId:(NSString * _Nonnull)externalUserId useCase:(NSString * _Nullable)useCase OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 @interface ProviderDTO : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -543,7 +558,7 @@ SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 @protocol SAdapterProtocolDelegate;
 SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
 @protocol SAdapterProtocol
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken enableShuri:(BOOL)enableShuri requiresConsentScreen:(BOOL)requiresConsentScreen delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 @end
 
 @class UIViewController;
@@ -551,7 +566,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
 SWIFT_CLASS("_TtC9AcessoBio8SAdapter")
 @interface SAdapter : NSObject <SAdapterProtocol>
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController unicoSetup:(UnicoSetup * _Nonnull)unicoSetup OBJC_DESIGNATED_INITIALIZER;
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken enableShuri:(BOOL)enableShuri requiresConsentScreen:(BOOL)requiresConsentScreen delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -560,6 +575,7 @@ SWIFT_CLASS("_TtC9AcessoBio8SAdapter")
 SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 @protocol SAdapterProtocolDelegate
 - (void)onSuccessSDKWithResult:(SuccessResult * _Nonnull)result;
+- (void)onSuccessCaptureFlowWithResult:(CaptureResult * _Nonnull)result;
 - (void)onErrorSDKWithError:(ErrorBio * _Nonnull)error;
 - (void)onSuccessConsent;
 - (void)onErrorConsent;
@@ -568,7 +584,6 @@ SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @interface SDKConfigResponseDTOAdapter : NSObject
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable uiTexts;
-@property (nonatomic, readonly, copy) NSString * _Nullable facetecSessionToken;
 @property (nonatomic, readonly) BOOL geolocationEnabled;
 @property (nonatomic, readonly, copy) NSString * _Nonnull key;
 @property (nonatomic, readonly, copy) NSString * _Nonnull keyBody;
@@ -668,7 +683,7 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
 @interface UnicoCheckLivenessAdapter : NSObject
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKConfigResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate environment:(EnvironmentEnum)environment hostInfo:(NSString * _Nullable)hostInfo hostKey:(NSString * _Nonnull)hostKey;
 - (void)prepareCameraWithLocaleType:(LocaleTypes)localeType success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
-- (void)openCameraWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup timeoutInterval:(double)timeoutInterval success:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
+- (void)openCameraWithSuccess:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull, NSString * _Nullable))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure cameraOpened:(void (^ _Nonnull)(void))cameraOpened;
 - (NSString * _Nonnull)getLivenessKeybody SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -758,8 +773,9 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsAUTHENTICATION_REQUEST_ERROR = 73300,
   UnicoEnumsIErrorsAUTHENTICATION_PARSE_ERROR = 73301,
   UnicoEnumsIErrorsAUTHENTICATION_TOKEN_NOT_FOUND = 73302,
+  UnicoEnumsIErrorsAUTHENTICATION_HOST_NOT_REGISTERED = 73303,
 /// Camera Response
-  UnicoEnumsIErrorsFACETEC_GET_SESSION_FAILED = 73703,
+  UnicoEnumsIErrorsSDK_GET_SESSION_FAILED = 73703,
   UnicoEnumsIErrorsSESSION_STATUS_USER_CANCELLED = 73704,
   UnicoEnumsIErrorsSESSION_STATUS_TIMEOUT = 73710,
 /// Encryption
@@ -1305,6 +1321,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio21CreateProviderUseCase_")
 @class SuccessCallbackDTO;
 @class ErrorCallbackDTO;
 @class LivenessDTO;
+@class PrepareInfo;
 @class ProviderDTO;
 @class UnicoSetupData;
 @class ErrorBio;
@@ -1321,6 +1338,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 - (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
 - (void)commitLiveness:(LivenessDTO * _Nullable)liveness;
 - (void)setCaptureId:(NSString * _Nullable)captureId;
+- (void)setPrepareInfo:(PrepareInfo * _Nullable)prepareInfo;
 - (void)commitProvider:(ProviderDTO * _Nonnull)provider;
 /// Send storage data signaling whether or not it is an <code>attempt</code>.
 /// \param saveAttempt Indicates whether should or not store a capture attempt .
@@ -1336,8 +1354,8 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 
 SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 @interface DefaultGetCameraResultUseCase : NSObject
-- (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires sessionToken:(NSString * _Nullable)sessionToken isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
-- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId captureId:(NSString * _Nullable)captureId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
+- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId captureId:(NSString * _Nullable)captureId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid tinyJWT:(NSString * _Nullable)tinyJWT SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1414,6 +1432,12 @@ SWIFT_CLASS("_TtC9AcessoBio18FactoriesContainer")
 - (id <SensorsWorkerFactory> _Nonnull)makeSensorsWorkerFactory SWIFT_WARN_UNUSED_RESULT;
 @end
 
+SWIFT_CLASS_NAMED("FeatureFlagManagerObjCBridge")
+@interface ObjCFeatureFlagManager : NSObject
++ (BOOL)isBackendJwtEnabled SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 SWIFT_CLASS("_TtC9AcessoBio14GeolocationDTO")
 @interface GeolocationDTO : NSObject
 - (nonnull instancetype)initWithLat:(NSNumber * _Nullable)lat lng:(NSNumber * _Nullable)lng alt:(NSNumber * _Nullable)alt precision:(NSNumber * _Nullable)precision city:(NSString * _Nullable)city uf:(NSString * _Nullable)uf country:(NSString * _Nullable)country postalCode:(NSString * _Nullable)postalCode address:(NSString * _Nullable)address gpsFlag:(NSString * _Nullable)gpsFlag mode:(NSString * _Nullable)mode OBJC_DESIGNATED_INITIALIZER;
@@ -1449,6 +1473,13 @@ typedef SWIFT_ENUM(NSInteger, OpenCaptureType, open) {
   OpenCaptureTypeWebapp = 4,
 };
 
+SWIFT_CLASS("_TtC9AcessoBio11PrepareInfo")
+@interface PrepareInfo : NSObject
+- (nonnull instancetype)initWithExternalUserId:(NSString * _Nonnull)externalUserId useCase:(NSString * _Nullable)useCase OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 @interface ProviderDTO : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1459,7 +1490,7 @@ SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 @protocol SAdapterProtocolDelegate;
 SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
 @protocol SAdapterProtocol
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken enableShuri:(BOOL)enableShuri requiresConsentScreen:(BOOL)requiresConsentScreen delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 @end
 
 @class UIViewController;
@@ -1467,7 +1498,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
 SWIFT_CLASS("_TtC9AcessoBio8SAdapter")
 @interface SAdapter : NSObject <SAdapterProtocol>
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController unicoSetup:(UnicoSetup * _Nonnull)unicoSetup OBJC_DESIGNATED_INITIALIZER;
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken enableShuri:(BOOL)enableShuri requiresConsentScreen:(BOOL)requiresConsentScreen delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1476,6 +1507,7 @@ SWIFT_CLASS("_TtC9AcessoBio8SAdapter")
 SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 @protocol SAdapterProtocolDelegate
 - (void)onSuccessSDKWithResult:(SuccessResult * _Nonnull)result;
+- (void)onSuccessCaptureFlowWithResult:(CaptureResult * _Nonnull)result;
 - (void)onErrorSDKWithError:(ErrorBio * _Nonnull)error;
 - (void)onSuccessConsent;
 - (void)onErrorConsent;
@@ -1484,7 +1516,6 @@ SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @interface SDKConfigResponseDTOAdapter : NSObject
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable uiTexts;
-@property (nonatomic, readonly, copy) NSString * _Nullable facetecSessionToken;
 @property (nonatomic, readonly) BOOL geolocationEnabled;
 @property (nonatomic, readonly, copy) NSString * _Nonnull key;
 @property (nonatomic, readonly, copy) NSString * _Nonnull keyBody;
@@ -1584,7 +1615,7 @@ SWIFT_CLASS("_TtC9AcessoBio25UnicoCheckLivenessAdapter")
 @interface UnicoCheckLivenessAdapter : NSObject
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController sdkToken:(SDKConfigResponseDTOAdapter * _Nonnull)sdkToken bioThemeDelegate:(id <AcessoBioThemeDelegate> _Nullable)bioThemeDelegate environment:(EnvironmentEnum)environment hostInfo:(NSString * _Nullable)hostInfo hostKey:(NSString * _Nonnull)hostKey;
 - (void)prepareCameraWithLocaleType:(LocaleTypes)localeType success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
-- (void)openCameraWithUnicoSetup:(UnicoSetupData * _Nonnull)unicoSetup timeoutInterval:(double)timeoutInterval success:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure;
+- (void)openCameraWithSuccess:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull, NSString * _Nullable))success failure:(void (^ _Nonnull)(ErrorBio * _Nonnull))failure cameraOpened:(void (^ _Nonnull)(void))cameraOpened;
 - (NSString * _Nonnull)getLivenessKeybody SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1674,8 +1705,9 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsAUTHENTICATION_REQUEST_ERROR = 73300,
   UnicoEnumsIErrorsAUTHENTICATION_PARSE_ERROR = 73301,
   UnicoEnumsIErrorsAUTHENTICATION_TOKEN_NOT_FOUND = 73302,
+  UnicoEnumsIErrorsAUTHENTICATION_HOST_NOT_REGISTERED = 73303,
 /// Camera Response
-  UnicoEnumsIErrorsFACETEC_GET_SESSION_FAILED = 73703,
+  UnicoEnumsIErrorsSDK_GET_SESSION_FAILED = 73703,
   UnicoEnumsIErrorsSESSION_STATUS_USER_CANCELLED = 73704,
   UnicoEnumsIErrorsSESSION_STATUS_TIMEOUT = 73710,
 /// Encryption
