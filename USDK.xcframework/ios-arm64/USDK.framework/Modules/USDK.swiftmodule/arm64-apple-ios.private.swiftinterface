@@ -2,21 +2,18 @@
 // swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name USDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVFAudio
 import AVFoundation
 import Accelerate
-import SystemConfiguration.CaptiveNetwork
 import CommonCrypto
 import Compression
-import CoreBluetooth
 import CoreData
 import CoreFoundation
 import CoreGraphics
 import CoreImage
-import CoreLocation
 import CoreML
 import CoreMedia
 import CoreMotion
-import CoreNFC
 import CoreTelephony
 import CoreText
 import CryptoKit
@@ -38,7 +35,6 @@ import UIKit
 @_exported import USDK
 import VideoToolbox
 import _Concurrency
-import _CoreNFC_UIKit
 import _StringProcessing
 import _SwiftConcurrencyShims
 import simd
@@ -50,6 +46,7 @@ public enum OZError : Foundation.LocalizedError, Swift.Equatable {
   case accessTokenExpiredOrInvalid(httpCode: Swift.Int, message: Swift.String)
   case refreshTokenExpiredOrInvalid(httpCode: Swift.Int, message: Swift.String)
   case connectionTypeError
+  case sessionTokenIsEmpty
   public static func == (a: USDK.OZError, b: USDK.OZError) -> Swift.Bool
 }
 extension USDK.OZError : Swift.CustomStringConvertible {
@@ -148,7 +145,9 @@ public struct Customization : Swift.Codable, Swift.Equatable {
 public struct LogoCustomization : Swift.Codable, Swift.Equatable {
   public var image: UIKit.UIImage
   public var size: CoreFoundation.CGSize
-  public init(image: UIKit.UIImage, size: CoreFoundation.CGSize)
+  public var verticalPosition: Swift.Int?
+  public var horizontalPosition: Swift.Int?
+  public init(image: UIKit.UIImage, size: CoreFoundation.CGSize, verticalPosition: Swift.Int? = 100, horizontalPosition: Swift.Int? = 0)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   public static func == (a: USDK.LogoCustomization, b: USDK.LogoCustomization) -> Swift.Bool
@@ -330,6 +329,7 @@ public var OZSDK: any USDK.OZSDKProtocol {
 public func OZSDK(licenseSources: [USDK.LicenseSource], masterLicenseSignature: Swift.String? = nil, completion: @escaping ((USDK.LicenseData?, USDK.LicenseError?) -> Swift.Void))
 public func AnalysisRequestBuilder(_ folderId: Swift.String? = nil) -> any USDK.OZRequestProtocol
 public typealias FaceCaptureCompletion = (_ results: [USDK.OZMedia]?, _ error: USDK.OZVerificationStatus?) -> Swift.Void
+public typealias FaceCaptureContainerCompletion = (_ result: USDK.DataContainer?, _ error: USDK.OZVerificationStatus?) -> Swift.Void
 public protocol OZRequestProtocol : AnyObject {
   func addAnalysis(_ analysis: USDK.Analysis)
   func addAnalysis(_ analysis: [USDK.Analysis])
@@ -368,8 +368,7 @@ public protocol OZSDKProtocol : AnyObject {
   func createVerificationVC(actions: [USDK.OZVerificationMovement], completion: @escaping USDK.FaceCaptureCompletion) throws -> UIKit.UIViewController
   func createVerificationVC(actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position, completion: @escaping USDK.FaceCaptureCompletion) throws -> UIKit.UIViewController
   func createVerificationVC(actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position, sessionToken: Swift.String?, completion: @escaping USDK.FaceCaptureCompletion) throws -> UIKit.UIViewController
-  func createMediaCaptureScreen(_ delegate: any USDK.LivenessDelegate, _ captureRequest: USDK.CaptureRequest) throws -> UIKit.UIViewController
-  func createMediaCaptureScreen(_ delegate: any USDK.LivenessDelegate, _ captureRequest: USDK.CaptureRequest, sessionToken: Swift.String?) throws -> UIKit.UIViewController
+  func createMediaCaptureScreen(_ delegate: any USDK.LivenessDelegate, _ captureRequest: USDK.CaptureRequest, sessionToken: Swift.String) throws -> UIKit.UIViewController
   func cleanTempDirectory()
   @available(*, deprecated, message: "Use setApiConnection(Connection) method")
   func configure(with host: Swift.String)
@@ -492,6 +491,8 @@ public enum OZVerificationStatus : Swift.Equatable {
   case failedBecausePreparingTimout
   case failedBecauseOfLowMemory
   case failedBecauseOfLicenseError(USDK.LicenseError)
+  case failedBecauseSessionToken(USDK.OZError)
+  case dataContainerInternalFailure(Swift.Int)
 }
 public struct OZAttemptSettings {
   public var faceAlignmentTimeout: Swift.Double?
@@ -625,10 +626,19 @@ public struct AnalysisProfile : Swift.Encodable {
   public init(mediaList: [USDK.MediaRequest], type: USDK.AnalysisType, params: [Swift.String : Any] = [:])
   public func encode(to encoder: any Swift.Encoder) throws
 }
-public enum MediaRequest : Swift.Encodable {
+extension USDK.MediaRequest {
+  public static func user(_ media: USDK.OZMedia) -> USDK.MediaRequest
+  public static func action(_ movement: USDK.OZVerificationMovement) -> USDK.MediaRequest
+}
+public enum MediaRequest : Swift.Encodable, Swift.Identifiable {
   case userMedia(USDK.OZMedia)
-  case actionMedia(USDK.OZVerificationMovement)
+  case actionMedia(_: Foundation.UUID, movement: USDK.OZVerificationMovement)
+  public var id: Foundation.UUID {
+    get
+  }
   public func encode(to encoder: any Swift.Encoder) throws
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  public typealias ID = Foundation.UUID
 }
 public typealias ActionNameProvider = (_ action: USDK.OZVerificationMovement) -> Swift.String
 extension Swift.CodingUserInfoKey {
@@ -696,6 +706,7 @@ public enum OZJournalEvent : Swift.String {
   case sslPinningCheck
   case mediaUploadRequestSignature
   case journalError
+  case pillarboxed
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
