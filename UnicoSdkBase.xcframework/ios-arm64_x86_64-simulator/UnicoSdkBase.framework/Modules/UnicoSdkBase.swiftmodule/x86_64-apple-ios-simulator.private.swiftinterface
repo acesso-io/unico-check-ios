@@ -173,7 +173,7 @@ public class DefaultNetworkSessionManager : UnicoSdkBase.NetworkSessionManager {
 final public class DefaultNetworkErrorLogger : UnicoSdkBase.NetworkErrorLogger {
   public init()
   final public func log(request: Foundation.URLRequest)
-  final public func log(responseData data: Foundation.Data?, response: Foundation.URLResponse?)
+  final public func log(responseData data: Foundation.Data?, response _: Foundation.URLResponse?)
   final public func log(error: any Swift.Error)
   @objc deinit
 }
@@ -240,11 +240,10 @@ public protocol FeaturesRepresentable {
 }
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
   case dorothyTelemetryEnabled
-  case enableDeviceFingerprint
   case consentScreenV2ShortLived
-  case fixShieldIsReadyTime
   case enableUmonitorPrepareInfo
   case enableBackendJwt
+  case enableOwnID
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)

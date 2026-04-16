@@ -143,14 +143,14 @@ extension UnicoSdkLiveness.RenewKeyBodyResponseDTO {
 }
 public protocol UnicoLivenessRepresentable {
   var renewKeyBodyUseCase: any UnicoSdkLiveness.RenewKeyBodyUseCase { get }
-  func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  func prepareCamera(data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
 }
 @_hasMissingDesignatedInitializers final public class UnicoLiveness : UnicoSdkLiveness.UnicoLivenessRepresentable {
   final public var renewKeyBodyUseCase: any UnicoSdkLiveness.RenewKeyBodyUseCase {
     get
   }
   public init(viewController: UIKit.UIViewController, hostKey: Swift.String, sessionConfiguration: UnicoSdkLiveness.LivenessSessionConfig, isDebug: Swift.Bool)
-  final public func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  final public func prepareCamera(data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
   @objc deinit
 }
 public protocol UnicoLivenessOpenCamera {

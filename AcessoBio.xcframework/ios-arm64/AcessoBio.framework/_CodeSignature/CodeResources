@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		pZOFyn4U6EUqOMr5LwaIibE9Q0g=
+		8QBQ2kFkjp/WSg6XEWqxZ3q0I+k=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/AcessoBioCameraOpener.h</key>
 		<data>
-		somnqIN6gyM3FHL5sDA3mM0DjXo=
+		uaNXuqNJfn65ey4BMu2SC3UCTu0=
 		</data>
 		<key>Headers/AcessoBioCameraOpenerDelegate.h</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		9dNdkzh0BOxY3BrJxuK/e4Wx0qg=
+		J3yNIcv6EsLp3NhlqBtHe5EY/6E=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -130,11 +130,11 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		9dNdkzh0BOxY3BrJxuK/e4Wx0qg=
+		J3yNIcv6EsLp3NhlqBtHe5EY/6E=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		vOyDJz0227atwDQ9q6HKmYq54po=
+		baTE+nTsitz7ktf3ILg6vh5LJ7U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -210,7 +210,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xksNTe+uAWTxbTNNYkaKiAXd5GVzrnvedK3JHrBXeCQ=
+			WE8gXpl3ok8RbBh1gLT+8LKWFEX31M/TnaSS+Aou66w=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
@@ -238,7 +238,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0WK4s+RXY3ubd7r3wiZ9fS+ar1B6q0FJDzJd+SxybMo=
+			09fXOKM5sgi0hTK5MIP2OdyW0r1m24JYnY2Frh4qdNg=
 			</data>
 		</dict>
 		<key>Headers/AcessoBioCameraOpenerDelegate.h</key>
@@ -399,7 +399,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T8aEi+dbY88V8Cgycs6UE1PQi5u6R6czcSgYNlH1N6M=
+			Gmh1hAa3UtVOIQJQCDN75IVqyL5cyyU6sJAQ57LBplI=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -413,14 +413,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T8aEi+dbY88V8Cgycs6UE1PQi5u6R6czcSgYNlH1N6M=
+			Gmh1hAa3UtVOIQJQCDN75IVqyL5cyyU6sJAQ57LBplI=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ttjKHEH/LP7nQ/1DUyhlhMe1OkXnPoti1xLd5zCXYEo=
+			mcWP+JhNIRpNH/lnfxruZ4AD4B1qq44Z+NFyD1tXMVU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

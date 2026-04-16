@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		1UpcAdzZeAAKljcvdkGa5XEmS6E=
+		ourCGJ1gheo2FZbDGhpP3K6jips=
 		</data>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		v83SZ+GEKf7J8zPaDLq+HfQU0C0=
+		eRh8xvglH6jIYFwCL2zWitMBHXw=
 		</data>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		v83SZ+GEKf7J8zPaDLq+HfQU0C0=
+		eRh8xvglH6jIYFwCL2zWitMBHXw=
 		</data>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		wqTuGEI+viDmFNtGZGxAQo7hFUQ=
+		CnLijSLkUa6GsgpMxlZTWnHUa6c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		JJmg/h9TgVQVNYzvP9LkziokGQM=
+		Q8+7rcyYy7UlprzjuimKoOGqmCQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -87,14 +87,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eq3qXMHTFDtOWxfHG22xfM7DKra4oT+ghIFdaNtSt58=
+			2oM4+6PyzaJzkQ0A1gYFM5CoVtGp3ZAs9bdYwPjycXA=
 			</data>
 		</dict>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kfn2j9oyc2SxJ6wS3vx8whJQjBO8IrWxBBeu7P121EI=
+			W1lU7Cuhed2DDv3Lu0tuQcnwuonqTOLP2aTzCSJ40dQ=
 			</data>
 		</dict>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -108,14 +108,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kfn2j9oyc2SxJ6wS3vx8whJQjBO8IrWxBBeu7P121EI=
+			W1lU7Cuhed2DDv3Lu0tuQcnwuonqTOLP2aTzCSJ40dQ=
 			</data>
 		</dict>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pgn+i3TmuQwSSKQ4SzX4eCJITgD2bJ5CdMQCBj4tKuY=
+			zpmujfHtS2ekZpKnJ5PIJAwo+KMfT3gl0alxA4CGanY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -129,7 +129,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WUZEJX7nHY32b3Q7H2ba66a7T5vAlygZvKkuByinfMI=
+			UPSzHcGN2vAZHzEgEOi9IOzpX7IUBzFCSveqvGi+87w=
 			</data>
 		</dict>
 	</dict>

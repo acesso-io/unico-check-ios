@@ -628,11 +628,16 @@ public struct AnalysisProfile : Swift.Encodable {
 }
 extension USDK.MediaRequest {
   public static func user(_ media: USDK.OZMedia) -> USDK.MediaRequest
+  public static func user(_ media: USDK.OZMedia, mediaMeta: [Swift.String : Any]?) -> USDK.MediaRequest
   public static func action(_ movement: USDK.OZVerificationMovement) -> USDK.MediaRequest
+  public static func action(_ movement: USDK.OZVerificationMovement, mediaMeta: [Swift.String : Any]?) -> USDK.MediaRequest
 }
 public enum MediaRequest : Swift.Encodable, Swift.Identifiable {
-  case userMedia(USDK.OZMedia)
-  case actionMedia(_: Foundation.UUID, movement: USDK.OZVerificationMovement)
+  case userMedia(USDK.OZMedia, mediaMeta: [Swift.String : Any]?)
+  case actionMedia(_: Foundation.UUID, movement: USDK.OZVerificationMovement, mediaMeta: [Swift.String : Any]?)
+  public var mediaMeta: [Swift.String : Any]? {
+    get
+  }
   public var id: Foundation.UUID {
     get
   }

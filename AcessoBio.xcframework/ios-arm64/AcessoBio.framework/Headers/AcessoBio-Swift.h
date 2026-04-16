@@ -353,11 +353,6 @@ SWIFT_CLASS("_TtC9AcessoBio11CallbackDTO")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_PROTOCOL("_TtP9AcessoBio21CaptureBehaviorWorker_")
-@protocol CaptureBehaviorWorker
-- (void)startCapture;
-@end
-
 SWIFT_CLASS("_TtC9AcessoBio13CaptureResult")
 @interface CaptureResult : NSObject
 @property (nonatomic, copy) NSString * _Null_unspecified base64;
@@ -415,7 +410,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 ///
 /// \param completion Block to listen for request result
 ///
-- (void)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData isSdkSEnabled:(BOOL)isSdkSEnabled success:(void (^ _Nullable)(NSString * _Nonnull, NSString * _Nullable))success failure:(void (^ _Nullable)(ErrorBio * _Nonnull))failure;
+- (void)send:(BOOL)saveAttempt setupData:(UnicoSetupData * _Nonnull)setupData isSdkSEnabled:(BOOL)isSdkSEnabled success:(void (^ _Nullable)(NSString * _Nonnull))success failure:(void (^ _Nullable)(ErrorBio * _Nonnull))failure;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -423,7 +418,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 @interface DefaultGetCameraResultUseCase : NSObject
 - (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
-- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId sessionId:(NSString * _Nullable)sessionId captureId:(NSString * _Nullable)captureId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid tinyJWT:(NSString * _Nullable)tinyJWT SWIFT_WARN_UNUSED_RESULT;
+- (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId captureId:(NSString * _Nullable)captureId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid tinyJWT:(NSString * _Nullable)tinyJWT SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -834,13 +829,6 @@ SWIFT_PROTOCOL("_TtP9AcessoBio35UnicoFaceCameraViewControllerOutput_")
 @protocol UnicoFaceCameraViewControllerOutput
 - (void)startCapture;
 - (void)stopCapture;
-@end
-
-SWIFT_CLASS("_TtC9AcessoBio16UnicoHttpHeaders")
-@interface UnicoHttpHeaders : NSObject
-- (nonnull instancetype)initWithHeaders:(NSDictionary * _Nonnull)headers OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class NSBundle;
