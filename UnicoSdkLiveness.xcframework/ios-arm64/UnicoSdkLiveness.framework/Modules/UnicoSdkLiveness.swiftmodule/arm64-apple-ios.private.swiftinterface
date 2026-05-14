@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UnicoSdkLiveness
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UnicoSdkLiveness
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import DeveloperToolsSupport
 import Foundation
@@ -37,7 +37,7 @@ extension UnicoSdkLiveness.PrepareData {
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyLicense, b: UnicoSdkLiveness.PrepareData.DorothyLicense) -> Swift.Bool
   }
   public struct DorothyData : Swift.Equatable {
-    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense, localizationCode: UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode, rsaPublicKey: Swift.String)
+    public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense, localizationCode: UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode, rsaPublicKey: Swift.String, customerLogo: Swift.String? = nil)
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyData, b: UnicoSdkLiveness.PrepareData.DorothyData) -> Swift.Bool
   }
   public struct DorothyDataMetaTag : Swift.Equatable {
@@ -58,7 +58,7 @@ extension UnicoSdkLiveness.PrepareData {
   }
 }
 public struct Theme : Swift.Equatable {
-  public init(backgroundColor: UIKit.UIColor, boxMessageColor: UIKit.UIColor, textMessageColor: UIKit.UIColor, backgroundTakePictureButtonColor: UIKit.UIColor, iconTakePictureButtonColor: UIKit.UIColor, backgroundBottomDocumentColor: UIKit.UIColor, textBottomDocumentColor: UIKit.UIColor, silhouetteSuccessColor: UIKit.UIColor, silhouetteErrorColor: UIKit.UIColor, silhouetteNeutralColor: UIKit.UIColor, progressBarColor: UIKit.UIColor, cancelButtonIconColor: UIKit.UIColor)
+  public init(backgroundColor: UIKit.UIColor, boxMessageColor: UIKit.UIColor, textMessageColor: UIKit.UIColor, backgroundTakePictureButtonColor: UIKit.UIColor, iconTakePictureButtonColor: UIKit.UIColor, silhouetteSuccessColor: UIKit.UIColor, silhouetteErrorColor: UIKit.UIColor, progressBarColor: UIKit.UIColor, cancelButtonIconColor: UIKit.UIColor)
   public static func == (a: UnicoSdkLiveness.Theme, b: UnicoSdkLiveness.Theme) -> Swift.Bool
 }
 public protocol UnicoLivenessDelegate : UnicoSdkLiveness.UnicoLivenessLoggerDelegate {
@@ -115,9 +115,6 @@ extension UnicoSdkLiveness.FrontEndJWTCapableLiveness {
   @objc public init(transactionId: Swift.String, isLive: Swift.Bool, order: Swift.Int)
   @objc deinit
 }
-public struct Env {
-  public init(dataService: any UnicoSdkBase.DataTransferService, keyData: Swift.String, ivData: Swift.String)
-}
 public protocol UnicoLivenessPrepareCameraDelegate : UnicoSdkLiveness.UnicoLivenessLoggerDelegate {
   func onCameraReady(unicoLivenessOpenCamera: any UnicoSdkLiveness.UnicoLivenessOpenCamera)
   func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
@@ -143,14 +140,14 @@ extension UnicoSdkLiveness.RenewKeyBodyResponseDTO {
 }
 public protocol UnicoLivenessRepresentable {
   var renewKeyBodyUseCase: any UnicoSdkLiveness.RenewKeyBodyUseCase { get }
-  func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  func prepareCamera(data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
 }
 @_hasMissingDesignatedInitializers final public class UnicoLiveness : UnicoSdkLiveness.UnicoLivenessRepresentable {
   final public var renewKeyBodyUseCase: any UnicoSdkLiveness.RenewKeyBodyUseCase {
     get
   }
   public init(viewController: UIKit.UIViewController, hostKey: Swift.String, sessionConfiguration: UnicoSdkLiveness.LivenessSessionConfig, isDebug: Swift.Bool)
-  final public func prepareCamera(env: UnicoSdkLiveness.Env, data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
+  final public func prepareCamera(data: UnicoSdkLiveness.PrepareData, prepareDelegate: any UnicoSdkLiveness.UnicoLivenessPrepareCameraDelegate)
   @objc deinit
 }
 public protocol UnicoLivenessOpenCamera {
