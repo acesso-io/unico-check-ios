@@ -5,8 +5,8 @@ import PackageDescription
 
 let package = Package(
     name: "unicocheck-ios-spm",
-    platforms: [.iOS(.v13)],
     defaultLocalization: "en",
+    platforms: [.iOS(.v13)],
     products: [
         .library(
             name: "unicocheck-ios-spm",
