@@ -11,7 +11,6 @@ let package = Package(
             name: "unicocheck-ios-spm",
             targets: [
                 "AcessoBio",
-                "DeviceProfiling",
                 "ShieldPtr",
                 "UnicoSdkBase",
                 "UnicoSdkLiveness",
@@ -24,7 +23,6 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(name: "AcessoBio",        path: "AcessoBio.xcframework"),
-        .binaryTarget(name: "DeviceProfiling",  path: "DeviceProfiling.xcframework"),
         .binaryTarget(name: "ShieldPtr",        path: "ShieldPtr.xcframework"),
         .binaryTarget(name: "UnicoSdkBase",     path: "UnicoSdkBase.xcframework"),
         .binaryTarget(name: "UnicoSdkLiveness", path: "UnicoSdkLiveness.xcframework"),
