@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UnicoSdkBase
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UnicoSdkBase
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import CoreLocation.CLLocation
 import CoreLocation
@@ -173,7 +173,7 @@ public class DefaultNetworkSessionManager : UnicoSdkBase.NetworkSessionManager {
 final public class DefaultNetworkErrorLogger : UnicoSdkBase.NetworkErrorLogger {
   public init()
   final public func log(request: Foundation.URLRequest)
-  final public func log(responseData data: Foundation.Data?, response: Foundation.URLResponse?)
+  final public func log(responseData data: Foundation.Data?, response _: Foundation.URLResponse?)
   final public func log(error: any Swift.Error)
   @objc deinit
 }
@@ -240,11 +240,11 @@ public protocol FeaturesRepresentable {
 }
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
   case dorothyTelemetryEnabled
-  case enableDeviceFingerprint
   case consentScreenV2ShortLived
-  case fixShieldIsReadyTime
   case enableUmonitorPrepareInfo
   case enableBackendJwt
+  case enableOwnID
+  case geolocationOverride
   case none
   public init?(rawValue: Swift.String)
   public init?(stringValue: Swift.String)
@@ -294,6 +294,18 @@ extension UnicoSdkBase.Dependencies {
     public func encode(to encoder: any Swift.Encoder) throws
     public init(from decoder: any Swift.Decoder) throws
   }
+}
+indirect public enum UnicoJSONValue : Swift.Codable, Swift.Equatable {
+  case bool(Swift.Bool)
+  case int(Swift.Int)
+  case double(Swift.Double)
+  case string(Swift.String)
+  case array([UnicoSdkBase.UnicoJSONValue])
+  case object([Swift.String : UnicoSdkBase.UnicoJSONValue])
+  case null
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: UnicoSdkBase.UnicoJSONValue, b: UnicoSdkBase.UnicoJSONValue) -> Swift.Bool
 }
 public struct DynamicCodingKey : Swift.CodingKey {
   public var stringValue: Swift.String

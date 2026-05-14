@@ -9,7 +9,6 @@
 @import Foundation;
 #import "AcessoBioCameraOpenerDelegate.h"
 @class UnicoCheck;
-@class ErrorUnicoSetup;
 @class AcessoBioConfigDataSource;
 NS_ASSUME_NONNULL_BEGIN
 

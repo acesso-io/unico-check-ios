@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AcessoBio
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AcessoBio
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import AVFoundation
 @_exported import AcessoBio
@@ -8,7 +8,6 @@ import CoreLocation
 import CoreMotion
 import CoreTelephony
 import DeveloperToolsSupport
-import DeviceProfiling
 import Foundation
 import Security
 import ShieldPtr
@@ -17,10 +16,10 @@ import SystemConfiguration
 import UIKit.UIDevice
 import UIKit
 import UnicoSdkBase
-import UnicoSdkBase/*.NetworkCancellable*/
 import UnicoSdkLiveness
 import UnicoSdkLogger
 import UnicoSdkPlugins
+import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -91,9 +90,6 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
     @objc get
   }
 }
-@objc public protocol CaptureBehaviorWorker {
-  @objc func startCapture()
-}
 @objc public enum UnicoEnumsIErrors : Swift.Int {
   case UNKNOWN_INTERNAL_ERROR = 73000
   case TAKE_PICTURE_ERROR = 73001
@@ -129,16 +125,9 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   public func getTokenUnico(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, completion: @escaping AcessoBio.UnicoSetupServices.Completion)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers final public class DefaultSessionIdWorker {
-  @objc deinit
-}
 @objc public protocol UnicoFaceCameraViewControllerOutput {
   @objc func startCapture()
   @objc func stopCapture()
-}
-@objc public class UnicoHttpHeaders : ObjectiveC.NSObject {
-  @objc public init(headers: Foundation.NSDictionary)
-  @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class DefaultMotionSensorsDevice {
   @objc deinit
@@ -201,10 +190,6 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDe
   public func onTelemetryListener(_ event: Swift.String?)
   public func onPredict()
 }
-public class SDKPredictResponseDTO : Swift.Decodable {
-  @objc deinit
-  required public init(from decoder: any Swift.Decoder) throws
-}
 @objc public class SuccessResult : ObjectiveC.NSObject {
   @objc final public let processId: Swift.String
   @objc public init(processId: Swift.String)
@@ -216,7 +201,10 @@ public class SDKPredictResponseDTO : Swift.Decodable {
   func stopMotion() -> AcessoBio.DeviceBehaviorsDTO
 }
 @objc public protocol SAdapterProtocol {
-  @objc func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, enableShuri: Swift.Bool, requiresConsentScreen: Swift.Bool, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc var nativeLocation: CoreLocation.CLLocation? { get set }
+  @objc var isLocationDenied: Swift.Bool { get set }
+  @objc func updateNativeLocation(_ location: CoreLocation.CLLocation)
+  @objc func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, configAdapter: AcessoBio.SDKConfigResponseDTOAdapter?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
 }
 @objc public protocol SAdapterProtocolDelegate {
   @objc func onSuccessSDK(result: AcessoBio.SuccessResult)
@@ -226,8 +214,11 @@ public class SDKPredictResponseDTO : Swift.Decodable {
   @objc func onErrorConsent()
 }
 @objc @_hasMissingDesignatedInitializers final public class SAdapter : ObjectiveC.NSObject, AcessoBio.SAdapterProtocol {
+  @objc final public var nativeLocation: CoreLocation.CLLocation?
+  @objc final public var isLocationDenied: Swift.Bool
   @objc public init(viewController: UIKit.UIViewController, unicoSetup: AcessoBio.UnicoSetup)
-  @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, enableShuri: Swift.Bool, requiresConsentScreen: Swift.Bool, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, configAdapter: AcessoBio.SDKConfigResponseDTOAdapter?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc final public func updateNativeLocation(_ location: CoreLocation.CLLocation)
   @objc deinit
 }
 @objc public class PrepareInfo : ObjectiveC.NSObject {
@@ -251,7 +242,7 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
 }
 @objc final public class DefaultGetCameraResultUseCase : ObjectiveC.NSObject {
   @objc public init(key: Swift.String, keyBody: Swift.String, expires: Swift.Double, isIntegrationCaptureFlow: Swift.Bool)
-  @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, sessionId: Swift.String?, captureId: Swift.String?, utcTimeNow: Swift.Double, uuid: Swift.String, tinyJWT: Swift.String?) -> AcessoBio.CaptureResult
+  @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, captureId: Swift.String?, utcTimeNow: Swift.Double, uuid: Swift.String, tinyJWT: Swift.String?) -> AcessoBio.CaptureResult
   @objc deinit
 }
 @objc public protocol SensorsDevice {
@@ -260,9 +251,6 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
 }
 @objc @_hasMissingDesignatedInitializers public class DataLogger : ObjectiveC.NSObject {
   @objc public class func shared() -> AcessoBio.DataLogger
-  public var sdkSessionId: Swift.String {
-    get
-  }
   @objc public func commitBuild()
   @objc public func commitGeolocation(_ geolocation: AcessoBio.GeolocationDTO)
   @objc public func commitIsSdkSEnabled(_ isSdkSEnabled: Swift.Bool)
@@ -275,11 +263,12 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
   @objc public func setCaptureId(_ captureId: Swift.String?)
   @objc public func setPrepareInfo(_ prepareInfo: AcessoBio.PrepareInfo?)
   @objc public func commitProvider(_ provider: AcessoBio.ProviderDTO)
-  @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData, isSdkSEnabled: Swift.Bool, success: ((Swift.String, Swift.String?) -> Swift.Void)?, failure: ((AcessoBio.ErrorBio) -> Swift.Void)?)
+  @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData, isSdkSEnabled: Swift.Bool, success: ((Swift.String) -> Swift.Void)?, failure: ((AcessoBio.ErrorBio) -> Swift.Void)?)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc(ObjCFeatureFlagManager) public class FeatureFlagManagerObjCBridge : ObjectiveC.NSObject {
   @objc public static func isBackendJwtEnabled() -> Swift.Bool
+  @objc public static func isGeolocationOverrideEnabled() -> Swift.Bool
   @objc override dynamic public init()
   @objc deinit
 }
