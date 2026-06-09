@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name USDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name USDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AVFAudio
 import AVFoundation
 import Accelerate
@@ -27,7 +27,6 @@ import MachO
 import MobileCoreServices
 import ObjectiveC
 import QuartzCore
-import SQLite3
 import Security
 import Swift
 import SystemConfiguration
@@ -69,9 +68,11 @@ infix operator +- : DefaultPrecedence
 public struct ResponseError : Foundation.LocalizedError {
   public let code: Swift.Int?
   public let errorType: USDK.ResponseError.ErrorType?
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
   public enum ErrorType {
     case incorrectLoginOrPassword
     case jsonSerializationError
@@ -121,9 +122,11 @@ public enum LicenseError : Swift.Error {
   }
 }
 extension USDK.LicenseError : Foundation.LocalizedError {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
 }
 extension Foundation.FileManager {
   public func secureCopyItem(at srcURL: Foundation.URL, to dstURL: Foundation.URL) -> Swift.Bool
@@ -137,7 +140,9 @@ public struct Customization : Swift.Codable, Swift.Equatable {
   public var versionCustomization: USDK.VersionLabelCustomization
   public var backgroundCustomization: USDK.BackgroundCustomization
   public var logoCustomization: USDK.LogoCustomization?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(toolbarCustomization: USDK.ToolbarCustomization, antiscamCustomization: USDK.AntiscamCustomization, centerHintCustomization: USDK.CenterHintCustomization, hintAnimationCustomization: USDK.HintAnimationCustomization, faceFrameCustomization: USDK.FaceFrameCustomization, versionCustomization: USDK.VersionLabelCustomization, backgroundCustomization: USDK.BackgroundCustomization, logoCustomization: USDK.LogoCustomization? = nil)
+  #endif
   public static func == (a: USDK.Customization, b: USDK.Customization) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -147,7 +152,9 @@ public struct LogoCustomization : Swift.Codable, Swift.Equatable {
   public var size: CoreFoundation.CGSize
   public var verticalPosition: Swift.Int?
   public var horizontalPosition: Swift.Int?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(image: UIKit.UIImage, size: CoreFoundation.CGSize, verticalPosition: Swift.Int? = 100, horizontalPosition: Swift.Int? = 0)
+  #endif
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   public static func == (a: USDK.LogoCustomization, b: USDK.LogoCustomization) -> Swift.Bool
@@ -159,7 +166,9 @@ public struct ToolbarCustomization : Swift.Codable, Swift.Equatable {
   public var titleFont: UIKit.UIFont?
   public var titleColor: UIKit.UIColor?
   public var backgroundColor: UIKit.UIColor?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(closeButtonIcon: UIKit.UIImage? = nil, closeButtonColor: UIKit.UIColor? = nil, titleText: Swift.String? = nil, titleFont: UIKit.UIFont? = nil, titleColor: UIKit.UIColor? = nil, backgroundColor: UIKit.UIColor? = nil)
+  #endif
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   public static func == (a: USDK.ToolbarCustomization, b: USDK.ToolbarCustomization) -> Swift.Bool
@@ -172,7 +181,9 @@ public struct AntiscamCustomization : Swift.Codable, Swift.Equatable {
   public var customizationAntiscamBackgroundColor: UIKit.UIColor?
   public var customizationAntiscamCornerRadius: CoreFoundation.CGFloat?
   public var customizationAntiscamFlashColor: UIKit.UIColor?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(customizationEnableAntiscam: Swift.Bool? = nil, customizationAntiscamTextMessage: Swift.String? = nil, customizationAntiscamTextFont: UIKit.UIFont? = nil, customizationAntiscamTextColor: UIKit.UIColor? = nil, customizationAntiscamBackgroundColor: UIKit.UIColor? = nil, customizationAntiscamCornerRadius: CoreFoundation.CGFloat? = nil, customizationAntiscamFlashColor: UIKit.UIColor? = nil)
+  #endif
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   public static func == (a: USDK.AntiscamCustomization, b: USDK.AntiscamCustomization) -> Swift.Bool
@@ -184,7 +195,9 @@ public struct CenterHintCustomization : Swift.Codable, Swift.Equatable {
   public var backgroundColor: UIKit.UIColor?
   public var hideTextBackground: Swift.Bool?
   public var backgroundCornerRadius: Swift.Int?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(textColor: UIKit.UIColor? = nil, textFont: UIKit.UIFont? = nil, verticalPosition: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, hideTextBackground: Swift.Bool? = nil, backgroundCornerRadius: Swift.Int? = nil)
+  #endif
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   public static func == (a: USDK.CenterHintCustomization, b: USDK.CenterHintCustomization) -> Swift.Bool
@@ -226,14 +239,18 @@ public struct FaceFrameCustomization : Swift.Codable, Swift.Equatable {
 public struct VersionLabelCustomization : Swift.Codable, Swift.Equatable {
   public var textFont: UIKit.UIFont?
   public var textColor: UIKit.UIColor?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(textFont: UIKit.UIFont? = nil, textColor: UIKit.UIColor? = nil)
+  #endif
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   public static func == (a: USDK.VersionLabelCustomization, b: USDK.VersionLabelCustomization) -> Swift.Bool
 }
 public struct BackgroundCustomization : Swift.Codable, Swift.Equatable {
   public var backgroundColor: UIKit.UIColor?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(backgroundColor: UIKit.UIColor? = nil)
+  #endif
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
   public static func == (a: USDK.BackgroundCustomization, b: USDK.BackgroundCustomization) -> Swift.Bool
@@ -257,7 +274,9 @@ public enum SizeReductionStrategy : Swift.String, Swift.CaseIterable {
   case uploadCompressed
   case uploadBestShot
   case uploadNothing
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias AllCases = [USDK.SizeReductionStrategy]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [USDK.SizeReductionStrategy] {
@@ -269,15 +288,19 @@ public enum SizeReductionStrategy : Swift.String, Swift.CaseIterable {
 }
 public enum AnalysisMode : Swift.Equatable {
   case onDevice, serverBased, hybrid
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: USDK.AnalysisMode, b: USDK.AnalysisMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
 }
 public struct Analysis : Swift.Equatable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(media: [USDK.OZMedia]?, type: USDK.AnalysisType, mode: USDK.AnalysisMode, sizeReductionStrategy: USDK.SizeReductionStrategy? = nil, params: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(media: [USDK.OZMedia]?, type: USDK.AnalysisType, mode: USDK.AnalysisMode, sizeReductionStrategy: USDK.SizeReductionStrategy? = nil)
+  #endif
   public static func == (lhs: USDK.Analysis, rhs: USDK.Analysis) -> Swift.Bool
 }
 public struct AnalysisStatus {
@@ -307,8 +330,8 @@ public enum Environment : Swift.Codable {
   case debug
   case prod
   public static func == (a: USDK.Environment, b: USDK.Environment) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -326,8 +349,12 @@ public struct OZFrameCustomization {
 public var OZSDK: any USDK.OZSDKProtocol {
   get
 }
-public func OZSDK(licenseSources: [USDK.LicenseSource], masterLicenseSignature: Swift.String? = nil, completion: @escaping ((USDK.LicenseData?, USDK.LicenseError?) -> Swift.Void))
+#if compiler(>=5.3) && $NonescapableTypes
+public func OZSDK(licenseSources: [USDK.LicenseSource], masterLicenseSignature: Swift.String? = nil, completion: @escaping (USDK.LicenseData?, USDK.LicenseError?) -> Swift.Void)
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func AnalysisRequestBuilder(_ folderId: Swift.String? = nil) -> any USDK.OZRequestProtocol
+#endif
 public typealias FaceCaptureCompletion = (_ results: [USDK.OZMedia]?, _ error: USDK.OZVerificationStatus?) -> Swift.Void
 public typealias FaceCaptureContainerCompletion = (_ result: USDK.DataContainer?, _ error: USDK.OZVerificationStatus?) -> Swift.Void
 public protocol OZRequestProtocol : AnyObject {
@@ -339,24 +366,34 @@ public protocol OZRequestProtocol : AnyObject {
   func addFolderMeta(_ meta: [Swift.String : Any])
   func useInstantMode(_ use: Swift.Bool)
   func addContainer(_ container: USDK.DataContainer)
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
-  func run(statusHandler: @escaping ((_ status: USDK.RequestStatus) -> Swift.Void), errorHandler: @escaping ((_ error: any Swift.Error) -> Swift.Void), completionHandler: @escaping (_ results: USDK.RequestResult) -> Swift.Void) -> (any USDK.OZCancelableRequest)?
+  func run(statusHandler: @escaping (_ status: USDK.RequestStatus) -> Swift.Void, errorHandler: @escaping (_ error: any Swift.Error) -> Swift.Void, completionHandler: @escaping (_ results: USDK.RequestResult) -> Swift.Void) -> (any USDK.OZCancelableRequest)?
+  #endif
 }
 public protocol OZSDKProtocol : AnyObject {
-  var resultObserver: (([USDK.OZMedia]) -> Swift.Void) { get set }
-  var journalObserver: ((Swift.String) -> Swift.Void) { get set }
-  var eventObserver: (([Swift.String : Any]) -> Swift.Void) { get set }
-  var licenseResult: ((USDK.LicenseData?, USDK.LicenseError?) -> Swift.Void) { get set }
+  var resultObserver: ([USDK.OZMedia]) -> Swift.Void { get set }
+  var journalObserver: (Swift.String) -> Swift.Void { get set }
+  var eventObserver: ([Swift.String : Any]) -> Swift.Void { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  var licenseResult: (USDK.LicenseData?, USDK.LicenseError?) -> Swift.Void { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var localizationCode: USDK.OZLocalizationCode? { get set }
+  #endif
   var host: Swift.String { get }
   var eventsHost: Swift.String { get }
   var attemptSettings: USDK.OZAttemptSettings { get set }
   var customization: USDK.Customization { get set }
   var version: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var licenseData: USDK.LicenseData? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Use setApiConnection(Connection) method")
   @discardableResult
   func login(_ login: Swift.String, password: Swift.String, completion: @escaping (_ accessToken: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void) -> any USDK.OZCancelableRequest
+  #endif
   func isLoggedIn() -> Swift.Bool
   func hasEventsConnection() -> Swift.Bool
   func logout()
@@ -364,10 +401,14 @@ public protocol OZSDKProtocol : AnyObject {
   func setPermanentAccessToken(_ accessToken: Swift.String)
   func createVerificationVCWithDelegate(_ delegate: any USDK.OZLivenessDelegate, actions: [USDK.OZVerificationMovement]) throws -> UIKit.UIViewController
   func createVerificationVCWithDelegate(_ delegate: any USDK.OZLivenessDelegate, actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position) throws -> UIKit.UIViewController
+  #if compiler(>=5.3) && $NonescapableTypes
   func createVerificationVCWithDelegate(_ delegate: any USDK.OZLivenessDelegate, actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position, sessionToken: Swift.String?) throws -> UIKit.UIViewController
+  #endif
   func createVerificationVC(actions: [USDK.OZVerificationMovement], completion: @escaping USDK.FaceCaptureCompletion) throws -> UIKit.UIViewController
   func createVerificationVC(actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position, completion: @escaping USDK.FaceCaptureCompletion) throws -> UIKit.UIViewController
+  #if compiler(>=5.3) && $NonescapableTypes
   func createVerificationVC(actions: [USDK.OZVerificationMovement], cameraPosition: AVFoundation.AVCaptureDevice.Position, sessionToken: Swift.String?, completion: @escaping USDK.FaceCaptureCompletion) throws -> UIKit.UIViewController
+  #endif
   func createMediaCaptureScreen(_ delegate: any USDK.LivenessDelegate, _ captureRequest: USDK.CaptureRequest, sessionToken: Swift.String) throws -> UIKit.UIViewController
   func cleanTempDirectory()
   @available(*, deprecated, message: "Use setApiConnection(Connection) method")
@@ -379,31 +420,53 @@ public protocol OZSDKProtocol : AnyObject {
   @available(*, deprecated, message: "Use setLicense(licenseSource: LicenseSource) method")
   func setLicense(from path: Swift.String)
   func setLicense(licenseSource: USDK.LicenseSource)
+  #if compiler(>=5.3) && $NonescapableTypes
   func setLicense(licenseSource: USDK.LicenseSource, masterLicenseSignature: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func setApiConnection(_ apiConnection: USDK.Connection, completion: @escaping (_ accessToken: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func setApiConnection(_ apiConnection: USDK.Connection, abConnectionHost: Swift.String?, completion: @escaping (_ accessToken: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func setEventsConnection(_ eventsConnection: USDK.Connection?, completion: @escaping (_ accessToken: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void)
+  #endif
   func getEventSessionId() -> Swift.String
   func setSelfieLength(length: Swift.Int) throws
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Use generateSignedPayload instead")
   func generatePayload(medias: [USDK.OZMedia]) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func generateSignedPayload(medias: [USDK.OZMedia]) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func generateSignedPayload(medias: [USDK.OZMedia], analyses: [USDK.Analysis]?) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func generateSignedPayload(medias: [USDK.OZMedia], analyses: [USDK.Analysis]?, folderMeta: [Swift.String : Any]?) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func generateSignedPayload(medias: [USDK.OZMedia], analyses: [USDK.Analysis]?, folderMeta: [Swift.String : Any]?, useLosslessFrameInfo: Swift.Bool?) -> Swift.String?
+  #endif
 }
 public protocol OZCancelableRequest {
   func cancel()
 }
 public struct DocumentPhoto {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(front: Foundation.URL?, back: Foundation.URL?)
+  #endif
   public var front: Foundation.URL?
   public var back: Foundation.URL?
 }
 public enum OZAnalysesState : Swift.String {
   case liveness
   case quality
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -411,11 +474,15 @@ public enum OZAnalysesState : Swift.String {
 }
 public protocol OZLivenessDelegate : AnyObject {
   func onOZLivenessResult(results: [USDK.OZMedia])
+  #if compiler(>=5.3) && $NonescapableTypes
   func onError(status: USDK.OZVerificationStatus?)
+  #endif
 }
 public protocol LivenessDelegate : AnyObject {
   func onResult(container: USDK.DataContainer)
+  #if compiler(>=5.3) && $NonescapableTypes
   func onError(status: USDK.OZVerificationStatus?)
+  #endif
 }
 public struct OZLivenessResult {
   public var status: USDK.OZVerificationStatus {
@@ -438,11 +505,18 @@ public struct MediaName {
 public struct DataContainer {
   public var data: Foundation.Data
   public init(data: Foundation.Data)
+  public func addAnalysisProfile(_ analysisProfile: USDK.AnalysisProfile) throws -> USDK.DataContainer
 }
 public struct OZMedia {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(movement: USDK.OZVerificationMovement?, mediaType: USDK.MediaType, metaData: [Swift.String : Any]?, additionalTags: [Swift.String]? = nil, videoURL: Foundation.URL?, bestShotURL: Foundation.URL?, preferredMediaURL: Foundation.URL?, timestamp: Foundation.Date)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(movement: USDK.OZVerificationMovement?, mediaType: USDK.MediaType, metaData: [Swift.String : Any]?, additionalTags: [Swift.String]? = nil, videoURL: Foundation.URL?, bestShotURL: Foundation.URL?, preferredMediaURL: Foundation.URL?, losslessFrameURL: Foundation.URL?, timestamp: Foundation.Date)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(mediaType: USDK.MediaType, metaData: [Swift.String : Any]?, additionalTags: [Swift.String]? = nil, preferredMediaURL: Foundation.URL?, timestamp: Foundation.Date)
+  #endif
   public var movement: USDK.OZVerificationMovement?
   public var mediaType: USDK.MediaType
   public var metaData: [Swift.String : Any]?
@@ -455,14 +529,18 @@ public struct OZMedia {
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var bestShotURL: Foundation.URL? {
     get
     set
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var losslessFrameURL: Foundation.URL? {
     get
     set
   }
+  #endif
   public var bestShotData: Foundation.Data? {
     get
     set
@@ -497,7 +575,9 @@ public enum OZVerificationStatus : Swift.Equatable {
 public struct OZAttemptSettings {
   public var faceAlignmentTimeout: Swift.Double?
   public var uploadMediaSettings: USDK.UploadMediaSettings
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(singleCount: Swift.Int? = nil, commonCount: Swift.Int? = nil, faceAlignmentTimeout: Swift.Double? = nil, uploadMediaSettings: USDK.UploadMediaSettings? = nil)
+  #endif
 }
 public struct UploadMediaSettings {
   public var attemptsCount: Swift.Int
@@ -525,8 +605,12 @@ public class AnalyseResolution {
   public var type: Swift.String
   public var folderID: Swift.String?
   public var score: Swift.Float?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(type: Swift.String, status: USDK.AnalyseResolutionStatus, folderID: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(type: Swift.String, status: USDK.AnalyseResolutionStatus, folderID: Swift.String?, score: Swift.Float?)
+  #endif
   @objc deinit
 }
 public enum AnalysisError : Swift.Error {
@@ -554,8 +638,12 @@ public class MediaProgressStatus {
   @objc deinit
 }
 public class RequestStatus {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(status: USDK.ScenarioState, progressStatus: USDK.MediaProgressStatus? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(status: USDK.ScenarioState, progressStatus: USDK.MediaProgressStatus? = nil, progress: Foundation.Progress? = nil)
+  #endif
   public var status: USDK.ScenarioState
   public var progressStatus: USDK.MediaProgressStatus?
   public var progress: Foundation.Progress?
@@ -565,7 +653,9 @@ public class RequestResult {
   public var resolution: USDK.AnalyseResolutionStatus
   public var folderID: Swift.String?
   public var analysisResults: [USDK.AnalysisResult]
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(resolution: USDK.AnalyseResolutionStatus, folderID: Swift.String? = nil, analysisResults: [USDK.AnalysisResult])
+  #endif
   @objc deinit
 }
 extension USDK.RequestResult : Swift.CustomDebugStringConvertible {
@@ -574,7 +664,9 @@ extension USDK.RequestResult : Swift.CustomDebugStringConvertible {
   }
 }
 public class AnalysisResult {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(resolution: USDK.AnalyseResolutionStatus, type: Swift.String, mode: USDK.AnalysisMode, resultsMedia: [USDK.ResultMedia], analysisID: Swift.String? = nil, confidenceScore: Swift.Float? = nil, serverRawResponse: Swift.String? = nil, error: (any Swift.Error)? = nil)
+  #endif
   public var resolution: USDK.AnalyseResolutionStatus
   public var type: Swift.String
   public var mode: USDK.AnalysisMode
@@ -591,7 +683,9 @@ extension USDK.AnalysisResult : Swift.CustomDebugStringConvertible {
   }
 }
 public class ResultMedia {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(resolution: USDK.AnalyseResolutionStatus? = nil, media: USDK.OZMedia, sourceID: Swift.String? = nil, isOnDevice: Swift.Bool, confidenceScore: Swift.Float? = nil, mediaType: Swift.String? = nil, error: (any Swift.Error)? = nil)
+  #endif
   public var resolution: USDK.AnalyseResolutionStatus?
   public var sourceID: Swift.String?
   public var isOnDevice: Swift.Bool
@@ -607,8 +701,12 @@ extension USDK.ResultMedia : Swift.CustomDebugStringConvertible {
   }
 }
 @_inheritsConvenienceInitializers public class DocumentAnalyseResolution : USDK.AnalysisResult {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getTextValue(by fieldName: Swift.String) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   override public init(resolution: USDK.AnalyseResolutionStatus, type: Swift.String, mode: USDK.AnalysisMode, resultsMedia: [USDK.ResultMedia], analysisID: Swift.String? = nil, confidenceScore: Swift.Float? = nil, serverRawResponse: Swift.String? = nil, error: (any Swift.Error)? = nil)
+  #endif
   @objc deinit
 }
 public struct CaptureRequest : Swift.Encodable {
@@ -628,16 +726,26 @@ public struct AnalysisProfile : Swift.Encodable {
 }
 extension USDK.MediaRequest {
   public static func user(_ media: USDK.OZMedia) -> USDK.MediaRequest
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func user(_ media: USDK.OZMedia, mediaMeta: [Swift.String : Any]?) -> USDK.MediaRequest
+  #endif
   public static func action(_ movement: USDK.OZVerificationMovement) -> USDK.MediaRequest
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func action(_ movement: USDK.OZVerificationMovement, mediaMeta: [Swift.String : Any]?) -> USDK.MediaRequest
+  #endif
 }
 public enum MediaRequest : Swift.Encodable, Swift.Identifiable {
-  case userMedia(USDK.OZMedia)
-  case actionMedia(_: Foundation.UUID, movement: USDK.OZVerificationMovement)
+  case userMedia(USDK.OZMedia, mediaMeta: [Swift.String : Any]?)
+  case actionMedia(_: Foundation.UUID, movement: USDK.OZVerificationMovement, mediaMeta: [Swift.String : Any]?)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var mediaMeta: [Swift.String : Any]? {
+    get
+  }
+  #endif
   public var id: Foundation.UUID {
     get
   }
   public func encode(to encoder: any Swift.Encoder) throws
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Foundation.UUID
 }
 public typealias ActionNameProvider = (_ action: USDK.OZVerificationMovement) -> Swift.String
@@ -652,7 +760,9 @@ public enum AnalyseResolutionStatus : Swift.String {
   case declined
   case success
   case operatorRequired
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -672,7 +782,9 @@ public enum OZLocalizationCode {
   public var rawValue: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
 }
 public enum OZJournalEvent : Swift.String {
   case unknown
@@ -707,7 +819,9 @@ public enum OZJournalEvent : Swift.String {
   case mediaUploadRequestSignature
   case journalError
   case pillarboxed
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get

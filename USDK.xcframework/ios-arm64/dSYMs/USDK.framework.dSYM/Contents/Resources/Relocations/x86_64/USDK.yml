@@ -1,5 +1,5 @@
 ---
 triple:          'x86_64-apple-darwin'
-binary-path:     '/Users/ilyapostanogov/Downloads/oz-liveness-ios-internal-develop 2/obfuscation/USDKDynamic/dSYMs/USDK.framework.dSYM/Contents/Resources/DWARF/USDK'
+binary-path:     '/Users/almirka/Documents/Forensics/oz-liveness-ios-internal/obfuscation/USDKDynamic/dSYMs/USDK.framework.dSYM/Contents/Resources/DWARF/USDK'
 relocations:     []
 ...
