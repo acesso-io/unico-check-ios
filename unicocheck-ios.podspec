@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   # iOS 17 split CoreNFC and added a sub-framework that only exists on iOS 17+.
   # Weak-linking keeps the reference as LC_LOAD_WEAK_DYLIB in the consumer binary,
   # avoiding a "Library not loaded" launch crash on iOS < 17.
-  spec.weak_frameworks = ['CoreNFC', 'CoreBluetooth']
+  spec.weak_frameworks = ['CoreNFC']
 
   # weak_frameworks above only covers the CoreNFC umbrella; this flag ensures the
   # split sub-framework is weak-linked explicitly in the consumer's final link.
