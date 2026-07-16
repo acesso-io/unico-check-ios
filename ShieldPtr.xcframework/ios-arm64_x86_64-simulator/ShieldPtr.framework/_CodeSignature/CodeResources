@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ShieldPtr-Swift.h</key>
 		<data>
-		+yhSWTd8P4dnxb+sifpWU24Ztzg=
+		1pQ1sDtbgxYY+e7qoCEnes7xtlw=
 		</data>
 		<key>Headers/ShieldPtr.h</key>
 		<data>
@@ -14,51 +14,51 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ePxe0CznJyLqrj/e6Kvy8596PW8=
+		tDtog0gRelxguolepdVP+PHUFrQ=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		EunIE5Tti749VE6WfE7e1lM4LAM=
+		jJ3D93rF89yxi28mF3QKKeff/5o=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		7p8hQKkjnjLovvxNRgJZUjBWqSs=
+		hq0kMbjrI7RMKOU7i+7/ReU4wWs=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		7Kw9/CgcDsyxt/3eRoaXeDCWldg=
+		TPOkTP1xnFZzZLZlZIUnCvbxAtU=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		7p8hQKkjnjLovvxNRgJZUjBWqSs=
+		hq0kMbjrI7RMKOU7i+7/ReU4wWs=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3RUGXpaNd/0RBMKVwknKfzAac00=
+		uz5qr+RGIlp5dxRLTuxalNbHjqA=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		MGQhRiOHwnlWgGGPGG7hAMiZuHQ=
+		l4GdUWFrNVYhcTFOpnqrjz81VWE=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		8fgC1Ygm60n7okp4BF9qSJa4Hrw=
+		A23JWpyU8nioXAL1qdcQHTl3dKk=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		LZGywuyR7H8ZvkcfP0ArJKIXSXs=
+		Y1UvfEoLpJFJqBswt6K2lig0fDo=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		8fgC1Ygm60n7okp4BF9qSJa4Hrw=
+		A23JWpyU8nioXAL1qdcQHTl3dKk=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XxTpih+H9NQd91bA4yi+niaOjEY=
+		tiYoDPdAR2n3xn15FI4Qe96qevY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		N+hB4IOhsfsY9p5UOKchl5PikBM=
+		i0b7A2AMCbNN6km1bHvwLy0GhR0=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KLLfuMMVO31vqU/ORxYFuL/wY14LVxwUtiT+BGr6gbA=
+			SiqqWAWNOBuucGP6FIuTej61m/LsgjDyHtwuCHFtTgE=
 			</data>
 		</dict>
 		<key>Headers/ShieldPtr.h</key>
@@ -85,77 +85,77 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6Y+HiHetIgoSv2m2+8+CvzNEkr6nLWcBZVSye5qAT54=
+			BR7QbDFYZgnTx/BNUQ1taME01UthQXOjkK8J7E0TQWU=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3eBsPcBUacwGYZPbxEmpgWZ66CIM2HFRbxEHX51E/6M=
+			jH3nXqK1UVkIo0vRVq97+GUhwSN36abvqaC84NmjCc0=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3ICQn+uvbbOs3Xx2+gU6vPQ3AOGiJZsRkgTQw5X8PFk=
+			9FqlR7hcSNzDn+i1+P3IzF9NHs1L3ZhmX9H1wzU30AI=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3eBsPcBUacwGYZPbxEmpgWZ66CIM2HFRbxEHX51E/6M=
+			jH3nXqK1UVkIo0vRVq97+GUhwSN36abvqaC84NmjCc0=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6AjhDrnNEQSVo6pe56ejkkYaIuuHJ3jx3aHV5WlH790=
+			Zeo0eomCnjY8bIURkgL7nWON5w63SIBGMEB7A36yWTc=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0FbC3OMo02VUvrZn46W+cF/4XClnyXqY2cwbptCA+J4=
+			Ev0S43XHV89LSO5Naqg5eG8au1xlKkxSKsGXlliYb1k=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3hYWnU4fdf4PlFyI5IJZuhqtCXpdVWECUhcKKxJQToI=
+			JoxBJeucehtFP1WBVQzDJk00DE79e3LIO2BLDLQDt8g=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r/A9G1h9TT+TSurRmJycXSz4dGyXUu3VjA84N1/Wqpo=
+			BZ3F43R9/l0EtG65g1bIMdWwuDr4aKIaOufoEoIhPUE=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3hYWnU4fdf4PlFyI5IJZuhqtCXpdVWECUhcKKxJQToI=
+			JoxBJeucehtFP1WBVQzDJk00DE79e3LIO2BLDLQDt8g=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I9RvYh0rAQGu2bQ6YqyWj3Ml7SR+q7/ESoaFn2BMRwk=
+			RxA4I/1aR0y6At6UWLyZU6yvNSZ53ELR1x+/cheORTE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Bhndz3eeRz0OmUmpWXziI7EzQYFzA1SF9EytXkh1Qak=
+			B9o33AFEaRLGaF3pWSyr7aBbLIU/b4Va9r9pYLRhf4U=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
