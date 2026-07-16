@@ -371,6 +371,9 @@ public protocol Cancellable {
   @objc public var enableLogo: Swift.Bool {
     @objc get
   }
+  public var standardizedLoadingEnabled: Swift.Bool {
+    get
+  }
   @objc public var expires: Swift.Double {
     @objc get
   }

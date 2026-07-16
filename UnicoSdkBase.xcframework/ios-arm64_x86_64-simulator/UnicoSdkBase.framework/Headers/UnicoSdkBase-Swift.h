@@ -308,10 +308,21 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @class NSCoder;
 SWIFT_CLASS("_TtC12UnicoSdkBase19LivenessLoadingView")
 @interface LivenessLoadingView : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (void)didMoveToSuperview;
-- (void)removeFromSuperview;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+/// Reusable native loading component.
+/// Layout: a centered icon (<code>unico_ic_loading_icon</code> by default, tinted gray to match web), a native
+/// infinite horizontal progress bar built with <code>CALayer</code>s (rounded gray track + rounded
+/// moving gray segment animated via <code>CABasicAnimation</code>), and an optional multiline text
+/// label below the bar. No external libraries are used.
+SWIFT_CLASS("_TtC12UnicoSdkBase16UnicoLoadingView")
+@interface UnicoLoadingView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)layoutSubviews;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 #endif
@@ -632,10 +643,21 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @class NSCoder;
 SWIFT_CLASS("_TtC12UnicoSdkBase19LivenessLoadingView")
 @interface LivenessLoadingView : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (void)didMoveToSuperview;
-- (void)removeFromSuperview;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+/// Reusable native loading component.
+/// Layout: a centered icon (<code>unico_ic_loading_icon</code> by default, tinted gray to match web), a native
+/// infinite horizontal progress bar built with <code>CALayer</code>s (rounded gray track + rounded
+/// moving gray segment animated via <code>CABasicAnimation</code>), and an optional multiline text
+/// label below the bar. No external libraries are used.
+SWIFT_CLASS("_TtC12UnicoSdkBase16UnicoLoadingView")
+@interface UnicoLoadingView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)layoutSubviews;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 #endif

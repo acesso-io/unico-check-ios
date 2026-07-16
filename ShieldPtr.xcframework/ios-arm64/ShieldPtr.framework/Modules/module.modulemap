@@ -7,5 +7,4 @@ framework module ShieldPtr {
 
 module ShieldPtr.Swift {
   header "ShieldPtr-Swift.h"
-  requires objc
 }

@@ -57,14 +57,51 @@ public struct CryptedRequestDTO<T> : Swift.Encodable where T : Swift.Encodable {
   public init(dataValue: T, endpointPrivateKey: Swift.String, endpointPrivateIv: Swift.String) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class LivenessLoadingView : UIKit.UIView {
+public enum UnicoLoadingStyle {
+  case legacy
+  case standardized
+  case circular
+  public static func == (a: UnicoSdkBase.UnicoLoadingStyle, b: UnicoSdkBase.UnicoLoadingStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class LivenessLoadingView : UIKit.UIView {
   public struct Customization {
     public init(closeButtonColor: UIKit.UIColor?, backgroundColor: UIKit.UIColor?, progressBarColor: UIKit.UIColor?, textMessageColor: UIKit.UIColor?, textLabel: Swift.String?)
   }
-  @_Concurrency.MainActor @preconcurrency final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization, onClose: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(frame: CoreFoundation.CGRect = .zero, iconName: Swift.String = UnicoLoadingView.defaultIconName)
+  @_Concurrency.MainActor @preconcurrency final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization, loadingStyle: UnicoSdkBase.UnicoLoadingStyle = .legacy, onClose: (() -> Swift.Void)? = nil)
   @_Concurrency.MainActor @preconcurrency @objc override final public func didMoveToSuperview()
-  @_Concurrency.MainActor @preconcurrency @objc override final public func removeFromSuperview()
+  @_Concurrency.MainActor @preconcurrency final public func dismiss(animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
   @objc deinit
+}
+public enum StandardizedLoadingPalette {
+  public static let background: UIKit.UIColor
+  public static let text: UIKit.UIColor
+  public static let closeButton: UIKit.UIColor
+  public static let silhouetteError: UIKit.UIColor
+  public static let silhouetteSuccess: UIKit.UIColor
+  public static let boxMessage: UIKit.UIColor
+  public static let retryButton: UIKit.UIColor
+}
+@objc @_Concurrency.MainActor @preconcurrency final public class UnicoLoadingView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public static let defaultIconName: Swift.String
+  @_Concurrency.MainActor @preconcurrency public init(frame: CoreFoundation.CGRect = .zero, iconName: Swift.String = UnicoLoadingView.defaultIconName)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency final public func setText(_ text: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency final public func startLoading()
+  @_Concurrency.MainActor @preconcurrency final public func stopLoading()
+  @_Concurrency.MainActor @preconcurrency final public func configureAsCircular()
+  @_Concurrency.MainActor @preconcurrency final public func fadeIn(duration: Foundation.TimeInterval = 0.3, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency final public func fadeOut(duration: Foundation.TimeInterval = 0.3, completion: (() -> Swift.Void)? = nil)
+  @objc deinit
+}
+public enum UnicoLoadingLocalization {
+  public static let cameraWaitKey: Swift.String
+  public static func cameraWaitText(forLocaleCode code: Swift.String, uiTexts: [Swift.String : Swift.String]? = nil) -> Swift.String
 }
 public protocol NetworkConfigurable {
   var baseURL: Foundation.URL { get }
@@ -486,6 +523,8 @@ extension UnicoSdkBase.Requestable {
   public func urlRequest(with config: any UnicoSdkBase.NetworkConfigurable) throws -> Foundation.URLRequest
 }
 extension UnicoSdkBase.FeatureFlagDataSourceFetcherError : Swift.Hashable {}
+extension UnicoSdkBase.UnicoLoadingStyle : Swift.Equatable {}
+extension UnicoSdkBase.UnicoLoadingStyle : Swift.Hashable {}
 extension UnicoSdkBase.Features : Swift.Hashable {}
 extension UnicoSdkBase.Features : Swift.RawRepresentable {}
 extension UnicoSdkBase.HTTPMethodType : Swift.Equatable {}
