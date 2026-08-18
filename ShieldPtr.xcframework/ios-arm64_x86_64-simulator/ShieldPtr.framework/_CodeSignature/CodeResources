@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ShieldPtr-Swift.h</key>
 		<data>
-		1pQ1sDtbgxYY+e7qoCEnes7xtlw=
+		7usCxSWlfxj7w5f0D1Pd/pFt43g=
 		</data>
 		<key>Headers/ShieldPtr.h</key>
 		<data>
@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tDtog0gRelxguolepdVP+PHUFrQ=
+		CFGlnK+mXTqdmA87Y2LHY0vHk14=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		jJ3D93rF89yxi28mF3QKKeff/5o=
+		GCMcy/YQLhosgRnfGQZawGcLBqE=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		hq0kMbjrI7RMKOU7i+7/ReU4wWs=
+		wYdJnJgVNqsJGjinppIVKuFfCYE=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		TPOkTP1xnFZzZLZlZIUnCvbxAtU=
+		6N0xOy5pvoVc8P9msSOeSqWE0ro=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		hq0kMbjrI7RMKOU7i+7/ReU4wWs=
+		wYdJnJgVNqsJGjinppIVKuFfCYE=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uz5qr+RGIlp5dxRLTuxalNbHjqA=
+		e+1fuYqmzjNgdUwq+mxabSkYlwQ=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		l4GdUWFrNVYhcTFOpnqrjz81VWE=
+		jVwnc2zSOZPLhLi9ENNZ5sf3zCo=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		A23JWpyU8nioXAL1qdcQHTl3dKk=
+		9+uqd43tMkCkpIT46wzBpQ4oZmg=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Y1UvfEoLpJFJqBswt6K2lig0fDo=
+		Se3ZQ+cQNyk8o6oGDicMEDSclP0=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		A23JWpyU8nioXAL1qdcQHTl3dKk=
+		9+uqd43tMkCkpIT46wzBpQ4oZmg=
 		</data>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		tiYoDPdAR2n3xn15FI4Qe96qevY=
+		8h612t6CHXjFNuy/keuoLFup+yo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SiqqWAWNOBuucGP6FIuTej61m/LsgjDyHtwuCHFtTgE=
+			ARKCkQ11vhwwwoPABx/ScnhCP5z7p4zusqBVu1CqB5g=
 			</data>
 		</dict>
 		<key>Headers/ShieldPtr.h</key>
@@ -85,70 +85,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BR7QbDFYZgnTx/BNUQ1taME01UthQXOjkK8J7E0TQWU=
+			94QjC/fkAtBFXKG/wwGhkUKzWOiWFoAkIN+BsZMSBNY=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jH3nXqK1UVkIo0vRVq97+GUhwSN36abvqaC84NmjCc0=
+			CAkNhPTnhUo0zNW+O081MQ+UJ4ZN2qBUMF/Y/bcmws4=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9FqlR7hcSNzDn+i1+P3IzF9NHs1L3ZhmX9H1wzU30AI=
+			KoCkaHCAQ2l8fXr6p9ZpjxmASTEtj9qmtgJ6THEpH+c=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jH3nXqK1UVkIo0vRVq97+GUhwSN36abvqaC84NmjCc0=
+			CAkNhPTnhUo0zNW+O081MQ+UJ4ZN2qBUMF/Y/bcmws4=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zeo0eomCnjY8bIURkgL7nWON5w63SIBGMEB7A36yWTc=
+			9FcD0tvY/Qf3n6QZjGqRTFQ4D178xGSr3/NX/tpDJPU=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ev0S43XHV89LSO5Naqg5eG8au1xlKkxSKsGXlliYb1k=
+			e7C9X+dV4Jr/nAg0YAiDXpoy4duaf3lFlRSB25SLbIk=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JoxBJeucehtFP1WBVQzDJk00DE79e3LIO2BLDLQDt8g=
+			GUN22o8DJwUCnqlZSYZwgOhn1U2CWBopnpPlodpSWw8=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BZ3F43R9/l0EtG65g1bIMdWwuDr4aKIaOufoEoIhPUE=
+			g7AvZyqzCbS3uQ3wFUQfPXdUD8hqxz0C6Mqr9D9ywAE=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JoxBJeucehtFP1WBVQzDJk00DE79e3LIO2BLDLQDt8g=
+			GUN22o8DJwUCnqlZSYZwgOhn1U2CWBopnpPlodpSWw8=
 			</data>
 		</dict>
 		<key>Modules/ShieldPtr.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RxA4I/1aR0y6At6UWLyZU6yvNSZ53ELR1x+/cheORTE=
+			Zn5GnSuqGy41CKpdVjAg2mdTGSBS0djTFmbSc8eVPAs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

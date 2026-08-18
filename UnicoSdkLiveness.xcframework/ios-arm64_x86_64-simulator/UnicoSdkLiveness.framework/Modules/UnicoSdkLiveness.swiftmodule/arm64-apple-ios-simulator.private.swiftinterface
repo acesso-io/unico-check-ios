@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UnicoSdkLiveness
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import DeveloperToolsSupport
 import Foundation
 import Swift
@@ -17,11 +17,15 @@ import _SwiftConcurrencyShims
 @objc public class CaptureResult : ObjectiveC.NSObject {
   @objc public var base64: Swift.String!
   @objc public var encrypted: Swift.String!
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(base64: Swift.String!, encrypted: Swift.String!)
+  #endif
   @objc deinit
 }
 public struct PrepareData : Swift.Equatable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, localeCode: Swift.String? = nil, standardizedLoadingEnabled: Swift.Bool = false)
+  #endif
   public static func == (a: UnicoSdkLiveness.PrepareData, b: UnicoSdkLiveness.PrepareData) -> Swift.Bool
 }
 extension UnicoSdkLiveness.PrepareData {
@@ -37,7 +41,9 @@ extension UnicoSdkLiveness.PrepareData {
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyLicense, b: UnicoSdkLiveness.PrepareData.DorothyLicense) -> Swift.Bool
   }
   public struct DorothyData : Swift.Equatable {
+    #if compiler(>=5.3) && $NonescapableTypes
     public init(metaTags: [UnicoSdkLiveness.PrepareData.DorothyDataMetaTag], license: UnicoSdkLiveness.PrepareData.DorothyLicense, localizationCode: UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode, rsaPublicKey: Swift.String, customerLogo: Swift.String? = nil)
+    #endif
     public static func == (a: UnicoSdkLiveness.PrepareData.DorothyData, b: UnicoSdkLiveness.PrepareData.DorothyData) -> Swift.Bool
   }
   public struct DorothyDataMetaTag : Swift.Equatable {
@@ -50,7 +56,9 @@ extension UnicoSdkLiveness.PrepareData {
   }
   public enum PrepareDataLocalizationCode : Swift.String, Swift.Equatable {
     case en, es, pt_BR
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -64,13 +72,17 @@ public struct Theme : Swift.Equatable {
 public protocol UnicoLivenessDelegate : UnicoSdkLiveness.UnicoLivenessLoggerDelegate {
   func onSuccess(livenessResult: any UnicoSdkLiveness.LivenessProviderStrategyCaptureSuccess)
   func onError(livenessError: UnicoSdkLiveness.LivenessError)
+  #if compiler(>=5.3) && $NonescapableTypes
   func onRenewKeyBody(newKeyBody: Swift.String?)
+  #endif
   func onPredict()
 }
 public protocol RenewKeyBodyUseCase {
   typealias Request = Swift.String
   typealias Response = Swift.Result<UnicoSdkLiveness.RenewKeyBodyResponseDTO, UnicoSdkLiveness.DataTransferErrors>
+  #if compiler(>=5.3) && $NonescapableTypes
   func execute(_ request: Self.Request, completionHandler: @escaping (Self.Response) -> Swift.Void)
+  #endif
 }
 public struct LivenessSessionConfig {
   public init(getToken: any UnicoSdkBase.GetToken, apiDataTransferService: any UnicoSdkBase.DataTransferService)
@@ -87,15 +99,25 @@ extension UnicoSdkLiveness.LivenessError {
   }
 }
 public protocol CoreLivenessResult {
+  #if compiler(>=5.3) && $NonescapableTypes
   var livenessImage: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var livenessCaptureId: Swift.String? { get }
+  #endif
 }
 public protocol TransactionalLiveness {
+  #if compiler(>=5.3) && $NonescapableTypes
   var transactionsId: [UnicoSdkLiveness.SessionTransactionDTO]? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var session: [Swift.String : Any]? { get }
+  #endif
 }
 public protocol BackendJWTCapableLiveness {
+  #if compiler(>=5.3) && $NonescapableTypes
   var tinyJWT: Swift.String? { get set }
+  #endif
 }
 public protocol FrontEndJWTCapableLiveness {
   var tinyJWTEnabled: Swift.Bool { get set }
@@ -104,9 +126,11 @@ public protocol FrontEndJWTCapableLiveness {
 }
 public typealias LivenessResult = UnicoSdkLiveness.BackendJWTCapableLiveness & UnicoSdkLiveness.CoreLivenessResult & UnicoSdkLiveness.FrontEndJWTCapableLiveness & UnicoSdkLiveness.TransactionalLiveness
 extension UnicoSdkLiveness.TransactionalLiveness {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var session: [Swift.String : Any]? {
     get
   }
+  #endif
 }
 extension UnicoSdkLiveness.FrontEndJWTCapableLiveness {
   public mutating func enableTinyJWT()
@@ -120,20 +144,26 @@ public protocol UnicoLivenessPrepareCameraDelegate : UnicoSdkLiveness.UnicoLiven
   func onCameraError(livenessError: UnicoSdkLiveness.LivenessError)
 }
 public struct OpenLivenessDTO {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(sdkTokenKey: Swift.String?, keyBody: Swift.String?, captureId: Swift.String?, isIntegrationCaptureFlow: Swift.Bool, maxAttempts: Swift.Int)
+  #endif
 }
 public protocol DataTransferBodyResponseDTO : Swift.Decodable, Swift.Equatable {
 }
 public struct RenewKeyBodyResponseDTO : UnicoSdkLiveness.DataTransferBodyResponseDTO {
   public var body: UnicoSdkLiveness.RenewKeyBodyResponseDTO.Body?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(body: UnicoSdkLiveness.RenewKeyBodyResponseDTO.Body? = nil)
+  #endif
   public static func == (a: UnicoSdkLiveness.RenewKeyBodyResponseDTO, b: UnicoSdkLiveness.RenewKeyBodyResponseDTO) -> Swift.Bool
   public init(from decoder: any Swift.Decoder) throws
 }
 extension UnicoSdkLiveness.RenewKeyBodyResponseDTO {
   public struct Body : UnicoSdkLiveness.DataTransferBodyResponseDTO {
     public let keyBody: Swift.String?
+    #if compiler(>=5.3) && $NonescapableTypes
     public init(keyBody: Swift.String?)
+    #endif
     public static func == (a: UnicoSdkLiveness.RenewKeyBodyResponseDTO.Body, b: UnicoSdkLiveness.RenewKeyBodyResponseDTO.Body) -> Swift.Bool
     public init(from decoder: any Swift.Decoder) throws
   }
@@ -165,25 +195,45 @@ public enum DataTransferErrors : Swift.Error {
   }
 }
 public protocol UnicoLivenessLoggerDelegate : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func onTelemetryListener(_ event: Swift.String?)
+  #endif
 }
 public protocol LivenessProviderStrategyCaptureSuccess {
   var serialize: [Swift.String : Any] { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var session: [Swift.String : Any]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var livenessCaptureId: Swift.String? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var tinyJWT: Swift.String? { get }
+  #endif
 }
 public protocol LivenessLoggerProvider {
   var name: Swift.String { get }
   var type: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var version: Swift.String? { get }
+  #endif
 }
 public protocol LivenessLogger {
+  #if compiler(>=5.3) && $NonescapableTypes
   var provider: (any UnicoSdkLiveness.LivenessLoggerProvider)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var attempts: Swift.Int? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var maxAttempts: Swift.Int? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var isLive: Swift.Bool? { get set }
+  #endif
 }
 extension UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode : Swift.Hashable {}
 extension UnicoSdkLiveness.PrepareData.PrepareDataLocalizationCode : Swift.RawRepresentable {}

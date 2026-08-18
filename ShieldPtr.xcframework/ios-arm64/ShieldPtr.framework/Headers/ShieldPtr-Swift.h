@@ -385,7 +385,7 @@ SWIFT_ENUM_FWD_DECL(NSInteger, PartnerLogLevel)
 @protocol PartnerDeviceShieldCallback;
 @protocol PartnerShieldModule;
 SWIFT_CLASS_NAMED("Configuration")
-@interface PartnerConfiguration : NSObject
+@interface PartnerConfig : NSObject
 /// set the environment, default is production
 @property (nonatomic) enum PartnerEnvironment environment;
 /// set secretKey provided by SHIELD
@@ -465,7 +465,7 @@ SWIFT_CLASS_NAMED("Shield")
 @property (nonatomic, readonly, copy) NSString * _Nonnull sessionId;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-+ (void)setUpWith:(PartnerConfiguration * _Nonnull)configuration;
++ (void)setUpWith:(PartnerConfig * _Nonnull)configuration;
 /// Returns true if an instance exists for the given siteId
 + (BOOL)isInitializedFor:(NSString * _Nonnull)siteId SWIFT_WARN_UNUSED_RESULT;
 /// Preferred accessor for multi‑instance
@@ -475,6 +475,7 @@ SWIFT_CLASS_NAMED("Shield")
 + (void)stopSDKFor:(NSString * _Nonnull)siteId;
 @end
 
+@class PartnerUserData;
 @interface PartnerShield (SWIFT_EXTENSION(ShieldPtr))
 /// Send device’s additional attributes to SHIELD
 /// \param screenName name of the screen where the function is called
@@ -500,12 +501,22 @@ SWIFT_CLASS_NAMED("Shield")
 /// \param screenName name of the screen where the function is called
 ///
 - (void)sendDeviceSignatureWithScreenName:(NSString * _Nonnull)screenName;
+/// Send device’s finger print to SHIELD
+/// \param userData screen name and optional user ID to bind to this fingerprint
+///
+- (void)sendDeviceSignatureWithUserData:(PartnerUserData * _Nonnull)userData;
 /// Send device’s finger print to SHIELD.
 /// \param screenName name of the screen where the function is called
 ///
 /// \param completionHandler handler which will be called when response or error is received.  It returns on Main Thread
 ///
 - (void)sendDeviceSignatureWithScreenName:(NSString * _Nonnull)screenName completionHandler:(void (^ _Nonnull)(void))completionHandler;
+/// Send device’s finger print to SHIELD.
+/// \param userData screen name and optional user ID to bind to this fingerprint
+///
+/// \param completionHandler handler which will be called when response or error is received.  It returns on Main Thread
+///
+- (void)sendDeviceSignatureWithUserData:(PartnerUserData * _Nonnull)userData completionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)startTrackingWithModuleName:(NSString * _Nonnull)moduleName eventName:(NSString * _Nonnull)eventName;
 - (void)stopTrackingWithModuleName:(NSString * _Nonnull)moduleName;
 @end
@@ -550,6 +561,17 @@ SWIFT_CLASS_NAMED("ShieldModuleParameters")
 @property (nonatomic, copy) NSString * _Nullable sessionId;
 @property (nonatomic, copy) NSString * _Nullable siteId;
 @property (nonatomic, copy) NSString * _Nullable secretKey;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// User data passed to <code>sendDeviceSignature</code>.
+SWIFT_CLASS_NAMED("ShieldUserData")
+@interface PartnerUserData : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull screenName;
+@property (nonatomic, readonly, copy) NSString * _Nullable userId;
+- (nonnull instancetype)initWithScreenName:(NSString * _Nonnull)screenName userId:(NSString * _Nullable)userId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithScreenName:(NSString * _Nonnull)screenName;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

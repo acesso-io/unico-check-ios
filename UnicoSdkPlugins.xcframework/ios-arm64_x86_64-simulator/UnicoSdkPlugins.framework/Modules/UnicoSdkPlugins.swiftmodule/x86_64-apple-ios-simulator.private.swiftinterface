@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UnicoSdkPlugins
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import CommonCrypto
 import Compression
 import Darwin
@@ -39,7 +39,9 @@ public enum SignatureAlgorithm : Swift.String {
   case ES256
   case ES384
   case ES512
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -143,31 +145,49 @@ public protocol SignerProtocol {
   func sign(_ signingInput: Foundation.Data) throws -> Foundation.Data
 }
 public struct Signer<KeyType> {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(signingAlgorithm: UnicoSdkPlugins.SignatureAlgorithm, key: KeyType)
+  #endif
 }
 public func base32Encode(_ data: Foundation.Data) -> Swift.String
 public func base32HexEncode(_ data: Foundation.Data) -> Swift.String
+#if compiler(>=5.3) && $NonescapableTypes
 public func base32DecodeToData(_ string: Swift.String) -> Foundation.Data?
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func base32HexDecodeToData(_ string: Swift.String) -> Foundation.Data?
+#endif
 public func base32Encode(_ array: [Swift.UInt8]) -> Swift.String
 public func base32HexEncode(_ array: [Swift.UInt8]) -> Swift.String
+#if compiler(>=5.3) && $NonescapableTypes
 public func base32Decode(_ string: Swift.String) -> [Swift.UInt8]?
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func base32HexDecode(_ string: Swift.String) -> [Swift.UInt8]?
+#endif
 extension Swift.String {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var base32DecodedData: Foundation.Data? {
     get
   }
+  #endif
   public var base32EncodedString: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public func base32DecodedString(_ encoding: Swift.String.Encoding = .utf8) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var base32HexDecodedData: Foundation.Data? {
     get
   }
+  #endif
   public var base32HexEncodedString: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public func base32HexDecodedString(_ encoding: Swift.String.Encoding = .utf8) -> Swift.String?
+  #endif
 }
 extension Foundation.Data {
   public var base32EncodedString: Swift.String {
@@ -176,27 +196,35 @@ extension Foundation.Data {
   public var base32EncodedData: Foundation.Data {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var base32DecodedData: Foundation.Data? {
     get
   }
+  #endif
   public var base32HexEncodedString: Swift.String {
     get
   }
   public var base32HexEncodedData: Foundation.Data {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var base32HexDecodedData: Foundation.Data? {
     get
   }
+  #endif
 }
 public protocol PaddingProtocol {
   func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  #if compiler(>=5.3) && $NonescapableTypes
   func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+  #endif
 }
 public enum Padding : UnicoSdkPlugins.PaddingProtocol {
   case noPadding, zeroPadding, pkcs7, pkcs5, iso78164
   public func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  #if compiler(>=5.3) && $NonescapableTypes
   public func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+  #endif
   public static func == (a: UnicoSdkPlugins.Padding, b: UnicoSdkPlugins.Padding) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -218,7 +246,9 @@ final public class AES {
     public var Nr: Swift.Int {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -265,7 +295,9 @@ public typealias CipherOperationOnBlock = (_ block: Swift.ArraySlice<Swift.UInt8
 public protocol BlockMode {
   var options: UnicoSdkPlugins.BlockModeOption { get }
   @inlinable func worker(blockSize: Swift.Int, cipherOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock, encryptionOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock) throws -> any UnicoSdkPlugins.CipherModeWorker
+  #if compiler(>=5.3) && $NonescapableTypes
   var customBlockSize: Swift.Int? { get }
+  #endif
 }
 public typealias StreamMode = UnicoSdkPlugins.BlockMode
 public typealias Key = UnicoSdkPlugins.SecureBytes
@@ -311,7 +343,9 @@ final public class GCM : UnicoSdkPlugins.BlockMode {
   }
   final public let options: UnicoSdkPlugins.BlockModeOption
   final public let customBlockSize: Swift.Int?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(iv: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: UnicoSdkPlugins.GCM.Mode = .detached)
+  #endif
   final public func worker(blockSize: Swift.Int, cipherOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock, encryptionOperation: @escaping UnicoSdkPlugins.CipherOperationOnBlock) throws -> any UnicoSdkPlugins.CipherModeWorker
   @objc deinit
 }
