@@ -29,11 +29,6 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 import zlib
-extension Swift.Array {
-  public var jsonString: Swift.String {
-    get
-  }
-}
 @objc @objcMembers public class BlockedDialog : ObjectiveC.NSObject {
   @objc final public let title: Swift.String
   @objc final public let body: Swift.String
@@ -84,7 +79,7 @@ extension Foundation.Date {
   @objc deinit
 }
 public typealias PartnerShield = ShieldPtr.Shield
-public typealias PartnerConfiguration = ShieldPtr.Configuration
+public typealias PartnerConfig = ShieldPtr.Configuration
 public typealias PartnerEnvironment = ShieldPtr.Environment
 public typealias PartnerLogLevel = ShieldPtr.LogLevel
 public typealias PartnerDeviceShieldCallback = ShieldPtr.DeviceShieldCallback
@@ -94,8 +89,9 @@ public typealias PartnerShieldCrossPlatformHelper = ShieldPtr.ShieldCrossPlatfor
 public typealias PartnerShieldCrossPlatformParams = ShieldPtr.ShieldCrossPlatformParams
 public typealias PartnerShieldModuleParameters = ShieldPtr.ShieldModuleParameters
 public typealias PartnerShieldModule = ShieldPtr.ShieldModule
+public typealias PartnerUserData = ShieldPtr.ShieldUserData
 public typealias PartnerHMACUtils = ShieldPtr.HMACUtils
-@objc(PartnerConfiguration) @objcMembers final public class Configuration : ObjectiveC.NSObject {
+@objc(PartnerConfig) @objcMembers final public class Configuration : ObjectiveC.NSObject {
   @objc final public var environment: ShieldPtr.Environment
   @objc final public let siteId: Swift.String
   @objc final public var logLevel: ShieldPtr.LogLevel
@@ -129,9 +125,18 @@ extension ShieldPtr.Shield {
   @objc final public func getErrorResponse() -> Foundation.NSError?
   @objc final public func setDeviceResultStateListener(_ isReady: (() -> Swift.Void)?)
   @objc final public func sendDeviceSignature(withScreenName screenName: Swift.String)
+  @objc final public func sendDeviceSignature(withUserData userData: ShieldPtr.ShieldUserData)
   @objc final public func sendDeviceSignature(withScreenName screenName: Swift.String, completionHandler: @escaping () -> Swift.Void)
+  @objc final public func sendDeviceSignature(withUserData userData: ShieldPtr.ShieldUserData, completionHandler: @escaping () -> Swift.Void)
   @objc final public func startTracking(moduleName: Swift.String, eventName: Swift.String)
   @objc final public func stopTracking(moduleName: Swift.String)
+}
+@objc(PartnerUserData) @objcMembers final public class ShieldUserData : ObjectiveC.NSObject {
+  @objc final public let screenName: Swift.String
+  @objc final public let userId: Swift.String?
+  @objc public init(screenName: Swift.String, userId: Swift.String?)
+  @objc convenience public init(screenName: Swift.String)
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @objc(PartnerShieldCrossPlatformHelper) @objcMembers final public class ShieldCrossPlatformHelper : ObjectiveC.NSObject {
   @objc public static func setCrossPlatformParameters(_ params: ShieldPtr.ShieldCrossPlatformParams)

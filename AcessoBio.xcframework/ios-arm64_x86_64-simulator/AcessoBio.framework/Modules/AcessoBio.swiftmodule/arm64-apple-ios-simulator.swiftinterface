@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AcessoBio
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AVFoundation
 @_exported import AcessoBio
 import CoreLocation
@@ -38,12 +38,16 @@ extension AcessoBio.DefaultLibInfoWoker : AcessoBio.LibInfoWoker {
   @objc deinit
 }
 @objc public class LivenessDTO : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(provider: AcessoBio.ProviderDTO?, maxAttempts: Swift.Int32?, attempts: Swift.Int32?, isLive: Swift.Bool?)
+  #endif
   @objc deinit
 }
 @objc public enum CreateProviderError : Swift.Int, Swift.Error {
   case undefined, kmmError
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public static var _nsErrorDomain: Swift.String {
     get
@@ -60,7 +64,9 @@ extension AcessoBio.DefaultLibInfoWoker : AcessoBio.LibInfoWoker {
   public var message: Swift.String?
   public var body: [Swift.String : Swift.String?]?
   @objc override dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(code: Swift.Int, message: Swift.String?, body: [Swift.String : Swift.String]?)
+  #endif
   @objc public func getMessage() -> Foundation.NSString
   @objc deinit
 }
@@ -70,8 +76,12 @@ extension AcessoBio.DefaultLibInfoWoker : AcessoBio.LibInfoWoker {
   @objc deinit
 }
 public protocol UnicoSecuritySDKDeviceInfo {
+  #if compiler(>=5.3) && $NonescapableTypes
   var ip: Swift.String? { get }
-  var geolocation: CoreLocation.CLLocation? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var geolocation: _LocationEssentials.CLLocation? { get }
+  #endif
 }
 public class UnicoSecuritySDK {
   public init(environment: AcessoBio.EnvironmentEnum = .PROD)
@@ -111,7 +121,9 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   case CONSENT_NOT_GIVEN_ERROR = 73740
   case ON_SUCCESS_NOT_IMPLEMENTED = 74001
   case CAPTURE_NOT_STARTED_CAPTURE_ID = 737220
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -146,23 +158,51 @@ extension AcessoBio.ErrorBio : Swift.Error {
 @objc public class UnicoCheckThemes : ObjectiveC.NSObject, AcessoBio.AcessoBioThemeDelegate {
   @objc public var defaultTheme: (any AcessoBio.AcessoBioThemeDelegate)!
   @objc public var acessoBioThemeDelegate: (any AcessoBio.AcessoBioThemeDelegate)!
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(currentTheme: Any, defaultTheme: (any AcessoBio.AcessoBioThemeDelegate)!, completion: @escaping ((any AcessoBio.AcessoBioThemeDelegate)?, Swift.String?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorBackground() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorBoxMessage() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorTextMessage() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorBackgroundTakePictureButton() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorIconTakePictureButton() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorBackgroundBottomDocument() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorTextBottomDocument() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorSilhouetteSuccess() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorSilhouetteError() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorSilhouetteNeutral() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getProgressBarColor() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getCancelButtonIconColor() -> Any!
+  #endif
   @objc deinit
 }
 extension AcessoBio.UnicoCheckThemes {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func normalizeColor(currentColor: Any!, defaultColorTheme: Any!) -> UIKit.UIColor
+  #endif
   @objc dynamic public func isValidHexStringColor(currentColor: Swift.String) -> Swift.Bool
   @objc dynamic public func convertHexSringToUIColor(currentColor: Swift.String) -> UIKit.UIColor
 }
@@ -172,7 +212,9 @@ extension AcessoBio.UnicoCheckThemes {
   public typealias OpenCompletionSuccess = ([Swift.String : Any], Swift.String?) -> Swift.Void
   public typealias OpenCompletionFailure = (AcessoBio.ErrorBio) -> Swift.Void
   public typealias OpenCompletionCameraOpened = () -> Swift.Void
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc convenience public init(viewController: UIKit.UIViewController, sdkToken: AcessoBio.SDKConfigResponseDTOAdapter, bioThemeDelegate: (any AcessoBio.AcessoBioThemeDelegate)?, environment: AcessoBio.EnvironmentEnum, hostInfo: Swift.String?, hostKey: Swift.String)
+  #endif
   @objc public func prepareCamera(localeType: AcessoBio.LocaleTypes, success: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.PrepareCompletionFailure)
   @objc public func openCamera(success: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionSuccess, failure: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionFailure, cameraOpened: @escaping AcessoBio.UnicoCheckLivenessAdapter.OpenCompletionCameraOpened)
   @objc public func getLivenessKeybody() -> Swift.String
@@ -185,9 +227,15 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessPr
 extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDelegate {
   public func onSuccess(livenessResult: any UnicoSdkLiveness.LivenessProviderStrategyCaptureSuccess)
   public func onError(livenessError: UnicoSdkLiveness.LivenessError)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func onLoggerListener(_ liveness: (any UnicoSdkLiveness.LivenessLogger)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func onRenewKeyBody(newKeyBody: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func onTelemetryListener(_ event: Swift.String?)
+  #endif
   public func onPredict()
 }
 @objc public class SuccessResult : ObjectiveC.NSObject {
@@ -201,10 +249,14 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDe
   func stopMotion() -> AcessoBio.DeviceBehaviorsDTO
 }
 @objc public protocol SAdapterProtocol {
-  @objc var nativeLocation: CoreLocation.CLLocation? { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc var nativeLocation: _LocationEssentials.CLLocation? { get set }
+  #endif
   @objc var isLocationDenied: Swift.Bool { get set }
-  @objc func updateNativeLocation(_ location: CoreLocation.CLLocation)
+  @objc func updateNativeLocation(_ location: _LocationEssentials.CLLocation)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, configAdapter: AcessoBio.SDKConfigResponseDTOAdapter?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  #endif
 }
 @objc public protocol SAdapterProtocolDelegate {
   @objc func onSuccessSDK(result: AcessoBio.SuccessResult)
@@ -214,27 +266,37 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDe
   @objc func onErrorConsent()
 }
 @objc @_hasMissingDesignatedInitializers final public class SAdapter : ObjectiveC.NSObject, AcessoBio.SAdapterProtocol {
-  @objc final public var nativeLocation: CoreLocation.CLLocation?
+  @objc final public var nativeLocation: _LocationEssentials.CLLocation?
   @objc final public var isLocationDenied: Swift.Bool
   @objc public init(viewController: UIKit.UIViewController, unicoSetup: AcessoBio.UnicoSetup)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, configAdapter: AcessoBio.SDKConfigResponseDTOAdapter?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
-  @objc final public func updateNativeLocation(_ location: CoreLocation.CLLocation)
+  #endif
+  @objc final public func updateNativeLocation(_ location: _LocationEssentials.CLLocation)
   @objc deinit
 }
 @objc public class PrepareInfo : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(externalUserId: Swift.String, useCase: Swift.String? = nil)
+  #endif
   @objc deinit
 }
 @objc public class GeolocationDTO : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(lat: Foundation.NSNumber?, lng: Foundation.NSNumber?, alt: Foundation.NSNumber?, precision: Foundation.NSNumber?, city: Swift.String?, uf: Swift.String?, country: Swift.String?, postalCode: Swift.String?, address: Swift.String?, gpsFlag: Swift.String?, mode: Swift.String?)
+  #endif
   @objc deinit
 }
 @objc public protocol SensorsWorkerFactory {
   @objc func make() -> any AcessoBio.SensorsWorker
 }
 @objc @_hasMissingDesignatedInitializers final public class UnicoSetupData : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func getHostInfo() -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func getHostKey() -> Swift.String?
+  #endif
   @objc deinit
 }
 extension AcessoBio.UnicoSetupData : Swift.Decodable {
@@ -242,7 +304,9 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
 }
 @objc final public class DefaultGetCameraResultUseCase : ObjectiveC.NSObject {
   @objc public init(key: Swift.String, keyBody: Swift.String, expires: Swift.Double, isIntegrationCaptureFlow: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, captureId: Swift.String?, utcTimeNow: Swift.Double, uuid: Swift.String, tinyJWT: Swift.String?) -> AcessoBio.CaptureResult
+  #endif
   @objc deinit
 }
 @objc public protocol SensorsDevice {
@@ -259,16 +323,23 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
   @objc public func commitErrorCallback(errorCallback: AcessoBio.ErrorCallbackDTO)
   @objc public func commitCallback(_ callback: AcessoBio.CallbackDTO)
   @objc public func commitSessionTransactionsIds(_ sessionTransactions: [[Swift.String : Any]])
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func commitLiveness(_ liveness: AcessoBio.LivenessDTO?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setCaptureId(_ captureId: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setPrepareInfo(_ prepareInfo: AcessoBio.PrepareInfo?)
+  #endif
   @objc public func commitProvider(_ provider: AcessoBio.ProviderDTO)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData, isSdkSEnabled: Swift.Bool, success: ((Swift.String) -> Swift.Void)?, failure: ((AcessoBio.ErrorBio) -> Swift.Void)?)
+  #endif
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc(ObjCFeatureFlagManager) public class FeatureFlagManagerObjCBridge : ObjectiveC.NSObject {
   @objc public static func isBackendJwtEnabled() -> Swift.Bool
-  @objc public static func isGeolocationOverrideEnabled() -> Swift.Bool
   @objc override dynamic public init()
   @objc deinit
 }
@@ -287,15 +358,21 @@ extension AcessoBio.DefaultCallbackWorker : AcessoBio.CallbackWorker {
 }
 @_inheritsConvenienceInitializers @objc public class ErrorHttp : AcessoBio.ErrorUnico {
   @objc override dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc override public init(code: Swift.Int, message: Swift.String?, body: [Swift.String : Swift.String]?)
+  #endif
   @objc deinit
 }
 @objc public class UserInteractionDTO : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(timestamp: Swift.String? = nil, camera: Swift.String? = nil, cameraVendor: Swift.String? = nil, type: Swift.String? = nil, screenBrightness: Swift.Double? = nil, lightingSensor: Swift.Double? = nil, silhouette: AcessoBio.SilhouetteDTO? = nil, video: AcessoBio.VideoDTO? = nil, imageResolution: Swift.String? = nil, isCameraTypeChanged: Swift.Bool? = nil, inferenceTime: Swift.Int32? = nil, openCameraTime: Swift.Int32? = nil, captureUserTime: Swift.Int32? = nil, connections: AcessoBio.ConnectionsDTO? = nil, behaviors: AcessoBio.BehaviorsDTO? = nil, timers: AcessoBio.TimersDTO? = nil)
+  #endif
   @objc deinit
 }
 @objc public class VideoDTO : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(width: Foundation.NSNumber? = nil, height: Foundation.NSNumber? = nil, aspectRatio: Foundation.NSNumber? = nil)
+  #endif
   public func toDomain() -> UnicoSdkLogger.Video
   @objc deinit
 }
@@ -312,16 +389,22 @@ extension AcessoBio.DefaultCallbackWorker : AcessoBio.CallbackWorker {
   @objc deinit
 }
 @objc public class BehaviorsDTO : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(face: AcessoBio.FaceBehaviorsDTO? = nil, device: AcessoBio.DeviceBehaviorsDTO? = nil)
+  #endif
   @objc deinit
 }
 @objc public class FaceBehaviorsDTO : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(blinks: Foundation.NSNumber? = nil, pitch: [AcessoBio.SensorValuesDTO]? = nil, roll: [AcessoBio.SensorValuesDTO]? = nil, yaw: [AcessoBio.SensorValuesDTO]? = nil)
+  #endif
   public func toDomain() -> UnicoSdkLogger.FaceBehavior
   @objc deinit
 }
 @objc public class DeviceBehaviorsDTO : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(accelerometers: AcessoBio.AccelerometerDeviceBehaviorDTO? = nil, pitch: [AcessoBio.SensorValuesDTO]? = nil, roll: [AcessoBio.SensorValuesDTO]? = nil, yaw: [AcessoBio.SensorValuesDTO]? = nil)
+  #endif
   public func toDomain() -> UnicoSdkLogger.DeviceBehavior
   @objc deinit
 }
@@ -341,7 +424,9 @@ extension AcessoBio.DefaultCallbackWorker : AcessoBio.CallbackWorker {
 @objc @_hasMissingDesignatedInitializers final public class DefaultProviderFactory : ObjectiveC.NSObject {
   @objc public enum Source : Swift.Int {
     case memory
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -356,9 +441,11 @@ public protocol Cancellable {
   func cancel()
 }
 @objc @_hasMissingDesignatedInitializers public class SDKConfigResponseDTOAdapter : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var uiTexts: [Swift.String : Swift.String]? {
     @objc get
   }
+  #endif
   @objc public var geolocationEnabled: Swift.Bool {
     @objc get
   }
@@ -410,16 +497,26 @@ public protocol Cancellable {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class DocumentResult : AcessoBio.CaptureResult {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc override public init(base64: Swift.String!, encrypted: Swift.String!)
+  #endif
   @objc deinit
 }
 @objc public protocol UnicoSetupProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, environment: AcessoBio.EnvironmentEnum, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func getSdkTokenObject() -> AcessoBio.SDKConfigResponseDTOAdapter?
+  #endif
 }
 @objc @_inheritsConvenienceInitializers public class UnicoSetup : ObjectiveC.NSObject, AcessoBio.UnicoSetupProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setupSDK(unicoSetupData: AcessoBio.UnicoSetupData, localeTypes: AcessoBio.LocaleTypes, environment: AcessoBio.EnvironmentEnum, completion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getSdkTokenObject() -> AcessoBio.SDKConfigResponseDTOAdapter?
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }
@@ -432,24 +529,36 @@ public protocol Cancellable {
   @objc optional func getHostInfo() -> Swift.String
 }
 @objc public class CallbackDTO : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(callback: Swift.String? = nil, attempts: AcessoBio.AttemptsDTO? = nil, totalTime: Foundation.NSNumber? = nil, geolocation: AcessoBio.GeolocationDTO? = nil, deviceBehavior: AcessoBio.DeviceBehaviorsDTO? = nil)
+  #endif
   @objc deinit
 }
 @objc public class AttemptsDTO : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(uuid: Swift.String? = nil)
+  #endif
   @objc deinit
 }
 @objc public class SuccessCallbackDTO : AcessoBio.CallbackDTO {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(callback: Swift.String? = nil, attempts: AcessoBio.AttemptsDTO? = nil, totalTime: Foundation.NSNumber? = nil, jwtWeight: Foundation.NSNumber? = nil)
+  #endif
   @objc deinit
 }
 @objc public class ErrorCallbackDTO : AcessoBio.CallbackDTO {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(code: Foundation.NSNumber? = nil, title: Swift.String? = nil, message: Swift.String? = nil)
+  #endif
   @objc deinit
 }
 @objc public class UnicoJsonLoad : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(bundle: Foundation.Bundle?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func loadJson(jsonName: Swift.String, completion: @escaping (AcessoBio.UnicoSetupData?, AcessoBio.ErrorBio?) -> Swift.Void)
+  #endif
   @objc deinit
 }
 @objc public class OpenCameraDTO : ObjectiveC.NSObject {
@@ -458,7 +567,9 @@ public protocol Cancellable {
 }
 @objc public enum OpenCameraType : Swift.Int {
   case selfie = 0, document
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -466,7 +577,9 @@ public protocol Cancellable {
 }
 @objc public enum OpenCaptureType : Swift.Int {
   case normal = 0, documents, smart, smartlive, webapp
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -480,43 +593,77 @@ public protocol Cancellable {
   @objc public enum LogoType : Swift.Int {
     case footer
     case silhouette
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
     }
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func addLogo(location: CoreFoundation.CGPoint, type: AcessoBio.UnicoLogoImageView.LogoType) -> UIKit.UIImageView!
+  #endif
   @objc public func removeLogo()
   @objc deinit
 }
 @objc public class ProviderDTO : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(name: Swift.String, type: Swift.String, version: Swift.String?)
+  #endif
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class SelfieResult : AcessoBio.CaptureResult {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc override public init(base64: Swift.String!, encrypted: Swift.String!)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class UnicoDefaultTheme : ObjectiveC.NSObject, AcessoBio.AcessoBioThemeDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorBackground() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorBoxMessage() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorTextMessage() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorBackgroundTakePictureButton() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorIconTakePictureButton() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorBackgroundBottomDocument() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorTextBottomDocument() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorSilhouetteSuccess() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorSilhouetteError() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorSilhouetteNeutral() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getProgressBarColor() -> Any!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getCancelButtonIconColor() -> Any!
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }
 public enum SdkEnvironmentEnum : Swift.Int, Swift.Equatable, Swift.CaseIterable {
   case uat, prod, dev, notSet
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias AllCases = [AcessoBio.SdkEnvironmentEnum]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [AcessoBio.SdkEnvironmentEnum] {
@@ -541,14 +688,20 @@ extension AcessoBio.UnicoFaceCameraInteractor : AcessoBio.UnicoFaceCameraInterac
   @objc final public func stopCaptureAndSendData(screenBrightness: CoreFoundation.CGFloat, isCameraTypeChanged: Foundation.NSNumber, imageResolution: Swift.String, faceBehavior: AcessoBio.FaceBehaviorsDTO, video: AcessoBio.VideoDTO, timers: AcessoBio.TimersDTO)
 }
 @objc @_inheritsConvenienceInitializers public class UnicoErrors : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func getUnicoError(enumerated: AcessoBio.UnicoEnumsIErrors, info: Swift.String?) -> AcessoBio.ErrorBio
+  #endif
   @objc public static func getCompleteException(exception: Foundation.NSException) -> Swift.String
   @objc override dynamic public init()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class UnicoTelemetry : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func getInfo() -> Foundation.NSDictionary!
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setNewInfo(key: Swift.String!, value: Any)
+  #endif
   @objc public static func clear()
   @objc override dynamic public init()
   @objc deinit
@@ -556,18 +709,30 @@ extension AcessoBio.UnicoFaceCameraInteractor : AcessoBio.UnicoFaceCameraInterac
 @objc public class CaptureResult : ObjectiveC.NSObject {
   @objc public var base64: Swift.String!
   @objc public var encrypted: Swift.String!
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(base64: Swift.String!, encrypted: Swift.String!)
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class DefaultLoggerFactory {
   @objc deinit
 }
 @objc public protocol UnicoCameraMetadataOutputDelegate : AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var rolls: [AcessoBio.SensorValuesDTO]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var yaws: [AcessoBio.SensorValuesDTO]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var pitches: [AcessoBio.SensorValuesDTO]? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var yaw: Foundation.NSNumber? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var endDate: Foundation.Date? { get }
+  #endif
 }
 @_inheritsConvenienceInitializers @objc final public class UnicoCameraMetadataOutput : ObjectiveC.NSObject, AcessoBio.UnicoCameraMetadataOutputDelegate {
   @objc final public var rolls: [AcessoBio.SensorValuesDTO]?

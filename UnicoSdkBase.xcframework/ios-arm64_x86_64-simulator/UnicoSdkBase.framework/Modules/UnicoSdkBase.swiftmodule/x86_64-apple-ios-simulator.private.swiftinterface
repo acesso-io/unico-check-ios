@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UnicoSdkBase
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import CoreLocation.CLLocation
 import CoreLocation
 import CoreLocation/*.CLAuthorizationStatus*/
@@ -17,7 +17,9 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public protocol GeoLocation {
-  func start(handler: @escaping (Swift.Result<[CoreLocation.CLLocation], UnicoSdkBase.GeoLocationError>) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func start(handler: @escaping (Swift.Result<[_LocationEssentials.CLLocation], UnicoSdkBase.GeoLocationError>) -> Swift.Void)
+  #endif
   func stop()
 }
 public protocol FeatureFlagDataSource {
@@ -49,7 +51,9 @@ public protocol GeoIP {
   var ip: Swift.String { get }
 }
 final public class CryptedEndpoint<R> : UnicoSdkBase.Endpoint<R> {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(path: Swift.String, method: UnicoSdkBase.HTTPMethodType, headerParameters: [Swift.String : Swift.String] = [:], cryptedHeaderParameters: [Swift.String : Swift.String] = [:], bodyParametersEncodable: (any Swift.Encodable)? = nil, rsaPublicKey: Swift.String)
+  #endif
   @objc deinit
 }
 public struct CryptedRequestDTO<T> : Swift.Encodable where T : Swift.Encodable {
@@ -69,12 +73,18 @@ public enum UnicoLoadingStyle {
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class LivenessLoadingView : UIKit.UIView {
   public struct Customization {
+    #if compiler(>=5.3) && $NonescapableTypes
     public init(closeButtonColor: UIKit.UIColor?, backgroundColor: UIKit.UIColor?, progressBarColor: UIKit.UIColor?, textMessageColor: UIKit.UIColor?, textLabel: Swift.String?)
+    #endif
   }
   @_Concurrency.MainActor @preconcurrency public init(frame: CoreFoundation.CGRect = .zero, iconName: Swift.String = UnicoLoadingView.defaultIconName)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization, loadingStyle: UnicoSdkBase.UnicoLoadingStyle = .legacy, onClose: (() -> Swift.Void)? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override final public func didMoveToSuperview()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func dismiss(animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
+  #endif
   @objc deinit
 }
 public enum StandardizedLoadingPalette {
@@ -89,19 +99,29 @@ public enum StandardizedLoadingPalette {
 @objc @_Concurrency.MainActor @preconcurrency final public class UnicoLoadingView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public static let defaultIconName: Swift.String
   @_Concurrency.MainActor @preconcurrency public init(frame: CoreFoundation.CGRect = .zero, iconName: Swift.String = UnicoLoadingView.defaultIconName)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func setText(_ text: Swift.String?)
+  #endif
   @_Concurrency.MainActor @preconcurrency final public func startLoading()
   @_Concurrency.MainActor @preconcurrency final public func stopLoading()
   @_Concurrency.MainActor @preconcurrency final public func configureAsCircular()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func fadeIn(duration: Foundation.TimeInterval = 0.3, completion: (() -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func fadeOut(duration: Foundation.TimeInterval = 0.3, completion: (() -> Swift.Void)? = nil)
+  #endif
   @objc deinit
 }
 public enum UnicoLoadingLocalization {
   public static let cameraWaitKey: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func cameraWaitText(forLocaleCode code: Swift.String, uiTexts: [Swift.String : Swift.String]? = nil) -> Swift.String
+  #endif
 }
 public protocol NetworkConfigurable {
   var baseURL: Foundation.URL { get }
@@ -120,7 +140,9 @@ open class Repository<DataSource> {
   @objc deinit
 }
 public protocol UnicoDecrypt {
+  #if compiler(>=5.3) && $NonescapableTypes
   func decrypt(encoded: Swift.String?) -> Swift.String?
+  #endif
 }
 public class CryptedJSONResponseDecoder : UnicoSdkBase.ResponseDecoder {
   public init(dateDecodingStrategy: Foundation.JSONDecoder.DateDecodingStrategy = .deferredToDate, decrypt: any UnicoSdkBase.UnicoDecrypt)
@@ -128,7 +150,9 @@ public class CryptedJSONResponseDecoder : UnicoSdkBase.ResponseDecoder {
   @objc deinit
 }
 public protocol GetGeoIP {
+  #if compiler(>=5.3) && $NonescapableTypes
   func getGeoIP(completion: @escaping (Swift.Result<any UnicoSdkBase.GeoIP, any Swift.Error>) -> Swift.Void)
+  #endif
 }
 public struct CryptedResponseDTO<T> where T : Swift.Decodable {
 }
@@ -139,7 +163,9 @@ extension UnicoSdkBase.CryptedResponseDTO {
   public func decrypt(using decryptor: any UnicoSdkBase.UnicoDecrypt) throws -> T
 }
 @_hasMissingDesignatedInitializers final public class DefaultAESUnicoDecrypt : UnicoSdkBase.UnicoDecrypt {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func decrypt(encoded: Swift.String?) -> Swift.String?
+  #endif
   @objc deinit
 }
 extension UnicoSdkBase.DefaultAESUnicoDecrypt {
@@ -153,13 +179,19 @@ extension UnicoSdkBase.DefaultAESUnicoDecrypt {
 public protocol Token {
   var token: Swift.String { get }
   var sendLogIsEnable: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var geolocationsLogsIsEnabled: Swift.Bool? { get }
+  #endif
   var deviceProfilingIsEnabled: Swift.Bool { get }
   var sdkDataCollectIsEnabled: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var isMigrated: Swift.Bool? { get }
+  #endif
   var validateAt: Foundation.Date { get }
   var isValid: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var versionDataActions: [UnicoSdkBase.TokenVersionDataAction]? { get }
+  #endif
 }
 public enum TokenVersionDataAction : Swift.Equatable {
   case consoleLog(warningMessage: Swift.String)
@@ -184,7 +216,9 @@ extension Foundation.URLSessionTask : UnicoSdkBase.NetworkCancellable {
 }
 public protocol NetworkService {
   typealias CompletionHandler = (Swift.Result<Foundation.Data?, UnicoSdkBase.NetworkError>) -> Swift.Void
+  #if compiler(>=5.3) && $NonescapableTypes
   func request(endpoint: any UnicoSdkBase.Requestable, completion: @escaping Self.CompletionHandler) -> (any UnicoSdkBase.NetworkCancellable)?
+  #endif
 }
 public protocol NetworkSessionManager {
   typealias CompletionHandler = (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void
@@ -192,7 +226,9 @@ public protocol NetworkSessionManager {
 }
 public protocol NetworkErrorLogger {
   func log(request: Foundation.URLRequest)
+  #if compiler(>=5.3) && $NonescapableTypes
   func log(responseData data: Foundation.Data?, response: Foundation.URLResponse?)
+  #endif
   func log(error: any Swift.Error)
 }
 final public class DefaultNetworkService {
@@ -200,7 +236,9 @@ final public class DefaultNetworkService {
   @objc deinit
 }
 extension UnicoSdkBase.DefaultNetworkService : UnicoSdkBase.NetworkService {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func request(endpoint: any UnicoSdkBase.Requestable, completion: @escaping UnicoSdkBase.DefaultNetworkService.CompletionHandler) -> (any UnicoSdkBase.NetworkCancellable)?
+  #endif
 }
 public class DefaultNetworkSessionManager : UnicoSdkBase.NetworkSessionManager {
   public init()
@@ -210,7 +248,9 @@ public class DefaultNetworkSessionManager : UnicoSdkBase.NetworkSessionManager {
 final public class DefaultNetworkErrorLogger : UnicoSdkBase.NetworkErrorLogger {
   public init()
   final public func log(request: Foundation.URLRequest)
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func log(responseData data: Foundation.Data?, response _: Foundation.URLResponse?)
+  #endif
   final public func log(error: any Swift.Error)
   @objc deinit
 }
@@ -229,10 +269,13 @@ extension UnicoSdkBase.NetworkError {
   @objc deinit
 }
 extension Foundation.Bundle {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var shortVersionString: Swift.String? {
     get
   }
+  #endif
 }
+#if compiler(>=5.3) && $NonescapableTypes
 extension Swift.Optional {
   public enum UnwrapOptionalError : Swift.Error {
     case unwrapFailed
@@ -244,9 +287,12 @@ extension Swift.Optional {
   }
   public func unwrapOrThrow() throws -> Wrapped
 }
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 extension Swift.Optional where Wrapped == Swift.String {
   public func unwrapOrThrow() throws -> Wrapped
 }
+#endif
 extension Swift.String {
   public static var newUUID: Swift.String {
     get
@@ -281,19 +327,26 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case enableUmonitorPrepareInfo
   case enableBackendJwt
   case enableOwnID
-  case geolocationOverride
   case none
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(stringValue: Swift.String)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(intValue: Swift.Int)
+  #endif
   public typealias AllCases = [UnicoSdkBase.Features]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [UnicoSdkBase.Features] {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var intValue: Swift.Int? {
     get
   }
+  #endif
   public var rawValue: Swift.String {
     get
   }
@@ -366,7 +419,9 @@ open class RepositoryUseCase<Repository> {
   @objc deinit
 }
 public protocol GetToken {
+  #if compiler(>=5.3) && $NonescapableTypes
   func getToken(headers: UnicoSdkBase.RequestHeadersDTO, completion: @escaping (Swift.Result<any UnicoSdkBase.Token, any Swift.Error>) -> Swift.Void)
+  #endif
 }
 public protocol Cancellable {
   func cancel()
@@ -407,9 +462,11 @@ public enum DataTransferError : Swift.Error {
   case resolvedNetworkFailure(any Swift.Error)
 }
 extension UnicoSdkBase.DataTransferError {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var apiResponseError: UnicoSdkBase.APIResponseError? {
     get
   }
+  #endif
 }
 public struct APIResponseError : Swift.Decodable {
   public struct Body : Swift.Decodable {
@@ -421,10 +478,14 @@ public struct APIResponseError : Swift.Decodable {
 }
 public protocol DataTransferService {
   typealias CompletionHandler<T> = (Swift.Result<T, UnicoSdkBase.DataTransferError>) -> Swift.Void
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   func request<T, E>(with endpoint: E, completion: @escaping Self.CompletionHandler<T>) -> (any UnicoSdkBase.NetworkCancellable)? where T : Swift.Decodable, T == E.Response, E : UnicoSdkBase.ResponseRequestable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   func request<E>(with endpoint: E, completion: @escaping Self.CompletionHandler<Swift.Void>) -> (any UnicoSdkBase.NetworkCancellable)? where E : UnicoSdkBase.ResponseRequestable, E.Response == ()
+  #endif
 }
 public protocol DataTransferErrorResolver {
   func resolve(error: UnicoSdkBase.NetworkError) -> any Swift.Error
@@ -440,8 +501,12 @@ final public class DefaultDataTransferService {
   @objc deinit
 }
 extension UnicoSdkBase.DefaultDataTransferService : UnicoSdkBase.DataTransferService {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func request<T, E>(with endpoint: E, completion: @escaping UnicoSdkBase.DefaultDataTransferService.CompletionHandler<T>) -> (any UnicoSdkBase.NetworkCancellable)? where T : Swift.Decodable, T == E.Response, E : UnicoSdkBase.ResponseRequestable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func request<E>(with endpoint: E, completion: @escaping UnicoSdkBase.DefaultDataTransferService.CompletionHandler<Swift.Void>) -> (any UnicoSdkBase.NetworkCancellable)? where E : UnicoSdkBase.ResponseRequestable, E.Response == ()
+  #endif
 }
 final public class DefaultDataTransferErrorLogger : UnicoSdkBase.DataTransferErrorLogger {
   public init()
@@ -471,7 +536,9 @@ public enum HTTPMethodType : Swift.String {
   case put
   case patch
   case delete
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -499,7 +566,9 @@ public class Endpoint<R> : UnicoSdkBase.ResponseRequestable {
   final public let bodyEncoding: UnicoSdkBase.BodyEncoding
   final public let responseDecoder: any UnicoSdkBase.ResponseDecoder
   final public let timeoutInterval: Foundation.TimeInterval
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(path: Swift.String, isFullPath: Swift.Bool = false, method: UnicoSdkBase.HTTPMethodType, headerParameters: [Swift.String : Swift.String] = [:], queryParametersEncodable: (any Swift.Encodable)? = nil, queryParameters: [Swift.String : Any] = [:], bodyParametersEncodable: (any Swift.Encodable)? = nil, bodyParameters: [Swift.String : Any] = [:], bodyEncoding: UnicoSdkBase.BodyEncoding = .jsonSerializationData, responseDecoder: any UnicoSdkBase.ResponseDecoder = JSONResponseDecoder(), timeoutInterval: Foundation.TimeInterval = SdkVersionConfig.requestTimeout)
+  #endif
   @objc deinit
 }
 public protocol Requestable {
@@ -507,9 +576,13 @@ public protocol Requestable {
   var isFullPath: Swift.Bool { get }
   var method: UnicoSdkBase.HTTPMethodType { get }
   var headerParameters: [Swift.String : Swift.String] { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var queryParametersEncodable: (any Swift.Encodable)? { get }
+  #endif
   var queryParameters: [Swift.String : Any] { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var bodyParametersEncodable: (any Swift.Encodable)? { get }
+  #endif
   var bodyParameters: [Swift.String : Any] { get }
   var bodyEncoding: UnicoSdkBase.BodyEncoding { get }
   var timeoutInterval: Foundation.TimeInterval { get }

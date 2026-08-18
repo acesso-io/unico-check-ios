@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		tPrROa+5BAW75R8p4cJd/h4A+XI=
+		gMF0ceHDrBR6D8pq6nhK6LwHrLo=
 		</data>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<data>
-		Z/1Kc94fbJY+rXhtYLqQ9APiouk=
+		ZDPDIAEFXgiZ4TrW8FkC9xXZk4M=
 		</data>
 		<key>Headers/AcessoBio.h</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		iBWtsGfkf4KOU04tAoePwNi3fiI=
+		xFHSK+HyTWULxXd6tL0FS3xsqkQ=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -122,19 +122,19 @@
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		3hPIN6ccgiPriBKPu3TNLOI5Ovo=
+		YnNHQf5Qepf1IO8ll0g+se+/2II=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		G3CmPQsMSkZu9mER+HXfes6Jz/8=
+		BgQTtysd9+YMGrW6LS6uGtLEXNw=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		3hPIN6ccgiPriBKPu3TNLOI5Ovo=
+		YnNHQf5Qepf1IO8ll0g+se+/2II=
 		</data>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		DFxdi56GL0wut1alOW1FQDU6AoE=
+		YyrUdqH6RhyyyQAMq6ZhNI1WRCI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -203,14 +203,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yS9y4T82n9VvodwfyeZ3fYcS3USTek+QKH+q+kxFpYI=
+			XKyYKW5Ot8qbPFkl67GHxZk4maj4WqNjlsvylw4qS2Y=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DqMy1TuxX+19J3sSEfxkch7czeDv1XlLPBxZMOxr0sA=
+			99OXTElioI4KhCngilsrf5+hZn0GUCZLkonhL9xb4GI=
 			</data>
 		</dict>
 		<key>Headers/AcessoBio.h</key>
@@ -399,28 +399,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GaWYbaJFZwEFwcuEjLLxjmfdg84Q1vFx7w1oWF40MLE=
+			HPz8Gv8xaPM3wI8IR1rnYX/L5tro4L+xWvucWvFlnA0=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aSYT5DVgg4yz73uhvV+dyC69hT/cHiJyFRCGtGe+0mw=
+			zi/fhozeGdPljQ0SqD/jtmriz0lRkqWw6zp9iXrbLFM=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GaWYbaJFZwEFwcuEjLLxjmfdg84Q1vFx7w1oWF40MLE=
+			HPz8Gv8xaPM3wI8IR1rnYX/L5tro4L+xWvucWvFlnA0=
 			</data>
 		</dict>
 		<key>Modules/AcessoBio.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cV5hWFd1ZlxX0i+SzxMYw6JQjN+yjf2zDGyGNwV6Xoc=
+			xXIKJT/Dn5AHY65pCaY2UEIi7fgsZXF06eC9X4pUG2E=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
