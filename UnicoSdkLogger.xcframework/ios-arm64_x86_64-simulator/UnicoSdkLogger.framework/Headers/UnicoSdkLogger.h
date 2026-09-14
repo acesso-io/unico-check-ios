@@ -8,7 +8,7 @@
 
 @class USLEither<__covariant T>, USLEitherEmpty, USLKotlinNothing, USLKotlinThrowable, USLEitherError, USLEitherSuccess<T>, USLExceptionParam, USLDependencyInjection, USLDateKMM, USLDefaultLogger, USLCollectResultCompanion, USLCollectResultError, USLCollectResultSuccess<__covariant T>, USLCollectResult<__covariant T>, USLDataCollectionServiceState, USLAdditionalInfo, USLKotlinUnit, USLKotlinEnumCompanion, USLKotlinEnum<E>, USLKotlinArray<T>, USLSensorValue, USLAccelerometerDeviceBehavior, USLAppSec, USLAttempts, USLFaceBehavior, USLDeviceBehavior, USLBehaviors, USLCameraTypes, USLCameraTypesDocument, USLCameraTypesDocumentDriversLicense, USLCameraTypesDocumentDriversLicenseBack, USLCameraTypesDocumentDriversLicenseFront, USLCameraTypesDocumentDriversLicenseFull, USLCameraTypesDocumentID, USLCameraTypesDocumentIDBack, USLCameraTypesDocumentIDFront, USLCameraTypesDocumentNewID, USLCameraTypesDocumentNewIDBack, USLCameraTypesDocumentNewIDFront, USLCameraTypesDocumentOther, USLCameraTypesDocumentRegistration, USLCameraTypesSelfie, USLCameraTypesSelfieDefault, USLCameraTypesSelfieLiveness, USLCameraTypesSelfieSmart, USLSilhouette, USLImage, USLJwtInfo, USLVideo, USLTimers, USLConnections, USLProvider, USLLiveness, USLCapture, USLOSTypes, USLDeviceInfo, USLErrorSDK, USLExtra, USLGeolocation, USLInfoValue, USLIInfo, USLOriginTypes, USLOther, USLPlatformTypes, USLSessionTransactionsId, USLSize, USLKtor_client_coreHttpRequestData, USLKtor_client_coreHttpResponseData, USLKtor_client_coreHttpClient, USLKtor_client_coreHttpClientEngineConfig, USLKotlinx_coroutines_coreCoroutineDispatcher, USLKotlinException, USLKotlinRuntimeException, USLKotlinIllegalStateException, USLKtor_httpUrl, USLKtor_httpHttpMethod, USLKtor_httpOutgoingContent, USLKtor_httpHttpStatusCode, USLKtor_utilsGMTDate, USLKtor_httpHttpProtocolVersion, USLKtor_client_coreHttpClientConfig<T>, USLKtor_eventsEvents, USLKtor_client_coreHttpReceivePipeline, USLKtor_client_coreHttpRequestPipeline, USLKtor_client_coreHttpResponsePipeline, USLKtor_client_coreHttpSendPipeline, USLKtor_client_coreProxyConfig, USLKotlinAbstractCoroutineContextElement, USLKotlinx_coroutines_coreCoroutineDispatcherKey, USLKtor_httpUrlCompanion, USLKtor_httpURLProtocol, USLKtor_httpHttpMethodCompanion, USLKtor_utilsAttributeKey<T>, USLKtor_httpContentType, USLKotlinCancellationException, USLKtor_httpHttpStatusCodeCompanion, USLKtor_utilsGMTDateCompanion, USLKtor_utilsWeekDay, USLKtor_utilsMonth, USLKtor_httpHttpProtocolVersionCompanion, USLKtor_eventsEventDefinition<T>, USLKtor_utilsPipelinePhase, USLKtor_utilsPipeline<TSubject, TContext>, USLKtor_client_coreHttpReceivePipelinePhases, USLKtor_client_coreHttpResponse, USLKtor_client_coreHttpRequestPipelinePhases, USLKtor_client_coreHttpRequestBuilder, USLKtor_client_coreHttpResponsePipelinePhases, USLKtor_client_coreHttpResponseContainer, USLKtor_client_coreHttpClientCall, USLKtor_client_coreHttpSendPipelinePhases, USLKotlinAbstractCoroutineContextKey<B, E>, USLKtor_httpURLProtocolCompanion, USLKtor_httpHeaderValueParam, USLKtor_httpHeaderValueWithParametersCompanion, USLKtor_httpHeaderValueWithParameters, USLKtor_httpContentTypeCompanion, USLKtor_utilsWeekDayCompanion, USLKtor_utilsMonthCompanion, USLKtor_httpHeadersBuilder, USLKtor_client_coreHttpRequestBuilderCompanion, USLKtor_httpURLBuilder, USLKtor_utilsTypeInfo, USLKtor_client_coreHttpClientCallCompanion, USLKotlinx_coroutines_coreAtomicDesc, USLKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, USLKtor_ioMemory, USLKtor_ioChunkBuffer, USLKtor_ioBuffer, USLKotlinByteArray, USLKtor_ioByteReadPacket, USLKtor_utilsStringValuesBuilderImpl, USLKtor_httpURLBuilderCompanion, USLKotlinx_coroutines_coreAtomicOp<__contravariant T>, USLKotlinx_coroutines_coreOpDescriptor, USLKotlinx_coroutines_coreLockFreeLinkedListNode, USLKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, USLKtor_ioMemoryCompanion, USLKtor_ioBufferCompanion, USLKtor_ioChunkBufferCompanion, USLKotlinByteIterator, USLKtor_ioInputCompanion, USLKtor_ioInput, USLKtor_ioByteReadPacketCompanion, USLKotlinKTypeProjection, USLKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, USLKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>, USLKotlinKVariance, USLKotlinKTypeProjectionCompanion;
 
-@protocol USLUseCase, USLKotlinKClass, USLInjector, USLLogProvider, USLKotlinComparable, USLDataCollectionService, USLLogProviderRepository, USLMapToJsonUseCase, USLKtor_client_coreHttpClientEngine, USLBaseCameraTypes, USLAddProviderUseCase, USLGetLogUseCase, USLSetAppIdentifierUseCase, USLSetLogAppSecUseCase, USLSetLogAttemptsUseCase, USLSetLogCallbackUseCase, USLSetLogCameraTypeUseCase, USLSetLogCameraUseCase, USLSetLogCaptureUseCase, USLSetLogDeviceInfoUseCase, USLSetLogDomainUseCase, USLSetLogErrorSdkUseCase, USLSetExtraDataUseCase, USLSetLogGeolocationUseCase, USLSetLogIInfoUseCase, USLSetLogOriginUseCase, USLSetLogOthersUseCase, USLSetLogPlataformUseCase, USLSetLogSdkSessionIdUseCase, USLSetLogSessionIdUseCase, USLSetLogSessionTransactionsIdsUseCase, USLSetLogStatusUseCase, USLSetLogTelemetryEventsUseCase, USLSetLogVersionUseCase, USLSetShieldSessionIdUseCase, USLSetUuidUseCase, USLKotlinKDeclarationContainer, USLKotlinKAnnotatedElement, USLKotlinKClassifier, USLKotlinIterator, USLKtor_client_coreHttpClientEngineCapability, USLKotlinCoroutineContext, USLKotlinx_coroutines_coreCoroutineScope, USLKtor_ioCloseable, USLKtor_httpHeaders, USLKotlinx_coroutines_coreJob, USLKtor_utilsAttributes, USLKotlinCoroutineContextKey, USLKotlinCoroutineContextElement, USLKotlinContinuation, USLKotlinContinuationInterceptor, USLKotlinx_coroutines_coreRunnable, USLKtor_httpParameters, USLKotlinMapEntry, USLKtor_utilsStringValues, USLKotlinx_coroutines_coreChildHandle, USLKotlinx_coroutines_coreChildJob, USLKotlinx_coroutines_coreDisposableHandle, USLKotlinSequence, USLKotlinx_coroutines_coreSelectClause0, USLKtor_client_coreHttpClientPlugin, USLKotlinSuspendFunction2, USLKotlinx_coroutines_coreParentJob, USLKotlinx_coroutines_coreSelectInstance, USLKotlinSuspendFunction0, USLKotlinFunction, USLKtor_httpHttpMessage, USLKtor_ioByteReadChannel, USLKtor_httpHttpMessageBuilder, USLKtor_client_coreHttpRequest, USLKtor_ioReadSession, USLKotlinSuspendFunction1, USLKotlinAppendable, USLKtor_utilsStringValuesBuilder, USLKtor_httpParametersBuilder, USLKotlinKType, USLKtor_ioObjectPool;
+@protocol USLUseCase, USLKotlinKClass, USLInjector, USLDeviceProfiling, USLLogProvider, USLKotlinComparable, USLDataCollectionService, USLLogProviderRepository, USLMapToJsonUseCase, USLKtor_client_coreHttpClientEngine, USLBaseCameraTypes, USLAddProviderUseCase, USLGetLogUseCase, USLSetAppIdentifierUseCase, USLSetLogAppSecUseCase, USLSetLogAttemptsUseCase, USLSetLogCallbackUseCase, USLSetLogCameraTypeUseCase, USLSetLogCameraUseCase, USLSetLogCaptureUseCase, USLSetLogDeviceInfoUseCase, USLSetLogDomainUseCase, USLSetLogErrorSdkUseCase, USLSetExtraDataUseCase, USLSetLogGeolocationUseCase, USLSetLogIInfoUseCase, USLSetLogOriginUseCase, USLSetLogOthersUseCase, USLSetLogPlataformUseCase, USLSetLogSdkSessionIdUseCase, USLSetLogSessionTransactionsIdsUseCase, USLSetLogStatusUseCase, USLSetLogTelemetryEventsUseCase, USLSetLogVersionUseCase, USLSetShieldSessionIdUseCase, USLSetUuidUseCase, USLKotlinKDeclarationContainer, USLKotlinKAnnotatedElement, USLKotlinKClassifier, USLKotlinIterator, USLKtor_client_coreHttpClientEngineCapability, USLKotlinCoroutineContext, USLKotlinx_coroutines_coreCoroutineScope, USLKtor_ioCloseable, USLKtor_httpHeaders, USLKotlinx_coroutines_coreJob, USLKtor_utilsAttributes, USLKotlinCoroutineContextKey, USLKotlinCoroutineContextElement, USLKotlinContinuation, USLKotlinContinuationInterceptor, USLKotlinx_coroutines_coreRunnable, USLKtor_httpParameters, USLKotlinMapEntry, USLKtor_utilsStringValues, USLKotlinx_coroutines_coreChildHandle, USLKotlinx_coroutines_coreChildJob, USLKotlinx_coroutines_coreDisposableHandle, USLKotlinSequence, USLKotlinx_coroutines_coreSelectClause0, USLKtor_client_coreHttpClientPlugin, USLKotlinSuspendFunction2, USLKotlinx_coroutines_coreParentJob, USLKotlinx_coroutines_coreSelectInstance, USLKotlinSuspendFunction0, USLKotlinFunction, USLKtor_httpHttpMessage, USLKtor_ioByteReadChannel, USLKtor_httpHttpMessageBuilder, USLKtor_client_coreHttpRequest, USLKtor_ioReadSession, USLKotlinSuspendFunction1, USLKotlinAppendable, USLKtor_utilsStringValuesBuilder, USLKtor_httpParametersBuilder, USLKotlinKType, USLKtor_ioObjectPool;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -246,7 +246,7 @@ __attribute__((swift_name("DefaultLogger")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)defaultLogger __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) USLDefaultLogger *shared __attribute__((swift_name("shared")));
-- (void)build __attribute__((swift_name("build()")));
+- (void)injectDeviceProfiling:(id<USLDeviceProfiling> _Nullable)deviceProfiling __attribute__((swift_name("inject(deviceProfiling:)")));
 @end
 
 __attribute__((swift_name("Logger")))
@@ -343,7 +343,7 @@ __attribute__((swift_name("DataCollectionServiceState")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("DefaultDataCollectionService")))
 @interface USLDefaultDataCollectionService : USLBase <USLDataCollectionService>
-- (instancetype)initWithRepository:(id<USLLogProviderRepository>)repository mapToJsonUseCase:(id<USLMapToJsonUseCase>)mapToJsonUseCase httpClientEngine:(id<USLKtor_client_coreHttpClientEngine> _Nullable)httpClientEngine __attribute__((swift_name("init(repository:mapToJsonUseCase:httpClientEngine:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithRepository:(id<USLLogProviderRepository>)repository mapToJsonUseCase:(id<USLMapToJsonUseCase>)mapToJsonUseCase deviceProfiling:(id<USLDeviceProfiling> _Nullable)deviceProfiling httpClientEngine:(id<USLKtor_client_coreHttpClientEngine> _Nullable)httpClientEngine __attribute__((swift_name("init(repository:mapToJsonUseCase:deviceProfiling:httpClientEngine:)"))) __attribute__((objc_designated_initializer));
 
 /**
  * @note This method converts all Kotlin exceptions to errors.
@@ -682,6 +682,27 @@ __attribute__((swift_name("DeviceInfo")))
 @property (readonly) NSString * _Nullable systemPatch __attribute__((swift_name("systemPatch")));
 @property (readonly) NSString * _Nullable ua __attribute__((swift_name("ua")));
 @property (readonly) NSString * _Nullable vendor __attribute__((swift_name("vendor")));
+@end
+
+__attribute__((swift_name("DeviceProfiling")))
+@protocol USLDeviceProfiling
+@required
+- (NSString *)getDeviceAbis __attribute__((swift_name("getDeviceAbis()")));
+- (NSString *)getDeviceBoard __attribute__((swift_name("getDeviceBoard()")));
+- (NSString *)getDeviceBrand __attribute__((swift_name("getDeviceBrand()")));
+- (NSString *)getDeviceHardware __attribute__((swift_name("getDeviceHardware()")));
+- (NSString *)getDeviceModel __attribute__((swift_name("getDeviceModel()")));
+- (NSString *)getDeviceName __attribute__((swift_name("getDeviceName()")));
+- (NSString *)getDeviceOS __attribute__((swift_name("getDeviceOS()")));
+- (NSString *)getDeviceProduct __attribute__((swift_name("getDeviceProduct()")));
+- (NSString *)getInstalledApps __attribute__((swift_name("getInstalledApps()")));
+- (NSString *)getMemory __attribute__((swift_name("getMemory()")));
+- (NSString *)getNfc __attribute__((swift_name("getNfc()")));
+- (NSString *)getScreenResolution __attribute__((swift_name("getScreenResolution()")));
+- (NSString *)hasBiometric __attribute__((swift_name("hasBiometric()")));
+- (BOOL)hasWifi5GSupport __attribute__((swift_name("hasWifi5GSupport()")));
+- (BOOL)isUsbDebugEnabled __attribute__((swift_name("isUsbDebugEnabled()")));
+- (BOOL)isUsbDebugInProgress __attribute__((swift_name("isUsbDebugInProgress()")));
 @end
 
 __attribute__((objc_subclassing_restricted))
@@ -1071,11 +1092,6 @@ __attribute__((swift_name("SetLogSdkSessionIdUseCase")))
 @required
 @end
 
-__attribute__((swift_name("SetLogSessionIdUseCase")))
-@protocol USLSetLogSessionIdUseCase <USLUseCase>
-@required
-@end
-
 __attribute__((swift_name("SetLogSessionTransactionsIdsUseCase")))
 @protocol USLSetLogSessionTransactionsIdsUseCase <USLUseCase>
 @required
@@ -1244,13 +1260,6 @@ __attribute__((swift_name("DefaultSetLogPlataformUseCase")))
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("DefaultSetLogSdkSessionIdUseCase")))
 @interface USLDefaultSetLogSdkSessionIdUseCase : USLBase <USLSetLogSdkSessionIdUseCase>
-- (instancetype)initWithRepository:(id<USLLogProviderRepository>)repository __attribute__((swift_name("init(repository:)"))) __attribute__((objc_designated_initializer));
-- (USLBoolean * _Nullable)executeParam:(NSString * _Nullable)param __attribute__((swift_name("execute(param:)")));
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("DefaultSetLogSessionIdUseCase")))
-@interface USLDefaultSetLogSessionIdUseCase : USLBase <USLSetLogSessionIdUseCase>
 - (instancetype)initWithRepository:(id<USLLogProviderRepository>)repository __attribute__((swift_name("init(repository:)"))) __attribute__((objc_designated_initializer));
 - (USLBoolean * _Nullable)executeParam:(NSString * _Nullable)param __attribute__((swift_name("execute(param:)")));
 @end

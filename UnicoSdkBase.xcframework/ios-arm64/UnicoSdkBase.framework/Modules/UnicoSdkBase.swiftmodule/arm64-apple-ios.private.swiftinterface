@@ -79,7 +79,7 @@ public enum UnicoLoadingStyle {
   }
   @_Concurrency.MainActor @preconcurrency public init(frame: CoreFoundation.CGRect = .zero, iconName: Swift.String = UnicoLoadingView.defaultIconName)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization, loadingStyle: UnicoSdkBase.UnicoLoadingStyle = .legacy, onClose: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency final public func addViewOn(view: UIKit.UIView, customization: UnicoSdkBase.LivenessLoadingView.Customization, loadingStyle: UnicoSdkBase.UnicoLoadingStyle = .legacy, showModalBackdrop: Swift.Bool = true, onClose: (() -> Swift.Void)? = nil)
   #endif
   @_Concurrency.MainActor @preconcurrency @objc override final public func didMoveToSuperview()
   #if compiler(>=5.3) && $NonescapableTypes
@@ -95,6 +95,7 @@ public enum StandardizedLoadingPalette {
   public static let silhouetteSuccess: UIKit.UIColor
   public static let boxMessage: UIKit.UIColor
   public static let retryButton: UIKit.UIColor
+  public static let modalBackdrop: UIKit.UIColor
 }
 @objc @_Concurrency.MainActor @preconcurrency final public class UnicoLoadingView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public static let defaultIconName: Swift.String
@@ -108,7 +109,7 @@ public enum StandardizedLoadingPalette {
   #endif
   @_Concurrency.MainActor @preconcurrency final public func startLoading()
   @_Concurrency.MainActor @preconcurrency final public func stopLoading()
-  @_Concurrency.MainActor @preconcurrency final public func configureAsCircular()
+  @_Concurrency.MainActor @preconcurrency final public func configureAsCircular(showModalBackdrop: Swift.Bool = true)
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func fadeIn(duration: Foundation.TimeInterval = 0.3, completion: (() -> Swift.Void)? = nil)
   #endif
@@ -326,7 +327,7 @@ public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.
   case consentScreenV2ShortLived
   case enableUmonitorPrepareInfo
   case enableBackendJwt
-  case enableOwnID
+  case immersiveExperience
   case none
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
