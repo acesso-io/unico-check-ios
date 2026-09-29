@@ -384,7 +384,6 @@ SWIFT_PROTOCOL("_TtP9AcessoBio21CreateProviderUseCase_")
 @class SuccessCallbackDTO;
 @class ErrorCallbackDTO;
 @class LivenessDTO;
-@class PrepareInfo;
 @class ProviderDTO;
 @class UnicoSetupData;
 @class ErrorBio;
@@ -401,7 +400,6 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 - (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
 - (void)commitLiveness:(LivenessDTO * _Nullable)liveness;
 - (void)setCaptureId:(NSString * _Nullable)captureId;
-- (void)setPrepareInfo:(PrepareInfo * _Nullable)prepareInfo;
 - (void)commitProvider:(ProviderDTO * _Nonnull)provider;
 /// Send storage data signaling whether or not it is an <code>attempt</code>.
 /// \param saveAttempt Indicates whether should or not store a capture attempt .
@@ -868,6 +866,15 @@ SWIFT_CLASS("_TtC9AcessoBio21UnicoNetworkingModule")
 @interface UnicoNetworkingModule : NSObject
 - (BOOL)isConnectedToNetwork SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_CLASS("_TtC9AcessoBio8UnicoSDK")
+@interface UnicoSDK : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
++ (void)initializeSDKWithConfig:(id <AcessoBioConfigDataSource> _Nonnull)config;
++ (void)initializeSDKWithConfig:(id <AcessoBioConfigDataSource> _Nonnull)config environment:(EnvironmentEnum)environment;
++ (void)startSilentValidationWithPrepareInfo:(PrepareInfo * _Nonnull)prepareInfo errorCompletion:(void (^ _Nonnull)(ErrorBio * _Nullable))errorCompletion;
 @end
 
 SWIFT_PROTOCOL("_TtP9AcessoBio18UnicoSetupProtocol_")
@@ -1312,7 +1319,6 @@ SWIFT_PROTOCOL("_TtP9AcessoBio21CreateProviderUseCase_")
 @class SuccessCallbackDTO;
 @class ErrorCallbackDTO;
 @class LivenessDTO;
-@class PrepareInfo;
 @class ProviderDTO;
 @class UnicoSetupData;
 @class ErrorBio;
@@ -1329,7 +1335,6 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 - (void)commitSessionTransactionsIds:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)sessionTransactions;
 - (void)commitLiveness:(LivenessDTO * _Nullable)liveness;
 - (void)setCaptureId:(NSString * _Nullable)captureId;
-- (void)setPrepareInfo:(PrepareInfo * _Nullable)prepareInfo;
 - (void)commitProvider:(ProviderDTO * _Nonnull)provider;
 /// Send storage data signaling whether or not it is an <code>attempt</code>.
 /// \param saveAttempt Indicates whether should or not store a capture attempt .
@@ -1796,6 +1801,15 @@ SWIFT_CLASS("_TtC9AcessoBio21UnicoNetworkingModule")
 @interface UnicoNetworkingModule : NSObject
 - (BOOL)isConnectedToNetwork SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_CLASS("_TtC9AcessoBio8UnicoSDK")
+@interface UnicoSDK : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
++ (void)initializeSDKWithConfig:(id <AcessoBioConfigDataSource> _Nonnull)config;
++ (void)initializeSDKWithConfig:(id <AcessoBioConfigDataSource> _Nonnull)config environment:(EnvironmentEnum)environment;
++ (void)startSilentValidationWithPrepareInfo:(PrepareInfo * _Nonnull)prepareInfo errorCompletion:(void (^ _Nonnull)(ErrorBio * _Nullable))errorCompletion;
 @end
 
 SWIFT_PROTOCOL("_TtP9AcessoBio18UnicoSetupProtocol_")

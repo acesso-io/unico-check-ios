@@ -325,7 +325,6 @@ public protocol FeaturesRepresentable {
 public enum Features : Swift.String, Swift.CaseIterable, Swift.Encodable, Swift.CodingKey, Swift.Equatable {
   case dorothyTelemetryEnabled
   case consentScreenV2ShortLived
-  case enableUmonitorPrepareInfo
   case enableBackendJwt
   case immersiveExperience
   case none

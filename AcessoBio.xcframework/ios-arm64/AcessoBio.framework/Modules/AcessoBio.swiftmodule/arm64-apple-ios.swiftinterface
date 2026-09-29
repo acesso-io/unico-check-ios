@@ -329,9 +329,6 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setCaptureId(_ captureId: Swift.String?)
   #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func setPrepareInfo(_ prepareInfo: AcessoBio.PrepareInfo?)
-  #endif
   @objc public func commitProvider(_ provider: AcessoBio.ProviderDTO)
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func send(_ saveAttempt: Swift.Bool, setupData: AcessoBio.UnicoSetupData, isSdkSEnabled: Swift.Bool, success: ((Swift.String) -> Swift.Void)?, failure: ((AcessoBio.ErrorBio) -> Swift.Void)?)
@@ -527,6 +524,17 @@ public protocol Cancellable {
   @objc optional func getProjectId() -> Swift.String
   @objc optional func getMobileSdkAppId() -> Swift.String
   @objc optional func getHostInfo() -> Swift.String
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class UnicoSDK : ObjectiveC.NSObject {
+  @objc public static func initializeSDK(config: any AcessoBio.AcessoBioConfigDataSource)
+  @objc public static func initializeSDK(config: any AcessoBio.AcessoBioConfigDataSource, environment: AcessoBio.EnvironmentEnum)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func startSilentValidation(prepareInfo: AcessoBio.PrepareInfo, errorCompletion: @escaping (AcessoBio.ErrorBio?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func startSilentValidation(prepareInfo: AcessoBio.PrepareInfo, completion: @escaping (Swift.Result<Swift.Void, AcessoBio.ErrorBio>) -> Swift.Void)
+  #endif
+  @objc deinit
 }
 @objc public class CallbackDTO : ObjectiveC.NSObject {
   #if compiler(>=5.3) && $NonescapableTypes
