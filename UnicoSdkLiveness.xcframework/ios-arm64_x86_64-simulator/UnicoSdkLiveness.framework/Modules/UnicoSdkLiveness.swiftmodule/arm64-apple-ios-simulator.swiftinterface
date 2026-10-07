@@ -24,7 +24,7 @@ import _SwiftConcurrencyShims
 }
 public struct PrepareData : Swift.Equatable {
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, localeCode: Swift.String? = nil, standardizedLoadingEnabled: Swift.Bool = false)
+  public init(engine: UnicoSdkLiveness.PrepareData.Engine, theme: UnicoSdkLiveness.Theme, enableLogo: Swift.Bool, uiTexts: [Swift.String : Swift.String]?, localeCode: Swift.String? = nil, standardizedLoadingEnabled: Swift.Bool = false, isCapsuleFlow: Swift.Bool = false)
   #endif
   public static func == (a: UnicoSdkLiveness.PrepareData, b: UnicoSdkLiveness.PrepareData) -> Swift.Bool
 }
@@ -85,7 +85,7 @@ public protocol RenewKeyBodyUseCase {
   #endif
 }
 public struct LivenessSessionConfig {
-  public init(getToken: any UnicoSdkBase.GetToken, apiDataTransferService: any UnicoSdkBase.DataTransferService)
+  public init(getToken: any UnicoSdkBase.GetToken, apiDataTransferService: any UnicoSdkBase.DataTransferService, sdkSessionId: Swift.String)
 }
 public struct LivenessError : Swift.Error, Swift.Equatable {
   public let code: Swift.Int

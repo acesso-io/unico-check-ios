@@ -7,5 +7,4 @@ framework module USDK {
 
 module USDK.Swift {
   header "USDK-Swift.h"
-  requires objc
 }

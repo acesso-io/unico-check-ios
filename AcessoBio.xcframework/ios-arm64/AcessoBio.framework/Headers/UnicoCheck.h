@@ -36,6 +36,7 @@
 @protocol UnicoSetupProtocol;
 @class GeolocationDTO;
 @class UnicoCheckLivenessAdapter;
+@class UnicoIDSmartOptions;
 @protocol SAdapterProtocol;
 @protocol SAdapterProtocolDelegate;
 
@@ -114,6 +115,7 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 @property (nonatomic, assign) LocaleTypes localeTypes;
 @property (nonatomic, assign) EnvironmentEnum environment;
 @property (nonatomic, retain) NSString *_Nullable webAppToken;
+@property (nonatomic, retain) UnicoIDSmartOptions *_Nullable idSmartOptions;
 
 #pragma mark - Config
 

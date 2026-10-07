@@ -415,7 +415,7 @@ SWIFT_CLASS("_TtC9AcessoBio10DataLogger")
 
 SWIFT_CLASS("_TtC9AcessoBio29DefaultGetCameraResultUseCase")
 @interface DefaultGetCameraResultUseCase : NSObject
-- (nonnull instancetype)initWithKey:(NSString * _Nonnull)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithKey:(NSString * _Nullable)key keyBody:(NSString * _Nonnull)keyBody expires:(double)expires isIntegrationCaptureFlow:(BOOL)isIntegrationCaptureFlow OBJC_DESIGNATED_INITIALIZER;
 - (CaptureResult * _Nonnull)execute:(NSDictionary<NSString *, id> * _Nonnull)dataToSend eventId:(NSString * _Nonnull)eventId captureId:(NSString * _Nullable)captureId utcTimeNow:(double)utcTimeNow uuid:(NSString * _Nonnull)uuid tinyJWT:(NSString * _Nullable)tinyJWT SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -549,6 +549,7 @@ SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 
 @class CLLocation;
 @protocol AcessoBioThemeDelegate;
+@class UnicoIDSmartOptions;
 @class SDKConfigResponseDTOAdapter;
 @protocol SAdapterProtocolDelegate;
 SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
@@ -556,7 +557,7 @@ SWIFT_PROTOCOL("_TtP9AcessoBio16SAdapterProtocol_")
 @property (nonatomic, strong) CLLocation * _Nullable nativeLocation;
 @property (nonatomic) BOOL isLocationDenied;
 - (void)updateNativeLocation:(CLLocation * _Nonnull)location;
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken configAdapter:(SDKConfigResponseDTOAdapter * _Nullable)configAdapter delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken idSmartOptions:(UnicoIDSmartOptions * _Nullable)idSmartOptions configAdapter:(SDKConfigResponseDTOAdapter * _Nullable)configAdapter delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 @end
 
 @class UIViewController;
@@ -566,7 +567,7 @@ SWIFT_CLASS("_TtC9AcessoBio8SAdapter")
 @property (nonatomic, strong) CLLocation * _Nullable nativeLocation;
 @property (nonatomic) BOOL isLocationDenied;
 - (nonnull instancetype)initWithViewController:(UIViewController * _Nonnull)viewController unicoSetup:(UnicoSetup * _Nonnull)unicoSetup OBJC_DESIGNATED_INITIALIZER;
-- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken configAdapter:(SDKConfigResponseDTOAdapter * _Nullable)configAdapter delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
+- (void)startWithSdkKey:(NSString * _Nullable)sdkKey locale:(LocaleTypes)locale theme:(id <AcessoBioThemeDelegate> _Nonnull)theme uiTexts:(NSDictionary<NSString *, NSString *> * _Nullable)uiTexts webAppToken:(NSString * _Nullable)webAppToken idSmartOptions:(UnicoIDSmartOptions * _Nullable)idSmartOptions configAdapter:(SDKConfigResponseDTOAdapter * _Nullable)configAdapter delegate:(id <SAdapterProtocolDelegate> _Nullable)delegate;
 - (void)updateNativeLocation:(CLLocation * _Nonnull)location;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -586,9 +587,11 @@ SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
 @interface SDKConfigResponseDTOAdapter : NSObject
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable uiTexts;
 @property (nonatomic, readonly) BOOL geolocationEnabled;
-@property (nonatomic, readonly, copy) NSString * _Nonnull key;
+@property (nonatomic, readonly, copy) NSString * _Nullable key;
 @property (nonatomic, readonly, copy) NSString * _Nonnull keyBody;
+@property (nonatomic, readonly) BOOL isCapsuleFlow;
 @property (nonatomic, readonly) BOOL enableLogo;
+/// Zero when the config did not carry it, which is the case on v3.
 @property (nonatomic, readonly) double expires;
 @property (nonatomic, readonly) BOOL isIntegrationCaptureFlow;
 @property (nonatomic, readonly) NSInteger maxAttempts;
@@ -835,6 +838,18 @@ SWIFT_PROTOCOL("_TtP9AcessoBio35UnicoFaceCameraViewControllerOutput_")
 @protocol UnicoFaceCameraViewControllerOutput
 - (void)startCapture;
 - (void)stopCapture;
+@end
+
+/// What the app supplies when it opens the camera for an IDSmart journey.
+/// <code>referenceProcessId</code> is the process the new journey takes as its reference.
+SWIFT_CLASS("_TtC9AcessoBio19UnicoIDSmartOptions")
+@interface UnicoIDSmartOptions : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull referenceProcessId;
+@property (nonatomic, readonly, copy) NSString * _Nullable useCase;
+- (nonnull instancetype)initWithReferenceProcessId:(NSString * _Nonnull)referenceProcessId useCase:(NSString * _Nullable)useCase OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithReferenceProcessId:(NSString * _Nonnull)referenceProcessId;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class NSBundle;

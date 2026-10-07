@@ -1,4 +1,3 @@
 framework module USDKResources {
   header "USDKResources-Swift.h"
-  requires objc
 }

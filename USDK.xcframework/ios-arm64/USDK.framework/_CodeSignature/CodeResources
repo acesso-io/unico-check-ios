@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		LC3FynwQ0awvB1mfahykMQCNRQ4=
+		xLVMKe8EUW48yeYm3lrbecsNL2s=
 		</data>
 		<key>Headers/ResourcesInterop.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/USDK-Swift.h</key>
 		<data>
-		efE9bsLhJJxkeOV1etaCqXQURjg=
+		fnAW8NKquNmNPCEJWYE4q7RSqwI=
 		</data>
 		<key>Headers/USDK.h</key>
 		<data>
@@ -22,31 +22,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nq5hkbAm2ITYq4JLDiHUI6poMrg=
+		ncKrD1xwZfAccCDrDr25feyzMHQ=
 		</data>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		cROl7mcm3GOSkycXv0kn03qohaA=
+		k05bEMoE2mvtZKRkC6lP8TwUwNY=
 		</data>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		y3ODfKgUxJoQkjfQMqKuY7GjsZE=
+		YVQ6eR6F9vzyahqmtknz2pLmC5w=
 		</data>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		jRn1CG7JsYmchoXVj7nmA0MMlW4=
+		Frldbh32USQZDOTn1OlDdLeQFok=
 		</data>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		y3ODfKgUxJoQkjfQMqKuY7GjsZE=
+		/4NHZZlnECxFaJ/t5g+YLCJpCKA=
 		</data>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		xVwOZwwZTOL58AMWhWuoAw55G3A=
+		cvrJ+2z1tAqx41/GHEhfYL+oU8U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		7hAtFPB4oceLu9kBrQTh/JlYvVk=
+		n7HwL1Ao6Y6ZSonyOGDFATo1F8w=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -59,7 +59,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CTM7dSXco/Eqd6XyxwerHvy13gHDW8vFtWs/5fiVt8E=
+			X63YDxB4wj4LEPlii7vq7IogPHaf2JNwhw3h7e3/jY8=
 			</data>
 		</dict>
 		<key>Headers/ResourcesInterop.h</key>
@@ -73,7 +73,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FATUXUNqFHWp8I+LJLuFNqt93iTtk4BkscGvt8dy+mc=
+			mDF7iNmeyeufFdJtGk2CRDkHH7ji4WpMp7tAHwnT/Kg=
 			</data>
 		</dict>
 		<key>Headers/USDK.h</key>
@@ -87,42 +87,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tNW+qpIY2A4AyZ7cY+JugLwW6dQskr7jBgknoMaWj0Y=
+			hR/+aCChmq4jB9vEWBmNHZYJ3fb3fUbQXl5UPYIALZk=
 			</data>
 		</dict>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D0D12NqR6eCqV8UMYUmWRAH7Im8Iv+XsnD5JhYkcfFA=
+			pTKDgih55NyMbQ/igKsaeDjKAH20B46FM/np6+zU9PQ=
 			</data>
 		</dict>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dR1G1ztwHQlSaWjvj7hhsEDxCU2788DA/W2cr+lT01c=
+			xPS37UUBbok89s1iOWJQTR10DggQplXflhuS3QfwHpE=
 			</data>
 		</dict>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D0D12NqR6eCqV8UMYUmWRAH7Im8Iv+XsnD5JhYkcfFA=
+			HfQBoL1/3PXtoDykyils3t5kbzj7Q4gChS3deayMmRQ=
 			</data>
 		</dict>
 		<key>Modules/USDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EFojYVy0/FwXGk32MWjDjMH/gb/DS1qYrkfy+urrF7U=
+			qbRH85fiKC1M0p1Bi3RWKpNYBNgupBvSi26ESVsT24k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SgbiiacpYFc/XOOIo3De69JsuUYJ5dDk5MGZuj0+Q74=
+			uoEfhdsAlORgOjd/Drb1gHNbV0LgybVyi83yLF2H44g=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
