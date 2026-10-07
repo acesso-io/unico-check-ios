@@ -243,6 +243,15 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDe
   @objc public init(processId: Swift.String)
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class UnicoIDSmartOptions : ObjectiveC.NSObject {
+  @objc final public let referenceProcessId: Swift.String
+  @objc final public let useCase: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public init(referenceProcessId: Swift.String, useCase: Swift.String?)
+  #endif
+  @objc convenience public init(referenceProcessId: Swift.String)
+  @objc deinit
+}
 @objc public protocol SensorsWorker {
   @objc func startMotion()
   @objc @discardableResult
@@ -255,7 +264,7 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDe
   @objc var isLocationDenied: Swift.Bool { get set }
   @objc func updateNativeLocation(_ location: _LocationEssentials.CLLocation)
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, configAdapter: AcessoBio.SDKConfigResponseDTOAdapter?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, idSmartOptions: AcessoBio.UnicoIDSmartOptions?, configAdapter: AcessoBio.SDKConfigResponseDTOAdapter?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
   #endif
 }
 @objc public protocol SAdapterProtocolDelegate {
@@ -270,7 +279,7 @@ extension AcessoBio.UnicoCheckLivenessAdapter : UnicoSdkLiveness.UnicoLivenessDe
   @objc final public var isLocationDenied: Swift.Bool
   @objc public init(viewController: UIKit.UIViewController, unicoSetup: AcessoBio.UnicoSetup)
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, configAdapter: AcessoBio.SDKConfigResponseDTOAdapter?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
+  @objc final public func start(sdkKey: Swift.String?, locale: AcessoBio.LocaleTypes, theme: any AcessoBio.AcessoBioThemeDelegate, uiTexts: [Swift.String : Swift.String]?, webAppToken: Swift.String?, idSmartOptions: AcessoBio.UnicoIDSmartOptions?, configAdapter: AcessoBio.SDKConfigResponseDTOAdapter?, delegate: (any AcessoBio.SAdapterProtocolDelegate)?)
   #endif
   @objc final public func updateNativeLocation(_ location: _LocationEssentials.CLLocation)
   @objc deinit
@@ -303,7 +312,9 @@ extension AcessoBio.UnicoSetupData : Swift.Decodable {
   convenience public init(from decoder: any Swift.Decoder) throws
 }
 @objc final public class DefaultGetCameraResultUseCase : ObjectiveC.NSObject {
-  @objc public init(key: Swift.String, keyBody: Swift.String, expires: Swift.Double, isIntegrationCaptureFlow: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public init(key: Swift.String?, keyBody: Swift.String, expires: Swift.Double, isIntegrationCaptureFlow: Swift.Bool)
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc final public func execute(_ dataToSend: [Swift.String : Any], eventId: Swift.String, captureId: Swift.String?, utcTimeNow: Swift.Double, uuid: Swift.String, tinyJWT: Swift.String?) -> AcessoBio.CaptureResult
   #endif
@@ -446,10 +457,15 @@ public protocol Cancellable {
   @objc public var geolocationEnabled: Swift.Bool {
     @objc get
   }
-  @objc public var key: Swift.String {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public var key: Swift.String? {
     @objc get
   }
+  #endif
   @objc public var keyBody: Swift.String {
+    @objc get
+  }
+  @objc public var isCapsuleFlow: Swift.Bool {
     @objc get
   }
   @objc public var enableLogo: Swift.Bool {

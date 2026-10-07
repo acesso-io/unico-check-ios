@@ -12,10 +12,13 @@
 #import "AcessoBioDocumentDelegate.h"
 #import "AcessoBioDocumentType.h"
 
+@class UnicoIDSmartOptions;
+
 @protocol AcessoBioCameraOpenerDelegate
 
 - (void)open:(id<AcessoBioSelfieDelegate>)delegate;
 - (void)open:(id<AcessoBioSelfieDelegate>)delegate webAppToken:(NSString *)webAppToken;
+- (void)open:(id<AcessoBioSelfieDelegate>)delegate idSmartOptions:(UnicoIDSmartOptions *)idSmartOptions;
 - (void)openDocument:(DocumentEnums)documentType delegate:(id <AcessoBioDocumentDelegate>)delegate;
 
 @end

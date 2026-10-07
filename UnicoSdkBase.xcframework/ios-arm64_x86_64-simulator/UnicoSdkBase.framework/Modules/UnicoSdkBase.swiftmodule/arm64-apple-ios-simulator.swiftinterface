@@ -56,6 +56,27 @@ final public class CryptedEndpoint<R> : UnicoSdkBase.Endpoint<R> {
   #endif
   @objc deinit
 }
+public struct UnicoMultipartEndpoint<R> : UnicoSdkBase.ResponseRequestable {
+  public typealias Response = R
+  public let path: Swift.String
+  public let isFullPath: Swift.Bool
+  public let method: UnicoSdkBase.HTTPMethodType
+  public let headerParameters: [Swift.String : Swift.String]
+  public let responseDecoder: any UnicoSdkBase.ResponseDecoder
+  public let timeoutInterval: Foundation.TimeInterval
+  public let queryParametersEncodable: (any Swift.Encodable)?
+  public let queryParameters: [Swift.String : Any]
+  public let bodyParametersEncodable: (any Swift.Encodable)?
+  public let bodyParameters: [Swift.String : Any]
+  public let bodyEncoding: UnicoSdkBase.BodyEncoding
+  public init(path: Swift.String, isFullPath: Swift.Bool = false, headerParameters: [Swift.String : Swift.String] = [:], encryptedMeta: any Swift.Encodable, container: Foundation.Data = Data(), responseDecoder: any UnicoSdkBase.ResponseDecoder = JSONResponseDecoder(), timeoutInterval: Foundation.TimeInterval = SdkVersionConfig.requestTimeout) throws
+  public func urlRequest(with networkConfig: any UnicoSdkBase.NetworkConfigurable) throws -> Foundation.URLRequest
+}
+public enum UnicoCryptedMultipartEndpoint {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func make<R>(path: Swift.String, isFullPath: Swift.Bool = false, headerParameters: [Swift.String : Swift.String] = [:], metaValue: any Swift.Encodable, rsaPublicKey: Swift.String, container: Foundation.Data = Data(), aesKey: Swift.String? = nil, aesIv: Swift.String? = nil, timeoutInterval: Foundation.TimeInterval = SdkVersionConfig.requestTimeout) throws -> UnicoSdkBase.UnicoMultipartEndpoint<R>
+  #endif
+}
 public struct CryptedRequestDTO<T> : Swift.Encodable where T : Swift.Encodable {
   public let dataValue: T
   public init(dataValue: T, endpointPrivateKey: Swift.String, endpointPrivateIv: Swift.String) throws
@@ -462,6 +483,11 @@ public enum DataTransferError : Swift.Error {
   case resolvedNetworkFailure(any Swift.Error)
 }
 extension UnicoSdkBase.DataTransferError {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var httpStatusCode: Swift.Int? {
+    get
+  }
+  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public var apiResponseError: UnicoSdkBase.APIResponseError? {
     get
