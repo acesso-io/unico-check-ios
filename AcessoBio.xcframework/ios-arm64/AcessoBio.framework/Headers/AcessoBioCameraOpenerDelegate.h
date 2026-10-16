@@ -19,7 +19,7 @@
 - (void)open:(id<AcessoBioSelfieDelegate>)delegate;
 - (void)open:(id<AcessoBioSelfieDelegate>)delegate webAppToken:(NSString *)webAppToken;
 - (void)open:(id<AcessoBioSelfieDelegate>)delegate idSmartOptions:(UnicoIDSmartOptions *)idSmartOptions;
-- (void)openDocument:(DocumentEnums)documentType delegate:(id <AcessoBioDocumentDelegate>)delegate;
+- (void)openDocument:(DocumentEnums)documentType delegate:(id <AcessoBioDocumentDelegate>)delegate __attribute__((deprecated("Document capture was discontinued. Fails immediately with error 73905 (ERROR_DOCUMENT_CAMERA) and will be removed in a future version.")));
 
 @end
 

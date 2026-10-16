@@ -20,9 +20,9 @@
 - (void)prepareSelfieCamera: (id <SelfieCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName bundle:(NSBundle *)bundle;
 - (void)prepareSelfieCamera: (id <SelfieCameraDelegate>)delegate config: (id <AcessoBioConfigDataSource>)config;
 
-- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName;
-- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName bundle:(NSBundle *)bundle;
-- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate config: (id <AcessoBioConfigDataSource>)config;
+- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName __attribute__((deprecated("Document capture was discontinued. Fails immediately with error 73905 (ERROR_DOCUMENT_CAMERA) and will be removed in a future version.")));
+- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate jsonConfigName: (NSString *)jsonConfigName bundle:(NSBundle *)bundle __attribute__((deprecated("Document capture was discontinued. Fails immediately with error 73905 (ERROR_DOCUMENT_CAMERA) and will be removed in a future version.")));
+- (void)prepareDocumentCamera: (id <DocumentCameraDelegate>)delegate config: (id <AcessoBioConfigDataSource>)config __attribute__((deprecated("Document capture was discontinued. Fails immediately with error 73905 (ERROR_DOCUMENT_CAMERA) and will be removed in a future version.")));
 
 @end
 

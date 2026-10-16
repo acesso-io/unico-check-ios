@@ -11,6 +11,7 @@
 #import "ErrorBio.h"
 @class DocumentResult;
 
+__attribute__((deprecated("Document capture was discontinued. Fails immediately with error 73905 (ERROR_DOCUMENT_CAMERA) and will be removed in a future version.")))
 @protocol AcessoBioDocumentDelegate
 
 - (void)onSuccessDocument: (DocumentResult *)result;

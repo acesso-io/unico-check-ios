@@ -446,7 +446,7 @@ SWIFT_CLASS("_TtC9AcessoBio18DeviceBehaviorsDTO")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_CLASS("_TtC9AcessoBio14DocumentResult")
+SWIFT_CLASS("_TtC9AcessoBio14DocumentResult") SWIFT_DEPRECATED_MSG("Document capture was discontinued and will be removed in a future version.")
 @interface DocumentResult : CaptureResult
 - (nonnull instancetype)initWithBase64:(NSString * _Null_unspecified)base64 encrypted:(NSString * _Null_unspecified)encrypted OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -523,15 +523,13 @@ SWIFT_CLASS("_TtC9AcessoBio13OpenCameraDTO")
 
 typedef SWIFT_ENUM(NSInteger, OpenCameraType, open) {
   OpenCameraTypeSelfie = 0,
-  OpenCameraTypeDocument = 1,
 };
 
 typedef SWIFT_ENUM(NSInteger, OpenCaptureType, open) {
   OpenCaptureTypeNormal = 0,
-  OpenCaptureTypeDocuments = 1,
-  OpenCaptureTypeSmart = 2,
-  OpenCaptureTypeSmartlive = 3,
-  OpenCaptureTypeWebapp = 4,
+  OpenCaptureTypeSmart = 1,
+  OpenCaptureTypeSmartlive = 2,
+  OpenCaptureTypeWebapp = 3,
 };
 
 SWIFT_CLASS("_TtC9AcessoBio11PrepareInfo")
@@ -703,8 +701,6 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
 - (id _Null_unspecified)getColorTextMessage SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorBackgroundTakePictureButton SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorIconTakePictureButton SWIFT_WARN_UNUSED_RESULT;
-- (id _Null_unspecified)getColorBackgroundBottomDocument SWIFT_WARN_UNUSED_RESULT;
-- (id _Null_unspecified)getColorTextBottomDocument SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteSuccess SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteError SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteNeutral SWIFT_WARN_UNUSED_RESULT;
@@ -734,8 +730,6 @@ SWIFT_CLASS("_TtC9AcessoBio17UnicoDefaultTheme")
 - (id _Null_unspecified)getColorTextMessage SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorBackgroundTakePictureButton SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorIconTakePictureButton SWIFT_WARN_UNUSED_RESULT;
-- (id _Null_unspecified)getColorBackgroundBottomDocument SWIFT_WARN_UNUSED_RESULT;
-- (id _Null_unspecified)getColorTextBottomDocument SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteSuccess SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteError SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteNeutral SWIFT_WARN_UNUSED_RESULT;
@@ -765,6 +759,8 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsERROR_MINIMUM_API = 73003,
 /// Simulator
   UnicoEnumsIErrorsERROR_SIMULATOR = 73006,
+/// Document capture was discontinued: the deprecated document API fails fast with this code.
+  UnicoEnumsIErrorsERROR_DOCUMENT_CAMERA = 73905,
 /// Network
   UnicoEnumsIErrorsNETWORK_ERROR = 73100,
 /// JSON
@@ -1396,7 +1392,7 @@ SWIFT_CLASS("_TtC9AcessoBio18DeviceBehaviorsDTO")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_CLASS("_TtC9AcessoBio14DocumentResult")
+SWIFT_CLASS("_TtC9AcessoBio14DocumentResult") SWIFT_DEPRECATED_MSG("Document capture was discontinued and will be removed in a future version.")
 @interface DocumentResult : CaptureResult
 - (nonnull instancetype)initWithBase64:(NSString * _Null_unspecified)base64 encrypted:(NSString * _Null_unspecified)encrypted OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1473,15 +1469,13 @@ SWIFT_CLASS("_TtC9AcessoBio13OpenCameraDTO")
 
 typedef SWIFT_ENUM(NSInteger, OpenCameraType, open) {
   OpenCameraTypeSelfie = 0,
-  OpenCameraTypeDocument = 1,
 };
 
 typedef SWIFT_ENUM(NSInteger, OpenCaptureType, open) {
   OpenCaptureTypeNormal = 0,
-  OpenCaptureTypeDocuments = 1,
-  OpenCaptureTypeSmart = 2,
-  OpenCaptureTypeSmartlive = 3,
-  OpenCaptureTypeWebapp = 4,
+  OpenCaptureTypeSmart = 1,
+  OpenCaptureTypeSmartlive = 2,
+  OpenCaptureTypeWebapp = 3,
 };
 
 SWIFT_CLASS("_TtC9AcessoBio11PrepareInfo")
@@ -1653,8 +1647,6 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
 - (id _Null_unspecified)getColorTextMessage SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorBackgroundTakePictureButton SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorIconTakePictureButton SWIFT_WARN_UNUSED_RESULT;
-- (id _Null_unspecified)getColorBackgroundBottomDocument SWIFT_WARN_UNUSED_RESULT;
-- (id _Null_unspecified)getColorTextBottomDocument SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteSuccess SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteError SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteNeutral SWIFT_WARN_UNUSED_RESULT;
@@ -1684,8 +1676,6 @@ SWIFT_CLASS("_TtC9AcessoBio17UnicoDefaultTheme")
 - (id _Null_unspecified)getColorTextMessage SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorBackgroundTakePictureButton SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorIconTakePictureButton SWIFT_WARN_UNUSED_RESULT;
-- (id _Null_unspecified)getColorBackgroundBottomDocument SWIFT_WARN_UNUSED_RESULT;
-- (id _Null_unspecified)getColorTextBottomDocument SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteSuccess SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteError SWIFT_WARN_UNUSED_RESULT;
 - (id _Null_unspecified)getColorSilhouetteNeutral SWIFT_WARN_UNUSED_RESULT;
@@ -1715,6 +1705,8 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsERROR_MINIMUM_API = 73003,
 /// Simulator
   UnicoEnumsIErrorsERROR_SIMULATOR = 73006,
+/// Document capture was discontinued: the deprecated document API fails fast with this code.
+  UnicoEnumsIErrorsERROR_DOCUMENT_CAMERA = 73905,
 /// Network
   UnicoEnumsIErrorsNETWORK_ERROR = 73100,
 /// JSON

@@ -105,6 +105,7 @@ extension AcessoBio.UnicoFaceCameraPresenter : AcessoBio.UnicoFaceCameraPresente
   case TAKE_PICTURE_ERROR = 73001
   case ERROR_MINIMUM_API = 73003
   case ERROR_SIMULATOR = 73006
+  case ERROR_DOCUMENT_CAMERA = 73905
   case NETWORK_ERROR = 73100
   case JSON_NOT_FOUND = 73200
   case JSON_INVALID = 73202
@@ -175,12 +176,6 @@ extension AcessoBio.ErrorBio : Swift.Error {
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorIconTakePictureButton() -> Any!
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func getColorBackgroundBottomDocument() -> Any!
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func getColorTextBottomDocument() -> Any!
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorSilhouetteSuccess() -> Any!
@@ -509,7 +504,8 @@ public protocol Cancellable {
   @objc public func makeSensorsWorkerFactory() -> any AcessoBio.SensorsWorkerFactory
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class DocumentResult : AcessoBio.CaptureResult {
+@_inheritsConvenienceInitializers @available(*, deprecated, message: "Document capture was discontinued and will be removed in a future version.")
+@objc public class DocumentResult : AcessoBio.CaptureResult {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc override public init(base64: Swift.String!, encrypted: Swift.String!)
   #endif
@@ -590,7 +586,7 @@ public protocol Cancellable {
   @objc deinit
 }
 @objc public enum OpenCameraType : Swift.Int {
-  case selfie = 0, document
+  case selfie = 0
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
   #endif
@@ -600,7 +596,7 @@ public protocol Cancellable {
   }
 }
 @objc public enum OpenCaptureType : Swift.Int {
-  case normal = 0, documents, smart, smartlive, webapp
+  case normal = 0, smart, smartlive, webapp
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
   #endif
@@ -658,12 +654,6 @@ public protocol Cancellable {
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorIconTakePictureButton() -> Any!
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func getColorBackgroundBottomDocument() -> Any!
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func getColorTextBottomDocument() -> Any!
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getColorSilhouetteSuccess() -> Any!

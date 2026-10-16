@@ -16,8 +16,6 @@
 - (id) getColorTextMessage;
 - (id) getColorBackgroundTakePictureButton;
 - (id) getColorIconTakePictureButton;
-- (id) getColorBackgroundBottomDocument;
-- (id) getColorTextBottomDocument;
 - (id) getColorSilhouetteSuccess;
 - (id) getColorSilhouetteError;
 - (id) getColorSilhouetteNeutral;
@@ -26,6 +24,10 @@
 
 - (id) getProgressBarColor;
 - (id) getCancelButtonIconColor;
+
+// Document capture was discontinued: kept optional so existing implementations keep compiling.
+- (id) getColorBackgroundBottomDocument __attribute__((deprecated("Document capture was discontinued. This colour is no longer read by the SDK and will be removed in a future version.")));
+- (id) getColorTextBottomDocument __attribute__((deprecated("Document capture was discontinued. This colour is no longer read by the SDK and will be removed in a future version.")));
 
 @end
 
