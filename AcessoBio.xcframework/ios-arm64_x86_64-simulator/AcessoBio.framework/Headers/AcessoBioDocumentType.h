@@ -19,8 +19,9 @@ typedef NS_ENUM(NSInteger, DocumentEnums) {
     DocumentRGFrente,
     DocumentRGVerso,
     DocumentCPF
-};
+} __attribute__((deprecated("Document capture was discontinued. Fails immediately with error 73905 (ERROR_DOCUMENT_CAMERA) and will be removed in a future version.")));
 
+__attribute__((deprecated("Document capture was discontinued. Fails immediately with error 73905 (ERROR_DOCUMENT_CAMERA) and will be removed in a future version.")))
 @interface AcessoBioDocumentType : NSObject
 
 @property (assign, nonatomic) DocumentEnums *documentType;

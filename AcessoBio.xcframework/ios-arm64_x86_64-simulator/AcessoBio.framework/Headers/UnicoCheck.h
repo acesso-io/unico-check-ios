@@ -16,7 +16,6 @@
 #import "iAcessoBioBuilder.h"
 #import "AcessoBioManagerDelegate.h"
 #import "AcessoBioSelfieDelegate.h"
-#import "AcessoBioDocumentDelegate.h"
 #import "UnicoCheckThemesDelegate.h"
 #import "AcessoBioThemeDelegate.h"
 
@@ -29,8 +28,6 @@
 @class UnicoJsonLoad;
 @class UnicoConfigDataSourceManager;
 @class UnicoFaceCameraViewController;
-@class UnicoDocumentCameraViewController;
-@class DocumentInsertView;
 @class UnicoCheckThemes;
 @protocol SensorsWorker;
 @protocol UnicoSetupProtocol;
@@ -56,7 +53,6 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     UIViewController *presentedViewController;
 
     UnicoFaceCameraViewController *faceCameraViewController;
-    UnicoDocumentCameraViewController *documentCameraViewController;
 
     NSString *versionRelease;
 
@@ -75,7 +71,6 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
     id<SAdapterProtocol> sAdapter;
 
     SDKConfigResponseDTOAdapter *sdkTokenResponse;
-    DocumentEnums documentType;
 
     void(^completionHandlerSetupConfig)(ErrorBio *_Nullable error);
 
@@ -91,7 +86,6 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 
 @property (nonatomic, weak) id<AcessoBioManagerDelegate>_Nullable acessoBioDelegate;
 @property (nonatomic, weak) id<AcessoBioSelfieDelegate>_Nullable selfieDelegate;
-@property (nonatomic, weak) id<AcessoBioDocumentDelegate>_Nullable documentDelegate;
 
 #pragma mark - Constructor
 
@@ -138,20 +132,11 @@ typedef NS_ENUM(NSInteger, LanguageOrigin) {
 
 - (void)openCameraSelfie:(id<AcessoBioSelfieDelegate>_Nullable)delegate;
 
-#pragma mark Documents
-
-- (void)openCameraDocuments:(DocumentEnums)documentType delegate:(id<AcessoBioDocumentDelegate>_Nullable)delegate;
-
 #pragma mark - Callbacks
 #pragma mark Selfie
 
 - (void)onSuccessSelfie:(NSString *_Nullable)base64;
 - (void)onErrorSelfie:(ErrorBio *_Nullable)error;
-
-#pragma mark Document
-
-- (void)onSuccessDocument:(NSString *_Nonnull)base64;
-- (void)onErrorDocument:(ErrorBio *_Nullable)error;
 
 #pragma mark - ErrorBio
 

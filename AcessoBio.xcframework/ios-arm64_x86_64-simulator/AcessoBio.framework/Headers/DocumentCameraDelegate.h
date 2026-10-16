@@ -9,6 +9,7 @@
 #ifndef DocumentCameraDelegate_h
 #define DocumentCameraDelegate_h
 
+__attribute__((deprecated("Document capture was discontinued. Fails immediately with error 73905 (ERROR_DOCUMENT_CAMERA) and will be removed in a future version.")))
 @protocol DocumentCameraDelegate
 
 - (void)onCameraReadyDocument: (id <AcessoBioCameraOpenerDelegate>)cameraOpener;
