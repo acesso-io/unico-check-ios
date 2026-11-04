@@ -44,20 +44,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  cocoapods-publish:
-    runs-on: macos-15
-    needs: [verify-changed-files, create-tag]
-    steps:
-      - uses: actions/checkout@v4
-      - run: echo ${{needs.verify-changed-files.outputs.output1}}
-
-      - uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: '16.4'
-
-      - name: Is there a change in the unicocheck-ios.podspec? Publish to CocoaPods
-        if: contains(needs.verify-changed-files.outputs.output1, 'unicocheck-ios.podspec')
-        env:
-          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-        run: |
-          pod trunk push unicocheck-ios.podspec --allow-warnings
+  # No cocoapods-publish job: CocoaPods trunk turns read-only on Dec 2 2026, so releases ship through SPM only
+  # (Package.swift). unicocheck-ios.podspec stays as the release's version source: a change to it still creates the
+  # tag and the GitHub release above, and versions already on trunk keep installing with `pod install`.
