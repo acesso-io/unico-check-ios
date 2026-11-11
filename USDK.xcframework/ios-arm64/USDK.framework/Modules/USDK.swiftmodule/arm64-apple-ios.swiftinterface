@@ -15,7 +15,6 @@ import CoreML
 import CoreMedia
 import CoreMotion
 import CoreTelephony
-import CoreText
 import CoreVideo
 import CryptoKit
 import Darwin
@@ -47,6 +46,12 @@ public enum OZError : Foundation.LocalizedError, Swift.Equatable {
   case refreshTokenExpiredOrInvalid(httpCode: Swift.Int, message: Swift.String)
   case connectionTypeError
   case sessionTokenIsEmpty
+  case captureScreenAlreadyPresented
+  case captureRequestWithoutActions
+  case sdkResourcesNotFound
+  public var errorDescription: Swift.String? {
+    get
+  }
   public static func == (a: USDK.OZError, b: USDK.OZError) -> Swift.Bool
 }
 extension USDK.OZError : Swift.CustomStringConvertible {
@@ -64,8 +69,6 @@ extension USDK.AnalysisType : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
-infix operator +| : DefaultPrecedence
-infix operator +- : DefaultPrecedence
 public struct ResponseError : Foundation.LocalizedError {
   public let code: Swift.Int?
   public let errorType: USDK.ResponseError.ErrorType?
@@ -252,13 +255,16 @@ public enum AnalysisType : Swift.CustomStringConvertible {
     get
   }
 }
+@available(*, deprecated, message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
 public enum SizeReductionStrategy : Swift.String, Swift.CaseIterable {
   case uploadOriginal
   case uploadCompressed
   case uploadBestShot
   case uploadNothing
   public init?(rawValue: Swift.String)
+  @available(*, deprecated, message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
   public typealias AllCases = [USDK.SizeReductionStrategy]
+  @available(*, deprecated, message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [USDK.SizeReductionStrategy] {
     get
@@ -268,7 +274,11 @@ public enum SizeReductionStrategy : Swift.String, Swift.CaseIterable {
   }
 }
 public enum AnalysisMode : Swift.Equatable {
-  case onDevice, serverBased, hybrid
+  @available(*, deprecated, message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
+  case onDevice
+  case serverBased
+  @available(*, deprecated, message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
+  case hybrid
   public static func == (a: USDK.AnalysisMode, b: USDK.AnalysisMode) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -276,8 +286,12 @@ public enum AnalysisMode : Swift.Equatable {
   }
 }
 public struct Analysis : Swift.Equatable {
+  @available(*, deprecated, renamed: "init(media:type:params:)", message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
   public init(media: [USDK.OZMedia]?, type: USDK.AnalysisType, mode: USDK.AnalysisMode, sizeReductionStrategy: USDK.SizeReductionStrategy? = nil, params: [Swift.String : Any]?)
+  @available(*, deprecated, renamed: "init(media:type:)", message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
   public init(media: [USDK.OZMedia]?, type: USDK.AnalysisType, mode: USDK.AnalysisMode, sizeReductionStrategy: USDK.SizeReductionStrategy? = nil)
+  public init(media: [USDK.OZMedia]?, type: USDK.AnalysisType, params: [Swift.String : Any]?)
+  public init(media: [USDK.OZMedia]?, type: USDK.AnalysisType)
   public static func == (lhs: USDK.Analysis, rhs: USDK.Analysis) -> Swift.Bool
 }
 public struct AnalysisStatus {
@@ -538,6 +552,7 @@ public enum AnalysisError : Swift.Error {
   case framingFailed
   case analysisTypeNonSupported
   case validateMediaFailed
+  @available(*, deprecated, message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
   case onDeviceDisable
   public var description: Swift.String {
     get
@@ -595,9 +610,12 @@ extension USDK.AnalysisResult : Swift.CustomDebugStringConvertible {
   }
 }
 public class ResultMedia {
+  @available(*, deprecated, renamed: "init(resolution:media:sourceID:confidenceScore:mediaType:error:)", message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
   public init(resolution: USDK.AnalyseResolutionStatus? = nil, media: USDK.OZMedia, sourceID: Swift.String? = nil, isOnDevice: Swift.Bool, confidenceScore: Swift.Float? = nil, mediaType: Swift.String? = nil, error: (any Swift.Error)? = nil)
+  public init(resolution: USDK.AnalyseResolutionStatus? = nil, media: USDK.OZMedia, sourceID: Swift.String? = nil, confidenceScore: Swift.Float? = nil, mediaType: Swift.String? = nil, error: (any Swift.Error)? = nil)
   public var resolution: USDK.AnalyseResolutionStatus?
   public var sourceID: Swift.String?
+  @available(*, deprecated, message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
   public var isOnDevice: Swift.Bool
   public var confidenceScore: Swift.Float?
   public var mediaType: Swift.String?
@@ -731,8 +749,11 @@ extension USDK.AnalysisType : Swift.Hashable {}
 extension USDK.AnalysisMode : Swift.Hashable {}
 extension USDK.ResponseError.ErrorType : Swift.Equatable {}
 extension USDK.ResponseError.ErrorType : Swift.Hashable {}
+@available(*, deprecated, message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
 extension USDK.SizeReductionStrategy : Swift.Equatable {}
+@available(*, deprecated, message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
 extension USDK.SizeReductionStrategy : Swift.Hashable {}
+@available(*, deprecated, message: "On-device and hybrid analysis modes are deprecated and will become unavailable on January 1, 2027. Use server-based analysis instead.")
 extension USDK.SizeReductionStrategy : Swift.RawRepresentable {}
 extension USDK.Environment : Swift.Equatable {}
 extension USDK.Environment : Swift.Hashable {}

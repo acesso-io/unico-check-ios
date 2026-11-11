@@ -11,6 +11,7 @@
 @class SelfieResult;
 @class CaptureResult;
 @class SuccessResult;
+@class ProgressEvent;
 
 #import "ErrorBio.h"
 
@@ -21,6 +22,7 @@
 
 @optional
 - (void)onSuccess:(SuccessResult *)successResult;
+- (void)onProgressUpdate:(ProgressEvent *)event;
 
 @end
 #endif /* iAcessoBioSelfie_h */

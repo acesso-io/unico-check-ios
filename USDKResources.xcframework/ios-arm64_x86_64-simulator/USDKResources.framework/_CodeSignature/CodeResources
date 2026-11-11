@@ -18,11 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DmfAq7uZT/eb+F+n2ZYkHzAvX2c=
+		mc9xM5yqnERApVrHBYV/JN4fZzc=
 		</data>
 		<key>Modules/USDKResources.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		yqtVkpvPcInP5nGsigTPCi6N6zw=
+		sSaVjdO/WJYOt3p6iWVIIDWM0yk=
 		</data>
 		<key>Modules/USDKResources.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/USDKResources.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MKnU5woGcIECoKkpnReMdQCczaM=
+		o7CgR7+af8pPmCDJCnKsrgyhW8k=
 		</data>
 		<key>Modules/USDKResources.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		yqtVkpvPcInP5nGsigTPCi6N6zw=
+		sSaVjdO/WJYOt3p6iWVIIDWM0yk=
 		</data>
 		<key>Modules/USDKResources.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/USDKResources.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ma+G3WIV0LZT0PC7lhBSWET1uxs=
+		+VtJvSC3VXp9UFbgSYtRWBk8Sjc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -183,7 +183,7 @@
 		</data>
 		<key>podium_rules.zip</key>
 		<data>
-		z76Z1s1zgVipvuaK5CpK6JwY/xs=
+		1zuf2X+Tp1whYoWqqeSIk9K3B1Q=
 		</data>
 		<key>pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -256,7 +256,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hvWChs6sWprS9H4wAjtRngym7jS8jdrpBpXciYxuJF4=
+			dtcDLvJ8t7ItfR0Pdj4baP0VQvnMk4/Uz7sWOGKE1YM=
 			</data>
 		</dict>
 		<key>Modules/USDKResources.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -284,14 +284,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6OwC3h1bF2OPy36YH0r4rvx5t+suCowsUbnWKTfXv0E=
+			Xus4CtSowsTuZgH5wP/sIKFtoB+b7iMD/7EKnhwQSnU=
 			</data>
 		</dict>
 		<key>Modules/USDKResources.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hvWChs6sWprS9H4wAjtRngym7jS8jdrpBpXciYxuJF4=
+			dtcDLvJ8t7ItfR0Pdj4baP0VQvnMk4/Uz7sWOGKE1YM=
 			</data>
 		</dict>
 		<key>Modules/USDKResources.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -319,7 +319,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t3M9ZD+YoZvTk2Shmwx+FggCMC0edBDLPjt3LuUpTgs=
+			8cxXGQjPJ2lvVI0z+hvAw3TEySwlsUpuM4SFH0uAH74=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -504,7 +504,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			80gjs+2NwLnTw9ZWx8wub/dGlwpuHi9x5hf4pHfYCHA=
+			nIpF1BnmW13KoaSQ9ZLVtrd16vX/e9ItbFRm4nRZMp0=
 			</data>
 		</dict>
 		<key>pt-BR.lproj/Localizable.strings</key>
