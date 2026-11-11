@@ -1,0 +1,26 @@
+//
+//  AcessoBioCameraOpener.h
+//  AcessoBio
+//
+//  Created by Matheus Domingos on 30/07/21.
+//  Copyright © 2021 Matheus Domingos Acesso. All rights reserved.
+//
+
+#ifndef AcessoBioCameraOpenerDelegate_h
+#define AcessoBioCameraOpenerDelegate_h
+#import "AcessoBioSelfieDelegate.h"
+#import "AcessoBioDocumentDelegate.h"
+#import "AcessoBioDocumentType.h"
+
+@class UnicoIDSmartOptions;
+
+@protocol AcessoBioCameraOpenerDelegate
+
+- (void)open:(id<AcessoBioSelfieDelegate>)delegate;
+- (void)open:(id<AcessoBioSelfieDelegate>)delegate webAppToken:(NSString *)webAppToken;
+- (void)open:(id<AcessoBioSelfieDelegate>)delegate idSmartOptions:(UnicoIDSmartOptions *)idSmartOptions;
+- (void)openDocument:(DocumentEnums)documentType delegate:(id <AcessoBioDocumentDelegate>)delegate __attribute__((deprecated("Document capture was discontinued. Fails immediately with error 73905 (ERROR_DOCUMENT_CAMERA) and will be removed in a future version.")));
+
+@end
+
+#endif /* AcessoBioCameraOpener_h */

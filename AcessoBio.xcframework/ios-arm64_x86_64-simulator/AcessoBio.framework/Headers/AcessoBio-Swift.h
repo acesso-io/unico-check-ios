@@ -539,6 +539,15 @@ SWIFT_CLASS("_TtC9AcessoBio11PrepareInfo")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+SWIFT_CLASS("_TtC9AcessoBio13ProgressEvent")
+@interface ProgressEvent : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull type;
+@property (nonatomic, readonly, copy) NSString * _Nonnull action;
+@property (nonatomic, readonly, copy) NSString * _Nullable occurredAt;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 @interface ProviderDTO : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -579,6 +588,8 @@ SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 - (void)onErrorSDKWithError:(ErrorBio * _Nonnull)error;
 - (void)onSuccessConsent;
 - (void)onErrorConsent;
+@optional
+- (void)onProgressUpdate:(ProgressEvent * _Nonnull)event;
 @end
 
 SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
@@ -720,6 +731,7 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
 SWIFT_CLASS("_TtC9AcessoBio28UnicoConfigDataSourceManager")
 @interface UnicoConfigDataSourceManager : NSObject
 - (UnicoSetupData * _Nonnull)manageWithDataSource:(id <AcessoBioConfigDataSource> _Nonnull)dataSource SWIFT_WARN_UNUSED_RESULT;
+- (UnicoSetupData * _Nonnull)manageWithWebAppToken:(NSString * _Nonnull)webAppToken SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -774,6 +786,8 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsAUTHENTICATION_PARSE_ERROR = 73301,
   UnicoEnumsIErrorsAUTHENTICATION_TOKEN_NOT_FOUND = 73302,
   UnicoEnumsIErrorsAUTHENTICATION_HOST_NOT_REGISTERED = 73303,
+  UnicoEnumsIErrorsAUTHENTICATION_APP_TOKEN_INVALID = 73304,
+  UnicoEnumsIErrorsAUTHENTICATION_APP_TOKEN_EXPIRED = 73305,
 /// Camera Response
   UnicoEnumsIErrorsSDK_GET_SESSION_FAILED = 73703,
   UnicoEnumsIErrorsSESSION_STATUS_USER_CANCELLED = 73704,
@@ -885,6 +899,10 @@ SWIFT_CLASS("_TtC9AcessoBio8UnicoSDK")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 + (void)initializeSDKWithConfig:(id <AcessoBioConfigDataSource> _Nonnull)config;
 + (void)initializeSDKWithConfig:(id <AcessoBioConfigDataSource> _Nonnull)config environment:(EnvironmentEnum)environment;
+/// SilentAuth entered with the webAppToken of a process created by the integrator’s backend, without an sdkKey
+/// in the app. Available in both editions; the only SilentAuth entry point of the capture lite edition.
++ (void)initializeSDKWithWebAppToken:(NSString * _Nonnull)webAppToken;
++ (void)initializeSDKWithWebAppToken:(NSString * _Nonnull)webAppToken environment:(EnvironmentEnum)environment;
 + (void)startSilentValidationWithPrepareInfo:(PrepareInfo * _Nonnull)prepareInfo errorCompletion:(void (^ _Nonnull)(ErrorBio * _Nullable))errorCompletion;
 @end
 
@@ -1485,6 +1503,15 @@ SWIFT_CLASS("_TtC9AcessoBio11PrepareInfo")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+SWIFT_CLASS("_TtC9AcessoBio13ProgressEvent")
+@interface ProgressEvent : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull type;
+@property (nonatomic, readonly, copy) NSString * _Nonnull action;
+@property (nonatomic, readonly, copy) NSString * _Nullable occurredAt;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 SWIFT_CLASS("_TtC9AcessoBio11ProviderDTO")
 @interface ProviderDTO : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1525,6 +1552,8 @@ SWIFT_PROTOCOL("_TtP9AcessoBio24SAdapterProtocolDelegate_")
 - (void)onErrorSDKWithError:(ErrorBio * _Nonnull)error;
 - (void)onSuccessConsent;
 - (void)onErrorConsent;
+@optional
+- (void)onProgressUpdate:(ProgressEvent * _Nonnull)event;
 @end
 
 SWIFT_CLASS("_TtC9AcessoBio27SDKConfigResponseDTOAdapter")
@@ -1666,6 +1695,7 @@ SWIFT_CLASS("_TtC9AcessoBio16UnicoCheckThemes")
 SWIFT_CLASS("_TtC9AcessoBio28UnicoConfigDataSourceManager")
 @interface UnicoConfigDataSourceManager : NSObject
 - (UnicoSetupData * _Nonnull)manageWithDataSource:(id <AcessoBioConfigDataSource> _Nonnull)dataSource SWIFT_WARN_UNUSED_RESULT;
+- (UnicoSetupData * _Nonnull)manageWithWebAppToken:(NSString * _Nonnull)webAppToken SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1720,6 +1750,8 @@ typedef SWIFT_ENUM(NSInteger, UnicoEnumsIErrors, open) {
   UnicoEnumsIErrorsAUTHENTICATION_PARSE_ERROR = 73301,
   UnicoEnumsIErrorsAUTHENTICATION_TOKEN_NOT_FOUND = 73302,
   UnicoEnumsIErrorsAUTHENTICATION_HOST_NOT_REGISTERED = 73303,
+  UnicoEnumsIErrorsAUTHENTICATION_APP_TOKEN_INVALID = 73304,
+  UnicoEnumsIErrorsAUTHENTICATION_APP_TOKEN_EXPIRED = 73305,
 /// Camera Response
   UnicoEnumsIErrorsSDK_GET_SESSION_FAILED = 73703,
   UnicoEnumsIErrorsSESSION_STATUS_USER_CANCELLED = 73704,
@@ -1831,6 +1863,10 @@ SWIFT_CLASS("_TtC9AcessoBio8UnicoSDK")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 + (void)initializeSDKWithConfig:(id <AcessoBioConfigDataSource> _Nonnull)config;
 + (void)initializeSDKWithConfig:(id <AcessoBioConfigDataSource> _Nonnull)config environment:(EnvironmentEnum)environment;
+/// SilentAuth entered with the webAppToken of a process created by the integrator’s backend, without an sdkKey
+/// in the app. Available in both editions; the only SilentAuth entry point of the capture lite edition.
++ (void)initializeSDKWithWebAppToken:(NSString * _Nonnull)webAppToken;
++ (void)initializeSDKWithWebAppToken:(NSString * _Nonnull)webAppToken environment:(EnvironmentEnum)environment;
 + (void)startSilentValidationWithPrepareInfo:(PrepareInfo * _Nonnull)prepareInfo errorCompletion:(void (^ _Nonnull)(ErrorBio * _Nullable))errorCompletion;
 @end
 

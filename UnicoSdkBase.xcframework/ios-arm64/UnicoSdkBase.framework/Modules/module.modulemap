@@ -1,4 +1,0 @@
-framework module UnicoSdkBase {
-  header "UnicoSdkBase-Swift.h"
-  requires objc
-}
